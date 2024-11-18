@@ -1,459 +1,92 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_lonegustavo_crouchwalk",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 111,
+  "origin": 9,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 30,
   "bbox_right": 108,
   "bbox_top": 76,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "0905825a-bd79-4773-b036-3cc2480dfcd4"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2d42a849-127d-4aa9-936a-4217908f9636"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "5b0df57f-d938-4dc2-81c6-da38b2f1c97f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c8066a0f-fbbf-4511-91fb-9ff57768bd6b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "9bb7e049-593a-42c9-896a-a4abc3a07367"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "bc02bd77-e80c-46bc-8680-b30f9420fbe6"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a2a3ec1f-cb4a-4838-b695-82df25bf2d23"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "64b9d39b-0602-466d-9c2d-d5f8fcf88515"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "9beaf23c-dc4e-44c4-9b0f-e511a820cfde"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "df8f9732-6732-480f-988f-593312b0b192"
-    }
-  ],
-  "height": 115,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "23b750b0-6cad-40e4-9609-bba6f70b24e1"
-    }
-  ],
+  "bbox_bottom": 111,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 144,
+  "height": 115,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e758a11e-b4dc-4af3-8751-bae6bf5f7826",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"72a9ea23-9c3e-4453-9a22-4d150655c735",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60d4c5a5-365e-4047-94da-2d969070f7b4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1763de6-ea63-4d0a-a4cd-19aeed840a31",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45cdd1fc-7864-46f2-9053-229de6e86a47",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8765b3fa-2e83-467e-b26e-94f055dcc6b4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b224e93-f7fb-462b-9097-5674979a2c4a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"edb06252-7e16-4070-87ee-254cd5834f26",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"325f0632-c586-48e5-85a0-6ad4bda59e0b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3fd3fd29-e351-4ce2-8aba-58bf50b720fc",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_lonegustavo_crouchwalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 10.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6ece1f26-31f1-458c-86e4-634593e66c92","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e758a11e-b4dc-4af3-8751-bae6bf5f7826","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"71fd010c-4266-40cd-8d54-851b4f6b36e8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"72a9ea23-9c3e-4453-9a22-4d150655c735","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d340dafc-534e-4c03-be88-76549f88dc2a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60d4c5a5-365e-4047-94da-2d969070f7b4","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d12e80a9-7b00-44a7-946f-62f065720948","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1763de6-ea63-4d0a-a4cd-19aeed840a31","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4fd63346-a1ff-4694-8cb3-bbbd8d4e9edf","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45cdd1fc-7864-46f2-9053-229de6e86a47","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"93892fce-c39d-40c7-b2a5-3a8996d1abfc","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8765b3fa-2e83-467e-b26e-94f055dcc6b4","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c4c801d1-69e9-4a9d-80c2-bbfa5a682ef0","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b224e93-f7fb-462b-9097-5674979a2c4a","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e61d1922-07d9-4782-afaa-e53151f9092d","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edb06252-7e16-4070-87ee-254cd5834f26","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1611439c-8393-4bec-b6fc-075ba9a9aa72","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"325f0632-c586-48e5-85a0-6ad4bda59e0b","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"564a3c6c-c451-4003-aa36-4416c889bc43","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3fd3fd29-e351-4ce2-8aba-58bf50b720fc","path":"sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 72,
     "yorigin": 66,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "eb4c0659-1cc1-47fd-9f51-35baeb3c063f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "0905825a-bd79-4773-b036-3cc2480dfcd4",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c44bd888-02e9-44cc-97c2-1c1ca9469be2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2d42a849-127d-4aa9-936a-4217908f9636",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "7a8049e4-0064-45ff-aef6-fa9f497ae72e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "5b0df57f-d938-4dc2-81c6-da38b2f1c97f",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d41c5d90-f106-4f16-a7fb-47e2fc2e487f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c8066a0f-fbbf-4511-91fb-9ff57768bd6b",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a47aeb3b-e221-4506-98d2-2e37f0de0ff1",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "9bb7e049-593a-42c9-896a-a4abc3a07367",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "41cb2475-84b7-4646-8225-43901b2471fa",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "bc02bd77-e80c-46bc-8680-b30f9420fbe6",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4dae39d3-d2c5-4757-95f0-75751814452c",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a2a3ec1f-cb4a-4838-b695-82df25bf2d23",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "07f3873a-980d-4d3a-a212-67214f074d31",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "64b9d39b-0602-466d-9c2d-d5f8fcf88515",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "9e0926f5-ca66-4baa-9dd6-f0c019f7b372",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "9beaf23c-dc4e-44c4-9b0f-e511a820cfde",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "5d433d11-ff5d-4f24-b111-4984f4a8e815",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "df8f9732-6732-480f-988f-593312b0b192",
-                    "path": "sprites/spr_lonegustavo_crouchwalk/spr_lonegustavo_crouchwalk.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_lonegustavo_crouchwalk"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"09120d99-b08d-4304-b04c-ad034d39c6b2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_lonegustavo_crouchwalk"
 }

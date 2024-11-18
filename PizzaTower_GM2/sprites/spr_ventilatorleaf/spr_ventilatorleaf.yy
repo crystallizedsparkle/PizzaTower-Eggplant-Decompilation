@@ -1,294 +1,82 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_ventilatorleaf",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 23,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 30,
   "bbox_top": 0,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "cd024f44-0161-4137-a828-a2c797a25f30"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "0987a36a-de06-49c7-a262-036ab624c68b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "6e1f4239-9c2d-4d5a-9abe-e19136817e76"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "caf826c0-9c15-4162-aa4a-f7e3fb611553"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b7a44082-9c7f-4a47-bd3f-cf1df500dfd3"
-    }
-  ],
-  "height": 24,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "dd5ccf6b-7e31-40b4-a84c-db54e5eb24e4"
-    }
-  ],
+  "bbox_bottom": 23,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 31,
+  "height": 24,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e76d743-3366-49c7-bd15-81b8814b7518",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9c6f161-f519-4cf8-b8dc-aad2ebad2789",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12b6d02a-77b8-455b-b4e1-e04606533ac9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"adf66275-6d6c-488c-a943-9127fb8abfd4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05acba99-4c7f-46dd-8c1c-bf39839ffd11",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_ventilatorleaf",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 5.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c566761f-24e5-4022-8164-f743e556e329","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e76d743-3366-49c7-bd15-81b8814b7518","path":"sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"19a0010e-fdee-4f71-90fd-1550b6ab9b18","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9c6f161-f519-4cf8-b8dc-aad2ebad2789","path":"sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"36963dd1-78aa-43ae-86e5-bdf77fc679cb","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12b6d02a-77b8-455b-b4e1-e04606533ac9","path":"sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8b922330-b483-44c5-acee-de2c2b388c1d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"adf66275-6d6c-488c-a943-9127fb8abfd4","path":"sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6b7556a8-f793-45f8-b8eb-55037cefbf95","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05acba99-4c7f-46dd-8c1c-bf39839ffd11","path":"sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 15,
     "yorigin": 12,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "338f1e68-df8e-43f1-96bb-fb2e97d94051",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "cd024f44-0161-4137-a828-a2c797a25f30",
-                    "path": "sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "799573be-9959-417a-951b-6b85fc62af1d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "0987a36a-de06-49c7-a262-036ab624c68b",
-                    "path": "sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8220545c-4d91-443a-8cff-cdc8a1d82528",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "6e1f4239-9c2d-4d5a-9abe-e19136817e76",
-                    "path": "sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4301af98-ef5b-47df-85c8-c1cea8e10dcb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "caf826c0-9c15-4162-aa4a-f7e3fb611553",
-                    "path": "sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8371c75b-d457-4eba-b317-b08c9f4134a6",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b7a44082-9c7f-4a47-bd3f-cf1df500dfd3",
-                    "path": "sprites/spr_ventilatorleaf/spr_ventilatorleaf.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_ventilatorleaf"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f3e69721-234d-4aac-82d9-4c4c34febc9a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_ventilatorleaf"
 }

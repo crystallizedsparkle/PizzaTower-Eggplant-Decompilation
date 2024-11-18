@@ -1,1251 +1,140 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_playerN_knightsword",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 95,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 6,
   "bbox_right": 99,
   "bbox_top": 13,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "e62896b8-69f5-4a96-aaf1-bf82b1e45434"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4bf337c7-95b8-45ac-bfac-2ee5e2e79f2f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b12ef144-6843-4378-a201-f8c3df060a7b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "fcd68f5c-dc6f-4c60-bfc2-4f6dc6b39012"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b89fe1e2-180d-4815-9687-4772b8c90a95"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "1070ccce-a594-47f8-9629-5f9f166d83be"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "00bf2dfe-efd7-422e-a687-4833b46f394c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "196f7311-704e-4fe8-9bc3-34ee3cbf4dbe"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "155e198b-0645-45a2-bc94-24e1b88fbf1c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "44c7ed54-7c7c-4a0b-8ab8-b10d30651461"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "bd26acb2-09a5-4566-92bc-648a939d0805"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "1784fb52-79db-4174-85ac-de06baf01772"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a574928e-7f64-4f62-97df-ba79b1cf88b4"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "e7a8f7b9-5dfd-4e70-bb0d-21355858c204"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ef28bc1d-b511-4f5d-ba65-083fec198314"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a2b4073a-61b6-46bf-b0d5-690e791eb715"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ef63f9d4-a490-4688-a13e-b7ab63ede18f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "1cea66ac-e5de-4093-97f8-f061dba40936"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "312c365c-619c-43a3-867d-2ddad21a6f5f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ddb1ccbf-744b-4b4e-a374-697d230093c1"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "06950280-e717-4743-a23b-1ab49f0333d0"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "76a416a0-54ba-401d-803b-533b5687de48"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "fbd117b5-0928-42e6-986f-7391fdffd36a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "d32572aa-d54d-49be-9003-5baea35c4146"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "d351494f-a20e-4df5-846a-d6bed44437c3"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "fb838881-daca-4cfa-b1f1-b3a9e119eb2b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "84fe0ad4-b855-48b1-a8c9-2a6865995c46"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3993c440-3bef-4b29-984a-c20febb2138c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "058bb3f4-ed91-450c-aaa9-b57610f0c28d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "e7b01d2c-cc40-4ade-b500-7c5a3ed32f2a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "678ddd07-3902-4ba4-af6a-d94817c18569"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4729de5b-7b91-44b7-8383-0d8c2ade3e77"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7e27525b-b10c-42a4-9288-56f8478ce201"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c319ce1f-17dc-4015-b393-e17f58016f33"
-    }
-  ],
-  "height": 100,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "4b837fba-a659-4a64-b600-5a57a62ea87f"
-    }
-  ],
+  "bbox_bottom": 95,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
+  "height": 100,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab54c793-221f-41ab-a1bd-2fbc2cb6b235",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89fbd5cd-f5fd-4680-b33d-a6e2e6751b14",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d4554f2-7e0c-425d-acc2-ba9f1f84ef17",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47cd3518-f5b7-4763-ac66-431be3207e23",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e7c63d40-2b42-47ff-bc95-f7449521f8cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5bcafdcd-19a7-4dbe-9e67-56d743f2bc9a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc768e10-2489-40c1-926d-93c927d4d257",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"547a5b8b-ed58-4da7-8fd2-252c918d8252",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"939bfb0c-251e-48ca-b5dd-2a335e2eef2c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b9c6ecd-a88e-496e-ab41-cc1f8ba8ad03",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5a442b10-20a0-4e95-b98f-ca96d768c616",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df4cd0c7-65b2-46dc-8275-4ddc718b02e9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cebe1e59-87c3-4bd7-bdc2-b0a250c7e539",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cdfd0213-d393-4ba8-b6c8-19d31c6c377d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b63e65eb-44d2-47a5-b6a5-de667a7e81a7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71b76ae7-09bf-48a2-a680-f9dd6e606420",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5330d14e-c38c-4cda-92e0-00a9cb49889f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4175f927-52dc-4511-8f6c-e561c13d89d7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6bfbab2e-2a4a-44f8-af13-ab5a9899b6bd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dca30d1d-5cb8-4135-946a-f6cd2d0587fe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99b14d39-3c6b-49c1-bcd1-d8be5a281d0c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e99d76a5-6e8e-4148-9e00-20520710dec1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4c6752b-d3c6-4259-bdf7-159a056bad7f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f6820526-0df0-414a-a484-eea83489d47a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8443b923-af9d-40e6-b8ef-52c3b23a5304",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"007a691c-348c-4b83-9507-1eee6bc6f255",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab1fe788-4bad-4b1c-956f-08afbe0f17d3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e48ab099-af58-41a2-b94d-1b394dfd35fb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97c6276d-0aec-495f-944f-08f8341823e0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a19f7e03-66fd-475a-ae36-21554aa47204",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6102bb5-11fb-400d-aebb-f5695464c96b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52be92b1-e455-4b51-8a7f-9d8ce117b776",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"08bafe77-cca7-4c83-bac8-3f455b58a016",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f1e9d963-bf56-4c78-808e-3d59f9d686e3",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_playerN_knightsword",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 34.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"74d291cb-0191-4e38-846f-17187308833b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab54c793-221f-41ab-a1bd-2fbc2cb6b235","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"585a80ef-55e5-4586-8663-3c47862267da","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89fbd5cd-f5fd-4680-b33d-a6e2e6751b14","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"94a7174a-234d-4d06-afef-933797bd397c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d4554f2-7e0c-425d-acc2-ba9f1f84ef17","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c255c4cb-f64e-441b-867a-b148a1359b01","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"47cd3518-f5b7-4763-ac66-431be3207e23","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"10e75b32-4fb0-4b21-a5fe-fb442804a803","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e7c63d40-2b42-47ff-bc95-f7449521f8cc","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"57b9ccb5-d4fc-4e70-91fd-a7e2db84a8b9","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bcafdcd-19a7-4dbe-9e67-56d743f2bc9a","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3e23ee5d-8b88-449c-bbff-ccef587222bb","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fc768e10-2489-40c1-926d-93c927d4d257","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e1e12a05-9bbe-40ec-a257-6eb6c5f7e2db","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"547a5b8b-ed58-4da7-8fd2-252c918d8252","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"500c516d-117e-4a2e-88af-b8685d5edae9","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"939bfb0c-251e-48ca-b5dd-2a335e2eef2c","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d2e5c162-9092-4ab6-802a-683cc0571a9c","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b9c6ecd-a88e-496e-ab41-cc1f8ba8ad03","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e440a3ad-3225-4e2a-8184-5a9c67dd96af","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a442b10-20a0-4e95-b98f-ca96d768c616","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"62b8235a-569b-46d8-aeeb-28d9b56c0a39","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df4cd0c7-65b2-46dc-8275-4ddc718b02e9","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a3711fb0-126f-4584-a49e-723073face33","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cebe1e59-87c3-4bd7-bdc2-b0a250c7e539","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"024dc342-6122-468e-b390-c0729b042c9d","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cdfd0213-d393-4ba8-b6c8-19d31c6c377d","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"96e8d6f5-32ed-41c9-a576-5724696226f0","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b63e65eb-44d2-47a5-b6a5-de667a7e81a7","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3d1ce26a-dc1b-4ad7-b567-fddedb3401a1","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"71b76ae7-09bf-48a2-a680-f9dd6e606420","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f08c4162-8ec0-4cdd-b60a-ba2841bbb930","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5330d14e-c38c-4cda-92e0-00a9cb49889f","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c0fcd6d1-236c-4c33-af6e-4e80f799c179","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4175f927-52dc-4511-8f6c-e561c13d89d7","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d52a02c0-000b-417e-aed5-dd067f6ace85","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6bfbab2e-2a4a-44f8-af13-ab5a9899b6bd","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eebed5a7-0e49-4da3-be90-ec7c4e6c1137","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dca30d1d-5cb8-4135-946a-f6cd2d0587fe","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"289f92b9-ef08-490b-9315-af91cd9e2960","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99b14d39-3c6b-49c1-bcd1-d8be5a281d0c","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d23c9667-73b4-4996-81cc-bedff239bce7","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e99d76a5-6e8e-4148-9e00-20520710dec1","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1a8ffbda-dcec-4a55-bd49-b18e4eb8f96d","Key":22.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b4c6752b-d3c6-4259-bdf7-159a056bad7f","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3bba9132-c8ff-4190-8b5c-5a78d49a8c61","Key":23.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f6820526-0df0-414a-a484-eea83489d47a","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c83c7e39-7159-44a5-93d9-12979e56292f","Key":24.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8443b923-af9d-40e6-b8ef-52c3b23a5304","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"615a129f-8865-4502-baaf-cfb8f7dc6a5d","Key":25.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"007a691c-348c-4b83-9507-1eee6bc6f255","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"94b12ff5-342f-4a2d-a8d6-d87de23ea450","Key":26.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab1fe788-4bad-4b1c-956f-08afbe0f17d3","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0dcc84fe-ef8c-44c9-8058-12a5cac424ad","Key":27.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e48ab099-af58-41a2-b94d-1b394dfd35fb","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"70ca210c-3cb8-47e8-9054-3ea6fa04b2b3","Key":28.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97c6276d-0aec-495f-944f-08f8341823e0","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b5c7dedb-a48b-4a2e-b099-d8a52fe0c20c","Key":29.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a19f7e03-66fd-475a-ae36-21554aa47204","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1ba235d-b985-4342-b232-cb4da994a9dd","Key":30.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6102bb5-11fb-400d-aebb-f5695464c96b","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a2c71b39-71bd-4b43-a1e2-71004837848c","Key":31.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52be92b1-e455-4b51-8a7f-9d8ce117b776","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bdec4e20-7d49-4f47-9226-2c58b3a3a371","Key":32.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"08bafe77-cca7-4c83-bac8-3f455b58a016","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"026f17d3-ab95-4668-98fd-edf299126eb6","Key":33.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1e9d963-bf56-4c78-808e-3d59f9d686e3","path":"sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 50,
     "yorigin": 50,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0c069635-e3f4-49cc-9f16-5a0a6913089f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "e62896b8-69f5-4a96-aaf1-bf82b1e45434",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2b82eb15-4112-479a-bce3-35c1fe4bdbdc",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4bf337c7-95b8-45ac-bfac-2ee5e2e79f2f",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b1f319eb-e892-4990-a23f-862b34d15c05",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b12ef144-6843-4378-a201-f8c3df060a7b",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a07c03ff-3f97-4b2e-9928-b2619b92ff81",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "fcd68f5c-dc6f-4c60-bfc2-4f6dc6b39012",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "5a92f9f7-3ad9-4e1e-837a-46eb41a9aa88",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b89fe1e2-180d-4815-9687-4772b8c90a95",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "f6773fd2-b0da-42f9-a9ef-aab0c78f4b5d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "1070ccce-a594-47f8-9629-5f9f166d83be",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a83fcfc2-b0df-4b3b-9c1d-999a90311611",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "00bf2dfe-efd7-422e-a687-4833b46f394c",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "41652183-7d80-4145-bb4c-d911847700e8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "196f7311-704e-4fe8-9bc3-34ee3cbf4dbe",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6ba6f942-b3c9-43c4-983a-0662055f428a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "155e198b-0645-45a2-bc94-24e1b88fbf1c",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6c16b581-804a-4764-a8d0-c42d9638585d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "44c7ed54-7c7c-4a0b-8ab8-b10d30651461",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "778c229d-47d3-4da0-8f1e-2b8ef2d0b6c8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "bd26acb2-09a5-4566-92bc-648a939d0805",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "ebc46c96-ecbe-4b9b-8f26-9f0e502cba68",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "1784fb52-79db-4174-85ac-de06baf01772",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "5c5a2bcc-54b2-4aae-93ac-c23abd877566",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a574928e-7f64-4f62-97df-ba79b1cf88b4",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "fdb22fa9-2351-4e58-8452-9058f6cf088e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "e7a8f7b9-5dfd-4e70-bb0d-21355858c204",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "170d8dc1-51e6-4043-b1d0-cc4558d79e7f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ef28bc1d-b511-4f5d-ba65-083fec198314",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d896897b-94c3-4b7c-b328-5f0364f57622",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a2b4073a-61b6-46bf-b0d5-690e791eb715",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a66e34f7-e7a7-4157-9bc9-7d46c07a4053",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ef63f9d4-a490-4688-a13e-b7ab63ede18f",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0d88681f-b640-4c44-8123-e61ff59f2677",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "1cea66ac-e5de-4093-97f8-f061dba40936",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b014de10-3adb-4653-ba9b-2a6a5720e2b9",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "312c365c-619c-43a3-867d-2ddad21a6f5f",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bb86fb32-4e28-4efe-94aa-f2cd0f2c4378",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ddb1ccbf-744b-4b4e-a374-697d230093c1",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0691169e-08dd-40fe-b08d-f0c143920ae2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "06950280-e717-4743-a23b-1ab49f0333d0",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b21cafa4-9921-4397-8250-a51910ee4c4f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "76a416a0-54ba-401d-803b-533b5687de48",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 22.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1f7bdb49-23e5-42a4-b904-d835b29445a8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "fbd117b5-0928-42e6-986f-7391fdffd36a",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 23.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "631d02a5-0697-419b-8b92-0ce41a8976d2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "d32572aa-d54d-49be-9003-5baea35c4146",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 24.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6257fabe-d4f5-4778-88ab-c37e03ec32da",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "d351494f-a20e-4df5-846a-d6bed44437c3",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 25.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "99db781d-6d75-446e-9020-b48b47238c8e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "fb838881-daca-4cfa-b1f1-b3a9e119eb2b",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 26.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3ccec31c-283f-47bf-afa4-cea7643a326b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "84fe0ad4-b855-48b1-a8c9-2a6865995c46",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 27.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "17f672c5-94fb-40dc-a1e1-97f4e3dae398",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3993c440-3bef-4b29-984a-c20febb2138c",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 28.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "aa1335b9-b9e0-4038-acd8-7b00a58a627c",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "058bb3f4-ed91-450c-aaa9-b57610f0c28d",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 29.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c2aa803e-890f-4dfe-8717-418fe42fe315",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "e7b01d2c-cc40-4ade-b500-7c5a3ed32f2a",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 30.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "354a040a-c3ab-4453-84da-37a0426fad2a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "678ddd07-3902-4ba4-af6a-d94817c18569",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 31.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "060e9362-7d9f-4892-a9fd-46c77053d710",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4729de5b-7b91-44b7-8383-0d8c2ade3e77",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 32.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "45ee5442-197b-4cf6-a839-00f968388749",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7e27525b-b10c-42a4-9288-56f8478ce201",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 33.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8370d1df-765d-4a14-a615-8d95d6874552",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c319ce1f-17dc-4015-b393-e17f58016f33",
-                    "path": "sprites/spr_playerN_knightsword/spr_playerN_knightsword.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_playerN_knightsword"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1cf6440d-16eb-4c5b-8e24-c650c2194d91","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_playerN_knightsword"
 }

@@ -1,855 +1,116 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_sausagemannocigar_recovery",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 96,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 4,
   "bbox_right": 97,
   "bbox_top": 36,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c9f36655-de7d-4ed4-bec2-5eabac12422e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "f266f7b8-9cdf-4381-805b-337f1f4facc5"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "58af2562-0702-42f2-9612-89b23f551d1f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "921a75e2-634b-4c00-af20-0c94f565f267"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "6556e5f1-a845-49b3-81ef-f7ce6f4b0b98"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "130a86da-7fe3-4685-ba29-f889dad87f64"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3f46093a-9adc-45b1-bd2f-a4c62cbbaa78"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "79dbd780-fd5f-4ea3-b6bd-1ba38abf98e6"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "dd747536-8423-491a-b177-56ab77939e84"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "286b8308-4091-4ee8-b2ee-a2ae849aa076"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "5401f69e-75a6-4b6f-9528-bbffbbc7a475"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "e6b6cf4f-cb41-4cc5-b707-67dbf08f151d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8e0c27b8-85cf-423c-b733-bc3932f8cbbe"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "d7b6bad3-963c-4e43-b783-ac0cc953fb04"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8a663479-9952-4a2a-ae59-29e2e0602bb9"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "6a12a4d3-b499-421a-8f40-c3229d6df92f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "f859e9a4-d63f-484e-a0d8-774127bbcd6f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "85b11fef-736f-4624-a224-80a5297ed000"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "5901e517-7227-48c4-9838-3661ea1cc0b8"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4128db27-c615-443f-80c8-c1b8d4c1ccda"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "12ca2d32-4016-4e00-8622-8745101c866f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ee1189bc-c4b0-49af-b251-b6d333fdcfb5"
-    }
-  ],
-  "height": 100,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "2c1a2e04-f45f-4899-b89c-9c0375c49936"
-    }
-  ],
+  "bbox_bottom": 96,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
+  "height": 100,
+  "textureGroupId": {
+    "name": "baddiegroup",
+    "path": "texturegroups/baddiegroup",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76fa391e-a83c-4865-891f-6f44880f516f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35dfdda7-a4fb-41d4-8449-75c8e2eb8e1b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c0798b8-b603-47bd-a4eb-3ee733d99ebf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d1593558-0150-4512-ac05-d01a3274e6e3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b6b085b-73b0-4154-99a2-07e0d8a543d3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4a4694b-0b5f-4833-aeee-e35d0b0a0e60",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26a62634-b415-4f6a-a209-a8bc489feb98",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"44412167-71f7-4309-a49f-c30437402c11",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5242c799-be78-457f-b6ec-2a384984189c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb72ce66-e6ee-4a6b-8ae5-804f19b11be1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d394057e-e678-464a-927a-69fa0d47b2c4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"111f9055-6d76-4dd4-8e04-94c1a741ea3d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6414af27-ef5f-4375-98a1-9bb770dea52c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81b1b163-97e4-4061-9cdd-1c814ec59d05",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3844b212-3b1b-488b-9914-4d45e1f3b501",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0788d8d9-4ead-4fb8-9e59-3e8ce4bea645",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"20ef810c-41cd-44e6-a41d-e4c04541041d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30ab3781-3076-4d60-a53d-4b141dbbdc93",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a967143-fd9d-49cf-86dc-367438891a97",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f858046-a69f-46eb-8cc0-31b333b31d54",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abb74848-1ddf-4be8-b1c5-3c22a0e8a38e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"156e5636-f8cc-4c26-9eb2-e8026e3f9169",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_sausagemannocigar_recovery",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 22.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6c02bbac-2613-4f32-ae80-a547e06a01be","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76fa391e-a83c-4865-891f-6f44880f516f","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2a680e34-a181-4fce-ab0e-b7d48730a7b0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35dfdda7-a4fb-41d4-8449-75c8e2eb8e1b","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ff5268e0-5636-41de-af65-bf1f19d0e6cd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9c0798b8-b603-47bd-a4eb-3ee733d99ebf","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6e94d108-61f9-485f-b447-c55e482a9bee","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d1593558-0150-4512-ac05-d01a3274e6e3","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"777d9cb8-00ff-4323-92d6-f5360ad4a883","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b6b085b-73b0-4154-99a2-07e0d8a543d3","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c356a98e-bd59-41b0-a189-a8b62b49c746","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b4a4694b-0b5f-4833-aeee-e35d0b0a0e60","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"547fdade-c7c7-41e2-9c76-3575357132c1","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"26a62634-b415-4f6a-a209-a8bc489feb98","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8a5a5d4a-9db9-42e3-bec3-8c09145b6571","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"44412167-71f7-4309-a49f-c30437402c11","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"63e904c5-8da5-4b72-902b-22bbb54eb934","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5242c799-be78-457f-b6ec-2a384984189c","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9428a79c-b19a-415d-9402-8a6b84e66ac7","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fb72ce66-e6ee-4a6b-8ae5-804f19b11be1","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"48bdc9a7-0412-4784-952f-d58351c8f7a1","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d394057e-e678-464a-927a-69fa0d47b2c4","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d45da905-5551-42ec-8658-8c74e34eb5e5","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"111f9055-6d76-4dd4-8e04-94c1a741ea3d","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e0ce4a3f-4fb2-4d89-99dd-db5057b3018c","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6414af27-ef5f-4375-98a1-9bb770dea52c","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8289bfdf-6a65-44b4-ac16-532fdbdde86a","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"81b1b163-97e4-4061-9cdd-1c814ec59d05","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e4357e3-ba65-4200-af53-9eba55fe9d54","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3844b212-3b1b-488b-9914-4d45e1f3b501","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"26fe454c-8f91-47e9-886b-14299f6c0b24","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0788d8d9-4ead-4fb8-9e59-3e8ce4bea645","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"da85b941-dc40-4377-813c-210ba2815578","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"20ef810c-41cd-44e6-a41d-e4c04541041d","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4344dc86-7ac6-4925-9659-4170f53edffc","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30ab3781-3076-4d60-a53d-4b141dbbdc93","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2b1ffec5-992c-4c5b-8b26-96f44ad8b637","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a967143-fd9d-49cf-86dc-367438891a97","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14387baa-7ca8-49c2-af4c-58467e2eab9c","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f858046-a69f-46eb-8cc0-31b333b31d54","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c3927fdb-ed85-4ba3-8246-3158812bc7df","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abb74848-1ddf-4be8-b1c5-3c22a0e8a38e","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a069ce03-dae5-414d-b682-a49be5953cac","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"156e5636-f8cc-4c26-9eb2-e8026e3f9169","path":"sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 50,
     "yorigin": 50,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c0ee453b-1b2c-427a-8560-2fa958481bef",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c9f36655-de7d-4ed4-bec2-5eabac12422e",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3630dc5f-1ee7-41c1-b2b2-abe32aac15da",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "f266f7b8-9cdf-4381-805b-337f1f4facc5",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2ba29333-6fb0-4f0e-bd1c-88fe273b3f71",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "58af2562-0702-42f2-9612-89b23f551d1f",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "10f7819e-6c08-4a0d-982b-fa233c0a33e8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "921a75e2-634b-4c00-af20-0c94f565f267",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1fa8ee32-d3b6-4ea7-9b70-ce9a86062d9e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "6556e5f1-a845-49b3-81ef-f7ce6f4b0b98",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "efa82d0b-5e53-42c3-9efe-fdd40b90578d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "130a86da-7fe3-4685-ba29-f889dad87f64",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "83173b4e-c13c-473a-a8c5-2e6f7bfd81fc",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3f46093a-9adc-45b1-bd2f-a4c62cbbaa78",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bbe042c4-b3eb-4d22-b2ad-01b43d3181fe",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "79dbd780-fd5f-4ea3-b6bd-1ba38abf98e6",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bdd075a9-3ce9-4981-9c7e-66f35d76cdd0",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "dd747536-8423-491a-b177-56ab77939e84",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "84a44cc2-2b06-4e81-8dbf-90b928d08575",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "286b8308-4091-4ee8-b2ee-a2ae849aa076",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1a0f9007-b8cd-4f9f-b1bb-7a39ba9eb0cb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "5401f69e-75a6-4b6f-9528-bbffbbc7a475",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2f4303ed-944d-46d1-9633-bbf08449c8b0",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "e6b6cf4f-cb41-4cc5-b707-67dbf08f151d",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "f65ffb27-0889-4cc0-a500-ff8d06680bba",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8e0c27b8-85cf-423c-b733-bc3932f8cbbe",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b9665dd9-0574-4989-a84a-f07cde9b89a2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "d7b6bad3-963c-4e43-b783-ac0cc953fb04",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bfee79ea-4c3b-4215-8c0f-e90a6dcb5d27",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8a663479-9952-4a2a-ae59-29e2e0602bb9",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "38e1d8c4-71e4-4416-9f12-4799c724efe8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "6a12a4d3-b499-421a-8f40-c3229d6df92f",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "ba1985bc-3d6c-48dd-90bf-c6f4ad26fa44",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "f859e9a4-d63f-484e-a0d8-774127bbcd6f",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4fc0736a-66ab-44c5-a180-8ed265fd06c5",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "85b11fef-736f-4624-a224-80a5297ed000",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "66542b59-9bd5-4d7c-9571-5882ad2aefe9",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "5901e517-7227-48c4-9838-3661ea1cc0b8",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "f4122252-204f-44c5-82df-7dd706e4130a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4128db27-c615-443f-80c8-c1b8d4c1ccda",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "9d575c07-601b-469c-8396-84fa6778c9e3",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "12ca2d32-4016-4e00-8622-8745101c866f",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "f6b6765d-959f-4a87-a758-796123df5f37",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ee1189bc-c4b0-49af-b251-b6d333fdcfb5",
-                    "path": "sprites/spr_sausagemannocigar_recovery/spr_sausagemannocigar_recovery.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_sausagemannocigar_recovery"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27708def-dd10-42e0-bc72-83be2fcf8eb2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_sausagemannocigar_recovery"
 }

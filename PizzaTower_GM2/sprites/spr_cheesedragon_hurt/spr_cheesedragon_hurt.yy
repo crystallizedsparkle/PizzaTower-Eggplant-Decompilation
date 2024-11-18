@@ -1,855 +1,116 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_cheesedragon_hurt",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 287,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 5,
   "bbox_right": 335,
   "bbox_top": 41,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c41728ba-4637-49de-85d2-c268b049cf1e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "368b2ca6-75b7-4061-a2a7-9ab3a9fd4bb5"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "58ee9929-a8ce-4003-95ce-b6fb42bab3b7"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7bf8c407-e7c5-47f6-a9a1-cf6ec3df2e14"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4fe03d0b-ed79-4208-ada6-89233e090dfd"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2a466242-9855-4420-ad28-5349dbf424a8"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "20021d98-009b-47ca-975e-1159e2aa7d99"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "e274bbad-2255-400e-87dd-fc115c88992f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ce4cc87a-fc3a-4350-9739-f74d6f05a9fa"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b4100566-1e65-4e32-8d70-328b1e57cbf8"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ab23bd62-e0e1-4721-aaa6-ab146802ce20"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "86d79638-80bd-4219-858c-07a10f5666eb"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "0d38ad5f-386a-4f2e-94e0-63ddba78c2d2"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "693d6658-ef29-4d0a-951f-ad3e1dd360be"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a58d01e2-bd8a-4dbd-a986-f96640499c27"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "6a40a30e-3069-4591-8e5e-7e06d8a2f364"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "572d2431-75a9-47f8-8960-dc91d39a55d6"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "30308130-c6bc-4c58-8ecf-11c22b8115e7"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "d459fe99-3e21-4372-9904-73365a199a8a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8aeeba1e-6626-4bcc-9244-77f2cd3194c9"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2f5bfa24-6c5d-47c5-9af4-02b53ed5fcd7"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4bf871fd-fe6f-41af-bade-9f2f0c9dd39c"
-    }
-  ],
-  "height": 320,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "81ddcde0-34e5-4368-93e2-7d7f3c732720"
-    }
-  ],
+  "bbox_bottom": 287,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 336,
+  "height": 320,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a10b925-c48d-44e6-9b11-30072e54900c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f923cc1f-8c8d-4518-bcc7-ac564c07faeb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"edde15d5-97c3-4b60-8e6e-7f4f627cd0d7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7031a40-f119-42e1-90fd-6a7c1ee7fe31",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e81df940-7345-4a22-8bef-02231502efad",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0566fe37-4717-4f07-91a8-115a640a68b2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f883a69-2f78-4515-8e01-7eb7589aaba2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b37d034-efa9-499d-8335-19b24fe2fcfa",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b6b8561-1c72-401a-91e9-7b8098d755f8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49337494-7b24-4a2d-a8ef-924008c0c83c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"28ae08d5-da32-496a-9cd7-2e31db05dc1a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89ec0439-4237-44d2-9a2b-14f9f4bf26e9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"62901e06-4c4c-4c56-8784-eec2f042feea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"43cfef25-bab7-433d-9873-578fd01f6e22",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"250786a3-c7dd-42c2-8542-23ea209d9c6c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65c5687d-fd1d-48bb-b45d-efa5b0578b8e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"207fa224-429e-4d13-b160-06fed9d94823",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5a44f154-1069-4918-8662-2a92508f6829",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30019f87-55b3-4deb-b961-9da889acb758",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"993be6e1-a21c-4a65-a68c-686c00773766",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d246d2d2-f8dd-4159-a16e-18a6c61f37e1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89561c84-d250-427c-89a3-06e0d6a5411c",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_cheesedragon_hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 22.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"12ad63f8-306f-4565-a892-c2b59006294a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7a10b925-c48d-44e6-9b11-30072e54900c","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ddf23a55-8c66-4e4e-9559-6ef5ec6db899","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f923cc1f-8c8d-4518-bcc7-ac564c07faeb","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3f674f3e-e4a6-4516-b4b2-f4cdef1d43a3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edde15d5-97c3-4b60-8e6e-7f4f627cd0d7","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d4a5e282-53d2-4527-9a14-3c109b041815","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7031a40-f119-42e1-90fd-6a7c1ee7fe31","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3c421315-4208-4d28-9420-bc82c0d3314d","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e81df940-7345-4a22-8bef-02231502efad","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4dacf9a2-4949-4383-93c6-35abc6250628","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0566fe37-4717-4f07-91a8-115a640a68b2","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"824e5cba-22b5-4d72-8951-8f03e38ab034","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f883a69-2f78-4515-8e01-7eb7589aaba2","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1db9deb-8576-4c73-b38e-ee5f3eca39cb","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b37d034-efa9-499d-8335-19b24fe2fcfa","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2ea0ffce-dd1f-41a6-8aa1-6f69b1d06aeb","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b6b8561-1c72-401a-91e9-7b8098d755f8","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"603d79c9-951b-4160-939a-73e4ac4f2d07","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49337494-7b24-4a2d-a8ef-924008c0c83c","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"85faff20-953b-4345-91e9-bb528f1e3007","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28ae08d5-da32-496a-9cd7-2e31db05dc1a","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6033d271-33a8-429d-9457-ceb9ab466c87","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89ec0439-4237-44d2-9a2b-14f9f4bf26e9","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ffe42143-a050-4a24-935a-8d0ef9efbcff","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"62901e06-4c4c-4c56-8784-eec2f042feea","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14cdf2d0-2bca-420e-a743-d40071b5a046","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43cfef25-bab7-433d-9873-578fd01f6e22","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"85758cb7-fdd1-45b4-911d-181ddf34c6a3","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"250786a3-c7dd-42c2-8542-23ea209d9c6c","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0cf66ddf-04ac-4e3a-adae-fdb7770ccd7d","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65c5687d-fd1d-48bb-b45d-efa5b0578b8e","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b9cdc880-f163-4dd2-b5ff-3b7a636e891f","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"207fa224-429e-4d13-b160-06fed9d94823","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c717b24f-a0a0-4cd0-b374-64632ec4bd5b","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a44f154-1069-4918-8662-2a92508f6829","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d9e3714d-b6ac-4a14-a3e7-934411fca32b","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30019f87-55b3-4deb-b961-9da889acb758","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"56c87b22-01d6-4f17-8b97-1e66ab3cc30c","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"993be6e1-a21c-4a65-a68c-686c00773766","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"efd58877-0db6-46a8-89c9-41ac33ffbeb5","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d246d2d2-f8dd-4159-a16e-18a6c61f37e1","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7adf0010-733e-4e9d-a27c-39c0b33ccf3e","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89561c84-d250-427c-89a3-06e0d6a5411c","path":"sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 168,
     "yorigin": 160,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "ea96e0a1-a389-46e1-bb44-4e993d79ec76",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c41728ba-4637-49de-85d2-c268b049cf1e",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0b64c00a-c547-422a-bd8c-8307b80e6cc2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "368b2ca6-75b7-4061-a2a7-9ab3a9fd4bb5",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d0fecb25-7c24-4b6d-a38c-d791efde138f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "58ee9929-a8ce-4003-95ce-b6fb42bab3b7",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "dd6cf572-44d2-4f33-8933-4316ab3c12b0",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7bf8c407-e7c5-47f6-a9a1-cf6ec3df2e14",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "e6c64282-ae8e-4eb4-8a14-497a865c226a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4fe03d0b-ed79-4208-ada6-89233e090dfd",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "047e359a-0e40-4592-b11c-08eed45abbef",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2a466242-9855-4420-ad28-5349dbf424a8",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c9001697-e7ab-42ee-bb3f-88707ca4aebc",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "20021d98-009b-47ca-975e-1159e2aa7d99",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "44163cc3-f43c-4fe2-b2c8-bac349ddcf69",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "e274bbad-2255-400e-87dd-fc115c88992f",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1696a62d-a9c0-4eb3-bf3d-5e4e827b1354",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ce4cc87a-fc3a-4350-9739-f74d6f05a9fa",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "42c273d9-5fc1-49cd-87c7-9c5bc05cfba1",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b4100566-1e65-4e32-8d70-328b1e57cbf8",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2f1f43b8-c556-4923-9988-9d4b30557a72",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ab23bd62-e0e1-4721-aaa6-ab146802ce20",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "12bc41a1-296f-4c74-bd60-ce93e97f7f15",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "86d79638-80bd-4219-858c-07a10f5666eb",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4b721111-e701-4175-83c8-ab2ad5b867a0",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "0d38ad5f-386a-4f2e-94e0-63ddba78c2d2",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bf26bf9a-a352-4af8-9a09-86f78c074e11",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "693d6658-ef29-4d0a-951f-ad3e1dd360be",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4ac7d505-1805-4908-b964-fac90ef25c9a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a58d01e2-bd8a-4dbd-a986-f96640499c27",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6b6f0c9c-e2ae-413e-a8ff-1beafeed7f0d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "6a40a30e-3069-4591-8e5e-7e06d8a2f364",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "cf440d8a-c881-47f7-a2b4-05d2e43da785",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "572d2431-75a9-47f8-8960-dc91d39a55d6",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "14c028e5-663b-4648-a6f0-75e1f3d3cdb3",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "30308130-c6bc-4c58-8ecf-11c22b8115e7",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "583bbd94-925e-416a-874f-07ea8d2a6c95",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "d459fe99-3e21-4372-9904-73365a199a8a",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "fb0ab7bd-666b-4001-a051-de8bb1173c9b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8aeeba1e-6626-4bcc-9244-77f2cd3194c9",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d12f5aed-f2c3-4193-8d2c-fa094f845b91",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2f5bfa24-6c5d-47c5-9af4-02b53ed5fcd7",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a40b08c0-d3a9-4208-b8aa-233f474dc930",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4bf871fd-fe6f-41af-bade-9f2f0c9dd39c",
-                    "path": "sprites/spr_cheesedragon_hurt/spr_cheesedragon_hurt.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_cheesedragon_hurt"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c43d1901-9b18-4b6e-a379-2d5e90f872c0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_cheesedragon_hurt"
 }

@@ -1,987 +1,124 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_archergoblin_shoot",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 95,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 1,
   "bbox_right": 98,
   "bbox_top": 31,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7628f1d2-d512-442d-8939-a8cb6af48161"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "55572f63-1e7e-4816-b05e-e773c2c38131"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a3baf142-dde1-48f4-a915-0daf71cf6926"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c79f127b-d8d9-4d84-9980-7a4d6275fbab"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a081dae0-3649-4626-8670-855140c849e9"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "307dc918-6399-4df0-a82b-51991f76263c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "0e66cb4c-e6a9-4304-aaf4-9991ad6f6a1b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "beb90732-3c49-4e12-bdb0-5094211361c8"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "6821ef3e-e2c9-4884-b56d-66179233c45e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a89521d2-c119-47df-b884-bbacf89bfcb3"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4a2e4778-337d-4ad3-bc3b-3fb8ceecedda"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "dbbff746-29a8-4d50-994c-02d57012b61b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a31699d5-9acb-443e-9cfe-ff2f30de533f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "db0d987a-c0fd-4c25-bcdf-1205e4a2d71b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b2f707be-22f4-4ed2-8471-693fad844567"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3d891da5-bbff-420b-b795-292b92acdb18"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "0b0b7d29-61b0-46a3-aba4-488acf1bf02c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8f80dbce-2bb6-4d7d-a265-e0c74b944480"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4cc81472-86a9-4410-8163-c86d9a75d25c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2b2fd8fa-96af-46b9-b2fa-e7fdd333171d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "784864b3-5ffa-4717-a307-9971b514d3c5"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a41bd245-0211-4616-a0d8-a67d637d84d9"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c37e2284-3501-4e23-a9df-4998955e62cd"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2968f243-3d9a-4f57-a096-0aff2a152fef"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "acb2d988-42ed-456d-8d4d-e3241548bd90"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "43cad820-a4b4-4fac-95b7-0c4c18f5431d"
-    }
-  ],
-  "height": 100,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "2badc820-5bcd-4365-b62a-bcabc9d36077"
-    }
-  ],
+  "bbox_bottom": 95,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
+  "height": 100,
+  "textureGroupId": {
+    "name": "baddiegroup",
+    "path": "texturegroups/baddiegroup",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ae90996-0a07-4145-ae09-c49d83fb03c1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f70a6a3a-bba3-4211-b32c-91c5aa861bd0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"44f1f4b6-f927-4cb1-bbed-f92fca47d63f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ed60624b-00c2-4711-ac92-ef6a25c5f16e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c804c22-34f0-4f47-962b-94102e3bdea2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ae56c89-aa2a-4a3d-b1b0-6cfcdd90c871",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8ff36d35-2f78-43a1-99d4-fcf9c8d9cef1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"488a2028-7f2c-4275-b238-6310259923ca",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a60d7d77-12a4-40cf-96a0-744ab0f0d089",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acab0112-1483-4e00-8fce-d55b30cb9fd7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b7563ac-aecd-4742-b9d0-0690b17046be",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f88cb9c5-2da9-41a3-9956-557510f02916",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb344c39-6d7c-48cf-84dc-a44ff9d8d7a6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00e39aca-57c6-4948-bfca-15cbd61b1380",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b2a7c913-3080-400a-a87e-39fe1cfe3e24",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f47d1043-d8c1-474a-9ac8-6c9ac2ee282b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd3b6fd4-9f88-4d1d-8306-5cd31c33d39b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"333b12ef-4e4c-4052-91c9-b9f956bd0804",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd8ea788-ab09-4117-9486-f3ff6b5722d2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac618f6a-939f-4a01-b5da-07ee023a3234",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2aba0b0-2dee-4534-8b62-5c8be6f3ff0a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7453bdbb-cc16-4b97-b813-2bbfe821ddfc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e53ba7e-b62e-418a-8ed4-504cd71a62bc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c0790bbe-8710-40e8-813a-a0d5e86d94f1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84f49fb8-078a-4ca6-81ec-83232a65abc7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"400e419a-0dbe-4e0c-8886-085f58f87d03",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_archergoblin_shoot",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 26.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"91b9c16b-cb72-43a1-a663-d235cadd617b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ae90996-0a07-4145-ae09-c49d83fb03c1","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"62a05a1e-ca1f-4fd6-93b7-2ca829d2661f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f70a6a3a-bba3-4211-b32c-91c5aa861bd0","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"511f70eb-3c17-475e-8209-c29ba5ec196c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"44f1f4b6-f927-4cb1-bbed-f92fca47d63f","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1969ba7c-d67e-414a-ab14-593fd9798fa2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ed60624b-00c2-4711-ac92-ef6a25c5f16e","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"67b7e0e7-ddd0-4ccf-b07d-90b018b2093c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c804c22-34f0-4f47-962b-94102e3bdea2","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2bfd7ee7-35fa-4953-a459-0e655cf74310","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ae56c89-aa2a-4a3d-b1b0-6cfcdd90c871","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"097a7c76-39a4-48f6-a7a2-b85b77f37ae3","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8ff36d35-2f78-43a1-99d4-fcf9c8d9cef1","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9c5bd5f3-49dd-4c20-acd5-7fdced8c3b83","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"488a2028-7f2c-4275-b238-6310259923ca","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"047042f4-750b-4b33-8c87-e1dd91954a47","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a60d7d77-12a4-40cf-96a0-744ab0f0d089","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"57dc7c28-b4b6-42db-814a-3ab956804368","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acab0112-1483-4e00-8fce-d55b30cb9fd7","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"94966db9-f0ea-44e2-bdeb-24a293aa7ff4","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b7563ac-aecd-4742-b9d0-0690b17046be","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e458139b-7617-4575-acd4-77a20e5c2290","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f88cb9c5-2da9-41a3-9956-557510f02916","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f6dbb748-9869-49b8-bdd7-1450172b5ad5","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb344c39-6d7c-48cf-84dc-a44ff9d8d7a6","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"91f6cb6a-01b3-4e2f-9832-d48d06a1fef4","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00e39aca-57c6-4948-bfca-15cbd61b1380","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"671690de-b757-4636-9703-8e39719471e3","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b2a7c913-3080-400a-a87e-39fe1cfe3e24","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b1298b80-8993-4da8-b907-de784d3bfb2a","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f47d1043-d8c1-474a-9ac8-6c9ac2ee282b","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2419fccf-c793-4917-8286-2a0a3e92eb98","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd3b6fd4-9f88-4d1d-8306-5cd31c33d39b","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"481dd1e2-e0f1-4eec-aaff-e4b399a781ea","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"333b12ef-4e4c-4052-91c9-b9f956bd0804","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fdc7e997-cd3a-4bd2-ade9-b2560d4b5f9b","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd8ea788-ab09-4117-9486-f3ff6b5722d2","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bf40a973-0305-4bcf-87dc-1b7353fe06a3","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ac618f6a-939f-4a01-b5da-07ee023a3234","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fc4c7f35-8ff1-4fe8-b527-93934a7f0f45","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a2aba0b0-2dee-4534-8b62-5c8be6f3ff0a","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"229fb5fb-f34e-4b30-86d2-3264502a80b9","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7453bdbb-cc16-4b97-b813-2bbfe821ddfc","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fc2bb5fb-e1b4-4ef7-8e0a-8ec7cb44782a","Key":22.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e53ba7e-b62e-418a-8ed4-504cd71a62bc","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0368bd41-3b08-4967-a416-443c052920c0","Key":23.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c0790bbe-8710-40e8-813a-a0d5e86d94f1","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"af3d9211-e692-41f4-a282-f31187c8335c","Key":24.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84f49fb8-078a-4ca6-81ec-83232a65abc7","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b76f7a64-0f51-4848-bc95-9dc4ab89e4a3","Key":25.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"400e419a-0dbe-4e0c-8886-085f58f87d03","path":"sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 50,
     "yorigin": 50,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8e5f89cc-c7da-431b-b278-d5615d6bb60f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7628f1d2-d512-442d-8939-a8cb6af48161",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3c38d440-e7bd-498a-8db9-baba916a0eee",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "55572f63-1e7e-4816-b05e-e773c2c38131",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3efa241a-ead6-452f-b8a2-463e7188ff7b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a3baf142-dde1-48f4-a915-0daf71cf6926",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8f51901d-8911-4aca-a231-5ad5ce99ecd2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c79f127b-d8d9-4d84-9980-7a4d6275fbab",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "577274cf-a328-4bdc-aa84-7a605bcd8bad",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a081dae0-3649-4626-8670-855140c849e9",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "48fc123e-a8d5-476c-b810-46a0bcc766f5",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "307dc918-6399-4df0-a82b-51991f76263c",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a1f07432-b73e-43cb-9829-725883c4ab4a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "0e66cb4c-e6a9-4304-aaf4-9991ad6f6a1b",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4194a7e7-a7bc-4f4f-908f-e33d1425dea8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "beb90732-3c49-4e12-bdb0-5094211361c8",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c73e9010-911f-4529-b0af-6e86def9c331",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "6821ef3e-e2c9-4884-b56d-66179233c45e",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2ff0455f-aaff-4092-a439-a5e5a516b947",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a89521d2-c119-47df-b884-bbacf89bfcb3",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "e0b0aac8-e042-4238-acc3-b0ca5c217e4c",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4a2e4778-337d-4ad3-bc3b-3fb8ceecedda",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4febfdd7-a4d2-4673-9d7a-099e1e14801e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "dbbff746-29a8-4d50-994c-02d57012b61b",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "07fa69da-9c8f-4862-ae57-22871a5a14d4",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a31699d5-9acb-443e-9cfe-ff2f30de533f",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1e732a42-1a98-43ef-90c9-d170f3e2d8d9",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "db0d987a-c0fd-4c25-bcdf-1205e4a2d71b",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "80909ce9-8b16-4089-8e48-134e511da04f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b2f707be-22f4-4ed2-8471-693fad844567",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "42083d1f-219c-45cc-bdae-455121958287",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3d891da5-bbff-420b-b795-292b92acdb18",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "534a0fa8-754c-41ea-bae7-58092d6a9435",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "0b0b7d29-61b0-46a3-aba4-488acf1bf02c",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0879147c-40f1-4bff-a66b-7657358db1fb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8f80dbce-2bb6-4d7d-a265-e0c74b944480",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bd5453d5-1fa7-487b-a308-94c9c6987f0f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4cc81472-86a9-4410-8163-c86d9a75d25c",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "867762af-e836-4b97-853b-db637a04f7e8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2b2fd8fa-96af-46b9-b2fa-e7fdd333171d",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4fb91de8-7073-43f4-a746-10144e26c2cc",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "784864b3-5ffa-4717-a307-9971b514d3c5",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "bd2f7681-dba5-4419-851b-8e11eee0f57e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a41bd245-0211-4616-a0d8-a67d637d84d9",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 22.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "fe16d21d-1cee-4a05-ad7b-d11c6f1276f8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c37e2284-3501-4e23-a9df-4998955e62cd",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 23.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "5c86edd0-6b40-48c3-a9c7-b94c464e9629",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2968f243-3d9a-4f57-a096-0aff2a152fef",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 24.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d0a64129-68cf-4f75-bded-fb197d464849",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "acb2d988-42ed-456d-8d4d-e3241548bd90",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 25.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "921f3bd6-203d-481c-8e31-1b4b210b7e16",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "43cad820-a4b4-4fac-95b7-0c4c18f5431d",
-                    "path": "sprites/spr_archergoblin_shoot/spr_archergoblin_shoot.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_archergoblin_shoot"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7581bcf8-3bc2-4020-9beb-f867d7a9022e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_archergoblin_shoot"
 }

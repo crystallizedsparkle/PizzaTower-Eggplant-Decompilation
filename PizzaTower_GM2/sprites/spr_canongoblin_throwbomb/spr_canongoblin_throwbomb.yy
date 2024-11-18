@@ -1,855 +1,116 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_canongoblin_throwbomb",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 96,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 98,
   "bbox_top": 0,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "5f721eda-76eb-4cae-baf0-51b59c6b1946"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3d27170c-6254-413f-a6fe-508dda71ac62"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "404af27b-f817-4a71-a504-7f9b65b95105"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "02fed249-4e21-4f93-b1d7-cbc8824f3932"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "f709bc29-0364-46b3-a2b4-13a1776a1a76"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a1e5430b-d80a-413d-aa1a-019a24da3e7e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "97efece6-9390-4fc3-bcb1-6655f52f4934"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3f60b82c-c1d4-488a-a345-eb60238cd38f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "48fb27d3-d590-40be-9899-3a534fc68f87"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "941454de-c9f1-4b4a-81c1-7913175d48b1"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b33163d0-0cee-4f45-8eda-88aa29ec1091"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "05a118f8-1714-4995-8088-bc9985f5b916"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "1503719e-082b-459d-adef-6847b832c72b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "63f9dd54-ff89-47f9-b64e-b6e36819905d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "58a73f0d-6ecb-4295-be7e-819f0e832e75"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ecf81498-0f26-48f6-9621-7e3e4ab818d7"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "2eb47a4e-42ea-47de-81a1-4dea1bb3d237"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a413aec3-32c9-4dbd-ae3c-e2f5fda5160f"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4a911fe5-e08b-4bde-9c9a-8fe6c325ea97"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a846402b-c94c-46bc-aac6-9946c0de2f6d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c4225db2-ed22-4985-b35c-1691ed932f9d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8e0862a8-0aad-4636-8f5f-7ca684af5d73"
-    }
-  ],
-  "height": 100,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "6dfa5783-1928-482f-bd01-81516133b7df"
-    }
-  ],
+  "bbox_bottom": 96,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
+  "height": 100,
+  "textureGroupId": {
+    "name": "baddiegroup",
+    "path": "texturegroups/baddiegroup",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa804483-1255-4c3a-acc6-c2fe6bef0b79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76fb31aa-a0f1-448c-939a-8055c202d802",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1f0ebfe-d801-4c7d-abfc-33bb766a467c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99375673-bb9d-4021-a1b6-0b1a759d8acc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b68baa6-7f87-422a-ad0f-1d15a9ab8ce1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49ef88ae-7887-4672-938e-5ba7e4895842",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5cc8167-42c5-453c-a1e5-9c37a88bdf0f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3da10574-f510-4317-948b-29dd03d1e58e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b2473b7-f93c-442d-91af-aea11baaf5cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b49726b-fa15-4843-957f-e3240fc79e05",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3546b5c2-bbd1-4c2a-8af1-ddc4b298009d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd2a7ce4-bf11-4ea2-ba4a-5cf8fd075931",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"245f8e60-80ac-4813-8ac9-45787216211e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e792b7dd-1a01-4804-a3d0-943fa89d1714",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c214108-2bec-4877-8972-f3469fa39225",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cda17033-c1b5-4343-a18e-8fa651ccd455",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ceca964d-d4c3-431d-a2ac-68101d8d3f9b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dad61d1e-598b-410b-8520-ecddd68ee5e2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"498f843e-78ba-49b6-a534-42af576d7d2e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64cbd03a-6939-4a8b-adbe-a1b4d49731fe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6c3d532e-4e0e-4c87-a91d-779c7b7d6fd4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b20b16a-f295-419b-b41b-0323d3eb349f",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "spr_canongoblin_throwbomb",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 22.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"00d65cbc-2891-4031-8a58-6a156a73c06f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa804483-1255-4c3a-acc6-c2fe6bef0b79","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0fdc7585-8362-4b6c-a25d-ab636fe1ad80","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76fb31aa-a0f1-448c-939a-8055c202d802","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5a25f146-c4e5-4700-b4be-2650c6015af9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1f0ebfe-d801-4c7d-abfc-33bb766a467c","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8e938ba1-698d-4281-90f6-6cdea3a3afdc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99375673-bb9d-4021-a1b6-0b1a759d8acc","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"58f3f053-223e-4e61-ac25-ac25e1c897db","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b68baa6-7f87-422a-ad0f-1d15a9ab8ce1","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7a46a65c-b2bb-47d0-b787-011ac4ae5240","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49ef88ae-7887-4672-938e-5ba7e4895842","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2bfe23e2-5413-49b9-a5b1-da30e6a5d9f9","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5cc8167-42c5-453c-a1e5-9c37a88bdf0f","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c222aff5-8a0b-4f04-8b65-71ce3f0871ad","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3da10574-f510-4317-948b-29dd03d1e58e","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6e504eb7-5a4f-4bb3-b877-ecf2f1a0bcec","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b2473b7-f93c-442d-91af-aea11baaf5cf","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6a0a918c-014e-4586-9458-2a971e5a3925","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b49726b-fa15-4843-957f-e3240fc79e05","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"96432101-42f1-4afd-887c-4a52387c0f74","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3546b5c2-bbd1-4c2a-8af1-ddc4b298009d","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"19314070-d767-42a7-955c-adeeca421310","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd2a7ce4-bf11-4ea2-ba4a-5cf8fd075931","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d945b6d2-49fd-4fc0-b64e-e126c3d8a0c4","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"245f8e60-80ac-4813-8ac9-45787216211e","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a8f66195-80c6-4de8-b29b-4a907e999361","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e792b7dd-1a01-4804-a3d0-943fa89d1714","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1da92dd-f4d1-4c1d-9079-ba623ceb16d1","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c214108-2bec-4877-8972-f3469fa39225","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b8fbd6ba-5b69-4e64-96f5-d61112529cda","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cda17033-c1b5-4343-a18e-8fa651ccd455","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"677165d6-7000-481d-b62f-77328a1a755c","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ceca964d-d4c3-431d-a2ac-68101d8d3f9b","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eec740c5-850b-40a3-afc9-39be7f601217","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dad61d1e-598b-410b-8520-ecddd68ee5e2","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"29f132cc-99dc-4dc9-abf9-b4ee0bcb2f10","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"498f843e-78ba-49b6-a534-42af576d7d2e","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c7e27881-cff7-4470-bfb9-9fe82aaed93f","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"64cbd03a-6939-4a8b-adbe-a1b4d49731fe","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1729a3b6-ce6a-4b6b-a24b-453025c812a4","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6c3d532e-4e0e-4c87-a91d-779c7b7d6fd4","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d79914e7-61cd-4652-87c8-69f396821357","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b20b16a-f295-419b-b41b-0323d3eb349f","path":"sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 50,
     "yorigin": 50,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "23428d2a-32b6-44e7-924c-518f89257096",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "5f721eda-76eb-4cae-baf0-51b59c6b1946",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "733fc626-e7c0-4338-9275-6cfe99e9834a",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3d27170c-6254-413f-a6fe-508dda71ac62",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "375cc2fb-b8a1-427d-a12a-16965ec423ef",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "404af27b-f817-4a71-a504-7f9b65b95105",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1beabb60-a7f3-4ef4-8eff-cc752318e2f2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "02fed249-4e21-4f93-b1d7-cbc8824f3932",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "ed36901d-3d03-4b88-95be-8fbe48388cb3",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "f709bc29-0364-46b3-a2b4-13a1776a1a76",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "10f503c4-16b3-4458-9841-945fcfe60882",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a1e5430b-d80a-413d-aa1a-019a24da3e7e",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "aa1ae7cc-7070-4f2a-a34d-042e536bd160",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "97efece6-9390-4fc3-bcb1-6655f52f4934",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2a5d54d5-3606-4b56-8b24-54c93a241bf6",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3f60b82c-c1d4-488a-a345-eb60238cd38f",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "e9e1c9b6-b566-4dd9-8837-fcd6884be484",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "48fb27d3-d590-40be-9899-3a534fc68f87",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "945025e4-57e0-4ece-b9f2-f479ab609f34",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "941454de-c9f1-4b4a-81c1-7913175d48b1",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "47cc0f97-2920-45ef-a473-a35dc4cc8eed",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b33163d0-0cee-4f45-8eda-88aa29ec1091",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "492d7a63-31e0-4306-adf1-5c4943cb7cd1",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "05a118f8-1714-4995-8088-bc9985f5b916",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "73d5ffd6-dad3-4263-a8f8-b9112bd3a0cc",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "1503719e-082b-459d-adef-6847b832c72b",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3e4f0eec-bfd3-4bc8-adbd-4ade0d36f7eb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "63f9dd54-ff89-47f9-b64e-b6e36819905d",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "54267748-2d75-4b64-8763-35e7ec2e65be",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "58a73f0d-6ecb-4295-be7e-819f0e832e75",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0d45eb92-cb7f-46b1-8636-57d446addb68",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ecf81498-0f26-48f6-9621-7e3e4ab818d7",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3d5cff9e-76f7-4852-a90b-ecc8949e242d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "2eb47a4e-42ea-47de-81a1-4dea1bb3d237",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8beb7404-a171-43d2-8d00-215055a56a9c",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a413aec3-32c9-4dbd-ae3c-e2f5fda5160f",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c8ea78f3-7a04-4f07-b23d-938c9a902810",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4a911fe5-e08b-4bde-9c9a-8fe6c325ea97",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "728da9d0-1a87-4028-ab1d-2f66f1fac3ff",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a846402b-c94c-46bc-aac6-9946c0de2f6d",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "c742df7f-9e03-49af-876c-295bead833c5",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c4225db2-ed22-4985-b35c-1691ed932f9d",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "be4d9215-9323-4186-a47f-2346f52a99c4",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8e0862a8-0aad-4636-8f5f-7ca684af5d73",
-                    "path": "sprites/spr_canongoblin_throwbomb/spr_canongoblin_throwbomb.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "spr_canongoblin_throwbomb"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"eb235b1d-42ea-4fe4-af43-08a5241ca5c9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "spr_canongoblin_throwbomb"
 }

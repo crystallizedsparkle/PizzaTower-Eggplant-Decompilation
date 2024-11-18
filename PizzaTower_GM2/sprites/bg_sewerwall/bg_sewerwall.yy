@@ -1,1317 +1,144 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_sewerwall",
+  "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "gridX": 0,
-  "gridY": 0,
-  "HTile": false,
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "enabled": false,
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 0,
-    "highlightStyle": 0,
-    "highlightColour": 1728023040,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015
-    ],
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "parent": null,
-    "tags": [],
-    "name": null
-  },
-  "origin": 0,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
-  },
-  "preMultiplyAlpha": false,
-  "swfPrecision": 2.525,
   "type": 0,
-  "VTile": false,
-  "bbox_bottom": 660,
+  "origin": 0,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 1026,
   "bbox_top": 0,
-  "bboxMode": 0,
-  "frames": [
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "96e4f99b-1180-4ac0-8468-a136905e20ab"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "21b5843b-593d-4e10-b921-8a4eb6a39300"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "01fff779-5c90-4da8-bb25-f4b8a1c34e7b"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "24c5ca58-847c-446c-beea-6e47d4905b6a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ec7f1cff-631e-4d49-a4db-9f13a59188ea"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "9464484e-15c0-4df4-9074-2744e3de502e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "5481ef67-6238-46e7-8a8a-f58aa0125cee"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7d1cfbc5-b9ef-4ef2-88ba-a900ca277fcf"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "947ceff2-0bee-4239-ac45-c3d15fd96051"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "779221ee-1190-4b1d-95ec-cb8e5b985278"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "be42d69e-7234-4014-bb4b-94d48109ff7d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a21232f7-a2ac-4dae-9d68-f0afaa1f735c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "30b870ce-f295-4ba2-964c-813a37cc819e"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4e00e6a0-eb3c-470f-86a2-17e3601653c3"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "d1f8bea3-2620-49ff-8b0c-243f4b138ae4"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "3dcc8d28-49a3-446f-a7f0-efdb95e9d92a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ffab7fe5-b13d-4a10-b71d-dae4fece6c74"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "58760d36-145d-4551-8a4b-73cfb1f45dcb"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7112c956-fb19-41ce-8f95-51fa6571954c"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "781b9d23-0c87-47c7-9ffa-6981543dbb82"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "dbba4d78-1057-494e-a8be-e7199bffb1fb"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "11b99ea5-d13a-452e-b350-3045539ee3ce"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "ced019ee-7bde-4686-99b5-58e204163baa"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "db5445d0-3a02-4366-9ecf-b3f5ab1f1799"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "151c1386-c6f9-431e-a3a3-da4bd882779a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "4a261236-8fbf-4087-b908-8289a9e39b1a"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "b62711f1-976b-4bf1-9b8c-d96e0f6d7649"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "7d0157cc-78ff-44d7-aa36-bd2efa9dff59"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "c81ac41b-9309-4bf4-8114-5f9ed8c6acf6"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "19a2f5d2-43d1-4136-b01c-bd164ec2cafe"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "526580ef-7fc5-431c-aa3c-33b290a76fb5"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "828a0840-c414-4df0-800a-c7eb967fde70"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "a1b63d79-cc46-438f-8fce-0e36457a3476"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "8cf59668-cf22-4780-9301-f3c176086e4d"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "fe424159-364b-4392-8eca-aa99e3ac4055"
-    },
-    {
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "1.1",
-      "parent": null,
-      "tags": [],
-      "name": "727d4793-f906-4051-83ba-acb8bf4c49eb"
-    }
-  ],
-  "height": 661,
-  "layers": [
-    {
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "1.0",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "opacity": 100.0,
-      "visible": true,
-      "parent": null,
-      "tags": [],
-      "name": "08b3aa22-5b17-4f60-9733-9141e4ecf7d5"
-    }
-  ],
+  "bbox_bottom": 660,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
   "width": 1027,
+  "height": 661,
+  "textureGroupId": {
+    "name": "sewergroup",
+    "path": "texturegroups/sewergroup",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9dff6bc-3289-4ad8-ae1c-c0e0af04a450",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a09bb12-ff8d-468a-9e48-c09ccaafec53",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d6beaea-8208-40c8-b2b0-d5393f34520a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"061837c8-3302-4bd4-9de2-90e06b4f582e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b88e4400-9edc-47d5-8c6a-a7aeb920ade8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c9b7fdc-9a06-48ea-9d13-732a8392816e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3074a2c5-543c-4a17-95a8-01e7358a1957",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a3fe339-4c11-462e-9d72-23455819a670",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d374dd1-c894-49da-91e4-c04a272ac90c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06f00b97-9a2f-41e5-84b1-3c052b1be329",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9cf2d675-5105-41c9-af03-5374843dbad1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c332b957-d8b7-44ae-a92e-9ab9a3bd044a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dbe3eec3-de40-4470-bf72-ae0eb583f820",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e9d7ab5-06ea-4301-a09b-8c3138c27754",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1938ff50-ecb1-40a0-a071-63bdadcbe7a4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13404aea-95e3-4d41-adc0-4a92938c85e8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5d497ee5-eea1-4c49-a2e5-71479963489a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f06bf699-3b63-40a0-9cd4-af141b41a04e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"23498082-d8ef-4907-95a4-a9c6394a10c2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ed4682ba-469a-4160-ab12-4483cb564923",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6151db84-2e7d-4de4-ad71-4b11ce0d5319",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9dad6e1-5293-4a34-b694-89383d486a3a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6642946-fa25-4fcf-a99b-0a74d4143c82",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6374cf57-2ee3-4194-9047-a0c15b0fbc1c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c0c4731b-8314-42b9-a710-58d8765a23b6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71929ae3-091b-434e-966a-09230f97d9e6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ce097320-3d64-4bb1-93e9-47039c685443",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"92ec7cea-90ec-4c83-80e7-9b678a4bfd84",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c033735c-bf86-49cb-a626-856b317a6941",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"480d11f9-40ed-46e8-8c68-2bf668d41160",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41274fa1-11cc-42f0-ac71-421b4edc3ed2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2c900ffb-3563-4d4b-818a-36f95028d35e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e80b2d6-74d5-4dd3-8773-57825315b011",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a5fbe076-467f-4d18-a86b-7b98791c3c3c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6afd7f27-6a74-40fa-b208-7953477f1366",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c67a648-83b0-494c-b8c5-55b0cc8bc3d7",},
+  ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": true,
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "showBackdrop": true,
-    "showBackdropImage": true,
+    "name": "bg_sewerwall",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
+    "autoRecord": true,
     "volume": 1.0,
     "length": 36.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"008051c7-0141-4f54-962d-d85e4d8e567a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b9dff6bc-3289-4ad8-ae1c-c0e0af04a450","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4ccec21b-31a5-47b4-bbd3-63f7512e42be","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0a09bb12-ff8d-468a-9e48-c09ccaafec53","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c4ac3f6e-6fbb-44b8-9456-b272cb9f49be","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d6beaea-8208-40c8-b2b0-d5393f34520a","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"456cd513-8a56-4e1c-a014-55a50b3f51d1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"061837c8-3302-4bd4-9de2-90e06b4f582e","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a6129c70-1b74-45b6-9729-adc72034edbe","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b88e4400-9edc-47d5-8c6a-a7aeb920ade8","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"377d118b-970b-4e79-a097-6ac0549791e5","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c9b7fdc-9a06-48ea-9d13-732a8392816e","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"89a5de9d-5c1d-477a-aff6-7c4776e27d45","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3074a2c5-543c-4a17-95a8-01e7358a1957","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5093f0ce-e197-4041-b1cf-3fe150cbd9fd","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1a3fe339-4c11-462e-9d72-23455819a670","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8fd97d70-17aa-4fa5-933c-96c310779d72","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d374dd1-c894-49da-91e4-c04a272ac90c","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"31c3f235-8263-430c-9d5a-afa0d7ec41e7","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06f00b97-9a2f-41e5-84b1-3c052b1be329","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b656fe9d-c6cf-4512-a4d9-829388bc8366","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9cf2d675-5105-41c9-af03-5374843dbad1","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4c9a3e0a-9f8e-41a5-b4b4-b7665384f25b","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c332b957-d8b7-44ae-a92e-9ab9a3bd044a","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"09cdb34d-e847-4180-b22f-cbb4fc181fed","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dbe3eec3-de40-4470-bf72-ae0eb583f820","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2f05c646-3ec7-47b9-92ff-a371ed646b46","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e9d7ab5-06ea-4301-a09b-8c3138c27754","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1a03c249-ac52-4061-8be9-3dfa2f29d057","Key":14.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1938ff50-ecb1-40a0-a071-63bdadcbe7a4","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"98591037-5d31-426f-a8c9-0f9dcbc5b674","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13404aea-95e3-4d41-adc0-4a92938c85e8","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1508e525-c003-47be-af24-0368b809c068","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5d497ee5-eea1-4c49-a2e5-71479963489a","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eb0b3dbb-cbe5-4b98-ad23-bd9e0615cd5e","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f06bf699-3b63-40a0-9cd4-af141b41a04e","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"11ba74ed-1b1e-45f7-9142-68e7f0b4675a","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"23498082-d8ef-4907-95a4-a9c6394a10c2","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5f7e9994-47d7-448c-919f-3aac95d9d714","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ed4682ba-469a-4160-ab12-4483cb564923","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5ecf4adc-e786-41bf-88ff-c887dd989bc6","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6151db84-2e7d-4de4-ad71-4b11ce0d5319","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4c12fdd8-5e48-49b6-affb-d0b35597a8c9","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9dad6e1-5293-4a34-b694-89383d486a3a","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"86d85218-1176-4936-8e27-4fa5cbdcc690","Key":22.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a6642946-fa25-4fcf-a99b-0a74d4143c82","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c0a62c66-6573-4d72-a4d0-2c0dcdf0c558","Key":23.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6374cf57-2ee3-4194-9047-a0c15b0fbc1c","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aa6f62ee-b250-4207-a18c-ef6673dfee45","Key":24.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c0c4731b-8314-42b9-a710-58d8765a23b6","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d56ffff3-b27c-4e4b-b746-0c23dee9d285","Key":25.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"71929ae3-091b-434e-966a-09230f97d9e6","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dec81036-af97-4bd4-899f-309bef9b039a","Key":26.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce097320-3d64-4bb1-93e9-47039c685443","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cef1da18-9d05-41f1-bee1-fd8ee9b61efc","Key":27.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"92ec7cea-90ec-4c83-80e7-9b678a4bfd84","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bfbc13f0-7ec4-4c1f-95af-68c142b36e53","Key":28.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c033735c-bf86-49cb-a626-856b317a6941","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a9bda227-ad67-43e4-84e1-9e5c751dd20d","Key":29.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"480d11f9-40ed-46e8-8c68-2bf668d41160","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0e7679a0-38e3-4dc3-b55f-647a03095887","Key":30.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"41274fa1-11cc-42f0-ac71-421b4edc3ed2","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3a081315-63d2-49eb-8e0d-81854de395cf","Key":31.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c900ffb-3563-4d4b-818a-36f95028d35e","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"df0dfa26-49ff-4f26-b857-b66a87c2c338","Key":32.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e80b2d6-74d5-4dd3-8773-57825315b011","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ade3aab1-34bd-4b99-b15c-555084c3b84d","Key":33.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a5fbe076-467f-4d18-a86b-7b98791c3c3c","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7dd8f1cd-6511-4e3a-af7a-6c784f69591d","Key":34.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6afd7f27-6a74-40fa-b208-7953477f1366","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f927f0b2-81ef-4d47-ab7a-bea0635c2aa1","Key":35.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c67a648-83b0-494c-b8c5-55b0cc8bc3d7","path":"sprites/bg_sewerwall/bg_sewerwall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+    ],
+    "visibleRange": null,
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
     "xorigin": 0,
     "yorigin": 0,
-    "tracks": [
-      {
-        "spriteId": null,
-        "keyframes": {
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "Keyframes": [
-            {
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "916c82db-4d0c-4354-a9a4-19cbcfe1e9ca",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "96e4f99b-1180-4ac0-8468-a136905e20ab",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 1.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "8d01c08a-0329-4cd8-ba36-1681fd6adcdf",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "21b5843b-593d-4e10-b921-8a4eb6a39300",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 2.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "f741421d-6fe7-4338-82a3-bf0d07d6c566",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "01fff779-5c90-4da8-bb25-f4b8a1c34e7b",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 3.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "eac00f1a-4a29-43ac-a66b-f538b91da0e1",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "24c5ca58-847c-446c-beea-6e47d4905b6a",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 4.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "cb017b4f-27b9-4918-b632-0bac1912e016",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ec7f1cff-631e-4d49-a4db-9f13a59188ea",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 5.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "dd298f6e-36f5-493e-974b-62e7f606c179",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "9464484e-15c0-4df4-9074-2744e3de502e",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 6.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6980badb-3627-4d69-8770-b64f8a97c69e",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "5481ef67-6238-46e7-8a8a-f58aa0125cee",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 7.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "ec3172da-01f0-4a30-bb32-525b9c5e21da",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7d1cfbc5-b9ef-4ef2-88ba-a900ca277fcf",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 8.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "1ab6afc5-f717-47a8-bf47-4dcb26bc78a8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "947ceff2-0bee-4239-ac45-c3d15fd96051",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 9.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "9f93f73b-26d0-4b48-ae1e-d7c9c45ecfbb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "779221ee-1190-4b1d-95ec-cb8e5b985278",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 10.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "a963c728-ca9a-4640-85a1-d72aade20b0d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "be42d69e-7234-4014-bb4b-94d48109ff7d",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 11.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6d351f97-165c-4000-8f6e-2dc44411c81d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a21232f7-a2ac-4dae-9d68-f0afaa1f735c",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 12.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "7671477d-a475-46d2-840f-5dc837c851a2",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "30b870ce-f295-4ba2-964c-813a37cc819e",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 13.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "67ac9476-4e75-4330-9d55-f81f9a9a7a93",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4e00e6a0-eb3c-470f-86a2-17e3601653c3",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 14.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "79035004-ca00-41b8-836e-633bcc2c8698",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "d1f8bea3-2620-49ff-8b0c-243f4b138ae4",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 15.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "84875009-47c7-4283-ab28-49375780461f",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "3dcc8d28-49a3-446f-a7f0-efdb95e9d92a",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 16.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "9009a0bf-2ee7-4885-bb41-7dad3730d516",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ffab7fe5-b13d-4a10-b71d-dae4fece6c74",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 17.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "7e6f535e-550b-4b93-86f0-bc1b1582553b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "58760d36-145d-4551-8a4b-73cfb1f45dcb",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 18.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "6f106222-da77-49a5-8366-8f8f59ff9699",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7112c956-fb19-41ce-8f95-51fa6571954c",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 19.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "eb62b9b0-9d2c-46a6-a8d6-f5fed0c2066d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "781b9d23-0c87-47c7-9ffa-6981543dbb82",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 20.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "d9cd54a5-176b-4b45-896e-f39352a0bfda",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "dbba4d78-1057-494e-a8be-e7199bffb1fb",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 21.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "723d3e66-56c0-4d43-870f-07fc26843b1b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "11b99ea5-d13a-452e-b350-3045539ee3ce",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 22.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "84f18c48-521f-4444-8bbd-544c7c60bdb8",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "ced019ee-7bde-4686-99b5-58e204163baa",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 23.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "86ca1732-1caa-4e86-a68f-dfda5b323beb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "db5445d0-3a02-4366-9ecf-b3f5ab1f1799",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 24.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "52346e95-1edf-48b7-90ba-60d1826cab21",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "151c1386-c6f9-431e-a3a3-da4bd882779a",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 25.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "2c2d91d6-a6a9-4e18-8518-00b46865db47",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "4a261236-8fbf-4087-b908-8289a9e39b1a",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 26.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b6117c0a-50c5-4b1d-bf49-2dadb97d12ec",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "b62711f1-976b-4bf1-9b8c-d96e0f6d7649",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 27.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "0717f7cf-6638-4911-810f-93955a3eab14",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "7d0157cc-78ff-44d7-aa36-bd2efa9dff59",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 28.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "7411352a-042c-4cda-8508-564cc90106ab",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "c81ac41b-9309-4bf4-8114-5f9ed8c6acf6",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 29.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "dd08f370-4ba5-4d19-a878-70ce8aecdd66",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "19a2f5d2-43d1-4136-b01c-bd164ec2cafe",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 30.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "47bdbfa6-4291-40ac-b52d-20abad3d911b",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "526580ef-7fc5-431c-aa3c-33b290a76fb5",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 31.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "e6f57a53-7e64-4a7d-b78b-c2f9739081fb",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "828a0840-c414-4df0-800a-c7eb967fde70",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 32.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "9eba5b1f-8836-4f22-8b69-8270ec8d0880",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "a1b63d79-cc46-438f-8fce-0e36457a3476",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 33.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "3cb3a0f1-2f57-4db3-bbe7-4b805a67336d",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "8cf59668-cf22-4780-9301-f3c176086e4d",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 34.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "4fe563d9-bca8-4a88-98b0-d13daca91cfd",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "fe424159-364b-4392-8eca-aa99e3ac4055",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            },
-            {
-              "Key": 35.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "id": "b2ffeb09-898c-46bf-8588-e18d3b7e05e0",
-              "Channels": {
-                "0": {
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "1.0",
-                  "Id": {
-                    "name": "727d4793-f906-4051-83ba-acb8bf4c49eb",
-                    "path": "sprites/bg_sewerwall/bg_sewerwall.yy"
-                  },
-                  "parent": null,
-                  "tags": [],
-                  "name": null
-                }
-              },
-              "parent": null,
-              "resourceVersion": null,
-              "tags": null,
-              "name": null
-            }
-          ],
-          "parent": null,
-          "resourceVersion": null,
-          "tags": null,
-          "name": null
-        },
-        "name": "frames",
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "parent": null,
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": null,
-        "tags": []
-      }
-    ],
-    "parent": null,
-    "tags": [],
-    "name": "bg_sewerwall"
+    "eventToFunction": {},
+    "eventStubScript": null,
   },
-  "textureGroupId": {
-    "name": "sewergroup",
-    "path": "texturegroups/sewergroup"
+  "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b2d6fa6c-6554-4119-9ceb-e01b5eb526ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "tags": [],
-  "name": "bg_sewerwall"
 }
