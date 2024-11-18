@@ -1,0 +1,114 @@
+function scr_player_machslide()
+{
+    var _railinst;
+    
+    if (!place_meeting(x, y + 1, obj_railparent))
+    {
+        hsp = xscale * movespeed;
+    }
+    else
+    {
+        _railinst = instance_place(x, y + 1, obj_railparent);
+        hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
+    }
+    
+    move = key_right + key_left;
+    
+    if (movespeed >= 0)
+        movespeed -= 0.4;
+    
+    if (sprite_index == spr_machslidestart && floor(image_index) == (image_number - 1))
+        sprite_index = spr_machslide;
+    
+    if (floor(image_index) == (image_number - 1) && (sprite_index == spr_machslideboost || sprite_index == spr_mach3boost))
+        image_speed = 0;
+    else
+        image_speed = 0.35;
+    
+    landAnim = false;
+    
+    if (floor(movespeed) <= 0 && (sprite_index == spr_machslide || sprite_index == spr_crouchslide))
+    {
+        state = UnknownEnum.Value_0;
+        image_index = 0;
+        
+        if (sprite_index == spr_machslide)
+            machslideAnim = true;
+        
+        movespeed = 0;
+    }
+    
+    if (place_meeting(x + xscale, y, obj_solid) && (sprite_index == spr_machslide || sprite_index == spr_machslidestart))
+    {
+        sprite_index = spr_player_wallsplat;
+        state = UnknownEnum.Value_106;
+        image_index = 0;
+    }
+    
+    if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost && grounded)
+    {
+        hsp = 0;
+        image_index = 0;
+        xscale *= -1;
+        movespeed = 8;
+        state = UnknownEnum.Value_104;
+    }
+    
+    if (floor(image_index) == (image_number - 1) && sprite_index == spr_mach3boost && grounded)
+    {
+        if (!launch)
+        {
+            hsp = 0;
+            sprite_index = spr_mach4;
+            image_index = 0;
+            xscale *= -1;
+            movespeed = 12;
+            state = UnknownEnum.Value_121;
+        }
+        else
+        {
+            xscale *= -1;
+            sprite_index = spr_dashpadmach;
+            image_index = 0;
+            state = UnknownEnum.Value_121;
+            movespeed = 14;
+            launched = true;
+            launch = false;
+            launch_buffer = 20;
+        }
+    }
+    
+    if (sprite_index == spr_player_crouchslide && movespeed == 0 && grounded)
+    {
+        facehurt = true;
+        state = UnknownEnum.Value_0;
+        sprite_index = spr_facehurtup;
+    }
+    
+    if (!instance_exists(dashcloudid) && grounded && !place_meeting(x, y + 1, obj_water))
+    {
+        with (instance_create(x, y, obj_dashcloud2))
+        {
+            image_xscale = other.xscale;
+            other.dashcloudid = id;
+        }
+    }
+    
+    if (!instance_exists(dashcloudid) && grounded && place_meeting(x, y + 1, obj_water))
+    {
+        with (instance_create(x, y, obj_dashcloud2))
+        {
+            sprite_index = spr_watereffect;
+            image_xscale = other.xscale;
+            other.dashcloudid = id;
+        }
+    }
+}
+
+enum UnknownEnum
+{
+    Value_0,
+    Value_104 = 104,
+    Value_106 = 106,
+    Value_121 = 121
+}

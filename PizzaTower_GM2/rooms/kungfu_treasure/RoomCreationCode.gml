@@ -1,0 +1,3 @@
+pal_swap_init_system(2);
+global.roommessage = "PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER";
+global.panic = false;

@@ -1,0 +1,61 @@
+scr_initenemy();
+taunt_count = 0;
+taunt_max = 40;
+taunt_storedgrav = 0.5;
+taunt_storedstate = UnknownEnum.Value_134;
+taunt_storedmovespeed = 1;
+taunt_storedhsp = 0;
+cooldown_max = 50;
+cooldown_count = cooldown_max;
+inv_timer = 0;
+inv_max = 10;
+parryspr = 182;
+taunteffect_inst = -4;
+trail_count = 0;
+trail_max = 10;
+index = 0;
+breakdance = 0;
+breakdance_movespeed = 0;
+breakdanceinst = -4;
+grav = 0.5;
+hsp = 0;
+vsp = 0;
+state = UnknownEnum.Value_134;
+stunned = 0;
+alarm[0] = 150;
+roaming = true;
+collectdrop = 5;
+flying = false;
+straightthrow = false;
+cigar = false;
+cigarcreate = false;
+stomped = false;
+shot = false;
+reset = false;
+hp = 2;
+hitboxcreate = false;
+grounded = true;
+idlespr = 169;
+stunfallspr = 179;
+walkspr = 170;
+grabbedspr = 179;
+scaredspr = 183;
+sprite_index = spr_coolpinea;
+image_xscale = -1;
+flash = false;
+slapped = false;
+birdcreated = false;
+boundbox = false;
+spr_dead = 174;
+important = false;
+heavy = false;
+depth = 0;
+paletteselect = 1;
+spr_palette = 168;
+grabbedby = 0;
+stuntouchbuffer = 0;
+
+enum UnknownEnum
+{
+    Value_134 = 134
+}

@@ -1,0 +1,228 @@
+{
+  "collisionKind": 1,
+  "collisionTolerance": 0,
+  "DynamicTexturePage": false,
+  "edgeFiltering": false,
+  "For3D": false,
+  "gridX": 0,
+  "gridY": 0,
+  "HTile": false,
+  "nineSlice": {
+    "resourceType": "GMNineSliceData",
+    "resourceVersion": "1.0",
+    "enabled": false,
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 0,
+    "highlightStyle": 0,
+    "highlightColour": 1728023040,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015
+    ],
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "parent": null,
+    "tags": [],
+    "name": null
+  },
+  "origin": 0,
+  "parent": {
+    "name": "Sprites",
+    "path": "folders/Sprites.yy"
+  },
+  "preMultiplyAlpha": false,
+  "swfPrecision": 2.525,
+  "type": 0,
+  "VTile": false,
+  "bbox_bottom": 95,
+  "bbox_left": 25,
+  "bbox_right": 80,
+  "bbox_top": 38,
+  "bboxMode": 0,
+  "frames": [
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "parent": null,
+      "tags": [],
+      "name": "2fc00e57-2029-4c2e-83a9-a663c4a922c9"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "parent": null,
+      "tags": [],
+      "name": "207b2515-8811-4780-a734-c93b723f89b3"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "parent": null,
+      "tags": [],
+      "name": "84b096ee-d4d7-4c7a-878a-f62f4f0697b1"
+    }
+  ],
+  "height": 100,
+  "layers": [
+    {
+      "resourceType": "GMImageLayer",
+      "resourceVersion": "1.0",
+      "blendMode": 0,
+      "displayName": "default",
+      "isLocked": false,
+      "opacity": 100.0,
+      "visible": true,
+      "parent": null,
+      "tags": [],
+      "name": "b10d99e1-e776-42d5-95cb-ac018109b13a"
+    }
+  ],
+  "width": 100,
+  "sequence": {
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "autoRecord": true,
+    "backdropHeight": 768,
+    "backdropImageOpacity": 0.5,
+    "backdropImagePath": true,
+    "backdropWidth": 1366,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "showBackdrop": true,
+    "showBackdropImage": true,
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "volume": 1.0,
+    "length": 3.0,
+    "xorigin": 50,
+    "yorigin": 75,
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "Key": 0.0,
+              "Length": 1.0,
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "id": "b7f13799-e10b-4dfc-bc7a-7d18da4b2b19",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2fc00e57-2029-4c2e-83a9-a663c4a922c9",
+                    "path": "sprites/spr_ufogrounded_stun/spr_ufogrounded_stun.yy"
+                  },
+                  "parent": null,
+                  "tags": [],
+                  "name": null
+                }
+              },
+              "parent": null,
+              "resourceVersion": null,
+              "tags": null,
+              "name": null
+            },
+            {
+              "Key": 1.0,
+              "Length": 1.0,
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "id": "eac4087f-6eed-4738-adfd-b278fe22fd05",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "207b2515-8811-4780-a734-c93b723f89b3",
+                    "path": "sprites/spr_ufogrounded_stun/spr_ufogrounded_stun.yy"
+                  },
+                  "parent": null,
+                  "tags": [],
+                  "name": null
+                }
+              },
+              "parent": null,
+              "resourceVersion": null,
+              "tags": null,
+              "name": null
+            },
+            {
+              "Key": 2.0,
+              "Length": 1.0,
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "id": "cf520afa-45df-4ae0-8f94-fa4a45ce8707",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "84b096ee-d4d7-4c7a-878a-f62f4f0697b1",
+                    "path": "sprites/spr_ufogrounded_stun/spr_ufogrounded_stun.yy"
+                  },
+                  "parent": null,
+                  "tags": [],
+                  "name": null
+                }
+              },
+              "parent": null,
+              "resourceVersion": null,
+              "tags": null,
+              "name": null
+            }
+          ],
+          "parent": null,
+          "resourceVersion": null,
+          "tags": null,
+          "name": null
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "parent": null,
+        "resourceType": "GMSpriteFramesTrack",
+        "resourceVersion": null,
+        "tags": []
+      }
+    ],
+    "parent": null,
+    "tags": [],
+    "name": "spr_ufogrounded_stun"
+  },
+  "textureGroupId": {
+    "name": "baddiegroup",
+    "path": "texturegroups/baddiegroup"
+  },
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "tags": [],
+  "name": "spr_ufogrounded_stun"
+}

@@ -1,0 +1,14 @@
+event_inherited();
+idle = false;
+landspr = 270;
+idlespr = 270;
+fallspr = 270;
+stunfallspr = 266;
+walkspr = 268;
+turnspr = 270;
+recoveryspr = 266;
+grabbedspr = 266;
+scaredspr = 2778;
+ragespr = 2721;
+spr_dead = 260;
+sprite_index = walkspr;

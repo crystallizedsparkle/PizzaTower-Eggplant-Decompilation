@@ -1,0 +1,8 @@
+if (global.noisecutscene1 == -4)
+    global.noisecutscene1 = quick_ini_read_real(get_savefile_ini(), "cutscene", "noise1", false);
+
+if (!global.noisecutscene1)
+    instance_destroy();
+
+targetRoom = 259;
+targetDoor = "A";

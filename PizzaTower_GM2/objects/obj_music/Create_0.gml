@@ -1,0 +1,16 @@
+pausedmusic = 0;
+fadeoff = 0;
+global.music = 0;
+roomname = 523;
+arena = false;
+global.mu = -4;
+music = -4;
+secretmusic = -4;
+musicID = -4;
+secretmusicID = -4;
+pillarmusicID = -4;
+secret = false;
+secretend = false;
+pillar_on_camera = false;
+prevpillar_on_camera = false;
+room_arr = [[58, 122, 107, false], [393, 111, 107, false], [444, 121, 109, false], [458, 121, 109, true], [460, 129, 109, true], [661, 113, 107, false], [663, 132, 107, false], [676, 129, 107, false], [409, 124, 107, false], [410, 124, 107, true], [411, 114, 107, true], [414, 114, 107, true], [416, 112, 107, true], [425, 125, 108, false], [432, 125, 108, true], [434, 126, 108, true], [177, 102, 135, false], [309, 102, 135, true], [254, 104, 135, true], [173, 104, 135, true], [121, 102, 135, true], [583, 141, 107, false], [5, 141, 107, true], [12, 140, 107, false], [588, 141, 107, true], [639, 113, 107, false], [86, 10, 107, false], [90, 8, 107, false], [200, 4, 107, false], [623, 5, 107, false], [552, 3, 107, false], [132, 6, 107, false], [519, 136, 143, false], [636, 137, 139, false], [503, 9, 107, false], [32, 138, 142, false], [541, 104, 139, false], [109, 144, 107, false], [131, 1, 107, false], [240, 2, 109, false]];
