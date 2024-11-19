@@ -15,7 +15,7 @@ if (!grabbed && (other.state == UnknownEnum.Value_42 || other.state == UnknownEn
     grabbed = true;
 }
 
-if (!grabbed && unpickable == false && !ratgrabbed && other.state == UnknownEnum.Value_193)
+if (!grabbed && !unpickable && !ratgrabbed && other.state == UnknownEnum.Value_193)
 {
     ratplayerid = other.id;
     ratgrabbed = true;
