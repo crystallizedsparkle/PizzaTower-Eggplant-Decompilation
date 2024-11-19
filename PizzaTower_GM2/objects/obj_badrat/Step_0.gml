@@ -5,60 +5,60 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
     
-    case UnknownEnum.Value_106:
+    case states.bump:
         sprite_index = spr_badrat_stun;
         
         if (grounded && vsp > 0)
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             sprite_index = walkspr;
         }
         
@@ -70,11 +70,11 @@ targetplayer = instance_nearest(x, y, obj_player);
 if (cooldown > 0)
     cooldown--;
 
-if (state == UnknownEnum.Value_134 && cooldown <= 0)
+if (state == states.walk && cooldown <= 0)
 {
     if (targetplayer.x > (x - 200) && targetplayer.x < (x + 200) && targetplayer.y > (y - 50) && targetplayer.y < (y + 50))
     {
-        state = UnknownEnum.Value_80;
+        state = states.punch;
         sprite_index = spr_badrat_attack1;
         image_index = 0;
         
@@ -83,7 +83,7 @@ if (state == UnknownEnum.Value_134 && cooldown <= 0)
     }
 }
 
-if (state == UnknownEnum.Value_80)
+if (state == states.punch)
 {
     mv = 8;
     image_speed = 0.35;
@@ -131,14 +131,14 @@ if (state == UnknownEnum.Value_80)
         if (floor(image_index) == (image_number - 1))
         {
             sprite_index = walkspr;
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             instance_destroy(hitboxID);
             cooldown = 80;
         }
     }
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -146,7 +146,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
@@ -155,7 +155,7 @@ if (flash == true && alarm[2] <= 0)
 if (place_meeting(x, y, obj_canonexplosion))
     instance_destroy();
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
 if (boundbox == false)
@@ -169,7 +169,7 @@ if (boundbox == false)
     }
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 enum UnknownEnum

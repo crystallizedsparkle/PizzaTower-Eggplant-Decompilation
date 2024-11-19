@@ -1,6 +1,6 @@
-if (other.state != UnknownEnum.Value_186 && other.state != UnknownEnum.Value_61)
+if (other.state != states.gotoplayer && other.state != states.chainsaw)
 {
-    if (other.state == UnknownEnum.Value_47 || other.state == UnknownEnum.Value_38 || other.state == UnknownEnum.Value_21)
+    if (other.state == states.knightpep || other.state == states.knightpepslopes || other.state == states.cheeseball)
     {
         repeat (8)
         {
@@ -15,14 +15,14 @@ if (other.state != UnknownEnum.Value_186 && other.state != UnknownEnum.Value_61)
     }
     else
     {
-        tv_push_prompt_once(tv_create_prompt("This is the cheeseball transformation text", UnknownEnum.Value_2, 2240, 3), "cheeseball");
+        tv_push_prompt_once(tv_create_prompt("This is the cheeseball transformation text", tvprompt_type.transformation, 2240, 3), "cheeseball");
         other.xscale = image_xscale;
         other.hsp = hsp;
         other.vsp = vsp;
         other.movespeed = 8;
         other.x = x;
         other.y = y;
-        other.state = UnknownEnum.Value_21;
+        other.state = states.cheeseball;
         other.stop_buffer = other.stop_max;
         
         repeat (8)

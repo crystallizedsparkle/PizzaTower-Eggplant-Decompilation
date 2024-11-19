@@ -17,7 +17,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     with (instance_create(x, y, obj_smallnumber))
         number = string(50);
     
-    create_particle(x, y, UnknownEnum.Value_9, 0);
+    create_particle(x, y, particles.genericpoofeffect, 0);
 }
 
 enum UnknownEnum

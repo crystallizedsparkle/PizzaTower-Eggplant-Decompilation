@@ -1,8 +1,8 @@
-if (state != UnknownEnum.Value_55 && x == xstart && y == ystart)
+if (state != states.grabbing && x == xstart && y == ystart)
 {
     with (other)
     {
-        if (state != UnknownEnum.Value_61)
+        if (state != states.chainsaw)
         {
             tauntstoredmovespeed = movespeed;
             tauntstoredvsp = vsp;
@@ -10,7 +10,7 @@ if (state != UnknownEnum.Value_55 && x == xstart && y == ystart)
             tauntstoredstate = state;
         }
         
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         
         if (boxxed == false)
             sprite_index = spr_player_catched;
@@ -18,7 +18,7 @@ if (state != UnknownEnum.Value_55 && x == xstart && y == ystart)
             sprite_index = spr_boxxedpep_air;
         
         other.playerid = id;
-        other.state = UnknownEnum.Value_55;
+        other.state = states.grabbing;
     }
 }
 

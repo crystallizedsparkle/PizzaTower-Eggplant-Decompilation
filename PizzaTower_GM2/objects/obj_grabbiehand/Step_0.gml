@@ -2,19 +2,19 @@ var spd, _dir;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         if (floor(image_index) == (image_number - 1))
         {
-            state = UnknownEnum.Value_135;
+            state = states.fall;
             sprite_index = spr_grabbiehand_fall;
         }
         
         break;
     
-    case UnknownEnum.Value_135:
+    case states.fall:
         spd = 12;
         shootdir = angle_rotate(shootdir, point_direction(x, y, targetplayer.x, targetplayer.y), turnspeed);
         hsp = lengthdir_x(spd, shootdir);
@@ -25,7 +25,7 @@ switch (state)
         
         if (grounded)
         {
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 50;
             hsp = 0;
             vsp = 0;
@@ -35,14 +35,14 @@ switch (state)
         scr_collide();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         if (stunned > 0)
         {
             stunned--;
         }
         else if (grounded)
         {
-            state = UnknownEnum.Value_7;
+            state = states.ejected;
             sprite_index = spr_grabbiehand_idle;
             grounded = false;
         }
@@ -53,21 +53,21 @@ switch (state)
         scr_collide();
         break;
     
-    case UnknownEnum.Value_7:
+    case states.ejected:
         _dir = point_direction(x, y, xstart, ystart);
         x = Approach(x, xstart, abs(lengthdir_x(8, _dir)));
         y = Approach(y, ystart, abs(lengthdir_y(8, _dir)));
         
         if (x > (xstart - 8) && x < (xstart + 8) && y > (ystart - 8) && y < (ystart + 8))
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             x = xstart;
             y = ystart;
         }
         
         break;
     
-    case UnknownEnum.Value_55:
+    case states.grabbing:
         sprite_index = spr_grabbiehand_catch;
         
         if (!reverse)
@@ -87,7 +87,7 @@ switch (state)
             
             if (object_index != obj_pizzagoblinbomb)
             {
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 
                 if (boxxed == false)
                     sprite_index = spr_player_catched;
@@ -110,7 +110,7 @@ switch (state)
             }
             
             sprite_index = spr_grabbiehand_idle;
-            state = UnknownEnum.Value_7;
+            state = states.ejected;
             
             if (fake)
                 instance_destroy();

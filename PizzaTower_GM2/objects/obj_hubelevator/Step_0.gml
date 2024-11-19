@@ -1,6 +1,6 @@
 switch (state)
 {
-    case UnknownEnum.Value_18:
+    case states.titlescreen:
         if (!instance_exists(obj_fadeout))
         {
             if (playerid.key_up2)
@@ -25,10 +25,10 @@ switch (state)
                         
                         if (check_player_coop())
                         {
-                            state = UnknownEnum.Value_0;
+                            state = states.normal;
                             
                             if (other.isgustavo)
-                                state = UnknownEnum.Value_191;
+                                state = states.ratmount;
                             
                             movespeed = 0;
                         }
@@ -38,10 +38,10 @@ switch (state)
                 }
                 else
                 {
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                     
                     with (obj_player)
-                        state = UnknownEnum.Value_0;
+                        state = states.normal;
                 }
             }
         }

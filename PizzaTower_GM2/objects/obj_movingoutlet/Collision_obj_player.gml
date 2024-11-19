@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    if ((state == UnknownEnum.Value_47 || state == UnknownEnum.Value_48 || state == UnknownEnum.Value_38) && cutscene == false)
+    if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes) && cutscene == false)
     {
         with (instance_create(x, y, obj_knightdebris))
             image_index = 0;
@@ -29,13 +29,13 @@ with (obj_player)
         image_index = 0;
         obj_player.image_index = 0;
         obj_player.flash = true;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
     }
-    else if (state == UnknownEnum.Value_51 && hurted == false)
+    else if (state == states.bombpep && hurted == false)
     {
         instance_create(x, y, obj_bombexplosion);
     }
-    else if (state == UnknownEnum.Value_33)
+    else if (state == states.boxxedpep)
     {
         with (instance_create(x, y, obj_boxxeddebris))
             image_index = 0;
@@ -61,9 +61,9 @@ with (obj_player)
         image_index = 0;
         obj_player.image_index = 0;
         obj_player.flash = true;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
     }
-    else if (state == UnknownEnum.Value_24 || state == UnknownEnum.Value_25)
+    else if (state == states.cheesepep || state == states.cheesepepstick)
     {
         obj_player.grav = 0.5;
         
@@ -85,9 +85,9 @@ with (obj_player)
         image_index = 0;
         obj_player.image_index = 0;
         obj_player.flash = true;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
     }
-    else if (state != UnknownEnum.Value_107 && hurted == false && cutscene == false && state != UnknownEnum.Value_106)
+    else if (state != states.hurt && hurted == false && cutscene == false && state != states.bump)
     {
         global.hurtcounter += 1;
         alarm[8] = 60;
@@ -124,7 +124,7 @@ with (obj_player)
         }
         
         instance_create(x, y, obj_spikehurteffect);
-        state = UnknownEnum.Value_107;
+        state = states.hurt;
         image_index = 0;
         flash = true;
     }

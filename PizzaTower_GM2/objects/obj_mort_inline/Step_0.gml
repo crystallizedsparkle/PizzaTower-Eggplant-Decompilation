@@ -2,7 +2,7 @@ var b;
 
 with (obj_player)
 {
-    if ((object_index != obj_player2 || global.coop) && state != UnknownEnum.Value_146 && !instance_exists(obj_dialogcontroller))
+    if ((object_index != obj_player2 || global.coop) && state != states.actor && !instance_exists(obj_dialogcontroller))
     {
         if ((other.dir > 0 && x > (other.x - 50)) || (other.dir < 0 && x < (other.x + 50)))
         {
@@ -21,7 +21,7 @@ if (waitforhurt && !instance_exists(obj_dialogcontroller))
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_107)
+        if (state == states.hurt)
             b = true;
     }
     

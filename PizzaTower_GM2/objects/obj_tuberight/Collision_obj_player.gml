@@ -3,10 +3,10 @@ var _offset_x, _offset_y;
 if (other.tube_id == id)
     exit;
 
-if (other.state == UnknownEnum.Value_107)
+if (other.state == states.hurt)
     exit;
 
-if (other.state == UnknownEnum.Value_186)
+if (other.state == states.gotoplayer)
     exit;
 
 _offset_x = 32 * image_xscale;
@@ -29,14 +29,14 @@ with (other)
     vsp = 0;
     movespeed = 0;
     tube_vsp = 0;
-    state = UnknownEnum.Value_150;
+    state = states.tube;
     x = Approach(x, other.x + _offset_x, other.approach_spd);
     y = Approach(y, other.y + _offset_y, other.approach_spd);
 }
 
 if (floor(other.x) == (x + _offset_x) && floor(other.y) == (y + _offset_y))
 {
-    other.state = UnknownEnum.Value_150;
+    other.state = states.tube;
     other.tube_id = id;
     other.hsp = hsp * stored_spd;
     other.vsp = vsp * stored_spd;

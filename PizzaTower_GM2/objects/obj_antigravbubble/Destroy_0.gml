@@ -1,4 +1,4 @@
-create_particle(x, y, UnknownEnum.Value_15);
+create_particle(x, y, particles.antigrav_bubblepop);
 
 enum UnknownEnum
 {

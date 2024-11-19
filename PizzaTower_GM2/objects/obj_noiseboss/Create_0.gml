@@ -2,7 +2,7 @@ scr_initenemy();
 
 with (obj_player1)
 {
-    state = UnknownEnum.Value_191;
+    state = states.ratmount;
     brick = true;
 }
 
@@ -10,8 +10,8 @@ elite = true;
 hit = false;
 elitehit = 8;
 wastedhits = 0;
-state = UnknownEnum.Value_134;
-walkstate = UnknownEnum.Value_134;
+state = states.walk;
+walkstate = states.walk;
 targetspot = instance_nearest(x, y, obj_noise_pogospot);
 oldtargetspot = targetspot;
 movespeed = 0;
@@ -19,8 +19,8 @@ move = 0;
 wallspeed = 0;
 bounced = false;
 afterimage_buffer = 0;
-savedstate = UnknownEnum.Value_134;
-substate = UnknownEnum.Value_134;
+savedstate = states.walk;
+substate = states.walk;
 attackpool = -4;
 attackbuffer = 100;
 placedtraps = false;

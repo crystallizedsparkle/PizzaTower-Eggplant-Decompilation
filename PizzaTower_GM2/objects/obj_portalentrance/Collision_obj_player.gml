@@ -1,4 +1,4 @@
-if (other.state == UnknownEnum.Value_39)
+if (other.state == states.portal)
     sprite_index = spr_pizzaportalentrancestart;
 
 enum UnknownEnum

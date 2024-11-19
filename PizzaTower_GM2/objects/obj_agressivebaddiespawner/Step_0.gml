@@ -17,7 +17,7 @@ if (refresh <= 0)
     {
         with (instance_create(x, y - 35, content))
         {
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 50;
             vsp = -5;
             found = false;

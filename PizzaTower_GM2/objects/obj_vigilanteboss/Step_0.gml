@@ -7,76 +7,76 @@ wastedhits = 8 - elitehit;
 
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_vigilante_walk();
         break;
     
-    case UnknownEnum.Value_37:
+    case states.climbwall:
         scr_vigilante_climbwall();
         break;
     
-    case UnknownEnum.Value_100:
+    case states.crouch:
         scr_vigilante_crouch();
         break;
     
-    case UnknownEnum.Value_92:
+    case states.jump:
         scr_vigilante_jump();
         break;
     
-    case UnknownEnum.Value_1:
+    case states.revolver:
         scr_vigilante_revolver();
         break;
     
-    case UnknownEnum.Value_74:
+    case states.throwing:
         scr_vigilante_throwing();
         break;
     
-    case UnknownEnum.Value_122:
+    case states.freefallprep:
         scr_vigilante_freefallprep();
         break;
     
-    case UnknownEnum.Value_108:
+    case states.freefall:
         scr_vigilante_freefall();
         break;
     
-    case UnknownEnum.Value_111:
+    case states.freefallland:
         scr_vigilante_freefallland();
         break;
     
-    case UnknownEnum.Value_2:
+    case states.dynamite:
         scr_vigilante_dynamite();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state != UnknownEnum.Value_108 && state != UnknownEnum.Value_111)
+if (state != states.freefall && state != states.freefallland)
     hit = false;
 
-if (state == UnknownEnum.Value_100)
+if (state == states.crouch)
     mask_index = spr_crouchmask;
 else
     mask_index = spr_player_mask;
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     movespeed = 0;
     
@@ -94,7 +94,7 @@ else
     savedthrown = false;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -102,7 +102,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state == UnknownEnum.Value_92)
+if (state == states.jump)
 {
     use_collision = false;
     x += hsp;
@@ -116,21 +116,21 @@ else
     use_collision = true;
 }
 
-if (state == UnknownEnum.Value_138 || state == UnknownEnum.Value_153 || state == UnknownEnum.Value_134 || state == UnknownEnum.Value_100 || state == UnknownEnum.Value_37 || !use_collision)
+if (state == states.stun || state == states.shoulderbash || state == states.walk || state == states.crouch || state == states.climbwall || !use_collision)
     invincible = true;
 else
     invincible = false;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

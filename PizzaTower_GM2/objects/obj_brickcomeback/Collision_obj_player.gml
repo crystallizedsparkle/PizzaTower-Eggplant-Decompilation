@@ -4,7 +4,7 @@ if (!trapped)
     {
         other.brick = true;
         
-        if (other.state != UnknownEnum.Value_260 && other.state != UnknownEnum.Value_84)
+        if (other.state != UnknownEnum.Value_260 && other.state != states.backbreaker)
         {
             if (!other.grounded)
                 other.sprite_index = spr_player_ratmountfall;

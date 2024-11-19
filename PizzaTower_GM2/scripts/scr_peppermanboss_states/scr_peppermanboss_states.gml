@@ -23,9 +23,9 @@ function pepperman_decide_attack_phase6()
         readjusting = false;
         
         if (hp <= superattack_hpthreshold)
-            state = UnknownEnum.Value_158;
+            state = states.superattackstart;
         
-        if (state != UnknownEnum.Value_158)
+        if (state != states.superattackstart)
         {
             fakephase = irandom(100);
             
@@ -63,22 +63,22 @@ function pepperman_decide_attack_phase5()
         attack_cooldown = attack_max[phase - 1];
         groundpound_fakeout = true;
         readjusting = false;
-        state = (irandom(100) > 50) ? choose(UnknownEnum.Value_128, UnknownEnum.Value_128, UnknownEnum.Value_83) : UnknownEnum.Value_92;
+        state = (irandom(100) > 50) ? choose(states.charge, states.charge, states.shoulder) : states.jump;
         
-        if (state == UnknownEnum.Value_128)
+        if (state == states.charge)
         {
             sprite_index = spr_pepperman_shoulderstart;
             image_index = 0;
             image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : image_xscale;
         }
-        else if (state == UnknownEnum.Value_83)
+        else if (state == states.shoulder)
         {
             shoulderturns = 3;
             sprite_index = spr_pepperman_shoulderstart;
             image_index = 0;
             image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : image_xscale;
         }
-        else if (state == UnknownEnum.Value_92)
+        else if (state == states.jump)
         {
             jumping_pepper = false;
             superjumping_pepper = false;
@@ -115,7 +115,7 @@ function pepperman_decide_attack_phase1()
         targetstunned = 0;
         attack_cooldown = attack_max[phase - 1];
         chance_shoulder = 45 - ((5 * phase) - 1);
-        state = (irandom(100) > chance_shoulder) ? UnknownEnum.Value_153 : UnknownEnum.Value_92;
+        state = (irandom(100) > chance_shoulder) ? states.shoulderbash : states.jump;
         shoulderpound_fakeout = (phase == 4) ? true : false;
         superjumping_pepper = (phase == 4) ? true : false;
         
@@ -136,7 +136,7 @@ function pepperman_decide_attack_phase1()
                 shoulderpound_fakeout = false;
         }
         
-        if (state == UnknownEnum.Value_153)
+        if (state == states.shoulderbash)
         {
             if (shoulderpound_fakeout)
                 shoulderpound_buffer = shoulderpound_max;
@@ -151,7 +151,7 @@ function pepperman_decide_attack_phase1()
             sprite_index = spr_pepperman_shoulderstart;
             image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : image_xscale;
         }
-        else if (state == UnknownEnum.Value_92)
+        else if (state == states.jump)
         {
             image_index = 0;
             sprite_index = spr_pepperman_jump;
@@ -189,7 +189,7 @@ function boss_pepperman_normal()
     
     image_speed = 0.35;
     
-    if (targetplayer.state != UnknownEnum.Value_156)
+    if (targetplayer.state != states.thrown)
     {
         is_middle = x > (room_width / 5) && x < (room_width - (room_width / 5));
         is_middle_player = targetplayer.x > (room_width / 5) && targetplayer.x < (room_width - (room_width / 5));
@@ -227,7 +227,7 @@ function boss_pepperman_normal()
     
     boss_decide_taunt(180);
     
-    if (state != UnknownEnum.Value_84)
+    if (state != states.backbreaker)
     {
         if (hsp != 0 && grounded)
         {
@@ -279,7 +279,7 @@ function boss_pepperman_jump()
     
     if (!jumping_pepper && !groundpound_fakeout && col == -4 && ((x > (target_x - 24) && x < (target_x + 24)) || (x > (targetplayer.x - 24) && x < (targetplayer.x + 24)) || vsp > 3))
     {
-        state = UnknownEnum.Value_122;
+        state = states.freefallprep;
         vsp = 10;
         hsp = 0;
         image_index = 0;
@@ -295,7 +295,7 @@ function boss_pepperman_jump()
             groundpound_readjust_buffer = groundpound_readjust_max;
             readjusting = true;
             target_x = targetplayer.x;
-            state = UnknownEnum.Value_122;
+            state = states.freefallprep;
             vsp = 10;
             hsp = 0;
             image_index = 0;
@@ -306,7 +306,7 @@ function boss_pepperman_jump()
     if (grounded)
     {
         hsp = 0;
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         sprite_index = spr_pepperman_jump;
     }
 }
@@ -321,7 +321,7 @@ function boss_pepperman_freefallprep()
     {
         if (image_index > (image_number - 1))
         {
-            state = UnknownEnum.Value_108;
+            state = states.freefall;
             vsp = 20;
             hsp = 0;
             image_index = 0;
@@ -346,7 +346,7 @@ function boss_pepperman_freefallprep()
             }
             else if (groundpound_readjust <= 0)
             {
-                state = UnknownEnum.Value_108;
+                state = states.freefall;
                 vsp = 20;
                 hsp = 0;
                 image_index = 0;
@@ -368,7 +368,7 @@ function boss_pepperman_freefall()
             shake_mag_acc = 3 / room_speed;
         }
         
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         sprite_index = spr_pepperman_jump;
         
         if (phase >= 5)
@@ -380,12 +380,12 @@ function boss_pepperman_freefallland()
 {
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = idlespr;
         
         if (jumping_pepper && superjumping_pepper)
         {
-            state = UnknownEnum.Value_153;
+            state = states.shoulderbash;
             
             if (shoulderbash_fakeout)
             {
@@ -419,7 +419,7 @@ function boss_pepperman_shoulderbash()
             shake_mag_acc = 3 / room_speed;
         }
         
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         stunned = 100;
         vsp = -4;
         hsp = -image_xscale * 8;
@@ -443,7 +443,7 @@ function boss_pepperman_shoulderbash()
             with (instance_create(x, y - 5, obj_crazyrunothereffect))
                 playerid = other.id;
             
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             image_index = 0;
             sprite_index = spr_pepperman_jump;
             target_x = targetplayer.x;
@@ -475,7 +475,7 @@ function boss_pepperman_charge()
     
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_157;
+        state = states.supershoulderbash;
         sprite_index = spr_pepperman_shoulderloop;
         image_index = 0;
         hsp = image_xscale * (shoulder_spd * 2);
@@ -495,7 +495,7 @@ function boss_pepperman_supershoulderbash()
             shake_mag_acc = 3 / room_speed;
         }
         
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         stunned = 50;
         vsp = -4;
         hsp = -image_xscale * 8;
@@ -522,7 +522,7 @@ function boss_pepperman_shoulder()
         if (place_meeting(x + (sign(hsp) * 96), y, obj_solid))
         {
             shoulderturns--;
-            state = UnknownEnum.Value_161;
+            state = states.shoulderturn;
             sprite_index = spr_pepperman_shoulderstart;
             image_index = 0;
         }
@@ -538,7 +538,7 @@ function boss_pepperman_shoulder()
         if (phase >= 5)
             boss_pepperman_summonbricks();
         
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         stunned = 50;
         vsp = -4;
         hsp = -image_xscale * 8;
@@ -553,7 +553,7 @@ function boss_pepperman_shoulderturn()
     if (image_index > (image_number - 1))
     {
         image_xscale *= -1;
-        state = UnknownEnum.Value_83;
+        state = states.shoulder;
         sprite_index = spr_pepperman_shoulderstart;
         image_index = 0;
     }
@@ -581,7 +581,7 @@ function boss_pepperman_superattackstart()
     
     if (x == tx)
     {
-        state = UnknownEnum.Value_159;
+        state = states.superattackcharge;
         sprite_index = spr_pepperman_shoulderloop;
         image_xscale = (x > (room_width / 2)) ? -1 : 1;
     }
@@ -602,7 +602,7 @@ function boss_pepperman_superattackcharge()
     }
     else
     {
-        state = UnknownEnum.Value_76;
+        state = states.superslam;
         sprite_index = spr_pepperman_shoulderloop;
         image_index = 0;
     }
@@ -713,7 +713,7 @@ function boss_pepperman_fistmatch()
         with (lastplayerid)
         {
             sprite_index = spr_idle;
-            state = UnknownEnum.Value_163;
+            state = states.fistmatchend;
             x = hitX;
             y = hitY;
             hithsp = other.image_xscale * 8;
@@ -722,7 +722,7 @@ function boss_pepperman_fistmatch()
         }
         
         sprite_index = idlespr;
-        state = UnknownEnum.Value_163;
+        state = states.fistmatchend;
         x = hitX;
         y = hitY;
         hithsp = -image_xscale * 8;
@@ -748,10 +748,10 @@ function boss_pepperman_fistmatchend()
     
     if (c && hsp == 0)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         with (obj_player)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
 }
 

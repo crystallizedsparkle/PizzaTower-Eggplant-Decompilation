@@ -1,4 +1,4 @@
-if (state != UnknownEnum.Value_5)
+if (state != states.tumble)
     event_inherited();
 
 enum UnknownEnum

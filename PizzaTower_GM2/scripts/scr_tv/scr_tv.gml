@@ -2,7 +2,7 @@ function tv_set_idle()
 {
     with (obj_tv)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = spr_tv_idle;
     }
 }
@@ -11,7 +11,7 @@ function tv_reset()
 {
     with (obj_tv)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = spr_tv_idle;
         ds_list_clear(tvprompts_list);
     }
@@ -33,19 +33,19 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
         
         switch (argument1)
         {
-            case UnknownEnum.Value_0:
+            case states.normal:
                 play = true;
                 ds_list_insert(tvprompts_list, 0, b);
                 break;
             
-            case UnknownEnum.Value_1:
+            case states.revolver:
                 placed = false;
                 
                 for (i = 0; i < ds_list_size(tvprompts_list); i++)
                 {
                     b2 = ds_list_find_value(tvprompts_list, i);
                     
-                    if (b2[1] == UnknownEnum.Value_2)
+                    if (b2[1] == tvprompt_type.transformation)
                     {
                         if (i == 0)
                             play = true;
@@ -61,13 +61,13 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
                 
                 break;
             
-            case UnknownEnum.Value_2:
+            case tvprompt_type.transformation:
                 ds_list_add(tvprompts_list, b);
                 break;
         }
         
         if (play)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
 }
 

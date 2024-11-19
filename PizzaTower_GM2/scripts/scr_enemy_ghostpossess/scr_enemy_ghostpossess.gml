@@ -13,11 +13,11 @@ function scr_enemy_ghostpossess()
         
         if (key_up2)
         {
-            state = UnknownEnum.Value_16;
+            state = states.ghost;
             vsp = -10;
-            other.state = UnknownEnum.Value_138;
+            other.state = states.stun;
             other.stunned = 50;
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
             visible = true;
         }
     }

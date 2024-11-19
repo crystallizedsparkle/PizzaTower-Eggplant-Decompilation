@@ -17,7 +17,7 @@ if (kickbuffer > 0)
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         hsp = movespeed * image_xscale;
         
         if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_ratblock))
@@ -47,16 +47,16 @@ switch (state)
         scr_collide();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         grounded = false;
         x = playerid.x;
         y = playerid.y - 40;
         image_xscale = playerid.xscale;
         
-        if (playerid.state != UnknownEnum.Value_52 && playerid.state != UnknownEnum.Value_76)
-            state = UnknownEnum.Value_0;
+        if (playerid.state != states.bombgrab && playerid.state != states.superslam)
+            state = states.normal;
         
-        if (playerid.state == UnknownEnum.Value_76)
+        if (playerid.state == states.superslam)
         {
             if (playerid.grounded)
                 instance_destroy();
@@ -65,7 +65,7 @@ switch (state)
         break;
     
     default:
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         break;
 }
 

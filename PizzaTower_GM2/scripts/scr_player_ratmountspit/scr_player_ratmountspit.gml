@@ -9,7 +9,7 @@ function scr_player_ratmountspit()
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
         ratgrabbedID = -4;
     }
 }

@@ -2,7 +2,7 @@ var changecoord;
 
 with (other)
 {
-    if (state != UnknownEnum.Value_186 && state != UnknownEnum.Value_146)
+    if (state != states.gotoplayer && state != states.actor)
     {
         changecoord = true;
         
@@ -13,7 +13,7 @@ with (other)
             y = other.y - 14;
         
         vsp = 0;
-        create_particle(x, y, UnknownEnum.Value_5, 0);
+        create_particle(x, y, particles.jumpdust, 0);
         
         if (boxxed == false && isgustavo == false)
         {
@@ -35,7 +35,7 @@ with (other)
             }
             
             machhitAnim = false;
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             xscale = sign(other.image_xscale);
             
             if (movespeed < 14)
@@ -63,14 +63,14 @@ with (other)
                     movespeed += (xscale * 0.5);
                 
                 sprite_index = spr_boxxedpepwalk;
-                state = UnknownEnum.Value_33;
+                state = states.boxxedpep;
             }
             
             if (isgustavo)
             {
                 ratmount_movespeed = 12;
                 gustavodash = 51;
-                state = UnknownEnum.Value_191;
+                state = states.ratmount;
                 
                 if (abs(movespeed) < 12)
                     movespeed = other.image_xscale * 12;

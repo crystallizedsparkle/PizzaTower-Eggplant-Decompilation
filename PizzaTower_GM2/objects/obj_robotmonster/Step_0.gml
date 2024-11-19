@@ -4,12 +4,12 @@ targetplayer = instance_nearest(x, y, obj_player);
 
 switch (state)
 {
-    case UnknownEnum.Value_217:
+    case states.robot_idle:
         sprite_index = spr_introidle;
         image_speed = 0.35;
         break;
     
-    case UnknownEnum.Value_218:
+    case states.robot_intro:
         image_speed = 0.35;
         
         if (sprite_index != spr_intro)
@@ -20,13 +20,13 @@ switch (state)
         
         if (floor(image_index) == (image_number - 1))
         {
-            state = UnknownEnum.Value_220;
+            state = states.robot_chase;
             sprite_index = chasespr;
         }
         
         break;
     
-    case UnknownEnum.Value_219:
+    case states.robot_walking:
         targetplayer = instance_nearest(x, y, obj_player);
         image_speed = 0.35;
         sprite_index = walkspr;
@@ -38,11 +38,11 @@ switch (state)
         scr_monster_detect_audio();
         
         if (scr_monster_detect(300, room_height, targetplayer))
-            state = UnknownEnum.Value_220;
+            state = states.robot_chase;
         
         break;
     
-    case UnknownEnum.Value_220:
+    case states.robot_chase:
         if (sprite_index != spr_monstercheese_jump)
             sprite_index = chasespr;
         
@@ -106,7 +106,7 @@ switch (state)
             if (t && place_meeting(x + hsp, y, obj_monstersolid) && !place_meeting(x + hsp, y, obj_monsterslope))
             {
                 grav *= -1;
-                state = UnknownEnum.Value_135;
+                state = states.fall;
                 hsp = 0;
                 sprite_index = spr_monstercheese_jump;
                 image_index = 0;
@@ -114,7 +114,7 @@ switch (state)
             else if (t && ys < 0 && point_in_camera(x, y, view_camera[0]) && targetplayer.x > (x - 200) && targetplayer.x < (x + 200))
             {
                 grav *= -1;
-                state = UnknownEnum.Value_135;
+                state = states.fall;
                 sprite_index = spr_monstercheese_jump;
                 image_index = 0;
             }
@@ -122,7 +122,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_135:
+    case states.fall:
         image_speed = 0.5;
         
         if (floor(image_index) == (image_number - 1))
@@ -131,31 +131,31 @@ switch (state)
         if (scr_monster_solid(x, y + (grav * 2)))
         {
             ys *= -1;
-            state = UnknownEnum.Value_220;
+            state = states.robot_chase;
         }
         
         break;
     
-    case UnknownEnum.Value_222:
+    case states.robot_searching:
         targetplayer = instance_nearest(x, y, obj_player);
         hsp = image_xscale * 6;
         
         if (place_meeting(x + sign(hsp), y, obj_monstersolid) && (!place_meeting(x + sign(hsp), y, obj_monsterslope) || place_meeting(x + sign(hsp), y - 4, obj_solid)))
-            state = UnknownEnum.Value_219;
+            state = states.robot_walking;
         
         if (scr_monster_detect(300, room_height, targetplayer))
-            state = UnknownEnum.Value_220;
+            state = states.robot_chase;
         
         break;
     
-    case UnknownEnum.Value_221:
+    case states.robot_investigate:
         scr_monsterinvestigate(10, 2837, 34);
         break;
 }
 
 if (object_index == obj_robotmonster || object_index == obj_hillbillymonster)
 {
-    if (state == UnknownEnum.Value_220 || state == UnknownEnum.Value_222 || state == UnknownEnum.Value_221)
+    if (state == states.robot_chase || state == states.robot_searching || state == states.robot_investigate)
     {
         instance_destroy(instance_place(x + hsp, y, obj_wirewall));
         instance_destroy(instance_place(x + hsp, y, obj_destructibles));

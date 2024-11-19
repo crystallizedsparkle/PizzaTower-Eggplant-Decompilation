@@ -5,59 +5,59 @@ targetplayer = instance_nearest(x, y, obj_player);
 wastedhits = 8 - elitehit;
 
 if (elitehit <= 2)
-    attackpool = [UnknownEnum.Value_174, UnknownEnum.Value_130, UnknownEnum.Value_72, UnknownEnum.Value_72, UnknownEnum.Value_72];
+    attackpool = [states.boss_shield, states.turn, states.pistol, states.pistol, states.pistol];
 else if (elitehit <= 4)
-    attackpool = [UnknownEnum.Value_174, UnknownEnum.Value_174, UnknownEnum.Value_174, UnknownEnum.Value_130];
+    attackpool = [states.boss_shield, states.boss_shield, states.boss_shield, states.turn];
 else if (elitehit <= 6)
-    attackpool = [UnknownEnum.Value_130];
+    attackpool = [states.turn];
 
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_noise_walk();
         break;
     
-    case UnknownEnum.Value_92:
+    case states.jump:
         scr_noise_jump();
         break;
     
-    case UnknownEnum.Value_80:
+    case states.punch:
         scr_noise_punch();
         break;
     
-    case UnknownEnum.Value_174:
+    case states.boss_shield:
         scr_noise_shield();
         break;
     
-    case UnknownEnum.Value_72:
+    case states.pistol:
         scr_noise_pistol();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state != UnknownEnum.Value_108 && state != UnknownEnum.Value_111)
+if (state != states.freefall && state != states.freefallland)
     hit = false;
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     movespeed = 0;
     
@@ -83,7 +83,7 @@ else
     savedthrown = false;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -91,7 +91,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state == UnknownEnum.Value_92 || (state == UnknownEnum.Value_174 && substate == UnknownEnum.Value_92))
+if (state == states.jump || (state == states.boss_shield && substate == states.jump))
 {
     use_collision = false;
     x += hsp;
@@ -105,21 +105,21 @@ else
     use_collision = true;
 }
 
-if ((state == UnknownEnum.Value_72 && substate == UnknownEnum.Value_66) || (state == UnknownEnum.Value_174 && substate == UnknownEnum.Value_174) || (state == UnknownEnum.Value_134 && (!placedtraps || (!obj_player1.brick && !instance_exists(obj_brickball)))) || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_138 || !use_collision)
+if ((state == states.pistol && substate == states.shotgun) || (state == states.boss_shield && substate == states.boss_shield) || (state == states.walk && (!placedtraps || (!obj_player1.brick && !instance_exists(obj_brickball)))) || state == states.punch || state == states.stun || !use_collision)
     invincible = true;
 else
     invincible = false;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

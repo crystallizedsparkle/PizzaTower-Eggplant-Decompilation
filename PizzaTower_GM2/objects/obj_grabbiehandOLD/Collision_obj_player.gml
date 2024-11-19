@@ -1,13 +1,13 @@
 var i, p;
 
-if (other.state == UnknownEnum.Value_186)
+if (other.state == states.gotoplayer)
     exit;
 
 if (sprite_index == spr_grabbiehand_fall && player == -4)
 {
     with (other)
     {
-        if (state == UnknownEnum.Value_33)
+        if (state == states.boxxedpep)
         {
             i = 0;
             p = id;
@@ -40,7 +40,7 @@ if (sprite_index == spr_grabbiehand_fall && player == -4)
                 image_index = 4;
         }
         
-        if (state == UnknownEnum.Value_24 || state == UnknownEnum.Value_25)
+        if (state == states.cheesepep || state == states.cheesepepstick)
         {
             repeat (8)
             {
@@ -63,7 +63,7 @@ if (sprite_index == spr_grabbiehand_fall && player == -4)
     player = other.id;
     other.image_index = 0;
     other.sprite_index = spr_player_catched;
-    other.state = UnknownEnum.Value_106;
+    other.state = states.bump;
     other.x = x;
     other.y = y;
     other.vsp = 0;
@@ -77,7 +77,7 @@ if (sprite_index == spr_grabbiehand_catch)
     
     other.vsp = 0;
     other.hsp = 0;
-    other.state = UnknownEnum.Value_106;
+    other.state = states.bump;
     other.sprite_index = spr_player_catched;
     other.x = x;
     other.y = y;

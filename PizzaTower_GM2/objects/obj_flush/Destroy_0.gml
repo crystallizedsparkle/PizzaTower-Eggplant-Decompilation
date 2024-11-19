@@ -1,6 +1,6 @@
 if (ds_list_find_index(global.baddieroom, id) == -1)
 {
-    create_particle(x, y, UnknownEnum.Value_9);
+    create_particle(x, y, states.fireass);
     ds_list_add(global.baddieroom, id);
     
     switch (type)

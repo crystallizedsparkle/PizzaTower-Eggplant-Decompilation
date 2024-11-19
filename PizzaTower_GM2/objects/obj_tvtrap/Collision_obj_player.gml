@@ -1,4 +1,4 @@
-if (other.instakillmove || other.state == UnknownEnum.Value_42)
+if (other.instakillmove || other.state == states.handstandjump)
 {
     with (other)
     {

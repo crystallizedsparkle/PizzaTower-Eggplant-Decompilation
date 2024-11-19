@@ -13,7 +13,7 @@ function scr_player_ratmounthurt()
     
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
         movespeed = 0;
     }
     

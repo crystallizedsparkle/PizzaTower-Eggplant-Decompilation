@@ -7,7 +7,7 @@ if (x != obj_player.x)
 if (global.snickchallenge == false)
     instance_destroy();
 
-if (hitboxcreate == false && (obj_player1.instakillmove == false && obj_player1.state != UnknownEnum.Value_42))
+if (hitboxcreate == false && (obj_player1.instakillmove == false && obj_player1.state != states.handstandjump))
 {
     hitboxcreate = true;
     
@@ -18,7 +18,7 @@ if (hitboxcreate == false && (obj_player1.instakillmove == false && obj_player1.
     }
 }
 
-if (place_meeting(x, y, obj_player1) && (obj_player1.instakillmove == true || obj_player1.state == UnknownEnum.Value_42))
+if (place_meeting(x, y, obj_player1) && (obj_player1.instakillmove == true || obj_player1.state == states.handstandjump))
 {
     repeat (6)
     {

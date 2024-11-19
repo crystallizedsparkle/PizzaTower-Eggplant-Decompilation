@@ -1,7 +1,7 @@
-if (room == Titlescreen && obj_player.state == UnknownEnum.Value_18)
+if (room == Titlescreen && obj_player.state == states.titlescreen)
 {
     obj_player1.sprite_index = spr_player_machfreefall;
-    obj_player1.state = UnknownEnum.Value_84;
+    obj_player1.state = states.backbreaker;
     obj_player1.movespeed = 6;
     obj_player1.vsp = 5;
     obj_player1.xscale = 1;
@@ -9,7 +9,7 @@ if (room == Titlescreen && obj_player.state == UnknownEnum.Value_18)
     obj_player1.player_y = 50;
 }
 
-if (obj_player.state == UnknownEnum.Value_119)
+if (obj_player.state == states.taxi)
 {
     if (!global.pizzadelivery)
     {
@@ -29,12 +29,12 @@ if (obj_player.state == UnknownEnum.Value_119)
     }
 }
 
-if (obj_player.state == UnknownEnum.Value_152)
+if (obj_player.state == states.taxi_police)
 {
     with (obj_player)
     {
         visible = true;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 

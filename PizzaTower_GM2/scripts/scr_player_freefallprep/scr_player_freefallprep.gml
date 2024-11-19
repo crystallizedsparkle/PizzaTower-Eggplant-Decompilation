@@ -52,7 +52,7 @@ function scr_player_freefallprep()
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_108;
+        state = states.freefall;
         
         if (shotgunAnim == false)
             sprite_index = spr_bodyslamfall;

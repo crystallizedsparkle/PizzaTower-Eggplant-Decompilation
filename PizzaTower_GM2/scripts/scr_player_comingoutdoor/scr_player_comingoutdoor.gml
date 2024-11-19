@@ -21,9 +21,9 @@ function scr_player_comingoutdoor()
         movespeed = 0;
         
         if (isgustavo)
-            state = UnknownEnum.Value_191;
+            state = states.ratmount;
         else
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         
         image_alpha = 1;
         c = 0;

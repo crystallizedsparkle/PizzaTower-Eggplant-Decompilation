@@ -2,15 +2,15 @@ if (place_meeting(x, y - 1, obj_player))
 {
     with (obj_player)
     {
-        if (state != UnknownEnum.Value_186 && place_meeting(x, y + 1, other))
+        if (state != states.gotoplayer && place_meeting(x, y + 1, other))
         {
-            if (state == UnknownEnum.Value_47)
+            if (state == states.knightpep)
             {
-                state = UnknownEnum.Value_38;
+                state = states.knightpepslopes;
             }
-            else if (state != UnknownEnum.Value_38 && state != UnknownEnum.Value_99)
+            else if (state != states.knightpepslopes && state != states.Sjumpprep)
             {
-                if (state != UnknownEnum.Value_105 && state != UnknownEnum.Value_5 && state != UnknownEnum.Value_42 && state != UnknownEnum.Value_103 && state != UnknownEnum.Value_104 && state != UnknownEnum.Value_121)
+                if (state != states.machslide && state != states.tumble && state != states.handstandjump && state != states.mach1 && state != states.mach2 && state != states.mach3)
                 {
                     if (icedir != -xscale && move != 0)
                     {
@@ -29,7 +29,7 @@ if (place_meeting(x, y - 1, obj_player))
                         icedir = -xscale;
                     }
                 }
-                else if (state == UnknownEnum.Value_105)
+                else if (state == states.machslide)
                 {
                     if (prevstate != state)
                     {
@@ -37,7 +37,7 @@ if (place_meeting(x, y - 1, obj_player))
                         icemovespeed = floor(abs(movespeed) * 0.5);
                     }
                 }
-                else if (state == UnknownEnum.Value_5)
+                else if (state == states.tumble)
                 {
                     icemovespeed = 0;
                 }

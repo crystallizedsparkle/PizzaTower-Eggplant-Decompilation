@@ -1,6 +1,6 @@
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         if (!instance_exists(blockinst))
         {
             blockinst = instance_create(x, y, obj_solid);
@@ -11,7 +11,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         if (blockinst != -4 && instance_exists(blockinst))
         {
             instance_destroy(blockinst);

@@ -1,7 +1,7 @@
 if (room == rm_editor)
     exit;
 
-if (obj_player.state != UnknownEnum.Value_107 && global.sausagefollow == false)
+if (obj_player.state != states.hurt && global.sausagefollow == false)
 {
     global.heattime = 60;
     global.style += 10;

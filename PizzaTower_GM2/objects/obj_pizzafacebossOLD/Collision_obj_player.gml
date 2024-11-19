@@ -2,17 +2,17 @@ var choseattack, j;
 
 if (phase == 0 && attacking)
 {
-    if (state == UnknownEnum.Value_230)
+    if (state == states.pizzaface_ram)
     {
-        if (other.state == UnknownEnum.Value_84 && other.parry_inst != -4)
+        if (other.state == states.backbreaker && other.parry_inst != -4)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             boss_hurt(10, other.id);
             stunned = 50;
             
             with (other)
             {
-                state = UnknownEnum.Value_147;
+                state = states.parry;
                 sprite_index = choose(spr_parry1, spr_parry2, spr_parry3);
                 image_index = 0;
                 image_speed = 0.35;
@@ -54,15 +54,15 @@ if (phase == 0 && attacking)
                         
                         switch (choseattack)
                         {
-                            case UnknownEnum.Value_227:
+                            case states.pizzaface_mouth:
                                 sprite_index = spr_pizzafaceword;
                                 break;
                             
-                            case UnknownEnum.Value_228:
+                            case states.pizzaface_eyes:
                                 sprite_index = spr_sausageman_idle;
                                 break;
                             
-                            case UnknownEnum.Value_229:
+                            case states.pizzaface_nose:
                                 sprite_index = spr_shroomcollect;
                                 break;
                         }
@@ -72,13 +72,13 @@ if (phase == 0 && attacking)
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             player_hurt(20, other.id);
         }
     }
     else
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         player_hurt(20, other.id);
     }
 }

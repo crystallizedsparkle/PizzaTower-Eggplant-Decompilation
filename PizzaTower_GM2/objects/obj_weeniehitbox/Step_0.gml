@@ -1,4 +1,4 @@
-if (!instance_exists(baddieID) || baddieID.state != UnknownEnum.Value_5)
+if (!instance_exists(baddieID) || baddieID.state != states.tumble)
 {
     instance_destroy();
     exit;

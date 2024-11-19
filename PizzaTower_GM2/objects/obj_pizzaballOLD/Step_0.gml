@@ -10,15 +10,15 @@ current = place_meeting(x, y + 1, obj_current);
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         scr_pizzaball_normal();
         break;
     
-    case UnknownEnum.Value_5:
+    case states.tumble:
         scr_pizzaball_roll();
         break;
     
-    case UnknownEnum.Value_148:
+    case states.golf:
         scr_pizzaball_golf();
         break;
 }
@@ -36,7 +36,7 @@ with (instance_place(x, y + 1, obj_destructibleplatform))
         image_speed = 0.35;
 }
 
-if (grounded && obj_player.state == UnknownEnum.Value_111)
+if (grounded && obj_player.state == states.freefallland)
     vsp = -11;
 
 enum UnknownEnum

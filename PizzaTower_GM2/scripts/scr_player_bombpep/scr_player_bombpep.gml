@@ -48,7 +48,7 @@ function scr_player_bombgrab()
     }
     
     if (!instance_exists(bombgrabID))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (sprite_index != spr_haulingstart && sprite_index != spr_uppercutfinishingblow && sprite_index != spr_player_throw)
     {
@@ -82,7 +82,7 @@ function scr_player_bombgrab()
                 
                 with (bombgrabID)
                 {
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                     vsp = -20;
                     hsp = 0;
                 }
@@ -93,7 +93,7 @@ function scr_player_bombgrab()
                 
                 with (bombgrabID)
                 {
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                     movespeed = 9;
                     vsp = -11;
                 }
@@ -117,17 +117,17 @@ function scr_player_bombgrab()
         {
             if (grounded)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 
                 with (bombgrabID)
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
             }
         }
     }
     else if (sprite_index != spr_haulingstart)
     {
         if (floor(image_index) == (image_number - 1))
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
 }
 
@@ -176,13 +176,13 @@ function scr_player_bombpepup()
         
         scr_soundeffect(27);
         image_index = 0;
-        state = UnknownEnum.Value_123;
+        state = states.Sjumpland;
         machhitAnim = false;
     }
     
     if (bombup_dir == 1 && scr_solid(x, y + 1) && !place_meeting(x, y + 1, obj_destructibles))
     {
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         sprite_index = spr_bodyslamland;
         image_index = 0;
         
@@ -256,7 +256,7 @@ function scr_player_bombpepside()
         }
         
         flash = false;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -2.5;
         vsp = -3;
         mach2 = 0;
@@ -321,7 +321,7 @@ function scr_player_bombpep()
         alarm[5] = 2;
         alarm[7] = 60;
         hurted = true;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = spr_idle;
         image_index = 0;
     }
@@ -369,14 +369,14 @@ function scr_player_bombpep()
     if (floor(image_index) != 0 && floor(image_index) != 2)
         steppy = false;
     
-    if (key_slap2 && state != UnknownEnum.Value_0 && sprite_index != spr_bombpepintro && sprite_index != spr_bombpepend)
+    if (key_slap2 && state != states.normal && sprite_index != spr_bombpepintro && sprite_index != spr_bombpepend)
     {
         sprite_index = spr_player_throw;
         image_index = 0;
         hsp = 0;
         bombpeptimer = 0;
         movespeed = 0;
-        state = UnknownEnum.Value_84;
+        state = states.backbreaker;
         
         with (instance_create(x + (xscale * 50), y, obj_pizzagoblinbomb))
         {

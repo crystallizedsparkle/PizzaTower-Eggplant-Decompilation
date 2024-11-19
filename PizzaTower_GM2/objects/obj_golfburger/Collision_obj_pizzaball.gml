@@ -1,10 +1,10 @@
-if (state != UnknownEnum.Value_74 && state != UnknownEnum.Value_138 && state != UnknownEnum.Value_4)
+if (state != states.throwing && state != states.stun && state != states.grabbed)
 {
-    if (other.state == UnknownEnum.Value_134)
+    if (other.state == states.walk)
     {
         golfid = other.id;
         shot = false;
-        state = UnknownEnum.Value_74;
+        state = states.throwing;
         sprite_index = spr_golfburger_golf;
         image_index = 0;
         
@@ -13,7 +13,7 @@ if (state != UnknownEnum.Value_74 && state != UnknownEnum.Value_138 && state != 
         else
             image_xscale = shootdir;
     }
-    else if (other.state == UnknownEnum.Value_156)
+    else if (other.state == states.thrown)
     {
         instance_destroy();
     }

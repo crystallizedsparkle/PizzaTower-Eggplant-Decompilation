@@ -2,18 +2,18 @@ if (place_meeting(x, y - 1, obj_player))
 {
     with (obj_player)
     {
-        if ((state != UnknownEnum.Value_148 && state != UnknownEnum.Value_91 && state != UnknownEnum.Value_186) && state != UnknownEnum.Value_210 && state != UnknownEnum.Value_211)
+        if ((state != states.golf && state != states.tackle && state != states.gotoplayer) && state != states.trashjump && state != states.trashroll)
         {
             if (place_meeting(x, y + 1, other))
             {
-                if (state != UnknownEnum.Value_113 && state != UnknownEnum.Value_114 && state != UnknownEnum.Value_116 && state != UnknownEnum.Value_115)
+                if (state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall)
                 {
-                    state = UnknownEnum.Value_94;
+                    state = states.slipnslide;
                     sprite_index = spr_currentplayer;
                 }
                 else
                 {
-                    state = UnknownEnum.Value_116;
+                    state = states.barrelslide;
                     
                     if (sprite_index != spr_player_barrelslipnslide)
                         sprite_index = spr_player_barrelroll;

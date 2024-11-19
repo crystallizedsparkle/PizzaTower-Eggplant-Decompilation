@@ -6,7 +6,7 @@ function scr_shotgunshoot()
         image_xscale = other.xscale;
     
     sprite_index = spr_shotgunshoot;
-    state = UnknownEnum.Value_69;
+    state = states.shotgunshoot;
     movespeed = -4;
     jumpAnim = true;
     image_index = 0;

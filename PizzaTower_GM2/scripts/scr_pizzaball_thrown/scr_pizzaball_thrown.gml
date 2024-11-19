@@ -5,7 +5,7 @@ function scr_pizzaball_thrown()
     
     switch (substate)
     {
-        case UnknownEnum.Value_156:
+        case states.thrown:
             image_speed = 0.5;
             
             if (sprite_index != spr_pizzaball_hitwall && sprite_index != spr_pizzaball_hitwall2)
@@ -28,7 +28,7 @@ function scr_pizzaball_thrown()
                 }
                 else
                 {
-                    substate = UnknownEnum.Value_100;
+                    substate = states.crouch;
                 }
             }
             
@@ -42,7 +42,7 @@ function scr_pizzaball_thrown()
             
             break;
         
-        case UnknownEnum.Value_100:
+        case states.crouch:
             sprite_index = spr_pizzaball_roll;
             hitspeed = Approach(hitspeed, 0, 0.2);
             hsp = image_xscale * hitspeed;
@@ -53,7 +53,7 @@ function scr_pizzaball_thrown()
             if (hitspeed == 0)
             {
                 sprite_index = walkspr;
-                state = UnknownEnum.Value_134;
+                state = states.walk;
             }
             
             break;

@@ -1,4 +1,4 @@
-chosenstate = UnknownEnum.Value_103;
+chosenstate = states.mach1;
 
 enum UnknownEnum
 {

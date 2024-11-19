@@ -4,7 +4,7 @@ with (priestID)
         sprite_index = spr_priest_idle;
 }
 
-state = UnknownEnum.Value_92;
+state = states.jump;
 
 enum UnknownEnum
 {

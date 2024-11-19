@@ -1,10 +1,10 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_186 && state != UnknownEnum.Value_9)
+    if (state != states.gotoplayer && state != states.fireass)
     {
         scr_soundeffect(57);
         image_index = 0;
-        state = UnknownEnum.Value_9;
+        state = states.fireass;
         vsp = -21;
         sprite_index = spr_scaredjump1;
         scr_monster_activate();

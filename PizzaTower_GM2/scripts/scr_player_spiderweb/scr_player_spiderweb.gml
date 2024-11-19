@@ -24,7 +24,7 @@ function scr_player_spiderweb()
                 event_user(0);
         }
         
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         vsp = -11;
         jumpstop = false;
         sprite_index = spr_jump;

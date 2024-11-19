@@ -6,7 +6,7 @@ if (room != rank_room)
     {
         targetDoor = "A";
         room = timesuproom;
-        state = UnknownEnum.Value_64;
+        state = states.timesup;
         sprite_index = spr_Timesup;
         image_index = 0;
         audio_stop_all();

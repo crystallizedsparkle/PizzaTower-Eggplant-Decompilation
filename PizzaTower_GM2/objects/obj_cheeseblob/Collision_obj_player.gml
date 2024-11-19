@@ -1,4 +1,4 @@
-if (other.state != UnknownEnum.Value_61)
+if (other.state != states.chainsaw)
 {
     repeat (8)
     {
@@ -9,10 +9,10 @@ if (other.state != UnknownEnum.Value_61)
         }
     }
     
-    if (other.state != UnknownEnum.Value_24)
-        tv_push_prompt_once(tv_create_prompt("This is the cheese transformation text", UnknownEnum.Value_2, 2457, 3), "cheesepep");
+    if (other.state != states.cheesepep)
+        tv_push_prompt_once(tv_create_prompt("This is the cheese transformation text", tvprompt_type.transformation, 2457, 3), "cheesepep");
     
-    other.state = UnknownEnum.Value_24;
+    other.state = states.cheesepep;
     other.movespeed = 0;
     other.sprite_index = other.spr_cheesepepintro;
     instance_destroy();

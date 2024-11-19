@@ -35,7 +35,7 @@ function scr_getinput()
     else
         stickpressed = false;
     
-    if (object_index == obj_player1 && state == UnknownEnum.Value_99)
+    if (object_index == obj_player1 && state == states.Sjumpprep)
     {
         haxis = gamepad_axis_value(_dvc, gp_axislh);
         vaxis = gamepad_axis_value(_dvc, gp_axislv);

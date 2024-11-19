@@ -1,4 +1,4 @@
-if (grounded && other.sprite_index == spr_swordstone && (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_43))
+if (grounded && other.sprite_index == spr_swordstone && (state == states.handstandjump || state == states.punch || state == states.lungeattack))
 {
     transformationlives = 3;
     scr_soundeffect(77);
@@ -9,10 +9,10 @@ if (grounded && other.sprite_index == spr_swordstone && (state == UnknownEnum.Va
     image_index = 0;
     image_speed = 0.35;
     sprite_index = spr_knightpepstart;
-    state = UnknownEnum.Value_47;
+    state = states.knightpep;
     hsp = 0;
     vsp = 0;
-    tv_push_prompt_once(tv_create_prompt("This is the knight transformation text", UnknownEnum.Value_2, 596, 3), "knight");
+    tv_push_prompt_once(tv_create_prompt("This is the knight transformation text", tvprompt_type.touch_trigger, 596, 3), "knight");
 }
 
 enum UnknownEnum

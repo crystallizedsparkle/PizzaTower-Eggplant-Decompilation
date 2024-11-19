@@ -5,7 +5,7 @@ if (global.levelcomplete && !global.golfcutscene)
     {
         with (obj_player)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             x = backtohubstartx;
             y = backtohubstarty;
         }

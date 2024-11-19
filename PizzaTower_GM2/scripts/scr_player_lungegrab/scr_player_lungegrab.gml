@@ -13,7 +13,7 @@ function scr_player_lungegrab()
         if (_bump)
         {
             jumpstop = true;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             vsp = -4;
             sprite_index = spr_suplexbump;
             instance_create(x + (xscale * 10), y + 10, obj_bumpeffect);
@@ -21,7 +21,7 @@ function scr_player_lungegrab()
     }
     
     if (floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
 }
 
 enum UnknownEnum

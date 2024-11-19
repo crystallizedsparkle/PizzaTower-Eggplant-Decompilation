@@ -2,7 +2,7 @@ function cutscene_desert_end()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         x = backtohubstartx;
         y = backtohubstarty;
     }

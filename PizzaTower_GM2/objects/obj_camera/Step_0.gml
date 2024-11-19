@@ -166,20 +166,20 @@ detachedby = -1;
 detach = false;
 follow_golf = false;
 
-if (instance_exists(player) && player.state != UnknownEnum.Value_64 && player.state != UnknownEnum.Value_89 && !follow_golf && !detach)
+if (instance_exists(player) && player.state != states.timesup && player.state != states.gameover && !follow_golf && !detach)
 {
     if (room != custom_lvl_room)
     {
         target = player;
         coopdistance = distance_to_object(obj_player2) / 2;
         
-        if (player.state == UnknownEnum.Value_104 || player.state == UnknownEnum.Value_121)
+        if (player.state == states.mach2 || player.state == states.mach3)
         {
             _targetcharge = player.xscale * ((player.movespeed / 4) * 50);
             _tspeed = 0.3;
             chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
         }
-        else if ((abs(player.hsp) >= 16 || (player.state == UnknownEnum.Value_61 && player.tauntstoredmovespeed >= 16)) && player.state != UnknownEnum.Value_37 && player.state != UnknownEnum.Value_97)
+        else if ((abs(player.hsp) >= 16 || (player.state == states.chainsaw && player.tauntstoredmovespeed >= 16)) && player.state != states.climbwall && player.state != states.Sjump)
         {
             _targetcharge = player.xscale * ((abs(player.movespeed) / 4) * 50);
             _tspeed = 2;
@@ -189,7 +189,7 @@ if (instance_exists(player) && player.state != UnknownEnum.Value_64 && player.st
             
             chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
         }
-        else if (player.state == UnknownEnum.Value_105)
+        else if (player.state == states.machslide)
         {
             chargecamera = Approach(chargecamera, 0, 10);
         }
@@ -214,7 +214,7 @@ if (instance_exists(player) && player.state != UnknownEnum.Value_64 && player.st
                 cam_y = clamp(cam_y, 0, room_height - cam_height);
                 camera_zoom(1, 0.035);
             }
-            else if (obj_player2.state != UnknownEnum.Value_18)
+            else if (obj_player2.state != states.titlescreen)
             {
                 cam_x = ((obj_player1.x + obj_player2.x) / 2) - (cam_width / 2);
                 cam_y = ((obj_player1.y + obj_player2.y) / 2) - (cam_height / 2);
@@ -258,7 +258,7 @@ if (instance_exists(player) && player.state != UnknownEnum.Value_64 && player.st
         target = player;
         coopdistance = distance_to_object(obj_player2) / 2;
         
-        if (player.state == UnknownEnum.Value_121 || player.state == UnknownEnum.Value_31 || player.state == UnknownEnum.Value_65)
+        if (player.state == states.mach3 || player.state == states.rideweenie || player.state == states.machroll)
         {
             if (chargecamera > (player.xscale * 100))
                 chargecamera -= 2;

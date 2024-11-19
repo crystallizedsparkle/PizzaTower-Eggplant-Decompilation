@@ -8,7 +8,7 @@ image_index = ID.image_index;
 
 with (ID)
 {
-    if (state != UnknownEnum.Value_126 && state != UnknownEnum.Value_134)
+    if (state != states.idle && state != states.walk)
     {
         hitboxcreate = false;
         instance_destroy(other);

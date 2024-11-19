@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_186)
+    if (state != states.gotoplayer)
     {
-        if (state == UnknownEnum.Value_53 || state == UnknownEnum.Value_32 || state == UnknownEnum.Value_94 || state == UnknownEnum.Value_184 || state == UnknownEnum.Value_78 || state == UnknownEnum.Value_5 || state == UnknownEnum.Value_21 || state == UnknownEnum.Value_38 || state == UnknownEnum.Value_65 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_104)
+        if (state == states.bombpepside || state == states.motorcycle || state == states.slipnslide || state == states.rocket || state == states.grind || state == states.tumble || state == states.cheeseball || state == states.knightpepslopes || state == states.machroll || state == states.mach3 || state == states.mach2)
         {
             other.sprite_index = spr_sidespringblock_bounce;
             other.image_index = 0;

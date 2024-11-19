@@ -7,7 +7,7 @@ with (_baddie)
 {
     if (instance_exists(baddieID) && baddieID != other.id)
     {
-        if (baddieID.state == UnknownEnum.Value_138 && baddieID.thrown == true)
+        if (baddieID.state == states.stun && baddieID.thrown == true)
         {
             with (_tank)
                 instance_destroy();

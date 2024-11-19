@@ -18,7 +18,7 @@ function scr_enemy_hit()
         else
             _player = 323;
         
-        if (obj_player.tauntstoredstate == UnknownEnum.Value_104 || obj_player.tauntstoredstate == UnknownEnum.Value_5 || obj_player.state == UnknownEnum.Value_104 || obj_player.state == UnknownEnum.Value_5)
+        if (obj_player.tauntstoredstate == states.mach2 || obj_player.tauntstoredstate == states.tumble || obj_player.state == states.mach2 || obj_player.state == states.tumble)
             thrown = false;
         else
             thrown = true;
@@ -45,7 +45,7 @@ function scr_enemy_hit()
         }
         
         stunned = 200;
-        state = UnknownEnum.Value_138;
+        state = states.stun;
     }
 }
 

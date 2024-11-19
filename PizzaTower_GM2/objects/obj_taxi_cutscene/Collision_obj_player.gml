@@ -5,7 +5,7 @@ obj_player1.visible = false;
 obj_player1.sprite_index = obj_player1.spr_idle;
 obj_player1.hsp = 0;
 obj_player1.vsp = 0;
-obj_player1.state = UnknownEnum.Value_119;
+obj_player1.state = states.taxi;
 scr_soundeffect(94);
 playerid = 324;
 sprite_index = spr_taximove;
@@ -22,7 +22,7 @@ if (global.coop == true)
     obj_player2.visible = false;
     obj_player2.hsp = 0;
     obj_player2.vsp = 0;
-    obj_player2.state = UnknownEnum.Value_119;
+    obj_player2.state = states.taxi;
     obj_player2.cutscene = true;
 }
 

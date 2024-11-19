@@ -15,7 +15,7 @@ if (global.miniboss == true)
         repeat (6)
             instance_create(x, y, obj_slapstar);
         
-        state = UnknownEnum.Value_7;
+        state = states.ejected;
         vsp = -10;
         audio_stop_all();
         scr_soundeffect(120);

@@ -12,7 +12,7 @@ obj_player.x = 608;
 obj_player.hsp = 0;
 obj_player.y = 498;
 obj_player.sprite_index = spr_player_levelcomplete;
-obj_player.state = UnknownEnum.Value_88;
+obj_player.state = states.bossintro;
 
 if (reset == false)
 {

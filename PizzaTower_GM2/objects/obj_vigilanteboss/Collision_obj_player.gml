@@ -1,11 +1,11 @@
 var s;
 
-if (state == UnknownEnum.Value_153)
+if (state == states.shoulderbash)
 {
     s = other.state;
     scr_hurtplayer(other);
     
-    if (s != other.state && other.state == UnknownEnum.Value_107)
+    if (s != other.state && other.state == states.hurt)
         pepperman_nearestspot();
 }
 

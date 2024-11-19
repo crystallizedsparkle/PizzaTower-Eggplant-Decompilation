@@ -19,8 +19,8 @@ switch (sprite_index)
                 cutscene = true;
                 visible = false;
                 
-                if (!isgustavo && state != UnknownEnum.Value_47 && state != UnknownEnum.Value_38 && state != UnknownEnum.Value_49)
-                    state = UnknownEnum.Value_0;
+                if (!isgustavo && state != states.knightpep && state != states.knightpepslopes && state != states.knightpepbump)
+                    state = states.normal;
             }
         }
         
@@ -35,13 +35,13 @@ switch (sprite_index)
             {
                 if (object_index != obj_player2 || global.coop)
                 {
-                    if (!isgustavo && state != UnknownEnum.Value_47 && state != UnknownEnum.Value_38 && state != UnknownEnum.Value_49)
+                    if (!isgustavo && state != states.knightpep && state != states.knightpepslopes && state != states.knightpepbump)
                     {
                         visible = true;
                         cutscene = false;
                         sprite_index = spr_bodyslamstart;
                         image_index = 0;
-                        state = UnknownEnum.Value_122;
+                        state = states.freefallprep;
                         vsp = (character == "P") ? -5 : -7;
                     }
                 }

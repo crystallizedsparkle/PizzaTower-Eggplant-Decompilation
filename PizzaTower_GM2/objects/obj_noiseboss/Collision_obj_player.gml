@@ -1,15 +1,15 @@
 var s;
 
-if (state == UnknownEnum.Value_134 && !other.brick && other.state == UnknownEnum.Value_259)
+if (state == states.walk && !other.brick && other.state == UnknownEnum.Value_259)
 {
     s = other.state;
     scr_hurtplayer(other);
     
     if (s != other.state)
     {
-        if (state == UnknownEnum.Value_134)
+        if (state == states.walk)
         {
-            state = UnknownEnum.Value_80;
+            state = states.punch;
             sprite_index = spr_playerN_spin;
             image_index = 0;
         }

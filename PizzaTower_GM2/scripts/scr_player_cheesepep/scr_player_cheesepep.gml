@@ -44,7 +44,7 @@ function scr_player_cheesepep()
     
     if (!grounded)
     {
-        state = UnknownEnum.Value_26;
+        state = states.cheesepepjump;
         sprite_index = spr_cheesepepfall;
         jumpstop = true;
         movespeed = xscale * movespeed;
@@ -72,7 +72,7 @@ function scr_player_cheesepep()
         vsp = -11;
         image_index = 0;
         sprite_index = spr_cheesepepjump;
-        state = UnknownEnum.Value_26;
+        state = states.cheesepepjump;
     }
 }
 

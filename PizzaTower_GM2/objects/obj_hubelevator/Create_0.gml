@@ -1,4 +1,4 @@
-state = UnknownEnum.Value_0;
+state = states.normal;
 hub_array[0] = [229, "RECEPTION"];
 hub_array[1] = [422, "PIZZA TOWER LOBBY"];
 hub_array[2] = [274, "FARMLAND"];

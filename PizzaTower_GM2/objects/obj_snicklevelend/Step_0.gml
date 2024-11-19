@@ -1,8 +1,8 @@
-if (floor(image_index) == (image_number - 1) && obj_player.state != UnknownEnum.Value_112)
+if (floor(image_index) == (image_number - 1) && obj_player.state != states.door)
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_112;
+        state = states.door;
         image_index = 0;
     }
     

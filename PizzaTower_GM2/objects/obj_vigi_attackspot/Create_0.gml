@@ -1,4 +1,4 @@
-attack = UnknownEnum.Value_0;
+attack = states.normal;
 
 enum UnknownEnum
 {

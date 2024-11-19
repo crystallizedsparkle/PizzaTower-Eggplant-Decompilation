@@ -2,7 +2,7 @@ var num, i, b;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         if (place_meeting(x, y, obj_player))
         {
             num = instance_place_list(x, y, 322, global.instancelist, false);
@@ -11,7 +11,7 @@ switch (state)
             {
                 b = ds_list_find_value(global.instancelist, i);
                 
-                if (b.state == UnknownEnum.Value_121)
+                if (b.state == states.mach3)
                 {
                     player_inst = b;
                     hsp = sign(player_inst.hsp);
@@ -31,10 +31,10 @@ switch (state)
                         tauntstoredsprite = sprite_index;
                         tauntstoredstate = state;
                         tauntstoredvsp = vsp;
-                        state = UnknownEnum.Value_61;
+                        state = states.chainsaw;
                     }
                     
-                    state = UnknownEnum.Value_137;
+                    state = states.hit;
                     hitX = x;
                     hitY = y;
                     hitLag = 10;
@@ -50,7 +50,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         x = hitX + irandom_range(-1, 1);
         y = hitY + irandom_range(-1, 1);
         

@@ -4,7 +4,7 @@ if (instance_number(object_index) > 1)
     exit;
 }
 
-state = UnknownEnum.Value_0;
+state = states.normal;
 trapid = -4;
 image_speed = 0.35;
 

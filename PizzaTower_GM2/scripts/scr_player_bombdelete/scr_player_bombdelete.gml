@@ -30,7 +30,7 @@ function scr_player_bombdelete()
     
     if (key_slap2)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         with (instance_create(x, y, obj_bomb))
         {

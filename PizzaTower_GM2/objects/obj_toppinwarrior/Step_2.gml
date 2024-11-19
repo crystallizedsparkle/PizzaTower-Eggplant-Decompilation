@@ -1,6 +1,6 @@
 event_inherited();
 
-if (playerid.state != UnknownEnum.Value_84)
+if (playerid.state != states.backbreaker)
 {
     if (x != xprevious || y != yprevious)
         sprite_index = spr_run;

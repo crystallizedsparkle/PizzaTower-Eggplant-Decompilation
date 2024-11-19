@@ -14,7 +14,7 @@ function scr_player_dashtumble()
     {
         jumpstop = false;
         vsp = -11;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         sprite_index = spr_mach2jump;
     }
     
@@ -24,14 +24,14 @@ function scr_player_dashtumble()
             sprite_index = spr_mach2jump;
         
         image_speed = 0.35;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         grav = 0.5;
     }
     
     if (scr_solid(x + xscale, y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
     {
         jumpstop = true;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         vsp = -4;
         sprite_index = spr_suplexbump;
         instance_create(x + (xscale * 10), y + 10, obj_bumpeffect);

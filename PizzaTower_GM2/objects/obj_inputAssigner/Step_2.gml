@@ -12,27 +12,27 @@ with (obj_player)
     {
         switch (state)
         {
-            case UnknownEnum.Value_91:
+            case states.tackle:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
                 break;
             
-            case UnknownEnum.Value_5:
+            case states.tumble:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.8);
                 break;
             
-            case UnknownEnum.Value_9:
+            case states.fireass:
                 GamepadSetVibration(_pindex, 1, 1, 0.85);
                 break;
             
-            case UnknownEnum.Value_10:
+            case states.firemouth:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.85);
                 break;
             
-            case UnknownEnum.Value_107:
+            case states.hurt:
                 GamepadSetVibration(_pindex, 1, 1, 0.85);
                 break;
             
-            case UnknownEnum.Value_51:
+            case states.bombpep:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
                 
                 if (sprite_index == spr_bombpepend)
@@ -40,37 +40,37 @@ with (obj_player)
                 
                 break;
             
-            case UnknownEnum.Value_97:
+            case states.Sjump:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.85);
                 break;
             
-            case UnknownEnum.Value_99:
+            case states.Sjumpprep:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
                 break;
             
-            case UnknownEnum.Value_123:
+            case states.Sjumpland:
                 GamepadSetVibration(_pindex, 1, 1, 0.9);
                 break;
             
-            case UnknownEnum.Value_47:
+            case states.knightpep:
                 if (sprite_index == spr_knightpepthunder)
                     GamepadSetVibration(_pindex, 1, 1, 0.9);
                 
                 break;
             
-            case UnknownEnum.Value_147:
+            case states.parry:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.65);
                 break;
             
-            case UnknownEnum.Value_111:
+            case states.freefallland:
                 GamepadSetVibration(_pindex, 1, 1, 0.85);
                 break;
             
-            case UnknownEnum.Value_61:
+            case states.chainsaw:
                 GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
                 break;
             
-            case UnknownEnum.Value_106:
+            case states.bump:
                 if (sprite_index != spr_hitwall)
                     GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
                 else
@@ -78,7 +78,7 @@ with (obj_player)
                 
                 break;
             
-            case UnknownEnum.Value_79:
+            case states.grab:
                 GamepadSetVibration(_pindex, 0.2, 0.2, 0.8);
                 break;
             

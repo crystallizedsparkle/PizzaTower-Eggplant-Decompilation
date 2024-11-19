@@ -10,13 +10,13 @@ function cutscene_gustavo_start()
             instance_destroy();
     }
     
-    if (!instance_exists(obj_fadeout) && obj_player1.state != UnknownEnum.Value_119 && obj_player1.state != UnknownEnum.Value_95 && obj_player1.state != UnknownEnum.Value_107)
+    if (!instance_exists(obj_fadeout) && obj_player1.state != states.taxi && obj_player1.state != states.comingoutdoor && obj_player1.state != states.hurt)
     {
         with (obj_player1)
         {
             visible = true;
             image_alpha = 1;
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             sprite_index = spr_idle;
             image_speed = 0.35;
             xscale = 1;
@@ -26,7 +26,7 @@ function cutscene_gustavo_start()
         
         with (obj_gustavo)
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             
             if (!global.failcutscene)
                 sprite_index = spr_gustavo_makepizza;

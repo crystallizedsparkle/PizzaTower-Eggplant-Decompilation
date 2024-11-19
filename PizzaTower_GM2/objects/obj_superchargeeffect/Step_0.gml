@@ -9,7 +9,7 @@ if (playerid.supercharged == false)
 x = playerid.x;
 y = playerid.y;
 
-if (playerid.state != UnknownEnum.Value_95 && playerid.state != UnknownEnum.Value_112)
+if (playerid.state != states.comingoutdoor && playerid.state != states.door)
     visible = playerid.visible;
 else
     visible = false;

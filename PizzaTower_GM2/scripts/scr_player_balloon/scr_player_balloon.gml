@@ -19,18 +19,18 @@ function scr_player_balloon()
     }
     else
     {
-        create_particle(x, y - 20, UnknownEnum.Value_9, 0);
+        create_particle(x, y - 20, particles.genericpoofeffect, 0);
         instance_create(x, y - 20, obj_balloongrabbableeffect);
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_fall;
         jumpAnim = false;
     }
     
     if (key_jump)
     {
-        create_particle(x, y - 20, UnknownEnum.Value_9, 0);
+        create_particle(x, y - 20, particles.genericpoofeffect, 0);
         instance_create(x, y - 20, obj_balloongrabbableeffect);
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_jump;
         image_index = 0;
         jumpAnim = true;

@@ -20,7 +20,7 @@ function scr_player_facestomp()
         movespeed = 0;
     
     if (!key_down)
-        state = UnknownEnum.Value_92;
+        state = states.jump;
     
     landAnim = true;
     
@@ -31,17 +31,17 @@ function scr_player_facestomp()
     
     if (vsp > 15)
     {
-        state = UnknownEnum.Value_108;
+        state = states.freefall;
         superslam = 0;
     }
     
     if (grounded && (!place_meeting(x, y + 1, obj_destructibles) || place_meeting(x, y + 1, obj_metalblock)) && vsp > 0)
     {
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
     }
     
@@ -67,11 +67,11 @@ function scr_player_facestomp()
         sprite_index = spr_player_hanstandjump;
         stompAnim = false;
         hsp = 0;
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
     }
     

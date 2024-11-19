@@ -6,7 +6,7 @@ if (playerid.visible == false)
     with (obj_player1)
     {
         scr_soundeffect(93);
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         instance_create(x, y, obj_genericpoofeffect);
         cutscene = false;
     }
@@ -15,7 +15,7 @@ if (playerid.visible == false)
     {
         with (obj_player2)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             cutscene = false;
         }
     }

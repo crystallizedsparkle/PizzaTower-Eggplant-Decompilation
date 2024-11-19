@@ -1,6 +1,6 @@
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         
         if ((sprite_index == spr_clownmato_land || sprite_index == spr_clownmato_bounce) && floor(image_index) == (image_number - 1))
@@ -18,7 +18,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         sprite_index = stunspr;
         
         if (grounded)
@@ -30,7 +30,7 @@ switch (state)
         if (stuntouchbuffer > 0)
             stuntouchbuffer--;
         else
-            state = UnknownEnum.Value_134;
+            state = states.walk;
         
         break;
 }

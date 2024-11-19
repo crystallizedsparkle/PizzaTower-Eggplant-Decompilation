@@ -2,39 +2,39 @@ var b, s;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -44,7 +44,7 @@ if (sprite_index != spr_pizzaboy)
 
 scr_scareenemy();
 
-if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -52,12 +52,12 @@ if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 targetplayer = instance_nearest(x, y, obj_player);
 
-if (state == UnknownEnum.Value_134)
+if (state == states.walk)
 {
     if (sprite_index == spr_pizzaboy)
     {
@@ -114,14 +114,14 @@ if (state == UnknownEnum.Value_134)
         }
     }
 }
-else if (state == UnknownEnum.Value_80)
+else if (state == states.punch)
 {
     image_speed = 0.35;
     hsp = 0;
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         sprite_index = walkspr;
     }
     
@@ -158,15 +158,15 @@ if (sprite_index == spr_pizzaboy)
 {
     if (x != targetplayer.x && targetplayer.x > (x - 200) && targetplayer.x < (x + 200) && targetplayer.y > (y - 150) && targetplayer.y < (y + 20))
     {
-        if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
+        if (state == states.walk || state == states.idle)
         {
             if (sprite_index == spr_pizzaboy)
-                create_particle(x, y, UnknownEnum.Value_6, 0);
+                create_particle(x, y, particles.balloonpop, 0);
             
             image_xscale = -sign(x - targetplayer.x);
             sprite_index = spr_ninja_uppercut;
             image_index = 0;
-            state = UnknownEnum.Value_128;
+            state = states.charge;
             roaming = true;
             vsp = -14;
             hsp = image_xscale * 4;
@@ -182,10 +182,10 @@ if (sprite_index == spr_pizzaboy)
         }
     }
 }
-else if (state == UnknownEnum.Value_134 && attack_buffer <= 0)
+else if (state == states.walk && attack_buffer <= 0)
 {
     attack_buffer = attack_max + irandom_range(-attack_random, attack_random);
-    state = UnknownEnum.Value_80;
+    state = states.punch;
     hsp = 0;
     hitboxcreate = false;
     
@@ -218,10 +218,10 @@ else
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

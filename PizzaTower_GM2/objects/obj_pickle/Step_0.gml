@@ -8,51 +8,51 @@ if (!instance_exists(cloneid))
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         image_alpha = 1;
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         image_alpha = 1;
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         image_alpha = 1;
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_141:
+    case states.chase:
         scr_enemy_chase();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -60,19 +60,19 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
-if (state != UnknownEnum.Value_141 && image_alpha >= 1)
+if (state != states.chase && image_alpha >= 1)
     scr_scareenemy();
 
 if (bombreset > 0)
@@ -84,7 +84,7 @@ if (sprite_index == scaredspr)
     attacking = false;
 }
 
-if (bombreset == 0 && state == UnknownEnum.Value_134)
+if (bombreset == 0 && state == states.walk)
 {
     attacking = false;
     targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
@@ -93,12 +93,12 @@ if (bombreset == 0 && state == UnknownEnum.Value_134)
     {
         attacking = true;
         pos = sign(x - targetplayer.x);
-        state = UnknownEnum.Value_141;
+        state = states.chase;
         fade = true;
     }
 }
 
-if (state == UnknownEnum.Value_141)
+if (state == states.chase)
 {
     if (fade)
     {
@@ -166,7 +166,7 @@ if (state == UnknownEnum.Value_141)
             if (image_xscale == 0)
                 image_xscale = old_xscale;
             
-            state = UnknownEnum.Value_129;
+            state = states.enemy_throw;
             
             if (elite && cloneid == -4)
             {
@@ -184,7 +184,7 @@ if (state == UnknownEnum.Value_141)
                     bombreset = 0;
                     image_index = 0;
                     image_xscale = other.image_xscale;
-                    state = UnknownEnum.Value_129;
+                    state = states.enemy_throw;
                     hsp = other.image_xscale * 2;
                     vsp = -6;
                 }
@@ -199,7 +199,7 @@ if (state == UnknownEnum.Value_141)
 
 invincible = attacking;
 
-if (state == UnknownEnum.Value_126)
+if (state == states.idle)
 {
     if (scaredbuffer > 0 && attacking)
     {

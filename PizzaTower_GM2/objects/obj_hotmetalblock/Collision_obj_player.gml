@@ -1,4 +1,4 @@
-if (other.state != UnknownEnum.Value_61 && other.state != UnknownEnum.Value_4 && other.state != UnknownEnum.Value_137 && other.state != UnknownEnum.Value_186)
+if (other.state != states.chainsaw && other.state != states.grabbed && other.state != states.hit && other.state != states.gotoplayer)
     instance_destroy();
 
 enum UnknownEnum

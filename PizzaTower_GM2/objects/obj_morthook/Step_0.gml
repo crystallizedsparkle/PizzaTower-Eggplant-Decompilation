@@ -4,7 +4,7 @@ _found = false;
 
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_11 || state == UnknownEnum.Value_12 || state == UnknownEnum.Value_13 || state == UnknownEnum.Value_14)
+    if (state == states.mort || state == states.mortjump || state == states.mortattack || state == states.morthook)
         _found = true;
 }
 

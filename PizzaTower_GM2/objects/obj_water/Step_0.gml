@@ -2,15 +2,15 @@ if (place_meeting(x, y - 1, obj_player))
 {
     with (obj_player)
     {
-        if (state != UnknownEnum.Value_186 && state != UnknownEnum.Value_210 && state != UnknownEnum.Value_209 && state != UnknownEnum.Value_121 && state != UnknownEnum.Value_147 && sprite_index != spr_mach3boost)
+        if (state != states.gotoplayer && state != states.trashjump && state != states.trash_jumpprep && state != states.mach3 && state != states.parry && sprite_index != spr_mach3boost)
         {
             if (place_meeting(x, y + 1, other))
             {
-                if (state != UnknownEnum.Value_211)
+                if (state != states.trashroll)
                 {
                     scr_losepoints();
                     image_index = 0;
-                    state = UnknownEnum.Value_9;
+                    state = states.fireass;
                     movespeed = hsp;
                     vsp = -14;
                     instance_create(x, y + 20, obj_piranneapplewater);

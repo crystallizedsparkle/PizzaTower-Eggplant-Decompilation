@@ -36,7 +36,7 @@ if (prevclosed != closed)
     {
         with (obj_factorygate)
         {
-            state = UnknownEnum.Value_8;
+            state = states.transitioncutscene;
             sprite_index = spr_arenagate_close;
             image_index = 0;
         }
@@ -45,7 +45,7 @@ if (prevclosed != closed)
     {
         with (obj_factorygate)
         {
-            state = UnknownEnum.Value_8;
+            state = states.transitioncutscene;
             sprite_index = spr_arenagate_open;
             image_index = 0;
         }

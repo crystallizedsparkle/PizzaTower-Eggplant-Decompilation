@@ -5,7 +5,7 @@ with (obj_player)
 {
     x = -100;
     y = -100;
-    state = UnknownEnum.Value_18;
+    state = states.titlescreen;
 }
 
 enum UnknownEnum

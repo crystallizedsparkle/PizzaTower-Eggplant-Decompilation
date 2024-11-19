@@ -1,10 +1,10 @@
-if (state == UnknownEnum.Value_150)
+if (state == states.tube)
 {
     if (floor(image_index) >= 11)
     {
         with (playerid)
         {
-            state = UnknownEnum.Value_150;
+            state = states.tube;
             tube_id = other.id;
             
             if (other.stored_spd == 0)
@@ -24,7 +24,7 @@ if (state == UnknownEnum.Value_150)
             with (other)
             {
                 playerid = -1;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }

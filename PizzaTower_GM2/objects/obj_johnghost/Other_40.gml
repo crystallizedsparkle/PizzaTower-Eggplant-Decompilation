@@ -1,4 +1,4 @@
-if (state == UnknownEnum.Value_80)
+if (state == states.punch)
     instance_destroy();
 
 enum UnknownEnum

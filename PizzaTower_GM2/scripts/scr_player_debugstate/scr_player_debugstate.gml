@@ -17,7 +17,7 @@ function scr_player_debugstate()
     if (key_jump || key_slap2)
     {
         image_speed = 0.35;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 

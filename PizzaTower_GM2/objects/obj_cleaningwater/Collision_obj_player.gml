@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state == UnknownEnum.Value_24 || skateboarding == true || state == UnknownEnum.Value_33 || state == UnknownEnum.Value_25 || state == UnknownEnum.Value_29 || state == UnknownEnum.Value_30)
+    if (state == states.cheesepep || skateboarding == true || state == states.boxxedpep || state == states.cheesepepstick || state == states.cheesepepstickside || state == states.cheesepepstickup)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         boxxed = false;
         skateboarding = false;
     }

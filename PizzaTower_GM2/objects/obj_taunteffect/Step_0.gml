@@ -1,4 +1,4 @@
-if (instance_exists(player) && player.state != UnknownEnum.Value_84 && player.sprite_index != player.spr_taunt)
+if (instance_exists(player) && player.state != states.backbreaker && player.sprite_index != player.spr_taunt)
     instance_destroy();
 
 x = player.x;

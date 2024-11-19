@@ -3,52 +3,52 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -56,7 +56,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 idlespr = 331;
@@ -69,22 +69,22 @@ scr_scareenemy();
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (bombreset > 0)
     bombreset--;
 
-if (state != UnknownEnum.Value_129 && bombreset == 0 && grounded)
+if (state != states.enemy_throw && bombreset == 0 && grounded)
 {
-    if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
+    if (state == states.walk || state == states.idle)
     {
         image_index = 0;
         sprite_index = spr_swedishmonkey_eat;
-        state = UnknownEnum.Value_129;
+        state = states.enemy_throw;
     }
 }
 

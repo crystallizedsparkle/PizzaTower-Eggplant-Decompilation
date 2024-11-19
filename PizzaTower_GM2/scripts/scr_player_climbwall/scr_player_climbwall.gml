@@ -30,7 +30,7 @@ function scr_player_climbwall()
             
             if (!key_attack && !skateboarding)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 movespeed = 0;
                 railmovespeed = 6;
                 raildir = -xscale;
@@ -45,12 +45,12 @@ function scr_player_climbwall()
                     sprite_index = spr_superjumpland;
                     scr_soundeffect(27);
                     image_index = 0;
-                    state = UnknownEnum.Value_123;
+                    state = states.Sjumpland;
                     machhitAnim = false;
                 }
                 else if (!key_jump)
                 {
-                    state = UnknownEnum.Value_106;
+                    state = states.bump;
                     hsp = -2.5 * xscale;
                     vsp = -3;
                     mach2 = 0;
@@ -70,12 +70,12 @@ function scr_player_climbwall()
                 
                 if ((wallspeed >= 6 && wallspeed < 12) || skateboarding)
                 {
-                    state = UnknownEnum.Value_104;
+                    state = states.mach2;
                     movespeed = wallspeed;
                 }
                 else if (wallspeed >= 12)
                 {
-                    state = UnknownEnum.Value_121;
+                    state = states.mach3;
                     sprite_index = spr_mach4;
                     movespeed = wallspeed;
                 }
@@ -88,7 +88,7 @@ function scr_player_climbwall()
             {
                 key_jump = false;
                 movespeed = 10;
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
                 image_index = 0;
                 sprite_index = spr_walljumpstart;
                 
@@ -124,7 +124,7 @@ function scr_player_climbwall()
             
             if (!key_attack)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 movespeed = 0;
             }
             
@@ -133,7 +133,7 @@ function scr_player_climbwall()
                 sprite_index = spr_superjumpland;
                 scr_soundeffect(27);
                 image_index = 0;
-                state = UnknownEnum.Value_123;
+                state = states.Sjumpland;
                 machhitAnim = false;
             }
             
@@ -143,11 +143,11 @@ function scr_player_climbwall()
                 vsp = 0;
                 
                 if (movespeed >= 6)
-                    state = UnknownEnum.Value_104;
+                    state = states.mach2;
                 
                 if (movespeed >= 12)
                 {
-                    state = UnknownEnum.Value_121;
+                    state = states.mach3;
                     sprite_index = spr_mach4;
                 }
             }
@@ -155,7 +155,7 @@ function scr_player_climbwall()
             if (key_jump)
             {
                 movespeed = 8;
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
                 image_index = 0;
                 sprite_index = spr_walljumpstart;
                 vsp = -11;
@@ -165,7 +165,7 @@ function scr_player_climbwall()
             
             if ((grounded && wallspeed <= 0) || wallspeed <= 0)
             {
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 sprite_index = spr_fall;
             }
             
@@ -192,7 +192,7 @@ function scr_player_climbwall()
             if (floor(image_index) == (image_number - 1) || !key_jump2)
             {
                 vsp = -15;
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 sprite_index = spr_playerN_jump;
                 image_index = 0;
             }
@@ -200,7 +200,7 @@ function scr_player_climbwall()
             if (key_jump)
             {
                 vsp = -15;
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 sprite_index = spr_playerN_jump;
                 image_index = 0;
             }

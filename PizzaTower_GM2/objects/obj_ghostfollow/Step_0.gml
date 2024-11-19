@@ -1,6 +1,6 @@
 var _g, _d;
 
-if (obj_player1.state != UnknownEnum.Value_16)
+if (obj_player1.state != states.ghost)
 {
     targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
     _g = distance_to_point(targetplayer.x, targetplayer.y);

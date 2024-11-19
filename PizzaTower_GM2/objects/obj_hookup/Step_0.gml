@@ -13,7 +13,7 @@ if (hooked)
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_93 && place_meeting(x, y, other))
+        if (state == states.ladder && place_meeting(x, y, other))
             y -= 5;
     }
     

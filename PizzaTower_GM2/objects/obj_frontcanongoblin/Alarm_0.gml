@@ -1,6 +1,6 @@
 if (!destroyed)
 {
-    state = UnknownEnum.Value_8;
+    state = states.transitioncutscene;
     captain_sprite = 2601;
     captain_index = 0;
 }

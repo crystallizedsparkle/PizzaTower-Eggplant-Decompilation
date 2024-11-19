@@ -8,7 +8,7 @@ function SUPER_player_hurt(argument0, argument1)
 {
     var lag;
     
-    if (!collisioned && argument1.state != UnknownEnum.Value_145)
+    if (!collisioned && argument1.state != states.arena_round)
     {
         if (instance_exists(obj_bosscontroller))
             obj_bosscontroller.player_hp -= argument0;
@@ -20,7 +20,7 @@ function SUPER_player_hurt(argument0, argument1)
             scr_soundeffect(26);
             lag = 8;
             
-            if (state == UnknownEnum.Value_61 || state == UnknownEnum.Value_137)
+            if (state == states.chainsaw || state == states.hit)
             {
                 x = hitX;
                 y = hitY;
@@ -35,7 +35,7 @@ function SUPER_player_hurt(argument0, argument1)
             hithsp = 15;
             hitstunned = 100;
             hitvsp = -8;
-            state = UnknownEnum.Value_137;
+            state = states.hit;
             instance_create(other.x, other.y, obj_parryeffect);
             instance_create(x, y, obj_slapstar);
             instance_create(x, y, obj_slapstar);

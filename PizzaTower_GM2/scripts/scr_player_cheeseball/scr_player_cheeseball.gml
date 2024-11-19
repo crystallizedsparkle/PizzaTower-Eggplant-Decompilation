@@ -60,7 +60,7 @@ function scr_player_cheeseball()
         image_index = 0;
         movespeed = 0;
         cheesepeptimer = 2;
-        state = UnknownEnum.Value_26;
+        state = states.cheesepepjump;
         sprite_index = spr_cheesepepfall;
         
         repeat (8)

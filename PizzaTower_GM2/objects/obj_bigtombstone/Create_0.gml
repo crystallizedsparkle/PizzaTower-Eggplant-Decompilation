@@ -1,5 +1,5 @@
 event_inherited();
-substate = UnknownEnum.Value_0;
+substate = states.normal;
 
 enum UnknownEnum
 {

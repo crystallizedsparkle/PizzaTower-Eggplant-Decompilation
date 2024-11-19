@@ -17,7 +17,7 @@ function scr_enemy_secret()
         if (grounded && vsp > 0)
         {
             invincible = savedsecretinvincible;
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             sprite_index = walkspr;
         }
     }

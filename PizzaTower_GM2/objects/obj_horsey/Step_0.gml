@@ -3,12 +3,12 @@ y += vsp;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         image_speed = 0.35;
         sprite_index = spr_horsey;
         break;
     
-    case UnknownEnum.Value_89:
+    case states.gameover:
         image_speed = 0.35;
         sprite_index = spr_horsey_lose;
         
@@ -20,7 +20,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_6:
+    case states.finishingblow:
         image_speed = 0.1;
         sprite_index = spr_horsey_win;
         

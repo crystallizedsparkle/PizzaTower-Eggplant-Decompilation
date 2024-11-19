@@ -1,13 +1,13 @@
-if (state == UnknownEnum.Value_138 && hp == 0 && stunned > 40 && slapped == false)
+if (state == states.stun && hp == 0 && stunned > 40 && slapped == false)
 {
     slapped = true;
     instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
-    state = UnknownEnum.Value_4;
-    obj_player.state = UnknownEnum.Value_79;
+    state = states.grabbed;
+    obj_player.state = states.grab;
     instance_destroy(other);
 }
 
-if (hp == 0 && !(state == UnknownEnum.Value_138 && stunned > 40) && state != UnknownEnum.Value_4 && slapped == false)
+if (hp == 0 && !(state == states.stun && stunned > 40) && state != states.grabbed && slapped == false)
 {
     instance_create(x, y, obj_spikehurteffect);
     other.image_xscale = image_xscale;
@@ -21,9 +21,9 @@ if (hp == 0 && !(state == UnknownEnum.Value_138 && stunned > 40) && state != Unk
     
     vsp = -5;
     hsp = -image_xscale * 3;
-    state = UnknownEnum.Value_138;
+    state = states.stun;
 }
-else if (state != UnknownEnum.Value_4 && slapped == false)
+else if (state != states.grabbed && slapped == false)
 {
     if (hp > 0)
         hp -= 1;
@@ -35,7 +35,7 @@ else if (state != UnknownEnum.Value_4 && slapped == false)
         other.image_xscale = image_xscale;
     
     slapped = true;
-    state = UnknownEnum.Value_138;
+    state = states.stun;
     stunned = 40;
     
     if (other.x != x)

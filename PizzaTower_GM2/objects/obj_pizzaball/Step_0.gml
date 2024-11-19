@@ -1,78 +1,78 @@
 if (room == rm_editor)
     exit;
 
-if (state == UnknownEnum.Value_134 && grounded && vsp > 0 && obj_player.state == UnknownEnum.Value_111)
+if (state == states.walk && grounded && vsp > 0 && obj_player.state == states.freefallland)
     scr_pizzaball_go_to_thrown(0, -10);
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_pizzaball_hit();
         break;
     
-    case UnknownEnum.Value_148:
+    case states.golf:
         scr_pizzaball_golf();
         break;
     
-    case UnknownEnum.Value_156:
+    case states.thrown:
         scr_pizzaball_thrown();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_pizzaball_go_to_thrown(0, vsp * 0.5);
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_pizzaball_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
 }
 
-if ((state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126) && sit)
+if ((state == states.walk || state == states.idle) && sit)
 {
     hsp = 0;
     sprite_index = spr_pizzaball_idle1;
 }
 
-if (state != UnknownEnum.Value_134)
+if (state != states.walk)
     sit = false;
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -80,23 +80,23 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state == UnknownEnum.Value_156 && !instance_exists(pointerID))
+if (state == states.thrown && !instance_exists(pointerID))
 {
     pointerID = instance_create(x, y, obj_objecticontracker);
     pointerID.sprite_index = spr_icon_pizzaball;
     pointerID.objectID = id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)
@@ -110,7 +110,7 @@ if (boundbox == false)
     }
 }
 
-if (state == UnknownEnum.Value_156)
+if (state == states.thrown)
 {
     with (instance_place(x + xscale, y, obj_destructibles))
         instance_destroy();

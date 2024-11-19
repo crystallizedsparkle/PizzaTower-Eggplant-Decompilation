@@ -1,11 +1,11 @@
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         with (obj_player)
         {
-            if (other.state != UnknownEnum.Value_134 && state == UnknownEnum.Value_0 && vsp > 0 && key_up && place_meeting(x, y + 1, other))
+            if (other.state != states.walk && state == states.normal && vsp > 0 && key_up && place_meeting(x, y + 1, other))
             {
-                state = UnknownEnum.Value_146;
+                state = states.actor;
                 hsp = 0;
                 vsp = 0;
                 sprite_index = spr_idle;
@@ -14,7 +14,7 @@ switch (state)
                 {
                     playerid = other.id;
                     playerxoffset = other.x - x;
-                    state = UnknownEnum.Value_134;
+                    state = states.walk;
                     
                     if (place_meeting(x + (dir * 32), y, obj_solid))
                         dir *= -1;
@@ -24,7 +24,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         x += (dir * 5);
         playerid.x = x + playerxoffset;
         playerid.hsp = 0;
@@ -33,9 +33,9 @@ switch (state)
         if (place_meeting(x + dir, y, obj_solid))
         {
             with (playerid)
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (obj_camera)
             {

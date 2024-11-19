@@ -6,10 +6,10 @@ with (other)
         {
             vsp = -20;
             
-            if (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_92 || hsp == 0)
+            if (state == states.normal || state == states.jump || hsp == 0)
             {
                 sprite_index = spr_playerV_superjump;
-                state = UnknownEnum.Value_92;
+                state = states.jump;
             }
             
             image_index = 0;

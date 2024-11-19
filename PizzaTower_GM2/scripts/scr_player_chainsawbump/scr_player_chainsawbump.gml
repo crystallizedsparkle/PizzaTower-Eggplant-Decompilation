@@ -23,8 +23,8 @@ function scr_player_chainsawbump()
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale;
         
-        particle_set_scale(UnknownEnum.Value_2, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_2, 0);
+        particle_set_scale(particles.crazyrunothereffect, xscale, 1);
+        create_particle(x, y, particles.crazyrunothereffect, 0);
         image_index = 0;
         sprite_index = spr_player_chainsawdash;
         
@@ -56,7 +56,7 @@ function scr_player_chainsawbump()
     {
         jumpstop = false;
         vsp = -11;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         sprite_index = spr_mach2jump;
     }
     
@@ -66,13 +66,13 @@ function scr_player_chainsawbump()
     if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_chainsawhit || sprite_index == spr_player_chainsawdash))
     {
         if (key_attack)
-            state = UnknownEnum.Value_104;
+            state = states.mach2;
         else
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_chainsawhitwall)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (sprite_index == spr_player_chainsawdash)
         image_speed = 0.4 + (movespeed * 0.01);

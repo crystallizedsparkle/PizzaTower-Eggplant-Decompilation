@@ -3,9 +3,9 @@ with (other)
     vsp = Approach(vsp, -5, 5);
     jumpstop = true;
     
-    if (state == UnknownEnum.Value_105)
+    if (state == states.machslide)
     {
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         
         if (sprite_index == spr_mach3boost || sprite_index == spr_machslideboost)
             xscale *= -1;

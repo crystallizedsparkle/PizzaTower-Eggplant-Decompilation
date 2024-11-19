@@ -10,7 +10,7 @@ if (!active)
         {
             with (instance_create(x, y, obj_piraneapple))
             {
-                state = UnknownEnum.Value_8;
+                state = states.transitioncutscene;
                 sign_id = _sign_id;
             }
         }

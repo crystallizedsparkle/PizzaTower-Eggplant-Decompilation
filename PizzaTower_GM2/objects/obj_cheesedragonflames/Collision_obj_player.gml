@@ -12,7 +12,7 @@ with (other)
     
     if (b == 1)
     {
-        state = UnknownEnum.Value_9;
+        state = states.fireass;
         image_index = 0;
         vsp = -25;
         sprite_index = spr_fireass;

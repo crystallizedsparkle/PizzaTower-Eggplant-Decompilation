@@ -1,4 +1,4 @@
-if (state == UnknownEnum.Value_17)
+if (state == states.ghostpossess)
 {
     with (playerid)
     {
@@ -8,11 +8,11 @@ if (state == UnknownEnum.Value_17)
         
         if (key_up2 && other.object_index != obj_randomobject)
         {
-            state = UnknownEnum.Value_16;
+            state = states.ghost;
             vsp = -10;
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
             visible = true;
-            other.state = UnknownEnum.Value_0;
+            other.state = states.normal;
         }
     }
 }

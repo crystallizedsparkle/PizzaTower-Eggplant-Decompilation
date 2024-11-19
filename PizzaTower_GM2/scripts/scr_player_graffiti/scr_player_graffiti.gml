@@ -6,10 +6,10 @@ function scr_player_graffiti()
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         if (tauntstoredisgustavo)
-            state = UnknownEnum.Value_191;
+            state = states.ratmount;
         
         if (global.graffiticount >= global.graffitimax)
             instance_create(x, y, obj_key);

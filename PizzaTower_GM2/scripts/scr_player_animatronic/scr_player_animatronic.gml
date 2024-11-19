@@ -32,7 +32,7 @@ function scr_player_animatronic()
         repeat (3)
             create_debris(x, y, 1475);
         
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
     
     if (animatronic_collect_buffer > 0)

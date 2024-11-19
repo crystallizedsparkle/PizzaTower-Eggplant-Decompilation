@@ -15,7 +15,7 @@ if (use_dark)
     }
 }
 
-if (obj_player1.finisher || obj_player2.finisher || (obj_player.state == UnknownEnum.Value_252 && obj_player.superattackstate == UnknownEnum.Value_8))
+if (obj_player1.finisher || obj_player2.finisher || (obj_player.state == UnknownEnum.Value_252 && obj_player.superattackstate == states.transitioncutscene))
     finisher_alpha = Approach(finisher_alpha, 0.3, 0.1);
 else if (finisher_alpha > 0)
     finisher_alpha = Approach(finisher_alpha, 0, 0.02);
@@ -33,7 +33,7 @@ with (obj_baddie)
 {
     _stun = 0;
     
-    if (state == UnknownEnum.Value_138 && thrown == false)
+    if (state == states.stun && thrown == false)
         _stun = 25;
     
     if (visible && object_index != obj_pizzaball && bbox_in_camera(view_camera[0], 32))
@@ -74,7 +74,7 @@ with (obj_baddie)
         
         if (object_index == obj_hamkuff)
         {
-            if (state == UnknownEnum.Value_206 && instance_exists(playerid))
+            if (state == states.blockstance && instance_exists(playerid))
             {
                 x1 = x + 3;
                 y1 = y + 30;
@@ -146,7 +146,7 @@ with (obj_baddie)
 {
     _stun = 0;
     
-    if (state == UnknownEnum.Value_138)
+    if (state == states.stun)
         _stun = 25;
     
     if (visible && flash && bbox_in_camera(view_camera[0], 32))

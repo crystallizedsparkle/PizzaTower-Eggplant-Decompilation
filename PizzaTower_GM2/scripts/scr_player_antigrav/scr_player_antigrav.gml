@@ -11,7 +11,7 @@ function scr_player_antigrav()
     if (key_jump)
     {
         movespeed = abs(hsp);
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_machfreefall;
         scr_soundeffect(148);
     }

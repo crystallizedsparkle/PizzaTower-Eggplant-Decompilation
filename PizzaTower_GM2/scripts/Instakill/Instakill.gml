@@ -9,7 +9,7 @@ function Instakill()
         if (object_index == obj_player2)
             other.baddieID.grabbedby = 2;
         
-        if (state == UnknownEnum.Value_121 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
+        if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
         {
             if (fightball == false)
                 sprite_index = spr_mach3hit;
@@ -17,7 +17,7 @@ function Instakill()
             image_index = 0;
         }
         
-        if (state == UnknownEnum.Value_41 && sprite_index != spr_player_chainsawhit)
+        if (state == states.chainsawbump && sprite_index != spr_player_chainsawhit)
         {
             image_index = 0;
             sprite_index = spr_player_chainsawhit;
@@ -58,16 +58,16 @@ function Instakill()
         
         global.hit += 1;
         
-        if (!grounded && state != UnknownEnum.Value_34 && state != UnknownEnum.Value_108 && (key_jump2 || input_buffer_jump == 0))
+        if (!grounded && state != states.boxxedpepspin && state != states.freefall && (key_jump2 || input_buffer_jump == 0))
         {
-            if (state == UnknownEnum.Value_121 && fightball == false)
+            if (state == states.mach3 && fightball == false)
                 sprite_index = spr_player_mach2jump;
             
             suplexmove = false;
             vsp = -11;
         }
         
-        if (state == UnknownEnum.Value_34)
+        if (state == states.boxxedpepspin)
         {
             if (key_jump2)
                 vsp = -10;
@@ -75,14 +75,14 @@ function Instakill()
             boxxedpepjump = 10;
         }
         
-        if (character == "M" && state == UnknownEnum.Value_108)
+        if (character == "M" && state == states.freefall)
         {
             vsp = -11;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             sprite_index = spr_jump;
         }
         
-        if (state != UnknownEnum.Value_61)
+        if (state != states.chainsaw)
         {
             tauntstoredmovespeed = movespeed;
             tauntstoredsprite = sprite_index;
@@ -90,7 +90,7 @@ function Instakill()
             tauntstoredvsp = vsp;
         }
         
-        if (state == UnknownEnum.Value_42 && !key_slap)
+        if (state == states.handstandjump && !key_slap)
         {
             image_index = random_range(0, image_number - 1);
             
@@ -100,7 +100,7 @@ function Instakill()
                 sprite_index = spr_player_ungroundedattack;
         }
         
-        if (state == UnknownEnum.Value_41 && !global.kungfu)
+        if (state == states.chainsawbump && !global.kungfu)
         {
             sprite_index = spr_player_chainsawhit;
             image_index = 0;
@@ -116,7 +116,7 @@ function Instakill()
         hitY = y;
         instance_create(other.baddieID.x, other.baddieID.y, obj_parryeffect);
         other.baddieID.alarm[3] = 3;
-        other.baddieID.state = UnknownEnum.Value_137;
+        other.baddieID.state = states.hit;
         other.baddieID.image_xscale = -xscale;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -131,7 +131,7 @@ function Instakill()
             shake_mag_acc = 3 / room_speed;
         }
         
-        if (state != UnknownEnum.Value_104 && state != UnknownEnum.Value_5)
+        if (state != states.mach2 && state != states.tumble)
         {
             with (instance_create(other.baddieID.x, other.baddieID.y, obj_parryeffect))
                 sprite_index = spr_kungfueffect;
@@ -143,11 +143,11 @@ function Instakill()
             other.baddieID.hithsp = xscale * 10;
         
         other.baddieID.hitvsp = -5;
-        state = UnknownEnum.Value_61;
+        state = states.chainsaw;
     }
     else
     {
-        other.baddieID.state = UnknownEnum.Value_138;
+        other.baddieID.state = states.stun;
         other.baddieID.vsp = -4;
         other.baddieID.stunned = 40;
         scr_hurtplayer(id);

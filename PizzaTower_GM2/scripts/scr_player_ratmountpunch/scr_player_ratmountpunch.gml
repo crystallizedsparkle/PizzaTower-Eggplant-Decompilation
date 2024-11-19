@@ -20,7 +20,7 @@ function scr_player_ratmountpunch()
     
     if (ratmountpunchtimer < 0)
     {
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
         
         if (hsp != 0)
         {

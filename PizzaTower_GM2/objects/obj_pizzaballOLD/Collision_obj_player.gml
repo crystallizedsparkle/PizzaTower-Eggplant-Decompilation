@@ -1,6 +1,6 @@
 var _player, _pizzaball;
 
-if ((other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_43) && state != UnknownEnum.Value_148)
+if ((other.state == states.handstandjump || other.state == states.lungeattack) && state != states.golf)
 {
     _player = other.id;
     _pizzaball = id;
@@ -9,7 +9,7 @@ if ((other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_43)
     {
         if (scr_transformationcheck())
         {
-            if (state != UnknownEnum.Value_148)
+            if (state != states.golf)
             {
                 golfid = _pizzaball;
                 image_speed = 0.35;
@@ -19,8 +19,8 @@ if ((other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_43)
                 hsp = 0;
                 movespeed = 0;
                 slopespeed = 0;
-                state = UnknownEnum.Value_148;
-                _pizzaball.state = UnknownEnum.Value_148;
+                state = states.golf;
+                _pizzaball.state = states.golf;
                 _pizzaball.player = id;
                 
                 if (xscale > 0)

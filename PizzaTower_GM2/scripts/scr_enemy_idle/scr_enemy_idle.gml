@@ -6,17 +6,17 @@ function scr_enemy_idle()
     
     if (vsp > 1 && (grounded || (grounded && !place_meeting(x, y, obj_platform))))
     {
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         image_index = 0;
     }
     
     if ((vsp >= 0 || object_index == obj_miniufo || object_index == obj_kentukybomber) && sprite_index == scaredspr && scaredbuffer <= 0)
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         sprite_index = walkspr;
         
         if (object_index == obj_treasureguy)
-            state = UnknownEnum.Value_141;
+            state = states.chase;
         
         if (object_index == obj_pickle && attacking)
         {
@@ -31,38 +31,38 @@ function scr_enemy_idle()
     if (sprite_index == spr_tank_spawnenemy && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (sprite_index == spr_forknight_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (sprite_index == spr_ghostknight_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (sprite_index == spr_pizzaslug_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
         image_xscale *= -1;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (sprite_index == spr_indiancheese_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (sprite_index == spr_tank_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
     
     if (place_meeting(x, y + 1, obj_railparent))

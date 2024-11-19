@@ -4,13 +4,13 @@ function noise_start_round()
     {
         with (instance_create(256, 416, obj_baddiespawner))
         {
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
             content = 468;
         }
         
         with (instance_create(672, 416, obj_baddiespawner))
         {
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
             content = 468;
             image_xscale = -1;
         }
@@ -35,10 +35,10 @@ function mrstick_start_round()
                 if (object_index == obj_vigilanteboss)
                     honor = false;
                 
-                create_particle(x, y, UnknownEnum.Value_9, 0);
+                create_particle(x, y, particles.genericpoofeffect, 0);
                 important = false;
                 phase = b[1];
-                state = UnknownEnum.Value_138;
+                state = states.stun;
                 stunned = 50;
             }
         }
@@ -51,7 +51,7 @@ function mrstick_end_round()
     {
         if (object_index != obj_mrstickboss)
         {
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
             instance_destroy();
         }
     }

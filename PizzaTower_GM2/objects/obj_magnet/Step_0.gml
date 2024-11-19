@@ -2,7 +2,7 @@ image_speed = 0.35;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         sprite_index = spr_sirnose_idle;
         
         if (cooldown > 0)
@@ -13,7 +13,7 @@ switch (state)
         {
             with (obj_pizzaball)
             {
-                if (state != UnknownEnum.Value_148 && distance_to_pos(x, y, other.x, other.y, 200, 150))
+                if (state != states.golf && distance_to_pos(x, y, other.x, other.y, 200, 150))
                 {
                     state = UnknownEnum.Value_264;
                     other.state = UnknownEnum.Value_264;
@@ -35,7 +35,7 @@ switch (state)
             x = Approach(x, other.x, 8);
             y = Approach(y, other.y, 8);
             
-            if (state != UnknownEnum.Value_148)
+            if (state != states.golf)
             {
                 other.hsp = Approach(hsp, 0, 1);
                 other.vsp = Approach(vsp, 0, 1);
@@ -48,9 +48,9 @@ switch (state)
             hsp = other.hsp;
             vsp = other.vsp;
             
-            if (state != UnknownEnum.Value_264 && state != UnknownEnum.Value_148)
+            if (state != UnknownEnum.Value_264 && state != states.golf)
             {
-                other.state = UnknownEnum.Value_0;
+                other.state = states.normal;
                 other.cooldown = 200;
             }
             

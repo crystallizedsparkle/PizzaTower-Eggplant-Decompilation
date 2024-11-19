@@ -65,7 +65,7 @@ function scr_player_handstandjump()
         jumpstop = false;
         image_index = 0;
         vsp = -11;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         sprite_index = spr_player_longjump;
     }
     
@@ -79,7 +79,7 @@ function scr_player_handstandjump()
     {
         if (global.attackstyle != 3)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             if (move != xscale)
                 movespeed = 2;
@@ -92,10 +92,10 @@ function scr_player_handstandjump()
     }
     
     if (grounded && sprite_index == airattackdash && key_attack && character != "N" && global.attackstyle != 2)
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == attackdash)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == airattackdashstart)
         sprite_index = airattackdash;
@@ -103,7 +103,7 @@ function scr_player_handstandjump()
     if (floor(image_index) == (image_number - 1) && key_attack && sprite_index == attackdash)
     {
         image_speed = 0.35;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         grav = 0.5;
     }
     
@@ -118,7 +118,7 @@ function scr_player_handstandjump()
         sprite_index = spr_player_Sjumpcancelland;
         image_index = 0;
         machhitAnim = false;
-        state = UnknownEnum.Value_5;
+        state = states.tumble;
     }
     
     mask_index = spr_player_mask;
@@ -132,7 +132,7 @@ function scr_player_handstandjump()
             if (vsp > 0)
                 wallspeed -= vsp;
             
-            state = UnknownEnum.Value_37;
+            state = states.climbwall;
         }
     }
     
@@ -143,7 +143,7 @@ function scr_player_handstandjump()
         if (_bump)
         {
             jumpstop = true;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             vsp = -4;
             sprite_index = spr_suplexbump;
             instance_create(x + (xscale * 10), y + 10, obj_bumpeffect);
@@ -158,7 +158,7 @@ function scr_player_handstandjump()
     
     image_speed = 0.35;
     
-    if (state != UnknownEnum.Value_106 && move != xscale && move != 0)
+    if (state != states.bump && move != xscale && move != 0)
     {
         image_index = 0;
         
@@ -167,11 +167,11 @@ function scr_player_handstandjump()
             sprite_index = spr_suplexcancel;
             jumpAnim = true;
             grav = 0.5;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             movespeed = 2;
             grav = 0.5;
         }

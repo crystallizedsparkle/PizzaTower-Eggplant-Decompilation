@@ -1,4 +1,4 @@
-create_particle(x, y + 20, UnknownEnum.Value_1, 0);
+create_particle(x, y + 20, particles.cloudeffect, 0);
 alarm[0] = 2;
 
 enum UnknownEnum

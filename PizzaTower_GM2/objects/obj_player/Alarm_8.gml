@@ -1,8 +1,8 @@
 var ty;
 
-if (state == UnknownEnum.Value_107)
+if (state == states.hurt)
 {
-    state = UnknownEnum.Value_0;
+    state = states.normal;
     movespeed = 0;
     
     if (scr_solid(x, y))
@@ -13,9 +13,9 @@ if (state == UnknownEnum.Value_107)
             y += ty;
     }
 }
-else if (state == UnknownEnum.Value_196)
+else if (state == states.ratmounthurt)
 {
-    state = UnknownEnum.Value_191;
+    state = states.ratmount;
     movespeed = 0;
 }
 

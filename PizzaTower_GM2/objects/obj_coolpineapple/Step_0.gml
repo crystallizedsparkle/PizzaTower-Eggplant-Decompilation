@@ -5,53 +5,53 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         grav = 0.5;
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         grav = 0.5;
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         grav = 0.5;
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         grav = 0.5;
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         grav = 0.5;
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         grav = 0.5;
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         grav = 0.5;
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         grav = 0.5;
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         grav = 0.5;
         scr_enemy_grabbed();
         break;
 }
 
-if (!hitboxcreate && state == UnknownEnum.Value_134)
+if (!hitboxcreate && state == states.walk)
 {
     hitboxcreate = true;
     
@@ -65,7 +65,7 @@ if (!hitboxcreate && state == UnknownEnum.Value_134)
 if (inv_timer <= 0)
     scr_scareenemy();
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -73,13 +73,13 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (sprite_index == scaredspr)
     inv_timer = 0;
 
-if (state == UnknownEnum.Value_134)
+if (state == states.walk)
 {
     grav = 0.5;
     
@@ -89,7 +89,7 @@ if (state == UnknownEnum.Value_134)
         
         with (obj_player)
         {
-            if (state == UnknownEnum.Value_84)
+            if (state == states.backbreaker)
                 _taunt = true;
         }
         
@@ -103,7 +103,7 @@ if (state == UnknownEnum.Value_134)
             taunt_storedstate = state;
             taunt_storedmovespeed = movespeed;
             taunt_storedhsp = hsp;
-            state = UnknownEnum.Value_84;
+            state = states.backbreaker;
             hsp = 0;
             vsp = 0;
             grav = 0;
@@ -111,12 +111,12 @@ if (state == UnknownEnum.Value_134)
     }
 }
 
-if (state != UnknownEnum.Value_84 && instance_exists(taunteffect_inst))
+if (state != states.backbreaker && instance_exists(taunteffect_inst))
     instance_destroy(taunteffect_inst);
 
 switch (state)
 {
-    case UnknownEnum.Value_84:
+    case states.backbreaker:
         image_speed = 0;
         image_index = index;
         hsp = 0;
@@ -130,14 +130,14 @@ switch (state)
         {
             sprite_index = walkspr;
             grav = taunt_storedgrav;
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             hsp = taunt_storedhsp;
             movespeed = taunt_storedmovespeed;
         }
         
         break;
     
-    case UnknownEnum.Value_147:
+    case states.parry:
         image_speed = 0.35;
         
         if (trail_count > 0)
@@ -177,7 +177,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_80:
+    case states.punch:
         if (sprite_index == spr_coolpinea_ragestart)
         {
             hsp = 0;
@@ -224,7 +224,7 @@ switch (state)
             else
             {
                 sprite_index = walkspr;
-                state = UnknownEnum.Value_134;
+                state = states.walk;
                 breakdanceinst = -4;
             }
         }
@@ -235,10 +235,10 @@ switch (state)
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

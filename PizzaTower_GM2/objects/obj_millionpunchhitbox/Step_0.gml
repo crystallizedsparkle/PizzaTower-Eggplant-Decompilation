@@ -18,7 +18,7 @@ else if (col_buffer == 0)
     collisioned = false;
 }
 
-if (baddieID.state != UnknownEnum.Value_166 && baddieID.state != UnknownEnum.Value_61)
+if (baddieID.state != states.millionpunch && baddieID.state != states.chainsaw)
     instance_destroy();
 
 enum UnknownEnum

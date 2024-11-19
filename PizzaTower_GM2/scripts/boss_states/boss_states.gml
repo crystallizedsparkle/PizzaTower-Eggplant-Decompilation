@@ -35,7 +35,7 @@ function state_boss_walk(argument0)
                 boss_decide_taunt(130);
         }
         
-        if (state != UnknownEnum.Value_84)
+        if (state != states.backbreaker)
         {
             if (attack_cooldown <= 0)
             {
@@ -46,7 +46,7 @@ function state_boss_walk(argument0)
             }
             else
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }
@@ -62,7 +62,7 @@ function state_boss_bump()
         hsp = 0;
     
     if (floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
 }
 
 function state_boss_arenaround()
@@ -109,7 +109,7 @@ function state_boss_taunt()
     hsp = 0;
     vsp = 0;
     
-    if (taunt_buffer > 0 && state == UnknownEnum.Value_84)
+    if (taunt_buffer > 0 && state == states.backbreaker)
     {
         taunt_buffer--;
         

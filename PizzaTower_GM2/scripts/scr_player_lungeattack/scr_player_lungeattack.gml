@@ -30,7 +30,7 @@ function scr_player_lungeattack()
         suplexmove = true;
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0);
         sfx_gain(suplexdashsnd);
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         movespeed = 5;
         image_index = 0;
         flash = true;
@@ -41,7 +41,7 @@ function scr_player_lungeattack()
     
     if (floor(image_index) > (image_number - 2) && !hit_connected)
     {
-        if (state != UnknownEnum.Value_80 && input_attack_buffer > 0)
+        if (state != states.punch && input_attack_buffer > 0)
         {
             ds_list_clear(hitlist);
             hit_connected = false;
@@ -54,7 +54,7 @@ function scr_player_lungeattack()
                     finisher_buffer += 15;
                 
                 input_attack_buffer = 0;
-                state = UnknownEnum.Value_43;
+                state = states.lungeattack;
                 randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
                 image_index = 0;
             }
@@ -63,7 +63,7 @@ function scr_player_lungeattack()
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         ds_list_clear(hitlist);
         hit_connected = false;
     }
@@ -76,7 +76,7 @@ function scr_player_lungeattack()
                 DoFinisher();
         }
         
-        if (state != UnknownEnum.Value_80 && input_attack_buffer > 0)
+        if (state != states.punch && input_attack_buffer > 0)
         {
             ds_list_clear(hitlist);
             hit_connected = false;
@@ -89,7 +89,7 @@ function scr_player_lungeattack()
                     finisher_buffer += 15;
                 
                 input_attack_buffer = 0;
-                state = UnknownEnum.Value_43;
+                state = states.lungeattack;
                 randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
                 image_index = 0;
             }
@@ -129,18 +129,18 @@ function DoFinisher()
     
     if (key_up)
     {
-        state = UnknownEnum.Value_80;
+        state = states.punch;
         movespeed = 6;
         image_index = 0;
         sprite_index = spr_player_breakdanceuppercut;
         vsp = -16;
         hsp = xscale * movespeed;
-        particle_set_scale(UnknownEnum.Value_4, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_4, 0);
+        particle_set_scale(particles.highjumpcloud2, xscale, 1);
+        create_particle(x, y, particles.highjumpcloud2, 0);
     }
     else if ((key_left + key_right) == xscale)
     {
-        state = UnknownEnum.Value_80;
+        state = states.punch;
         sprite_index = spr_player_lungehit;
         image_index = 0;
         movespeed = 14;
@@ -148,22 +148,22 @@ function DoFinisher()
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale;
         
-        particle_set_scale(UnknownEnum.Value_2, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_2, 0);
+        particle_set_scale(particles.crazyrunothereffect, xscale, 1);
+        create_particle(x, y, particles.crazyrunothereffect, 0);
     }
     else if (key_down)
     {
         sprite_index = spr_player_breakdance;
         image_index = 0;
         machhitAnim = false;
-        state = UnknownEnum.Value_5;
+        state = states.tumble;
         movespeed = 4;
-        state = UnknownEnum.Value_5;
+        state = states.tumble;
         vsp = 10;
     }
     else
     {
-        state = UnknownEnum.Value_80;
+        state = states.punch;
         sprite_index = spr_player_lungehit;
         image_index = 0;
         movespeed = 14;
@@ -171,8 +171,8 @@ function DoFinisher()
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale;
         
-        particle_set_scale(UnknownEnum.Value_2, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_2, 0);
+        particle_set_scale(particles.crazyrunothereffect, xscale, 1);
+        create_particle(x, y, particles.crazyrunothereffect, 0);
     }
 }
 

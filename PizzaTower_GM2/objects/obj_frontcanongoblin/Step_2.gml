@@ -1,4 +1,4 @@
-if (state != UnknownEnum.Value_8)
+if (state != states.transitioncutscene)
     captain_index += 0.35;
 else
     captain_index += 0.6;

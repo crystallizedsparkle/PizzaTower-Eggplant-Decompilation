@@ -5,14 +5,14 @@ function scr_player_shotgundash()
     
     if (floor(image_index) == (image_number - 1) || !key_attack)
     {
-        state = UnknownEnum.Value_66;
+        state = states.shotgun;
         sprite_index = spr_shotgunidle;
         landAnim = false;
         movespeed = 6;
         
         if (!grounded)
         {
-            state = UnknownEnum.Value_57;
+            state = states.shotgunjump;
             sprite_index = spr_shotgunfall;
         }
     }

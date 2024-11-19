@@ -1,5 +1,5 @@
 image_xscale = other.playerid.xscale;
-state = UnknownEnum.Value_134;
+state = states.walk;
 movespeed = 6;
 
 enum UnknownEnum

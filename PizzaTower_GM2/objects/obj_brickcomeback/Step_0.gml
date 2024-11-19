@@ -6,7 +6,7 @@ if (obj_player.isgustavo == false)
 
 if (!trapped)
 {
-    if (obj_player1.sprite_index == spr_lonegustavo_hurt || obj_player1.state == UnknownEnum.Value_259 || obj_player1.state == UnknownEnum.Value_197 || obj_player1.state == UnknownEnum.Value_202 || obj_player1.state == UnknownEnum.Value_261 || obj_player1.state == UnknownEnum.Value_260)
+    if (obj_player1.sprite_index == spr_lonegustavo_hurt || obj_player1.state == UnknownEnum.Value_259 || obj_player1.state == states.ratmountgroundpound || obj_player1.state == states.ratmountgrind || obj_player1.state == UnknownEnum.Value_261 || obj_player1.state == UnknownEnum.Value_260)
     {
         wait = true;
         sprite_index = spr_lonebrick_wait;

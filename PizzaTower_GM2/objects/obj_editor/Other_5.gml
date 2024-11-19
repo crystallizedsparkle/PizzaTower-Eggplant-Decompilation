@@ -1,6 +1,6 @@
 with (obj_player1)
 {
-    state = UnknownEnum.Value_0;
+    state = states.normal;
     visible = true;
 }
 

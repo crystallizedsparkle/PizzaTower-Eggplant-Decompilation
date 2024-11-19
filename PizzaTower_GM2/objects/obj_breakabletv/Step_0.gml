@@ -2,19 +2,19 @@ if (place_meeting(x, y, obj_player))
 {
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104)
+        if (state == states.mach1 || state == states.mach2)
         {
-            state = UnknownEnum.Value_6;
+            state = states.finishingblow;
             sprite_index = spr_player_finishingblow1;
             image_index = 0;
             hsp = 0;
             movespeed = 0;
         }
         
-        if (state == UnknownEnum.Value_121)
+        if (state == states.mach3)
         {
             hsp = -xscale * 3;
-            state = UnknownEnum.Value_106;
+            state = states.bump;
             mach2 = 0;
             image_index = 0;
             vsp = -5;
@@ -29,7 +29,7 @@ if (grabbed == true)
     grav = 0;
     obj_player.baddiegrabbedID = id;
     
-    if (obj_player.state == UnknownEnum.Value_55 || obj_player.state == UnknownEnum.Value_79 || obj_player.state == UnknownEnum.Value_74 || obj_player.state == UnknownEnum.Value_75 || obj_player.state == UnknownEnum.Value_20)
+    if (obj_player.state == states.grabbing || obj_player.state == states.grab || obj_player.state == states.throwing || obj_player.state == states.slam || obj_player.state == states.tacklecharge)
     {
         grounded = false;
         x = obj_player.x;
@@ -52,7 +52,7 @@ if (grabbed == true)
     {
         move = key_left2 + key_right2;
         
-        if (!(state == UnknownEnum.Value_79 || state == UnknownEnum.Value_55 || state == UnknownEnum.Value_74 || state == UnknownEnum.Value_75 || state == UnknownEnum.Value_20 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_76 || state == UnknownEnum.Value_81 || state == UnknownEnum.Value_82 || state == UnknownEnum.Value_83))
+        if (!(state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
         {
             other.x = x;
             other.y = y;
@@ -62,7 +62,7 @@ if (grabbed == true)
     
     hsp = 0;
     
-    if (obj_player.state == UnknownEnum.Value_80)
+    if (obj_player.state == states.punch)
     {
         instance_create(x + (obj_player.xscale * 30), y, obj_bumpeffect);
         grabbed = false;
@@ -83,7 +83,7 @@ if (grabbed == true)
         }
     }
     
-    if (obj_player.state == UnknownEnum.Value_83)
+    if (obj_player.state == states.shoulder)
     {
         grav = 0.5;
         instance_create(x, y + 20, obj_bumpeffect);
@@ -117,7 +117,7 @@ if (grabbed == true)
         }
     }
     
-    if (obj_player.state == UnknownEnum.Value_74)
+    if (obj_player.state == states.throwing)
     {
         grav = 0.5;
         grabbed = false;
@@ -128,7 +128,7 @@ if (grabbed == true)
         vsp = -10;
     }
     
-    if (obj_player.state == UnknownEnum.Value_82)
+    if (obj_player.state == states.uppunch)
     {
         instance_create(x + (-obj_player.xscale * 15), y - 50, obj_bumpeffect);
         grav = 0.5;
@@ -149,13 +149,13 @@ if (grabbed == true)
         }
     }
     
-    if (obj_player.state == UnknownEnum.Value_20)
+    if (obj_player.state == states.tacklecharge)
     {
         x = obj_player.x + (obj_player.xscale * 15);
         y = obj_player.y;
     }
     
-    if (obj_player.state == UnknownEnum.Value_76)
+    if (obj_player.state == states.superslam)
     {
         if (obj_player.character == "P")
         {

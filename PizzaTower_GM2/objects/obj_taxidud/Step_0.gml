@@ -7,7 +7,7 @@ if (hsp != 0)
     if (dust == 40)
     {
         dust = 0;
-        create_particle(x, y + 43, UnknownEnum.Value_1);
+        create_particle(x, y + 43, particles.cloudeffect);
     }
 }
 

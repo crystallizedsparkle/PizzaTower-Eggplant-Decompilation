@@ -4,9 +4,9 @@ mh_id = other.id;
 
 with (playerid)
 {
-    if (state != UnknownEnum.Value_14)
+    if (state != states.morthook)
     {
-        state = UnknownEnum.Value_14;
+        state = states.morthook;
         morthookID = mh_id;
         tauntstoredmovespeed = movespeed;
         movespeed = 12;

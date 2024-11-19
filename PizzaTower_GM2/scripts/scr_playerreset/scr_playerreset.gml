@@ -47,7 +47,7 @@ function scr_playerreset()
             {
                 sprite_index = spr_tv_off;
                 tvsprite = 2700;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 tv_set_idle();
             }
         }
@@ -193,7 +193,7 @@ function scr_playerreset()
             
             with (obj_player)
             {
-                if (state == UnknownEnum.Value_89 || state == UnknownEnum.Value_64)
+                if (state == states.gameover || state == states.timesup)
                     destroy = false;
             }
             
@@ -210,8 +210,8 @@ function scr_playerreset()
         audio_stop_all();
         global.seconds = 59;
         global.minutes = 1;
-        obj_player1.state = UnknownEnum.Value_95;
-        obj_player2.state = UnknownEnum.Value_95;
+        obj_player1.state = states.comingoutdoor;
+        obj_player2.state = states.comingoutdoor;
         obj_player1.visible = true;
         obj_player2.visible = true;
         ds_list_clear(global.saveroom);

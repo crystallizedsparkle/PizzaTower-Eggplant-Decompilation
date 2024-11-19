@@ -1,6 +1,6 @@
 var p;
 
-if (state == UnknownEnum.Value_150)
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
@@ -8,7 +8,7 @@ if (state == UnknownEnum.Value_150)
         {
             visible = true;
             sprite_index = spr_superspringplayer;
-            state = UnknownEnum.Value_97;
+            state = states.Sjump;
             vsp = -10;
             
             if (place_meeting(x, y, obj_solid))
@@ -29,7 +29,7 @@ if (state == UnknownEnum.Value_150)
             with (other)
             {
                 playerid = -1;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }

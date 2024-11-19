@@ -21,10 +21,10 @@ function scr_player_golf()
     }
     
     if (sprite_index == spr_golfswing && floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
-    if (instance_exists(golfid) && golfid.state != UnknownEnum.Value_148 && golfid.state != UnknownEnum.Value_156)
-        state = UnknownEnum.Value_0;
+    if (instance_exists(golfid) && golfid.state != states.golf && golfid.state != states.thrown)
+        state = states.normal;
 }
 
 enum UnknownEnum

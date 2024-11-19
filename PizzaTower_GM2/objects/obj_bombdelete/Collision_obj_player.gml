@@ -1,8 +1,8 @@
 if (!collide)
 {
-    if (other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_43)
+    if (other.state == states.handstandjump || other.state == states.lungeattack)
     {
-        other.state = UnknownEnum.Value_183;
+        other.state = states.bombdelete;
         collide = true;
     }
 }

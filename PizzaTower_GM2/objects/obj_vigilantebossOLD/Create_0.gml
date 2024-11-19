@@ -1,16 +1,16 @@
 event_inherited();
-state = UnknownEnum.Value_145;
-ds_map_set(player_hurtstates, UnknownEnum.Value_42, 30);
-ds_map_set(player_hurtstates, UnknownEnum.Value_41, 50);
-ds_map_set(player_hurtstates, UnknownEnum.Value_104, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_121, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_80, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_102, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_82, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_42, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_80, 60);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_166, 20);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_108, 60);
+state = states.arena_round;
+ds_map_set(player_hurtstates, states.handstandjump, 30);
+ds_map_set(player_hurtstates, states.chainsawbump, 50);
+ds_map_set(player_hurtstates, states.mach2, 20);
+ds_map_set(player_hurtstates, states.mach3, 30);
+ds_map_set(boss_hurtstates, states.punch, 30);
+ds_map_set(boss_hurtstates, states.crouchslide, 30);
+ds_map_set(boss_hurtstates, states.uppunch, 30);
+ds_map_set(boss_hurtstates, states.handstandjump, 30);
+ds_map_set(boss_hurtstates, states.punch, 60);
+ds_map_set(boss_hurtstates, states.millionpunch, 20);
+ds_map_set(boss_hurtstates, states.freefall, 60);
 phase = 1;
 max_phase = 6;
 max_hp = 500 * max_phase;
@@ -40,10 +40,10 @@ normalattack_max[5] = 60;
 cancel_buffer = 0;
 cancel_max = ds_map_create();
 cancel_maxdefault = 60;
-ds_map_set(cancel_max, UnknownEnum.Value_166, millionpunch_max / 2);
+ds_map_set(cancel_max, states.millionpunch, millionpunch_max / 2);
 ds_map_set(cancel_max, UnknownEnum.Value_164, 10);
-ds_map_set(cancel_max, UnknownEnum.Value_1, 30);
-ds_map_set(cancel_max, UnknownEnum.Value_103, 120);
+ds_map_set(cancel_max, states.revolver, 30);
+ds_map_set(cancel_max, states.mach1, 120);
 combo_count = 0;
 duelintro_buffer = 0;
 duelintro_max = 240;
@@ -136,13 +136,13 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if (!argument1.inv_frames && (argument1.state != UnknownEnum.Value_84 || argument1.parry_inst == -4))
+    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == -4))
     {
         hitstate = state;
         hithsp = hsp;
         hitvsp = vsp;
         
-        if (state != UnknownEnum.Value_82 || vsp < 0)
+        if (state != states.uppunch || vsp < 0)
         {
             SUPER_player_hurt(argument0, argument1);
             
@@ -152,7 +152,7 @@ function player_hurt(argument0, argument1)
                 alarm[1] = 15;
             }
             
-            if (hitstate == UnknownEnum.Value_160)
+            if (hitstate == states.superattack)
             {
                 hithsp = 0;
                 hitvsp = 0;

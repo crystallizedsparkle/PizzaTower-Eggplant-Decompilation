@@ -1,6 +1,6 @@
 var xx, yy, player, door, _xscale, door_xscale;
 
-if (other.state == UnknownEnum.Value_186)
+if (other.state == states.gotoplayer)
     exit;
 
 if (!instance_exists(obj_deliverytimer))

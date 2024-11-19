@@ -33,7 +33,7 @@ function scr_player_superslam()
         with (instance_create(x, y + 35, obj_bangeffect))
             xscale = obj_player.xscale;
         
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
     }
     
@@ -49,7 +49,7 @@ function scr_player_superslam()
     if (sprite_index == spr_piledriverland && floor(image_index) == (image_number - 1))
     {
         vsp = -6;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
     }
     
     if (move != 0)

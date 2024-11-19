@@ -5,11 +5,11 @@ _baddieID = other.baddieID;
 if (!instance_exists(_baddieID))
     exit;
 
-if (_baddieID.state != UnknownEnum.Value_4 && !_baddieID.invincible && _baddieID.hittable && _baddieID.state != UnknownEnum.Value_17)
+if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hittable && _baddieID.state != states.ghostpossess)
 {
     with (playerid)
     {
-        if ((floor(image_index) < 4 || (global.attackstyle == 3 && image_index < 6)) && (state == UnknownEnum.Value_43 || state == UnknownEnum.Value_42) && state != UnknownEnum.Value_61 && _baddieID.state != UnknownEnum.Value_137)
+        if ((floor(image_index) < 4 || (global.attackstyle == 3 && image_index < 6)) && (state == states.lungeattack || state == states.handstandjump) && state != states.chainsaw && _baddieID.state != states.hit)
         {
             lag = 5;
             baddie_id = _baddieID.id;
@@ -23,7 +23,7 @@ if (_baddieID.state != UnknownEnum.Value_4 && !_baddieID.invincible && _baddieID
                 {
                     hp -= 0.5;
                     instance_create(x, y, obj_bangeffect);
-                    state = UnknownEnum.Value_137;
+                    state = states.hit;
                     image_xscale = -other.xscale;
                     hit_connected = true;
                     hithsp = ((other.x + ((other.movespeed + 0.5) * 60 * other.xscale)) - x) / 60;
@@ -47,9 +47,9 @@ if (_baddieID.state != UnknownEnum.Value_4 && !_baddieID.invincible && _baddieID
                 finisher_hits++;
                 lunge_hit_buffer = 100;
                 
-                if (state == UnknownEnum.Value_42)
+                if (state == states.handstandjump)
                 {
-                    state = UnknownEnum.Value_43;
+                    state = states.lungeattack;
                     randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
                     image_index = 0;
                 }
@@ -58,7 +58,7 @@ if (_baddieID.state != UnknownEnum.Value_4 && !_baddieID.invincible && _baddieID
                 tauntstoredsprite = sprite_index;
                 tauntstoredmovespeed = movespeed;
                 tauntstoredvsp = 0;
-                state = UnknownEnum.Value_61;
+                state = states.chainsaw;
                 hitLag = lag;
                 hitX = x;
                 

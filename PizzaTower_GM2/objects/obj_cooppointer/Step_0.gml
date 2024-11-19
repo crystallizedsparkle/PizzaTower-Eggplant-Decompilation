@@ -4,8 +4,8 @@ if (room != Realtitlescreen && room != rm_levelselect && room != characterselect
 {
     with (playerid)
     {
-        if (state != UnknownEnum.Value_186 && !bbox_in_camera(view_camera[0], 48))
-            state = UnknownEnum.Value_186;
+        if (state != states.gotoplayer && !bbox_in_camera(view_camera[0], 48))
+            state = states.gotoplayer;
     }
 }
 

@@ -45,7 +45,7 @@ switch (fall)
             fall = 0;
             x = xstart;
             y = ystart;
-            create_particle(x, y, UnknownEnum.Value_1, 0);
+            create_particle(x, y, particles.cloudeffect, 0);
         }
         
         break;

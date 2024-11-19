@@ -1,6 +1,6 @@
-if (!graffiti && other.state == UnknownEnum.Value_84 && global.graffiticutscene)
+if (!graffiti && other.state == states.backbreaker && global.graffiticutscene)
 {
-    other.state = UnknownEnum.Value_85;
+    other.state = states.graffiti;
     other.sprite_index = other.spr_victory;
     other.image_index = 0;
     global.factorygraffiti = true;

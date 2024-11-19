@@ -4,10 +4,10 @@ function scr_player_parry()
     
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         if (tauntstoredisgustavo)
-            state = UnknownEnum.Value_191;
+            state = states.ratmount;
     }
     
     if (!audio_is_playing(sfx_parry))
@@ -31,9 +31,9 @@ function scr_player_parry()
         
         with (obj_baddie)
         {
-            if (distance_to_object(other) < parry_threshold && state != UnknownEnum.Value_137 && state != UnknownEnum.Value_4 && state != UnknownEnum.Value_138 && parryable && !(state == UnknownEnum.Value_138 && thrown == true))
+            if (distance_to_object(other) < parry_threshold && state != states.hit && state != states.grabbed && state != states.stun && parryable && !(state == states.stun && thrown == true))
             {
-                notification_push(UnknownEnum.Value_1, [id, object_index, room]);
+                notification_push(notifications.unknown1, [id, object_index, room]);
                 obj_player1.xscale = -image_xscale;
                 grabbedby = _grabbedby;
                 lag = 5;
@@ -53,7 +53,7 @@ function scr_player_parry()
                 mach3destroy = true;
                 instance_create(x, y, obj_parryeffect);
                 alarm[3] = 1;
-                state = UnknownEnum.Value_137;
+                state = states.hit;
                 image_xscale = -obj_player1.xscale;
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);

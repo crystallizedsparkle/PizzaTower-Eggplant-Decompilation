@@ -59,7 +59,7 @@ if (grabbing)
     
     if (distance_to_pos(x, y, dropspotx, dropspoty, 5, 5) && !released)
     {
-        player.state = UnknownEnum.Value_108;
+        player.state = states.freefall;
         player.x = dropspotx;
         player.y = dropspoty;
         player = -4;

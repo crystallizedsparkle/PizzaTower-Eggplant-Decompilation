@@ -2,46 +2,46 @@ var targetplayer;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
 scr_scareenemy();
 
-if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -49,7 +49,7 @@ if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 idlespr = 300;
@@ -61,10 +61,10 @@ grabbedspr = 301;
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (bombreset > 0)
@@ -72,16 +72,16 @@ if (bombreset > 0)
 
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
 
-if (x != targetplayer.x && state != UnknownEnum.Value_129 && bombreset == 0 && grounded && targetplayer.state != UnknownEnum.Value_10)
+if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0 && grounded && targetplayer.state != states.firemouth)
 {
     if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
     {
-        if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
+        if (state == states.walk || state == states.idle)
         {
             sprite_index = spr_kentukykenny_throw;
             image_index = 0;
             image_xscale = -sign(x - targetplayer.x);
-            state = UnknownEnum.Value_129;
+            state = states.enemy_throw;
         }
     }
 }

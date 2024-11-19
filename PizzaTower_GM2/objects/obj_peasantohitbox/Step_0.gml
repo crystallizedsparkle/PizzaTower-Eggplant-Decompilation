@@ -4,7 +4,7 @@ if (!instance_exists(ID))
     exit;
 }
 
-if (ID.state != UnknownEnum.Value_128)
+if (ID.state != states.charge)
 {
     ID.hitboxcreate = false;
     instance_destroy();

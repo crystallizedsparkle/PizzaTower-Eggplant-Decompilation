@@ -5,7 +5,7 @@ if (place_meeting(x, y + 1, obj_railparent))
     _inst = instance_place(x, y + 1, obj_railparent);
     hsp = _inst.dir * _inst.movespeed;
 }
-else if (object_index != obj_haystack || state == UnknownEnum.Value_0)
+else if (object_index != obj_haystack || state == states.normal)
 {
     hsp = Approach(hsp, 0, 0.5);
 }

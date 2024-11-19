@@ -1,10 +1,10 @@
-if (state != UnknownEnum.Value_217 && other.state != UnknownEnum.Value_146 && !other.cutscene && other.state != UnknownEnum.Value_112)
+if (state != states.robot_idle && other.state != states.actor && !other.cutscene && other.state != states.door)
 {
     if (!global.panic && !instance_exists(obj_jumpscare))
     {
         with (obj_player)
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             hsp = 0;
             vsp = 0;
             targetRoom = other.targetRoom;
@@ -56,7 +56,7 @@ if (state != UnknownEnum.Value_217 && other.state != UnknownEnum.Value_146 && !o
     {
         with (obj_monster)
         {
-            state = UnknownEnum.Value_217;
+            state = states.robot_idle;
             x = xstart;
             y = ystart;
         }

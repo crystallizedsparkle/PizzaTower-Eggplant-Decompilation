@@ -1,4 +1,4 @@
-if (state == UnknownEnum.Value_148)
+if (state == states.golf)
     exit;
 
 x = other.x;

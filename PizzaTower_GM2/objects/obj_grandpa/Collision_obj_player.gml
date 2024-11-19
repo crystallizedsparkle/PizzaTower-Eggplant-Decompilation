@@ -1,13 +1,13 @@
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_47 || state == UnknownEnum.Value_38)
+    if (state == states.knightpep || state == states.knightpepslopes)
     {
         global.combotime = 60;
         instance_destroy(other);
     }
 }
 
-if (other.state != UnknownEnum.Value_16)
+if (other.state != states.ghost)
 {
     sprite_index = spr_grandpa_punch;
     image_index = 0;

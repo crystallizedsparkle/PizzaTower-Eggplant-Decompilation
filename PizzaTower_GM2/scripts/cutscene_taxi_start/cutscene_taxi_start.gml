@@ -8,7 +8,7 @@ function cutscene_taxi_start(argument0)
     {
         global.failcutscene = true;
         global.showgnomelist = false;
-        state = UnknownEnum.Value_146;
+        state = states.actor;
         cutscene = true;
         image_speed = 0.5;
         sprite_index = spr_player_outofpizza1;

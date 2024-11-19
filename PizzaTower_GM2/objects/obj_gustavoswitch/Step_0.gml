@@ -3,11 +3,11 @@ if (sprite_index == spr_gustavoswitch2 && floor(image_index) == (image_number - 
     with (obj_player1)
     {
         visible = true;
-        create_particle(x, y, UnknownEnum.Value_9);
+        create_particle(x, y, particles.genericpoofeffect);
         ratmount_movespeed = 8;
         gustavodash = 0;
         isgustavo = true;
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
         brick = true;
         x = obj_gustavoswitch.x;
         y = obj_gustavoswitch.y;

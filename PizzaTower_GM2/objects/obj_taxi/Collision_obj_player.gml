@@ -1,6 +1,6 @@
 with (other)
 {
-    if (key_up && grounded && ((state == UnknownEnum.Value_191 && brick) || state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_58 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_99) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != UnknownEnum.Value_119 && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
+    if (key_up && grounded && ((state == states.ratmount && brick) || state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.taxi && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
     {
         with (other)
         {
@@ -9,7 +9,7 @@ with (other)
             obj_player1.sprite_index = obj_player1.spr_idle;
             obj_player1.hsp = 0;
             obj_player1.vsp = 0;
-            obj_player1.state = UnknownEnum.Value_119;
+            obj_player1.state = states.taxi;
             scr_soundeffect(94);
             playerid = 324;
             sprite_index = spr_taximove;
@@ -26,7 +26,7 @@ with (other)
                 obj_player2.visible = false;
                 obj_player2.hsp = 0;
                 obj_player2.vsp = 0;
-                obj_player2.state = UnknownEnum.Value_119;
+                obj_player2.state = states.taxi;
                 obj_player2.cutscene = true;
             }
         }

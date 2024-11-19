@@ -1,8 +1,8 @@
 var round_yto, p, lag, hit;
 
-if (!instance_exists(bossID) && bossID != -4 && state != UnknownEnum.Value_98 && !fakedeath)
+if (!instance_exists(bossID) && bossID != -4 && state != states.victory && !fakedeath)
 {
-    state = UnknownEnum.Value_98;
+    state = states.victory;
     alarm[1] = room_speed * 4;
 }
 
@@ -10,20 +10,20 @@ if (player_hp <= 0)
 {
     fakedeath = false;
     
-    if (state != UnknownEnum.Value_8 && state != UnknownEnum.Value_89)
+    if (state != states.transitioncutscene && state != states.gameover)
     {
         if (endroundfunc != -4)
             endroundfunc();
         
         depth = obj_player1.depth + 1;
-        state = UnknownEnum.Value_8;
+        state = states.transitioncutscene;
         
         with (bossID)
             player_destroy(lastplayerid);
     }
-    else if (bossID.state != UnknownEnum.Value_61 && state != UnknownEnum.Value_89)
+    else if (bossID.state != states.chainsaw && state != states.gameover)
     {
-        state = UnknownEnum.Value_89;
+        state = states.gameover;
         alarm[1] = room_speed * 4;
     }
 }
@@ -33,23 +33,23 @@ if (instance_exists(bossID))
     if (bossID.destroyed && !fakedeath)
     {
         depth = bossID.depth + 1;
-        state = UnknownEnum.Value_8;
+        state = states.transitioncutscene;
     }
 }
 
 switch (state)
 {
-    case UnknownEnum.Value_144:
+    case states.arena_intro:
         with (obj_player)
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             xscale = (x > (room_width / 2)) ? -1 : 1;
             image_blend = make_colour_hsv(0, 0, 255);
         }
         
         with (par_boss)
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             x = xstart;
         }
         
@@ -78,25 +78,25 @@ switch (state)
         }
         else if (use_countdown)
         {
-            state = UnknownEnum.Value_145;
+            state = states.arena_round;
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (obj_player)
             {
                 if (object_index != obj_player2 || global.coop)
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
             }
             
             with (par_boss)
-                state = UnknownEnum.Value_0;
+                state = states.normal;
         }
         
         break;
     
-    case UnknownEnum.Value_145:
+    case states.arena_round:
         round_yto = 437;
         round_y = Approach(round_y, round_yto, 7);
         
@@ -123,9 +123,9 @@ switch (state)
             
             with (obj_player)
             {
-                if (state != UnknownEnum.Value_146 && state != UnknownEnum.Value_95 && state != UnknownEnum.Value_137 && !instance_exists(obj_fadeout))
+                if (state != states.actor && state != states.comingoutdoor && state != states.hit && !instance_exists(obj_fadeout))
                 {
-                    if (state == UnknownEnum.Value_137 || state == UnknownEnum.Value_61)
+                    if (state == states.hit || state == states.chainsaw)
                     {
                         hitLag = 0;
                         x = hitX;
@@ -139,27 +139,27 @@ switch (state)
                     image_speed = 0.35;
                     xscale = (x > (room_width / 2)) ? -1 : 1;
                     image_blend = make_colour_hsv(0, 0, 255);
-                    state = UnknownEnum.Value_146;
+                    state = states.actor;
                     visible = true;
                     image_alpha = 1;
                 }
                 
-                if (state == UnknownEnum.Value_146)
+                if (state == states.actor)
                     state_player_arenaround();
             }
             
             with (par_boss)
             {
-                if (state == UnknownEnum.Value_137 || state == UnknownEnum.Value_61)
+                if (state == states.hit || state == states.chainsaw)
                 {
                     hitLag = 0;
                     x = hitX;
                     y = hitY;
                 }
                 
-                if (colliding && state != UnknownEnum.Value_180 && state != UnknownEnum.Value_181)
+                if (colliding && state != states.cardboard && state != states.cardboardend)
                 {
-                    state = UnknownEnum.Value_145;
+                    state = states.arena_round;
                     attack_cooldown = attack_max[phase - 1];
                 }
             }
@@ -174,21 +174,21 @@ switch (state)
             round_timer = round_timermax;
             bell_sprite = 2081;
             alarm[0] = 1;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (obj_player)
             {
                 if (object_index == obj_player1 || global.coop)
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
             }
             
             with (par_boss)
-                state = UnknownEnum.Value_0;
+                state = states.normal;
         }
         
         break;
     
-    case UnknownEnum.Value_0:
+    case states.normal:
         bell_sprite = 2081;
         round_y = Approach(round_y, round_ystart, 4);
         
@@ -203,7 +203,7 @@ switch (state)
                     other.super = 0;
                     p = true;
                     state = UnknownEnum.Value_252;
-                    superattackstate = UnknownEnum.Value_8;
+                    superattackstate = states.transitioncutscene;
                     lag = 60;
                     hitX = x;
                     hitY = y;
@@ -251,7 +251,7 @@ switch (state)
                 super_portrait_index += 0.35;
                 super_portrait_x += 1;
                 
-                if (obj_player.state != UnknownEnum.Value_252 || obj_player.superattackstate != UnknownEnum.Value_8)
+                if (obj_player.state != UnknownEnum.Value_252 || obj_player.superattackstate != states.transitioncutscene)
                     super_portrait_state = 0;
                 
                 break;
@@ -259,13 +259,13 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         instance_destroy(obj_baddiespawner);
         instance_destroy(obj_baddie);
         
         if (player_hp > 0)
         {
-            if (!instance_exists(bossID) || bossID.state != UnknownEnum.Value_137)
+            if (!instance_exists(bossID) || bossID.state != states.hit)
             {
                 fade -= 0.05;
                 fade = clamp(fade, 0, 1);
@@ -277,7 +277,7 @@ switch (state)
             
             with (obj_player)
             {
-                if (state == UnknownEnum.Value_137)
+                if (state == states.hit)
                     hit = true;
             }
             
@@ -290,8 +290,8 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_98:
-    case UnknownEnum.Value_89:
+    case states.victory:
+    case states.gameover:
         fade -= 0.05;
         fade = clamp(fade, 0, 1);
         break;
@@ -301,14 +301,14 @@ bell_index += 0.35;
 portrait1_index += 0.35;
 portrait2_index += 0.35;
 
-if (state == UnknownEnum.Value_0 && instance_exists(bossID))
+if (state == states.normal && instance_exists(bossID))
 {
-    if (obj_player1.state == UnknownEnum.Value_137 || obj_player1.state == UnknownEnum.Value_156)
+    if (obj_player1.state == states.hit || obj_player1.state == states.thrown)
         portrait1_sprite = portrait1_hurt;
     else
         portrait1_sprite = portrait1_idle;
     
-    if (bossID.state == UnknownEnum.Value_137 || bossID.state == UnknownEnum.Value_138)
+    if (bossID.state == states.hit || bossID.state == states.stun)
         portrait2_sprite = portrait2_hurt;
     else
         portrait2_sprite = portrait2_idle;

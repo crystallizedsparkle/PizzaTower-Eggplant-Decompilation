@@ -14,7 +14,7 @@ function scr_player_pistolaim()
     
     if (!key_up)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         image_index = 0;
     }
     
@@ -27,7 +27,7 @@ function scr_player_pistolaim()
     {
         sprite_index = spr_player_pistol;
         image_index = 0;
-        state = UnknownEnum.Value_72;
+        state = states.pistol;
         shoot = true;
     }
     
@@ -35,7 +35,7 @@ function scr_player_pistolaim()
     {
         sprite_index = spr_player_shootup;
         image_index = 0;
-        state = UnknownEnum.Value_72;
+        state = states.pistol;
         shoot = true;
     }
     
@@ -43,14 +43,14 @@ function scr_player_pistolaim()
     {
         sprite_index = spr_player_shootdiagonal;
         image_index = 0;
-        state = UnknownEnum.Value_72;
+        state = states.pistol;
         shoot = true;
     }
     
     if (!grounded)
     {
         sprite_index = spr_player_fall;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
     }
     
     if (move != 0)

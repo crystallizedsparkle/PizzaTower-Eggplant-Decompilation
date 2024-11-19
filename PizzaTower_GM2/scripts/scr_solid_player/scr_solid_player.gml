@@ -19,13 +19,13 @@ function scr_solid_player(argument0, argument1)
             switch (b.object_index)
             {
                 case obj_ghostwall:
-                    if (state != UnknownEnum.Value_16)
+                    if (state != states.ghost)
                         _collided = true;
                     
                     break;
                 
                 case obj_mach3solid:
-                    if (state != UnknownEnum.Value_121 && (state != UnknownEnum.Value_105 || sprite_index != spr_mach3boost) && (state != UnknownEnum.Value_61 || tauntstoredstate != UnknownEnum.Value_121))
+                    if (state != states.mach3 && (state != states.machslide || sprite_index != spr_mach3boost) && (state != states.chainsaw || tauntstoredstate != states.mach3))
                         _collided = true;
                     
                     break;
@@ -48,7 +48,7 @@ function scr_solid_player(argument0, argument1)
         }
     }
     
-    if (y > old_y && state != UnknownEnum.Value_93 && place_meeting(x, y, obj_platform))
+    if (y > old_y && state != states.ladder && place_meeting(x, y, obj_platform))
     {
         num = instance_place_list(x, y, 504, global.instancelist, false);
         _collided = false;
@@ -73,7 +73,7 @@ function scr_solid_player(argument0, argument1)
     
     if (y > old_y && (bbox_bottom % 16) == 0 && !place_meeting(x, old_y, obj_grindrail) && place_meeting(x, y, obj_grindrail))
     {
-        if (state == UnknownEnum.Value_78)
+        if (state == states.grind)
         {
             x = old_x;
             y = old_y;
@@ -90,7 +90,7 @@ function scr_solid_player(argument0, argument1)
     
     if (check_slope_player(1))
     {
-        if (state == UnknownEnum.Value_78)
+        if (state == states.grind)
         {
             x = old_x;
             y = old_y;

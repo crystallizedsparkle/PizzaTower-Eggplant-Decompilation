@@ -8,7 +8,7 @@ else if (inv_timer == 0)
     invincible = false;
 }
 
-if (grounded && state != UnknownEnum.Value_137 && state != UnknownEnum.Value_138)
+if (grounded && state != states.hit && state != states.stun)
 {
     if (jugglecount > 0)
         jugglecount--;

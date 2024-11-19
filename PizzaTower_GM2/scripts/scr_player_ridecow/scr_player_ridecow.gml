@@ -9,12 +9,12 @@ function scr_player_ridecow()
     {
         if (has_mort)
         {
-            state = UnknownEnum.Value_12;
+            state = states.mortjump;
             sprite_index = spr_fall;
         }
         else
         {
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             sprite_index = spr_fall;
         }
         
@@ -35,12 +35,12 @@ function scr_player_ridecow()
         
         if (has_mort)
         {
-            state = UnknownEnum.Value_12;
+            state = states.mortjump;
             sprite_index = spr_jump;
         }
         else
         {
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             sprite_index = spr_jump;
         }
     }

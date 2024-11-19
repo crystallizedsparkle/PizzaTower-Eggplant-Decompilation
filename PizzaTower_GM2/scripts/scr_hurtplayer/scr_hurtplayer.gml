@@ -9,18 +9,18 @@ function scr_hurtplayer(argument0)
         if (global.failcutscene)
         {
         }
-        else if (state == UnknownEnum.Value_147 || state == UnknownEnum.Value_208 || state == UnknownEnum.Value_148 || state == UnknownEnum.Value_165)
+        else if (state == states.parry || state == states.debugstate || state == states.golf || state == states.slipbanan)
         {
         }
-        else if (state == UnknownEnum.Value_42 && flash == true)
+        else if (state == states.handstandjump && flash == true)
         {
         }
-        else if (state == UnknownEnum.Value_84 || state == UnknownEnum.Value_61)
+        else if (state == states.backbreaker || state == states.chainsaw)
         {
         }
         else if (global.kungfu)
         {
-            if (state == UnknownEnum.Value_206)
+            if (state == states.blockstance)
             {
                 if (sprite_index != spr_player_airattackstart)
                 {
@@ -31,7 +31,7 @@ function scr_hurtplayer(argument0)
                 sprite_index = spr_player_airattackstart;
                 hsp = -xscale * 2;
             }
-            else if (state != UnknownEnum.Value_156 && state != UnknownEnum.Value_137 && !hurted)
+            else if (state != states.thrown && state != states.hit && !hurted)
             {
                 instance_create(x, y, obj_parryeffect);
                 
@@ -43,7 +43,7 @@ function scr_hurtplayer(argument0)
                 
                 hitLag = 3;
                 hitxscale = (x != other.x) ? sign(other.x - x) : -other.image_xscale;
-                state = UnknownEnum.Value_137;
+                state = states.hit;
                 hitstunned = 50;
                 hurted = true;
                 alarm[7] = hitstunned + 30;
@@ -81,7 +81,7 @@ function scr_hurtplayer(argument0)
         {
             if (!hurted)
             {
-                state = UnknownEnum.Value_196;
+                state = states.ratmounthurt;
                 movespeed = 6;
                 vsp = -9;
                 flash = true;
@@ -92,51 +92,51 @@ function scr_hurtplayer(argument0)
                 _hurt = true;
             }
         }
-        else if (state == UnknownEnum.Value_70)
+        else if (state == states.shotgundash)
         {
         }
-        else if ((state == UnknownEnum.Value_47 || state == UnknownEnum.Value_48 || state == UnknownEnum.Value_38 || state == UnknownEnum.Value_49) && cutscene == false)
+        else if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.knightpepbump) && cutscene == false)
         {
         }
-        else if (state == UnknownEnum.Value_16)
+        else if (state == states.ghost)
         {
         }
-        else if (state == UnknownEnum.Value_17)
+        else if (state == states.ghostpossess)
         {
             if (instance_exists(possessID) && object_get_parent(possessID) == 407)
             {
-                state = UnknownEnum.Value_16;
+                state = states.ghost;
                 
                 with (obj_baddie)
                 {
-                    if (is_controllable && state == UnknownEnum.Value_17 && playerid == other.id)
+                    if (is_controllable && state == states.ghostpossess && playerid == other.id)
                         instance_destroy();
                 }
             }
         }
-        else if (state == UnknownEnum.Value_94)
+        else if (state == states.slipnslide)
         {
         }
-        else if (state == UnknownEnum.Value_187)
+        else if (state == states.trickjump)
         {
         }
-        else if (state == UnknownEnum.Value_41)
+        else if (state == states.chainsawbump)
         {
         }
-        else if (state == UnknownEnum.Value_51 && hurted == false)
+        else if (state == states.bombpep && hurted == false)
         {
         }
-        else if (state == UnknownEnum.Value_31)
+        else if (state == states.rideweenie)
         {
         }
-        else if (state == UnknownEnum.Value_94)
+        else if (state == states.slipnslide)
         {
         }
-        else if (state == UnknownEnum.Value_33)
+        else if (state == states.boxxedpep)
         {
             hsp = -xscale * 4;
             vsp = -5;
-            state = UnknownEnum.Value_106;
+            state = states.bump;
             sprite_index = spr_bump;
             alarm[5] = 2;
             alarm[8] = 60;
@@ -152,7 +152,7 @@ function scr_hurtplayer(argument0)
             
             hsp = -xscale * 4;
             vsp = -5;
-            state = UnknownEnum.Value_106;
+            state = states.bump;
             sprite_index = spr_bump;
             invhurt_buffer = 120;
             alarm[8] = 60;
@@ -160,9 +160,9 @@ function scr_hurtplayer(argument0)
             hurted = true;
             scr_soundeffect(22);
         }
-        else if (state != UnknownEnum.Value_107 && state != UnknownEnum.Value_196 && state != UnknownEnum.Value_4 && (hurted == false || state == UnknownEnum.Value_24 || state == UnknownEnum.Value_29 || state == UnknownEnum.Value_30) && cutscene == false)
+        else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (hurted == false || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && cutscene == false)
         {
-            if (state == UnknownEnum.Value_11 || state == UnknownEnum.Value_14 || state == UnknownEnum.Value_12 || state == UnknownEnum.Value_13)
+            if (state == states.mort || state == states.morthook || state == states.mortjump || state == states.mortattack)
             {
                 with (instance_create(x, y, obj_mortflyaway))
                     image_xscale = -other.xscale;
@@ -176,7 +176,7 @@ function scr_hurtplayer(argument0)
             if (character == "V")
                 global.playerhealth -= 25;
             
-            if (state == UnknownEnum.Value_113 || state == UnknownEnum.Value_115 || state == UnknownEnum.Value_114 || state == UnknownEnum.Value_116)
+            if (state == states.barrel || state == states.barrelclimbwall || state == states.barreljump || state == states.barrelslide)
             {
                 repeat (4)
                     create_debris(x, y, 398);
@@ -208,7 +208,7 @@ function scr_hurtplayer(argument0)
                 }
             }
             
-            if (state == UnknownEnum.Value_4)
+            if (state == states.grabbed)
             {
                 if (object_index == obj_player1)
                     y = obj_player2.y;
@@ -230,7 +230,7 @@ function scr_hurtplayer(argument0)
             vsp = -14;
             timeuntilhpback = 300;
             instance_create(x, y, obj_spikehurteffect);
-            state = UnknownEnum.Value_107;
+            state = states.hurt;
             image_index = 0;
             flash = true;
         }

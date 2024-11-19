@@ -28,10 +28,10 @@ function scr_player_stringjump()
     
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         landAnim = true;
         sprite_index = spr_land;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
     }
 }
 

@@ -2,7 +2,7 @@ if (vsp > 0)
 {
     instance_destroy();
     instance_destroy(obj_pizzaballblock);
-    obj_player.state = UnknownEnum.Value_84;
+    obj_player.state = states.backbreaker;
     
     if (obj_player.character == "P")
         obj_player.sprite_index = spr_player_levelcomplete;

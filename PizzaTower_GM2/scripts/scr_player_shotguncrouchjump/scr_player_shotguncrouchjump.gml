@@ -26,7 +26,7 @@ function scr_player_shotguncrouchjump()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_67;
+        state = states.shotguncrouch;
         sprite_index = spr_shotgungoduck;
         image_index = 0;
         scr_soundeffect(41);

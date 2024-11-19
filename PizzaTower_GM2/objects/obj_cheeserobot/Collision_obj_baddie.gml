@@ -1,6 +1,6 @@
 with (other)
 {
-    if ((other.state == UnknownEnum.Value_138 && other.thrown == true) || (other.state == UnknownEnum.Value_4 && obj_player.state == UnknownEnum.Value_76))
+    if ((other.state == states.stun && other.thrown == true) || (other.state == states.grabbed && obj_player.state == states.superslam))
         instance_destroy();
 }
 

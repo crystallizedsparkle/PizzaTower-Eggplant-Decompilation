@@ -8,7 +8,7 @@ function cutscene_space_end()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         x = backtohubstartx;
         y = backtohubstarty;
     }

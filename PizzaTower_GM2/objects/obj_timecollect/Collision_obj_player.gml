@@ -1,6 +1,6 @@
 var _number;
 
-if (other.state != UnknownEnum.Value_186)
+if (other.state != states.gotoplayer)
 {
     if (obj_player1.character == "V")
         global.playerhealth = clamp(global.playerhealth + 10, 0, 100);

@@ -5,8 +5,8 @@ hsp_carry = 0;
 vsp_carry = 0;
 platformid = -4;
 grounded = false;
-state = UnknownEnum.Value_0;
-substate = UnknownEnum.Value_0;
+state = states.normal;
+substate = states.normal;
 trashbuffer = 0;
 
 enum UnknownEnum

@@ -59,7 +59,7 @@ function scr_player_Sjump()
         
         scr_soundeffect(27);
         image_index = 0;
-        state = UnknownEnum.Value_123;
+        state = states.Sjumpland;
         machhitAnim = false;
     }
     else if (key_slap2 && character == "P" && sprite_index != spr_superspringplayer && sprite_index != spr_player_Sjumpcancelstart)
@@ -81,7 +81,7 @@ function scr_player_Sjump()
             movespeed = 12;
             image_index = 0;
             sprite_index = spr_player_Sjumpcancel;
-            state = UnknownEnum.Value_80;
+            state = states.punch;
             
             with (instance_create(x, y, obj_crazyruneffect))
                 image_xscale = other.xscale;
@@ -94,7 +94,7 @@ function scr_player_Sjump()
         scr_soundeffect(99);
         jumpstop = false;
         vsp = -15;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_playerN_noisebombspinjump;
         image_index = 0;
         
@@ -113,7 +113,7 @@ function scr_player_Sjump()
     
     if (character == "V" && floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_playerV_fall;
     }
     

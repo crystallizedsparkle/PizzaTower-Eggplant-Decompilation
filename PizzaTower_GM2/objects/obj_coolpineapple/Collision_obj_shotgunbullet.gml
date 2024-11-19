@@ -1,6 +1,6 @@
 var _maxhsp, _dir;
 
-if (state != UnknownEnum.Value_147 && state != UnknownEnum.Value_84)
+if (state != states.parry && state != states.backbreaker)
     exit;
 
 with (other)
@@ -14,11 +14,11 @@ with (other)
     spd = _maxhsp * _dir;
 }
 
-if (state != UnknownEnum.Value_147)
+if (state != states.parry)
 {
     sprite_index = parryspr;
     movespeed = 8;
-    state = UnknownEnum.Value_147;
+    state = states.parry;
     image_index = 0;
 }
 

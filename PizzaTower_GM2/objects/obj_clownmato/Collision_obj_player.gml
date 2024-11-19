@@ -1,14 +1,14 @@
 with (other)
 {
-    if ((!instakillmove || state == UnknownEnum.Value_104) && state != UnknownEnum.Value_106 && other.state == UnknownEnum.Value_134 && state != UnknownEnum.Value_61)
+    if ((!instakillmove || state == states.mach2) && state != states.bump && other.state == states.walk && state != states.chainsaw)
     {
         scr_soundeffect(28);
         vsp = -4;
         hsp = -3 * xscale;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         sprite_index = spr_bump;
         image_index = 0;
-        other.state = UnknownEnum.Value_106;
+        other.state = states.bump;
         other.sprite_index = spr_clownmato_bounce;
         other.image_index = 0;
     }

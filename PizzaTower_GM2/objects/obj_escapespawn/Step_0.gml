@@ -43,11 +43,11 @@ switch (state)
             {
                 x = other.x;
                 y = other.y;
-                state = UnknownEnum.Value_138;
+                state = states.stun;
                 sprite_index = stunfallspr;
                 stunned = 20;
                 boundbox = false;
-                create_particle(x, y, UnknownEnum.Value_9);
+                create_particle(x, y, particles.genericpoofeffect);
             }
             
             state = 3;

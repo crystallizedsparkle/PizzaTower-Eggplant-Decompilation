@@ -1,4 +1,4 @@
-prompt_array = [tv_create_prompt(choose("Press DOWN to crawl!"), UnknownEnum.Value_1, 307, 2.5)];
+prompt_array = [tv_create_prompt(choose("Press DOWN to crawl!"), tvprompt_type.touch_trigger, 307, 2.5)];
 
 enum UnknownEnum
 {

@@ -9,13 +9,13 @@ function scr_player_grabbed()
     
     _obj_player.baddiegrabbedID = id;
     
-    if (_obj_player.state == UnknownEnum.Value_121 && fightball == true)
+    if (_obj_player.state == states.mach3 && fightball == true)
     {
         x = _obj_player.x;
         y = _obj_player.y;
     }
     
-    if (_obj_player.state == UnknownEnum.Value_55 || _obj_player.state == UnknownEnum.Value_79 || _obj_player.state == UnknownEnum.Value_74 || _obj_player.state == UnknownEnum.Value_75 || _obj_player.state == UnknownEnum.Value_20)
+    if (_obj_player.state == states.grabbing || _obj_player.state == states.grab || _obj_player.state == states.throwing || _obj_player.state == states.slam || _obj_player.state == states.tacklecharge)
     {
         x = _obj_player.x;
         
@@ -57,32 +57,32 @@ function scr_player_grabbed()
             }
         }
         
-        if (!(state == UnknownEnum.Value_79 || (state == UnknownEnum.Value_121 && fightball == true) || (state == UnknownEnum.Value_191 || state == UnknownEnum.Value_193 || state == UnknownEnum.Value_192 || state == UnknownEnum.Value_194) || state == UnknownEnum.Value_6 || state == UnknownEnum.Value_55 || state == UnknownEnum.Value_74 || state == UnknownEnum.Value_75 || state == UnknownEnum.Value_20 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_76 || state == UnknownEnum.Value_81 || state == UnknownEnum.Value_82 || state == UnknownEnum.Value_83))
+        if (!(state == states.grab || (state == states.mach3 && fightball == true) || (state == states.ratmount || state == states.ratmountattack || state == states.ratmountjump || state == states.ratmountspit) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
         {
             baddiegrabbedID = 523;
             other.x = _obj_player.x;
             other.y = _obj_player.y;
-            other.state = UnknownEnum.Value_107;
+            other.state = states.hurt;
             other.alarm[8] = 60;
             other.alarm[7] = 120;
             other.image_index = 0;
         }
     }
     
-    if (_obj_player.state == UnknownEnum.Value_191 || _obj_player.state == UnknownEnum.Value_192)
+    if (_obj_player.state == states.ratmount || _obj_player.state == states.ratmountjump)
     {
         visible = false;
         x = _obj_player.x;
         y = _obj_player.y;
     }
     
-    if (_obj_player.state == UnknownEnum.Value_20)
+    if (_obj_player.state == states.tacklecharge)
     {
         x = _obj_player.x + (_obj_player.xscale * 20);
         y = _obj_player.y;
     }
     
-    if (_obj_player.state == UnknownEnum.Value_6 && _obj_player.image_index < 5)
+    if (_obj_player.state == states.finishingblow && _obj_player.image_index < 5)
     {
         x = _obj_player.x + (_obj_player.xscale * 60);
         y = _obj_player.y + 14;
@@ -103,7 +103,7 @@ function scr_player_grabbed()
             shake_mag_acc = 3 / room_speed;
         }
         
-        state = UnknownEnum.Value_107;
+        state = states.hurt;
         
         if (scr_solid(x, y) || collision_line(x, y, _obj_player.x, _obj_player.y, obj_solid, false, true) != -4)
         {
@@ -131,7 +131,7 @@ function scr_player_grabbed()
         }
     }
     
-    if (_obj_player.state == UnknownEnum.Value_76 && _obj_player.sprite_index == _obj_player.spr_piledriver)
+    if (_obj_player.state == states.superslam && _obj_player.sprite_index == _obj_player.spr_piledriver)
     {
         if (_obj_player.character == "P" && _obj_player.ispeppino)
         {
@@ -190,7 +190,7 @@ function scr_player_grabbed()
         }
     }
     
-    if (_obj_player.state == UnknownEnum.Value_79 && _obj_player.sprite_index == _obj_player.spr_swingding)
+    if (_obj_player.state == states.grab && _obj_player.sprite_index == _obj_player.spr_swingding)
     {
         if (floor(_obj_player.image_index) == 0)
         {
@@ -245,7 +245,7 @@ function scr_player_grabbed()
     {
         with (_obj_player)
         {
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             vsp = -8;
             sprite_index = spr_machfreefall;
         }
@@ -256,14 +256,14 @@ function scr_player_grabbed()
         flash = true;
         x = _obj_player.x;
         y = _obj_player.y;
-        state = UnknownEnum.Value_107;
+        state = states.hurt;
         hithsp = -image_xscale * 10;
         hitvsp = -10;
         other.alarm[8] = 60;
         other.alarm[7] = 120;
     }
     
-    if (_obj_player.state != UnknownEnum.Value_121)
+    if (_obj_player.state != states.mach3)
     {
         sprite_index = spr_hurt;
     }

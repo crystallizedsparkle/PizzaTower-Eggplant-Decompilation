@@ -45,7 +45,7 @@ function scr_player_ladder()
     {
         landAnim = false;
         jumpAnim = false;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         image_index = 0;
         vsp = 0;
     }
@@ -55,7 +55,7 @@ function scr_player_ladder()
         sprite_index = spr_jump;
         ladderbuffer = 20;
         jumpAnim = true;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         
         if (key_down)
             vsp = 5;
@@ -67,7 +67,7 @@ function scr_player_ladder()
     
     if (key_down && grounded && !place_meeting(x, y, obj_platform))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         image_index = 0;
     }
 }

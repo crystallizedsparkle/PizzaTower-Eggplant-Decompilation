@@ -15,7 +15,7 @@ if (picked == false)
     
     with (playerid)
     {
-        state = UnknownEnum.Value_46;
+        state = states.gottreasure;
         scr_soundeffect(21);
         global.giantkey = true;
     }

@@ -2,10 +2,10 @@ with (other)
 {
     if (key_up2)
     {
-        if (state == UnknownEnum.Value_0)
-            state = UnknownEnum.Value_191;
-        else if (state == UnknownEnum.Value_191)
-            state = UnknownEnum.Value_0;
+        if (state == states.normal)
+            state = states.ratmount;
+        else if (state == states.ratmount)
+            state = states.normal;
     }
 }
 

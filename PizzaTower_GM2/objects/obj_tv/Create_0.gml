@@ -3,7 +3,7 @@ chose = false;
 message = "";
 showtext = false;
 tvprompts_list = ds_list_create();
-state = UnknownEnum.Value_0;
+state = states.normal;
 promptxstart = 641;
 promptx = promptxstart;
 prompt = "";
@@ -65,7 +65,9 @@ bar_surface = -4;
 barfill_x = 0;
 showtime_buffer = 0;
 
-enum UnknownEnum
+enum tvprompt_type
 {
-    Value_0
+	normal = 0,
+	touch_trigger = 1,
+	transformation = 2
 }

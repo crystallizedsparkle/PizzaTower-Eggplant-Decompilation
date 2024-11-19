@@ -2,7 +2,7 @@ with (obj_player1)
 {
     if (shotgunAnim == true)
     {
-        if (state != UnknownEnum.Value_0 && state != UnknownEnum.Value_100 && state != UnknownEnum.Value_71 && state != UnknownEnum.Value_111 && state != UnknownEnum.Value_92 && state != UnknownEnum.Value_42)
+        if (state != states.normal && state != states.crouch && state != states.shotgunfreefall && state != states.freefallland && state != states.jump && state != states.handstandjump)
             other.visible = true;
         else
             other.visible = false;

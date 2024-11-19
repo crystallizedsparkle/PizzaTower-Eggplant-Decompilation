@@ -13,7 +13,7 @@ function scr_vigilante_walk()
     
     switch (walkstate)
     {
-        case UnknownEnum.Value_134:
+        case states.walk:
             if (sprite_index != spr_playerV_fall && sprite_index != spr_playerV_move)
                 sprite_index = spr_playerV_move;
             else if (sprite_index == spr_playerV_move && floor(image_index) == (image_number - 1))
@@ -41,14 +41,14 @@ function scr_vigilante_walk()
             
             if (movespeed >= 8)
             {
-                walkstate = UnknownEnum.Value_104;
+                walkstate = states.mach2;
                 sprite_index = spr_playerV_mach1;
                 image_index = 0;
             }
             
             break;
         
-        case UnknownEnum.Value_104:
+        case states.mach2:
             image_speed = 0.6;
             
             if ((sprite_index == spr_playerV_mach1 || sprite_index == spr_playerV_bootsland) && floor(image_index) == (image_number - 1))
@@ -69,20 +69,20 @@ function scr_vigilante_walk()
             
             if (movespeed <= 5)
             {
-                walkstate = UnknownEnum.Value_105;
+                walkstate = states.machslide;
                 sprite_index = spr_playerV_machslidestart;
                 image_index = 0;
             }
             
             break;
         
-        case UnknownEnum.Value_105:
+        case states.machslide:
             if (floor(image_index) == (image_number - 1))
             {
                 if (sprite_index == spr_playerV_machslidestart)
                     sprite_index = spr_playerV_machslideend;
                 else
-                    walkstate = UnknownEnum.Value_134;
+                    walkstate = states.walk;
             }
             
             break;
@@ -97,7 +97,7 @@ function scr_vigilante_walk()
     {
         oldtargetspot = targetspot;
         calculate_jump_velocity_alt(targetspot.x, targetspot.y, 20, grav);
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_playerV_jump;
         image_index = 0;
     }
@@ -107,12 +107,12 @@ function scr_vigilante_walk()
         
         if (!place_meeting(x + hsp, y, obj_solid) && !scr_solid_slope(x + hsp, y))
         {
-            state = UnknownEnum.Value_100;
+            state = states.crouch;
         }
         else
         {
             mask_index = spr_player_mask;
-            state = UnknownEnum.Value_37;
+            state = states.climbwall;
             wallspeed = 0;
             
             if (wallspeed < 8)
@@ -135,23 +135,23 @@ function scr_vigilante_jump()
         
         switch (targetspot.attack)
         {
-            case UnknownEnum.Value_0:
-                state = UnknownEnum.Value_2;
+            case states.normal:
+                state = states.dynamite;
                 shot = false;
                 cooldown = 10;
                 hsp = 0;
                 break;
             
-            case UnknownEnum.Value_3:
-                state = UnknownEnum.Value_1;
+            case states.boots:
+                state = states.revolver;
                 cooldown = 10;
                 revolver = 80;
                 hsp = 0;
                 break;
             
-            case UnknownEnum.Value_1:
-            case UnknownEnum.Value_2:
-                state = UnknownEnum.Value_74;
+            case states.revolver:
+            case states.dynamite:
+                state = states.throwing;
                 attack = targetspot.attack;
                 cooldown = 10;
                 times = 3;
@@ -159,7 +159,7 @@ function scr_vigilante_jump()
                 timer = 1;
                 timermax = 10;
                 
-                if (attack == UnknownEnum.Value_1)
+                if (attack == states.revolver)
                 {
                     times = 5;
                     count = 1;
@@ -170,15 +170,15 @@ function scr_vigilante_jump()
                 timescount = times;
                 break;
             
-            case UnknownEnum.Value_4:
+            case states.grabbed:
                 sprite_index = spr_playerV_jump;
                 image_index = 0;
-                state = UnknownEnum.Value_122;
+                state = states.freefallprep;
                 targetx = x + 500;
                 targety = y - 100;
                 calculate_jump_velocity_alt(targetx + 300, targety, 20, grav);
                 vsp = -14;
-                create_particle(x, y, UnknownEnum.Value_5);
+                create_particle(x, y, particles.jumpdust);
                 break;
         }
     }
@@ -197,13 +197,13 @@ function scr_vigilante_freefallprep()
             image_index = 0;
             hsp = 0;
             vsp = -8;
-            state = UnknownEnum.Value_108;
+            state = states.freefall;
         }
     }
     else if (floor(image_index) == (image_number - 1))
     {
         sprite_index = spr_playerV_bodyslam;
-        state = UnknownEnum.Value_108;
+        state = states.freefall;
     }
 }
 
@@ -236,10 +236,10 @@ function scr_vigilante_freefall()
     if (grounded && vsp > 0)
     {
         scr_soundeffect(27);
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         hsp = 0;
         sprite_index = spr_playerV_bodyslamland;
-        create_particle(x, y, UnknownEnum.Value_12);
+        create_particle(x, y, particles.landcloud);
         image_index = 0;
     }
 }
@@ -248,7 +248,7 @@ function scr_vigilante_freefallland()
 {
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         sprite_index = spr_playerV_idle;
         image_index = 0;
         
@@ -294,18 +294,18 @@ function scr_vigilante_throwing()
         
         switch (attack)
         {
-            case UnknownEnum.Value_1:
+            case states.revolver:
                 with (instance_create(x + (image_xscale * 8), y - 16, obj_cow))
                 {
                     vsp = -6;
                     image_xscale = other.image_xscale;
                     offscreen = true;
-                    state = UnknownEnum.Value_134;
+                    state = states.walk;
                 }
                 
                 break;
             
-            case UnknownEnum.Value_2:
+            case states.dynamite:
                 with (instance_create(x + (image_xscale * 8), y - 16, obj_electricpotato))
                 {
                     move = true;
@@ -442,8 +442,8 @@ function scr_vigilante_climbwall()
     
     if (!scr_solid(x + image_xscale, y))
     {
-        state = UnknownEnum.Value_134;
-        walkstate = UnknownEnum.Value_104;
+        state = states.walk;
+        walkstate = states.mach2;
         movespeed = 8;
         vsp = 0;
         hsp = image_xscale * movespeed;
@@ -459,7 +459,7 @@ function scr_vigilante_crouch()
     
     if (!place_meeting(x, y - 16, obj_solid))
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         movespeed = 8;
         sprite_index = spr_playerV_mach1;
         image_index = 0;

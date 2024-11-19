@@ -67,7 +67,7 @@ function scr_player_boots()
         sprite_index = spr_playerV_bootsidle;
     
     if (!key_attack)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (grounded)
     {
@@ -112,12 +112,12 @@ function scr_player_boots()
         grav = 0.5;
         sprite_index = spr_playerV_divekickstart;
         machhitAnim = false;
-        state = UnknownEnum.Value_102;
+        state = states.crouchslide;
     }
     
     if (key_shoot2 && character == "V")
     {
-        state = UnknownEnum.Value_2;
+        state = states.dynamite;
         image_index = 0;
         sprite_index = spr_playerV_dynamitethrow;
         
@@ -131,7 +131,7 @@ function scr_player_boots()
     
     if (key_slap2 && character == "V")
     {
-        state = UnknownEnum.Value_1;
+        state = states.revolver;
         image_index = 0;
         sprite_index = spr_playerV_revolverstart;
         vsp = -5;

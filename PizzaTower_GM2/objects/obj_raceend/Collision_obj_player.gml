@@ -5,7 +5,7 @@ if (!horseyfinish && start)
         spd = 0;
         hsp = 0;
         vsp = 0;
-        state = UnknownEnum.Value_89;
+        state = states.gameover;
         
         with (obj_objecticontracker)
         {

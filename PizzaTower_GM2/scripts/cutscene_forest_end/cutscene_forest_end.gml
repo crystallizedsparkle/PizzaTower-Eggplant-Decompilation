@@ -2,7 +2,7 @@ function cutscene_forest_end()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         x = backtohubstartx;
         y = backtohubstarty;
     }
@@ -18,7 +18,7 @@ function cutscene_beach_end()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         x = backtohubstartx;
         y = backtohubstarty;
     }
@@ -34,7 +34,7 @@ function cutscene_sewer_end()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         x = backtohubstartx;
         y = backtohubstarty;
     }

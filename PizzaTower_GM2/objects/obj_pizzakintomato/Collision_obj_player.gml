@@ -1,7 +1,7 @@
 if (room == rm_editor)
     exit;
 
-if (obj_player.state != UnknownEnum.Value_107 && global.tomatofollow == false)
+if (obj_player.state != states.hurt && global.tomatofollow == false)
 {
     global.heattime = 60;
     global.style += 10;

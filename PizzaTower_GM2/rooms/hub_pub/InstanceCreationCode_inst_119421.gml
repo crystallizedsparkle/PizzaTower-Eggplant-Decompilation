@@ -5,7 +5,7 @@ if (global.levelcomplete && !global.pinballcutscene)
     {
         with (obj_player)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             x = backtohubstartx;
             y = backtohubstarty;
         }

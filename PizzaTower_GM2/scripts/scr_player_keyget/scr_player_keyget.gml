@@ -18,7 +18,7 @@ function scr_player_keyget()
     if (floor(image_index) == (image_number - 1))
     {
         global.keyget = false;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         image_index = 0;
     }
 }

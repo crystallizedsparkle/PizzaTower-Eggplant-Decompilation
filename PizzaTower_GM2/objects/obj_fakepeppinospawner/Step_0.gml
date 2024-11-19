@@ -17,7 +17,7 @@ else if (!instance_exists(inst))
     }
 }
 
-if (global.key_inv == true && obj_player.state != UnknownEnum.Value_90)
+if (global.key_inv == true && obj_player.state != states.keyget)
     global.chase = true;
 
 if (global.panic == true)

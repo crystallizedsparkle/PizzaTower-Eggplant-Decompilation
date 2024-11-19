@@ -4,7 +4,7 @@ function cutscene_set_player_actor()
     {
         if (check_player_coop())
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             image_speed = 0.35;
         }
     }

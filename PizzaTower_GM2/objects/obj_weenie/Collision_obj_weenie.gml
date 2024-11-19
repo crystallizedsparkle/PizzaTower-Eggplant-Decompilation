@@ -1,8 +1,8 @@
-if (state == UnknownEnum.Value_138 && thrown && other.state != UnknownEnum.Value_5 && other.state != UnknownEnum.Value_138)
+if (state == states.stun && thrown && other.state != states.tumble && other.state != states.stun)
 {
     with (other)
     {
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         vsp = -5;
         stunstate = 0;
         stunned = 100;

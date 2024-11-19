@@ -22,15 +22,15 @@ function scr_player_ratmounttrickjump()
         if (sprite_index == spr_mach2jump)
         {
             if (movespeed > 2)
-                state = UnknownEnum.Value_201;
+                state = states.ratmounttumble;
             else
-                state = UnknownEnum.Value_0;
+                state = states.normal;
         }
         else
         {
             ramp_points = 0;
             scr_soundeffect(27);
-            state = UnknownEnum.Value_191;
+            state = states.ratmount;
             sprite_index = spr_player_ratmountland;
             image_index = 0;
             landAnim = true;

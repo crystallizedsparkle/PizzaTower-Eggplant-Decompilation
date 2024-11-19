@@ -13,9 +13,9 @@ if (num > 0)
         
         with (b)
         {
-            if (state == UnknownEnum.Value_0)
+            if (state == states.normal)
             {
-                state = UnknownEnum.Value_8;
+                state = states.transitioncutscene;
                 
                 if (other.func(b, other.id))
                 {
@@ -23,7 +23,7 @@ if (num > 0)
                 }
                 else
                 {
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                     t = false;
                 }
             }

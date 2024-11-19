@@ -2,7 +2,7 @@ var roomname;
 
 visible = (room == rank_room || room == timesuproom) ? false : playerid.visible;
 
-if (obj_player.state == UnknownEnum.Value_87)
+if (obj_player.state == states.pizzathrow)
     visible = false;
 
 playerid = obj_player1.spotlight ? 324 : 323;

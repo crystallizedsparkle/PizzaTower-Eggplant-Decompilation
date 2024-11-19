@@ -11,8 +11,8 @@ with (other)
         scr_soundeffect(0);
     }
     
-    if (state == UnknownEnum.Value_37)
-        state = grounded ? UnknownEnum.Value_0 : UnknownEnum.Value_92;
+    if (state == states.climbwall)
+        state = grounded ? states.normal : states.jump;
     
     if (hsp != 0 && (floor(image_index) % 4) == 0)
     {

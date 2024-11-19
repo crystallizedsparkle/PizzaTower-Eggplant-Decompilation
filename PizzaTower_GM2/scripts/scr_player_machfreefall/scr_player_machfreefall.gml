@@ -20,7 +20,7 @@ function scr_player_machfreefall()
     if (scr_solid(x + 1, y) && image_xscale == 1)
     {
         machhitAnim = false;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -2.5;
         vsp = -2.5;
         mach2 = 0;
@@ -30,7 +30,7 @@ function scr_player_machfreefall()
     else if (scr_solid(x - 1, y) && image_xscale == -1)
     {
         machhitAnim = false;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = 2.5;
         vsp = -2.5;
         mach2 = 0;
@@ -47,14 +47,14 @@ function scr_player_machfreefall()
         }
         
         bounce = false;
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         jumpstop = false;
         image_index = 0;
         
         with (instance_create(x, y + 35, obj_bangeffect))
             image_xscale = obj_player.image_xscale;
         
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
         
         with (obj_baddie)
@@ -62,7 +62,7 @@ function scr_player_machfreefall()
             if (shakestun && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0)
             {
                 image_index = 0;
-                state = UnknownEnum.Value_137;
+                state = states.hit;
                 vsp = -7;
                 hsp = 0;
                 stunned = 200;
@@ -80,11 +80,11 @@ function scr_player_machfreefall()
         sprite_index = spr_player_hanstandjump;
         stompAnim = false;
         hsp = 0;
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
     }
     

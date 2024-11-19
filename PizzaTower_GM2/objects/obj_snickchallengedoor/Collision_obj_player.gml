@@ -1,6 +1,6 @@
 with (other)
 {
-    if (key_up && (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_99) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != UnknownEnum.Value_112 && state != UnknownEnum.Value_95)
+    if (key_up && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3 || state == states.Sjumpprep) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
     {
         lastroom_x = other.x;
         lastroom_y = other.y;
@@ -11,7 +11,7 @@ with (other)
         obj_player1.targetDoor = other.targetDoor;
         obj_player1.targetRoom = other.targetRoom;
         obj_player1.image_index = 0;
-        obj_player1.state = UnknownEnum.Value_112;
+        obj_player1.state = states.door;
         obj_player1.mach2 = 0;
         
         if (instance_exists(obj_player2))
@@ -32,7 +32,7 @@ with (other)
             obj_player2.targetDoor = other.targetDoor;
             obj_player2.targetRoom = other.targetRoom;
             obj_player2.image_index = 0;
-            obj_player2.state = UnknownEnum.Value_112;
+            obj_player2.state = states.door;
             obj_player2.mach2 = 0;
         }
         

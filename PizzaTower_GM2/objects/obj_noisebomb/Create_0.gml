@@ -7,7 +7,7 @@ movespeed = 3;
 
 with (obj_player)
 {
-    state = UnknownEnum.Value_84;
+    state = states.backbreaker;
     sprite_index = spr_bossintro;
     image_index = 0;
     scr_soundeffect(57);

@@ -3,9 +3,9 @@ instance_destroy();
 with (playerid)
 {
     if (!isgustavo)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     else
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     
     visible = true;
 }

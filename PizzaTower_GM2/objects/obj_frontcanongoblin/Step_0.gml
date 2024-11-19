@@ -11,14 +11,14 @@ if (!(captain_x > (captain_xto - thr) && captain_x < (captain_xto + thr) && capt
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         if (floor(captain_index) == (sprite_get_number(captain_sprite) - 1))
         {
             captain_sprite = 1388;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (instance_create(crosshair_x, camera_get_view_y(view_camera[0]) - 32, obj_frontcanonbomb))
                 y_to = other.crosshair_y;
@@ -26,7 +26,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_89:
+    case states.gameover:
         if (floor(captain_index) == (sprite_get_number(captain_sprite) - 1))
             instance_destroy();
         

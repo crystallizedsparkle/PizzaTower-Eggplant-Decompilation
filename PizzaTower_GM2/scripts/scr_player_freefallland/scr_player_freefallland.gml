@@ -21,7 +21,7 @@ function scr_player_freefallland()
         facehurt = true;
         sprite_index = spr_facehurtup;
         image_index = 0;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         jumpstop = true;
     }
     

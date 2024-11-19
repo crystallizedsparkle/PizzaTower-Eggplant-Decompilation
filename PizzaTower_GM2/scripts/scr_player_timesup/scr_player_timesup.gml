@@ -9,7 +9,7 @@ function scr_player_timesup()
     
     if (place_meeting(x, y, obj_timesup))
     {
-        state = UnknownEnum.Value_89;
+        state = states.gameover;
         sprite_index = spr_deathend;
         alarm[10] = 5;
         vsp = -8;

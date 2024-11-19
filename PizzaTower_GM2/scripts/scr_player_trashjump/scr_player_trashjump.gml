@@ -35,7 +35,7 @@ function scr_player_trashjump()
         dir = xscale;
         movespeed += 3;
         instance_create(x, y, obj_jumpdust);
-        state = UnknownEnum.Value_211;
+        state = states.trashroll;
     }
 }
 

@@ -1,16 +1,16 @@
-if (visible == true && obj_player.state != UnknownEnum.Value_7)
+if (visible == true && obj_player.state != states.ejected)
 {
     if (place_meeting(x, y - 1, obj_player1))
     {
         with (obj_player1)
         {
-            if (state == UnknownEnum.Value_47)
+            if (state == states.knightpep)
             {
-                state = UnknownEnum.Value_38;
+                state = states.knightpepslopes;
             }
-            else if (state != UnknownEnum.Value_38)
+            else if (state != states.knightpepslopes)
             {
-                state = UnknownEnum.Value_94;
+                state = states.slipnslide;
                 sprite_index = spr_slipnslide;
             }
             
@@ -23,13 +23,13 @@ if (visible == true && obj_player.state != UnknownEnum.Value_7)
     {
         with (obj_player2)
         {
-            if (state == UnknownEnum.Value_47)
+            if (state == states.knightpep)
             {
-                state = UnknownEnum.Value_38;
+                state = states.knightpepslopes;
             }
-            else if (state != UnknownEnum.Value_38)
+            else if (state != states.knightpepslopes)
             {
-                state = UnknownEnum.Value_94;
+                state = states.slipnslide;
                 sprite_index = spr_slipnslide;
             }
             

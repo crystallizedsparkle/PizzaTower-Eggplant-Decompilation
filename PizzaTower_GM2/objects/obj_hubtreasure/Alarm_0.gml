@@ -1,5 +1,5 @@
 with (playerid)
-    state = UnknownEnum.Value_0;
+    state = states.normal;
 
 enum UnknownEnum
 {

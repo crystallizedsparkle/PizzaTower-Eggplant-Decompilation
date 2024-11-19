@@ -5,7 +5,7 @@ p = other.id;
 with (instance_create(x, y - 60, obj_grabbiehand))
 {
     playerid = p;
-    state = UnknownEnum.Value_55;
+    state = states.grabbing;
     fake = true;
 }
 

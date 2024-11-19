@@ -6,7 +6,7 @@ function cutscene_medieval_end()
     {
         if (object_index != obj_player2 || global.coop)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             x = backtohubstartx;
             y = backtohubstarty;
         }

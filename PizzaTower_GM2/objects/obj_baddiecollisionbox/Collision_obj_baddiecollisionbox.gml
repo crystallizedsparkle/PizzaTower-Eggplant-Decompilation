@@ -1,6 +1,6 @@
 var lag;
 
-if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != UnknownEnum.Value_137 && other.baddieID.thrown == true && other.baddieID.state != UnknownEnum.Value_137 && baddieID.killbyenemy && baddieID != other.id && baddieID.state != UnknownEnum.Value_4 && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
+if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown == true && other.baddieID.state != states.hit && baddieID.killbyenemy && baddieID != other.id && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
 {
     scr_soundeffect(46);
     
@@ -24,7 +24,7 @@ if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach
         
         instance_create(baddieID.x, baddieID.y, obj_parryeffect);
         baddieID.alarm[3] = 3;
-        baddieID.state = UnknownEnum.Value_137;
+        baddieID.state = states.hit;
         baddieID.image_xscale = other.baddieID.image_xscale;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);

@@ -135,8 +135,8 @@ if (pause && !instance_exists(obj_option))
                     }
                     
                     scr_playerreset();
-                    obj_player1.state = UnknownEnum.Value_18;
-                    obj_player2.state = UnknownEnum.Value_18;
+                    obj_player1.state = states.titlescreen;
+                    obj_player2.state = states.titlescreen;
                     obj_player1.targetDoor = "A";
                     
                     if (instance_exists(obj_player2))

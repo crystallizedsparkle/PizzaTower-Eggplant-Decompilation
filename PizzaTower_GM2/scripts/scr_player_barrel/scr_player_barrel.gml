@@ -63,25 +63,25 @@ function scr_player_barrel()
                     xscale = move;
             }
             
-            state = UnknownEnum.Value_114;
+            state = states.barreljump;
             sprite_index = spr_player_barreljump;
             image_index = 0;
             jumpstop = false;
-            create_particle(x, y, UnknownEnum.Value_3, 0);
+            create_particle(x, y, particles.highjumpcloud1, 0);
         }
         
         if (key_attack)
         {
             movespeed = xscale * 7;
             instance_create(x, y, obj_jumpdust);
-            state = UnknownEnum.Value_116;
+            state = states.barrelslide;
             sprite_index = spr_player_barrelslipnslide;
             image_index = 0;
         }
     }
     else
     {
-        state = UnknownEnum.Value_114;
+        state = states.barreljump;
         sprite_index = spr_player_barrelfall;
         image_index = 0;
         
@@ -101,7 +101,7 @@ function scr_player_barrel()
     {
         if (!steppy && (floor(image_index == 4) || floor(image_index) == 13))
         {
-            create_particle(x, y + 43, UnknownEnum.Value_1, 0);
+            create_particle(x, y + 43, particles.cloudeffect, 0);
             steppy = true;
         }
         

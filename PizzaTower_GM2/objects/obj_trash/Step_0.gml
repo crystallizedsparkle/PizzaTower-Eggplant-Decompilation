@@ -5,18 +5,18 @@ if (trashbuffer > 0)
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         with (obj_player)
         {
-            if (other.state == UnknownEnum.Value_0 && state != UnknownEnum.Value_209 && other.trashbuffer <= 0 && place_meeting(x, y, other))
+            if (other.state == states.normal && state != states.trash_jumpprep && other.trashbuffer <= 0 && place_meeting(x, y, other))
             {
-                state = UnknownEnum.Value_209;
+                state = states.trash_jumpprep;
                 sprite_index = spr_player_trashstart;
                 image_index = 0;
                 xscale = other.image_xscale;
                 other.shot = false;
                 other.playerid = id;
-                other.state = UnknownEnum.Value_209;
+                other.state = states.trash_jumpprep;
                 other.sprite_index = spr_trash_flingstart;
                 other.image_index = 0;
             }
@@ -24,7 +24,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_209:
+    case states.trash_jumpprep:
         with (playerid)
         {
             if (floor(image_index) == (image_number - 1))
@@ -79,7 +79,7 @@ switch (state)
                     sprite_index = spr_player_trashjump;
                     image_index = 0;
                     movespeed = 0;
-                    state = UnknownEnum.Value_210;
+                    state = states.trashjump;
                     vsp = -25;
                 }
             }
@@ -88,7 +88,7 @@ switch (state)
         if (floor(image_index) == (image_number - 1))
         {
             sprite_index = spr_trash;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             trashbuffer = 30;
         }
         

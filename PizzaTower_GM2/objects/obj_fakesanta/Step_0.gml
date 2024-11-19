@@ -10,28 +10,28 @@ if (activated == true)
 {
     switch (state)
     {
-        case UnknownEnum.Value_138:
+        case states.stun:
             scr_enemy_stun();
             break;
         
-        case UnknownEnum.Value_137:
+        case states.hit:
             scr_enemy_hit();
             break;
         
-        case UnknownEnum.Value_4:
+        case states.grabbed:
             scr_enemy_grabbed();
             break;
         
-        case UnknownEnum.Value_154:
+        case states.pummel:
             scr_enemy_pummel();
             break;
         
-        case UnknownEnum.Value_155:
+        case states.staggered:
             scr_enemy_staggered();
             break;
     }
     
-    if (state == UnknownEnum.Value_134)
+    if (state == states.walk)
     {
         highest_y = -250;
         _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
@@ -103,7 +103,7 @@ if (activated == true)
         x = lerp(x, obj_player1.x + hsp, 0.08);
         y = lerp(y, obj_player1.y + obj_player1.vsp + vsp, 0.04);
     }
-    else if (state == UnknownEnum.Value_80)
+    else if (state == states.punch)
     {
         ii = floor(image_index);
         hsp = 0;
@@ -114,16 +114,16 @@ if (activated == true)
         }
         
         if (ii == (image_number - 1))
-            state = UnknownEnum.Value_134;
+            state = states.walk;
     }
     
     if (flash == true && alarm[2] <= 0)
         alarm[2] = 0.15 * room_speed;
     
-    if (state != UnknownEnum.Value_4)
+    if (state != states.grabbed)
         depth = 0;
     
-    if (state != UnknownEnum.Value_138)
+    if (state != states.stun)
         thrown = false;
 }
 

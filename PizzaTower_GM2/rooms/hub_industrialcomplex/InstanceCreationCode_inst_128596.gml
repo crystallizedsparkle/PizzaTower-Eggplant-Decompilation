@@ -8,7 +8,7 @@ scene_info = [[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]]
         with (instance_create(x, y, obj_pizzagoblinbomb))
         {
             defused = true;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             movespeed = 7;
             vsp = -8;
         }

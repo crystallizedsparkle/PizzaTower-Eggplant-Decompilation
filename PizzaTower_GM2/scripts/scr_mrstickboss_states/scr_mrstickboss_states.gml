@@ -10,7 +10,7 @@ function boss_mrstick_decide_attack()
         
         switch (state)
         {
-            case UnknownEnum.Value_174:
+            case states.boss_shield:
                 movespeed = 0;
                 hsp = 0;
                 shield_buffer = shield_max;
@@ -18,7 +18,7 @@ function boss_mrstick_decide_attack()
                 sprite_index = spr_mrstick_shield;
                 break;
             
-            case UnknownEnum.Value_175:
+            case states.helicopterhat:
                 sprite_index = spr_mrstick_helicopterhat;
                 image_index = 0;
                 vsp = -14;
@@ -29,7 +29,7 @@ function boss_mrstick_decide_attack()
                 helicopterstate = 0;
                 break;
             
-            case UnknownEnum.Value_176:
+            case states.panicjump:
                 sprite_index = spr_mrstick_jump;
                 vsp = -11;
                 image_xscale = (x > (room_width / 2)) ? -1 : 1;
@@ -37,27 +37,27 @@ function boss_mrstick_decide_attack()
                 target_x = (x > (room_width / 2)) ? (room_width / 7) : (room_width - (room_width / 7));
                 break;
             
-            case UnknownEnum.Value_92:
+            case states.jump:
                 image_xscale = (x > (room_width / 2)) ? 1 : -1;
                 movespeed = 12;
                 vsp = -11;
                 warped = false;
                 break;
             
-            case UnknownEnum.Value_177:
+            case states.smokebombstart:
                 image_xscale = (x > (room_width / 2)) ? -1 : 1;
                 sprite_index = spr_mrstick_idle;
                 image_index = 0;
                 break;
             
-            case UnknownEnum.Value_179:
+            case states.springshoes:
                 sprite_index = spr_mrstick_jump;
                 vsp = -20;
                 image_xscale = (x > (room_width / 2)) ? -1 : 1;
                 movespeed = 4;
                 break;
             
-            case UnknownEnum.Value_180:
+            case states.cardboard:
                 with (instance_create(x, y, obj_mrstickcardboard))
                 {
                     image_index = other.image_index;
@@ -143,7 +143,7 @@ function boss_mrstick_normal()
     {
         do_mockery_buffer = do_mockery_max;
         mockery_buffer = mockery_max;
-        state = UnknownEnum.Value_182;
+        state = states.mockery;
         sprite_index = spr_mrstick_tauntanim;
     }
 }
@@ -153,7 +153,7 @@ function boss_mrstick_shield()
     if (shield_buffer > 0)
         shield_buffer--;
     else
-        state = UnknownEnum.Value_0;
+        state = states.normal;
 }
 
 function boss_mrstick_helicopterhat()
@@ -192,7 +192,7 @@ function boss_mrstick_helicopterhat()
             vsp = 5;
             
             if (grounded)
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             
             break;
     }
@@ -210,7 +210,7 @@ function boss_mrstick_panicjump()
     }
     
     if (x > (target_x - 16) && x < (target_x + 16))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (grounded)
     {
@@ -266,7 +266,7 @@ function boss_mrstick_jump()
             y = room_height / 4;
         
         if (scr_solid(x, y + vsp) && !scr_solid(x, y))
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
     
     if (vsp < 20)
@@ -283,7 +283,7 @@ function boss_mrstick_smokebombstart()
         sprite_index = spr_mrstick_run;
         image_index = 0;
         target_x = (x > (room_width / 2)) ? (room_width / 7) : (room_width - (room_width / 7));
-        state = UnknownEnum.Value_178;
+        state = states.smokebombcrawl;
         
         with (instance_create(x, y, obj_chainsawpuff))
         {
@@ -303,7 +303,7 @@ function boss_mrstick_smokebombcrawl()
     
     if (x > (target_x - 16) && x < (target_x + 16))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         movespeed = 6;
     }
 }
@@ -329,7 +329,7 @@ function boss_mrstick_springshoes()
     {
         hsp = 0;
         movespeed = 0;
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         stunned = 100;
         sprite_index = spr_mrstick_hurt;
         
@@ -356,7 +356,7 @@ function boss_mrstick_cardboard()
     {
         instance_destroy(obj_mrstickcardboard);
         cardboard_buffer = 0;
-        state = UnknownEnum.Value_181;
+        state = states.cardboardend;
         movespeed = 8;
         x = target_x;
         image_xscale = (x < (room_width / 2)) ? 1 : -1;
@@ -370,7 +370,7 @@ function boss_mrstick_cardboardend()
     
     if (scr_solid(x, y + vsp) && !scr_solid(x, y))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         instance_destroy(obj_spike);
     }
     
@@ -386,7 +386,7 @@ function boss_mrstick_mockery()
     if (mockery_buffer > 0)
         mockery_buffer--;
     else
-        state = UnknownEnum.Value_0;
+        state = states.normal;
 }
 
 enum UnknownEnum

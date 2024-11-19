@@ -1,4 +1,4 @@
-if (other.state != UnknownEnum.Value_4 && other.state != UnknownEnum.Value_138)
+if (other.state != states.grabbed && other.state != states.stun)
 {
     if (!collisioned)
         event_user(0);

@@ -1,4 +1,4 @@
-if (state != UnknownEnum.Value_8)
+if (state != states.transitioncutscene)
     event_inherited();
 
 enum UnknownEnum

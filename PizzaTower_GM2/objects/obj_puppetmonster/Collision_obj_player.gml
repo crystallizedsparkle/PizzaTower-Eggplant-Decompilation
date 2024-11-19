@@ -1,4 +1,4 @@
-if (state == UnknownEnum.Value_220)
+if (state == states.robot_chase)
     event_inherited();
 
 enum UnknownEnum

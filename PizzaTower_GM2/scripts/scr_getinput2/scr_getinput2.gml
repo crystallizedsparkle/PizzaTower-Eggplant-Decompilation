@@ -30,7 +30,7 @@ function scr_getinput2()
     key_chainsaw = keyboard_check(global.key_chainsawN) || gamepad_button_check(_dvc, global.key_chainsawCN) || gamepad_button_check(_dvc, gp_shoulderlb);
     key_chainsaw2 = keyboard_check_pressed(global.key_chainsawN) || gamepad_button_check_pressed(_dvc, global.key_chainsawCN) || gamepad_button_check_pressed(_dvc, gp_shoulderlb);
     
-    if (object_index == obj_player2 && state == UnknownEnum.Value_99)
+    if (object_index == obj_player2 && state == states.Sjumpprep)
     {
         haxis = gamepad_axis_value(_dvc, gp_axislh);
         vaxis = gamepad_axis_value(_dvc, gp_axislv);

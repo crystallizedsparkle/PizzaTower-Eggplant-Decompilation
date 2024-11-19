@@ -5,7 +5,7 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         targetplayer = obj_player1.id;
         
         if (hamspotted == true)
@@ -59,7 +59,7 @@ switch (state)
         scr_collide();
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         flash = false;
         sprite_index = spr_piraneapplewater;
         
@@ -72,7 +72,7 @@ switch (state)
         {
             if (grounded)
             {
-                state = UnknownEnum.Value_134;
+                state = states.walk;
                 sprite_index = spr_piraneappleattack;
             }
             

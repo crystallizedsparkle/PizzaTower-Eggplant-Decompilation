@@ -15,11 +15,11 @@ function scr_player_tackle()
     if (sprite_index != spr_golfswing)
     {
         if (grounded && vsp > 0.5)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
     else if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
     
     if (floor(image_index) != (image_number - 1))

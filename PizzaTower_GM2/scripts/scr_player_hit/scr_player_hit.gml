@@ -26,7 +26,7 @@ function scr_player_hit()
         
         movespeed = abs(hithsp);
         vsp = hitvsp;
-        state = UnknownEnum.Value_156;
+        state = states.thrown;
         stunned = hitstunned;
     }
 }

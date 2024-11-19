@@ -10,7 +10,7 @@ if (instance_exists(ID))
     
     with (ID)
     {
-        if (state != UnknownEnum.Value_141 && state != UnknownEnum.Value_125)
+        if (state != states.chase && state != states.rage)
         {
             hitboxcreate = false;
             instance_destroy(other);

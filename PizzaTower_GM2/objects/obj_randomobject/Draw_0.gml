@@ -2,7 +2,7 @@ var _angle, t, lx, ly;
 
 event_inherited();
 
-if (state == UnknownEnum.Value_17 && substate == UnknownEnum.Value_0)
+if (state == states.ghostpossess && substate == states.normal)
 {
     _angle = point_direction(0, 0, moveX, moveY);
     t = 32;

@@ -16,27 +16,27 @@ function scr_player_tubeenter()
             switch (object_index)
             {
                 case obj_tubeenter:
-                    if (state != UnknownEnum.Value_0)
+                    if (state != states.normal)
                     {
                         if (floor(image_index) == (image_number - 1))
                         {
-                            other.state = UnknownEnum.Value_150;
+                            other.state = states.tube;
                             other.hsp = hsp * other.stored_hsp;
                             other.vsp = vsp * other.stored_vsp;
                             other.tube_vsp = vsp * other.stored_vsp;
-                            state = UnknownEnum.Value_0;
+                            state = states.normal;
                         }
                     }
                     else
                     {
-                        state = UnknownEnum.Value_150;
+                        state = states.tube;
                         image_index = 0;
                     }
                     
                     break;
                 
                 default:
-                    other.state = UnknownEnum.Value_150;
+                    other.state = states.tube;
                     other.hsp = hsp * other.stored_hsp;
                     other.vsp = vsp * other.stored_vsp;
                     other.tube_vsp = vsp * other.stored_vsp;

@@ -5,7 +5,7 @@ function scr_player_jetpackjump()
     landAnim = false;
     
     if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + vsp, obj_iceblock_breakable))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     with (obj_iceblock_breakable)
     {

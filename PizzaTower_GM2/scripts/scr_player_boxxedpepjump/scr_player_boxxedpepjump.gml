@@ -51,7 +51,7 @@ function scr_player_boxxedpepjump()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_33;
+        state = states.boxxedpep;
         sprite_index = spr_boxxedpepidle;
     }
     
@@ -70,7 +70,7 @@ function scr_player_boxxedpepjump()
             }
         }
         
-        state = UnknownEnum.Value_35;
+        state = states.boxxedpepjump;
         boxxedpepjump *= 0.9;
         vsp = -boxxedpepjump;
     }
@@ -80,7 +80,7 @@ function scr_player_boxxedpepjump()
     
     if (key_slap2)
     {
-        state = UnknownEnum.Value_34;
+        state = states.boxxedpepspin;
         sprite_index = spr_boxxedpep_spin;
         image_index = 0;
     }

@@ -1,4 +1,4 @@
-if (obj_player.state != UnknownEnum.Value_88)
+if (obj_player.state != states.bossintro)
 {
     with (instance_create(x, y - 75, obj_press))
         ID = other.id;
@@ -10,7 +10,7 @@ with (obj_player)
     
     if (other.drop == false)
     {
-        if (state != UnknownEnum.Value_88)
+        if (state != states.bossintro)
         {
             sprite_index = spr_player_hurt;
             instance_create(x, y, obj_spikehurteffect);
@@ -25,7 +25,7 @@ with (obj_player)
             }
         }
         
-        state = UnknownEnum.Value_88;
+        state = states.bossintro;
     }
 }
 

@@ -44,7 +44,7 @@ function scr_player_highjump()
         if (key_attack)
             landAnim = false;
         
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
@@ -54,7 +54,7 @@ function scr_player_highjump()
     if (grounded && input_buffer_jump < 8 && !key_attack && !key_down && vsp > 0)
     {
         vsp = -9;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
@@ -90,7 +90,7 @@ function scr_player_highjump()
         mach2 = 0;
         image_index = 0;
         vsp = -7;
-        state = UnknownEnum.Value_122;
+        state = states.freefallprep;
     }
 }
 

@@ -23,7 +23,7 @@ if (!touched)
     
     switch (state)
     {
-        case UnknownEnum.Value_0:
+        case states.normal:
             if (sprite_index != spr_fakepeppino_land)
             {
                 if (x != xprevious)
@@ -41,7 +41,7 @@ if (!touched)
                 if (!steppy && (floor(image_index) == 2 || floor(image_index) == 7))
                 {
                     steppy = true;
-                    create_particle(x, y + 38, UnknownEnum.Value_1, 0);
+                    create_particle(x, y + 38, particles.cloudeffect, 0);
                 }
                 
                 if (steppy && floor(image_index) != 2 && floor(image_index) != 7)
@@ -50,7 +50,7 @@ if (!touched)
             
             if (!grounded)
             {
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 
                 if (vsp < 0)
                 {
@@ -75,7 +75,7 @@ if (!touched)
             
             break;
         
-        case UnknownEnum.Value_92:
+        case states.jump:
             if (floor(image_index) == (image_number - 1))
             {
                 if (sprite_index == spr_fakepeppino_jumpstart)
@@ -86,10 +86,10 @@ if (!touched)
             
             if (grounded && vsp > 0)
             {
-                create_particle(x, y, UnknownEnum.Value_12, 0);
+                create_particle(x, y, particles.landcloud, 0);
                 sprite_index = spr_fakepeppino_land;
                 image_index = 0;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
             
             break;

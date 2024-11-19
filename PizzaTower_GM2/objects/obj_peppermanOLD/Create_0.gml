@@ -1,19 +1,19 @@
 event_inherited();
-state = UnknownEnum.Value_145;
-ds_map_set(player_hurtstates, UnknownEnum.Value_42, 30);
-ds_map_set(player_hurtstates, UnknownEnum.Value_41, 50);
-ds_map_set(player_hurtstates, UnknownEnum.Value_104, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_121, 30);
-ds_map_set(player_hurtstates, UnknownEnum.Value_108, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_80, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_5, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_97, 20);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_83, 60);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_153, 60);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_157, 90);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_76, 200);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_80, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_108, 70);
+state = states.arena_round;
+ds_map_set(player_hurtstates, states.handstandjump, 30);
+ds_map_set(player_hurtstates, states.chainsawbump, 50);
+ds_map_set(player_hurtstates, states.mach2, 20);
+ds_map_set(player_hurtstates, states.mach3, 30);
+ds_map_set(player_hurtstates, states.freefall, 20);
+ds_map_set(player_hurtstates, states.punch, 20);
+ds_map_set(player_hurtstates, states.tumble, 20);
+ds_map_set(player_hurtstates, states.Sjump, 20);
+ds_map_set(boss_hurtstates, states.shoulder, 60);
+ds_map_set(boss_hurtstates, states.shoulderbash, 60);
+ds_map_set(boss_hurtstates, states.supershoulderbash, 90);
+ds_map_set(boss_hurtstates, states.superslam, 200);
+ds_map_set(boss_hurtstates, states.punch, 30);
+ds_map_set(boss_hurtstates, states.freefall, 70);
 stunfallspr = 2220;
 walkspr = 2823;
 idlespr = 2592;
@@ -83,7 +83,7 @@ function player_destroy(argument0)
 
 function boss_destroy(argument0)
 {
-    hitstate = UnknownEnum.Value_0;
+    hitstate = states.normal;
     SUPER_boss_destroy(argument0);
     
     with (obj_peppermanbrick)
@@ -136,12 +136,12 @@ function player_hurt(argument0, argument1)
 {
     var _prevstate;
     
-    if (argument1.state != UnknownEnum.Value_84 || argument1.parry_inst == -4)
+    if (argument1.state != states.backbreaker || argument1.parry_inst == -4)
     {
         _prevstate = state;
         SUPER_player_hurt(argument0, argument1);
         
-        if (_prevstate == UnknownEnum.Value_153 || _prevstate == UnknownEnum.Value_157 || _prevstate == UnknownEnum.Value_83 || _prevstate == UnknownEnum.Value_76)
+        if (_prevstate == states.shoulderbash || _prevstate == states.supershoulderbash || _prevstate == states.shoulder || _prevstate == states.superslam)
         {
             with (obj_camera)
             {
@@ -149,12 +149,12 @@ function player_hurt(argument0, argument1)
                 shake_mag_acc = 3 / room_speed;
             }
             
-            hitstate = UnknownEnum.Value_138;
+            hitstate = states.stun;
             stunned = 70;
             hitvsp = -4;
             hithsp = -image_xscale * 8;
         }
-        else if (_prevstate == UnknownEnum.Value_84)
+        else if (_prevstate == states.backbreaker)
         {
             with (obj_camera)
             {
@@ -164,7 +164,7 @@ function player_hurt(argument0, argument1)
             
             sprite_index = spr_pepperman_throw;
             image_index = 0;
-            hitstate = UnknownEnum.Value_147;
+            hitstate = states.parry;
             hitvsp = 0;
             hithsp = 0;
             movespeed = 8;
@@ -173,34 +173,34 @@ function player_hurt(argument0, argument1)
         {
             hithsp = 0;
             hitvsp = -4;
-            hitstate = UnknownEnum.Value_0;
+            hitstate = states.normal;
         }
     }
-    else if (state == UnknownEnum.Value_76)
+    else if (state == states.superslam)
     {
         with (argument1)
         {
-            if (state == UnknownEnum.Value_137 || state == UnknownEnum.Value_61)
+            if (state == states.hit || state == states.chainsaw)
             {
                 x = hitX;
                 y = hitY;
             }
             
-            if (other.state == UnknownEnum.Value_137 || other.state == UnknownEnum.Value_61)
+            if (other.state == states.hit || other.state == states.chainsaw)
             {
                 other.x = hitX;
                 other.y = hitY;
             }
             
             sprite_index = spr_idle;
-            state = UnknownEnum.Value_162;
+            state = states.fistmatch;
             hitX = x;
             hitY = y;
             hsp = 0;
             vsp = 0;
             movespeed = 0;
             other.sprite_index = other.idlespr;
-            other.state = UnknownEnum.Value_162;
+            other.state = states.fistmatch;
             other.image_xscale = -xscale;
             other.hitX = x + (xscale * 16);
             other.hitY = y;

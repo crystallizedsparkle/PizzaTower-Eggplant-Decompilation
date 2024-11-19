@@ -2,7 +2,7 @@ image_speed = 0.35;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         if (sprite_index == spr_arenagate_opened)
         {
             if (blockinst != -4 && instance_exists(blockinst))
@@ -18,17 +18,17 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         if (sprite_index == spr_arenagate_open && floor(image_index) == (image_number - 1))
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             sprite_index = spr_arenagate_opened;
             instance_destroy(blockinst);
         }
         else if (sprite_index == spr_arenagate_close && floor(image_index) == (image_number - 1))
         {
             image_index = image_number - 1;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (instance_create(x, y, obj_solid))
             {

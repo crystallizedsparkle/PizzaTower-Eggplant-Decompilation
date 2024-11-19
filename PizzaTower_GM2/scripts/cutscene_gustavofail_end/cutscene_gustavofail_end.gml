@@ -60,7 +60,7 @@ function cutscene_gustavofail_end(argument0)
         obj_player1.hsp = 0;
         obj_player1.movespeed = 0;
         obj_player1.xscale = 1;
-        obj_player1.state = UnknownEnum.Value_0;
+        obj_player1.state = states.normal;
         cutscene_end_action();
     }
 }

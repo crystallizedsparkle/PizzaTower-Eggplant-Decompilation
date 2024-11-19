@@ -40,7 +40,7 @@ function scr_player_pogo()
         else
             sprite_index = spr_playerN_pogobounce;
         
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
     }
     
     if (floor(image_index) == 3 && pogospeedprev == false && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach))
@@ -81,7 +81,7 @@ function scr_player_pogo()
         pogocharge = 100;
     
     if (!key_attack)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     image_speed = 0.35;
     
@@ -92,7 +92,7 @@ function scr_player_pogo()
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;
         tauntstoredstate = state;
-        state = UnknownEnum.Value_84;
+        state = states.backbreaker;
         
         if (supercharged == true)
         {

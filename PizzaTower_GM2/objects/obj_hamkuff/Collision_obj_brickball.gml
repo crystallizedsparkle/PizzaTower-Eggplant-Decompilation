@@ -1,9 +1,9 @@
-if (state != UnknownEnum.Value_206)
+if (state != states.blockstance)
 {
     obj_player1.brick = false;
-    state = UnknownEnum.Value_206;
+    state = states.blockstance;
     sprite_index = spr_hamkuff_chain1;
-    state = UnknownEnum.Value_206;
+    state = states.blockstance;
     
     with (instance_create(other.x, other.y, obj_brickcomeback))
     {

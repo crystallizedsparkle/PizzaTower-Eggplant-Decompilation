@@ -1,4 +1,4 @@
-if (other.cutscene || other.state == UnknownEnum.Value_10)
+if (other.cutscene || other.state == states.firemouth)
     exit;
 
 with (other)
@@ -6,7 +6,7 @@ with (other)
     vsp = -18;
     sprite_index = spr_machfreefall;
     jumpstop = true;
-    state = UnknownEnum.Value_92;
+    state = states.jump;
 }
 
 sprite_index = spr_clownmato_bounce;

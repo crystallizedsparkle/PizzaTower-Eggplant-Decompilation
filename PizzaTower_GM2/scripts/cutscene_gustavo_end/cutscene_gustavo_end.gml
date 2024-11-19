@@ -11,7 +11,7 @@ function cutscene_gustavo_end()
             if (image_index > (image_number - 1))
             {
                 finish = true;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }
@@ -24,7 +24,7 @@ function cutscene_gustavo_end()
         global.hp = 8;
         
         with (obj_gustavo)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         
         if (!instance_exists(obj_gnome_checklist))
             instance_create(0, 0, obj_gnome_checklist);

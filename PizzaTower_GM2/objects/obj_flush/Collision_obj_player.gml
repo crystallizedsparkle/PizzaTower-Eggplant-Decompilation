@@ -1,8 +1,8 @@
 var _found;
 
-if (state == UnknownEnum.Value_223)
+if (state == states.flush_idle)
 {
-    state = UnknownEnum.Value_224;
+    state = states.flush_transition;
     image_index = 0;
     
     switch (type)
@@ -24,7 +24,7 @@ if (state == UnknownEnum.Value_223)
     
     with (obj_flush)
     {
-        if (state == UnknownEnum.Value_223 && trigger == other.trigger)
+        if (state == states.flush_idle && trigger == other.trigger)
             _found = true;
     }
     

@@ -6,7 +6,7 @@ if (!attacking && !invincible && lungehurt)
     
     with (p)
     {
-        if (state == UnknownEnum.Value_43 && ds_list_find_index(hitlist, other.id) == -1)
+        if (state == states.lungeattack && ds_list_find_index(hitlist, other.id) == -1)
         {
             ds_list_add(hitlist, other.id);
             

@@ -151,7 +151,7 @@ function scr_player_mach3()
             {
                 sprite_index = spr_machslidestart;
                 scr_soundeffect(89);
-                state = UnknownEnum.Value_105;
+                state = states.machslide;
                 image_index = 0;
                 launched = false;
             }
@@ -160,16 +160,16 @@ function scr_player_mach3()
             {
                 scr_soundeffect(86);
                 sprite_index = spr_mach3boost;
-                state = UnknownEnum.Value_105;
+                state = states.machslide;
                 image_index = 0;
             }
             
             if (key_down && fightball == false)
             {
-                particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-                create_particle(x, y, UnknownEnum.Value_5, 0);
+                particle_set_scale(particles.jumpdust, xscale, 1);
+                create_particle(x, y, particles.jumpdust, 0);
                 flash = false;
-                state = UnknownEnum.Value_5;
+                state = states.tumble;
                 image_index = 0;
                 vsp = 10;
                 
@@ -189,13 +189,13 @@ function scr_player_mach3()
                 if (vsp > 0)
                     wallspeed -= vsp;
                 
-                state = UnknownEnum.Value_37;
+                state = states.climbwall;
             }
             
             if (!grounded && place_meeting(x + sign(hsp), y, obj_climbablewall) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_metalblock))
             {
                 wallspeed = movespeed;
-                state = UnknownEnum.Value_37;
+                state = states.climbwall;
             }
             
             if (key_slap2)
@@ -204,7 +204,7 @@ function scr_player_mach3()
                 suplexmove = true;
                 suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0);
                 sfx_gain(suplexdashsnd);
-                state = UnknownEnum.Value_42;
+                state = states.handstandjump;
                 
                 if (movespeed < 5)
                     movespeed = 5;
@@ -247,7 +247,7 @@ function scr_player_mach3()
                         scr_soundeffect(28);
                         hsp = 0;
                         flash = false;
-                        state = UnknownEnum.Value_106;
+                        state = states.bump;
                         hsp = -6 * xscale;
                         vsp = -6;
                         mach2 = 0;
@@ -265,7 +265,7 @@ function scr_player_mach3()
                             scr_soundeffect(28);
                             hsp = 0;
                             flash = false;
-                            state = UnknownEnum.Value_106;
+                            state = states.bump;
                             hsp = -6 * xscale;
                             vsp = -6;
                             mach2 = 0;
@@ -428,7 +428,7 @@ function scr_player_mach3()
             {
                 sprite_index = spr_machslidestart;
                 scr_soundeffect(89);
-                state = UnknownEnum.Value_105;
+                state = states.machslide;
                 image_index = 0;
             }
             
@@ -436,23 +436,23 @@ function scr_player_mach3()
             {
                 scr_soundeffect(86);
                 sprite_index = spr_mach3boost;
-                state = UnknownEnum.Value_105;
+                state = states.machslide;
                 image_index = 0;
             }
             
             if (key_down && fightball == false && !place_meeting(x, y, obj_dashpad))
             {
-                particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-                create_particle(x, y, UnknownEnum.Value_5, 0);
+                particle_set_scale(particles.jumpdust, xscale, 1);
+                create_particle(x, y, particles.jumpdust, 0);
                 flash = false;
-                state = UnknownEnum.Value_65;
+                state = states.machroll;
                 vsp = 10;
             }
             
             if ((!grounded && place_meeting(x + hsp, y, obj_solid) && (!place_meeting(x + sign(hsp), y, 311 || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_mach3solid))) || (grounded && (place_meeting(x + hsp, y - 32, obj_solid) || scr_solid_slope(x + sign(hsp), y - 32)) && place_meeting(x, y + 1, obj_slope) && !place_meeting(x + hsp, y, obj_mach3solid)))
             {
                 wallspeed = 10;
-                state = UnknownEnum.Value_37;
+                state = states.climbwall;
             }
             
             if ((scr_solid(x + 1, y) && !place_meeting(x + 1, y, obj_mach3solid) && xscale == 1) && !scr_slope() && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (grounded || fightball == true))
@@ -485,7 +485,7 @@ function scr_player_mach3()
                     }
                     
                     flash = false;
-                    state = UnknownEnum.Value_106;
+                    state = states.bump;
                     hsp = -2.5;
                     vsp = -3;
                     mach2 = 0;
@@ -522,7 +522,7 @@ function scr_player_mach3()
                         }
                         
                         flash = false;
-                        state = UnknownEnum.Value_106;
+                        state = states.bump;
                         hsp = -2.5;
                         vsp = -3;
                         mach2 = 0;
@@ -564,7 +564,7 @@ function scr_player_mach3()
                     }
                     
                     flash = false;
-                    state = UnknownEnum.Value_106;
+                    state = states.bump;
                     hsp = 2.5;
                     vsp = -3;
                     mach2 = 0;
@@ -601,7 +601,7 @@ function scr_player_mach3()
                         }
                         
                         flash = false;
-                        state = UnknownEnum.Value_106;
+                        state = states.bump;
                         hsp = -2.5;
                         vsp = -3;
                         mach2 = 0;
@@ -616,7 +616,7 @@ function scr_player_mach3()
             if (key_slap2 && character == "V")
             {
                 vsp = -5;
-                state = UnknownEnum.Value_1;
+                state = states.revolver;
                 image_index = 0;
                 sprite_index = spr_playerV_airrevolver;
                 image_index = 0;
@@ -633,7 +633,7 @@ function scr_player_mach3()
             if (key_shoot2 && character == "V" && !instance_exists(dynamite_inst))
             {
                 vsp = -5;
-                state = UnknownEnum.Value_2;
+                state = states.dynamite;
                 image_index = 0;
                 sprite_index = spr_playerV_dynamitethrow;
                 
@@ -696,7 +696,7 @@ function scr_player_mach3()
             {
                 sprite_index = spr_playerN_pogostart;
                 image_index = 0;
-                state = UnknownEnum.Value_58;
+                state = states.pogo;
                 pogospeed = movespeed;
             }
             
@@ -719,11 +719,11 @@ function scr_player_mach3()
                 scr_soundeffect(99);
                 jumpstop = false;
                 vsp = -15;
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 sprite_index = spr_playerN_noisebombspinjump;
                 image_index = 0;
-                particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-                create_particle(x, y, UnknownEnum.Value_5, 0);
+                particle_set_scale(particles.jumpdust, xscale, 1);
+                create_particle(x, y, particles.jumpdust, 0);
             }
             
             if (key_down && fightball == false && !place_meeting(x, y, obj_dashpad) && grounded)
@@ -733,7 +733,7 @@ function scr_player_mach3()
                 
                 flash = false;
                 sprite_index = spr_playerN_jetpackslide;
-                state = UnknownEnum.Value_65;
+                state = states.machroll;
             }
             
             if (!key_jump2 && jumpstop == false && vsp < 0.5 && fightball == true)
@@ -787,7 +787,7 @@ function scr_player_mach3()
                 }
                 
                 flash = false;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = 2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -846,7 +846,7 @@ function scr_player_mach3()
     if (key_up && fightball == false && character == "P" && grounded && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
     {
         sprite_index = spr_superjumpprep;
-        state = UnknownEnum.Value_99;
+        state = states.Sjumpprep;
         hsp = 0;
         image_index = 0;
     }
@@ -855,7 +855,7 @@ function scr_player_mach3()
     {
         randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
         image_index = 0;
-        state = UnknownEnum.Value_43;
+        state = states.lungeattack;
     }
 }
 

@@ -29,7 +29,7 @@ function scr_player_machslide()
     
     if (floor(movespeed) <= 0 && (sprite_index == spr_machslide || sprite_index == spr_crouchslide))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         image_index = 0;
         
         if (sprite_index == spr_machslide)
@@ -41,7 +41,7 @@ function scr_player_machslide()
     if (place_meeting(x + xscale, y, obj_solid) && (sprite_index == spr_machslide || sprite_index == spr_machslidestart))
     {
         sprite_index = spr_player_wallsplat;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         image_index = 0;
     }
     
@@ -51,7 +51,7 @@ function scr_player_machslide()
         image_index = 0;
         xscale *= -1;
         movespeed = 8;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
     }
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_mach3boost && grounded)
@@ -63,14 +63,14 @@ function scr_player_machslide()
             image_index = 0;
             xscale *= -1;
             movespeed = 12;
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
         }
         else
         {
             xscale *= -1;
             sprite_index = spr_dashpadmach;
             image_index = 0;
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             movespeed = 14;
             launched = true;
             launch = false;
@@ -81,7 +81,7 @@ function scr_player_machslide()
     if (sprite_index == spr_player_crouchslide && movespeed == 0 && grounded)
     {
         facehurt = true;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = spr_facehurtup;
     }
     

@@ -11,7 +11,7 @@ function scr_player_shotgun()
         {
             sprite_index = spr_shotgunidle;
             image_index = 0;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             exit;
         }
         else
@@ -75,14 +75,14 @@ function scr_player_shotgun()
     
     if (!grounded)
     {
-        state = UnknownEnum.Value_57;
+        state = states.shotgunjump;
         sprite_index = spr_shotgunfall;
         image_index = 0;
     }
     else if (input_buffer_jump < 8)
     {
         input_buffer_jump = 8;
-        state = UnknownEnum.Value_57;
+        state = states.shotgunjump;
         sprite_index = spr_shotgunjump;
         image_index = 0;
         jumpstop = false;
@@ -91,14 +91,14 @@ function scr_player_shotgun()
     
     if (grounded && key_down)
     {
-        state = UnknownEnum.Value_67;
+        state = states.shotguncrouch;
         sprite_index = spr_shotgungoduck;
         image_index = 0;
     }
     
     if (key_attack2)
     {
-        state = UnknownEnum.Value_70;
+        state = states.shotgundash;
         sprite_index = spr_shotgunsuplexdash;
         image_index = 0;
         movespeed = 10;
@@ -107,7 +107,7 @@ function scr_player_shotgun()
     if (key_slap2)
     {
         scr_soundeffect(26);
-        state = UnknownEnum.Value_69;
+        state = states.shotgunshoot;
         sprite_index = spr_shotgunshoot;
         image_index = 0;
         

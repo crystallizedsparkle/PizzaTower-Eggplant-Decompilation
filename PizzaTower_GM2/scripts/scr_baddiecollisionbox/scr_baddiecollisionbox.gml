@@ -2,16 +2,16 @@ function baddiecollisionbox_update(argument0)
 {
     var _destroy, _stagger, pepp_grab;
     
-    if (argument0.cutscene == false && argument0.state != UnknownEnum.Value_10)
+    if (argument0.cutscene == false && argument0.state != states.firemouth)
     {
         with (argument0)
         {
             _destroy = false;
             _stagger = false;
             
-            if (instance_exists(other.baddieID) && instakillmove == true && other.baddieID.state != UnknownEnum.Value_4 && other.baddieID.thrown == false && !other.baddieID.invincible && other.baddieID.instantkillable)
+            if (instance_exists(other.baddieID) && instakillmove == true && other.baddieID.state != states.grabbed && other.baddieID.thrown == false && !other.baddieID.invincible && other.baddieID.instantkillable)
             {
-                if (state == UnknownEnum.Value_121 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
+                if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
                 {
                     if (fightball == false)
                         sprite_index = spr_mach3hit;
@@ -19,20 +19,20 @@ function baddiecollisionbox_update(argument0)
                     image_index = 0;
                     _destroy = true;
                 }
-                else if (state == UnknownEnum.Value_97 || (state == UnknownEnum.Value_108 && freefallsmash > 10))
+                else if (state == states.Sjump || (state == states.freefall && freefallsmash > 10))
                 {
                     _destroy = true;
                 }
                 
-                if ((state == UnknownEnum.Value_104 || state == UnknownEnum.Value_65) && grounded)
+                if ((state == states.mach2 || state == states.machroll) && grounded)
                 {
                     machpunchAnim = true;
                     image_index = 0;
                 }
                 
-                if (!grounded && state != UnknownEnum.Value_108 && key_jump2)
+                if (!grounded && state != states.freefall && key_jump2)
                 {
-                    if (state == UnknownEnum.Value_104 || (state == UnknownEnum.Value_121 && fightball == false))
+                    if (state == states.mach2 || (state == states.mach3 && fightball == false))
                         sprite_index = spr_mach2jump;
                     
                     suplexmove = false;
@@ -45,10 +45,10 @@ function baddiecollisionbox_update(argument0)
                     {
                         _stagger = true;
                         
-                        if (state == UnknownEnum.Value_108 && freefallsmash < 10)
+                        if (state == states.freefall && freefallsmash < 10)
                         {
                             vsp = -11;
-                            state = UnknownEnum.Value_92;
+                            state = states.jump;
                             sprite_index = spr_jump;
                         }
                     }
@@ -58,10 +58,10 @@ function baddiecollisionbox_update(argument0)
                     }
                 }
                 
-                if (character == "M" && state == UnknownEnum.Value_108)
+                if (character == "M" && state == states.freefall)
                 {
                     vsp = -11;
-                    state = UnknownEnum.Value_92;
+                    state = states.jump;
                     sprite_index = spr_jump;
                 }
                 
@@ -72,7 +72,7 @@ function baddiecollisionbox_update(argument0)
                         with (other.baddieID)
                         {
                             elitehit = true;
-                            state = UnknownEnum.Value_138;
+                            state = states.stun;
                             vsp = -7;
                             image_xscale = -other.xscale;
                             hsp = other.xscale * 5;
@@ -92,14 +92,14 @@ function baddiecollisionbox_update(argument0)
                     }
                 }
                 
-                if (_stagger && other.baddieID.state != UnknownEnum.Value_155)
+                if (_stagger && other.baddieID.state != states.staggered)
                 {
                     scr_soundeffect(28);
                     
                     with (other.baddieID)
                     {
-                        hp -= ((state == UnknownEnum.Value_104 || state == UnknownEnum.Value_65) ? 1 : 2);
-                        state = (hp > 0) ? UnknownEnum.Value_155 : UnknownEnum.Value_138;
+                        hp -= ((state == states.mach2 || state == states.machroll) ? 1 : 2);
+                        state = (hp > 0) ? states.staggered : states.stun;
                         stagger_buffer = stagger_max;
                         stagger_dir = other.xscale;
                     }
@@ -108,16 +108,16 @@ function baddiecollisionbox_update(argument0)
             
             pepp_grab = false;
             
-            if (character == "M" && instance_exists(other.baddieID) && (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_92) && state != UnknownEnum.Value_154 && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw && other.baddieID.state == UnknownEnum.Value_155 && other.baddieID.state != UnknownEnum.Value_154 && other.baddieID.state != UnknownEnum.Value_138 && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
+            if (character == "M" && instance_exists(other.baddieID) && (state == states.normal || state == states.jump) && state != states.pummel && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw && other.baddieID.state == states.staggered && other.baddieID.state != states.pummel && other.baddieID.state != states.stun && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
             {
                 other.baddieID.pepperman_grab = true;
                 pepperman_grabID = other.baddieID.id;
-                other.baddieID.state = UnknownEnum.Value_4;
+                other.baddieID.state = states.grabbed;
                 other.baddieID.grabbedby = (object_index == obj_player1) ? 1 : 2;
                 pepp_grab = true;
             }
             
-            if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == false && sprite_index != spr_player_mach2jump && (state == UnknownEnum.Value_92 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_79) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible && other.baddieID.stompable)
+            if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == false && sprite_index != spr_player_mach2jump && (state == states.jump || state == states.mach1 || state == states.grab) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible && other.baddieID.stompable)
             {
                 scr_soundeffect(24);
                 
@@ -135,7 +135,7 @@ function baddiecollisionbox_update(argument0)
                     other.baddieID.image_index = 0;
                     vsp = -14;
                     
-                    if (state != UnknownEnum.Value_79)
+                    if (state != states.grab)
                         sprite_index = spr_stompprep;
                 }
                 else
@@ -145,16 +145,16 @@ function baddiecollisionbox_update(argument0)
                     other.baddieID.image_index = 0;
                     vsp = -9;
                     
-                    if (state != UnknownEnum.Value_79)
+                    if (state != states.grab)
                         sprite_index = spr_stompprep;
                 }
             }
             
-            if (instance_exists(other.baddieID) && !pepp_grab && !_stagger && !_destroy && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer == 0 && other.baddieID.vsp > 0 && state != UnknownEnum.Value_124 && state != UnknownEnum.Value_80 && state != UnknownEnum.Value_91 && state != UnknownEnum.Value_76 && state != UnknownEnum.Value_58 && state != UnknownEnum.Value_105 && state != UnknownEnum.Value_154 && other.baddieID.state != UnknownEnum.Value_4 && other.baddieID.state != UnknownEnum.Value_154 && state != UnknownEnum.Value_108 && state != UnknownEnum.Value_79 && state != UnknownEnum.Value_104 && state != UnknownEnum.Value_42 && state != UnknownEnum.Value_107 && other.baddieID.state != UnknownEnum.Value_141 && state != UnknownEnum.Value_121 && state != UnknownEnum.Value_65 && state != UnknownEnum.Value_37 && other.baddieID.bumpable && !other.baddieID.invincible)
+            if (instance_exists(other.baddieID) && !pepp_grab && !_stagger && !_destroy && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer == 0 && other.baddieID.vsp > 0 && state != states.faceplant && state != states.punch && state != states.tackle && state != states.superslam && state != states.pogo && state != states.machslide && state != states.pummel && other.baddieID.state != states.grabbed && other.baddieID.state != states.pummel && state != states.freefall && state != states.grab && state != states.mach2 && state != states.handstandjump && state != states.hurt && other.baddieID.state != states.chase && state != states.mach3 && state != states.machroll && state != states.climbwall && other.baddieID.bumpable && !other.baddieID.invincible)
             {
                 scr_soundeffect(28);
                 
-                if (state != UnknownEnum.Value_51 && state != UnknownEnum.Value_103 && state != UnknownEnum.Value_102 && character != "M")
+                if (state != states.bombpep && state != states.mach1 && state != states.crouchslide && character != "M")
                     movespeed = 0;
                 
                 other.baddieID.stuntouchbuffer = 50;
@@ -167,19 +167,19 @@ function baddiecollisionbox_update(argument0)
                 
                 other.baddieID.stagger_buffer = other.baddieID.stagger_max;
                 other.baddieID.stagger_dir = xscale;
-                other.baddieID.state = (other.baddieID.hp > 0) ? UnknownEnum.Value_155 : UnknownEnum.Value_138;
+                other.baddieID.state = (other.baddieID.hp > 0) ? states.staggered : states.stun;
                 other.baddieID.image_index = 0;
             }
             
-            if (instance_exists(other.baddieID) && state == UnknownEnum.Value_42 && !other.baddieID.invincible)
+            if (instance_exists(other.baddieID) && state == states.handstandjump && !other.baddieID.invincible)
             {
-                if (other.baddieID.state != UnknownEnum.Value_138)
+                if (other.baddieID.state != states.stun)
                 {
-                    state = UnknownEnum.Value_154;
+                    state = states.pummel;
                     sprite_index = spr_grab;
                     image_speed = 0.35;
                     image_index = 0;
-                    other.baddieID.state = UnknownEnum.Value_154;
+                    other.baddieID.state = states.pummel;
                     other.baddieID.grabbedby = (object_index == obj_player1) ? 1 : 2;
                 }
                 else if (other.baddieID.thrown == false && (character == "P" || character == "N"))
@@ -187,9 +187,9 @@ function baddiecollisionbox_update(argument0)
                     movespeed = 0;
                     image_index = 0;
                     sprite_index = spr_haulingstart;
-                    state = UnknownEnum.Value_79;
+                    state = states.grab;
                     baddiegrabbedID = other.baddieID;
-                    other.baddieID.state = UnknownEnum.Value_4;
+                    other.baddieID.state = states.grabbed;
                     other.baddieID.grabbedby = 1;
                 }
                 else
@@ -204,7 +204,7 @@ function baddiecollisionbox_update(argument0)
                         other.baddieID.hsp = xscale * 6;
                         scr_soundeffect(26);
                         image_index = 0;
-                        state = UnknownEnum.Value_91;
+                        state = states.tackle;
                         baddiegrabbedID = other.baddieID;
                         movespeed = 0;
                         other.baddieID.vsp = -6;
@@ -219,7 +219,7 @@ function baddiecollisionbox_update(argument0)
                     sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch);
                     scr_soundeffect(26);
                     image_index = 0;
-                    state = UnknownEnum.Value_91;
+                    state = states.tackle;
                     movespeed = 0;
                     scr_throwenemy();
                 }

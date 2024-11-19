@@ -1,5 +1,5 @@
 cooldown = 0;
-state = UnknownEnum.Value_0;
+state = states.normal;
 ballID = -4;
 hsp = 0;
 vsp = 0;

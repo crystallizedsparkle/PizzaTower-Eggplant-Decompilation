@@ -33,7 +33,7 @@ function scr_player_slam()
     crouchAnim = true;
     
     if (floor(image_index) == 8)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (move != 0)
         xscale = move;

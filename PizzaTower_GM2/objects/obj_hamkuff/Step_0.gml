@@ -5,21 +5,21 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         break;
     
-    case UnknownEnum.Value_206:
+    case states.blockstance:
         if (!instance_exists(playerid))
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             break;
         }
         
@@ -32,9 +32,9 @@ switch (state)
         {
             with (playerid)
             {
-                if (state == UnknownEnum.Value_152)
+                if (state == states.taxi_police)
                 {
-                    other.state = UnknownEnum.Value_134;
+                    other.state = states.walk;
                 }
                 else if (!launched)
                 {
@@ -49,25 +49,25 @@ switch (state)
                     if (hsp == 0)
                         m = _xs;
                     
-                    if (!(state == UnknownEnum.Value_105 && sprite_index == spr_mach3boost))
+                    if (!(state == states.machslide && sprite_index == spr_mach3boost))
                         hsp_carry = _xs * abs(m);
                     else
                         hsp_carry = -hsp;
                     
-                    if (state == UnknownEnum.Value_121 || (state == UnknownEnum.Value_105 && sprite_index == spr_mach3boost))
+                    if (state == states.mach3 || (state == states.machslide && sprite_index == spr_mach3boost))
                         launch = true;
                     
-                    if (state == UnknownEnum.Value_105 && sprite_index == spr_mach3boost && launch)
+                    if (state == states.machslide && sprite_index == spr_mach3boost && launch)
                         movespeed -= 0.6;
                     
                     freefallsmash = 0;
                     
-                    if (state == UnknownEnum.Value_78 || state == UnknownEnum.Value_37 || state == UnknownEnum.Value_99 || state == UnknownEnum.Value_97 || state == UnknownEnum.Value_123 || y < (other.y - 400))
+                    if (state == states.grind || state == states.climbwall || state == states.Sjumpprep || state == states.Sjump || state == states.Sjumpland || y < (other.y - 400))
                     {
                         scr_soundeffect(28);
                         vsp = -4;
                         hsp = -3 * xscale;
-                        state = UnknownEnum.Value_106;
+                        state = states.bump;
                         sprite_index = spr_bump;
                         image_index = 0;
                     }
@@ -81,7 +81,7 @@ switch (state)
                     {
                         launched = false;
                         other.attract_player = false;
-                        state = UnknownEnum.Value_0;
+                        state = states.normal;
                     }
                     
                     if (other.attract_player)
@@ -90,13 +90,13 @@ switch (state)
                         x = other.x;
                         y = other.y;
                         sprite_index = spr_machfreefall;
-                        state = UnknownEnum.Value_92;
+                        state = states.jump;
                         other.attract_player = false;
                     }
                     
                     if (launched)
                     {
-                        other.state = UnknownEnum.Value_134;
+                        other.state = states.walk;
                         instance_destroy(other);
                         global.combotime = 60;
                     }
@@ -126,44 +126,44 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -171,14 +171,14 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_134)
+if (state != states.walk)
     attract_player = false;
 
 _dis = 300;
 
-if (state == UnknownEnum.Value_134 && obj_player1.isgustavo && !obj_player1.cutscene && obj_player1.state != UnknownEnum.Value_119 && ((distance_to_object(obj_player) < _dis && obj_player1.brick) || distance_to_object(obj_ratmountgroundpound) < _dis || (distance_to_object(obj_brickcomeback) < _dis && instance_exists(obj_brickcomeback) && !obj_brickcomeback.trapped) || distance_to_object(obj_brickball) < _dis))
+if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && obj_player1.state != states.taxi && ((distance_to_object(obj_player) < _dis && obj_player1.brick) || distance_to_object(obj_ratmountgroundpound) < _dis || (distance_to_object(obj_brickcomeback) < _dis && instance_exists(obj_brickcomeback) && !obj_brickcomeback.trapped) || distance_to_object(obj_brickball) < _dis))
 {
-    state = UnknownEnum.Value_206;
+    state = states.blockstance;
     sprite_index = spr_hamkuff_chain1;
     x1 = obj_player1.x;
     y1 = obj_player1.y;
@@ -214,20 +214,20 @@ if (state == UnknownEnum.Value_134 && obj_player1.isgustavo && !obj_player1.cuts
     {
         brick = false;
         sprite_index = spr_lonegustavo_idle;
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     }
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 enum UnknownEnum

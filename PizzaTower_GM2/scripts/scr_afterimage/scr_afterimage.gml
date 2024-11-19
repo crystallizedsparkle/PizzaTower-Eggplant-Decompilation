@@ -11,7 +11,7 @@ function create_afterimage(argument0, argument1, argument2, argument3)
         alarm: [15, 3, -1],
         image_blend: choose(global.afterimage_color1, global.afterimage_color2),
         image_xscale: 1,
-        identifier: UnknownEnum.Value_0,
+        identifier: afterimages.default_afterimage,
         visible: true,
         alpha: 1
     };
@@ -33,7 +33,7 @@ function create_mach3effect(argument0, argument1, argument2, argument3)
         image_blend: choose(global.mach_color1, global.mach_color2),
         image_xscale: 1,
         visible: true,
-        identifier: UnknownEnum.Value_1,
+        identifier: afterimages.mach3effect,
         playerid: 324,
         alpha: 1
     };
@@ -49,7 +49,7 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
     
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_2;
+        identifier = afterimages.heatattack;
         alarm[1] = -1;
         alarm[2] = -1;
         alarm[0] = 8;
@@ -60,7 +60,7 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
     
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_2;
+        identifier = afterimages.heatattack;
         alarm[1] = -1;
         alarm[2] = -1;
         alarm[0] = 8;
@@ -71,7 +71,7 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
     
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_2;
+        identifier = afterimages.heatattack;
         alarm[1] = -1;
         alarm[2] = -1;
         alarm[0] = 8;
@@ -82,7 +82,7 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
     
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_2;
+        identifier = afterimages.heatattack;
         alarm[1] = -1;
         alarm[2] = -1;
         alarm[0] = 8;
@@ -96,7 +96,7 @@ function create_firemouth_afterimage(argument0, argument1, argument2, argument3,
 {
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_3;
+        identifier = afterimages.firemouth;
         alarm[0] = -1;
         alarm[1] = -1;
         alarm[2] = -1;
@@ -110,7 +110,7 @@ function create_blue_afterimage(argument0, argument1, argument2, argument3, argu
 {
     with (create_afterimage(argument0, argument1, argument2, argument3))
     {
-        identifier = UnknownEnum.Value_4;
+        identifier = afterimages.blue;
         alarm[0] = -1;
         alarm[1] = -1;
         alarm[2] = -1;
@@ -128,7 +128,7 @@ function create_blur_afterimage(argument0, argument1, argument2, argument3, argu
     
     with (b)
     {
-        identifier = UnknownEnum.Value_5;
+        identifier = afterimages.blur;
         alarm[0] = -1;
         alarm[1] = -1;
         alarm[2] = -1;
@@ -139,14 +139,4 @@ function create_blur_afterimage(argument0, argument1, argument2, argument3, argu
     }
     
     return b;
-}
-
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5
 }

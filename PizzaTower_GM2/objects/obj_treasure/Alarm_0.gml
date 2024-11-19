@@ -7,7 +7,7 @@ if (player == 1)
 else if (player == 2)
     p = obj_player2.id;
 
-p.state = UnknownEnum.Value_0;
+p.state = states.normal;
 
 enum UnknownEnum
 {

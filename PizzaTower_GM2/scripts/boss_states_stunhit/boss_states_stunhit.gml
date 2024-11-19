@@ -26,8 +26,8 @@ function state_boss_stun()
     
     if (place_meeting(x - image_xscale, y, obj_solid) && !place_meeting(x - image_xscale, y, obj_destructibles))
     {
-        particle_set_scale(UnknownEnum.Value_8, -image_xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_8, 0);
+        particle_set_scale(particles.impact, -image_xscale, 1);
+        create_particle(x, y, particles.impact, 0);
         
         if (thrown == true && hp <= 0 && destroyable)
             instance_destroy();
@@ -42,7 +42,7 @@ function state_boss_stun()
     {
         image_index = 0;
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
 }
 

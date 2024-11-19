@@ -22,9 +22,9 @@ function scr_player_shotgunshoot()
     if (floor(image_index) == (image_number - 1))
     {
         if (grounded)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         else
-            state = UnknownEnum.Value_92;
+            state = states.jump;
         
         if (move == -xscale)
         {

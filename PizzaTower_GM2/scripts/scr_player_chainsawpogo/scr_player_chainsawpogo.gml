@@ -19,7 +19,7 @@ function scr_player_chainsawpogo()
     if ((scr_solid(x + 1, y) && xscale == 1) && !place_meeting(x + sign(hsp), y, obj_slope))
     {
         machhitAnim = false;
-        state = UnknownEnum.Value_41;
+        state = states.chainsawbump;
         hsp = -2.5;
         vsp = -3;
         mach2 = 0;
@@ -29,7 +29,7 @@ function scr_player_chainsawpogo()
     else if ((scr_solid(x - 1, y) && xscale == -1) && !place_meeting(x + sign(hsp), y, obj_slope))
     {
         machhitAnim = false;
-        state = UnknownEnum.Value_41;
+        state = states.chainsawbump;
         hsp = 2.5;
         vsp = -3;
         mach2 = 0;
@@ -40,7 +40,7 @@ function scr_player_chainsawpogo()
     if (!key_down)
     {
         sprite_index = spr_player_chainsawair;
-        state = UnknownEnum.Value_61;
+        state = states.chainsaw;
     }
     
     if (sprite_index != spr_player_chainsawpogobounce)

@@ -5,52 +5,52 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -58,16 +58,16 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 scr_scareenemy();
@@ -77,21 +77,21 @@ if (bombreset > 0)
 
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
 
-if (x != targetplayer.x && state != UnknownEnum.Value_129 && obj_player.state != UnknownEnum.Value_5 && bombreset <= 0 && grounded)
+if (x != targetplayer.x && state != states.enemy_throw && obj_player.state != states.tumble && bombreset <= 0 && grounded)
 {
     if ((targetplayer.x > (x - 80) && targetplayer.x < (x + 80)) && (y <= (targetplayer.y + 100) && y >= (targetplayer.y - 100)))
     {
-        if (state == UnknownEnum.Value_134)
+        if (state == states.walk)
         {
             image_index = 0;
             sprite_index = spr_pepgoblin_kick;
             image_xscale = -sign(x - targetplayer.x);
-            state = UnknownEnum.Value_129;
+            state = states.enemy_throw;
         }
     }
 }
 
-if (grounded && state == UnknownEnum.Value_129 && floor(image_index) == 3)
+if (grounded && state == states.enemy_throw && floor(image_index) == 3)
     vsp = -5;
 
 if (boundbox == false)

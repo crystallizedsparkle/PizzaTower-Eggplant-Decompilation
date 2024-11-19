@@ -1,4 +1,4 @@
-if (obj_player1.state == UnknownEnum.Value_208)
+if (obj_player1.state == states.debugstate)
     exit;
 
 with (other)

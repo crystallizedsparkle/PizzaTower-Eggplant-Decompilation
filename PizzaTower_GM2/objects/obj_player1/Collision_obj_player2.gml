@@ -1,11 +1,11 @@
-if (other.cutscene == false && other.state != UnknownEnum.Value_146 && state != UnknownEnum.Value_146 && other.state != UnknownEnum.Value_186 && state != UnknownEnum.Value_186)
+if (other.cutscene == false && other.state != states.actor && state != states.actor && other.state != states.gotoplayer && state != states.gotoplayer)
 {
-    if (hurted == false && other.hurted == false && fightballadvantage == true && (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80) && (other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_80))
+    if (hurted == false && other.hurted == false && fightballadvantage == true && (state == states.handstandjump || state == states.punch) && (other.state == states.handstandjump || other.state == states.punch))
     {
         if (object_index == obj_player1)
         {
-            obj_player1.state = UnknownEnum.Value_121;
-            obj_player2.state = UnknownEnum.Value_4;
+            obj_player1.state = states.mach3;
+            obj_player2.state = states.grabbed;
             obj_player2.xscale = xscale;
             obj_player1.depth = -7;
             obj_player2.depth = -6;
@@ -13,8 +13,8 @@ if (other.cutscene == false && other.state != UnknownEnum.Value_146 && state != 
         
         if (object_index == obj_player2)
         {
-            obj_player2.state = UnknownEnum.Value_121;
-            obj_player1.state = UnknownEnum.Value_4;
+            obj_player2.state = states.mach3;
+            obj_player1.state = states.grabbed;
             obj_player1.xscale = xscale;
             obj_player1.depth = -6;
             obj_player2.depth = -7;
@@ -30,29 +30,29 @@ if (other.cutscene == false && other.state != UnknownEnum.Value_146 && state != 
     
     with (obj_player2)
     {
-        if (state == UnknownEnum.Value_42 && other.hurted == false && other.state != UnknownEnum.Value_107 && other.state != UnknownEnum.Value_38 && other.state != UnknownEnum.Value_47 && other.state != UnknownEnum.Value_5 && other.state != UnknownEnum.Value_9 && other.state != UnknownEnum.Value_51 && other.cutscene == false && other.hurted == false && hurted == false && !(other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_80))
+        if (state == states.handstandjump && other.hurted == false && other.state != states.hurt && other.state != states.knightpepslopes && other.state != states.knightpep && other.state != states.tumble && other.state != states.fireass && other.state != states.bombpep && other.cutscene == false && other.hurted == false && hurted == false && !(other.state == states.handstandjump || other.state == states.punch))
         {
             movespeed = 0;
             image_index = 0;
             sprite_index = spr_haulingstart;
             baddiegrabbedID = other.id;
-            state = UnknownEnum.Value_79;
-            other.state = UnknownEnum.Value_4;
+            state = states.grab;
+            other.state = states.grabbed;
             obj_player1.depth = -6;
             obj_player2.depth = -7;
         }
         
-        if (state == UnknownEnum.Value_108 && other.hurted == false && other.state != UnknownEnum.Value_59 && other.state != UnknownEnum.Value_107 && hurted == false)
+        if (state == states.freefall && other.hurted == false && other.state != states.stunned && other.state != states.hurt && hurted == false)
         {
             scr_changetoppings();
             obj_player1.depth = -6;
             obj_player2.depth = -7;
-            obj_player1.state = UnknownEnum.Value_59;
+            obj_player1.state = states.stunned;
             obj_player1.sprite_index = obj_player1.spr_squished;
             obj_player1.image_index = 0;
         }
         
-        if (other.state == UnknownEnum.Value_80 && hurted == false && other.hurted == false && !(state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80))
+        if (other.state == states.punch && hurted == false && other.hurted == false && !(state == states.handstandjump || state == states.punch))
         {
             xscale = -other.xscale;
             
@@ -75,7 +75,7 @@ if (other.cutscene == false && other.state != UnknownEnum.Value_146 && state != 
                 shake_mag_acc = 3 / room_speed;
             }
             
-            state = UnknownEnum.Value_107;
+            state = states.hurt;
             x = obj_player1.x;
             y = obj_player1.y;
             alarm[8] = 60;

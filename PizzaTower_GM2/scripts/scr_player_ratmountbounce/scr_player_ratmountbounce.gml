@@ -21,7 +21,7 @@ function scr_player_ratmountbounce()
             if (hsp != 0)
                 xscale = sign(hsp);
             
-            state = UnknownEnum.Value_191;
+            state = states.ratmount;
         }
     }
     else
@@ -36,7 +36,7 @@ function scr_player_ratmountbounce()
         
         if (key_jump && brick)
         {
-            state = UnknownEnum.Value_197;
+            state = states.ratmountgroundpound;
             sprite_index = spr_lonegustavo_jumpstart;
             image_index = 0;
             image_speed = 0.35;
@@ -61,7 +61,7 @@ function scr_player_ratmountbounce()
         
         if (brick && scr_solid(x + sign(hsp), y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
         {
-            state = UnknownEnum.Value_195;
+            state = states.ratmountclimbwall;
             sticktime = 15;
             xscale = sign(hsp);
             landAnim = false;

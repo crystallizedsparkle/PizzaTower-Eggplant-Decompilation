@@ -21,8 +21,8 @@ if (touched && sprite_index == spr_secretportal_close)
         scale_ys = Approach(scale_ys, 0, 0.05);
         fallinganimation = 0;
         
-        if (state == UnknownEnum.Value_104 || state == UnknownEnum.Value_121)
-            state = UnknownEnum.Value_0;
+        if (state == states.mach2 || state == states.mach3)
+            state = states.normal;
     }
     
     with (obj_heatafterimage)

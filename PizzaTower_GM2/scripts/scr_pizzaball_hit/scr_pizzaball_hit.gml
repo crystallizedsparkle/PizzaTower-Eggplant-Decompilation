@@ -16,7 +16,7 @@ function scr_pizzaball_hit()
         with (instance_nearest(x, y, obj_player))
             s = tauntstoredstate;
         
-        if (s != UnknownEnum.Value_104)
+        if (s != states.mach2)
             scr_pizzaball_go_to_thrown(hithsp * 1.5, -12);
         else
             scr_pizzaball_go_to_thrown(hithsp * 0.5, hitvsp * 0.5);
@@ -35,14 +35,14 @@ function scr_pizzaball_grabbed()
     {
         sprite_index = spr_golfidle;
         image_index = 0;
-        state = UnknownEnum.Value_148;
+        state = states.golf;
         golfid = other.id;
         hsp = 0;
         vsp = 0;
     }
     
     player = pl;
-    state = UnknownEnum.Value_148;
+    state = states.golf;
 }
 
 function scr_pizzaball_go_to_thrown(argument0, argument1, argument2 = true)
@@ -59,8 +59,8 @@ function scr_pizzaball_go_to_thrown(argument0, argument1, argument2 = true)
     
     vsp = -jumpspeed;
     bounced = false;
-    state = UnknownEnum.Value_156;
-    substate = UnknownEnum.Value_156;
+    state = states.thrown;
+    substate = states.thrown;
 }
 
 enum UnknownEnum

@@ -1,11 +1,11 @@
-if (place_meeting(x, y, other) && other.state != UnknownEnum.Value_5 && other.state != UnknownEnum.Value_84 && other.state != UnknownEnum.Value_106 && other.y > other.yprevious && other.y < y)
+if (place_meeting(x, y, other) && other.state != states.tumble && other.state != states.backbreaker && other.state != states.bump && other.y > other.yprevious && other.y < y)
 {
     if (!other.isgustavo)
     {
         other.y = y - 49;
-        other.state = UnknownEnum.Value_78;
+        other.state = states.grind;
     }
-    else if (other.state != UnknownEnum.Value_202)
+    else if (other.state != states.ratmountgrind)
     {
         with (other)
         {
@@ -19,7 +19,7 @@ if (place_meeting(x, y, other) && other.state != UnknownEnum.Value_5 && other.st
         }
         
         other.y = y + 8;
-        other.state = UnknownEnum.Value_202;
+        other.state = states.ratmountgrind;
     }
 }
 

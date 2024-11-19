@@ -2,11 +2,11 @@ targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         state_turret_normal();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         state_turret_charge();
         break;
 }

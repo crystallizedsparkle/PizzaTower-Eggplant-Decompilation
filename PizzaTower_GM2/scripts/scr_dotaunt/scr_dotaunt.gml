@@ -12,7 +12,7 @@ function scr_dotaunt()
             tauntstoredvsp = vsp;
             tauntstoredsprite = sprite_index;
             tauntstoredstate = state;
-            state = UnknownEnum.Value_84;
+            state = states.backbreaker;
             
             if (supercharged && key_up)
             {

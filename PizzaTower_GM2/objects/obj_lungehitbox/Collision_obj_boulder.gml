@@ -1,6 +1,6 @@
-if (other.state != UnknownEnum.Value_4 && playerid.state != UnknownEnum.Value_79)
+if (other.state != states.grabbed && playerid.state != states.grab)
 {
-    other.state = UnknownEnum.Value_4;
+    other.state = states.grabbed;
     
     if (playerid.object_index == obj_player1)
         other.grabbedby = 1;
@@ -9,7 +9,7 @@ if (other.state != UnknownEnum.Value_4 && playerid.state != UnknownEnum.Value_79
     
     with (playerid)
     {
-        state = UnknownEnum.Value_79;
+        state = states.grab;
         baddiegrabbedID = other.id;
         grabbingenemy = true;
         movespeed = 0;

@@ -1,12 +1,12 @@
-if (state != UnknownEnum.Value_74)
+if (state != states.throwing)
 {
     pizzaball = false;
     playerid = other.id;
     shot = false;
-    state = UnknownEnum.Value_74;
+    state = states.throwing;
     sprite_index = spr_bigcheese_walk;
     image_index = 0;
-    other.state = UnknownEnum.Value_5;
+    other.state = states.tumble;
     other.sprite_index = other.spr_tumble;
 }
 

@@ -22,7 +22,7 @@ if (turn == 1)
             if (fake && touched)
                 instance_destroy();
             
-            state = UnknownEnum.Value_141;
+            state = states.chase;
             throw_inst = -4;
         }
         

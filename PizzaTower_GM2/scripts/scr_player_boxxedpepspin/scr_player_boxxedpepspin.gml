@@ -39,7 +39,7 @@ function scr_player_boxxedpepspin()
     
     if (!key_slap)
     {
-        state = UnknownEnum.Value_35;
+        state = states.boxxedpepjump;
         sprite_index = spr_boxxedpepair;
     }
 }

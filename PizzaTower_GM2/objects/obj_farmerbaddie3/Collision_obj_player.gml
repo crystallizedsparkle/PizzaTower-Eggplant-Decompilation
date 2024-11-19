@@ -1,18 +1,18 @@
 var _pindex;
 
-if (state == UnknownEnum.Value_80)
+if (state == states.punch)
 {
     with (other)
     {
-        if (state != UnknownEnum.Value_3 && state != UnknownEnum.Value_89 && state != UnknownEnum.Value_31 && state != UnknownEnum.Value_186)
+        if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
         {
             _pindex = (object_index == obj_player1) ? 0 : 1;
             GamepadSetVibration(_pindex, 1, 1, 0.85);
             
-            if (state != UnknownEnum.Value_9)
-                tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", UnknownEnum.Value_2, 550, 3), "fireass");
+            if (state != states.fireass)
+                tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt_type.transformation, 550, 3), "fireass");
             
-            state = UnknownEnum.Value_9;
+            state = states.fireass;
             vsp = -25;
             sprite_index = spr_fireass;
             image_index = 0;

@@ -30,7 +30,7 @@ function scr_player_grabbing()
     {
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0);
         sfx_gain(suplexdashsnd);
-        state = UnknownEnum.Value_55;
+        state = states.grabbing;
         image_index = 0;
         vsp = 0;
         sprite_index = spr_player_suplexdash;
@@ -39,18 +39,18 @@ function scr_player_grabbing()
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale;
         
-        particle_set_scale(UnknownEnum.Value_2, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_2, 0);
+        particle_set_scale(particles.crazyrunothereffect, xscale, 1);
+        create_particle(x, y, particles.crazyrunothereffect, 0);
     }
     
     if (sprite_index == airattackdash && floor(image_index) == (image_number - 1))
     {
         sprite_index = spr_fall;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
     }
     
     if (floor(image_index) == (image_number - 1) && (sprite_index == attackdash || sprite_index == spr_player_Sjump))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == airattackdashstart)
         sprite_index = airattackdash;
@@ -62,7 +62,7 @@ function scr_player_grabbing()
         scr_soundeffect(28);
         grav = 0.5;
         movespeed = 0;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -2.5;
         vsp = -3;
         mach2 = 0;
@@ -77,7 +77,7 @@ function scr_player_grabbing()
         scr_soundeffect(28);
         grav = 0.5;
         movespeed = 0;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = 2.5;
         vsp = -3;
         mach2 = 0;
@@ -103,11 +103,11 @@ function scr_player_grabbing()
         {
             sprite_index = spr_player_suplexcancel;
             grav = 0.5;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             grav = 0.5;
         }
     }

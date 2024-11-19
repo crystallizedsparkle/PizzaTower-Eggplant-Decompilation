@@ -11,7 +11,7 @@ function scr_player_bee()
     if (bee_buffer > 0)
         bee_buffer--;
     else
-        state = UnknownEnum.Value_0;
+        state = states.normal;
 }
 
 enum UnknownEnum

@@ -13,19 +13,19 @@ function scr_player_grind()
     {
         if (movespeed < 12 || skateboarding)
         {
-            state = UnknownEnum.Value_104;
+            state = states.mach2;
             sprite_index = spr_mach2jump;
         }
         else
         {
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             sprite_index = spr_mach3jump;
         }
     }
     
     if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x, y + 18, obj_grindrailslope) && !place_meeting(x, y + 1, obj_slope))
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -xscale * 5;
         vsp = 1;
     }
@@ -43,12 +43,12 @@ function scr_player_grind()
         
         if (movespeed < 12 || skateboarding)
         {
-            state = UnknownEnum.Value_104;
+            state = states.mach2;
             sprite_index = spr_mach2jump;
         }
         else
         {
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             sprite_index = spr_mach3jump;
         }
     }

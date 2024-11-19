@@ -22,7 +22,7 @@ function scr_player_thrown()
     
     if (grounded && vsp > 0 && sprite_index != spr_player_outofpizza1 && sprite_index != spr_player_outofpizza2 && sprite_index != spr_player_outofpizza3 && sprite_index != spr_player_outofpizza4)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         movespeed = 0;
         sprite_index = spr_idle;
         inv_frames = true;

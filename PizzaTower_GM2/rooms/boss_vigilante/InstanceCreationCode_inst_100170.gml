@@ -1,4 +1,4 @@
-attack = UnknownEnum.Value_1;
+attack = states.revolver;
 
 enum UnknownEnum
 {

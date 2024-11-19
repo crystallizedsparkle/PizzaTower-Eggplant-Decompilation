@@ -1,6 +1,6 @@
-if (active && other.state != UnknownEnum.Value_216)
+if (active && other.state != states.spiderweb)
 {
-    other.state = UnknownEnum.Value_216;
+    other.state = states.spiderweb;
     other.webID = id;
 }
 

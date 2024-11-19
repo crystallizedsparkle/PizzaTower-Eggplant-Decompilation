@@ -6,7 +6,7 @@ with (other)
 {
     if (!scr_transformationcheck())
     {
-        if (state == UnknownEnum.Value_11 || state == UnknownEnum.Value_12 || state == UnknownEnum.Value_14 || state == UnknownEnum.Value_12 || state == UnknownEnum.Value_33 || state == UnknownEnum.Value_35 || state == UnknownEnum.Value_34)
+        if (state == states.mort || state == states.mortjump || state == states.morthook || state == states.mortjump || state == states.boxxedpep || state == states.boxxedpepjump || state == states.boxxedpepspin)
         {
             if (hsp != 0)
                 xscale = sign(hsp);
@@ -14,10 +14,10 @@ with (other)
             movespeed = abs(hsp);
         }
         
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         dir = xscale;
         _transfo = true;
-        create_particle(x, y, UnknownEnum.Value_9);
+        create_particle(x, y, particles.genericpoofeffect);
     }
 }
 

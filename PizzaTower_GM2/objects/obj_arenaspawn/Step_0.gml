@@ -2,10 +2,10 @@ var i, b, _doorfinish;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         if (obj_player1.x <= x)
         {
-            state = UnknownEnum.Value_145;
+            state = states.arena_round;
             round_count = 10;
             
             with (obj_arenagate)
@@ -25,9 +25,9 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_144:
+    case states.arena_intro:
         with (obj_player)
-            state = UnknownEnum.Value_46;
+            state = states.gottreasure;
         
         if (cutscene_count > 0)
         {
@@ -37,25 +37,25 @@ switch (state)
         {
             with (obj_player)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 image_index = 0;
             }
             
-            state = UnknownEnum.Value_145;
+            state = states.arena_round;
             round_count = 10;
         }
         
         break;
     
-    case UnknownEnum.Value_145:
+    case states.arena_round:
         if (round_count > 0)
             round_count--;
         else
-            state = UnknownEnum.Value_142;
+            state = states.arena_spawn;
         
         break;
     
-    case UnknownEnum.Value_142:
+    case states.arena_spawn:
         if (!ds_list_empty(baddielist))
         {
             for (i = 0; i < ds_list_size(baddielist); i++)
@@ -87,7 +87,7 @@ switch (state)
         wave_minutes = minutes;
         wave_seconds = seconds;
         round_count = round_max;
-        state = UnknownEnum.Value_143;
+        state = states.arena;
         
         with (obj_arenadoor)
         {
@@ -104,7 +104,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_143:
+    case states.arena:
         _doorfinish = true;
         
         with (obj_arenadoor)
@@ -139,25 +139,25 @@ switch (state)
             }
             else
             {
-                state = UnknownEnum.Value_142;
+                state = states.arena_spawn;
                 round_count = round_max;
             }
         }
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         if (floor(image_index) == (image_number - 1))
-            state = UnknownEnum.Value_98;
+            state = states.victory;
         
         break;
     
-    case UnknownEnum.Value_98:
+    case states.victory:
         instance_destroy();
         break;
 }
 
-if (state != UnknownEnum.Value_0 && state != UnknownEnum.Value_144)
+if (state != states.normal && state != states.arena_intro)
     visible = false;
 
 enum UnknownEnum

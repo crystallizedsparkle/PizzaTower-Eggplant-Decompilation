@@ -13,7 +13,7 @@ if (refresh <= 0)
                 platformid = other.platformid;
             
             image_xscale = other.image_xscale;
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 50;
             vsp = -5;
             other.baddieid = id;

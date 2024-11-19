@@ -7,7 +7,7 @@ if (grounded == true)
         image_xscale = other.image_xscale;
 }
 
-if (state == UnknownEnum.Value_125)
+if (state == states.rage)
     alarm[4] = 5;
 
 enum UnknownEnum

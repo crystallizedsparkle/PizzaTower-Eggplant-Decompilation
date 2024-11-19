@@ -6,7 +6,7 @@ for (i = 0; i < array_length(objectlist); i++)
     
     with (instance_place(x, y, b))
     {
-        create_particle(x, y, UnknownEnum.Value_9);
+        create_particle(x, y, particles.genericpoofeffect);
         instance_destroy();
     }
 }

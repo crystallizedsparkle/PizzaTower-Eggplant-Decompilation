@@ -7,7 +7,7 @@ grav = 0.5;
 grounded = false;
 movespeed = 8;
 event_inherited();
-state = UnknownEnum.Value_217;
+state = states.robot_idle;
 use_hallway = true;
 idlespr = 34;
 walkspr = 2225;

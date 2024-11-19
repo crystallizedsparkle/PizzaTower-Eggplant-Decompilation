@@ -26,7 +26,7 @@ else if (content != -4)
             image_xscale = other.image_xscale;
             image_yscale = other.image_yscale;
             sprite_index = other.sprite_index;
-            create_particle(x, y, UnknownEnum.Value_9, 0);
+            create_particle(x, y, particles.genericpoofeffect, 0);
         }
         
         instance_destroy();

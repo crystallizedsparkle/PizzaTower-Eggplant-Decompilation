@@ -114,7 +114,7 @@ function scr_player_ratmountjump()
         
         brick = false;
         movespeed = hsp;
-        state = UnknownEnum.Value_197;
+        state = states.ratmountgroundpound;
         image_index = 0;
         sprite_index = spr_lonegustavo_groundpoundstart;
     }
@@ -139,7 +139,7 @@ function scr_player_ratmountjump()
     
     if (key_jump && brick)
     {
-        state = UnknownEnum.Value_197;
+        state = states.ratmountgroundpound;
         sprite_index = spr_lonegustavo_jumpstart;
         image_index = 0;
         image_speed = 0.35;
@@ -155,7 +155,7 @@ function scr_player_ratmountjump()
     
     if (key_jump2 && grounded && brick && vsp > 0)
     {
-        state = UnknownEnum.Value_198;
+        state = states.ratmountbounce;
         sprite_index = spr_player_ratmountbounce;
         image_index = 0;
         tauntstoredvsp = -14;
@@ -164,8 +164,8 @@ function scr_player_ratmountjump()
     else if (grounded && vsp > 0)
     {
         doublejump = false;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
-        state = UnknownEnum.Value_191;
+        create_particle(x, y, states.mortjump, 0);
+        state = states.ratmount;
         landAnim = true;
         jumpstop = false;
         

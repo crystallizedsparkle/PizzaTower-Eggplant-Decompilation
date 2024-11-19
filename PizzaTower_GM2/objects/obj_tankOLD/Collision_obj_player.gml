@@ -2,11 +2,11 @@ var baddie, _xs;
 
 baddie = id;
 
-if (state != UnknownEnum.Value_141)
+if (state != states.chase)
 {
     with (other)
     {
-        if (y < other.y && attacking == false && sprite_index != spr_player_mach2jump && ((state == UnknownEnum.Value_3 && vsp > 0) || state == UnknownEnum.Value_92 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_79) && vsp > 0 && other.vsp >= 0 && sprite_index != spr_stompprep)
+        if (y < other.y && attacking == false && sprite_index != spr_player_mach2jump && ((state == states.boots && vsp > 0) || state == states.jump || state == states.mach1 || state == states.grab) && vsp > 0 && other.vsp >= 0 && sprite_index != spr_stompprep)
         {
             scr_soundeffect(24);
             image_index = 0;
@@ -17,7 +17,7 @@ if (state != UnknownEnum.Value_141)
                 stompAnim = true;
                 vsp = -14;
                 
-                if (state == UnknownEnum.Value_92)
+                if (state == states.jump)
                     sprite_index = spr_stompprep;
             }
             else
@@ -26,16 +26,16 @@ if (state != UnknownEnum.Value_141)
                 stompAnim = true;
                 vsp = -9;
                 
-                if (state == UnknownEnum.Value_92)
+                if (state == states.jump)
                     sprite_index = spr_stompprep;
             }
         }
         
-        if (y >= other.y && other.thrown == false && other.stuntouchbuffer == 0 && other.vsp > 0 && state != UnknownEnum.Value_106 && other.state != UnknownEnum.Value_141)
+        if (y >= other.y && other.thrown == false && other.stuntouchbuffer == 0 && other.vsp > 0 && state != states.bump && other.state != states.chase)
         {
             scr_soundeffect(28);
             
-            if (state != UnknownEnum.Value_51 && state != UnknownEnum.Value_103 && state != UnknownEnum.Value_102)
+            if (state != states.bombpep && state != states.mach1 && state != states.crouchslide)
                 movespeed = 0;
             
             _xs = sign(x - baddie.x);
@@ -44,7 +44,7 @@ if (state != UnknownEnum.Value_141)
                 _xs = xscale;
             
             hsp = 3 * _xs;
-            state = UnknownEnum.Value_106;
+            state = states.bump;
             xscale = -_xs;
             sprite_index = spr_bump;
             vsp = -4;
@@ -55,9 +55,9 @@ else
 {
     with (other)
     {
-        if (state != UnknownEnum.Value_59)
+        if (state != states.stunned)
         {
-            state = UnknownEnum.Value_59;
+            state = states.stunned;
             sprite_index = spr_squished;
             image_index = 0;
             scr_losepoints();

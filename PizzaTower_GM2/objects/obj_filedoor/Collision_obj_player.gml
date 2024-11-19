@@ -4,7 +4,7 @@ _actor = false;
 
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_146)
+    if (state == states.actor)
         _actor = true;
 }
 
@@ -13,9 +13,9 @@ if (_actor)
 
 with (other)
 {
-    if (key_up && grounded && ((character != "M" && y == (other.y + 50)) || (character == "M" && y == (other.y + 55))) && !instance_exists(obj_fadeout) && state != UnknownEnum.Value_112 && state != UnknownEnum.Value_95 && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
+    if (key_up && grounded && ((character != "M" && y == (other.y + 50)) || (character == "M" && y == (other.y + 55))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
     {
-        if (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_58 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_99)
+        if (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep)
         {
             global.currentsavefile = other.file;
             obj_player1.lastroom = room;
@@ -35,7 +35,7 @@ with (other)
             obj_player2.targetDoor = other.targetDoor;
             obj_player2.targetRoom = other.targetRoom;
             obj_player.image_index = 0;
-            obj_player.state = UnknownEnum.Value_112;
+            obj_player.state = states.door;
             obj_player.mach2 = 0;
             
             if (instance_exists(obj_player2) && global.coop == true)
@@ -56,7 +56,7 @@ with (other)
             other.visited = true;
             instance_create(x, y, obj_fadeout);
         }
-        else if (state == UnknownEnum.Value_183)
+        else if (state == states.bombdelete)
         {
             instance_create(x, y, obj_bombexplosion);
             str = concat("saveData", other.file, ".ini");

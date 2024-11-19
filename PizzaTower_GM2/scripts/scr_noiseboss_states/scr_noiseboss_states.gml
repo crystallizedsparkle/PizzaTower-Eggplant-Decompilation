@@ -20,7 +20,7 @@ function get_attack()
     var chance, c, minphase, p;
     
     chance = irandom(100) > 40;
-    c = UnknownEnum.Value_0;
+    c = states.normal;
     
     if (chance)
     {
@@ -42,7 +42,7 @@ function boss_noise_do_attack()
     targetstunned = 0;
     state = current_attack;
     attack_cooldown = attack_max[phase - 1];
-    current_behaviour = UnknownEnum.Value_0;
+    current_behaviour = states.normal;
     image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : image_xscale;
     
     if (!angry)
@@ -55,14 +55,14 @@ function noise_do_attack_normal()
 {
     switch (state)
     {
-        case UnknownEnum.Value_42:
+        case states.handstandjump:
             slide = irandom(100) > 50;
             movespeed = 15;
             sprite_index = spr_playerN_spin;
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_92:
+        case states.jump:
             slidejump = 1;
             movespeed = 6;
             vsp = -11;
@@ -70,28 +70,28 @@ function noise_do_attack_normal()
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_77:
+        case states.skateboard:
             skateboard_turns = 0;
             movespeed = 0;
             sprite_index = spr_playerN_mach1;
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_167:
-            state = UnknownEnum.Value_77;
+        case states.skateboard_turn:
+            state = states.skateboard;
             skateboard_turns = 1;
             movespeed = 0;
             sprite_index = spr_playerN_mach1;
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_168:
-            state = UnknownEnum.Value_74;
+        case states.bombkick:
+            state = states.throwing;
             sprite_index = spr_playerN_noisebombkick;
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_74:
+        case states.throwing:
             sprite_index = spr_playerN_noisebombthrow;
             image_index = 0;
             
@@ -103,8 +103,8 @@ function noise_do_attack_normal()
             
             break;
         
-        case UnknownEnum.Value_169:
-            state = UnknownEnum.Value_58;
+        case states.bombpogo:
+            state = states.pogo;
             bombpogo = true;
             pogospeed = 0;
             pogospeedprev = false;
@@ -112,7 +112,7 @@ function noise_do_attack_normal()
             pogo_buffer = pogo_max + (room_speed * irandom(pogo_random));
             break;
         
-        case UnknownEnum.Value_58:
+        case states.pogo:
             bombpogo = false;
             pogospeed = 0;
             pogospeedprev = false;
@@ -120,31 +120,31 @@ function noise_do_attack_normal()
             pogo_buffer = pogo_max + (room_speed * irandom(pogo_random));
             break;
         
-        case UnknownEnum.Value_172:
-            state = UnknownEnum.Value_170;
+        case states.jetpackcancel:
+            state = states.jetpackstart;
             jetpackcancel = true;
             sprite_index = spr_playerN_jetpackstart;
             image_index = 0;
             movespeed = 0;
             break;
         
-        case UnknownEnum.Value_170:
+        case states.jetpackstart:
             jetpackcancel = false;
             sprite_index = spr_playerN_jetpackstart;
             image_index = 0;
             movespeed = 0;
             break;
         
-        case UnknownEnum.Value_173:
+        case states.jetpackspin:
             movespeed = 10;
-            state = UnknownEnum.Value_173;
+            state = states.jetpackspin;
             scr_soundeffect(12);
             scr_soundeffect(99);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
-            particle_set_scale(UnknownEnum.Value_5, image_xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            particle_set_scale(particles.jumpdust, image_xscale, 1);
+            create_particle(x, y, particles.jumpdust, 0);
             break;
     }
 }
@@ -153,7 +153,7 @@ function noise_do_attack_angry()
 {
     switch (state)
     {
-        case UnknownEnum.Value_42:
+        case states.handstandjump:
             spinskateboard = false;
             slide = irandom(100) > 50;
             movespeed = 15;
@@ -163,7 +163,7 @@ function noise_do_attack_angry()
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_92:
+        case states.jump:
             spinskateboard = false;
             slidejump = 1;
             slideskateboard = true;
@@ -174,8 +174,8 @@ function noise_do_attack_angry()
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_167:
-            state = UnknownEnum.Value_42;
+        case states.skateboard_turn:
+            state = states.handstandjump;
             slide = false;
             skateboard_turns = 1;
             spinskateboard = true;
@@ -186,8 +186,8 @@ function noise_do_attack_angry()
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_77:
-            state = UnknownEnum.Value_42;
+        case states.skateboard:
+            state = states.handstandjump;
             slide = false;
             spinskateboard = true;
             skateboard_turns = 0;
@@ -198,14 +198,14 @@ function noise_do_attack_angry()
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_168:
+        case states.bombkick:
             bombcount = 1;
-            state = UnknownEnum.Value_74;
+            state = states.throwing;
             sprite_index = spr_playerN_noisebombkick;
             image_index = 0;
             break;
         
-        case UnknownEnum.Value_74:
+        case states.throwing:
             bombcount = 1;
             sprite_index = spr_playerN_noisebombthrow;
             image_index = 0;
@@ -218,8 +218,8 @@ function noise_do_attack_angry()
             
             break;
         
-        case UnknownEnum.Value_169:
-            state = UnknownEnum.Value_58;
+        case states.bombpogo:
+            state = states.pogo;
             bombpogo = true;
             pogospeed = 0;
             pogospeedprev = false;
@@ -227,7 +227,7 @@ function noise_do_attack_angry()
             pogo_buffer = pogo_max + (room_speed * irandom(pogo_random));
             break;
         
-        case UnknownEnum.Value_58:
+        case states.pogo:
             bombpogo = false;
             pogospeed = 0;
             pogospeedprev = false;
@@ -235,33 +235,33 @@ function noise_do_attack_angry()
             pogo_buffer = pogo_max + (room_speed * irandom(pogo_random));
             break;
         
-        case UnknownEnum.Value_172:
+        case states.jetpackcancel:
             jumpcount = 1;
-            state = UnknownEnum.Value_170;
+            state = states.jetpackstart;
             jetpackcancel = true;
             sprite_index = spr_playerN_jetpackstart;
             image_index = 0;
             movespeed = 0;
             break;
         
-        case UnknownEnum.Value_170:
+        case states.jetpackstart:
             jetpackcancel = false;
             sprite_index = spr_playerN_jetpackstart;
             image_index = 0;
             movespeed = 0;
             break;
         
-        case UnknownEnum.Value_173:
+        case states.jetpackspin:
             jumpcount = 1;
             movespeed = 10;
-            state = UnknownEnum.Value_173;
+            state = states.jetpackspin;
             scr_soundeffect(12);
             scr_soundeffect(99);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
-            particle_set_scale(UnknownEnum.Value_5, image_xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            particle_set_scale(particles.jumpdust, image_xscale, 1);
+            create_particle(x, y, particles.jumpdust, 0);
             break;
     }
 }
@@ -354,7 +354,7 @@ function noise_behaviour_close()
     
     boss_decide_taunt(220);
     
-    if (state != UnknownEnum.Value_84)
+    if (state != states.backbreaker)
     {
         if (dx < 192 && attack_cooldown == -1)
             boss_noise_do_attack();
@@ -367,7 +367,7 @@ function noise_behaviour_anywhere()
     sprite_index = idlespr;
     boss_decide_taunt(220);
     
-    if (state != UnknownEnum.Value_84)
+    if (state != states.backbreaker)
         boss_noise_do_attack();
 }
 
@@ -383,7 +383,7 @@ function noise_behaviour_far()
     {
         i = 0;
         
-        while (current_behaviour == UnknownEnum.Value_2)
+        while (current_behaviour == states.dynamite)
         {
             attack_cooldown = 0;
             boss_noise_decide_attack();
@@ -405,19 +405,19 @@ function boss_noise_normal()
     
     switch (current_behaviour)
     {
-        case UnknownEnum.Value_0:
+        case states.normal:
             noise_behaviour_none();
             break;
         
-        case UnknownEnum.Value_1:
+        case states.revolver:
             noise_behaviour_close();
             break;
         
-        case UnknownEnum.Value_3:
+        case states.boots:
             noise_behaviour_anywhere();
             break;
         
-        case UnknownEnum.Value_2:
+        case states.dynamite:
             noise_behaviour_far();
             break;
     }
@@ -433,13 +433,13 @@ function boss_noise_handstandjump()
     
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         movespeed = 0;
         
         if (slidejump == 1)
         {
             movespeed = 6;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             slidejump = 2;
             sprite_index = spr_playerN_fall;
         }
@@ -447,7 +447,7 @@ function boss_noise_handstandjump()
     
     if (slide && movespeed < 10 && spin_count <= 0)
     {
-        state = UnknownEnum.Value_102;
+        state = states.crouchslide;
         sprite_index = spr_playerN_crouchslip;
         image_index = 0;
         movespeed = 15;
@@ -461,7 +461,7 @@ function boss_noise_handstandjump()
         }
         else if (spinskateboard)
         {
-            state = UnknownEnum.Value_77;
+            state = states.skateboard;
             sprite_index = spr_playerN_mach3;
             image_index = 0;
             movespeed = 16;
@@ -470,7 +470,7 @@ function boss_noise_handstandjump()
         else
         {
             spin_count--;
-            state = UnknownEnum.Value_42;
+            state = states.handstandjump;
             movespeed = 15;
             sprite_index = spr_playerN_spin;
             image_index = 0;
@@ -479,7 +479,7 @@ function boss_noise_handstandjump()
     
     if (place_meeting(x + sign(hsp), y, obj_solid))
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -image_xscale * 6;
         vsp = -4;
         sprite_index = bumpspr;
@@ -499,11 +499,11 @@ function boss_noise_crouchslide()
     else
     {
         movespeed = 0;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         if (slideskateboard)
         {
-            state = UnknownEnum.Value_77;
+            state = states.skateboard;
             skateboard_turns = 1;
             movespeed = 0;
             sprite_index = spr_playerN_mach1;
@@ -513,7 +513,7 @@ function boss_noise_crouchslide()
     
     if (slideskateboard && place_meeting(x + (sign(hsp) * 116), y, obj_solid))
     {
-        state = UnknownEnum.Value_167;
+        state = states.skateboard_turn;
         skateboard_turns = 1;
         movespeed = 12;
         sprite_index = spr_playerN_machslideboost;
@@ -522,7 +522,7 @@ function boss_noise_crouchslide()
     
     if (place_meeting(x + sign(hsp), y, obj_solid))
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -image_xscale * 6;
         vsp = -4;
         sprite_index = bumpspr;
@@ -543,7 +543,7 @@ function boss_noise_jump()
     
     if (slidejump == 1 && vsp >= 0)
     {
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         slide = false;
         sprite_index = spr_playerN_spin;
         image_index = 0;
@@ -552,13 +552,13 @@ function boss_noise_jump()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         if (slidejump == 2)
         {
             slidejump = 0;
             movespeed = 15;
-            state = UnknownEnum.Value_102;
+            state = states.crouchslide;
             image_index = 0;
             sprite_index = spr_playerN_crouchslip;
         }
@@ -575,7 +575,7 @@ function boss_noise_skateboard()
     
     if (skateboard_turns > 0 && place_meeting(x + (sign(hsp) * 116), y, obj_solid))
     {
-        state = UnknownEnum.Value_167;
+        state = states.skateboard_turn;
         movespeed = 12;
         sprite_index = spr_playerN_machslideboost;
         image_index = 0;
@@ -583,7 +583,7 @@ function boss_noise_skateboard()
     
     if (place_meeting(x + sign(hsp), y, obj_solid))
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -image_xscale * 6;
         vsp = -4;
         sprite_index = bumpspr;
@@ -616,7 +616,7 @@ function boss_noise_skateboardturn()
         if (sprite_index == spr_playerN_machslideboost)
         {
             sprite_index = !angry ? spr_playerN_mach1 : spr_playerN_mach3;
-            state = UnknownEnum.Value_77;
+            state = states.skateboard;
             skateboard_turns--;
             movespeed = !angry ? 12 : 15;
             image_xscale *= -1;
@@ -647,13 +647,13 @@ function boss_noise_throwing()
     
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         bombkick = false;
         
         if (bombcount > 0)
         {
             bombcount--;
-            state = UnknownEnum.Value_74;
+            state = states.throwing;
             
             if (sprite_index == spr_playerN_noisebombkick)
             {
@@ -697,7 +697,7 @@ function boss_noise_pogo()
         movespeed = 0;
         pogospeedprev = false;
         sprite_index = pogomach ? spr_playerN_pogobouncemach : spr_playerN_pogobounce;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
     }
     
     if (!pogospeedprev && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach) && floor(image_index) == 4)
@@ -749,7 +749,7 @@ function boss_noise_pogo()
     else if (grounded)
     {
         movespeed = normal_spd;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 
@@ -761,7 +761,7 @@ function boss_noise_jetpackstart()
     
     if (image_index > (image_number - 1))
     {
-        state = UnknownEnum.Value_171;
+        state = states.boss_jetpack;
         movespeed = !angry ? 15 : 20;
         sprite_index = !angry ? spr_playerN_jetpackboost : spr_playerN_crazyrun;
     }
@@ -786,7 +786,7 @@ function boss_noise_jetpack()
     
     if (place_meeting(x + sign(hsp), y, obj_solid))
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -image_xscale * 6;
         vsp = -4;
         sprite_index = bumpspr;
@@ -805,14 +805,14 @@ function boss_noise_jetpack()
         
         if (dx < 200)
         {
-            state = UnknownEnum.Value_173;
+            state = states.jetpackspin;
             scr_soundeffect(12);
             scr_soundeffect(99);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
-            particle_set_scale(UnknownEnum.Value_5, image_xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            particle_set_scale(particles.jumpdust, image_xscale, 1);
+            create_particle(x, y, particles.jumpdust, 0);
         }
     }
 }
@@ -849,21 +849,21 @@ function boss_noise_jetpackspin()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         jetpackcancel = false;
         
         if (jumpcount > 0)
         {
             jumpcount--;
             movespeed = 10;
-            state = UnknownEnum.Value_173;
+            state = states.jetpackspin;
             scr_soundeffect(12);
             scr_soundeffect(99);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
-            particle_set_scale(UnknownEnum.Value_5, image_xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            particle_set_scale(particles.jumpdust, image_xscale, 1);
+            create_particle(x, y, particles.jumpdust, 0);
         }
     }
 }

@@ -4,7 +4,7 @@ if (!instance_exists(ID))
     exit;
 }
 
-if (ID.state != UnknownEnum.Value_80)
+if (ID.state != states.punch)
 {
     instance_destroy();
     ID.breakdanceinst = -4;

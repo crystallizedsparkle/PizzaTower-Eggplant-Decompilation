@@ -63,19 +63,19 @@ function scr_player_mort()
     
     if (!grounded)
     {
-        state = UnknownEnum.Value_12;
+        state = states.mortjump;
         sprite_index = spr_player_mortjump;
     }
     else if (input_buffer_jump < 8)
     {
         input_buffer_jump = 0;
-        state = UnknownEnum.Value_12;
+        state = states.mortjump;
         doublejump = false;
         vsp = -11;
         sprite_index = spr_player_mortjumpstart;
         image_index = 0;
         scr_soundeffect(12);
-        create_particle(x, y, UnknownEnum.Value_5, 0);
+        create_particle(x, y, particles.jumpdust, 0);
     }
     
     mort_attack();
@@ -87,7 +87,7 @@ function mort_attack()
     
     if (key_slap2)
     {
-        state = UnknownEnum.Value_13;
+        state = states.mortattack;
         sprite_index = spr_player_mortattackfront;
         image_index = 0;
         

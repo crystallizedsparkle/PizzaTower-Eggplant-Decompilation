@@ -1,22 +1,22 @@
 with (instance_place(x - 1, y, obj_player))
 {
-    if (state == UnknownEnum.Value_11 && other.eaten == false)
+    if (state == states.mort && other.eaten == false)
     {
         movespeed = abs(movespeed);
         other.eaten = true;
         grav = 0.5;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 
 with (instance_place(x + 1, y, obj_player))
 {
-    if (state == UnknownEnum.Value_11 && other.eaten == false)
+    if (state == states.mort && other.eaten == false)
     {
         movespeed = abs(movespeed);
         other.eaten = true;
         grav = 0.5;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 

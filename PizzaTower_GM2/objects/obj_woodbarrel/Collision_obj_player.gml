@@ -1,4 +1,4 @@
-if ((other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_80) && other.grounded == true)
+if ((other.state == states.handstandjump || other.state == states.punch) && other.grounded == true)
 {
     instance_create(x + (obj_player1.xscale * 40), y, obj_punchdust);
     
@@ -8,16 +8,16 @@ if ((other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_80)
         sprite_index = spr_haulingstart;
         grabbingenemy = true;
         baddiegrabbedID = other.id;
-        state = UnknownEnum.Value_79;
+        state = states.grab;
     }
     
     playerid = other.object_index;
     grabbed = true;
 }
 
-if (other.state == UnknownEnum.Value_104 || other.state == UnknownEnum.Value_121 || (other.state == UnknownEnum.Value_65 && grounded))
+if (other.state == states.mach2 || other.state == states.mach3 || (other.state == states.machroll && grounded))
 {
-    create_particle(x, y, UnknownEnum.Value_9, 0);
+    create_particle(x, y, particles.genericpoofeffect, 0);
     
     with (other)
     {
@@ -25,7 +25,7 @@ if (other.state == UnknownEnum.Value_104 || other.state == UnknownEnum.Value_121
         mask_index = spr_crouchmask;
         x = other.x;
         y = other.y;
-        state = UnknownEnum.Value_113;
+        state = states.barrel;
         sprite_index = spr_barrelroll;
         movespeed = 12;
     }

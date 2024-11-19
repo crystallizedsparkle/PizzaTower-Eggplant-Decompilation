@@ -30,11 +30,11 @@ function scr_player_bump()
             if (!skateboarding)
             {
                 if (sprite_index != spr_rockethitwall || grounded)
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
             }
             else
             {
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
             }
         }
         
@@ -48,7 +48,7 @@ function scr_player_bump()
         vsp = 0;
         
         if (floor(image_index) == (image_number - 1))
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         
         image_speed = 0.35;
     }

@@ -4,11 +4,11 @@ _obj = id;
 
 with (other)
 {
-    if (scr_transformationcheck() || state == UnknownEnum.Value_5)
+    if (scr_transformationcheck() || state == states.tumble)
     {
-        if ((state != UnknownEnum.Value_106 || sprite_index != spr_player_catched) && (state != UnknownEnum.Value_5 || xscale != _obj.image_xscale) && state != UnknownEnum.Value_47 && state != UnknownEnum.Value_38 && state != UnknownEnum.Value_84 && state != UnknownEnum.Value_186)
+        if ((state != states.bump || sprite_index != spr_player_catched) && (state != states.tumble || xscale != _obj.image_xscale) && state != states.knightpep && state != states.knightpepslopes && state != states.backbreaker && state != states.gotoplayer)
         {
-            state = UnknownEnum.Value_5;
+            state = states.tumble;
             xscale = sign(other.image_xscale);
             mask_index = spr_crouchmask;
             movespeed = 14;

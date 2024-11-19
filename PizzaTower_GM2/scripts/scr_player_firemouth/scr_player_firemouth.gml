@@ -207,7 +207,7 @@ function scr_player_firemouth()
     {
         alarm[5] = 2;
         alarm[7] = 60;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         sprite_index = spr_player_idle;
         image_index = 0;
     }

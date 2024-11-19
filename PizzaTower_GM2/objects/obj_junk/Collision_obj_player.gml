@@ -1,4 +1,4 @@
-if (!grabbed && (other.state == UnknownEnum.Value_42 || other.state == UnknownEnum.Value_80 || other.state == UnknownEnum.Value_43) && unpickable == false)
+if (!grabbed && (other.state == states.handstandjump || other.state == states.punch || other.state == states.lungeattack) && unpickable == false)
 {
     instance_create(x + (obj_player1.xscale * 40), y, obj_punchdust);
     
@@ -8,20 +8,20 @@ if (!grabbed && (other.state == UnknownEnum.Value_42 || other.state == UnknownEn
         sprite_index = spr_haulingstart;
         baddiegrabbedID = other.id;
         grabbingenemy = true;
-        state = UnknownEnum.Value_79;
+        state = states.grab;
     }
     
     playerid = other.object_index;
     grabbed = true;
 }
 
-if (!grabbed && !unpickable && !ratgrabbed && other.state == UnknownEnum.Value_193)
+if (!grabbed && !unpickable && !ratgrabbed && other.state == states.ratmountattack)
 {
     ratplayerid = other.id;
     ratgrabbed = true;
-    state = UnknownEnum.Value_205;
+    state = states.ratgrabbed;
     other.ratgrabbedID = id;
-    other.state = UnknownEnum.Value_191;
+    other.state = states.ratmount;
 }
 
 enum UnknownEnum

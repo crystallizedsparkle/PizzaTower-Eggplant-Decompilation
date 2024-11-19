@@ -28,7 +28,7 @@ function timedgate_trigger()
                 important = true;
                 image_xscale = other.image_xscale;
                 image_yscale = other.image_yscale;
-                create_particle(x, y, UnknownEnum.Value_1, 0);
+                create_particle(x, y, particles.cloudeffect, 0);
             }
         }
     }

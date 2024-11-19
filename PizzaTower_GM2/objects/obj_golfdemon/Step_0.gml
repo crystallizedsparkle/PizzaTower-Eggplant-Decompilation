@@ -2,60 +2,60 @@ var targetplayer;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         hsp = 0;
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_141:
+    case states.chase:
         scr_enemy_chase();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
 }
 
-if ((state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126) && sprite_index != spr_golfdemon_idle2)
+if ((state == states.walk || state == states.idle) && sprite_index != spr_golfdemon_idle2)
     sprite_index = spr_golfdemon_idle;
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -66,16 +66,16 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
 if (ragecooldown > 0)
     ragecooldown--;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_141)
+if (state != states.chase)
     momentum = 0;
 
-if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
+if (state == states.walk || state == states.idle)
 {
     targetplayer = instance_nearest(x, y, obj_player);
     
@@ -92,15 +92,15 @@ if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
         if (targetplayer.x != x)
             image_xscale = -sign(x - targetplayer.x);
         
-        state = UnknownEnum.Value_141;
+        state = states.chase;
         sprite_index = spr_golfdemon_walk;
     }
 }
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

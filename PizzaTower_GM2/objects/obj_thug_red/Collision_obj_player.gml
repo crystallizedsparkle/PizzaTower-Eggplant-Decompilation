@@ -3,7 +3,7 @@ var player, baddie, _hsp_multi;
 player = other.id;
 baddie = id;
 
-if (state == UnknownEnum.Value_80 && (image_index > 8 && image_index < 12))
+if (state == states.punch && (image_index > 8 && image_index < 12))
 {
     scr_hurtplayer(player);
 }
@@ -11,9 +11,9 @@ else
 {
     with (other)
     {
-        if (instakillmove == true && baddie.state != UnknownEnum.Value_4 && baddie.thrown == false && !baddie.invincible)
+        if (instakillmove == true && baddie.state != states.grabbed && baddie.thrown == false && !baddie.invincible)
         {
-            if (state == UnknownEnum.Value_121 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
+            if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
             {
                 if (fightball == false)
                     sprite_index = spr_mach3hit;
@@ -21,20 +21,20 @@ else
                 image_index = 0;
             }
             
-            if (state == UnknownEnum.Value_104 && grounded)
+            if (state == states.mach2 && grounded)
             {
                 machpunchAnim = true;
                 image_index = 0;
             }
             
-            if (state != UnknownEnum.Value_107)
+            if (state != states.hurt)
                 baddie.grabbedby = 1;
             else
                 baddie.grabbedby = 2;
             
             scr_soundeffect(46);
             
-            if (state == UnknownEnum.Value_121)
+            if (state == states.mach3)
             {
                 instance_destroy(baddie);
             }
@@ -48,7 +48,7 @@ else
                 
                 baddie.vsp = -8;
                 baddie.stunned = baddie.inv_max;
-                baddie.state = UnknownEnum.Value_138;
+                baddie.state = states.stun;
                 baddie.inv_stun = true;
                 baddie.inv_timer = baddie.inv_max;
                 baddie.hp--;
@@ -64,9 +64,9 @@ else
                 global.heattime = 60;
             }
             
-            if (!grounded && state != UnknownEnum.Value_108 && key_jump2)
+            if (!grounded && state != states.freefall && key_jump2)
             {
-                if (state == UnknownEnum.Value_104 || (state == UnknownEnum.Value_121 && fightball == false))
+                if (state == states.mach2 || (state == states.mach3 && fightball == false))
                     sprite_index = spr_mach2jump;
                 
                 suplexmove = false;

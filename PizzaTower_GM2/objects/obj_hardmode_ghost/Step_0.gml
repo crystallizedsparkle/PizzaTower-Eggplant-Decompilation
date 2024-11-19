@@ -21,7 +21,7 @@ else
         with (instance_create(x, y, content[n]))
         {
             important = true;
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 50;
         }
         

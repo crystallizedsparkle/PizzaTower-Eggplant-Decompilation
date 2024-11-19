@@ -2,12 +2,12 @@ var num, i;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         hsp = 0;
         vsp = 0;
         break;
     
-    case UnknownEnum.Value_135:
+    case states.fall:
         num = instance_place_list(x, y + vsp + 1, 332, global.instancelist, false);
         
         for (i = 0; i < num; i++)
@@ -20,8 +20,8 @@ switch (state)
         if (grounded)
         {
             scr_soundeffect(27);
-            create_particle(x, y, UnknownEnum.Value_12);
-            state = UnknownEnum.Value_92;
+            create_particle(x, y, particles.landcloud);
+            state = states.jump;
             
             with (obj_camera)
             {
@@ -32,11 +32,11 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_92:
+    case states.jump:
         y = Approach(y, ystart, 2);
         
         if (y == ystart)
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         
         break;
 }

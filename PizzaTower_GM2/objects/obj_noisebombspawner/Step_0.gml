@@ -15,7 +15,7 @@ if (floor(image_index) == (image_number - 1) && canthrowbomb == false)
 else
     image_speed = 0.35;
 
-if (!instance_exists(obj_bomb) && obj_player.state != UnknownEnum.Value_51)
+if (!instance_exists(obj_bomb) && obj_player.state != states.bombpep)
     canthrowbomb = true;
 else
     canthrowbomb = false;

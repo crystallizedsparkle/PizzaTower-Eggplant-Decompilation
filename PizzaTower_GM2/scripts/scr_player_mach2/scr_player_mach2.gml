@@ -42,7 +42,7 @@ function scr_player_mach2()
     
     if (key_jump && global.mort == true && sprite_index != spr_mortdoublejump && !grounded && !skateboarding)
     {
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         
         repeat (6)
             create_debris(x, y, 1149);
@@ -114,14 +114,14 @@ function scr_player_mach2()
         if (abs(hsp) >= 12 && skateboarding == false && sprite_index != spr_suplexdash)
         {
             machhitAnim = false;
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             flash = true;
             
             if (sprite_index != spr_rollgetup)
                 sprite_index = spr_mach4;
             
-            particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            particle_set_scale(particles.jumpdust, xscale, 1);
+            create_particle(x, y, particles.jumpdust, 0);
         }
     }
     
@@ -135,13 +135,13 @@ function scr_player_mach2()
         if (vsp > 0)
             wallspeed -= vsp;
         
-        state = UnknownEnum.Value_37;
+        state = states.climbwall;
     }
     
     if (!grounded && place_meeting(x + sign(hsp), y, obj_climbablewall) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_metalblock))
     {
         wallspeed = movespeed;
-        state = UnknownEnum.Value_37;
+        state = states.climbwall;
     }
     
     if (!instance_exists(dashcloudid) && grounded)
@@ -178,10 +178,10 @@ function scr_player_mach2()
     
     if (key_down && !place_meeting(x, y, obj_dashpad))
     {
-        particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_5, 0);
+        particle_set_scale(particles.jumpdust, xscale, 1);
+        create_particle(x, y, particles.jumpdust, 0);
         flash = false;
-        state = UnknownEnum.Value_5;
+        state = states.tumble;
         vsp = 10;
         image_index = 0;
         
@@ -196,7 +196,7 @@ function scr_player_mach2()
     
     if (key_attack && !place_meeting(x + xscale, y, obj_solid) && character == "S" && grounded)
     {
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         movespeed = 0;
     }
     
@@ -212,7 +212,7 @@ function scr_player_mach2()
             
             if (_bump)
             {
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 image_index = 0;
                 sprite_index = spr_player_wallsplat;
             }
@@ -222,20 +222,20 @@ function scr_player_mach2()
     if ((!key_attack && movespeed >= 8 && grounded && skateboarding == false) || (character == "S" && move == 0 && grounded))
     {
         image_index = 0;
-        state = UnknownEnum.Value_105;
+        state = states.machslide;
         scr_soundeffect(89);
         sprite_index = spr_machslidestart;
     }
     else if (!key_attack && movespeed < 8 && grounded && skateboarding == false)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
     
     if (move == -xscale && movespeed >= 8 && grounded && skateboarding == false)
     {
         scr_soundeffect(86);
         image_index = 0;
-        state = UnknownEnum.Value_105;
+        state = states.machslide;
         sprite_index = spr_machslideboost;
     }
     else if (move == -xscale && movespeed < 8 && grounded && skateboarding == false)
@@ -249,14 +249,14 @@ function scr_player_mach2()
     
     if (clowntimer <= 0 && skateboarding == true)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         instance_create(x, y, obj_genericpoofeffect);
     }
     
     if (key_slap2 && character == "V")
     {
         vsp = -5;
-        state = UnknownEnum.Value_1;
+        state = states.revolver;
         image_index = 0;
         sprite_index = spr_playerV_airrevolver;
         image_index = 0;
@@ -273,7 +273,7 @@ function scr_player_mach2()
     if (key_shoot2 && character == "V" && !instance_exists(dynamite_inst))
     {
         vsp = -5;
-        state = UnknownEnum.Value_2;
+        state = states.dynamite;
         image_index = 0;
         sprite_index = spr_playerV_dynamitethrow;
         
@@ -306,7 +306,7 @@ function scr_player_mach2()
         suplexmove = true;
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0);
         sfx_gain(suplexdashsnd);
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         
         if (movespeed < 5)
             movespeed = 5;
@@ -322,7 +322,7 @@ function scr_player_mach2()
     {
         randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
         image_index = 0;
-        state = UnknownEnum.Value_43;
+        state = states.lungeattack;
     }
 }
 

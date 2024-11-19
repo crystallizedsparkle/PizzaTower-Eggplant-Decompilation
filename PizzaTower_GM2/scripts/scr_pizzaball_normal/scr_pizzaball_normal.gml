@@ -127,7 +127,7 @@ function scr_pizzaball_normal()
 function scr_pizzaball_roll()
 {
     kicked = false;
-    state = UnknownEnum.Value_0;
+    state = states.normal;
 }
 
 enum UnknownEnum

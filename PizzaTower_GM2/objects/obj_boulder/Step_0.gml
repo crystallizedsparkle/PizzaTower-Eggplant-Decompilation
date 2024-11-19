@@ -2,14 +2,14 @@ var _inst, _railinst;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         if (!active)
         {
             hsp = 0;
             vsp = 0;
             sprite_index = spr_meatball_idle;
             
-            if (point_in_camera(x, y, view_camera[0]) && (obj_camera.shake_mag >= 10 || obj_player.state == UnknownEnum.Value_111))
+            if (point_in_camera(x, y, view_camera[0]) && (obj_camera.shake_mag >= 10 || obj_player.state == states.freefallland))
             {
                 active = true;
                 sprite_index = spr_meatball_roll;
@@ -17,16 +17,16 @@ switch (state)
         }
         else if (grounded)
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
         }
         
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         hsp = image_xscale * b_movespeed;
         
         if (b_movespeed < 6)
@@ -57,15 +57,15 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         if (global.attackstyle != 2)
         {
             switch (hp)
@@ -123,8 +123,8 @@ switch (state)
         
         if (hithsp != 0 && place_meeting(x - image_xscale, y, obj_solid) && !place_meeting(x - image_xscale, y, obj_destructibles))
         {
-            particle_set_scale(UnknownEnum.Value_8, -image_xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_8, 0);
+            particle_set_scale(particles.impact, -image_xscale, 1);
+            create_particle(x, y, particles.impact, 0);
             
             if (thrown == true && destroyable)
                 instance_destroy();
@@ -137,7 +137,7 @@ switch (state)
             vsp = 0;
             image_index = 0;
             sprite_index = walkspr;
-            state = UnknownEnum.Value_134;
+            state = states.walk;
         }
         
         if (place_meeting(x, y + 1, obj_railparent))
@@ -149,32 +149,32 @@ switch (state)
         grav = 0.5;
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -182,10 +182,10 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     if (stuntouchbuffer > 0)
         stuntouched = true;
@@ -209,10 +209,10 @@ if (flash == true && alarm[2] <= 0)
 angle = 0;
 flash = false;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

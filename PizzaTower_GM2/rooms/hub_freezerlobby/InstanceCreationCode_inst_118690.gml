@@ -114,7 +114,7 @@ if (global.levelcomplete && !global.freezercutscene)
         {
             if (object_index != obj_player2 || global.coop)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 x = backtohubstartx;
                 y = backtohubstarty;
             }

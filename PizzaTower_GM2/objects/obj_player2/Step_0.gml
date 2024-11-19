@@ -12,7 +12,7 @@ if (!global.coop)
     obj_player1.spotlight = true;
     x = -1000;
     y = 500;
-    state = UnknownEnum.Value_18;
+    state = states.titlescreen;
     
     if (instance_exists(obj_coopflag))
         instance_destroy(obj_coopflag);
@@ -20,12 +20,12 @@ if (!global.coop)
     if (instance_exists(obj_cooppointer))
         instance_destroy(obj_cooppointer);
 }
-else if (key_start && !fightball && obj_player1.state != UnknownEnum.Value_121 && obj_player1.state != UnknownEnum.Value_4)
+else if (key_start && !fightball && obj_player1.state != states.mach3 && obj_player1.state != states.grabbed)
 {
-    state = UnknownEnum.Value_186;
+    state = states.gotoplayer;
 }
 
-if (!visible && state == UnknownEnum.Value_95)
+if (!visible && state == states.comingoutdoor)
 {
     coopdelay++;
     image_index = 0;

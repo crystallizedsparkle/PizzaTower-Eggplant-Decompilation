@@ -1,6 +1,6 @@
 var _max;
 
-if (state == UnknownEnum.Value_148)
+if (state == states.golf)
     exit;
 
 hsp = 14 * other.image_xscale;

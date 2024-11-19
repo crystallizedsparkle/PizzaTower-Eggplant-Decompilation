@@ -1,6 +1,6 @@
 event_inherited();
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     if (!scr_solid(x, y))
     {

@@ -6,14 +6,14 @@ boss_array[3] = [191, 1];
 boss_array[4] = [52, 6];
 boss_array[5] = [832, 6];
 boss_array[6] = [191, 6];
-state = UnknownEnum.Value_145;
-attack_pool = [UnknownEnum.Value_174, UnknownEnum.Value_175, UnknownEnum.Value_176, UnknownEnum.Value_92, UnknownEnum.Value_177, UnknownEnum.Value_179, UnknownEnum.Value_180];
-ds_map_set(player_hurtstates, UnknownEnum.Value_42, 30);
-ds_map_set(player_hurtstates, UnknownEnum.Value_41, 50);
-ds_map_set(player_hurtstates, UnknownEnum.Value_104, 20);
-ds_map_set(player_hurtstates, UnknownEnum.Value_121, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_80, 30);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_174, 30);
+state = states.arena_round;
+attack_pool = [states.boss_shield, states.helicopterhat, states.panicjump, states.jump, states.smokebombstart, states.springshoes, states.cardboard];
+ds_map_set(player_hurtstates, states.handstandjump, 30);
+ds_map_set(player_hurtstates, states.chainsawbump, 50);
+ds_map_set(player_hurtstates, states.mach2, 20);
+ds_map_set(player_hurtstates, states.mach3, 30);
+ds_map_set(boss_hurtstates, states.punch, 30);
+ds_map_set(boss_hurtstates, states.boss_shield, 30);
 phase = 1;
 max_phase = 7;
 max_hp = 500 * max_phase;
@@ -107,7 +107,7 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if (!argument1.inv_frames && (argument1.state != UnknownEnum.Value_84 || argument1.parry_inst == -4))
+    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == -4))
     {
         hitstate = state;
         hithsp = hsp;

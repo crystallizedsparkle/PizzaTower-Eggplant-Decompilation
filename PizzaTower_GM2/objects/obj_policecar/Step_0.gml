@@ -1,6 +1,6 @@
 var xx, yy, ixs, b;
 
-if (state != UnknownEnum.Value_152)
+if (state != states.taxi_police)
 {
     xx = obj_player1.x;
     yy = obj_player1.y;

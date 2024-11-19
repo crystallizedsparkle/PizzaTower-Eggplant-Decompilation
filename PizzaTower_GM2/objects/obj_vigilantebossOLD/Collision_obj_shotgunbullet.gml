@@ -1,17 +1,17 @@
 event_inherited();
 
-if (state == UnknownEnum.Value_160)
+if (state == states.superattack)
 {
     boss_hurt_noplayer(350);
     targetstunned = 100;
     hithsp = 0;
     hitvsp = 0;
     hitLag = 20;
-    hitstate = UnknownEnum.Value_160;
+    hitstate = states.superattack;
     
     if (hp <= 0)
     {
-        hitstate = UnknownEnum.Value_0;
+        hitstate = states.normal;
         boss_destroy(lastplayerid);
         hitX = floor(room_width - (room_width / 2.5));
         lastplayerid.hitX = floor(room_width / 2.5);

@@ -1,4 +1,4 @@
-if (!instance_exists(ID) && obj_player.state != UnknownEnum.Value_13 && obj_player.state != UnknownEnum.Value_11 && obj_player.state != UnknownEnum.Value_12 && obj_player.state != UnknownEnum.Value_14 && place_meeting(x, y, obj_player))
+if (!instance_exists(ID) && obj_player.state != states.mortattack && obj_player.state != states.mort && obj_player.state != states.mortjump && obj_player.state != states.morthook && place_meeting(x, y, obj_player))
 {
     instance_destroy(obj_mort);
     

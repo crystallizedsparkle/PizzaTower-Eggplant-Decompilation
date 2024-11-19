@@ -4,7 +4,7 @@ cx = camera_get_view_x(view_camera[0]);
 
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         if (playerid.x != x)
             image_xscale = sign(playerid.x - x);
         
@@ -13,14 +13,14 @@ switch (state)
         
         if (currentx == targetx)
         {
-            state = UnknownEnum.Value_128;
+            state = states.charge;
             attack_buffer = attack_max;
         }
         
         y = Approach(y, playerid.y, 8);
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         if (playerid.x != x)
             image_xscale = sign(playerid.x - x);
         
@@ -33,13 +33,13 @@ switch (state)
         }
         else
         {
-            state = UnknownEnum.Value_80;
+            state = states.punch;
             create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
         }
         
         break;
     
-    case UnknownEnum.Value_80:
+    case states.punch:
         if (!hitboxcreate)
         {
             with (instance_create(x, y, obj_forkhitbox))

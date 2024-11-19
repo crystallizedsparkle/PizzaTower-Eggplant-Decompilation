@@ -12,14 +12,14 @@ function scr_player_cheesepeplaunch()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_24;
+        state = states.cheesepep;
         sprite_index = spr_cheesepepland;
         image_index = 0;
     }
     
     if (place_meeting(x + sign(xscale), y, obj_solid) && !place_meeting(x, y + 1, obj_slope))
     {
-        state = UnknownEnum.Value_25;
+        state = states.cheesepepstick;
         wallspeed = movespeed;
         
         if (vsp < 0)

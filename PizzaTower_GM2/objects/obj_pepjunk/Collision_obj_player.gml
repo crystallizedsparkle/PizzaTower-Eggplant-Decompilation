@@ -12,7 +12,7 @@ else
     if (s != other.state)
     {
         with (obj_noiseboss)
-            state = UnknownEnum.Value_134;
+            state = states.walk;
         
         hsp = image_xscale * 5;
         vsp = -11;

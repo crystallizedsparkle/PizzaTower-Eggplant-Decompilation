@@ -9,7 +9,7 @@ repeat (2)
     
     if (_player != -1)
     {
-        if ((place_meeting(x + 1, y, _player) || place_meeting(x - 1, y, _player)) && _player.state == UnknownEnum.Value_21)
+        if ((place_meeting(x + 1, y, _player) || place_meeting(x - 1, y, _player)) && _player.state == states.cheeseball)
             instance_destroy();
     }
 }

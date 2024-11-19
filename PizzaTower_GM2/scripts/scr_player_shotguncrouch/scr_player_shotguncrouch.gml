@@ -26,7 +26,7 @@ function scr_player_shotguncrouch()
     
     if (!grounded && input_buffer_jump >= 8)
     {
-        state = UnknownEnum.Value_68;
+        state = states.shotguncrouchjump;
         movespeed = 0;
         sprite_index = spr_crouchfall;
         image_index = 0;
@@ -37,13 +37,13 @@ function scr_player_shotguncrouch()
         input_buffer_jump = 8;
         sprite_index = spr_crouchjump;
         image_index = 0;
-        state = UnknownEnum.Value_68;
+        state = states.shotguncrouchjump;
         vsp = -8;
     }
     
     if (grounded && vsp > 0 && !key_down && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
     {
-        state = UnknownEnum.Value_66;
+        state = states.shotgun;
         landAnim = true;
         sprite_index = spr_shotgunland;
         image_index = 0;
@@ -51,7 +51,7 @@ function scr_player_shotguncrouch()
     
     if (key_slap2)
     {
-        state = UnknownEnum.Value_69;
+        state = states.shotgunshoot;
         sprite_index = spr_shotgunshoot;
         image_index = 0;
         

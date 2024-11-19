@@ -6,7 +6,7 @@ acc = 0.1;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         x = lerp(x, tx, acc);
         y = lerp(y, ty, acc);
         
@@ -15,17 +15,17 @@ switch (state)
             alarm[0] = 50;
             x = tx;
             y = ty;
-            state = UnknownEnum.Value_8;
+            state = states.transitioncutscene;
         }
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         x = lerp(x, tx, 0.2);
         y = lerp(y, ty, 0.2);
         break;
     
-    case UnknownEnum.Value_92:
+    case states.jump:
         x += 4;
         y -= 8;
         

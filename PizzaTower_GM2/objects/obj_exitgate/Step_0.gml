@@ -7,17 +7,17 @@ if (drop && global.panic)
 {
     switch (dropstate)
     {
-        case UnknownEnum.Value_0:
+        case states.normal:
             if (distance_to_object(obj_player1) < 300)
             {
-                dropstate = UnknownEnum.Value_15;
+                dropstate = states.hook;
                 handsprite = 206;
                 hand_y = camera_get_view_y(view_camera[0]) - 100;
             }
             
             break;
         
-        case UnknownEnum.Value_15:
+        case states.hook:
             if (hand_y < (y - 128))
             {
                 hand_y += 6;
@@ -26,12 +26,12 @@ if (drop && global.panic)
             {
                 handsprite = 205;
                 handindex = 0;
-                dropstate = UnknownEnum.Value_4;
+                dropstate = states.grabbed;
             }
             
             break;
         
-        case UnknownEnum.Value_4:
+        case states.grabbed:
             depth = 80;
             _ty = drop_y - 100;
             y = Approach(y, _ty, 3);
@@ -39,7 +39,7 @@ if (drop && global.panic)
             
             if (y == _ty && distance_to_object(obj_player1) < 200)
             {
-                dropstate = UnknownEnum.Value_135;
+                dropstate = states.fall;
                 handindex = 0;
                 handsprite = 204;
                 vsp = 0;
@@ -47,7 +47,7 @@ if (drop && global.panic)
             
             break;
         
-        case UnknownEnum.Value_135:
+        case states.fall:
             if (vsp < 20)
                 vsp += grav;
             
@@ -58,7 +58,7 @@ if (drop && global.panic)
                 depth = 50;
                 scr_soundeffect(27);
                 y = drop_y;
-                dropstate = UnknownEnum.Value_126;
+                dropstate = states.idle;
                 handsprite = 207;
                 
                 with (obj_camera)
@@ -70,7 +70,7 @@ if (drop && global.panic)
             
             break;
         
-        case UnknownEnum.Value_126:
+        case states.idle:
             hand_y -= 6;
             break;
     }

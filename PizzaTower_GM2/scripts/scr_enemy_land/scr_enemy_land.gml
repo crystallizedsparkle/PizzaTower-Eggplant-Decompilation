@@ -11,7 +11,7 @@ function scr_enemy_land()
     if (floor(image_index) == (image_number - 1))
     {
         sprite_index = idlespr;
-        state = UnknownEnum.Value_126;
+        state = states.idle;
         image_index = 0;
     }
     

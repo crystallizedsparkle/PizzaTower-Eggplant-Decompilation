@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80)
+    if (state == states.handstandjump || state == states.punch)
     {
-        state = UnknownEnum.Value_31;
+        state = states.rideweenie;
         movespeed = hsp;
         sprite_index = spr_rideweenie;
         xscale = other.image_xscale;

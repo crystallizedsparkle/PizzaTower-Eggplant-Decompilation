@@ -1,13 +1,13 @@
 if (!other.grabbable)
     exit;
 
-if (state != UnknownEnum.Value_34)
+if (state != states.boxxedpepspin)
 {
-    if (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_43 || state == UnknownEnum.Value_80)
+    if (state == states.handstandjump || state == states.lungeattack || state == states.punch)
     {
-        if (other.state == UnknownEnum.Value_0 && scr_transformationcheck() && !cutscene && state != UnknownEnum.Value_52 && (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_43))
+        if (other.state == states.normal && scr_transformationcheck() && !cutscene && state != states.bombgrab && (state == states.handstandjump || state == states.punch || state == states.lungeattack))
         {
-            state = UnknownEnum.Value_52;
+            state = states.bombgrab;
             image_index = 0;
             sprite_index = spr_haulingstart;
             other.defused = true;
@@ -16,11 +16,11 @@ if (state != UnknownEnum.Value_34)
             
             with (other)
             {
-                state = UnknownEnum.Value_4;
+                state = states.grabbed;
                 playerid = other.id;
             }
             
-            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", UnknownEnum.Value_2, 2590, 3), "bombpep");
+            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", tvprompt_type.transformation, 2590, 3), "bombpep");
         }
     }
 }

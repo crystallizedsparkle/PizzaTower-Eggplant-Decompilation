@@ -1,10 +1,10 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_184 && state != UnknownEnum.Value_146 && state != UnknownEnum.Value_185 && state != UnknownEnum.Value_186)
+    if (state != states.rocket && state != states.actor && state != states.rocketslide && state != states.gotoplayer)
     {
         xscale = other.image_xscale;
-        state = UnknownEnum.Value_184;
-        tv_push_prompt_once(tv_create_prompt("This is the rocket transformation text", UnknownEnum.Value_2, 135, 3), "rocket");
+        state = states.rocket;
+        tv_push_prompt_once(tv_create_prompt("This is the rocket transformation text", tvprompt_type.transformation, 135, 3), "rocket");
         sprite_index = spr_rocketstart;
         image_index = 0;
         

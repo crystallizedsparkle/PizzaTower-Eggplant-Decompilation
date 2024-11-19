@@ -1,6 +1,6 @@
 var _playerinst;
 
-if (baddieID.state != UnknownEnum.Value_4 && baddieID.state != UnknownEnum.Value_154)
+if (baddieID.state != states.grabbed && baddieID.state != states.pummel)
 {
     _playerinst = other.id;
     baddiecollisionbox_update(_playerinst);

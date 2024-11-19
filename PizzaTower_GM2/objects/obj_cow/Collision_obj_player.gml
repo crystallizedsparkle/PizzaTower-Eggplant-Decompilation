@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_190 && vsp > 0 && !place_meeting(x, yprevious, other))
+    if (state != states.ridecow && vsp > 0 && !place_meeting(x, yprevious, other))
     {
-        if (state == UnknownEnum.Value_11 || state == UnknownEnum.Value_12 || state == UnknownEnum.Value_13)
+        if (state == states.mort || state == states.mortjump || state == states.mortattack)
             has_mort = true;
         else
             has_mort = false;

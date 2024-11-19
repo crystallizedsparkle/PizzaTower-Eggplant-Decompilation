@@ -1,13 +1,13 @@
 var p;
 
-if (state == UnknownEnum.Value_150)
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
         with (playerid)
         {
             visible = true;
-            state = UnknownEnum.Value_108;
+            state = states.freefall;
             vsp = 10;
             sprite_index = spr_player_rockethitwall;
             
@@ -29,7 +29,7 @@ if (state == UnknownEnum.Value_150)
             with (other)
             {
                 playerid = -1;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }

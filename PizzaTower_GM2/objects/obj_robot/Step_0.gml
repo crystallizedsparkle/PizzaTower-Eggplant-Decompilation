@@ -2,43 +2,43 @@ var _railinst;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_103:
+    case states.mach1:
         if (image_index > (image_number - 1))
         {
             hsp = image_xscale * startmachspeed;
@@ -51,12 +51,12 @@ switch (state)
             
             sprite_index = spr_robot_mach;
             image_index = 0;
-            state = UnknownEnum.Value_104;
+            state = states.mach2;
         }
         
         break;
     
-    case UnknownEnum.Value_104:
+    case states.mach2:
         hsp = Approach(hsp, image_xscale * machspeed, 0.5) + railmovespeed;
         
         if (place_meeting(x, y + 1, obj_railparent))
@@ -74,7 +74,7 @@ switch (state)
         
         if (place_meeting(x + sign(hsp), y, obj_solid) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x, y, obj_destructibles))
         {
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 100;
             vsp = -4;
             hsp = -image_xscale * 2;
@@ -82,7 +82,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_91:
+    case states.tackle:
         if (image_index > 8)
         {
             hsp = image_xscale * tacklespeed;
@@ -99,7 +99,7 @@ switch (state)
         
         if (image_index > (image_number - 1))
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             hsp = 0;
             railspeed = 0;
             sprite_index = walkspr;
@@ -107,7 +107,7 @@ switch (state)
         
         if (place_meeting(x + sign(hsp), y, obj_solid) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x, y, obj_destructibles))
         {
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 100;
             vsp = -8;
             hsp = -image_xscale * 5;
@@ -115,19 +115,19 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_23:
+    case states.slap:
         hsp = 0;
         
         if (image_index > (image_number - 1))
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             sprite_index = walkspr;
         }
         
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -135,29 +135,29 @@ if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (bombreset > 0)
     bombreset--;
 
-invincible = state == UnknownEnum.Value_104;
+invincible = state == states.mach2;
 targetplayer = instance_nearest(x, y, obj_player);
 
-if (x != targetplayer.x && state != UnknownEnum.Value_129 && bombreset == 0)
+if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0)
 {
     if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
     {
-        if (state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126)
+        if (state == states.walk || state == states.idle)
         {
             image_index = 0;
             image_xscale = -sign(x - targetplayer.x);
@@ -166,14 +166,14 @@ if (x != targetplayer.x && state != UnknownEnum.Value_129 && bombreset == 0)
             
             switch (state)
             {
-                case UnknownEnum.Value_103:
+                case states.mach1:
                     sprite_index = spr_robot_machstart;
                     image_index = 0;
                     image_speed = 0.6;
                     hsp = 0;
                     break;
                 
-                case UnknownEnum.Value_129:
+                case states.enemy_throw:
                     bombreset = 0;
                     sprite_index = spr_robot_attack;
                     image_index = 0;
@@ -181,14 +181,14 @@ if (x != targetplayer.x && state != UnknownEnum.Value_129 && bombreset == 0)
                     hsp = 0;
                     break;
                 
-                case UnknownEnum.Value_91:
+                case states.tackle:
                     sprite_index = spr_robot_tackle;
                     image_index = 0;
                     image_speed = 0.6;
                     hsp = 0;
                     break;
                 
-                case UnknownEnum.Value_23:
+                case states.slap:
                     sprite_index = spr_robot_slap;
                     image_index = 0;
                     image_speed = 0.6;
@@ -210,7 +210,7 @@ if (boundbox == false)
     }
 }
 
-if (state == UnknownEnum.Value_104 || (state == UnknownEnum.Value_23 && image_index > 11) || (state == UnknownEnum.Value_91 && image_index > 8))
+if (state == states.mach2 || (state == states.slap && image_index > 11) || (state == states.tackle && image_index > 8))
 {
     if (!hitboxcreate)
     {
@@ -218,9 +218,9 @@ if (state == UnknownEnum.Value_104 || (state == UnknownEnum.Value_23 && image_in
         
         with (instance_create(x, y, obj_forkhitbox))
         {
-            if (other.state == UnknownEnum.Value_23)
+            if (other.state == states.slap)
                 sprite_index = spr_swordhitbox;
-            else if (other.state == UnknownEnum.Value_104 || other.state == UnknownEnum.Value_91)
+            else if (other.state == states.mach2 || other.state == states.tackle)
                 sprite_index = spr_bighitbox;
             
             ID = other.id;

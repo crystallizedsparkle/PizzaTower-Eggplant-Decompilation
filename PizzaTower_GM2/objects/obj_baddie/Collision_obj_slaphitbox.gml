@@ -10,10 +10,10 @@ with (obj_player)
     else
         heavy = false;
     
-    state = UnknownEnum.Value_79;
+    state = states.grab;
 }
 
-state = UnknownEnum.Value_4;
+state = states.grabbed;
 instance_destroy(other);
 
 enum UnknownEnum

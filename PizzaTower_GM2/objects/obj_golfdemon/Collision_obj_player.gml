@@ -1,4 +1,4 @@
-if (state != UnknownEnum.Value_4 && other.state != UnknownEnum.Value_42 && state != UnknownEnum.Value_138 && (state == UnknownEnum.Value_141 || state == UnknownEnum.Value_134))
+if (state != states.grabbed && other.state != states.handstandjump && state != states.stun && (state == states.chase || state == states.walk))
     scr_hurtplayer(other);
 
 enum UnknownEnum

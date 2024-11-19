@@ -29,7 +29,7 @@ function scr_throwenemy()
             alarm[1] = 5;
             stunned = 1000;
             thrown = true;
-            state = UnknownEnum.Value_138;
+            state = states.stun;
         }
     }
 }

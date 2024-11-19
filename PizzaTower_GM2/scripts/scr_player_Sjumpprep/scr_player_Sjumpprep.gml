@@ -62,7 +62,7 @@ function scr_player_Sjumpprep()
                 scr_soundeffect(32);
                 instance_create(x, y, obj_explosioneffect);
                 sprite_index = spr_superjump;
-                state = UnknownEnum.Value_97;
+                state = states.Sjump;
                 vsp = -17;
                 image_index = 0;
             }
@@ -82,14 +82,14 @@ function scr_player_Sjumpprep()
                 {
                     if (pizzapepper == 0)
                     {
-                        state = UnknownEnum.Value_121;
+                        state = states.mach3;
                         sprite_index = spr_playerN_jetpackboost;
                         instance_create(x, y, obj_jumpdust);
                         movespeed = 15;
                     }
                     else
                     {
-                        state = UnknownEnum.Value_121;
+                        state = states.mach3;
                         sprite_index = spr_crazyrun;
                         instance_create(x, y, obj_jumpdust);
                         movespeed = 21;
@@ -100,7 +100,7 @@ function scr_player_Sjumpprep()
                     scr_soundeffect(32);
                     instance_create(x, y, obj_explosioneffect);
                     sprite_index = spr_superjump;
-                    state = UnknownEnum.Value_97;
+                    state = states.Sjump;
                     vsp = -15;
                 }
             }

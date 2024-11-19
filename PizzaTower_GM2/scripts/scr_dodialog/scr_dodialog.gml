@@ -11,20 +11,20 @@ function do_dialog(argument0)
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_17)
+        if (state == states.ghostpossess)
         {
             visible = true;
             
             with (possessID)
             {
-                state = UnknownEnum.Value_138;
+                state = states.stun;
                 stunned = 50;
             }
         }
         
         sprite_index = spr_idle;
         image_speed = 0.35;
-        state = UnknownEnum.Value_146;
+        state = states.actor;
         hsp = 0;
         vsp = 0;
         movespeed = 0;

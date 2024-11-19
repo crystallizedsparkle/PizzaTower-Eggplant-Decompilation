@@ -1,4 +1,4 @@
-if (playerid.state != UnknownEnum.Value_43 && playerid.state != UnknownEnum.Value_42)
+if (playerid.state != states.lungeattack && playerid.state != states.handstandjump)
 {
     instance_destroy();
     exit;

@@ -33,7 +33,7 @@ function scr_player_ratmount()
         
         if (abs(movespeed) > 2 && grounded)
         {
-            state = UnknownEnum.Value_204;
+            state = states.ratmountskid;
             movespeed = abs(movespeed);
         }
     }
@@ -127,7 +127,7 @@ function scr_player_ratmount()
     if (hsp != 0 && !steppy && floor(image_index) == 7)
     {
         steppy = true;
-        create_particle(x, y + 38, UnknownEnum.Value_1, 0);
+        create_particle(x, y + 38, states.revolver, 0);
     }
     
     if (hsp != 0 && floor(image_index) != 7)
@@ -135,8 +135,8 @@ function scr_player_ratmount()
     
     if (input_buffer_jump < 8 && grounded && sprite_index != spr_player_ratmountswallow)
     {
-        particle_set_scale(UnknownEnum.Value_4, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_4, 0);
+        particle_set_scale(particles.highjumpcloud2, xscale, 1);
+        create_particle(x, y, particles.highjumpcloud2, 0);
         scr_soundeffect(12);
         
         if (brick)
@@ -148,14 +148,14 @@ function scr_player_ratmount()
         
         image_index = 0;
         jumpAnim = true;
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         vsp = -11;
         jumpstop = false;
     }
     
     if (!grounded && sprite_index != spr_player_ratmountswallow)
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         jumpAnim = false;
         
         if (brick)
@@ -223,7 +223,7 @@ function scr_player_ratmount()
 
 function ratmount_dotaunt()
 {
-    if (key_taunt2 && state != UnknownEnum.Value_84 && brick)
+    if (key_taunt2 && state != states.backbreaker && brick)
     {
         scr_soundeffect(84);
         tauntstoredisgustavo = true;
@@ -232,7 +232,7 @@ function ratmount_dotaunt()
         tauntstoredsprite = sprite_index;
         tauntstoredstate = state;
         tauntstoredvsp = vsp;
-        state = UnknownEnum.Value_84;
+        state = states.backbreaker;
         sprite_index = spr_player_ratmounttaunt;
         
         with (instance_create(x, y, obj_taunteffect))
@@ -248,14 +248,14 @@ function ratmount_kickbrick()
     
     with (instance_create(x + (image_xscale * _pad), y, obj_brickball))
     {
-        if (other.state == UnknownEnum.Value_192 || other.state == UnknownEnum.Value_198)
+        if (other.state == states.ratmountjump || other.state == states.ratmountbounce)
             up = true;
         
         image_xscale = other.xscale;
         xoffset = _pad;
     }
     
-    state = UnknownEnum.Value_197;
+    state = states.ratmountgroundpound;
     sprite_index = spr_lonegustavo_kick;
     image_index = 0;
     image_speed = 0.35;

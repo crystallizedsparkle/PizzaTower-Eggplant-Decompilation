@@ -8,7 +8,7 @@ function scr_enemy_lungeattack()
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_43 && image_index <= 4)
+        if (state == states.lungeattack && image_index <= 4)
             _l = true;
     }
     
@@ -21,7 +21,7 @@ function scr_enemy_lungeattack()
     }
     else
     {
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         hsp = hithsp;
         vsp = hitvsp;
         stunned = 200;

@@ -6,7 +6,7 @@ function cutscene_superpinball_start()
     
     with (obj_player1)
     {
-        if (state != UnknownEnum.Value_112 && state != UnknownEnum.Value_95)
+        if (state != states.door && state != states.comingoutdoor)
             _finish = true;
     }
     
@@ -16,7 +16,7 @@ function cutscene_superpinball_start()
         {
             if (check_player_coop())
             {
-                state = UnknownEnum.Value_146;
+                state = states.actor;
                 sprite_index = spr_idle;
             }
         }
@@ -106,7 +106,7 @@ function cutscene_superpinball_end()
     with (obj_player)
     {
         if (check_player_coop())
-            state = UnknownEnum.Value_0;
+            state = states.normal;
     }
     
     global.pubcutscene = true;

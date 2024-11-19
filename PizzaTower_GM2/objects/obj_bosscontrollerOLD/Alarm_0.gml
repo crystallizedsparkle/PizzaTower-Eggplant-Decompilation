@@ -1,9 +1,9 @@
 var b_hp, p_hp;
 
-if (state == UnknownEnum.Value_8)
+if (state == states.transitioncutscene)
     exit;
 
-if (state == UnknownEnum.Value_98)
+if (state == states.victory)
     exit;
 
 if (obj_player.state != UnknownEnum.Value_252)
@@ -23,7 +23,7 @@ if (obj_player.state != UnknownEnum.Value_252)
             round_count++;
             minutes = maxminutes;
             seconds = maxseconds;
-            state = UnknownEnum.Value_145;
+            state = states.arena_round;
             timer_buffer = timer_max;
             bell_sprite = 1436;
             bell_index = 0;
@@ -34,8 +34,8 @@ if (obj_player.state != UnknownEnum.Value_252)
                 phase++;
                 phase = clamp(phase, 0, max_phase);
                 
-                if (colliding && state != UnknownEnum.Value_180 && state != UnknownEnum.Value_181)
-                    state = UnknownEnum.Value_145;
+                if (colliding && state != states.cardboard && state != states.cardboardend)
+                    state = states.arena_round;
             }
         }
         else if (instance_exists(bossID))
@@ -46,7 +46,7 @@ if (obj_player.state != UnknownEnum.Value_252)
             if (b_hp <= p_hp)
             {
                 depth = obj_player1.depth + 1;
-                state = UnknownEnum.Value_8;
+                state = states.transitioncutscene;
                 
                 with (bossID)
                 {
@@ -55,7 +55,7 @@ if (obj_player.state != UnknownEnum.Value_252)
                         xscale = 1;
                         suplexmove = true;
                         sfx_gain(suplexdashsnd);
-                        state = UnknownEnum.Value_42;
+                        state = states.handstandjump;
                         movespeed = 10;
                         image_index = random_range(0, image_number - 1);
                         sprite_index = spr_player_groundedattack;
@@ -80,7 +80,7 @@ if (obj_player.state != UnknownEnum.Value_252)
     }
 }
 
-if (state != UnknownEnum.Value_145 && state != UnknownEnum.Value_98 && state != UnknownEnum.Value_8)
+if (state != states.arena_round && state != states.victory && state != states.transitioncutscene)
     alarm[0] = 1;
 
 enum UnknownEnum

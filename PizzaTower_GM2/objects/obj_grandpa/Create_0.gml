@@ -1,7 +1,7 @@
 scr_initenemy();
 image_speed = 0.35;
 depth = 0;
-state = UnknownEnum.Value_134;
+state = states.walk;
 flash = false;
 important = false;
 spr_dead = 309;

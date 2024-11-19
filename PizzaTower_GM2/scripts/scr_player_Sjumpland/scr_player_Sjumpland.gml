@@ -19,7 +19,7 @@ function scr_player_Sjumpland()
     if (floor(image_index) == 6)
     {
         sprite_index = spr_machfreefall;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         jumpAnim = false;
     }
 }

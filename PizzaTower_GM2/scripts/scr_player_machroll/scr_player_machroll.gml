@@ -26,7 +26,7 @@ function scr_player_machroll()
                 image_speed = 0.35;
                 flash = false;
                 combo = 0;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = -2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -82,14 +82,14 @@ function scr_player_machroll()
                     if (!grounded)
                         sprite_index = spr_mach;
                     
-                    state = UnknownEnum.Value_104;
+                    state = states.mach2;
                 }
                 else
                 {
                     if (!grounded)
                         sprite_index = spr_mach4;
                     
-                    state = UnknownEnum.Value_121;
+                    state = states.mach3;
                 }
             }
             
@@ -109,7 +109,7 @@ function scr_player_machroll()
                 image_speed = 0.35;
                 flash = false;
                 combo = 0;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = -2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -124,7 +124,7 @@ function scr_player_machroll()
                 image_speed = 0.35;
                 flash = false;
                 combo = 0;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = 2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -157,7 +157,7 @@ function scr_player_machroll()
             {
                 image_index = 0;
                 scr_soundeffect(90);
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
                 sprite_index = spr_rollgetup;
             }
             
@@ -171,7 +171,7 @@ function scr_player_machroll()
                 image_speed = 0.35;
                 flash = false;
                 combo = 0;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = -2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -186,7 +186,7 @@ function scr_player_machroll()
                 image_speed = 0.35;
                 flash = false;
                 combo = 0;
-                state = UnknownEnum.Value_106;
+                state = states.bump;
                 hsp = 2.5;
                 vsp = -3;
                 mach2 = 0;
@@ -198,7 +198,7 @@ function scr_player_machroll()
             {
                 image_index = 0;
                 scr_soundeffect(90);
-                state = UnknownEnum.Value_121;
+                state = states.mach3;
                 sprite_index = spr_playerN_jetpackboost;
             }
             

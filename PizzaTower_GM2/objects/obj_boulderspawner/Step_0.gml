@@ -4,7 +4,7 @@ if (cooldown == 0 && !instance_exists(boulderID))
     {
         image_xscale = other.image_xscale;
         other.boulderID = id;
-        create_particle(x, y, UnknownEnum.Value_9, 0);
+        create_particle(x, y, particles.genericpoofeffect, 0);
     }
     
     cooldown = 1000;

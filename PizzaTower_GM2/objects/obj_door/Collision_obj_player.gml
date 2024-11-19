@@ -7,7 +7,7 @@ _actor = false;
 
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_146)
+    if (state == states.actor)
         _actor = true;
 }
 
@@ -24,7 +24,7 @@ if (!place_meeting(x, y, obj_doorblocked))
 {
     with (other)
     {
-        if (key_up && !instance_exists(obj_jumpscare) && grounded && ((state == UnknownEnum.Value_191 && brick) || state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_58 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_99) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != UnknownEnum.Value_112 && state != UnknownEnum.Value_95)
+        if (key_up && !instance_exists(obj_jumpscare) && grounded && ((state == states.ratmount && brick) || state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
         {
             obj_player1.lastroom = room;
             obj_player2.lastroom = room;
@@ -52,8 +52,8 @@ if (!place_meeting(x, y, obj_doorblocked))
             {
                 image_index = 0;
                 
-                if (state != UnknownEnum.Value_186)
-                    state = UnknownEnum.Value_112;
+                if (state != states.gotoplayer)
+                    state = states.door;
                 
                 mach2 = 0;
             }
@@ -76,7 +76,7 @@ if (!place_meeting(x, y, obj_doorblocked))
             with (obj_player2)
             {
                 if (instance_exists(obj_coopplayerfollow))
-                    state = UnknownEnum.Value_186;
+                    state = states.gotoplayer;
             }
             
             other.visited = true;

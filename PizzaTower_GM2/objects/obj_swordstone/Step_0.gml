@@ -1,7 +1,7 @@
 if (room == rm_editor)
     exit;
 
-if (obj_player.state == UnknownEnum.Value_47 || (obj_player.state == UnknownEnum.Value_61 && (obj_player.tauntstoredstate == UnknownEnum.Value_47 || obj_player.tauntstoredstate == UnknownEnum.Value_38)) || obj_player.state == UnknownEnum.Value_48 || obj_player.state == UnknownEnum.Value_38 || obj_player.state == UnknownEnum.Value_49)
+if (obj_player.state == states.knightpep || (obj_player.state == states.chainsaw && (obj_player.tauntstoredstate == states.knightpep || obj_player.tauntstoredstate == states.knightpepslopes)) || obj_player.state == states.knightpepattack || obj_player.state == states.knightpepslopes || obj_player.state == states.knightpepbump)
     sprite_index = spr_swordstonetaken;
 else
     sprite_index = spr_swordstone;

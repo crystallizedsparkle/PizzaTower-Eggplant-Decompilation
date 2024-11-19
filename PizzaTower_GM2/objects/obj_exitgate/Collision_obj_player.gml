@@ -4,7 +4,7 @@ if (image_index == 1 && global.panic == false && room != war_13)
 {
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_95 && floor(image_index) == (image_number - 2))
+        if (state == states.comingoutdoor && floor(image_index) == (image_number - 2))
         {
             scr_soundeffect(27);
             GamepadSetVibration(0, 1, 1, 0.9);
@@ -45,12 +45,12 @@ if (image_index == 1 && global.panic == false && room != war_13)
     }
 }
 
-if (drop && dropstate != UnknownEnum.Value_126)
+if (drop && dropstate != states.idle)
     exit;
 
 with (obj_player)
 {
-    if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_121) && (global.panic == true || global.snickchallenge == true || room == war_13))
+    if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || global.snickchallenge == true || room == war_13))
     {
         ex = x;
         ey = y;
@@ -83,12 +83,12 @@ with (obj_player)
         if (!instance_exists(obj_endlevelfade))
             instance_create(x, y, obj_endlevelfade);
         
-        obj_player1.state = UnknownEnum.Value_112;
+        obj_player1.state = states.door;
         obj_player1.sprite_index = obj_player1.spr_lookdoor;
         
         if (instance_exists(obj_player2))
         {
-            obj_player2.state = UnknownEnum.Value_112;
+            obj_player2.state = states.door;
             obj_player2.sprite_index = obj_player2.spr_lookdoor;
             
             if (global.coop)

@@ -35,18 +35,18 @@ if (inv_timer > 0)
 else
     invincible = false;
 
-if (state == UnknownEnum.Value_128)
+if (state == states.charge)
 {
     if (image_index > (image_number - 1))
     {
         ram_spd = 0;
         sprite_index = spr_tank_charge;
         image_index = 0;
-        state = UnknownEnum.Value_141;
+        state = states.chase;
     }
 }
 
-if (state == UnknownEnum.Value_126)
+if (state == states.idle)
 {
     image_speed = 0.35;
     
@@ -60,11 +60,11 @@ if (state == UnknownEnum.Value_126)
             patrolling = true;
             sprite_index = walkspr;
             image_index = 0;
-            state = UnknownEnum.Value_134;
+            state = states.walk;
         }
     }
 }
-else if (state == UnknownEnum.Value_141)
+else if (state == states.chase)
 {
     invincible = true;
     
@@ -83,7 +83,7 @@ else if (state == UnknownEnum.Value_141)
         image_index = 0;
         attackmode = 0;
         hsp = -image_xscale * 2;
-        state = UnknownEnum.Value_138;
+        state = states.stun;
         stunned = 30;
         vsp = -5;
     }
@@ -91,36 +91,36 @@ else if (state == UnknownEnum.Value_141)
 
 switch (state)
 {
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -128,13 +128,13 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (bombreset > 0)
     bombreset--;
 
-if (state == UnknownEnum.Value_142)
+if (state == states.arena_spawn)
 {
     if (floor(image_index) == 5 && bombreset == 0)
     {
@@ -146,7 +146,7 @@ if (state == UnknownEnum.Value_142)
             important = true;
             vsp = -8;
             hsp = -other.image_xscale;
-            state = UnknownEnum.Value_138;
+            state = states.stun;
             stunned = 50;
         }
     }
@@ -154,11 +154,11 @@ if (state == UnknownEnum.Value_142)
     if (image_index > (image_number - 1))
     {
         sprite_index = walkspr;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     }
 }
 
-if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == false)
+if (state == states.walk && bombreset == 0 && forcespawn == false)
 {
     attackmode = choose(0, 0, 1, 1);
     
@@ -173,7 +173,7 @@ if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == false)
                 image_xscale = -sign(x - targetplayer.x);
             
             forcespawn = true;
-            state = UnknownEnum.Value_129;
+            state = states.enemy_throw;
             break;
         
         case 1:
@@ -185,7 +185,7 @@ if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == false)
             sprite_index = spr_tank_chargestart;
             image_index = 0;
             ram_count = ram_max;
-            state = UnknownEnum.Value_128;
+            state = states.charge;
             forcespawn = true;
             
             if (slide_buffer <= 0)
@@ -195,7 +195,7 @@ if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == false)
     }
 }
 
-if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == true)
+if (state == states.walk && bombreset == 0 && forcespawn == true)
 {
     nextattack = 2;
     
@@ -208,11 +208,11 @@ if (state == UnknownEnum.Value_134 && bombreset == 0 && forcespawn == true)
     if (x != targetplayer.x)
         image_xscale = -sign(x - targetplayer.x);
     
-    state = UnknownEnum.Value_142;
+    state = states.arena_spawn;
     forcespawn = false;
 }
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     if (sprite_index == spr_tank_hitwall && image_index > (image_number - 1))
         image_index = image_number - 1;
@@ -233,10 +233,10 @@ if (state == UnknownEnum.Value_138)
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 enum UnknownEnum

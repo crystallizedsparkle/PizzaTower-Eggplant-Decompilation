@@ -9,13 +9,13 @@ function scr_player_barrelclimbwall()
     if (!key_attack)
     {
         movespeed = 0;
-        state = UnknownEnum.Value_114;
+        state = states.barreljump;
         sprite_index = spr_player_barrelfall;
     }
     
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_116;
+        state = states.barrelslide;
         
         if (scr_solid(x + xscale, y))
             xscale *= -1;

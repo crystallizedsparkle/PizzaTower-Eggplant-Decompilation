@@ -6,14 +6,14 @@ if (global.key_inv)
 
 with (other)
 {
-    if (state != UnknownEnum.Value_51 && state != UnknownEnum.Value_186 && state != UnknownEnum.Value_16 && state != UnknownEnum.Value_47 && state != UnknownEnum.Value_21 && state != UnknownEnum.Value_33 && state != UnknownEnum.Value_24 && state != UnknownEnum.Value_48 && state != UnknownEnum.Value_38 && state != UnknownEnum.Value_107 && state != UnknownEnum.Value_49)
+    if (state != states.bombpep && state != states.gotoplayer && state != states.ghost && state != states.knightpep && state != states.cheeseball && state != states.boxxedpep && state != states.cheesepep && state != states.knightpepattack && state != states.knightpepslopes && state != states.hurt && state != states.knightpepbump)
     {
         instance_destroy(other);
         global.key_inv = true;
         key_particles = true;
         alarm[7] = 30;
         scr_soundeffect(19);
-        state = UnknownEnum.Value_90;
+        state = states.keyget;
         image_index = 0;
         global.heattime = 60;
     }

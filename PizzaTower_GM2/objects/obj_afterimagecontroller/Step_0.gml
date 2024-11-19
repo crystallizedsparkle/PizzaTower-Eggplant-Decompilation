@@ -14,11 +14,11 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
         
         switch (identifier)
         {
-            case UnknownEnum.Value_1:
-                if (!(playerid.state == UnknownEnum.Value_92 && playerid.sprite_index == spr_playerN_noisebombspinjump) && playerid.pizzapepper == 0 && playerid.state != UnknownEnum.Value_191 && playerid.sprite_index != spr_player_barrelroll && playerid.state != UnknownEnum.Value_55 && playerid.state != UnknownEnum.Value_147 && playerid.state != UnknownEnum.Value_41 && playerid.state != UnknownEnum.Value_80 && playerid.state != UnknownEnum.Value_41 && playerid.state != UnknownEnum.Value_31 && playerid.state != UnknownEnum.Value_102 && playerid.state != UnknownEnum.Value_4 && playerid.pogochargeactive == false && playerid.state != UnknownEnum.Value_20 && playerid.state != UnknownEnum.Value_121 && playerid.state != UnknownEnum.Value_37 && playerid.state != UnknownEnum.Value_19 && playerid.state != UnknownEnum.Value_128 && playerid.state != UnknownEnum.Value_104 && playerid.state != UnknownEnum.Value_42 && playerid.state != UnknownEnum.Value_105 && playerid.state != UnknownEnum.Value_75 && playerid.state != UnknownEnum.Value_63 && playerid.state != UnknownEnum.Value_73 && playerid.state != UnknownEnum.Value_76 && playerid.state != UnknownEnum.Value_65 && playerid.state != UnknownEnum.Value_61 && playerid.state != UnknownEnum.Value_97 && playerid.state != UnknownEnum.Value_33)
+            case afterimages.mach3effect:
+                if (!(playerid.state == states.jump && playerid.sprite_index == spr_playerN_noisebombspinjump) && playerid.pizzapepper == 0 && playerid.state != states.ratmount && playerid.sprite_index != spr_player_barrelroll && playerid.state != states.grabbing && playerid.state != states.parry && playerid.state != states.chainsawbump && playerid.state != states.punch && playerid.state != states.chainsawbump && playerid.state != states.rideweenie && playerid.state != states.crouchslide && playerid.state != states.grabbed && playerid.pogochargeactive == false && playerid.state != states.tacklecharge && playerid.state != states.mach3 && playerid.state != states.climbwall && playerid.state != states.hookshot && playerid.state != states.charge && playerid.state != states.mach2 && playerid.state != states.handstandjump && playerid.state != states.machslide && playerid.state != states.slam && playerid.state != states.mach4 && playerid.state != states.machfreefall && playerid.state != states.superslam && playerid.state != states.machroll && playerid.state != states.chainsaw && playerid.state != states.Sjump && playerid.state != states.boxxedpep)
                     alarm[0] = 0;
                 
-                if (playerid.state == UnknownEnum.Value_104 || playerid.state == UnknownEnum.Value_103 || playerid.state == UnknownEnum.Value_121)
+                if (playerid.state == states.mach2 || playerid.state == states.mach1 || playerid.state == states.mach3)
                 {
                     p = 4;
                     m = playerid.movespeed - p;
@@ -37,13 +37,13 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
                 
                 break;
             
-            case UnknownEnum.Value_2:
+            case afterimages.heatattack:
                 x += hsp;
                 y += vsp;
                 break;
             
-            case UnknownEnum.Value_3:
-            case UnknownEnum.Value_4:
+            case afterimages.firemouth:
+            case afterimages.blue:
                 alpha -= 0.05;
                 
                 if (alpha <= 0 && alarm[0] != 0)
@@ -52,7 +52,7 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
                 break;
                 break;
             
-            case UnknownEnum.Value_5:
+            case afterimages.blur:
                 alpha -= 0.15;
                 
                 if (alpha <= 0 && alarm[0] != 0)
@@ -74,7 +74,7 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
         {
             other.alpha[identifier] = 1;
             
-            if (identifier == UnknownEnum.Value_1)
+            if (identifier == afterimages.mach3effect)
                 other.alpha[identifier] = alpha;
             
             alarm[2] = 3;

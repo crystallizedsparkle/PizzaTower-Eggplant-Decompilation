@@ -4,7 +4,7 @@ player = instance_nearest(x, y, obj_player);
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         visible = false;
         image_speed = 0;
         image_index = 0;
@@ -15,13 +15,13 @@ switch (state)
         }
         else if (distance_to_pos(x, y, player.x, player.y, threshold_x, threshold_y))
         {
-            state = UnknownEnum.Value_8;
+            state = states.transitioncutscene;
             attackbuffer = 20;
         }
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         visible = true;
         image_speed = 0.35;
         
@@ -33,12 +33,12 @@ switch (state)
         {
             with (obj_frontcanongoblin)
             {
-                if (state != UnknownEnum.Value_8)
+                if (state != states.transitioncutscene)
                 {
                     crosshair_x = other.x;
                     crosshair_y = other.y;
                     event_perform(ev_alarm, 0);
-                    other.state = UnknownEnum.Value_0;
+                    other.state = states.normal;
                     other.cooldown = 150;
                 }
             }

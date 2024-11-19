@@ -21,7 +21,7 @@ function scr_player_crouch()
     if (!grounded && !key_jump)
     {
         jumpAnim = false;
-        state = UnknownEnum.Value_101;
+        state = states.crouchjump;
         movespeed = 4;
         crouchAnim = true;
         image_index = 0;
@@ -29,7 +29,7 @@ function scr_player_crouch()
     
     if (grounded && !key_down && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && !key_jump)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         movespeed = 0;
         crouchAnim = true;
         jumpAnim = true;
@@ -80,7 +80,7 @@ function scr_player_crouch()
     {
         scr_soundeffect(12);
         vsp = -8;
-        state = UnknownEnum.Value_101;
+        state = states.crouchjump;
         movespeed = 4;
         image_index = 0;
         crouchAnim = true;
@@ -92,7 +92,7 @@ function scr_player_crouch()
         if (move == 0)
             movespeed = 0;
         
-        state = UnknownEnum.Value_2;
+        state = states.dynamite;
         image_index = 0;
         sprite_index = spr_playerV_dynamitethrow;
         
@@ -111,7 +111,7 @@ function scr_player_crouch()
         if (move == 0)
             movespeed = 0;
         
-        state = UnknownEnum.Value_1;
+        state = states.revolver;
         image_index = 0;
         sprite_index = spr_playerV_revolverstart;
     }

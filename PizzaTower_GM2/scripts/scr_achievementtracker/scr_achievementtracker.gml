@@ -82,7 +82,7 @@ function achievement_unlock(argument0, argument1, argument2)
     with (b)
     {
         unlocked = true;
-        tv_push_prompt(argument1, UnknownEnum.Value_0, argument2, 2);
+        tv_push_prompt(argument1, tvprompt_type.normal, argument2, 2);
         quick_ini_write_real(get_savefile_ini(), "achievements", name, true);
         gamesave_async_save();
     }

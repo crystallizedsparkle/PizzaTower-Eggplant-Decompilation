@@ -4,14 +4,14 @@ mask_index = spr_player_mask;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         launch_buffer = 120;
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         switch (substate)
         {
-            case UnknownEnum.Value_0:
+            case states.normal:
                 moveH = playerid.key_left + playerid.key_right;
                 moveV = playerid.key_down - playerid.key_up;
                 
@@ -28,11 +28,11 @@ switch (state)
                 if (launch_buffer > 0)
                     launch_buffer--;
                 else
-                    substate = UnknownEnum.Value_92;
+                    substate = states.jump;
                 
                 break;
             
-            case UnknownEnum.Value_92:
+            case states.jump:
                 spd = 24;
                 hsp = moveX * spd;
                 vsp = moveY * spd;
@@ -56,11 +56,11 @@ switch (state)
                     
                     with (playerid)
                     {
-                        state = UnknownEnum.Value_16;
+                        state = states.ghost;
                         visible = true;
                     }
                     
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                 }
                 
                 break;

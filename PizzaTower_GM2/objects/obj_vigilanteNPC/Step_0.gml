@@ -21,15 +21,15 @@ with (obj_player)
         }
         else if (dis < 200)
         {
-            if (state == UnknownEnum.Value_17)
+            if (state == states.ghostpossess)
             {
                 with (possessID)
                 {
-                    state = UnknownEnum.Value_138;
+                    state = states.stun;
                     stunned = 50;
                 }
                 
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
             
             with (other)
@@ -47,7 +47,7 @@ if (waitforhurt && !instance_exists(obj_dialogcontroller))
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_107)
+        if (state == states.hurt)
             b = true;
     }
     

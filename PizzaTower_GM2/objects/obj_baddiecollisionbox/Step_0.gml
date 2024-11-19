@@ -17,11 +17,11 @@ for (i = 0; i < 2; i++)
     
     if (instance_exists(baddieID) && place_meeting(x, y, _obj_player) && _obj_player.cutscene == false)
     {
-        if (baddieID.state != UnknownEnum.Value_4 && !baddieID.invincible && baddieID.state != UnknownEnum.Value_17)
+        if (baddieID.state != states.grabbed && !baddieID.invincible && baddieID.state != states.ghostpossess)
         {
             with (_obj_player)
             {
-                if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == false && !global.kungfu && sprite_index != spr_player_mach2jump && ((state == UnknownEnum.Value_3 && vsp > 0) || state == UnknownEnum.Value_92 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_79) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible)
+                if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == false && !global.kungfu && sprite_index != spr_player_mach2jump && ((state == states.boots && vsp > 0) || state == states.jump || state == states.mach1 || state == states.grab) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible)
                 {
                     scr_soundeffect(24);
                     image_index = 0;
@@ -33,7 +33,7 @@ for (i = 0; i < 2; i++)
                         
                         other.baddieID.hsp = xscale * 5;
                         other.baddieID.vsp = -5;
-                        other.baddieID.state = UnknownEnum.Value_138;
+                        other.baddieID.state = states.stun;
                         
                         if (other.baddieID.stunned < 100)
                             other.baddieID.stunned = 100;
@@ -57,7 +57,7 @@ for (i = 0; i < 2; i++)
                         stompAnim = true;
                         vsp = -14;
                         
-                        if (state == UnknownEnum.Value_92)
+                        if (state == states.jump)
                             sprite_index = spr_stompprep;
                     }
                     else
@@ -66,22 +66,22 @@ for (i = 0; i < 2; i++)
                         stompAnim = true;
                         vsp = -9;
                         
-                        if (state == UnknownEnum.Value_92)
+                        if (state == states.jump)
                             sprite_index = spr_stompprep;
                     }
                 }
                 
-                if (instance_exists(other.baddieID) && state == UnknownEnum.Value_44)
+                if (instance_exists(other.baddieID) && state == states.lungegrab)
                 {
                     other.baddieID.grabbedby = _playerindex;
-                    other.baddieID.state = UnknownEnum.Value_4;
+                    other.baddieID.state = states.grabbed;
                     other.baddieID.hp = -99;
                     
                     if (key_down)
                     {
                         sprite_index = spr_piledriver;
                         vsp = -5;
-                        state = UnknownEnum.Value_76;
+                        state = states.superslam;
                         image_index = 0;
                         image_speed = 0.35;
                     }
@@ -91,23 +91,23 @@ for (i = 0; i < 2; i++)
                         image_index = 0;
                         hsp = 0;
                         movespeed = 0;
-                        state = UnknownEnum.Value_6;
+                        state = states.finishingblow;
                     }
                 }
                 
-                if (instance_exists(other.baddieID) && other.baddieID.state != UnknownEnum.Value_205 && !other.baddieID.invincible && state == UnknownEnum.Value_193)
+                if (instance_exists(other.baddieID) && other.baddieID.state != states.ratgrabbed && !other.baddieID.invincible && state == states.ratmountattack)
                 {
                     other.baddieID.ratplayerid = id;
-                    other.baddieID.state = UnknownEnum.Value_205;
+                    other.baddieID.state = states.ratgrabbed;
                     ratgrabbedID = other.baddieID.id;
-                    state = UnknownEnum.Value_191;
+                    state = states.ratmount;
                 }
                 
-                if (instance_exists(other.baddieID) && other.baddieID.invtime == 0 && ((other.baddieID.object_index != obj_bigcheese && other.baddieID.object_index != obj_pepbat) || state != UnknownEnum.Value_5) && ((state == UnknownEnum.Value_42 && global.attackstyle == 1) || instakillmove == true) && other.baddieID.state != UnknownEnum.Value_4 && !other.baddieID.invincible && other.baddieID.instantkillable)
+                if (instance_exists(other.baddieID) && other.baddieID.invtime == 0 && ((other.baddieID.object_index != obj_bigcheese && other.baddieID.object_index != obj_pepbat) || state != states.tumble) && ((state == states.handstandjump && global.attackstyle == 1) || instakillmove == true) && other.baddieID.state != states.grabbed && !other.baddieID.invincible && other.baddieID.instantkillable)
                 {
                     Instakill();
                 }
-                else if (state == UnknownEnum.Value_42 && global.attackstyle == 0)
+                else if (state == states.handstandjump && global.attackstyle == 0)
                 {
                     image_index = 0;
                     
@@ -122,33 +122,33 @@ for (i = 0; i < 2; i++)
                             vsp = -6;
                         
                         swingdingendcooldown = 0;
-                        state = UnknownEnum.Value_79;
+                        state = states.grab;
                         baddiegrabbedID = other.baddieID;
                         grabbingenemy = true;
-                        other.baddieID.state = UnknownEnum.Value_4;
+                        other.baddieID.state = states.grabbed;
                         other.baddieID.grabbedby = _playerindex;
                     }
                     else if (key_up)
                     {
                         baddiegrabbedID = other.baddieID;
                         grabbingenemy = true;
-                        other.baddieID.state = UnknownEnum.Value_4;
+                        other.baddieID.state = states.grabbed;
                         other.baddieID.grabbedby = _playerindex;
                         sprite_index = spr_piledriver;
                         vsp = -14;
-                        state = UnknownEnum.Value_76;
+                        state = states.superslam;
                         image_index = 0;
                         image_speed = 0.35;
                     }
                 }
-                else if (state == UnknownEnum.Value_42 && global.attackstyle == 3)
+                else if (state == states.handstandjump && global.attackstyle == 3)
                 {
                     _ms = movespeed;
                     movespeed = 0;
                     baddiegrabbedID = other.baddieID;
                     grabbingenemy = true;
                     _prevstate = other.baddieID.state;
-                    other.baddieID.state = UnknownEnum.Value_4;
+                    other.baddieID.state = states.grabbed;
                     other.baddieID.grabbedby = _playerindex;
                     
                     if (global.pummeltest)
@@ -157,7 +157,7 @@ for (i = 0; i < 2; i++)
                         {
                             if (key_up)
                             {
-                                state = UnknownEnum.Value_6;
+                                state = states.finishingblow;
                                 sprite_index = spr_uppercutfinishingblow;
                                 image_index = 4;
                                 movespeed = 0;
@@ -166,13 +166,13 @@ for (i = 0; i < 2; i++)
                             {
                                 sprite_index = spr_piledriver;
                                 vsp = -5;
-                                state = UnknownEnum.Value_76;
+                                state = states.superslam;
                                 image_index = 4;
                                 image_speed = 0.35;
                             }
                             else
                             {
-                                state = UnknownEnum.Value_6;
+                                state = states.finishingblow;
                                 sprite_index = spr_player_lungehit;
                                 image_index = 0;
                             }
@@ -190,7 +190,7 @@ for (i = 0; i < 2; i++)
                         
                         if (key_up)
                         {
-                            state = UnknownEnum.Value_6;
+                            state = states.finishingblow;
                             sprite_index = spr_uppercutfinishingblow;
                             image_index = 4;
                             movespeed = 0;
@@ -199,20 +199,20 @@ for (i = 0; i < 2; i++)
                         {
                             sprite_index = spr_piledriver;
                             vsp = -5;
-                            state = UnknownEnum.Value_76;
+                            state = states.superslam;
                             image_index = 4;
                             image_speed = 0.35;
                         }
                         else
                         {
-                            state = UnknownEnum.Value_6;
+                            state = states.finishingblow;
                             sprite_index = spr_player_lungehit;
                             image_index = 0;
                         }
                     }
                 }
                 
-                if (place_meeting(x, y + 1, other) && state == UnknownEnum.Value_58 && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_playerN_pogobounce && !other.baddieID.invincible)
+                if (place_meeting(x, y + 1, other) && state == states.pogo && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_playerN_pogobounce && !other.baddieID.invincible)
                 {
                     switch (pogochargeactive)
                     {
@@ -220,7 +220,7 @@ for (i = 0; i < 2; i++)
                             pogospeedprev = false;
                             other.baddieID.vsp = -3;
                             scr_soundeffect(24);
-                            other.baddieID.state = UnknownEnum.Value_138;
+                            other.baddieID.state = states.stun;
                             
                             if (other.baddieID.stunned < 100)
                                 other.baddieID.stunned = 100;
@@ -243,16 +243,16 @@ for (i = 0; i < 2; i++)
                 
                 pepp_grab = false;
                 
-                if (character == "M" && instance_exists(other.baddieID) && (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_92) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw && other.baddieID.state == UnknownEnum.Value_138 && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
+                if (character == "M" && instance_exists(other.baddieID) && (state == states.normal || state == states.jump) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw && other.baddieID.state == states.stun && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
                 {
                     other.baddieID.pepperman_grab = true;
                     pepperman_grabID = other.baddieID.id;
-                    other.baddieID.state = UnknownEnum.Value_4;
+                    other.baddieID.state = states.grabbed;
                     other.baddieID.grabbedby = _playerindex;
                     pepp_grab = true;
                 }
                 
-                if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && (state == UnknownEnum.Value_5 || state == UnknownEnum.Value_104) && other.baddieID.state != UnknownEnum.Value_80 && other.baddieID.state != UnknownEnum.Value_137 && !pepp_grab && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != UnknownEnum.Value_4 && other.baddieID.state != UnknownEnum.Value_41 && other.baddieID.state != UnknownEnum.Value_61 && !other.baddieID.invincible)
+                if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && (state == states.tumble || state == states.mach2) && other.baddieID.state != states.punch && other.baddieID.state != states.hit && !pepp_grab && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != states.grabbed && other.baddieID.state != states.chainsawbump && other.baddieID.state != states.chainsaw && !other.baddieID.invincible)
                 {
                     lag = 0;
                     other.baddieID.stuntouchbuffer = 15;
@@ -262,7 +262,7 @@ for (i = 0; i < 2; i++)
                         xscale = 0.8;
                         yscale = 1.3;
                         instance_create(x, y, obj_bangeffect);
-                        state = UnknownEnum.Value_137;
+                        state = states.hit;
                         image_xscale = -other.xscale;
                         hithsp = other.xscale * 12;
                         hitvsp = (other.y - 180 - y) / 60;
@@ -278,7 +278,7 @@ for (i = 0; i < 2; i++)
                     tauntstoredsprite = sprite_index;
                     tauntstoredmovespeed = movespeed;
                     tauntstoredvsp = vsp;
-                    state = UnknownEnum.Value_61;
+                    state = states.chainsaw;
                     hitLag = lag;
                     hitX = x;
                     hitY = y;
@@ -290,9 +290,9 @@ for (i = 0; i < 2; i++)
                     }
                 }
                 
-                if (character != "M" && instance_exists(other.baddieID) && state == UnknownEnum.Value_55 && !other.baddieID.invincible)
+                if (character != "M" && instance_exists(other.baddieID) && state == states.grabbing && !other.baddieID.invincible)
                 {
-                    if (instance_exists(other.baddieID) && y < (other.baddieID.y - 50) && attacking == false && state != UnknownEnum.Value_42 && other.baddieID.state != UnknownEnum.Value_4 && sprite_index != spr_player_mach2jump && (state == UnknownEnum.Value_92 || state == UnknownEnum.Value_103 || (state == UnknownEnum.Value_79 && sprite_index != spr_swingding)) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible)
+                    if (instance_exists(other.baddieID) && y < (other.baddieID.y - 50) && attacking == false && state != states.handstandjump && other.baddieID.state != states.grabbed && sprite_index != spr_player_mach2jump && (state == states.jump || state == states.mach1 || (state == states.grab && sprite_index != spr_swingding)) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep && !other.baddieID.invincible)
                     {
                         scr_soundeffect(24);
                         
@@ -300,7 +300,7 @@ for (i = 0; i < 2; i++)
                             other.baddieID.image_xscale = -sign(other.baddieID.x - x);
                         
                         image_index = 0;
-                        other.baddieID.state = UnknownEnum.Value_138;
+                        other.baddieID.state = states.stun;
                         
                         if (other.baddieID.stunned < 100)
                             other.baddieID.stunned = 100;
@@ -312,7 +312,7 @@ for (i = 0; i < 2; i++)
                             other.baddieID.image_index = 0;
                             vsp = -14;
                             
-                            if (state != UnknownEnum.Value_79)
+                            if (state != states.grab)
                                 sprite_index = spr_stompprep;
                         }
                         else
@@ -322,7 +322,7 @@ for (i = 0; i < 2; i++)
                             other.baddieID.image_index = 0;
                             vsp = -9;
                             
-                            if (state != UnknownEnum.Value_79)
+                            if (state != states.grab)
                                 sprite_index = spr_stompprep;
                         }
                     }
@@ -332,8 +332,8 @@ for (i = 0; i < 2; i++)
                         movespeed = 0;
                         image_index = 0;
                         sprite_index = spr_haulingstart;
-                        state = UnknownEnum.Value_79;
-                        other.baddieID.state = UnknownEnum.Value_4;
+                        state = states.grab;
+                        other.baddieID.state = states.grabbed;
                         other.baddieID.grabbedby = _playerindex;
                     }
                 }

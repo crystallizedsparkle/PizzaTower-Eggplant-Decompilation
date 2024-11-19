@@ -13,15 +13,15 @@ function scr_player_ratmountskid()
     image_speed = 0.4;
     
     if (movespeed <= 0)
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     
     if (key_jump && !key_up)
         input_buffer_jump = 0;
     
     if (input_buffer_jump < 8 && grounded && sprite_index != spr_player_ratmountswallow)
     {
-        particle_set_scale(UnknownEnum.Value_4, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_4, 0);
+        particle_set_scale(particles.highjumpcloud2, xscale, 1);
+        create_particle(x, y, particles.highjumpcloud2, 0);
         scr_soundeffect(12);
         
         if (brick)
@@ -34,7 +34,7 @@ function scr_player_ratmountskid()
         image_index = 0;
         movespeed = hsp;
         jumpAnim = true;
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         vsp = -11;
         jumpstop = false;
     }

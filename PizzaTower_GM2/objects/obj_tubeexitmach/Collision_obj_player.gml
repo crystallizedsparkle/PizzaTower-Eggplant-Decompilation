@@ -3,16 +3,16 @@ var _offset_x, _offset_y;
 if (playerid > -1)
     exit;
 
-if (state != UnknownEnum.Value_0)
+if (state != states.normal)
     exit;
 
-if (other.state == UnknownEnum.Value_107)
+if (other.state == states.hurt)
     exit;
 
-if (other.state == UnknownEnum.Value_186)
+if (other.state == states.gotoplayer)
     exit;
 
-if (object_index != obj_tubeenter && other.state != UnknownEnum.Value_150)
+if (object_index != obj_tubeenter && other.state != states.tube)
     exit;
 
 _offset_x = 32 * image_xscale;
@@ -32,7 +32,7 @@ with (other)
         trace(other.stored_spd);
     }
     
-    state = UnknownEnum.Value_150;
+    state = states.tube;
     hsp = 0;
     movespeed = 0;
     vsp = 0;
@@ -51,9 +51,9 @@ if (floor(other.x) == (xstart + _offset_x) && floor(other.y) == (ystart + _offse
     image_index = 0;
     playerid = other.id;
     image_speed = 0.5;
-    other.state = UnknownEnum.Value_150;
+    other.state = states.tube;
     other.tube_vsp = 0;
-    state = UnknownEnum.Value_150;
+    state = states.tube;
 }
 
 enum UnknownEnum

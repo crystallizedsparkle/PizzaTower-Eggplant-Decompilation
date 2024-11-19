@@ -60,7 +60,7 @@ function scr_player_ghost()
     }
     
     if (sprite_index == spr_ghostend && floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (place_meeting(x, y, obj_ghosttransparency))
         image_alpha = 0.5;
@@ -76,7 +76,7 @@ function scr_player_ghostpossess()
     if (!instance_exists(possessID))
     {
         visible = true;
-        state = UnknownEnum.Value_16;
+        state = states.ghost;
         sprite_index = spr_ghostidle;
     }
 }

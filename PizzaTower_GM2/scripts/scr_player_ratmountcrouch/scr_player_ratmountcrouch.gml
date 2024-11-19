@@ -34,13 +34,13 @@ function scr_player_ratmountcrouch()
     
     if (!grounded)
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         jumpAnim = false;
         sprite_index = spr_player_ratmountgroundpoundfall;
     }
     
     if (((grounded && !key_down) || brick) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     
     if (hsp != 0)
         sprite_index = spr_lonegustavo_crouchwalk;

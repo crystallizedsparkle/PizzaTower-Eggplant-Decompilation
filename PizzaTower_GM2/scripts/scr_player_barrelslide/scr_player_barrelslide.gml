@@ -34,7 +34,7 @@ function scr_player_barrelslide()
         input_buffer_jump = 8;
         vsp = -8.5;
         jumpstop = false;
-        create_particle(x, y, UnknownEnum.Value_3, 0);
+        create_particle(x, y, particles.highjumpcloud1, 0);
     }
     
     if ((!key_attack && !place_meeting(x, y + 1, obj_current)) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
@@ -45,11 +45,11 @@ function scr_player_barrelslide()
         {
             if (grounded)
             {
-                state = UnknownEnum.Value_113;
+                state = states.barrel;
             }
             else
             {
-                state = UnknownEnum.Value_114;
+                state = states.barreljump;
                 sprite_index = spr_player_barrelfall;
             }
         }
@@ -69,7 +69,7 @@ function scr_player_barrelslide()
         if (scr_slope())
         {
             vsp = -12;
-            state = UnknownEnum.Value_115;
+            state = states.barrelclimbwall;
             movespeed = 0;
         }
         else
@@ -83,7 +83,7 @@ function scr_player_barrelslide()
                 input_buffer_jump = 8;
                 vsp = -8.5;
                 jumpstop = true;
-                create_particle(x, y, UnknownEnum.Value_3, 0);
+                create_particle(x, y, particles.highjumpcloud1, 0);
             }
         }
     }

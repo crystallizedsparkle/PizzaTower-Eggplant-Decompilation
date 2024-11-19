@@ -1,7 +1,7 @@
 hsp = 1;
 approach_spd = 4;
 playerid = -1;
-state = UnknownEnum.Value_0;
+state = states.normal;
 stored_spd = 0;
 movespeed = 0;
 tube_spr = 91;

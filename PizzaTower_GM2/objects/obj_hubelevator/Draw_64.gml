@@ -1,6 +1,6 @@
 var w, h, pad, yy, i, txt, c;
 
-if (state == UnknownEnum.Value_18)
+if (state == states.titlescreen)
 {
     w = 0;
     h = 0;

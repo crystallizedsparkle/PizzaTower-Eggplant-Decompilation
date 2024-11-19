@@ -8,7 +8,7 @@ function scr_player_blockstance()
     
     if (!key_attack && sprite_index != spr_player_airattackstart)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         landAnim = false;
     }
 }

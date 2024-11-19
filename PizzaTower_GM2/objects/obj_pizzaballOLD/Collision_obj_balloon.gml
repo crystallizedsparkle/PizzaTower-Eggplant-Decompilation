@@ -1,7 +1,7 @@
-if (state == UnknownEnum.Value_148)
+if (state == states.golf)
     exit;
 
-create_particle(x, y, UnknownEnum.Value_6, 0);
+create_particle(x, y, particles.balloonpop, 0);
 vsp = -14;
 kicked = false;
 

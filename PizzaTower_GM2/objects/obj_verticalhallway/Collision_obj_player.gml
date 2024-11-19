@@ -1,6 +1,6 @@
 var _x, _percentage, bbox_size, i;
 
-if (obj_player1.state == UnknownEnum.Value_208)
+if (obj_player1.state == states.debugstate)
     exit;
 
 with (other)
@@ -41,11 +41,11 @@ with (other)
     x = clamp(x, other.x + bbox_size, other.bbox_right - bbox_size);
     y = other.y;
     
-    if (state == UnknownEnum.Value_37)
+    if (state == states.climbwall)
     {
         trace("climbwall verticalhallway");
         verticalbuffer = 10;
-        verticalstate = UnknownEnum.Value_37;
+        verticalstate = states.climbwall;
         i = 0;
         x = floor(x);
         

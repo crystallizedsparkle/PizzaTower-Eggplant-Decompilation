@@ -2,7 +2,7 @@ with (obj_player1)
 {
     if (character != "V")
     {
-        if ((place_meeting(x + hsp, y, other) || place_meeting(x + xscale, y, other)) && (obj_player1.state == UnknownEnum.Value_121 || obj_player1.state == UnknownEnum.Value_184 || obj_player1.state == UnknownEnum.Value_38 || obj_player1.state == UnknownEnum.Value_153))
+        if ((place_meeting(x + hsp, y, other) || place_meeting(x + xscale, y, other)) && (obj_player1.state == states.mach3 || obj_player1.state == states.rocket || obj_player1.state == states.knightpepslopes || obj_player1.state == states.shoulderbash))
         {
             playerindex = 0;
             instance_destroy(other);
@@ -12,13 +12,13 @@ with (obj_player1)
 
 if (place_meeting(x, y + 1, obj_player1) || place_meeting(x, y - 1, obj_player1) || place_meeting(x - 1, y, obj_player1) || place_meeting(x + 1, y, obj_player1))
 {
-    if (place_meeting(x, y - 1, obj_player1) && (obj_player1.state == UnknownEnum.Value_108 && obj_player1.freefallsmash >= 10))
+    if (place_meeting(x, y - 1, obj_player1) && (obj_player1.state == states.freefall && obj_player1.freefallsmash >= 10))
     {
         with (instance_place(x, y - 1, obj_player1))
         {
             if (character == "M")
             {
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 vsp = -7;
                 sprite_index = spr_jump;
             }
@@ -28,7 +28,7 @@ if (place_meeting(x, y + 1, obj_player1) || place_meeting(x, y - 1, obj_player1)
         instance_destroy();
     }
     
-    if (place_meeting(x, y - 1, obj_player1) && (obj_player1.state == UnknownEnum.Value_47 || obj_player1.state == UnknownEnum.Value_19))
+    if (place_meeting(x, y - 1, obj_player1) && (obj_player1.state == states.knightpep || obj_player1.state == states.hookshot))
     {
         playerindex = 0;
         instance_destroy();
@@ -38,7 +38,7 @@ if (place_meeting(x, y + 1, obj_player1) || place_meeting(x, y - 1, obj_player1)
 
 with (obj_player2)
 {
-    if ((place_meeting(x + hsp, y, other) || place_meeting(x + xscale, y, other)) && (obj_player2.state == UnknownEnum.Value_121 || obj_player2.state == UnknownEnum.Value_38 || obj_player2.state == UnknownEnum.Value_153))
+    if ((place_meeting(x + hsp, y, other) || place_meeting(x + xscale, y, other)) && (obj_player2.state == states.mach3 || obj_player2.state == states.knightpepslopes || obj_player2.state == states.shoulderbash))
     {
         playerindex = 1;
         instance_destroy(other);
@@ -47,13 +47,13 @@ with (obj_player2)
 
 if (place_meeting(x, y + 1, obj_player2) || place_meeting(x, y - 1, obj_player2) || place_meeting(x - 1, y, obj_player2) || place_meeting(x + 1, y, obj_player2))
 {
-    if (place_meeting(x, y - 1, obj_player2) && (obj_player2.state == UnknownEnum.Value_108 && obj_player2.freefallsmash >= 10))
+    if (place_meeting(x, y - 1, obj_player2) && (obj_player2.state == states.freefall && obj_player2.freefallsmash >= 10))
     {
         playerindex = 1;
         instance_destroy();
     }
     
-    if (place_meeting(x, y - 1, obj_player2) && (obj_player2.state == UnknownEnum.Value_47 || obj_player2.state == UnknownEnum.Value_19))
+    if (place_meeting(x, y - 1, obj_player2) && (obj_player2.state == states.knightpep || obj_player2.state == states.hookshot))
     {
         playerindex = 1;
         instance_destroy();

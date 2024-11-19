@@ -1,4 +1,4 @@
-playerid.state = UnknownEnum.Value_0;
+playerid.state = states.normal;
 instance_destroy();
 
 enum UnknownEnum

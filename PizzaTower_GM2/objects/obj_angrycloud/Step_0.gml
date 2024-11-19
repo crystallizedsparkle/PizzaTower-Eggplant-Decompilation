@@ -3,7 +3,7 @@ image_xscale = playerid.xscale;
 x = playerid.x;
 y = playerid.y;
 
-if (global.stylethreshold < 2 || playerid.state != UnknownEnum.Value_0)
+if (global.stylethreshold < 2 || playerid.state != states.normal)
     instance_destroy();
 
 enum UnknownEnum

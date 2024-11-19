@@ -7,10 +7,10 @@ if (global.switchbuffer == 0)
         hsp = 0;
         vsp = 0;
         visible = false;
-        state = UnknownEnum.Value_146;
+        state = states.actor;
     }
     
-    create_particle(x, y, UnknownEnum.Value_9);
+    create_particle(x, y, particles.genericpoofeffect);
     sprite_index = spr_peppinoswitch1;
     playerid = other.id;
     global.switchbuffer = 200;

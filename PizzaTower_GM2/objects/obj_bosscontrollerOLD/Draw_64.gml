@@ -14,7 +14,7 @@ if (bossID.playerdestroyed)
 
 switch (state)
 {
-    case UnknownEnum.Value_144:
+    case states.arena_intro:
         draw_sprite_tiled(spr_versusflame, -1, 0, flamey);
         sprplayer = (playerx != 0) ? playersprshadow : playerspr;
         sprboss = (playerx != 0) ? bosssprshadow : bossspr;

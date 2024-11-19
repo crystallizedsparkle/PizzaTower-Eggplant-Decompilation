@@ -2,8 +2,8 @@ function scr_monster_activate()
 {
     with (obj_monster)
     {
-        if (state == UnknownEnum.Value_217)
-            state = UnknownEnum.Value_218;
+        if (state == states.robot_idle)
+            state = states.robot_intro;
     }
     
     with (obj_monstergate)
@@ -45,7 +45,7 @@ function scr_monster_detect(argument0, argument1, argument2)
         {
             with (argument2)
             {
-                if (state != UnknownEnum.Value_100 || (!scr_solid(x, y - 24) && !place_meeting(x, y - 24, obj_platform)))
+                if (state != states.crouch || (!scr_solid(x, y - 24) && !place_meeting(x, y - 24, obj_platform)))
                     detect = true;
             }
         }
@@ -89,8 +89,8 @@ function scr_puppet_appear(argument0)
     
     x = argument0.x + (abs(_xdir) * argument0.xscale);
     y = argument0.y;
-    state = UnknownEnum.Value_220;
-    substate = UnknownEnum.Value_135;
+    state = states.robot_chase;
+    substate = states.fall;
     playerid = argument0;
     
     while (place_meeting(x, y, obj_solid))
@@ -153,7 +153,7 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
             }
             else
             {
-                state = UnknownEnum.Value_219;
+                state = states.robot_walking;
                 image_xscale *= -1;
                 instance_create(x, y, obj_patroller);
             }
@@ -162,7 +162,7 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
     }
     
     if (scr_monster_detect(300, room_height, targetplayer))
-        state = UnknownEnum.Value_220;
+        state = states.robot_chase;
 }
 
 function scr_monster_detect_audio()
@@ -171,7 +171,7 @@ function scr_monster_detect_audio()
     {
         if (!point_in_camera(x, y, view_camera[0]))
         {
-            state = UnknownEnum.Value_221;
+            state = states.robot_investigate;
             investigatestate = 0;
         }
         else
@@ -180,13 +180,13 @@ function scr_monster_detect_audio()
             
             if (object_index == obj_blobmonster)
             {
-                state = UnknownEnum.Value_135;
+                state = states.fall;
                 gravdir *= -1;
                 chase = false;
             }
             else
             {
-                state = UnknownEnum.Value_220;
+                state = states.robot_chase;
             }
         }
     }

@@ -36,7 +36,7 @@ function scr_player_shotgunfreefall()
             sprite_index = spr_shotgunjump2;
             image_index = 0;
             scr_soundeffect(27);
-            create_particle(x, y, UnknownEnum.Value_12, 0);
+            create_particle(x, y, particles.landcloud, 0);
             
             with (obj_camera)
             {
@@ -52,7 +52,7 @@ function scr_player_shotgunfreefall()
         
         if (floor(image_index) == (image_number - 1))
         {
-            state = UnknownEnum.Value_66;
+            state = states.shotgun;
             sprite_index = spr_shotgunland;
             image_index = 0;
             landAnim = true;

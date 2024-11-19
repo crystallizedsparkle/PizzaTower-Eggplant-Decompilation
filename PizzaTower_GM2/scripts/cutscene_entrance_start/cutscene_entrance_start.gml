@@ -2,7 +2,7 @@ function cutscene_entrance_start()
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_146;
+        state = states.actor;
         sprite_index = spr_walkfront;
         image_speed = 0.35;
         other.xscale = xscale;

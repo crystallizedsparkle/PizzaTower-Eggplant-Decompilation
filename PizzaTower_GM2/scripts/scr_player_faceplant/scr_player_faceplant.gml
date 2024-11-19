@@ -36,7 +36,7 @@ function scr_player_faceplant()
         }
         
         flash = false;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -2.5;
         vsp = -3;
         mach2 = 0;
@@ -47,14 +47,14 @@ function scr_player_faceplant()
     if (floor(image_index) == (image_number - 1) && !key_attack)
     {
         image_speed = 0.35;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         grav = 0.5;
     }
     
     if (floor(image_index) == (image_number - 1) && key_attack)
     {
         image_speed = 0.35;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         grav = 0.5;
     }
     
@@ -63,7 +63,7 @@ function scr_player_faceplant()
         grav = 0.5;
         sprite_index = spr_crouchslip;
         machhitAnim = false;
-        state = UnknownEnum.Value_102;
+        state = states.crouchslide;
         movespeed = 15;
     }
     

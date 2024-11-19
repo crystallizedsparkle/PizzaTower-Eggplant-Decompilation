@@ -18,7 +18,7 @@ function scr_player_ratmountclimbwall()
     
     if (!grounded && !place_meeting(x + 1, y, obj_solid) && !place_meeting(x - 1, y, obj_solid))
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         jumpAnim = false;
         sprite_index = spr_player_ratmountfall;
     }
@@ -27,7 +27,7 @@ function scr_player_ratmountclimbwall()
     {
         if (key_jump2)
         {
-            state = UnknownEnum.Value_198;
+            state = states.ratmountbounce;
             xscale *= -1;
             vsp = -14;
             ratmount_fallingspeed = 0;
@@ -36,7 +36,7 @@ function scr_player_ratmountclimbwall()
         }
         else
         {
-            state = UnknownEnum.Value_192;
+            state = states.ratmountjump;
             sprite_index = spr_player_ratmountfall;
         }
     }

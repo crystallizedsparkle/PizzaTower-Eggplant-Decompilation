@@ -5,17 +5,17 @@ function scr_ratblock_destroy()
         if ((other.sprite_index == spr_rattumbleblock || other.sprite_index == spr_rattumbleblock_big) && sprite_index == spr_tumble && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other)))
             instance_destroy(other);
         
-        if (state != UnknownEnum.Value_11 && state != UnknownEnum.Value_52 && (!scr_transformationcheck() || state == UnknownEnum.Value_113) && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other) || place_meeting(x, y + 1, other) || place_meeting(x, y - 1, other)))
+        if (state != states.mort && state != states.bombgrab && (!scr_transformationcheck() || state == states.barrel) && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other) || place_meeting(x, y + 1, other) || place_meeting(x, y - 1, other)))
         {
             switch (state)
             {
-                case UnknownEnum.Value_113:
+                case states.barrel:
                     if (!place_meeting(x, y - 12, other))
                         instance_destroy(other);
                     
                     break;
                 
-                case UnknownEnum.Value_51:
+                case states.bombpep:
                     if (sprite_index != spr_bombpepend && sprite_index != spr_bombpepintro)
                     {
                         instance_create(x, y, obj_bombexplosion);
@@ -25,23 +25,23 @@ function scr_ratblock_destroy()
                         vsp = -4;
                         image_index = 0;
                         sprite_index = spr_bombpepend;
-                        state = UnknownEnum.Value_51;
+                        state = states.bombpep;
                         bombpeptimer = 0;
                     }
                     
                     break;
                 
-                case UnknownEnum.Value_186:
-                case UnknownEnum.Value_150:
-                case UnknownEnum.Value_146:
-                case UnknownEnum.Value_33:
-                case UnknownEnum.Value_34:
-                case UnknownEnum.Value_35:
-                case UnknownEnum.Value_47:
-                case UnknownEnum.Value_49:
+                case states.gotoplayer:
+                case states.tube:
+                case states.actor:
+                case states.boxxedpep:
+                case states.boxxedpepspin:
+                case states.boxxedpepjump:
+                case states.knightpep:
+                case states.knightpepbump:
                     break;
                 
-                case UnknownEnum.Value_5:
+                case states.tumble:
                     if (other.sprite_index == spr_rattumbleblock || other.sprite_index == spr_rattumbleblock_big)
                         instance_destroy(other);
                     

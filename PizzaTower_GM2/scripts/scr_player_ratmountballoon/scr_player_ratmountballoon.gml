@@ -28,8 +28,8 @@ function scr_player_ratmountballoon()
     
     if (_jump)
     {
-        create_particle(x, y, UnknownEnum.Value_13, 0);
-        state = UnknownEnum.Value_192;
+        create_particle(x, y, particles.ratmountballooncloud, 0);
+        state = states.ratmountjump;
         sprite_index = spr_player_ratmountballoonend1;
         image_index = 0;
         jumpAnim = true;

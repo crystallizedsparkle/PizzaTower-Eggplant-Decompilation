@@ -24,7 +24,7 @@ else
 {
     sb = ds_map_find_value(boss_hurtstates, state);
     
-    if (!is_undefined(sb) && state != UnknownEnum.Value_61 && state != UnknownEnum.Value_138)
+    if (!is_undefined(sb) && state != states.chainsaw && state != states.stun)
     {
         player_hurt(sb, _player);
         lastplayerid = _player;

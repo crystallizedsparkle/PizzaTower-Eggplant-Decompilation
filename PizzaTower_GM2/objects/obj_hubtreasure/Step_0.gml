@@ -11,7 +11,7 @@ if (playerid != -4)
     x = playerid.x;
     y = playerid.y - 35;
     
-    if (playerid.state != UnknownEnum.Value_46)
+    if (playerid.state != states.gottreasure)
         instance_destroy();
 }
 
@@ -25,13 +25,13 @@ if (!got)
         
         with (_player)
         {
-            if (state != UnknownEnum.Value_186)
+            if (state != states.gotoplayer)
             {
                 if (grounded)
                 {
                     hsp = 0;
                     vsp = 0;
-                    state = UnknownEnum.Value_46;
+                    state = states.gottreasure;
                     scr_soundeffect(21);
                     
                     with (other)

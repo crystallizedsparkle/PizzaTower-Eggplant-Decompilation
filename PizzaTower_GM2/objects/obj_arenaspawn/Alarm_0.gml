@@ -1,4 +1,4 @@
-if (state != UnknownEnum.Value_145)
+if (state != states.arena_round)
 {
     wave_seconds--;
     
@@ -15,10 +15,10 @@ if (state != UnknownEnum.Value_145)
             
             with (obj_player1)
             {
-                if (state != UnknownEnum.Value_7)
+                if (state != states.ejected)
                 {
                     vsp = -11;
-                    state = UnknownEnum.Value_7;
+                    state = states.ejected;
                     targetRoom = lastroom;
                 }
             }
@@ -26,7 +26,7 @@ if (state != UnknownEnum.Value_145)
     }
 }
 
-if (state == UnknownEnum.Value_143 || state == UnknownEnum.Value_142)
+if (state == states.arena || state == states.arena_spawn)
     alarm[0] = 60;
 
 enum UnknownEnum

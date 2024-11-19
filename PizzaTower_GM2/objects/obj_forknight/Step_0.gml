@@ -5,60 +5,60 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -66,7 +66,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 scr_scareenemy();
@@ -76,7 +76,7 @@ if (elite && ragecooldown == 0)
     player = instance_nearest(x, y, obj_player);
     check = (image_xscale > 0) ? (player.x > x && player.x < (x + 400)) : (player.x < x && player.x > (x - 400));
     
-    if (state == UnknownEnum.Value_134)
+    if (state == states.walk)
     {
         if (check && (y <= (player.y + 60) && y >= (player.y - 60)))
         {
@@ -85,19 +85,19 @@ if (elite && ragecooldown == 0)
             image_index = 0;
             flash = true;
             alarm[4] = 5;
-            state = UnknownEnum.Value_125;
+            state = states.rage;
             ragedash = 50;
             create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
         }
     }
 }
 
-if (ragedash > 0 && state == UnknownEnum.Value_125)
+if (ragedash > 0 && state == states.rage)
     ragedash--;
 
-if (ragedash == 0 && state == UnknownEnum.Value_125)
+if (ragedash == 0 && state == states.rage)
 {
-    state = UnknownEnum.Value_134;
+    state = states.walk;
     sprite_index = walkspr;
     ragecooldown = 100;
 }
@@ -108,7 +108,7 @@ if (ragecooldown > 0)
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == false && state == UnknownEnum.Value_134)
+if (hitboxcreate == false && state == states.walk)
 {
     hitboxcreate = true;
     
@@ -116,10 +116,10 @@ if (hitboxcreate == false && state == UnknownEnum.Value_134)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

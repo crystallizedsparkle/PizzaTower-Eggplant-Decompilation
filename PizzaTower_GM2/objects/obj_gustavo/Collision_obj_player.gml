@@ -6,7 +6,7 @@ if (sprite_index == spr_gustavo_showpizza)
     global.failcutscene = false;
     global.pizzadelivery = true;
     global.hp = 8;
-    state = UnknownEnum.Value_0;
+    state = states.normal;
     global.heattime = 60;
 }
 

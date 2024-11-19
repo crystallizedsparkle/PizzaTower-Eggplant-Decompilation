@@ -1,4 +1,4 @@
-if (other.state == UnknownEnum.Value_184)
+if (other.state == states.rocket)
     instance_destroy();
 
 enum UnknownEnum

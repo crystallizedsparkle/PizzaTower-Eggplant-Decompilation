@@ -86,7 +86,7 @@ function state_player_jump()
                 scr_soundeffect(41);
                 sprite_index = spr_playerN_wallclingstart;
                 image_index = 0;
-                state = UnknownEnum.Value_109;
+                state = states.hang;
                 xscale *= -1;
                 vsp = 0;
                 doublejump = false;
@@ -99,8 +99,8 @@ function state_player_jump()
                 jumpstop = false;
                 vsp = -9;
                 doublejump = true;
-                particle_set_scale(UnknownEnum.Value_4, xscale, 1);
-                create_particle(x, y, UnknownEnum.Value_4, 0);
+                particle_set_scale(particles.highjumpcloud2, xscale, 1);
+                create_particle(x, y, particles.highjumpcloud2, 0);
             }
         }
     }
@@ -140,7 +140,7 @@ function state_player_jump()
             scr_soundeffect(12);
             stompAnim = false;
             vsp = -11;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             jumpAnim = true;
             jumpstop = false;
             freefallstart = 0;
@@ -159,8 +159,8 @@ function state_player_jump()
                 image_index = 0;
             }
             
-            particle_set_scale(UnknownEnum.Value_4, xscale, 1);
-            create_particle(x, y, UnknownEnum.Value_4, 0);
+            particle_set_scale(particles.highjumpcloud2, xscale, 1);
+            create_particle(x, y, particles.highjumpcloud2, 0);
         }
         
         if (vsp > 0 && (!key_attack || sprite_index == spr_suplexbump))
@@ -177,11 +177,11 @@ function state_player_jump()
                 image_index = 0;
             
             input_buffer_secondjump = 0;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             jumpAnim = true;
             jumpstop = false;
             freefallstart = 0;
-            create_particle(x, y, UnknownEnum.Value_12, 0);
+            create_particle(x, y, particles.landcloud, 0);
         }
     }
     
@@ -273,7 +273,7 @@ function state_player_jump()
         {
             sprite_index = spr_bodyslamstart;
             image_index = 0;
-            state = UnknownEnum.Value_108;
+            state = states.freefall;
             vsp = -6;
         }
         else
@@ -281,7 +281,7 @@ function state_player_jump()
             scr_soundeffect(26);
             sprite_index = spr_shotgunjump1;
             image_index = 0;
-            state = UnknownEnum.Value_108;
+            state = states.freefall;
             vsp = -11;
             
             with (instance_create(x + (xscale * 30), y + 60, obj_shotgunbullet))
@@ -323,7 +323,7 @@ function state_player_jump()
         scr_soundeffect(27);
         image_index = 0;
         sprite_index = spr_bodyslamland;
-        state = UnknownEnum.Value_111;
+        state = states.freefallland;
         
         with (obj_baddie)
         {
@@ -349,7 +349,7 @@ function state_player_jump()
         suplexmove = true;
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0);
         sfx_gain(suplexdashsnd);
-        state = UnknownEnum.Value_42;
+        state = states.handstandjump;
         movespeed = 5;
     }
     
@@ -387,7 +387,7 @@ function state_player_jump()
                 
                 sprite_index = spr_mortthrow;
                 image_index = 0;
-                state = UnknownEnum.Value_72;
+                state = states.pistol;
                 mort = true;
                 
                 with (obj_camera)
@@ -401,7 +401,7 @@ function state_player_jump()
                 sprite_index = spr_pistolshot;
                 image_index = 0;
                 movespeed = 5;
-                state = UnknownEnum.Value_42;
+                state = states.handstandjump;
                 shoot = true;
                 
                 with (obj_camera)
@@ -442,7 +442,7 @@ function state_player_jump()
             {
                 sprite_index = spr_mach1;
                 image_index = 0;
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
                 
                 if (movespeed < 6)
                     movespeed = 6;
@@ -460,13 +460,13 @@ function state_player_jump()
                     sprite_index = spr_mach1;
                     image_index = 0;
                     movespeed = 6;
-                    state = UnknownEnum.Value_103;
+                    state = states.mach1;
                 }
                 else
                 {
                     sprite_index = spr_crazyrun;
                     movespeed = 20;
-                    state = UnknownEnum.Value_121;
+                    state = states.mach3;
                 }
             }
             
@@ -478,7 +478,7 @@ function state_player_jump()
                 if (move == 0)
                     movespeed = 0;
                 
-                state = UnknownEnum.Value_2;
+                state = states.dynamite;
                 
                 with (instance_create(x, y, obj_dynamite))
                 {
@@ -491,14 +491,14 @@ function state_player_jump()
             }
             
             if (sprite_index == spr_playerV_superjump && floor(image_index) == (image_number - 1))
-                create_particle(x, y + 25, UnknownEnum.Value_7, 0);
+                create_particle(x, y + 25, particles.shotgunimpact, 0);
             
             if (key_slap2)
             {
                 sprite_index = spr_playerV_airrevolver;
                 image_index = 0;
                 vsp = -5;
-                state = UnknownEnum.Value_1;
+                state = states.revolver;
                 
                 with (instance_create(x + (xscale * 20), y + 20, obj_shotgunbullet))
                 {
@@ -524,14 +524,14 @@ function state_player_jump()
                 image_index = 0;
                 hsp = 0;
                 vsp = 0;
-                state = UnknownEnum.Value_99;
+                state = states.Sjumpprep;
             }
             
             if (key_attack && !pogochargeactive && !key_slap2 && pizzapepper == 0)
             {
                 sprite_index = spr_playerN_pogostart;
                 image_index = 0;
-                state = UnknownEnum.Value_58;
+                state = states.pogo;
             }
             
             break;
@@ -557,7 +557,7 @@ function state_player_jump()
     
     if (place_meeting(x, y, obj_solid))
     {
-        state = UnknownEnum.Value_100;
+        state = states.crouch;
         landAnim = false;
         crouchAnim = true;
         image_index = 0;
@@ -601,13 +601,13 @@ function state_pepperman_jump()
     
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         instance_create(x, y - 5, obj_landcloud);
     }
     
     if (key_down2 && !grounded)
     {
-        state = UnknownEnum.Value_108;
+        state = states.freefall;
         freefallsmash = 12;
         vsp = 14;
         sprite_index = spr_bodyslamfall;
@@ -618,7 +618,7 @@ function state_pepperman_jump()
         if (move != 0)
             xscale = move;
         
-        state = UnknownEnum.Value_153;
+        state = states.shoulderbash;
         sprite_index = spr_pepperman_shoulderstart;
         image_index = 0;
         scr_soundeffect(45);
@@ -641,7 +641,7 @@ function state_pepperman_jump()
         tauntstoredvsp = vsp;
         tauntstoredsprite = sprite_index;
         tauntstoredstate = state;
-        state = UnknownEnum.Value_84;
+        state = states.backbreaker;
         
         if (supercharged == true)
         {

@@ -53,7 +53,7 @@ function scr_player_boxxedpep()
     {
         instance_create(x, y, obj_highjumpcloud2);
         vsp = -boxxedpepjump;
-        state = UnknownEnum.Value_35;
+        state = states.boxxedpepjump;
         sprite_index = spr_boxxedpep_flap;
         image_index = 0;
         
@@ -120,14 +120,14 @@ function scr_player_boxxedpep()
             else
             {
                 sprite_index = spr_boxxedpepair;
-                state = UnknownEnum.Value_35;
+                state = states.boxxedpepjump;
             }
         }
     }
     
     if (key_slap2)
     {
-        state = UnknownEnum.Value_34;
+        state = states.boxxedpepspin;
         sprite_index = spr_boxxedpep_spin;
         image_index = 0;
         vsp = -6;

@@ -4,13 +4,13 @@ if (sprite_index != spr_haystackburning && sprite_index != spr_haystackburningup
 {
     with (obj_peasanto)
     {
-        if (state == UnknownEnum.Value_128 && place_meeting(x + hsp, y, other))
+        if (state == states.charge && place_meeting(x + hsp, y, other))
             other.sprite_index = spr_haystackburningup;
     }
     
     with (obj_player)
     {
-        if ((state == UnknownEnum.Value_10 && (place_meeting(x + hsp, y, other) || place_meeting(x, y + 1, other))) || (state == UnknownEnum.Value_9 && place_meeting(x, y + 1, other)))
+        if ((state == states.firemouth && (place_meeting(x + hsp, y, other) || place_meeting(x, y + 1, other))) || (state == states.fireass && place_meeting(x, y + 1, other)))
             other.sprite_index = spr_haystackburningup;
     }
 }
@@ -47,7 +47,7 @@ else if (sprite_index == spr_haystackburning)
     
     with (instance_place(x, y - 1, obj_baddie))
     {
-        if (state != UnknownEnum.Value_4)
+        if (state != states.grabbed)
             instance_destroy();
     }
     
@@ -67,7 +67,7 @@ else if (sprite_index == spr_haystackburning)
     
     with (playerid)
     {
-        if (state != UnknownEnum.Value_9 && state != UnknownEnum.Value_47)
+        if (state != states.fireass && state != states.knightpep)
         {
             if (character == "V")
             {
@@ -78,10 +78,10 @@ else if (sprite_index == spr_haystackburning)
                 scr_losepoints();
                 scr_soundeffect(54);
                 
-                if (state != UnknownEnum.Value_9)
-                    tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", UnknownEnum.Value_2, 550, 3), "fireass");
+                if (state != states.fireass)
+                    tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt_type.transformation, 550, 3), "fireass");
                 
-                state = UnknownEnum.Value_9;
+                state = states.fireass;
                 image_index = 0;
                 vsp = -5;
                 sprite_index = spr_fireass;
@@ -90,7 +90,7 @@ else if (sprite_index == spr_haystackburning)
     }
 }
 
-if (state == UnknownEnum.Value_8)
+if (state == states.transitioncutscene)
 {
     hsp = movespeed * dir;
     
@@ -101,7 +101,7 @@ if (state == UnknownEnum.Value_8)
     {
         x = x_to;
         hsp = 0;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     }
 }
 

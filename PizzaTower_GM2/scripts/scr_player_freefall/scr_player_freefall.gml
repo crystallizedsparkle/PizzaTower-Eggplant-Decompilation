@@ -77,7 +77,7 @@ function scr_player_freefall()
             with (instance_place(x, y + 1, obj_slope))
             {
                 other.xscale = -sign(image_xscale);
-                other.state = UnknownEnum.Value_5;
+                other.state = states.tumble;
                 other.sprite_index = other.spr_crouchslip;
                 
                 if (other.freefallsmash > 20)
@@ -101,7 +101,7 @@ function scr_player_freefall()
                 sprite_index = spr_shotgunjump2;
             
             image_index = 0;
-            state = UnknownEnum.Value_111;
+            state = states.freefallland;
             jumpAnim = true;
             jumpstop = false;
             
@@ -117,7 +117,7 @@ function scr_player_freefall()
                 {
                     if (shakestun && grounded && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0 && !invincible && groundpound)
                     {
-                        state = UnknownEnum.Value_138;
+                        state = states.stun;
                         
                         if (stunned < 60)
                             stunned = 60;
@@ -139,7 +139,7 @@ function scr_player_freefall()
                 bounce = false;
             }
             
-            create_particle(x, y + 3, UnknownEnum.Value_14, 0);
+            create_particle(x, y + 3, particles.groundpoundeffect, 0);
             freefallstart = 0;
         }
     }
@@ -153,7 +153,7 @@ function scr_player_freefall()
     {
         if (!key_down)
         {
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             sprite_index = spr_fall;
             image_index = 0;
         }

@@ -46,7 +46,7 @@ function scr_player_rocket()
     if (key_jump)
     {
         dir = xscale;
-        state = UnknownEnum.Value_104;
+        state = states.mach2;
         sprite_index = spr_mach2jump;
         jumpstop = false;
         vsp = -11;
@@ -77,7 +77,7 @@ function scr_player_rocket()
         
         if (move != 0 && move != xscale && sprite_index != spr_rocketstart)
         {
-            state = UnknownEnum.Value_185;
+            state = states.rocketslide;
             scr_soundeffect(86);
             sprite_index = spr_player_rocketslide;
             image_index = 0;
@@ -113,7 +113,7 @@ function scr_player_rocket()
         }
         
         flash = false;
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         hsp = -3.5 * xscale;
         vsp = -6;
         mach2 = 0;

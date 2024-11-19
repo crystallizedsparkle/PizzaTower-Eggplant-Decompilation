@@ -13,7 +13,7 @@ function scr_player_fireass()
     if (sprite_index == spr_fireass || sprite_index == spr_scaredjump1 || sprite_index == spr_scaredjump2)
     {
         if (floor(image_index) == (image_number - 1) && sprite_index == spr_fireass)
-            create_particle(x, y + 25, UnknownEnum.Value_7, 0);
+            create_particle(x, y + 25, particles.shotgunimpact, 0);
         
         move = key_left + key_right;
         hsp = movespeed;
@@ -52,7 +52,7 @@ function scr_player_fireass()
                 alarm[5] = 2;
                 alarm[7] = 60;
                 hurted = true;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 sprite_index = spr_idle;
                 image_index = 0;
             }
@@ -78,7 +78,7 @@ function scr_player_fireass()
             alarm[5] = 2;
             alarm[7] = 60;
             hurted = true;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             sprite_index = spr_idle;
             image_index = 0;
         }
@@ -93,7 +93,7 @@ function scr_player_fireass()
             alarm[5] = 2;
             alarm[7] = 60;
             hurted = true;
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             sprite_index = spr_idle;
             image_index = 0;
         }

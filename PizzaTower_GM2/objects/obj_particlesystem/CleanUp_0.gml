@@ -1,11 +1,9 @@
-var i, k;
-
 part_emitter_destroy(global.particle_system, global.part_emitter);
-i = UnknownEnum.Value_0;
+var i = particles.first;
 
-while (i < UnknownEnum.Value_16)
+while (i < particles.last)
 {
-    k = ds_map_find_value(global.part_map, i);
+    var k = ds_map_find_value(global.part_map, i);
     
     if (!is_undefined(k))
         part_type_destroy(k);

@@ -15,13 +15,13 @@ function scr_player_ratmountattack()
     {
         doublejump = true;
         vsp = -11;
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         jumpstop = false;
         sprite_index = spr_player_ratmountwalljump;
     }
     
     if (floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     
     if (scr_solid(x + xscale, y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
         ledge_bump((vsp >= 0) ? 32 : 22);

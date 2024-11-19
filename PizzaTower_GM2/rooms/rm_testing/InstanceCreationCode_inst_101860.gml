@@ -9,7 +9,7 @@ stepfunc = function()
     
     with (obj_player)
     {
-        if (state == UnknownEnum.Value_55 && place_meeting(x, y, other))
+        if (state == states.grabbing && place_meeting(x, y, other))
             other.active = true;
     }
 };

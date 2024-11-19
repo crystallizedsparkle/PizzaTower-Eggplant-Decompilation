@@ -1,4 +1,4 @@
-if (buffer <= 0 && other.state != UnknownEnum.Value_16 && other.grounded)
+if (buffer <= 0 && other.state != states.ghost && other.grounded)
 {
     buffer = 50;
     
@@ -21,7 +21,7 @@ if (buffer <= 0 && other.state != UnknownEnum.Value_16 && other.grounded)
         with (instance_create(x, y, obj_gravecorpse))
             playerid = other.id;
         
-        state = UnknownEnum.Value_211;
+        state = states.trashroll;
     }
 }
 

@@ -14,7 +14,7 @@ function scr_player_ratmountgroundpound()
     
     if (brick == true)
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         sprite_index = spr_player_ratmountfall;
     }
     
@@ -88,7 +88,7 @@ function scr_player_ratmountgroundpound()
                 {
                     if (shakestun && grounded && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0 && !invincible && groundpound)
                     {
-                        state = UnknownEnum.Value_138;
+                        state = states.stun;
                         
                         if (stunned < 60)
                             stunned = 60;
@@ -110,14 +110,14 @@ function scr_player_ratmountgroundpound()
                 bounce = false;
             }
             
-            create_particle(x, y + 3, UnknownEnum.Value_14, 0);
+            create_particle(x, y + 3, particles.groundpoundeffect, 0);
         }
     }
     
     if (sprite_index == spr_lonegustavo_groundpoundland && floor(image_index) == (image_number - 1))
     {
         sprite_index = spr_lonegustavo_idle;
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     }
     
     if ((sprite_index == spr_lonegustavo_kick || sprite_index == spr_lonegustavo_jumpstart) && floor(image_index) == (image_number - 1))
@@ -127,7 +127,7 @@ function scr_player_ratmountgroundpound()
         else
             sprite_index = spr_lonegustavo_jump;
         
-        state = UnknownEnum.Value_191;
+        state = states.ratmount;
     }
     
     image_speed = 0.35;

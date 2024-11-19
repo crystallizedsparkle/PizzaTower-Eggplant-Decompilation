@@ -6,7 +6,7 @@ if (patroltimer > 0)
 else
 {
     patrolfound = false;
-    state = UnknownEnum.Value_80;
+    state = states.punch;
     sprite_index = spr_patroller_alert;
     image_index = 0;
     scr_monster_activate();

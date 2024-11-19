@@ -12,7 +12,7 @@ if (global.panic)
         {
             if (other.playerid == -4 && place_meeting(x, y, other))
             {
-                state = UnknownEnum.Value_146;
+                state = states.actor;
                 visible = false;
                 other.sprite_index = spr_pizzaportalend;
                 other.image_index = 0;

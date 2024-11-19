@@ -131,7 +131,7 @@ function scr_player_backkick()
     crouchAnim = true;
     
     if (floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     sprite_index = spr_backkick;
     image_speed = 0.35;

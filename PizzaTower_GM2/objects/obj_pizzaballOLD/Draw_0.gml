@@ -2,7 +2,7 @@ var _xx, _yy, _mt;
 
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, image_blend, image_alpha);
 
-if (state == UnknownEnum.Value_148)
+if (state == states.golf)
 {
     _xx = lengthdir_x(128, m_angle);
     _yy = lengthdir_y(128, m_angle);

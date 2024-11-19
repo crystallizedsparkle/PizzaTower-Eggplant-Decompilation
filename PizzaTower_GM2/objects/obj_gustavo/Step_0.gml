@@ -15,7 +15,7 @@ if (sprite_index == spr_gustavo_givepizza)
     }
 }
 
-if (state == UnknownEnum.Value_0)
+if (state == states.normal)
 {
     player = instance_nearest(x, y, obj_player);
     

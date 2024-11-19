@@ -29,7 +29,7 @@ if (room_place(robot_pos.x, robot_pos.y) != room_get_name(room))
         with (obj_robotmonster)
         {
             investigatestate = 0;
-            state = UnknownEnum.Value_221;
+            state = states.robot_investigate;
         }
     }
 }

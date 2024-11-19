@@ -1,6 +1,6 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_211 && state != UnknownEnum.Value_210 && state != UnknownEnum.Value_21)
+    if (state != states.trashroll && state != states.trashjump && state != states.cheeseball)
     {
         sprite_index = spr_slipbanan1;
         other.drop = true;
@@ -12,7 +12,7 @@ with (other)
         
         hsp = movespeed * xscale;
         image_index = 0;
-        state = UnknownEnum.Value_165;
+        state = states.slipbanan;
     }
     
     instance_destroy(other);

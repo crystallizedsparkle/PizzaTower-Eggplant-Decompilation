@@ -1,43 +1,43 @@
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -45,10 +45,10 @@ if (state == UnknownEnum.Value_138 && stunned > 40 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
-if (place_meeting(x + hsp, y, obj_iceblock) && state == UnknownEnum.Value_128)
+if (place_meeting(x + hsp, y, obj_iceblock) && state == states.charge)
 {
     with (instance_place(x + hsp, y, obj_iceblock))
         instance_destroy();
@@ -56,12 +56,12 @@ if (place_meeting(x + hsp, y, obj_iceblock) && state == UnknownEnum.Value_128)
 
 targetplayer = instance_nearest(x, y, obj_player);
 
-if (state == UnknownEnum.Value_134 && attack_cooldown <= 0)
+if (state == states.walk && attack_cooldown <= 0)
 {
     if (x != targetplayer.x && targetplayer.x > (x - 200) && targetplayer.x < (x + 200) && targetplayer.y < (y + 50) && targetplayer.y > (y - 50))
     {
         flame_buffer = flame_max;
-        state = UnknownEnum.Value_128;
+        state = states.charge;
         image_xscale = sign(targetplayer.x - x);
         sprite_index = spr_peasanto_flameattack;
         image_index = 0;
@@ -70,7 +70,7 @@ if (state == UnknownEnum.Value_134 && attack_cooldown <= 0)
     }
 }
 
-if (state == UnknownEnum.Value_128)
+if (state == states.charge)
 {
     if (!hitboxcreate)
     {
@@ -82,13 +82,13 @@ if (state == UnknownEnum.Value_128)
     
     if (flame_buffer <= 0)
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         sprite_index = walkspr;
         attack_cooldown = attack_max;
     }
     
     if (hsp != 0 && floor(image_index) == (image_number - 1))
-        create_particle(x - (image_xscale * 20), y + 43, UnknownEnum.Value_1, 0);
+        create_particle(x - (image_xscale * 20), y + 43, particles.cloudeffect, 0);
 }
 
 if (flame_buffer > 0)
@@ -100,10 +100,10 @@ if (attack_cooldown > 0)
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

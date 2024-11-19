@@ -1,4 +1,4 @@
-if (y == ystart && obj_player.boxxed == false && obj_player.state != UnknownEnum.Value_33 && obj_player.state != UnknownEnum.Value_34 && obj_player.state != UnknownEnum.Value_35 && (obj_player.x > (x - 50) && obj_player.x < (x + 50)) && (obj_player.y > y && obj_player.y < (y + 200)))
+if (y == ystart && obj_player.boxxed == false && obj_player.state != states.boxxedpep && obj_player.state != states.boxxedpepspin && obj_player.state != states.boxxedpepjump && (obj_player.x > (x - 50) && obj_player.x < (x + 50)) && (obj_player.y > y && obj_player.y < (y + 200)))
 {
     vsp = 10;
     sprite_index = spr_boxcrusher_fall;

@@ -3,7 +3,7 @@ if (!global.panic)
     with (obj_player1)
     {
         lastroom = room;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         room_goto(targetRoom);
         
         if (targetDoor == "S")
@@ -18,7 +18,7 @@ else
     with (obj_player)
     {
         if (check_player_coop())
-            state = UnknownEnum.Value_225;
+            state = states.animatronic;
     }
     
     instance_destroy();

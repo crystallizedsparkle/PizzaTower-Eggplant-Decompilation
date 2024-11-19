@@ -14,7 +14,7 @@ function scr_player_hang()
         scr_soundeffect(99);
         jumpstop = false;
         vsp = -15;
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_playerN_noisebombspinjump;
         image_index = 0;
         

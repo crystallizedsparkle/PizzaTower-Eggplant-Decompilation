@@ -10,13 +10,13 @@ function cutscene_gustavofail_start()
             instance_destroy();
     }
     
-    if (!instance_exists(obj_fadeout) && obj_player1.state != UnknownEnum.Value_119 && obj_player1.state != UnknownEnum.Value_95)
+    if (!instance_exists(obj_fadeout) && obj_player1.state != states.taxi && obj_player1.state != states.comingoutdoor)
     {
         with (obj_player1)
         {
             visible = true;
             image_alpha = 1;
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             sprite_index = spr_player_gnomecutscene1;
             image_speed = 0.35;
             xscale = 1;
@@ -26,7 +26,7 @@ function cutscene_gustavofail_start()
         
         with (obj_gustavo)
         {
-            state = UnknownEnum.Value_146;
+            state = states.actor;
             sprite_index = spr_gustavo_idle;
             image_speed = 0.35;
             image_xscale = -1;

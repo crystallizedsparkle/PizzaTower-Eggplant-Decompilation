@@ -2,7 +2,7 @@ if (active)
 {
     with (obj_player)
     {
-        state = UnknownEnum.Value_146;
+        state = states.actor;
         hsp = 0;
         vsp = 0;
         visible = false;
@@ -22,7 +22,7 @@ if (floor(image_index) == (image_number - 1))
             
             with (obj_player)
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
                 visible = true;
             }
             

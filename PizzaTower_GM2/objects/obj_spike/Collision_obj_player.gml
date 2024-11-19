@@ -1,4 +1,4 @@
-if (other.state != UnknownEnum.Value_113)
+if (other.state != states.barrel)
 {
     scr_hurtplayer(other);
     
@@ -9,7 +9,7 @@ else
 {
     with (other)
     {
-        state = UnknownEnum.Value_106;
+        state = states.bump;
         sprite_index = spr_bump;
         image_index = 0;
         hsp = -6 * xscale;

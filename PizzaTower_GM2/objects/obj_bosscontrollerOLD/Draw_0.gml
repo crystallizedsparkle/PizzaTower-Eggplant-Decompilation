@@ -1,6 +1,6 @@
 var cx, cy, cw, ch, _super_bg, i;
 
-if (state == UnknownEnum.Value_8 || state == UnknownEnum.Value_98 || state == UnknownEnum.Value_89)
+if (state == states.transitioncutscene || state == states.victory || state == states.gameover)
 {
     draw_set_alpha(fade);
     cx = camera_get_view_x(view_camera[0]);
@@ -15,7 +15,7 @@ _super_bg = false;
 
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_252 && superattackstate == UnknownEnum.Value_80)
+    if (state == UnknownEnum.Value_252 && superattackstate == states.punch)
         _super_bg = true;
 }
 

@@ -4,7 +4,7 @@ function scr_enemy_ratgrabbed()
     
     p = object_index == obj_junk || object_get_parent(object_index) == 382;
     
-    if ((!p && state == UnknownEnum.Value_205) || (p && ratgrabbed))
+    if ((!p && state == states.ratgrabbed) || (p && ratgrabbed))
     {
         visible = false;
         x = ratplayerid.x;
@@ -13,13 +13,13 @@ function scr_enemy_ratgrabbed()
         if (!p)
             sprite_index = stunfallspr;
         
-        if (!p && state != UnknownEnum.Value_138)
-            state = UnknownEnum.Value_205;
+        if (!p && state != states.stun)
+            state = states.ratgrabbed;
         
         if (p && !ratgrabbed)
             ratgrabbed = true;
         
-        if (ratplayerid.state == UnknownEnum.Value_194 && ratplayerid.image_index >= 5)
+        if (ratplayerid.state == states.ratmountspit && ratplayerid.image_index >= 5)
         {
             hsp = ratplayerid.xscale * 22;
             vsp = -2;
@@ -33,7 +33,7 @@ function scr_enemy_ratgrabbed()
                 grounded = false;
                 hp = -1;
                 alarm[1] = 5;
-                state = UnknownEnum.Value_138;
+                state = states.stun;
                 stunned = 200;
                 hithsp = hsp;
                 hitvsp = vsp;

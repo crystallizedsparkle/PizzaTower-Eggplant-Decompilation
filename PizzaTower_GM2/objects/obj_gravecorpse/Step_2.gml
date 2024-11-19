@@ -10,7 +10,7 @@ if (playerid.sprite_index == spr_player_corpsesurf)
 if (playerid.sprite_index == spr_player_corpsestart)
     sprite_index = spr_corpsestart;
 
-if (playerid.state != UnknownEnum.Value_211 && playerid.state != UnknownEnum.Value_61)
+if (playerid.state != states.trashroll && playerid.state != states.chainsaw)
     instance_destroy();
 
 enum UnknownEnum

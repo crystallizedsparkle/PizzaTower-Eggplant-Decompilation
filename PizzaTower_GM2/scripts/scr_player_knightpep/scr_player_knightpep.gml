@@ -128,7 +128,7 @@ function scr_player_knightpep()
         freefallstart = 0;
         momemtum = false;
         scr_soundeffect(27);
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         sprite_index = spr_knightpepland;
         GamepadSetVibration((object_index == obj_player1) ? 0 : 1, 1, 1, 0.9);
     }
@@ -233,7 +233,7 @@ function scr_player_knightpep()
         with (instance_place(x, y + 1, obj_slope))
             other.xscale = -sign(image_xscale);
         
-        state = UnknownEnum.Value_38;
+        state = states.knightpepslopes;
         sprite_index = spr_knightpepdownslope;
         slope_buffer = 20;
     }

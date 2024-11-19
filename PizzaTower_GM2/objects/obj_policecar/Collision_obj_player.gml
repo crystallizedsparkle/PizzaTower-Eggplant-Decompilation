@@ -1,4 +1,4 @@
-if (state == UnknownEnum.Value_152)
+if (state == states.taxi_police)
     exit;
 
 if (ds_queue_size(followqueue) < LAG_STEPS)
@@ -11,8 +11,8 @@ with (obj_player)
     targetDoor = other.targetDoor;
     visible = false;
     
-    if (state != UnknownEnum.Value_186)
-        state = UnknownEnum.Value_152;
+    if (state != states.gotoplayer)
+        state = states.taxi_police;
     
     cutscene = true;
     hsp = 0;
@@ -20,7 +20,7 @@ with (obj_player)
 }
 
 grav = 0;
-state = UnknownEnum.Value_152;
+state = states.taxi_police;
 hsp = 10;
 image_xscale = 1;
 vsp = 0;

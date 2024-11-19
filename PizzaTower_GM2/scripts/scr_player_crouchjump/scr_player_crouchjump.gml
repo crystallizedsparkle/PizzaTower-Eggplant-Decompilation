@@ -19,7 +19,7 @@ function scr_player_crouchjump()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_100;
+        state = states.crouch;
         jumpAnim = true;
         crouchAnim = true;
         image_index = 0;

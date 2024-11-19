@@ -46,13 +46,13 @@ function scr_player_ratmountgrind()
     
     if (!place_meeting(x, y, obj_grindrail) && !place_meeting(x, y, obj_grindrailslope))
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         sprite_index = spr_player_ratmountgroundpoundfall;
     }
     
     if (key_jump)
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         
         if (key_down)
         {
@@ -68,7 +68,7 @@ function scr_player_ratmountgrind()
         
         jumpstop = false;
         jumpAnim = true;
-        create_particle(x, y, UnknownEnum.Value_3, 0);
+        create_particle(x, y, particles.highjumpcloud1, 0);
     }
 }
 

@@ -5,15 +5,15 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         if (!idle)
         {
             scr_enemy_walk();
@@ -26,49 +26,49 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         scr_enemy_ghostpossess();
         break;
 }
 
 scr_scareenemy();
 
-if (state != UnknownEnum.Value_134)
+if (state != states.walk)
     idle = false;
 
-if (state == UnknownEnum.Value_134)
+if (state == states.walk)
 {
     x1 = 270;
     playerid = instance_nearest(x, y, obj_player);
@@ -84,9 +84,9 @@ if (state == UnknownEnum.Value_134)
         
         with (obj_farmerbaddie)
         {
-            if ((id == b || distance_to_object(other) < 300) && state != UnknownEnum.Value_4 && state != UnknownEnum.Value_138 && state != UnknownEnum.Value_137 && state != UnknownEnum.Value_266)
+            if ((id == b || distance_to_object(other) < 300) && state != states.grabbed && state != states.stun && state != states.hit && state != UnknownEnum.Value_266)
             {
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 sprite_index = ragespr;
                 vsp = -5;
                 hsp = 0;
@@ -102,16 +102,16 @@ if (state == UnknownEnum.Value_134)
         }
     }
 }
-else if (state == UnknownEnum.Value_92)
+else if (state == states.jump)
 {
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_80;
+        state = states.punch;
         sprite_index = ragespr;
         attackspeed = 8;
     }
 }
-else if (state == UnknownEnum.Value_80)
+else if (state == states.punch)
 {
     if (object_index != obj_farmerbaddie3 && !instance_exists(hitboxID))
     {
@@ -136,7 +136,7 @@ else if (state == UnknownEnum.Value_80)
         if (t)
             outofsight = false;
     }
-    else if (instance_exists(leaderID) && leaderID.state == UnknownEnum.Value_80)
+    else if (instance_exists(leaderID) && leaderID.state == states.punch)
     {
         outofsight = leaderID.outofsight;
     }
@@ -163,7 +163,7 @@ else if (state == UnknownEnum.Value_80)
     if (attackspeed <= 0)
     {
         cooldown = 60;
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         idle = false;
         hsp = 0;
         sprite_index = walkspr;
@@ -173,13 +173,13 @@ else if (state == UnknownEnum.Value_80)
         image_xscale *= -1;
 }
 
-if (state != UnknownEnum.Value_80 && hitboxID != -4 && instance_exists(hitboxID))
+if (state != states.punch && hitboxID != -4 && instance_exists(hitboxID))
 {
     instance_destroy(hitboxID);
     hitboxID = -4;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -187,16 +187,16 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

@@ -1,4 +1,4 @@
-if (!instance_exists(baddieID) || !baddieID.thrown || baddieID.state != UnknownEnum.Value_138)
+if (!instance_exists(baddieID) || !baddieID.thrown || baddieID.state != states.stun)
 {
     instance_destroy();
     exit;

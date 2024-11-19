@@ -2,11 +2,11 @@ var p, t;
 
 with (baddieID)
 {
-    if (alarm[5] != -1 || state == UnknownEnum.Value_80)
+    if (alarm[5] != -1 || state == states.punch)
     {
         p = patroltimermax - patroltimer;
         
-        if (state == UnknownEnum.Value_80)
+        if (state == states.punch)
             p++;
         
         t = (p * 3) + other.patrolalert_index;

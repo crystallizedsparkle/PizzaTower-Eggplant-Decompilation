@@ -49,18 +49,18 @@ function scr_player_mortjump()
         if (input_buffer_jump < 8)
         {
             input_buffer_jump = 8;
-            state = UnknownEnum.Value_12;
+            state = states.mortjump;
             vsp = -14;
             sprite_index = spr_player_mortjumpstart;
             image_index = 0;
             doublejump = false;
             jumpstop = false;
             scr_soundeffect(12);
-            create_particle(x, y, UnknownEnum.Value_5, 0);
+            create_particle(x, y, particles.jumpdust, 0);
         }
         else
         {
-            state = UnknownEnum.Value_11;
+            state = states.mort;
             landAnim = true;
             sprite_index = spr_land;
             image_index = 0;
@@ -72,7 +72,7 @@ function scr_player_mortjump()
         jumpstop = false;
         input_buffer_jump = 8;
         doublejump = true;
-        state = UnknownEnum.Value_12;
+        state = states.mortjump;
         sprite_index = spr_player_mortdoublejump;
         image_index = 0;
         vsp = -11;

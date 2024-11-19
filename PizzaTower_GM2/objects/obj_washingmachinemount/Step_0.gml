@@ -1,4 +1,4 @@
-if (obj_player.state != UnknownEnum.Value_19)
+if (obj_player.state != states.hookshot)
     visible = true;
 
 enum UnknownEnum

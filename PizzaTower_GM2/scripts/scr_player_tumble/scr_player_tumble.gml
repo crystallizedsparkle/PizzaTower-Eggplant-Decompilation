@@ -35,12 +35,12 @@ function scr_player_tumble()
     {
         sprite_index = spr_player_poundcancel1;
         image_index = 0;
-        state = UnknownEnum.Value_108;
+        state = states.freefall;
         vsp = -6;
     }
     
     if (movespeed <= 2 && sprite_index != spr_player_breakdance)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (!scr_slope() && sprite_index == spr_tumblestart && floor(image_index) < 11)
         image_index = 11;
@@ -86,8 +86,8 @@ function scr_player_tumble()
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_breakdance)
     {
-        particle_set_scale(UnknownEnum.Value_5, xscale, 1);
-        create_particle(x, y, UnknownEnum.Value_5, 0);
+        particle_set_scale(particles.jumpdust, xscale, 1);
+        create_particle(x, y, particles.jumpdust, 0);
         movespeed = 12;
         sprite_index = spr_breakdancesuper;
     }
@@ -136,9 +136,9 @@ function scr_player_tumble()
                 image_xscale = other.xscale;
             
             if (movespeed >= 12)
-                state = UnknownEnum.Value_121;
+                state = states.mach3;
             else
-                state = UnknownEnum.Value_104;
+                state = states.mach2;
             
             image_index = 0;
             sprite_index = spr_rollgetup;
@@ -151,13 +151,13 @@ function scr_player_tumble()
         {
             if (movespeed > 6)
             {
-                state = UnknownEnum.Value_105;
+                state = states.machslide;
                 sprite_index = spr_machslidestart;
                 image_index = 0;
             }
             else
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }

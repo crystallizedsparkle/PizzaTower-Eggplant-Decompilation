@@ -33,10 +33,10 @@ function scr_player_barreljump()
     
     if (grounded)
     {
-        state = UnknownEnum.Value_113;
+        state = states.barrel;
         sprite_index = spr_player_barrelland;
         image_index = 0;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
     }
     
     if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope))

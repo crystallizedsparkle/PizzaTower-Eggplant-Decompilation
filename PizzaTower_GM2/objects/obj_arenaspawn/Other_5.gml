@@ -1,6 +1,6 @@
 ds_list_destroy(baddielist);
 
-if (state == UnknownEnum.Value_98 || state == UnknownEnum.Value_8)
+if (state == states.victory || state == states.transitioncutscene)
     event_perform(ev_destroy, 0);
 
 enum UnknownEnum

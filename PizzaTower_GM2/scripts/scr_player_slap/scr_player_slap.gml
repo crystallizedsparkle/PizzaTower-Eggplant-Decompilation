@@ -9,7 +9,7 @@ function scr_player_slap()
         if (fallinganimation >= 40 && fallinganimation < 80)
         {
             sprite_index = spr_player_facestomp;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
         }
     }
     
@@ -131,18 +131,18 @@ function scr_player_slap()
     {
         if (mach2 >= 35)
         {
-            state = UnknownEnum.Value_104;
+            state = states.mach2;
         }
         else if (mach2 >= 100)
         {
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
         }
         else if (grounded)
         {
             if (move != 0)
                 dir = move;
             
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         }
         else if (!grounded)
         {
@@ -150,7 +150,7 @@ function scr_player_slap()
                 dir = move;
             
             sprite_index = spr_player_fall;
-            state = UnknownEnum.Value_92;
+            state = states.jump;
         }
     }
     

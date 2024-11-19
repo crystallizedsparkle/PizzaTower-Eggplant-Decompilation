@@ -1,12 +1,12 @@
 if (active)
 {
-    if (place_meeting(x, y - 1, other) && other.vsp > 1 && other.state != UnknownEnum.Value_113 && other.state != UnknownEnum.Value_116 && other.state != UnknownEnum.Value_114 && other.state != UnknownEnum.Value_115)
+    if (place_meeting(x, y - 1, other) && other.vsp > 1 && other.state != states.barrel && other.state != states.barrelslide && other.state != states.barreljump && other.state != states.barrelclimbwall)
     {
         with (other)
         {
             instance_create(x, y, obj_genericpoofeffect);
             movespeed = hsp;
-            state = UnknownEnum.Value_113;
+            state = states.barrel;
             image_index = 0;
         }
         

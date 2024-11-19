@@ -4,7 +4,7 @@ if (distance_to_object(obj_player1) < 50)
 {
     str = "";
     
-    if (obj_player1.state == UnknownEnum.Value_183)
+    if (obj_player1.state == states.bombdelete)
         str = "DELETE ";
     
     with (obj_tv)

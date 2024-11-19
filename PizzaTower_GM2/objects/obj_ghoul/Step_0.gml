@@ -7,7 +7,7 @@ image_speed = 0.35;
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         sprite_index = idlespr;
         playerid = instance_nearest(x, y, obj_player);
         x1 = 370;
@@ -23,7 +23,7 @@ switch (state)
         }
         else if (t)
         {
-            state = UnknownEnum.Value_8;
+            state = states.transitioncutscene;
             sprite_index = spr_ghoul_attackstart;
             image_index = 0;
             attack_y = y;
@@ -31,11 +31,11 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_128:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         sprite_index = idlespr;
         d = point_direction(x, y, xstart, ystart);
         x += lengthdir_x(8, d);
@@ -45,7 +45,7 @@ switch (state)
         
         if (x > (xstart - 10) && x < (xstart + 10) && y > (ystart - 10) && y < (ystart + 10))
         {
-            state = UnknownEnum.Value_126;
+            state = states.idle;
             image_xscale = start_xscale;
             cooldown = 100;
             x = xstart;
@@ -58,13 +58,13 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         hsp = 0;
         vsp = 0;
         
         if (floor(image_index) == (image_number - 1))
         {
-            state = UnknownEnum.Value_80;
+            state = states.punch;
             vsp = 11;
             attack_y = y;
             sprite_index = spr_ghoul_attack;
@@ -72,7 +72,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_80:
+    case states.punch:
         vsp = Approach(vsp, -11, 0.5);
         hsp = image_xscale * 10;
         x += hsp;
@@ -82,47 +82,47 @@ switch (state)
         {
             y = attack_y;
             vsp = 0;
-            state = UnknownEnum.Value_126;
+            state = states.idle;
             cooldown = 100;
             image_xscale *= -1;
         }
         
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         hit = true;
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -130,22 +130,22 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (bombreset > 0)
     bombreset--;
 
-if (grounded && state == UnknownEnum.Value_129 && floor(image_index) == 3)
+if (grounded && state == states.enemy_throw && floor(image_index) == 3)
     vsp = -5;
 
 if (boundbox == false)

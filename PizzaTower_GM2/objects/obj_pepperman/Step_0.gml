@@ -7,44 +7,44 @@ wastedhits = 8 - elitehit;
 
 switch (state)
 {
-    case UnknownEnum.Value_134:
+    case states.walk:
         scr_pepperman_walk();
         break;
     
-    case UnknownEnum.Value_153:
+    case states.shoulderbash:
         scr_pepperman_shoulderbash();
         break;
     
-    case UnknownEnum.Value_92:
+    case states.jump:
         scr_pepperman_jump();
         break;
     
-    case UnknownEnum.Value_108:
+    case states.freefall:
         scr_pepperman_freefall();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
 }
 
-if (state == UnknownEnum.Value_138)
+if (state == states.stun)
 {
     if (thrown)
         savedthrown = true;
@@ -60,7 +60,7 @@ else
     savedthrown = false;
 }
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -68,7 +68,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state == UnknownEnum.Value_92)
+if (state == states.jump)
 {
     use_collision = false;
     x += hsp;
@@ -82,21 +82,21 @@ else
     use_collision = true;
 }
 
-if (state == UnknownEnum.Value_138 || state == UnknownEnum.Value_153 || !use_collision || elitehit <= 1)
+if (state == states.stun || state == states.shoulderbash || !use_collision || elitehit <= 1)
     invincible = true;
 else
     invincible = false;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

@@ -2,7 +2,7 @@ global.coop = false;
 
 with (obj_player)
 {
-    state = UnknownEnum.Value_18;
+    state = states.titlescreen;
     visible = false;
 }
 

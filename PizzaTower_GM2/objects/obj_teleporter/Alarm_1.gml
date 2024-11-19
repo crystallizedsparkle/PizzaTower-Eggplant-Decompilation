@@ -3,7 +3,7 @@ with (obj_teleporter)
     if (trigger == other.trigger && start == 0)
     {
         repeat (8)
-            create_particle(x + random_range(50, -50), y + random_range(50, -50), UnknownEnum.Value_11, 0);
+            create_particle(x + random_range(50, -50), y + random_range(50, -50), particles.teleporteffect, 0);
     }
 }
 

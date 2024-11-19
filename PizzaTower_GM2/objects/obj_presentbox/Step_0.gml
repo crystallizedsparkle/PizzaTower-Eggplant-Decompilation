@@ -99,13 +99,13 @@ switch (global.boxhp)
 
 with (instance_place(x, y, obj_player))
 {
-    if ((state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_43) && other.sprite_index != spr_present)
+    if ((state == states.handstandjump || state == states.punch || state == states.lungeattack) && other.sprite_index != spr_present)
     {
-        if (state == UnknownEnum.Value_42 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_43)
+        if (state == states.handstandjump || state == states.punch || state == states.lungeattack)
         {
             sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch);
             image_index = 0;
-            state = UnknownEnum.Value_91;
+            state = states.tackle;
             movespeed = 3;
             vsp = -3;
         }

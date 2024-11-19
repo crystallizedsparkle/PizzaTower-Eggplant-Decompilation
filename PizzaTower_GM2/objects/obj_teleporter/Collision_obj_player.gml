@@ -2,7 +2,7 @@ if (player < 0)
 {
     if (start == 1)
     {
-        if (other.state != UnknownEnum.Value_84 && other.state != UnknownEnum.Value_61 && other.state != UnknownEnum.Value_137 && other.state != UnknownEnum.Value_186)
+        if (other.state != states.backbreaker && other.state != states.chainsaw && other.state != states.hit && other.state != states.gotoplayer)
         {
             player = other.id;
             player.visible = false;
@@ -15,7 +15,7 @@ if (player < 0)
             storedfreefallsmash = player.freefallsmash;
             
             repeat (8)
-                create_particle(x + random_range(50, -50), y + random_range(50, -50), UnknownEnum.Value_11, 0);
+                create_particle(x + random_range(50, -50), y + random_range(50, -50), particles.teleporteffect, 0);
             
             alarm[0] = 25;
             player.hsp = 0;
@@ -25,7 +25,7 @@ if (player < 0)
             player.alarm[7] = 50;
             player.alarm[5] = 2;
             player.hurted = true;
-            player.state = UnknownEnum.Value_84;
+            player.state = states.backbreaker;
         }
     }
 }

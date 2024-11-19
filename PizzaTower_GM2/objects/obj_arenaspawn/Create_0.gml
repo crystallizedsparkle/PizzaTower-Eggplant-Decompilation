@@ -1,7 +1,7 @@
 dir = 1;
 collisioned = false;
 targetplayer = -4;
-state = UnknownEnum.Value_0;
+state = states.normal;
 offset = 200;
 block_inst = -4;
 targetDoor = "A";

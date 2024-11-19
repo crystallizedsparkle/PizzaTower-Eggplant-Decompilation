@@ -1,4 +1,4 @@
-if (obj_player.state != UnknownEnum.Value_39)
+if (obj_player.state != states.portal)
     instance_destroy();
 
 enum UnknownEnum

@@ -6,7 +6,7 @@ if (cooldown > 0)
 else if (!active)
 {
     active = true;
-    create_particle(x, y, UnknownEnum.Value_9, 0);
+    create_particle(x, y, particles.genericpoofeffect, 0);
 }
 
 visible = active;

@@ -1,4 +1,4 @@
-if (hurted == false && other.grounded == false && state != UnknownEnum.Value_84 && state != UnknownEnum.Value_147)
+if (hurted == false && other.grounded == false && state != states.backbreaker && state != states.parry)
 {
     instance_destroy(other);
     instance_create(x, y, obj_canonexplosion);

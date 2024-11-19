@@ -43,11 +43,11 @@ function scr_player_secondjump()
     {
         instance_create(x, y, obj_highjumpcloud1);
         vsp = -14;
-        state = UnknownEnum.Value_60;
+        state = states.highjump;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
-        create_particle(x, y, UnknownEnum.Value_12, 0);
+        create_particle(x, y, particles.landcloud, 0);
         freefallstart = 0;
         audio_sound_gain(sfx_jump, 0.7, 0);
         
@@ -61,7 +61,7 @@ function scr_player_secondjump()
             landAnim = false;
         
         input_buffer_highjump = 0;
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         jumpAnim = true;
         jumpstop = false;
         image_index = 0;
@@ -94,7 +94,7 @@ function scr_player_secondjump()
         mach2 = 0;
         image_index = 0;
         vsp = -7;
-        state = UnknownEnum.Value_122;
+        state = states.freefallprep;
     }
 }
 

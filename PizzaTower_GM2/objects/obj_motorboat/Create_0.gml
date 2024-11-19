@@ -1,4 +1,4 @@
-state = UnknownEnum.Value_0;
+state = states.normal;
 dir = 1;
 playerxoffset = 0;
 

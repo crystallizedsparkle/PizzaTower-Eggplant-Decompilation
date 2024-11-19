@@ -13,15 +13,15 @@ if (place_meeting(x, y - s, obj_player))
     {
         by = 4;
         
-        if (state == UnknownEnum.Value_121)
+        if (state == states.mach3)
             by = 10;
         
         bx = 8;
         
-        if (state == UnknownEnum.Value_121 || state == UnknownEnum.Value_201)
+        if (state == states.mach3 || state == states.ratmounttumble)
             bx = 18;
         
-        if ((state == UnknownEnum.Value_104 || state == UnknownEnum.Value_201 || state == UnknownEnum.Value_211 || state == UnknownEnum.Value_5 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_187) && y <= (other.y + by) && xscale == sign(other.image_xscale) && place_meeting(x, y + s, other))
+        if ((state == states.mach2 || state == states.ratmounttumble || state == states.trashroll || state == states.tumble || state == states.mach3 || state == states.trickjump) && y <= (other.y + by) && xscale == sign(other.image_xscale) && place_meeting(x, y + s, other))
         {
             vsp = -12;
             movespeed = 14;
@@ -31,11 +31,11 @@ if (place_meeting(x, y - s, obj_player))
             if (isgustavo)
             {
                 sprite_index = spr_player_ratmountwalljump;
-                state = UnknownEnum.Value_203;
+                state = states.ratmounttrickjump;
             }
             else
             {
-                state = UnknownEnum.Value_187;
+                state = states.trickjump;
             }
             
             if (!other.used)

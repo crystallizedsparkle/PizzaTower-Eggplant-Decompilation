@@ -1,27 +1,27 @@
-if (other.cutscene == false && sprite_index != spr_bigmushroom_bounce && other.state != UnknownEnum.Value_108 && other.state != UnknownEnum.Value_122 && other.state != UnknownEnum.Value_186)
+if (other.cutscene == false && sprite_index != spr_bigmushroom_bounce && other.state != states.freefall && other.state != states.freefallprep && other.state != states.gotoplayer)
 {
     other.jumpstop = true;
     
     with (other)
     {
-        if (state == UnknownEnum.Value_105)
+        if (state == states.machslide)
         {
-            state = UnknownEnum.Value_92;
+            state = states.jump;
             
             if (sprite_index == spr_mach3boost || sprite_index == spr_machslideboost)
                 xscale *= -1;
         }
         
-        if (state == UnknownEnum.Value_0)
-            state = UnknownEnum.Value_92;
+        if (state == states.normal)
+            state = states.jump;
         
-        if (state == UnknownEnum.Value_37)
-            state = UnknownEnum.Value_104;
+        if (state == states.climbwall)
+            state = states.mach2;
     }
     
     sprite_index = spr_bigmushroom_bounce;
     
-    if (other.state == UnknownEnum.Value_92 || other.state == UnknownEnum.Value_0)
+    if (other.state == states.jump || other.state == states.normal)
     {
         other.sprite_index = other.spr_machfreefall;
         other.image_index = 0;
@@ -39,7 +39,7 @@ if (other.cutscene == false && sprite_index != spr_bigmushroom_bounce && other.s
             other.sprite_index = spr_lonegustavo_jumpstart;
         
         other.jumpAnim = true;
-        other.state = UnknownEnum.Value_192;
+        other.state = states.ratmountjump;
         other.image_index = 0;
     }
 }

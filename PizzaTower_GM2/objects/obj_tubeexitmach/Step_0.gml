@@ -1,6 +1,6 @@
 var p;
 
-if (state == UnknownEnum.Value_150)
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
@@ -25,7 +25,7 @@ if (state == UnknownEnum.Value_150)
             }
             
             machhitAnim = false;
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             
             if (movespeed < 14)
                 movespeed = 14;
@@ -42,7 +42,7 @@ if (state == UnknownEnum.Value_150)
             with (other)
             {
                 playerid = -1;
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
     }

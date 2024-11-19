@@ -1,4 +1,4 @@
-if (other.state == UnknownEnum.Value_80)
+if (other.state == states.punch)
 {
     if (!collisioned)
         event_user(0);

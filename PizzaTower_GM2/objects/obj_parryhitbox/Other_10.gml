@@ -7,7 +7,7 @@ if (player_id == 2)
 
 with (myplayer)
 {
-    state = UnknownEnum.Value_147;
+    state = states.parry;
     sprite_index = choose(spr_parry1, spr_parry2, spr_parry3);
     image_index = 0;
     image_speed = 0.35;

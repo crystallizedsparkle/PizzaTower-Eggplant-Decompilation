@@ -1,4 +1,4 @@
-state = UnknownEnum.Value_0;
+state = states.normal;
 hurtbounce = 0;
 
 enum UnknownEnum

@@ -42,17 +42,17 @@ function scr_player_noisejetpack()
     {
         sprite_index = spr_bodyslamstart;
         image_index = 0;
-        state = UnknownEnum.Value_122;
+        state = states.freefallprep;
         vsp = (character == "P") ? -5 : -7;
     }
     
     if (grounded && vsp > 0)
     {
-        state = UnknownEnum.Value_0;
+        state = states.normal;
         
         if (movespeed >= 12)
         {
-            state = UnknownEnum.Value_121;
+            state = states.mach3;
             sprite_index = spr_dashpadmach;
             image_index = 0;
         }

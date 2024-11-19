@@ -5,7 +5,7 @@ _destroy = false;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         if (grounded && vsp > 0)
         {
             hsp = Approach(hsp, 0, 0.5);
@@ -14,10 +14,10 @@ switch (state)
                 _destroy = true;
         }
         
-        substate = UnknownEnum.Value_0;
+        substate = states.normal;
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         key_left = playerid.key_left;
         key_right = playerid.key_right;
         key_jump = playerid.key_jump;
@@ -28,7 +28,7 @@ switch (state)
         
         switch (substate)
         {
-            case UnknownEnum.Value_0:
+            case states.normal:
                 if (place_meeting(x + sign(hsp), y, obj_solid))
                     movespeed = 0;
                 
@@ -62,26 +62,26 @@ switch (state)
                 if (playerid.input_buffer_jump < 8)
                 {
                     playerid.input_buffer_jump = 8;
-                    substate = UnknownEnum.Value_92;
+                    substate = states.jump;
                     vsp = -11;
                 }
                 
                 if (!grounded && vsp > 0)
-                    substate = UnknownEnum.Value_92;
+                    substate = states.jump;
                 
                 if (!place_meeting(x, y, obj_minecart_rail))
                     _destroy = true;
                 
                 break;
             
-            case UnknownEnum.Value_92:
+            case states.jump:
                 hsp = xscale * movespeed;
                 
                 if (place_meeting(x + sign(hsp), y, obj_solid))
                     movespeed = 0;
                 
                 if (grounded && vsp > 0)
-                    substate = UnknownEnum.Value_0;
+                    substate = states.normal;
                 
                 break;
         }
@@ -102,12 +102,12 @@ if (_destroy)
 {
     instance_destroy();
     instance_create(xstart, ystart, obj_minecart);
-    create_particle(xstart, ystart, UnknownEnum.Value_9);
-    create_particle(x, y, UnknownEnum.Value_9);
+    create_particle(xstart, ystart, particles.genericpoofeffect);
+    create_particle(x, y, particles.genericpoofeffect);
     
     with (playerid)
     {
-        state = UnknownEnum.Value_16;
+        state = states.ghost;
         visible = true;
     }
 }

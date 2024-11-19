@@ -1,6 +1,6 @@
 draw_self();
 
-if (drop && dropstate != UnknownEnum.Value_0)
+if (drop && dropstate != states.normal)
     draw_sprite(handsprite, handindex, x, hand_y);
 
 enum UnknownEnum

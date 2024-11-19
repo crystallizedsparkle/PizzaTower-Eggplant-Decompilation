@@ -9,7 +9,7 @@ shootspr = 411;
 spr_dead = 411;
 hp = 3;
 stopfiring = 100;
-state = UnknownEnum.Value_0;
+state = states.normal;
 
 enum UnknownEnum
 {

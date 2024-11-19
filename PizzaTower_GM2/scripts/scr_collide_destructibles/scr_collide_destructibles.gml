@@ -8,7 +8,7 @@ function scr_collide_destructibles()
         
         with (_obj_player)
         {
-            if ((state == UnknownEnum.Value_92 && sprite_index == spr_playerN_noisebombspinjump) || state == UnknownEnum.Value_165 || state == UnknownEnum.Value_31 || state == UnknownEnum.Value_187 || state == UnknownEnum.Value_198 || (state == UnknownEnum.Value_58 && pogochargeactive == true))
+            if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive == true))
             {
                 with (instance_place(x + xscale, y, obj_destructibles))
                 {
@@ -47,19 +47,19 @@ function scr_collide_destructibles()
                 }
             }
             
-            if (state == UnknownEnum.Value_5)
+            if (state == states.tumble)
             {
                 with (instance_place(x + xscale, y, obj_rollblock))
                     instance_destroy();
             }
             
-            if (state == UnknownEnum.Value_121 && sprite_index == spr_player_fightball)
+            if (state == states.mach3 && sprite_index == spr_player_fightball)
             {
                 with (instance_place(x + xscale, y, obj_fightballblock))
                     instance_destroy();
             }
             
-            if (state == UnknownEnum.Value_193 && place_meeting(x + hsp, y, obj_gustavodestroyable))
+            if (state == states.ratmountattack && place_meeting(x + hsp, y, obj_gustavodestroyable))
             {
                 with (instance_place(x + hsp, y, obj_gustavodestroyable))
                 {
@@ -68,7 +68,7 @@ function scr_collide_destructibles()
                 }
             }
             
-            if (state == UnknownEnum.Value_211 || state == UnknownEnum.Value_34 || ratmount_movespeed == 12 || state == UnknownEnum.Value_259 || state == UnknownEnum.Value_201 || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_42 || state == UnknownEnum.Value_193 || state == UnknownEnum.Value_43 || state == UnknownEnum.Value_21 || state == UnknownEnum.Value_53 || state == UnknownEnum.Value_184 || state == UnknownEnum.Value_70 || state == UnknownEnum.Value_124 || state == UnknownEnum.Value_94 || state == UnknownEnum.Value_20 || sprite_index == spr_barrelroll || state == UnknownEnum.Value_41 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_47 || state == UnknownEnum.Value_65 || state == UnknownEnum.Value_38 || state == UnknownEnum.Value_48 || state == UnknownEnum.Value_5 || state == UnknownEnum.Value_19 || state == UnknownEnum.Value_153)
+            if (state == states.trashroll || state == states.boxxedpepspin || ratmount_movespeed == 12 || state == UnknownEnum.Value_259 || state == states.ratmounttumble || state == states.punch || state == states.handstandjump || state == states.ratmountattack || state == states.lungeattack || state == states.cheeseball || state == states.bombpepside || state == states.rocket || state == states.shotgundash || state == states.faceplant || state == states.slipnslide || state == states.tacklecharge || sprite_index == spr_barrelroll || state == states.chainsawbump || state == states.mach3 || state == states.knightpep || state == states.machroll || state == states.knightpepslopes || state == states.knightpepattack || state == states.tumble || state == states.hookshot || state == states.shoulderbash)
             {
                 if (place_meeting(x + hsp, y, obj_destructibles))
                 {
@@ -80,13 +80,13 @@ function scr_collide_destructibles()
                             instance_destroy();
                         }
                         
-                        if (state == UnknownEnum.Value_104)
+                        if (state == states.mach2)
                             machpunchAnim = true;
                     }
                 }
             }
             
-            if (state == UnknownEnum.Value_107 && thrown == true)
+            if (state == states.hurt && thrown == true)
             {
                 if (place_meeting(x - hsp, y, obj_destructibles))
                 {
@@ -98,7 +98,7 @@ function scr_collide_destructibles()
                 }
             }
             
-            if ((state == UnknownEnum.Value_47 || sprite_index == spr_lonegustavo_groundpoundstart || sprite_index == spr_lonegustavo_groundpound || state == UnknownEnum.Value_254 || state == UnknownEnum.Value_10 || state == UnknownEnum.Value_165 || state == UnknownEnum.Value_76 || state == UnknownEnum.Value_19 || (state == UnknownEnum.Value_54 && bombup_dir == 1)) && vsp > 0)
+            if ((state == states.knightpep || sprite_index == spr_lonegustavo_groundpoundstart || sprite_index == spr_lonegustavo_groundpound || state == UnknownEnum.Value_254 || state == states.firemouth || state == states.slipbanan || state == states.superslam || state == states.hookshot || (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
             {
                 if (place_meeting(x, y + 1, obj_destructibles))
                 {
@@ -108,7 +108,7 @@ function scr_collide_destructibles()
                         instance_destroy();
                     }
                     
-                    if (state == UnknownEnum.Value_10 || state == UnknownEnum.Value_254)
+                    if (state == states.firemouth || state == UnknownEnum.Value_254)
                     {
                         with (instance_place(x, y + 1, obj_tntblock))
                         {
@@ -139,11 +139,11 @@ function scr_collide_destructibles()
             
             ds_list_clear(global.instancelist);
             
-            if (vsp <= 0.5 && (state == UnknownEnum.Value_92 || state == UnknownEnum.Value_192 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_265 || state == UnknownEnum.Value_58 || (state == UnknownEnum.Value_54 && bombup_dir == -1) || state == UnknownEnum.Value_80 || state == UnknownEnum.Value_37 || state == UnknownEnum.Value_9 || state == UnknownEnum.Value_97 || state == UnknownEnum.Value_22 || state == UnknownEnum.Value_121 || (state == UnknownEnum.Value_80 && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
+            if (vsp <= 0.5 && (state == states.jump || state == states.ratmountjump || state == states.mach3 || state == states.mach2 || state == UnknownEnum.Value_265 || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.cheeseballclimbwall || state == states.mach3 || (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
             {
                 vy = -1;
                 
-                if (state == UnknownEnum.Value_80 && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))
+                if (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))
                     vy = vsp;
                 
                 if (place_meeting(x, y + vy, obj_destructibles))
@@ -155,17 +155,17 @@ function scr_collide_destructibles()
                         
                         with (other)
                         {
-                            if (state != UnknownEnum.Value_97 && state != UnknownEnum.Value_80 && state != UnknownEnum.Value_37)
+                            if (state != states.Sjump && state != states.punch && state != states.climbwall)
                                 vsp = 0;
                             
-                            if (state == UnknownEnum.Value_97)
+                            if (state == states.Sjump)
                                 vsp = -11;
                         }
                     }
                 }
             }
             
-            if (vsp >= 0 && (state == UnknownEnum.Value_108 || state == UnknownEnum.Value_76 || state == UnknownEnum.Value_111 || state == UnknownEnum.Value_197 || (state == UnknownEnum.Value_165 && vsp >= 10)))
+            if (vsp >= 0 && (state == states.freefall || state == states.superslam || state == states.freefallland || state == states.ratmountgroundpound || (state == states.slipbanan && vsp >= 10)))
             {
                 if (place_meeting(x, y + vsp + 2, obj_destructibles))
                 {
@@ -192,14 +192,14 @@ function scr_collide_destructibles()
                                     }
                                 }
                                 
-                                if (freefallsmash <= 10 && state != UnknownEnum.Value_165 && !isgustavo)
+                                if (freefallsmash <= 10 && state != states.slipbanan && !isgustavo)
                                 {
                                     if (shotgunAnim == false)
                                         sprite_index = spr_bodyslamland;
                                     else
                                         sprite_index = spr_shotgunjump2;
                                     
-                                    state = UnknownEnum.Value_111;
+                                    state = states.freefallland;
                                     image_index = 0;
                                 }
                             }
@@ -210,16 +210,16 @@ function scr_collide_destructibles()
                 }
             }
             
-            if (state == UnknownEnum.Value_108 || state == UnknownEnum.Value_111 || state == UnknownEnum.Value_165)
+            if (state == states.freefall || state == states.freefallland || state == states.slipbanan)
             {
-                if (place_meeting(x, y + 1, obj_metalblock) && (freefallsmash >= 10 || state == UnknownEnum.Value_165))
+                if (place_meeting(x, y + 1, obj_metalblock) && (freefallsmash >= 10 || state == states.slipbanan))
                 {
                     with (instance_place(x, y + 1, obj_metalblock))
                         instance_destroy();
                 }
             }
             
-            if (state == UnknownEnum.Value_102 || state == UnknownEnum.Value_65 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_80)
+            if (state == states.crouchslide || state == states.machroll || state == states.mach2 || state == states.punch)
             {
                 with (obj_destructibles)
                 {
@@ -229,9 +229,9 @@ function scr_collide_destructibles()
                         
                         with (_obj_player)
                         {
-                            if (place_meeting(x + hsp, y, obj_bigdestructibles) && state != UnknownEnum.Value_102 && state != UnknownEnum.Value_104 && state != UnknownEnum.Value_65)
+                            if (place_meeting(x + hsp, y, obj_bigdestructibles) && state != states.crouchslide && state != states.mach2 && state != states.machroll)
                             {
-                                state = UnknownEnum.Value_6;
+                                state = states.finishingblow;
                                 sprite_index = spr_player_lungehit;
                                 image_index = 0;
                                 instance_destroy(other);
@@ -243,7 +243,7 @@ function scr_collide_destructibles()
                                 _destroyed = true;
                             }
                             
-                            if (_destroyed && state == UnknownEnum.Value_43)
+                            if (_destroyed && state == states.lungeattack)
                                 hit_connected = true;
                         }
                     }

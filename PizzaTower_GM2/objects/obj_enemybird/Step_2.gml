@@ -1,4 +1,4 @@
-if (!instance_exists(ID) || ID.state != UnknownEnum.Value_138)
+if (!instance_exists(ID) || ID.state != states.stun)
     instance_destroy();
 
 enum UnknownEnum

@@ -1,4 +1,4 @@
-if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y < bbox_bottom)) && other.state != UnknownEnum.Value_84 && other.state != UnknownEnum.Value_106)
+if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y < bbox_bottom)) && other.state != states.backbreaker && other.state != states.bump)
 {
     with (other)
     {
@@ -14,12 +14,12 @@ if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y
         if (other.movespeed < 10)
             other.movespeed = 10;
         
-        other.state = UnknownEnum.Value_78;
+        other.state = states.grind;
     }
     else
     {
         other.y = y + 8;
-        other.state = UnknownEnum.Value_202;
+        other.state = states.ratmountgrind;
     }
 }
 

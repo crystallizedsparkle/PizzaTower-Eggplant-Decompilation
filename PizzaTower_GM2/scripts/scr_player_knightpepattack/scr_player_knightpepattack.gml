@@ -19,7 +19,7 @@ function scr_player_knightpepattack()
     {
         movespeed = 0;
         sprite_index = spr_knightpep_idle;
-        state = UnknownEnum.Value_47;
+        state = states.knightpep;
     }
     
     if (scr_slope() && sprite_index != spr_knightpepthunder)
@@ -30,7 +30,7 @@ function scr_player_knightpepattack()
         with (instance_place(x, y + 1, obj_slope))
             other.xscale = -sign(image_xscale);
         
-        state = UnknownEnum.Value_38;
+        state = states.knightpepslopes;
         sprite_index = spr_knightpepdownslope;
         slope_buffer = 20;
     }
@@ -47,14 +47,14 @@ function scr_player_knightpepattack()
             movespeed = 8;
         
         vsp = -11;
-        state = UnknownEnum.Value_38;
+        state = states.knightpepslopes;
         sprite_index = spr_knightpep_doublejump;
         image_index = 0;
     }
     
     if (!grounded && !doublejump)
     {
-        state = UnknownEnum.Value_47;
+        state = states.knightpep;
         sprite_index = spr_knightpepjump;
         image_index = 0;
     }

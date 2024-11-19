@@ -4,7 +4,7 @@ _actor = false;
 
 with (obj_player)
 {
-    if (state == UnknownEnum.Value_146)
+    if (state == states.actor)
         _actor = true;
 }
 
@@ -13,10 +13,10 @@ if (_actor)
 
 with (other)
 {
-    if (key_up && grounded && !instance_exists(obj_option) && (state == UnknownEnum.Value_0 || state == UnknownEnum.Value_103 || state == UnknownEnum.Value_104 || state == UnknownEnum.Value_58 || state == UnknownEnum.Value_121 || state == UnknownEnum.Value_99))
+    if (key_up && grounded && !instance_exists(obj_option) && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep))
     {
         instance_create(x, y, obj_option);
-        state = UnknownEnum.Value_146;
+        state = states.actor;
     }
 }
 

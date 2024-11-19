@@ -2,14 +2,14 @@ mask_index = spr_player_mask;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         if (grounded)
             hsp = 0;
         
-        substate = UnknownEnum.Value_0;
+        substate = states.normal;
         break;
     
-    case UnknownEnum.Value_17:
+    case states.ghostpossess:
         key_left = playerid.key_left;
         key_right = playerid.key_right;
         key_jump = playerid.key_jump;
@@ -20,7 +20,7 @@ switch (state)
         
         switch (substate)
         {
-            case UnknownEnum.Value_0:
+            case states.normal:
                 hsp = 0;
                 
                 if (key_jump)
@@ -35,28 +35,28 @@ switch (state)
                         xscale = sign(move);
                     
                     hsp = xscale * 6;
-                    substate = UnknownEnum.Value_92;
+                    substate = states.jump;
                 }
                 
                 break;
             
-            case UnknownEnum.Value_92:
+            case states.jump:
                 if (key_jump)
                     playerid.input_buffer_jump = 0;
                 
                 if (grounded)
-                    substate = UnknownEnum.Value_0;
+                    substate = states.normal;
                 
                 if (playerid.key_down2)
                 {
-                    substate = UnknownEnum.Value_108;
+                    substate = states.freefall;
                     vsp = 20;
                     hsp = 0;
                 }
                 
                 break;
             
-            case UnknownEnum.Value_108:
+            case states.freefall:
                 instance_destroy(instance_place(x, y + vsp, obj_metalblock));
                 
                 with (obj_destructibles)
@@ -67,7 +67,7 @@ switch (state)
                 
                 if (grounded)
                 {
-                    substate = UnknownEnum.Value_0;
+                    substate = states.normal;
                     scr_soundeffect(27);
                     
                     with (obj_camera)

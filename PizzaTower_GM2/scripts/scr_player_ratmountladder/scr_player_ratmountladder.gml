@@ -26,7 +26,7 @@ function scr_player_ratmountladder()
     
     if (!place_meeting(x, y, obj_ladder) && !place_meeting(x, y, obj_stairs))
     {
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         sprite_index = spr_player_ratmountgroundpoundfall;
         image_index = 0;
         vsp = 0;
@@ -35,7 +35,7 @@ function scr_player_ratmountladder()
     if (key_jump)
     {
         ladderbuffer = 20;
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         sprite_index = spr_player_ratmountgroundpound;
         
         if (key_down)
@@ -49,7 +49,7 @@ function scr_player_ratmountladder()
     if (key_down && grounded && !place_meeting(x, y, obj_platform))
     {
         sprite_index = spr_player_ratmountgroundpoundfall;
-        state = UnknownEnum.Value_192;
+        state = states.ratmountjump;
         image_index = 0;
     }
 }

@@ -1,6 +1,6 @@
 var h;
 
-if (instance_exists(ID) && ID.object_index == obj_badrat && other.state == UnknownEnum.Value_5)
+if (instance_exists(ID) && ID.object_index == obj_badrat && other.state == states.tumble)
     exit;
 
 h = other.hurted;

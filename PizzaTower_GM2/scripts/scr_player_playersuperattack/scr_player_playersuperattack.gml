@@ -6,7 +6,7 @@ function scr_player_playersuperattack()
     
     switch (superattackstate)
     {
-        case UnknownEnum.Value_8:
+        case states.transitioncutscene:
             sprite_index = spr_rageidle;
             
             with (bossID)
@@ -25,11 +25,11 @@ function scr_player_playersuperattack()
             if (hitLag > 0)
                 hitLag--;
             else
-                superattackstate = UnknownEnum.Value_92;
+                superattackstate = states.jump;
             
             break;
         
-        case UnknownEnum.Value_92:
+        case states.jump:
             sprite_index = spr_grab;
             dir = point_direction(x, y, bossID.x, bossID.y);
             spd = 20;
@@ -40,7 +40,7 @@ function scr_player_playersuperattack()
             
             if (place_meeting(x, y, bossID))
             {
-                superattackstate = UnknownEnum.Value_80;
+                superattackstate = states.punch;
                 randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
                 punchcount = 10;
                 image_index = 0;
@@ -48,7 +48,7 @@ function scr_player_playersuperattack()
             
             break;
         
-        case UnknownEnum.Value_80:
+        case states.punch:
             vsp = 0;
             hsp = xscale * 2;
             
@@ -80,7 +80,7 @@ function scr_player_playersuperattack()
                     with (bossID)
                     {
                         boss_hurt_noplayer(30);
-                        state = UnknownEnum.Value_137;
+                        state = states.hit;
                         hitX = x;
                         hitY = y;
                         hitvsp = -11;
@@ -92,7 +92,7 @@ function scr_player_playersuperattack()
                     }
                     
                     scr_soundeffect(26);
-                    superattackstate = UnknownEnum.Value_79;
+                    superattackstate = states.grab;
                     sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5);
                     image_index = 0;
                     finishingblow = false;
@@ -101,7 +101,7 @@ function scr_player_playersuperattack()
             
             break;
         
-        case UnknownEnum.Value_79:
+        case states.grab:
             if (image_index < 7)
             {
                 hsp = 0;
@@ -115,7 +115,7 @@ function scr_player_playersuperattack()
             }
             
             if (floor(image_index) == (image_number - 1))
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             
             break;
     }

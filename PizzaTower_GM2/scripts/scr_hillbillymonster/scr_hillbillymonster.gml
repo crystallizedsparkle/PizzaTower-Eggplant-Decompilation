@@ -4,7 +4,7 @@ function scr_hillbilly_idle()
     
     if ((global.monsterspeed >= 1 && point_in_camera(x, y, view_camera[0])) || distance_to_pos(x, y, playerinst.x, playerinst.y, 480, 270))
     {
-        state = UnknownEnum.Value_141;
+        state = states.chase;
         image_xscale = (playerinst.x > x) ? 1 : -1;
     }
 }
@@ -19,7 +19,7 @@ function scr_hillbilly_chase()
     hsp = Approach(hsp, image_xscale * movespeed, accel);
     
     if (!distance_to_pos(x, y, playerinst.x, playerinst.y, threshold_idle_x, threshold_idle_y))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (playerinst.x > (x - 16) && playerinst.x < (x + 16))
         hsp = 0;
@@ -28,7 +28,7 @@ function scr_hillbilly_chase()
     
     if (dir != image_xscale && playerinst.x > (x - slide_threshold_x) && playerinst.x < (x + slide_threshold_x))
     {
-        state = UnknownEnum.Value_105;
+        state = states.machslide;
         hsp = image_xscale * movespeed;
     }
 }
@@ -49,7 +49,7 @@ function scr_hillbilly_machslide()
     else
     {
         image_xscale = (playerinst.x > x) ? 1 : -1;
-        state = UnknownEnum.Value_141;
+        state = states.chase;
     }
 }
 
@@ -66,7 +66,7 @@ function scr_hillbilly_detect()
     if (_col == -4 && _player_colX && _player_colY)
     {
         image_xscale = (playerinst.x > x) ? 1 : -1;
-        state = UnknownEnum.Value_141;
+        state = states.chase;
         sprite_index = chasespr;
         image_index = 0;
     }

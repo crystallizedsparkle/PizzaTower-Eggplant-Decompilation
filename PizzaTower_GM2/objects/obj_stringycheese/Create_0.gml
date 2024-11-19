@@ -1,5 +1,5 @@
 playerid = -4;
-state = UnknownEnum.Value_0;
+state = states.normal;
 handx = x;
 handy = y;
 drawhandx = x;

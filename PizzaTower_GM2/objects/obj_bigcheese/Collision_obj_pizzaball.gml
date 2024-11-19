@@ -1,9 +1,9 @@
-if (state != UnknownEnum.Value_74 && (other.hsp != 0 || other.thrown || other.state == UnknownEnum.Value_5))
+if (state != states.throwing && (other.hsp != 0 || other.thrown || other.state == states.tumble))
 {
     pizzaball = true;
     golfid = other.id;
     shot = false;
-    state = UnknownEnum.Value_74;
+    state = states.throwing;
     sprite_index = spr_bigcheese_walk;
     image_index = 0;
 }

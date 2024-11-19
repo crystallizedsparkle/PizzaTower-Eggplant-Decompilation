@@ -57,7 +57,7 @@ function scr_noise_walk()
                 
                 switch (state)
                 {
-                    case UnknownEnum.Value_130:
+                    case states.turn:
                         if (!instance_exists(obj_noisetrap_crosshair) && instance_exists(obj_noisetrap))
                         {
                             b = -4;
@@ -79,16 +79,16 @@ function scr_noise_walk()
                             }
                         }
                         
-                        state = UnknownEnum.Value_134;
+                        state = states.walk;
                         break;
                     
-                    case UnknownEnum.Value_174:
-                        substate = UnknownEnum.Value_174;
+                    case states.boss_shield:
+                        substate = states.boss_shield;
                         shield_buffer = 120;
                         break;
                     
-                    case UnknownEnum.Value_72:
-                        substate = UnknownEnum.Value_66;
+                    case states.pistol:
+                        substate = states.shotgun;
                         sprite_index = spr_playerN_minigunstart;
                         image_index = 0;
                         break;
@@ -101,7 +101,7 @@ function scr_noise_walk()
 function scr_noise_punch()
 {
     if (floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_134;
+        state = states.walk;
     
     hsp = 0;
     
@@ -164,7 +164,7 @@ function scr_noise_do_jump(argument0 = true)
     
     if (argument0)
     {
-        state = UnknownEnum.Value_92;
+        state = states.jump;
         sprite_index = spr_playerN_jump;
         image_index = 0;
     }
@@ -193,7 +193,7 @@ function scr_noise_jump()
         }
         else
         {
-            state = UnknownEnum.Value_134;
+            state = states.walk;
             sprite_index = spr_playerN_land;
             image_index = 0;
         }
@@ -204,7 +204,7 @@ function scr_noise_shield()
 {
     switch (substate)
     {
-        case UnknownEnum.Value_174:
+        case states.boss_shield:
             hsp = 0;
             
             if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerN_land)
@@ -216,8 +216,8 @@ function scr_noise_shield()
             }
             else
             {
-                substate = UnknownEnum.Value_92;
-                storedsubstate = UnknownEnum.Value_126;
+                substate = states.jump;
+                storedsubstate = states.idle;
                 shield_buffer = 100;
                 sprite_index = spr_playerN_jump;
                 image_index = 0;
@@ -226,7 +226,7 @@ function scr_noise_shield()
             
             break;
         
-        case UnknownEnum.Value_92:
+        case states.jump:
             if (sprite_index == spr_playerN_jump && floor(image_index) == (image_number - 1))
                 sprite_index = spr_playerN_fall;
             
@@ -242,7 +242,7 @@ function scr_noise_shield()
             
             break;
         
-        case UnknownEnum.Value_126:
+        case states.idle:
             hsp = 0;
             
             if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerN_land)
@@ -254,8 +254,8 @@ function scr_noise_shield()
             }
             else
             {
-                substate = UnknownEnum.Value_92;
-                storedsubstate = UnknownEnum.Value_174;
+                substate = states.jump;
+                storedsubstate = states.boss_shield;
                 shield_buffer = 120;
                 sprite_index = spr_playerN_jump;
                 image_index = 0;
@@ -272,17 +272,17 @@ function scr_noise_pistol()
     
     switch (substate)
     {
-        case UnknownEnum.Value_66:
+        case states.shotgun:
             if (floor(image_index) == (image_number - 1))
             {
                 sprite_index = spr_playerN_minigunidle;
-                substate = UnknownEnum.Value_126;
+                substate = states.idle;
                 cooldown = 1;
             }
             
             break;
         
-        case UnknownEnum.Value_126:
+        case states.idle:
             sprite_index = spr_playerN_minigunidle;
             b = -4;
             
@@ -300,7 +300,7 @@ function scr_noise_pistol()
                 cooldown = 80;
                 shoot_buffer = 1;
                 shoot_count = 30;
-                substate = UnknownEnum.Value_69;
+                substate = states.shotgunshoot;
                 
                 if (x != b.x)
                     image_xscale = sign(b.x - x);
@@ -310,7 +310,7 @@ function scr_noise_pistol()
             
             break;
         
-        case UnknownEnum.Value_69:
+        case states.shotgunshoot:
             if (shoot_buffer > 0)
             {
                 shoot_buffer--;
@@ -330,7 +330,7 @@ function scr_noise_pistol()
             }
             
             if (shoot_count <= 0)
-                substate = UnknownEnum.Value_126;
+                substate = states.idle;
             
             break;
     }

@@ -9,9 +9,9 @@ function cutscene_taxi_end(argument0, argument1)
     {
         handler = other;
         cutscene = true;
-        state = UnknownEnum.Value_146;
+        state = states.actor;
         
-        if (grounded && state != UnknownEnum.Value_107)
+        if (grounded && state != states.hurt)
         {
             hsp = 0;
             vsp = 0;

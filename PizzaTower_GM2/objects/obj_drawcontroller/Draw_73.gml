@@ -37,7 +37,7 @@ if (kidsparty_lightning || dark_lightning)
             
             with (obj_patrolcone)
             {
-                if (instance_exists(baddieID) && (baddieID.state != UnknownEnum.Value_138 && baddieID.state != UnknownEnum.Value_4 && baddieID.state != UnknownEnum.Value_137 && baddieID.state != UnknownEnum.Value_80))
+                if (instance_exists(baddieID) && (baddieID.state != states.stun && baddieID.state != states.grabbed && baddieID.state != states.hit && baddieID.state != states.punch))
                 {
                     points = get_triangle_points(x, y, image_angle, len, size);
                     c = 16777215;
@@ -61,7 +61,7 @@ if (kidsparty_lightning || dark_lightning)
             
             with (obj_patrolcone)
             {
-                if (instance_exists(baddieID) && (baddieID.state != UnknownEnum.Value_138 && baddieID.state != UnknownEnum.Value_4 && baddieID.state != UnknownEnum.Value_137 && baddieID.state != UnknownEnum.Value_80))
+                if (instance_exists(baddieID) && (baddieID.state != states.stun && baddieID.state != states.grabbed && baddieID.state != states.hit && baddieID.state != states.punch))
                     draw_sprite_ext(spr_patrol_lightgradient, 0, x - surf_x, y - surf_y, 1, 1, image_angle, c_white, 1);
             }
             
@@ -72,7 +72,7 @@ if (kidsparty_lightning || dark_lightning)
             
             with (obj_patrolcone)
             {
-                if (instance_exists(baddieID) && (baddieID.state != UnknownEnum.Value_138 && baddieID.state != UnknownEnum.Value_4 && baddieID.state != UnknownEnum.Value_137 && baddieID.state != UnknownEnum.Value_80))
+                if (instance_exists(baddieID) && (baddieID.state != states.stun && baddieID.state != states.grabbed && baddieID.state != states.hit && baddieID.state != states.punch))
                 {
                     if (collision || (instance_exists(baddieID) && baddieID.alarm[5] != -1))
                     {
@@ -108,7 +108,7 @@ if (kidsparty_lightning || dark_lightning)
                 
                 with (_player)
                 {
-                    if (state != UnknownEnum.Value_186)
+                    if (state != states.gotoplayer)
                         draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 178, false);
                 }
                 
@@ -116,7 +116,7 @@ if (kidsparty_lightning || dark_lightning)
                 
                 with (_player)
                 {
-                    if (state != UnknownEnum.Value_186)
+                    if (state != states.gotoplayer)
                         draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 128, false);
                 }
             }

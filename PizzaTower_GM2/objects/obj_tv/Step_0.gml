@@ -54,7 +54,7 @@ if (bubblespr != -4 && bubblespr != 1324)
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         idlespr = 2700;
         
         if (!obj_player.ispeppino)
@@ -70,24 +70,24 @@ switch (state)
         
         _state = obj_player1.state;
         
-        if (_state == UnknownEnum.Value_84 || _state == UnknownEnum.Value_61)
+        if (_state == states.backbreaker || _state == states.chainsaw)
             _state = obj_player1.tauntstoredstate;
         
         _transfo = true;
         
         switch (_state)
         {
-            case UnknownEnum.Value_47:
-            case UnknownEnum.Value_48:
-            case UnknownEnum.Value_38:
+            case states.knightpep:
+            case states.knightpepattack:
+            case states.knightpepslopes:
                 idlespr = 596;
                 break;
             
-            case UnknownEnum.Value_51:
+            case states.bombpep:
                 idlespr = 2590;
                 break;
             
-            case UnknownEnum.Value_9:
+            case states.fireass:
                 idlespr = 550;
                 
                 if (obj_player1.sprite_index == obj_player1.spr_scaredjump1 || obj_player1.sprite_index == obj_player1.spr_scaredjump2)
@@ -95,32 +95,32 @@ switch (state)
                 
                 break;
             
-            case UnknownEnum.Value_5:
+            case states.tumble:
                 if (obj_player1.sprite_index == obj_player1.spr_tumble || obj_player1.sprite_index == obj_player1.spr_tumblestart || obj_player1.sprite_index == obj_player1.spr_tumbleend)
                     idlespr = 1711;
                 
                 break;
             
-            case UnknownEnum.Value_10:
+            case states.firemouth:
                 idlespr = 1139;
                 break;
             
-            case UnknownEnum.Value_16:
-            case UnknownEnum.Value_17:
+            case states.ghost:
+            case states.ghostpossess:
                 idlespr = 2147;
                 break;
             
-            case UnknownEnum.Value_59:
+            case states.stunned:
                 if (obj_player1.sprite_index == obj_player1.spr_squished)
                     idlespr = 339;
                 
                 break;
             
-            case UnknownEnum.Value_0:
-            case UnknownEnum.Value_92:
-            case UnknownEnum.Value_42:
-            case UnknownEnum.Value_100:
-            case UnknownEnum.Value_93:
+            case states.normal:
+            case states.jump:
+            case states.handstandjump:
+            case states.crouch:
+            case states.ladder:
                 with (obj_player1)
                 {
                     if (shotgunAnim)
@@ -131,62 +131,62 @@ switch (state)
                 
                 break;
             
-            case UnknownEnum.Value_122:
-            case UnknownEnum.Value_108:
-            case UnknownEnum.Value_111:
+            case states.freefallprep:
+            case states.freefall:
+            case states.freefallland:
                 if (obj_player1.shotgunAnim)
                     idlespr = 334;
                 
                 break;
             
-            case UnknownEnum.Value_72:
+            case states.pistol:
                 if (global.mort)
                     idlespr = 2654;
                 
                 break;
             
-            case UnknownEnum.Value_66:
-            case UnknownEnum.Value_71:
-            case UnknownEnum.Value_57:
-            case UnknownEnum.Value_70:
-            case UnknownEnum.Value_67:
-            case UnknownEnum.Value_68:
+            case states.shotgun:
+            case states.shotgunfreefall:
+            case states.shotgunjump:
+            case states.shotgundash:
+            case states.shotguncrouch:
+            case states.shotguncrouchjump:
                 idlespr = 334;
                 break;
             
-            case UnknownEnum.Value_113:
+            case states.barrel:
                 idlespr = 185;
                 break;
             
-            case UnknownEnum.Value_148:
+            case states.golf:
                 idlespr = 1296;
                 break;
             
-            case UnknownEnum.Value_184:
+            case states.rocket:
                 idlespr = 135;
                 break;
             
-            case UnknownEnum.Value_21:
+            case states.cheeseball:
                 idlespr = 2240;
                 break;
             
-            case UnknownEnum.Value_24:
-            case UnknownEnum.Value_25:
-            case UnknownEnum.Value_29:
-            case UnknownEnum.Value_30:
+            case states.cheesepep:
+            case states.cheesepepstick:
+            case states.cheesepepstickside:
+            case states.cheesepepstickup:
                 idlespr = 2457;
                 break;
             
-            case UnknownEnum.Value_33:
-            case UnknownEnum.Value_35:
-            case UnknownEnum.Value_34:
+            case states.boxxedpep:
+            case states.boxxedpepjump:
+            case states.boxxedpepspin:
                 idlespr = 2832;
                 break;
             
-            case UnknownEnum.Value_104:
-            case UnknownEnum.Value_37:
-            case UnknownEnum.Value_65:
-            case UnknownEnum.Value_78:
+            case states.mach2:
+            case states.climbwall:
+            case states.machroll:
+            case states.grind:
                 if (obj_player1.skateboarding)
                     idlespr = 1197;
                 
@@ -212,11 +212,11 @@ switch (state)
             {
                 if (mach4mode == true)
                     tv_do_expression(2845);
-                else if (state == UnknownEnum.Value_121 || sprite_index == spr_mach3boost)
+                else if (state == states.mach3 || sprite_index == spr_mach3boost)
                     tv_do_expression(855);
-                else if (state == UnknownEnum.Value_107)
+                else if (state == states.hurt)
                     tv_do_expression(1319);
-                else if (state == UnknownEnum.Value_196)
+                else if (state == states.ratmounthurt)
                     tv_do_expression(1497);
                 else if (global.combo >= 3 && !obj_player.isgustavo)
                     tv_do_expression(2453);
@@ -315,7 +315,7 @@ switch (state)
                     prompt = -4;
                 }
                 
-                if (b[1] == UnknownEnum.Value_0)
+                if (b[1] == states.normal)
                 {
                     sprite_index = spr_tv_open;
                     image_index = 0;
@@ -347,7 +347,7 @@ switch (state)
                     image_index = 0;
                 }
                 
-                state = UnknownEnum.Value_8;
+                state = states.transitioncutscene;
             }
             else
             {
@@ -357,7 +357,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         if (sprite_index == spr_tv_open && floor(image_index) == (image_number - 1))
             sprite_index = tvsprite;
         
@@ -371,7 +371,7 @@ switch (state)
             {
                 promptx = promptxstart;
                 ds_list_delete(tvprompts_list, 0);
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
         }
         
@@ -395,7 +395,7 @@ switch (state)
             }
             else
             {
-                state = UnknownEnum.Value_0;
+                state = states.normal;
             }
             
             image_index = 0;
@@ -407,7 +407,7 @@ switch (state)
         switch (expressionsprite)
         {
             case 1319:
-                if (obj_player1.state != UnknownEnum.Value_107)
+                if (obj_player1.state != states.hurt)
                 {
                     if (expressionbuffer > 0)
                     {
@@ -423,7 +423,7 @@ switch (state)
                 break;
             
             case 1497:
-                if (obj_player1.state != UnknownEnum.Value_196)
+                if (obj_player1.state != states.ratmounthurt)
                 {
                     if (expressionbuffer > 0)
                     {
@@ -444,7 +444,7 @@ switch (state)
                     state = UnknownEnum.Value_250;
                     expressionsprite = -4;
                     
-                    if (obj_player1.state == UnknownEnum.Value_107)
+                    if (obj_player1.state == states.hurt)
                         tv_do_expression(1319);
                 }
                 
@@ -467,7 +467,7 @@ switch (state)
             case 855:
                 with (obj_player1)
                 {
-                    if (state != UnknownEnum.Value_121 && (state != UnknownEnum.Value_61 || tauntstoredstate != UnknownEnum.Value_121) && sprite_index != spr_mach3boost && mach4mode == false)
+                    if (state != states.mach3 && (state != states.chainsaw || tauntstoredstate != states.mach3) && sprite_index != spr_mach3boost && mach4mode == false)
                     {
                         other.state = UnknownEnum.Value_250;
                         other.expressionsprite = -4;

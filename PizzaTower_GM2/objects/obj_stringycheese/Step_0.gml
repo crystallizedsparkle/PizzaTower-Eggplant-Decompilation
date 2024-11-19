@@ -5,7 +5,7 @@ image_speed = 0.35;
 
 switch (state)
 {
-    case UnknownEnum.Value_0:
+    case states.normal:
         hand_xscale = (drawhandx < x) ? 1 : -1;
         idlebuffer = 0;
         spr_hand = 507;
@@ -46,17 +46,17 @@ switch (state)
             {
                 tauntstoredstate = state;
                 tauntstoredsprite = sprite_index;
-                state = UnknownEnum.Value_214;
+                state = states.stringfall;
                 stringid = other.id;
                 movespeed = hsp;
             }
             
-            state = UnknownEnum.Value_15;
+            state = states.hook;
         }
         
         break;
     
-    case UnknownEnum.Value_15:
+    case states.hook:
         sprite_index = spr_mrpinch_face2;
         spr_hand = 2688;
         handx = playerid.x;
@@ -64,18 +64,18 @@ switch (state)
         drawhandx = handx;
         drawhandy = handy;
         
-        if (handy < (y - 200) || playerid.state == UnknownEnum.Value_150)
+        if (handy < (y - 200) || playerid.state == states.tube)
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             
             with (playerid)
             {
-                if (state == UnknownEnum.Value_214)
+                if (state == states.stringfall)
                 {
-                    if (tauntstoredstate == UnknownEnum.Value_26)
-                        state = UnknownEnum.Value_26;
+                    if (tauntstoredstate == states.cheesepepjump)
+                        state = states.cheesepepjump;
                     else
-                        state = UnknownEnum.Value_92;
+                        state = states.jump;
                 }
             }
             
@@ -86,19 +86,19 @@ switch (state)
         drawhandy = handy;
         hand_xscale = playerid.xscale;
         
-        if (playerid.state != UnknownEnum.Value_150)
+        if (playerid.state != states.tube)
         {
             with (playerid)
             {
                 sprite_index = spr_player_mrpinch;
                 stringid = other.id;
-                state = UnknownEnum.Value_214;
+                state = states.stringfall;
                 
                 if (y > other.y)
                 {
                     if (y > (other.y + (other.maxhandlen / 2)) && vsp > 0 && y > other.y)
                     {
-                        other.state = UnknownEnum.Value_19;
+                        other.state = states.hookshot;
                         other.shootbuffer = 60;
                         other.launch_dir = point_direction(0, 0, other.launch_hsp, other.launch_vsp);
                         stringid = other.id;
@@ -112,21 +112,21 @@ switch (state)
                 
                 if (other.idlebuffer > 60)
                 {
-                    other.state = UnknownEnum.Value_0;
+                    other.state = states.normal;
                     other.shootbuffer = 20;
                     other.idlebuffer = 0;
-                    state = UnknownEnum.Value_0;
+                    state = states.normal;
                 }
             }
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
         }
         
         break;
     
-    case UnknownEnum.Value_19:
+    case states.hookshot:
         sprite_index = spr_mrpinch_face2;
         hand_index = 2688;
         hand_xscale = playerid.xscale;
@@ -159,11 +159,11 @@ switch (state)
                 momemtum = true;
                 jumpstop = true;
                 sprite_index = spr_machfreefall;
-                state = UnknownEnum.Value_92;
+                state = states.jump;
                 
                 with (other)
                 {
-                    state = UnknownEnum.Value_8;
+                    state = states.transitioncutscene;
                     shootbuffer = 80;
                 }
             }
@@ -171,7 +171,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_8:
+    case states.transitioncutscene:
         hand_xscale = 1;
         spr_hand = 2383;
         sprite_index = spr_mrpinch_face3;
@@ -186,7 +186,7 @@ switch (state)
         }
         else
         {
-            state = UnknownEnum.Value_0;
+            state = states.normal;
             shootbuffer = 30;
         }
         

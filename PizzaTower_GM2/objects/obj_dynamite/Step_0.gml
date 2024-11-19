@@ -9,7 +9,7 @@ if (scr_solid(x, y + 1) && vsp > 0)
         movespeed -= 1;
 }
 
-if (obj_explosion != 85 && obj_explosion != 376 && playerid.key_shoot2 && playerid.state != UnknownEnum.Value_2)
+if (obj_explosion != 85 && obj_explosion != 376 && playerid.key_shoot2 && playerid.state != states.dynamite)
 {
     instance_destroy();
     instance_create(x, y, obj_explosion);

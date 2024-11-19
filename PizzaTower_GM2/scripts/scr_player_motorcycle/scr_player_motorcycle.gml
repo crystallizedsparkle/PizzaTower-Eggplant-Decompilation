@@ -38,7 +38,7 @@ function scr_player_motorcycle()
     {
         jumpstop = false;
         vsp = -11;
-        state = UnknownEnum.Value_5;
+        state = states.tumble;
         sprite_index = spr_mach2jump;
         i = 0;
         

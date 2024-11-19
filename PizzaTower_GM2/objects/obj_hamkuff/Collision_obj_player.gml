@@ -1,13 +1,13 @@
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
 {
     if (!other.isgustavo)
     {
-        if (other.state != UnknownEnum.Value_121 || !other.launched)
+        if (other.state != states.mach3 || !other.launched)
         {
-            if (state != UnknownEnum.Value_206)
+            if (state != states.blockstance)
             {
                 sprite_index = spr_hamkuff_chain1;
-                state = UnknownEnum.Value_206;
+                state = states.blockstance;
                 playerid = other.id;
             }
         }
@@ -17,16 +17,16 @@ if (state != UnknownEnum.Value_138)
             instance_destroy();
         }
     }
-    else if (other.brick && state != UnknownEnum.Value_206)
+    else if (other.brick && state != states.blockstance)
     {
         other.brick = false;
-        state = UnknownEnum.Value_206;
+        state = states.blockstance;
         sprite_index = spr_hamkuff_chain1;
-        state = UnknownEnum.Value_206;
+        state = states.blockstance;
         
         with (other)
         {
-            state = UnknownEnum.Value_196;
+            state = states.ratmounthurt;
             xscale = -other.image_xscale;
             vsp = -10;
         }
@@ -47,7 +47,7 @@ if (state != UnknownEnum.Value_138)
     {
         with (other)
         {
-            state = UnknownEnum.Value_196;
+            state = states.ratmounthurt;
             xscale = other.image_xscale;
             vsp = -10;
         }

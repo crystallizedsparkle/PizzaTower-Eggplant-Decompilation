@@ -7,11 +7,11 @@ y1 = (other.y + other.sprite_height) - 34;
 x = Approach(x, x1, spd);
 y = Approach(y, y1, spd);
 
-if (x == x1 && y == y1 && state != UnknownEnum.Value_89)
+if (x == x1 && y == y1 && state != states.gameover)
 {
     spd = 0;
     other.horseyfinish = true;
-    state = UnknownEnum.Value_6;
+    state = states.finishingblow;
     global.horse = false;
 }
 

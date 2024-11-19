@@ -19,7 +19,7 @@ function scr_player_backbreaker()
     
     if (sprite_index == spr_player_machfreefall && place_meeting(x, y + 1, obj_solid))
     {
-        state = UnknownEnum.Value_105;
+        state = states.machslide;
         sprite_index = spr_player_crouchslide;
     }
     
@@ -60,7 +60,7 @@ function scr_player_backbreaker()
                 if (point_in_camera(x, y, view_camera[0]))
                 {
                     hp = -99;
-                    state = UnknownEnum.Value_137;
+                    state = states.hit;
                     hitLag = lag;
                     hitX = x;
                     hitY = y;
@@ -136,16 +136,16 @@ function scr_player_backbreaker()
     }
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_eatspaghetti)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_throw)
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_Timesup && place_meeting(x, y, obj_exitgate))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_levelcomplete || sprite_index == spr_playerN_victory))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     if (key_jump && sprite_index == spr_player_phoneidle)
     {
@@ -161,7 +161,7 @@ function scr_player_backbreaker()
     }
     
     if (global.miniboss == true && sprite_index == spr_bossintro && floor(image_index) == (image_number - 1))
-        state = UnknownEnum.Value_0;
+        state = states.normal;
     
     image_speed = 0.4;
 }

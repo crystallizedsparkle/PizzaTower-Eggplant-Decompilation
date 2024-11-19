@@ -26,7 +26,7 @@ if (global.levelreset)
     global.levelreset = false;
 }
 
-if (state == UnknownEnum.Value_95 && global.coop == true && !place_meeting(x, y, obj_exitgate))
+if (state == states.comingoutdoor && global.coop == true && !place_meeting(x, y, obj_exitgate))
 {
     if (object_index == obj_player1 && obj_player1.spotlight == false)
         visible = false;
@@ -46,14 +46,14 @@ if (global.coop == true)
         instance_create(x, y, obj_coopflag);
 }
 
-if (state == UnknownEnum.Value_79)
-    state = UnknownEnum.Value_0;
+if (state == states.grab)
+    state = states.normal;
 
 if (place_meeting(x, y, obj_boxofpizza) || place_meeting(x, y - 1, obj_boxofpizza))
 {
     box = true;
     hallway = false;
-    state = UnknownEnum.Value_100;
+    state = states.crouch;
 }
 
 if (object_index != obj_player2 || global.coop == true)
@@ -156,10 +156,10 @@ if (verticalhallway)
         else
             y = _vinst.bbox_top - 78;
         
-        if (verticalstate == UnknownEnum.Value_37)
-            state = UnknownEnum.Value_37;
+        if (verticalstate == states.climbwall)
+            state = states.climbwall;
         
-        if (state == UnknownEnum.Value_37)
+        if (state == states.climbwall)
         {
             x = round(x);
             i = 0;
@@ -181,7 +181,7 @@ if (verticalhallway)
     
     y += (vhallwaydirection * 20);
     y = floor(y);
-    verticalstate = UnknownEnum.Value_0;
+    verticalstate = states.normal;
 }
 
 if (character == "M" && place_meeting(x, y, obj_boxofpizza))
@@ -193,7 +193,7 @@ if (character == "M" && place_meeting(x, y, obj_boxofpizza))
     }
 }
 
-if (state == UnknownEnum.Value_119)
+if (state == states.taxi)
 {
     x = obj_stopsign.x;
     y = obj_stopsign.y;

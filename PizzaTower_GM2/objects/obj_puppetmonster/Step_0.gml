@@ -5,12 +5,12 @@ depth = -10;
 
 switch (state)
 {
-    case UnknownEnum.Value_217:
+    case states.robot_idle:
         sprite_index = spr_introidle;
         image_speed = 0.35;
         break;
     
-    case UnknownEnum.Value_218:
+    case states.robot_intro:
         if (sprite_index != spr_intro)
         {
             sprite_index = spr_intro;
@@ -18,18 +18,18 @@ switch (state)
         }
         
         if (floor(image_index) == (image_number - 1))
-            state = UnknownEnum.Value_220;
+            state = states.robot_chase;
         
         break;
     
-    case UnknownEnum.Value_219:
+    case states.robot_walking:
         sprite_index = spr_monstertomato_idle;
         x = camera_get_view_x(view_camera[0]) + 480;
         y = camera_get_view_y(view_camera[0]) + yy;
         
         switch (substate)
         {
-            case UnknownEnum.Value_135:
+            case states.fall:
                 yy += 2;
                 
                 if (yy > 440)
@@ -40,17 +40,17 @@ switch (state)
                     if (pid != -4)
                     {
                         playerid = pid;
-                        substate = UnknownEnum.Value_141;
+                        substate = states.chase;
                     }
                     else
                     {
-                        substate = UnknownEnum.Value_92;
+                        substate = states.jump;
                     }
                 }
                 
                 break;
             
-            case UnknownEnum.Value_92:
+            case states.jump:
                 yy -= 3;
                 
                 if (yy < -100)
@@ -64,12 +64,12 @@ switch (state)
                         monster_pos[other.monsterid].y = last_puppet_pos.y;
                     }
                     
-                    state = UnknownEnum.Value_217;
+                    state = states.robot_idle;
                 }
                 
                 break;
             
-            case UnknownEnum.Value_141:
+            case states.chase:
                 yy -= 10;
                 
                 if (yy < -100)
@@ -80,7 +80,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_220:
+    case states.robot_chase:
         playerid = instance_nearest(x, y, obj_player);
         sprite_index = spr_monstertomato_chase;
         dir = point_direction(x, y, playerid.x, playerid.y);
@@ -97,10 +97,10 @@ switch (state)
         break;
 }
 
-if (state != UnknownEnum.Value_217)
+if (state != states.robot_idle)
     inactivebuffer = 900;
 
-depth = (state == UnknownEnum.Value_219) ? 100 : -6;
+depth = (state == states.robot_walking) ? 100 : -6;
 
 enum UnknownEnum
 {

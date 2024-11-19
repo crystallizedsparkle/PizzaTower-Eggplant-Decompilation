@@ -5,15 +5,15 @@ if (room == rm_editor)
 
 switch (state)
 {
-    case UnknownEnum.Value_126:
+    case states.idle:
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_130:
+    case states.turn:
         scr_enemy_turn();
         break;
     
-    case UnknownEnum.Value_134:
+    case states.walk:
         if (!grounded)
             sprite_index = spr_ufogrounded_fall;
         
@@ -46,43 +46,43 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_136:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_137:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case UnknownEnum.Value_138:
+    case states.stun:
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_129:
+    case states.enemy_throw:
         scr_pizzagoblin_throw();
         break;
     
-    case UnknownEnum.Value_4:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
     
-    case UnknownEnum.Value_154:
+    case states.pummel:
         scr_enemy_pummel();
         break;
     
-    case UnknownEnum.Value_155:
+    case states.staggered:
         scr_enemy_staggered();
         break;
     
-    case UnknownEnum.Value_125:
+    case states.rage:
         scr_enemy_rage();
         break;
 }
 
-if (state != UnknownEnum.Value_134)
+if (state != states.walk)
     invincible = false;
 
-if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && birdcreated == false)
 {
     birdcreated = true;
     
@@ -90,7 +90,7 @@ if (state == UnknownEnum.Value_138 && stunned > 100 && birdcreated == false)
         ID = other.id;
 }
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     birdcreated = false;
 
 if (flash == true && alarm[2] <= 0)
@@ -102,24 +102,24 @@ targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
 if (bombreset > 0)
     bombreset--;
 
-if (x != targetplayer.x && state != UnknownEnum.Value_129 && bombreset == 0 && grounded)
+if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0 && grounded)
 {
     if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
     {
-        if ((state == UnknownEnum.Value_134 || state == UnknownEnum.Value_126) && !scr_solid_line(targetplayer))
+        if ((state == states.walk || state == states.idle) && !scr_solid_line(targetplayer))
         {
             sprite_index = spr_ufogrounded_shoot;
             image_index = 0;
             image_xscale = -sign(x - targetplayer.x);
-            state = UnknownEnum.Value_129;
+            state = states.enemy_throw;
         }
     }
 }
 
-if (state != UnknownEnum.Value_4)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != UnknownEnum.Value_138)
+if (state != states.stun)
     thrown = false;
 
 if (boundbox == false)

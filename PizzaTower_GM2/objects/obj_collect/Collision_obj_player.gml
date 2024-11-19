@@ -3,7 +3,7 @@ var val;
 if (room == rm_editor)
     exit;
 
-if (other.state != UnknownEnum.Value_186)
+if (other.state != states.gotoplayer)
 {
     if (audio_is_playing(sfx_collecttopping))
         audio_stop_sound(sfx_collecttopping);

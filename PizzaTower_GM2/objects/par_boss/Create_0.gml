@@ -9,7 +9,7 @@ vsp = 0;
 grav = 0.5;
 grounded = false;
 movespeed = 0;
-state = UnknownEnum.Value_0;
+state = states.normal;
 team = 1;
 important = true;
 mach3destroy = false;
@@ -30,7 +30,7 @@ hitX = x;
 hitY = y;
 hithsp = 0;
 hitvsp = 0;
-hitstate = UnknownEnum.Value_0;
+hitstate = states.normal;
 stunfallspr = sprite_index;
 walkspr = sprite_index;
 spr_dead = sprite_index;
@@ -61,8 +61,8 @@ function SUPER_player_destroy(argument0)
         other.hitY = room_height / 2;
         other.x = other.hitX;
         other.y = other.hitY;
-        other.state = UnknownEnum.Value_61;
-        other.hitstate = UnknownEnum.Value_145;
+        other.state = states.chainsaw;
+        other.hitstate = states.arena_round;
         other.hitvsp = -4;
         other.hithsp = -other.image_xscale * 8;
         hitLag = lag;
@@ -76,7 +76,7 @@ function SUPER_player_destroy(argument0)
         hithsp = 15;
         hitstunned = 10000;
         hitvsp = -8;
-        state = UnknownEnum.Value_137;
+        state = states.hit;
         instance_create(other.x, other.y, obj_parryeffect);
         
         with (obj_camera)
@@ -100,14 +100,14 @@ function SUPER_boss_destroy(argument0)
     {
         camera_zoom(1, 0.1);
         
-        if (state == UnknownEnum.Value_162 || state == UnknownEnum.Value_160 || state == UnknownEnum.Value_147 || state == UnknownEnum.Value_84)
+        if (state == states.fistmatch || state == states.superattack || state == states.parry || state == states.backbreaker)
         {
             sprite_index = spr_player_attackdash;
             image_index = 6;
-            state = UnknownEnum.Value_42;
+            state = states.handstandjump;
         }
         
-        if (state != UnknownEnum.Value_61)
+        if (state != states.chainsaw)
         {
             scr_soundeffect(26);
             tauntstoredmovespeed = movespeed;
@@ -124,7 +124,7 @@ function SUPER_boss_destroy(argument0)
         other.y = other.hitY;
         other.hitvsp = -8;
         other.hithsp = -other.image_xscale * 15;
-        other.state = UnknownEnum.Value_137;
+        other.state = states.hit;
         other.thrown = true;
         other.destroyable = true;
         other.colliding = true;
@@ -134,7 +134,7 @@ function SUPER_boss_destroy(argument0)
         hitY = room_height / 2;
         x = hitX;
         y = hitY;
-        state = UnknownEnum.Value_61;
+        state = states.chainsaw;
         instance_create(other.x, other.y, obj_parryeffect);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -168,14 +168,14 @@ function SUPER_boss_hurt(argument0, argument1)
     {
         atstate = state;
         
-        if (state == UnknownEnum.Value_42)
+        if (state == states.handstandjump)
         {
-            state = UnknownEnum.Value_6;
+            state = states.finishingblow;
             sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5);
             image_index = 6;
         }
         
-        if (state != UnknownEnum.Value_61)
+        if (state != states.chainsaw)
         {
             scr_soundeffect(26);
             tauntstoredmovespeed = movespeed;
@@ -183,19 +183,19 @@ function SUPER_boss_hurt(argument0, argument1)
             tauntstoredstate = state;
         }
         
-        state = UnknownEnum.Value_61;
+        state = states.chainsaw;
         lag = 8;
         hitLag = lag;
         hitX = x;
         hitY = y;
         
-        if (state == UnknownEnum.Value_61 || state == UnknownEnum.Value_137)
+        if (state == states.chainsaw || state == states.hit)
         {
             x = hitX;
             y = hitY;
         }
         
-        if (other.state == UnknownEnum.Value_137 || other.state == UnknownEnum.Value_61)
+        if (other.state == states.hit || other.state == states.chainsaw)
         {
             other.x = other.hitX;
             other.y = other.hitY;
@@ -209,14 +209,14 @@ function SUPER_boss_hurt(argument0, argument1)
         other.hitvsp = -9;
         other.movespeed = 7 + (other.jugglecount * 2);
         
-        if (atstate == UnknownEnum.Value_147)
+        if (atstate == states.parry)
         {
             other.hitvsp = -14;
             other.movespeed = 0;
         }
         
         other.hithsp = -other.image_xscale * other.movespeed;
-        other.state = UnknownEnum.Value_137;
+        other.state = states.hit;
         instance_create(other.x, other.y, obj_parryeffect);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -248,7 +248,7 @@ function SUPER_boss_hurt_noplayer(argument0)
     
     lag = 8;
     
-    if (state == UnknownEnum.Value_137 || state == UnknownEnum.Value_61)
+    if (state == states.hit || state == states.chainsaw)
     {
         x = hitX;
         y = hitY;
@@ -260,7 +260,7 @@ function SUPER_boss_hurt_noplayer(argument0)
     hitY = y;
     hitvsp = -8;
     hithsp = other.image_xscale * 15;
-    state = UnknownEnum.Value_137;
+    state = states.hit;
     instance_create(x, y, obj_parryeffect);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
@@ -291,13 +291,13 @@ function SUPER_player_hurt(argument0, argument1)
         scr_soundeffect(26);
         lag = 8;
         
-        if (state == UnknownEnum.Value_137 || state == UnknownEnum.Value_61)
+        if (state == states.hit || state == states.chainsaw)
         {
             x = hitX;
             y = hitY;
         }
         
-        if (other.state == UnknownEnum.Value_61 || other.state == UnknownEnum.Value_137)
+        if (other.state == states.chainsaw || other.state == states.hit)
         {
             other.x = other.hitX;
             other.y = other.hitY;
@@ -306,7 +306,7 @@ function SUPER_player_hurt(argument0, argument1)
         other.hitLag = lag;
         other.hitX = other.x;
         other.hitY = other.y;
-        other.state = UnknownEnum.Value_61;
+        other.state = states.chainsaw;
         hitLag = lag;
         hitX = x;
         hitY = y;
@@ -328,7 +328,7 @@ function SUPER_player_hurt(argument0, argument1)
         }
         
         hitvsp = -8;
-        state = UnknownEnum.Value_137;
+        state = states.hit;
         instance_create(other.x, other.y, obj_parryeffect);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);

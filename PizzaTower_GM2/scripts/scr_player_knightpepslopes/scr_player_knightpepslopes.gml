@@ -58,7 +58,7 @@ function scr_player_knightpepslopes()
         vsp = -6;
         sprite_index = spr_knightpep_bump;
         image_index = floor(image_number - 1);
-        state = UnknownEnum.Value_49;
+        state = states.knightpepbump;
         scr_soundeffect(27);
     }
     
@@ -83,7 +83,7 @@ function scr_player_knightpepslopes()
         vsp = -5;
         hsp = 0;
         movespeed = 0;
-        state = UnknownEnum.Value_47;
+        state = states.knightpep;
     }
 }
 

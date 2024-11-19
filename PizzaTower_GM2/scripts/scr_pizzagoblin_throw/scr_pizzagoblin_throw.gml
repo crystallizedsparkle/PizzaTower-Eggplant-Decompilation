@@ -90,7 +90,7 @@ function scr_pizzagoblin_throw()
     
     if (floor(image_index) == (image_number - 1))
     {
-        state = UnknownEnum.Value_134;
+        state = states.walk;
         sprite_index = walkspr;
     }
     
@@ -288,9 +288,9 @@ function scr_pizzagoblin_throw()
                 break;
             
             case obj_smokingpizzaslice:
-                substate = choose(UnknownEnum.Value_134, UnknownEnum.Value_126, UnknownEnum.Value_126);
+                substate = choose(states.walk, states.idle, states.idle);
                 
-                if (substate == UnknownEnum.Value_134)
+                if (substate == states.walk)
                     image_xscale = choose(-1, 1, -image_xscale);
                 
                 substate_buffer = substate_max;
@@ -330,7 +330,7 @@ function scr_pizzagoblin_throw()
             case obj_bazookabaddie:
                 xx = x + (72 * image_xscale);
                 instance_create(xx, y, obj_bazooka);
-                create_particle(xx, y, UnknownEnum.Value_6);
+                create_particle(xx, y, particles.balloonpop);
                 break;
         }
     }
