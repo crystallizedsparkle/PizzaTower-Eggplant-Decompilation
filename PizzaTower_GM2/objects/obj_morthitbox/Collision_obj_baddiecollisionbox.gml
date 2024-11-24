@@ -1,10 +1,8 @@
-var lag;
-
 if (!other.baddieID.invincible && other.baddieID.destroyable && playerid.state != states.chainsaw && other.baddieID.state != states.hit && !other.baddieID.thrown)
 {
     with (other)
     {
-        scr_soundeffect(46);
+        scr_soundeffect(sfx_punch);
         
         if (!baddieID.elite || baddieID.elitehit <= 0)
         {
@@ -13,7 +11,7 @@ if (!other.baddieID.invincible && other.baddieID.destroyable && playerid.state !
         }
         else
         {
-            lag = 2;
+            var lag = 2;
             baddieID.hitLag = lag;
             baddieID.hitX = baddieID.x;
             baddieID.hitY = baddieID.y;
@@ -43,8 +41,3 @@ if (!other.baddieID.invincible && other.baddieID.destroyable && playerid.state !
     Mort_DownMovement();
 }
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_137 = 137
-}

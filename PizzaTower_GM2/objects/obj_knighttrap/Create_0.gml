@@ -5,7 +5,3 @@ ghost_distance_threshold = 300;
 cooldown = 0;
 image_speed = 0.35;
 
-enum UnknownEnum
-{
-    Value_0
-}

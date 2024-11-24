@@ -5,7 +5,3 @@ cooldown = 0;
 threshold_x = 250;
 threshold_y = 250;
 
-enum UnknownEnum
-{
-    Value_0
-}

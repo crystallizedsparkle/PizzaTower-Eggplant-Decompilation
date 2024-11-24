@@ -100,7 +100,7 @@ with (ID)
             if (state != states.punch)
             {
                 instance_destroy(other);
-                punchinst = -4;
+                punchinst = noone;
             }
             
             break;
@@ -169,16 +169,3 @@ with (ID)
     }
 }
 
-enum UnknownEnum
-{
-    Value_23 = 23,
-    Value_42 = 42,
-    Value_80 = 80,
-    Value_91 = 91,
-    Value_104 = 104,
-    Value_125 = 125,
-    Value_128 = 128,
-    Value_129,
-    Value_134 = 134,
-    Value_153 = 153
-}

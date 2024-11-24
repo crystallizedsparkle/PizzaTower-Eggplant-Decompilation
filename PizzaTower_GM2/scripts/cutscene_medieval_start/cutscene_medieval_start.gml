@@ -36,7 +36,3 @@ function cutscene_medieval_start2()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_146 = 146
-}

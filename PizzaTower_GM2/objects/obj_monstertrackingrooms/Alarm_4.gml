@@ -1,8 +1,6 @@
-var n;
-
 if (monster_active[4] && room != kidsparty_entrance1 && room != kidsparty_entrance2)
 {
-    n = irandom(3);
+    var n = irandom(3);
     
     if (!instance_exists(obj_pineapplemonster))
     {

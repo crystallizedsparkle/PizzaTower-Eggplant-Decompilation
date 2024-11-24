@@ -141,7 +141,3 @@ function scr_enemy_walk()
     }
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

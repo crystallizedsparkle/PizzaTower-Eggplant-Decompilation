@@ -1,5 +1,3 @@
-var player, col, col2, colX, colY;
-
 if (room == rm_editor)
     exit;
 
@@ -52,7 +50,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -63,22 +61,22 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 switch (state)
 {
     case states.idle:
         if (bush)
         {
-            col = collision_line(x, y, player.x, player.y, obj_solid, false, true);
-            col2 = collision_line(x, y, player.x, player.y, obj_slope, false, true);
-            colX = player.x > (x - threshold_x) && player.x < (x + threshold_x);
-            colY = player.y > (y - threshold_y) && player.y < (y + threshold_y);
+            var col = collision_line(x, y, player.x, player.y, obj_solid, false, true);
+            var col2 = collision_line(x, y, player.x, player.y, obj_slope, false, true);
+            var colX = player.x > (x - threshold_x) && player.x < (x + threshold_x);
+            var colY = player.y > (y - threshold_y) && player.y < (y + threshold_y);
             
-            if (sprite_index != scaredspr && col == -4 && col2 == -4 && colX && colY)
+            if (sprite_index != scaredspr && col == noone && col2 == noone && colX && colY)
             {
                 if (x != player.x)
                     image_xscale = sign(player.x - x);
@@ -136,12 +134,12 @@ switch (state)
         }
         else
         {
-            col = collision_line(x, y, player.x, player.y, obj_solid, false, true);
-            col2 = collision_line(x, y, player.x, player.y, obj_slope, false, true);
-            colX = player.x > (x - threshold_x) && player.x < (x + threshold_x);
-            colY = player.y > (y - threshold_y) && player.y < (y + threshold_y);
+            var col = collision_line(x, y, player.x, player.y, obj_solid, false, true);
+            var col2 = collision_line(x, y, player.x, player.y, obj_slope, false, true);
+            var colX = player.x > (x - threshold_x) && player.x < (x + threshold_x);
+            var colY = player.y > (y - threshold_y) && player.y < (y + threshold_y);
             
-            if (sprite_index != scaredspr && col == -4 && col2 == -4 && colX && colY)
+            if (sprite_index != scaredspr && col == noone && col2 == noone && colX && colY)
             {
                 if (x != player.x)
                     image_xscale = sign(player.x - x);
@@ -192,7 +190,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -203,18 +201,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

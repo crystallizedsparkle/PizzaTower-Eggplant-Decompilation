@@ -9,7 +9,7 @@ if (refresh <= 0)
     {
         with (instance_create(x, y - 20, content))
         {
-            if (other.platformid != -4)
+            if (other.platformid != noone)
                 platformid = other.platformid;
             
             image_xscale = other.image_xscale;
@@ -29,7 +29,3 @@ if (refresh <= 0)
 
 scr_collide();
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

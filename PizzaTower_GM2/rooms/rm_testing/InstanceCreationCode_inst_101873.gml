@@ -18,7 +18,3 @@ stepfunc = function()
 
 visible = false;
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

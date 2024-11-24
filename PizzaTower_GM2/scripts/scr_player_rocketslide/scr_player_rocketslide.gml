@@ -14,7 +14,3 @@ function scr_player_rocketslide()
     }
 }
 
-enum UnknownEnum
-{
-    Value_184 = 184
-}

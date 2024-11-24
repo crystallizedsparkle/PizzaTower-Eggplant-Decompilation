@@ -80,9 +80,3 @@ function scr_player_chainsawbump()
         image_speed = 0.4;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_2 = 2,
-    Value_104 = 104
-}

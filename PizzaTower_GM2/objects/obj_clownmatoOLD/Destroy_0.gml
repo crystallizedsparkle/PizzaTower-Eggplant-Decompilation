@@ -3,7 +3,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
     with (instance_create(x, y, obj_sausageman_dead))
         sprite_index = other.deadspr;
     
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);

@@ -1,5 +1,3 @@
-var _inst, _railinst;
-
 switch (state)
 {
     case states.idle:
@@ -34,7 +32,7 @@ switch (state)
         
         if (scr_slope())
         {
-            _inst = instance_place(x, y + 1, obj_slope);
+            var _inst = instance_place(x, y + 1, obj_slope);
             
             if (sign(_inst.image_xscale) == -sign(image_xscale))
             {
@@ -106,7 +104,7 @@ switch (state)
         
         if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0 && !place_meeting(x + hsp, y, obj_destructibles))
         {
-            if (thrown == true && destroyable)
+            if (thrown && destroyable)
                 instance_destroy();
             
             hsp = 0;
@@ -115,7 +113,7 @@ switch (state)
         
         if (hitvsp < 0 && place_meeting(x, y - 1, obj_solid) && !place_meeting(x, y - 1, obj_destructibles))
         {
-            if (thrown == true && destroyable)
+            if (thrown && destroyable)
                 instance_destroy();
             
             thrown = false;
@@ -126,7 +124,7 @@ switch (state)
             particle_set_scale(particles.impact, -image_xscale, 1);
             create_particle(x, y, particles.impact, 0);
             
-            if (thrown == true && destroyable)
+            if (thrown && destroyable)
                 instance_destroy();
             
             thrown = false;
@@ -142,7 +140,7 @@ switch (state)
         
         if (place_meeting(x, y + 1, obj_railparent))
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             hsp += (_railinst.movespeed * _railinst.dir);
         }
         
@@ -174,7 +172,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -203,7 +201,7 @@ else
     stuntouched = false;
 }
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 angle = 0;
@@ -215,7 +213,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -226,20 +224,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_8 = 8,
-    Value_17 = 17,
-    Value_111 = 111,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

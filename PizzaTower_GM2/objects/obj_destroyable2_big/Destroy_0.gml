@@ -1,22 +1,20 @@
-var val;
-
 if (room == rm_editor)
     exit;
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 {
     scr_sleep(5);
     
     with (instance_create(x + 32, y + 32, obj_parryeffect))
         sprite_index = spr_bigpizzablockdead;
     
-    if (content == 523)
+    if (content == obj_null)
     {
         global.heattime += 10;
         global.heattime = clamp(global.heattime, 0, 60);
         global.combotime += 10;
         global.combotime = clamp(global.combotime, 0, 60);
-        val = heat_calculate(100);
+        var val = heat_calculate(100);
         
         if (other.object_index == obj_player1)
             global.collect += val;
@@ -26,7 +24,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
         if (audio_is_playing(sfx_collecttopping))
             audio_stop_sound(sfx_collecttopping);
         
-        scr_soundeffect(17);
+        scr_soundeffect(sfx_collecttopping);
         
         with (instance_create(x + 16, y, obj_smallnumber))
             number = string(val);
@@ -50,6 +48,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(15, 16);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
 }

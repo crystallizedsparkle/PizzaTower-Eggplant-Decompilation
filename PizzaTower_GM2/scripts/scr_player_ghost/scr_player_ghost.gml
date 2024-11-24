@@ -81,8 +81,3 @@ function scr_player_ghostpossess()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_16 = 16
-}

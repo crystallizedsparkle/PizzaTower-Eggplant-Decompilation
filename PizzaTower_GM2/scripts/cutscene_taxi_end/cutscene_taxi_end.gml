@@ -33,8 +33,3 @@ function cutscene_taxi_end(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_107 = 107,
-    Value_146 = 146
-}

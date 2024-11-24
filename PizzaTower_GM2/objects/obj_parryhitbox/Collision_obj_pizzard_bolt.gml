@@ -1,8 +1,6 @@
-var _dir;
-
 with (other)
 {
-    _dir = sign(image_xscale);
+    var _dir = sign(image_xscale);
     
     if (x != other.x)
         _dir = sign(x - other.x);

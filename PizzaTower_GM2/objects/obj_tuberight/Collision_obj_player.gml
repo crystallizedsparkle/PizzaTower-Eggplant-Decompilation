@@ -9,8 +9,8 @@ if (other.state == states.hurt)
 if (other.state == states.gotoplayer)
     exit;
 
-_offset_x = 32 * image_xscale;
-_offset_y = 14 * image_yscale;
+var _offset_x = 32 * image_xscale;
+var _offset_y = 14 * image_yscale;
 
 with (other)
 {
@@ -45,9 +45,3 @@ if (floor(other.x) == (x + _offset_x) && floor(other.y) == (y + _offset_y))
     trace("hsp: ", other.hsp, " vsp: ", other.vsp);
 }
 
-enum UnknownEnum
-{
-    Value_107 = 107,
-    Value_150 = 150,
-    Value_186 = 186
-}

@@ -8,7 +8,3 @@ dir = 1;
 firetimer = 200;
 firetimeinf = false;
 
-enum UnknownEnum
-{
-    Value_0
-}

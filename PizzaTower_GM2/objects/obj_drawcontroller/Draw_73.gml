@@ -1,9 +1,7 @@
-var cw, ch, surf_x, surf_y, points, c, i, _player;
-
 if (kidsparty_lightning || dark_lightning)
 {
-    cw = camera_get_view_width(view_camera[0]) + 32;
-    ch = camera_get_view_height(view_camera[0]) + 32;
+    var cw = camera_get_view_width(view_camera[0]) + 32;
+    var ch = camera_get_view_height(view_camera[0]) + 32;
     
     if (!surface_exists(surf))
     {
@@ -21,8 +19,8 @@ if (kidsparty_lightning || dark_lightning)
         surface_reset_target();
     }
     
-    surf_x = camera_get_view_x(view_camera[0]);
-    surf_y = camera_get_view_y(view_camera[0]);
+    var surf_x = camera_get_view_x(view_camera[0]);
+    var surf_y = camera_get_view_y(view_camera[0]);
     
     if (kidsparty_lightning)
     {
@@ -39,8 +37,8 @@ if (kidsparty_lightning || dark_lightning)
             {
                 if (instance_exists(baddieID) && (baddieID.state != states.stun && baddieID.state != states.grabbed && baddieID.state != states.hit && baddieID.state != states.punch))
                 {
-                    points = get_triangle_points(x, y, image_angle, len, size);
-                    c = 16777215;
+                    var points = get_triangle_points(x, y, image_angle, len, size);
+                    var c = c_white;
                     draw_triangle_color(x - surf_x, y - surf_y, points[0] - surf_x, points[1] - surf_y, points[2] - surf_x, points[3] - surf_y, c, c, c, false);
                 }
             }
@@ -77,7 +75,7 @@ if (kidsparty_lightning || dark_lightning)
                     if (collision || (instance_exists(baddieID) && baddieID.alarm[5] != -1))
                     {
                         points = get_triangle_points(x, y, image_angle, len, size);
-                        c = 255;
+                        c = c_red;
                         draw_triangle_color(x - surf_x, y - surf_y, points[0] - surf_x, points[1] - surf_y, points[2] - surf_x, points[3] - surf_y, c, c, c, false);
                     }
                 }
@@ -101,9 +99,9 @@ if (kidsparty_lightning || dark_lightning)
             gpu_set_blendmode(bm_subtract);
             draw_set_color(c_white);
             
-            for (i = 0; i < 2; i++)
+            for (var i = 0; i < 2; i++)
             {
-                _player = asset_get_index(concat("obj_player", i + 1));
+                var _player = asset_get_index(concat("obj_player", i + 1));
                 draw_set_alpha(circle_alpha_out);
                 
                 with (_player)
@@ -137,11 +135,3 @@ if (kidsparty_lightning || dark_lightning)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_137 = 137,
-    Value_138,
-    Value_186 = 186
-}

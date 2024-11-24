@@ -10,7 +10,7 @@ if (audio_is_playing(sfx_breakblock1) || audio_is_playing(sfx_breakblock2))
     audio_stop_sound(sfx_breakblock2);
 }
 
-scr_soundeffect(15, 16);
+scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
 
 with (instance_create(x, y, obj_destroyable_respawner))
 {

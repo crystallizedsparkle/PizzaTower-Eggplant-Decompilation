@@ -1,11 +1,9 @@
-var val;
-
 if (vsp > 0)
 {
     if (obj_player1.character == "V")
         global.playerhealth = clamp(global.playerhealth + 5, 0, 100);
     
-    val = heat_calculate(10);
+    var val = heat_calculate(10);
     
     if (other.object_index == obj_player1)
         global.collect += val;
@@ -24,6 +22,6 @@ if (vsp > 0)
     if (audio_is_playing(sfx_collecttopping))
         audio_stop_sound(sfx_collecttopping);
     
-    scr_soundeffect(17);
+    scr_soundeffect(sfx_collecttopping);
     instance_destroy();
 }

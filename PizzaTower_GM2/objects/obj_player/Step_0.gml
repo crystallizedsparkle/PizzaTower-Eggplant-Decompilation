@@ -1,11 +1,9 @@
-var prevmask;
-
 prevhsp = hsp;
 prevmove = move;
 prevmovespeed = movespeed;
 previcemovespeed = icemovespeed;
 prevxscale = xscale;
-prevmask = mask_index;
+var prevmask = mask_index;
 
 switch (state)
 {
@@ -613,7 +611,7 @@ switch (state)
         scr_player_ratmounttumble();
         break;
     
-    case UnknownEnum.Value_259:
+    case states.ratmountpunch:
         scr_player_ratmountpunch();
         break;
     
@@ -669,35 +667,35 @@ switch (state)
         scr_player_animatronic();
         break;
     
-    case UnknownEnum.Value_252:
+    case states.playersuperattack:
         scr_player_playersuperattack();
         break;
     
-    case UnknownEnum.Value_254:
+    case states.jetpackjump:
         scr_player_jetpackjump();
         break;
     
-    case UnknownEnum.Value_257:
+    case states.bee:
         scr_player_bee();
         break;
     
-    case UnknownEnum.Value_260:
+    case states.ratmountcrouch:
         scr_player_ratmountcrouch();
         break;
     
-    case UnknownEnum.Value_261:
+    case states.ratmountladder:
         scr_player_ratmountladder();
         break;
     
-    case UnknownEnum.Value_265:
+    case states.antigrav:
         scr_player_antigrav();
         break;
 }
 
 if (prevstate != state)
 {
-    if (prevstate == states.trashroll && prevsprite != 1727 && prevsprite != 1636)
-        create_debris(x, y, 2511);
+    if (prevstate == states.trashroll && prevsprite != spr_player_corpsestart && prevsprite != spr_player_corpsesurf)
+        create_debris(x, y, spr_player_trashlid);
 }
 
 if (!place_meeting(x, y + 1, obj_railparent))
@@ -742,10 +740,10 @@ else if (superchargecombo_buffer == 0)
 if (state != states.normal)
     breakdance_speed = 0.25;
 
-if (!grounded && (state == states.trickjump || state == states.jump || state == states.mach1 || state == states.mach2 || state == states.mach3) && key_jump && global.noisejetpack == true)
+if (!grounded && (state == states.trickjump || state == states.jump || state == states.mach1 || state == states.mach2 || state == states.mach3) && key_jump && global.noisejetpack)
 {
     vsp = -14;
-    state = UnknownEnum.Value_254;
+    state = states.jetpackjump;
     sprite_index = spr_player_jetpackstart;
     doublejump = false;
     
@@ -880,7 +878,7 @@ if (state != states.freefall)
 if (supercharge > 9 && state != states.backbreaker)
     supercharged = true;
 
-if (!instance_exists(pizzashieldid) && pizzashield == true)
+if (!instance_exists(pizzashieldid) && pizzashield)
 {
     with (instance_create(x, y, obj_pizzashield))
     {
@@ -889,7 +887,7 @@ if (!instance_exists(pizzashieldid) && pizzashield == true)
     }
 }
 
-if (visible == false && state == states.comingoutdoor)
+if (!visible && state == states.comingoutdoor)
 {
     coopdelay++;
     image_index = 0;
@@ -901,7 +899,7 @@ if (visible == false && state == states.comingoutdoor)
     }
 }
 
-if (global.coop == true)
+if (global.coop)
 {
     if ((state == states.punch || state == states.handstandjump) && !(obj_player2.state == states.punch || obj_player2.state == states.handstandjump))
         fightballadvantage = true;
@@ -920,14 +918,14 @@ scr_playersounds();
 if (grounded)
     doublejump = false;
 
-if (pogochargeactive == true)
+if (pogochargeactive)
 {
-    if (flashflicker == false)
+    if (!flashflicker)
     {
-        if (pogochargeactive == true && sprite_index == spr_playerN_pogofall)
+        if (pogochargeactive && sprite_index == spr_playerN_pogofall)
             sprite_index = spr_playerN_pogofallmach;
         
-        if (pogochargeactive == true && sprite_index == spr_playerN_pogobounce)
+        if (pogochargeactive && sprite_index == spr_playerN_pogobounce)
             sprite_index = spr_playerN_pogobouncemach;
     }
     
@@ -948,7 +946,7 @@ if (pogocharge == 0)
     pogocharge = 100;
 }
 
-if (flashflicker == true)
+if (flashflicker)
 {
     flashflickertime++;
     
@@ -1000,16 +998,16 @@ if (state == states.gameover && y > (room_height * 2))
     }
 }
 
-if (baddiegrabbedID == 523 && (state == states.grab || state == states.superslam || state == states.tacklecharge))
+if (baddiegrabbedID == obj_null && (state == states.grab || state == states.superslam || state == states.tacklecharge))
     state = states.normal;
 
 if (!(state == states.grab || state == states.superslam || state == states.mach2))
 {
-    baddiegrabbedID = 523;
+    baddiegrabbedID = obj_null;
     heavy = false;
 }
 
-if (cutscene == true && state != states.gotoplayer)
+if (cutscene && state != states.gotoplayer)
     global.heattime = 60;
 
 if (anger == 0)
@@ -1027,7 +1025,7 @@ if (sprite_index == spr_winding && state != states.normal)
 if (state != states.grab)
     swingdingbuffer = 0;
 
-if (state == UnknownEnum.Value_265 || state == states.rocket || state == states.rocketslide)
+if (state == states.antigrav || state == states.rocket || state == states.rocketslide)
     grav = 0;
 else if (state == states.barrel)
     grav = 0.6;
@@ -1035,7 +1033,7 @@ else if (state == states.ghost || state == states.ghostpossess)
     grav = 0;
 else if (boxxed && state != states.boxxedpepspin)
     grav = 0.3;
-else if (state == UnknownEnum.Value_254)
+else if (state == states.jetpackjump)
     grav = 0.5;
 else if (state == states.boxxedpepspin)
     grav = 0.6;
@@ -1130,10 +1128,10 @@ if (input_buffer_walljump > 0)
 if (input_buffer_slap < 8)
     input_buffer_slap++;
 
-if (key_particles == true)
+if (key_particles)
     create_particle(x + random_range(-25, 25), y + random_range(-35, 25), particles.keyparticles, 0);
 
-if (inv_frames == false && hurted == false && state != states.ghost)
+if (!inv_frames && !hurted && state != states.ghost)
     image_alpha = 1;
 
 if (state == states.punch || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.tacklecharge || state == states.skateboard || state == states.knightpep || state == states.cheesepep || state == states.knightpepslopes || state == states.knightpepattack || state == states.bombpep || state == states.facestomp || state == states.machfreefall || state == states.facestomp || state == states.mach3 || state == states.freefall || state == states.Sjump)
@@ -1146,7 +1144,7 @@ if (state == states.throwing || state == states.backkick || state == states.shou
 else
     grabbing = false;
 
-if ((state == states.ratmountbounce && vsp >= 0) || sprite_index == spr_player_Sjumpcancel || sprite_index == spr_swingding || sprite_index == spr_tumble || state == states.boxxedpepspin || state == states.trashroll || state == states.trashjump || state == states.shotgundash || (state == states.shotgunfreefall && (sprite_index == spr_shotgunjump2 || sprite_index == spr_shotgunjump3)) || state == states.Sjump || state == states.rocket || state == states.rocketslide || state == states.chainsawbump || state == states.punch || state == states.faceplant || state == states.rideweenie || state == states.mach3 || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.freefall || state == states.fireass || state == UnknownEnum.Value_254 || state == states.firemouth || state == states.hookshot || state == UnknownEnum.Value_254 || state == states.skateboard || state == states.mach4 || state == states.Sjump || state == states.machfreefall || state == states.tacklecharge || (state == states.superslam && sprite_index == spr_piledriver) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.trickjump || state == states.cheesepep || state == states.cheeseball || state == states.ratmounttumble || state == states.ratmountgroundpound || state == UnknownEnum.Value_259 || state == UnknownEnum.Value_265 || ratmount_movespeed == 12 || state == states.slipbanan || state == states.shoulderbash)
+if ((state == states.ratmountbounce && vsp >= 0) || sprite_index == spr_player_Sjumpcancel || sprite_index == spr_swingding || sprite_index == spr_tumble || state == states.boxxedpepspin || state == states.trashroll || state == states.trashjump || state == states.shotgundash || (state == states.shotgunfreefall && (sprite_index == spr_shotgunjump2 || sprite_index == spr_shotgunjump3)) || state == states.Sjump || state == states.rocket || state == states.rocketslide || state == states.chainsawbump || state == states.punch || state == states.faceplant || state == states.rideweenie || state == states.mach3 || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.freefall || state == states.fireass || state == states.jetpackjump || state == states.firemouth || state == states.hookshot || state == states.jetpackjump || state == states.skateboard || state == states.mach4 || state == states.Sjump || state == states.machfreefall || state == states.tacklecharge || (state == states.superslam && sprite_index == spr_piledriver) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.trickjump || state == states.cheesepep || state == states.cheeseball || state == states.ratmounttumble || state == states.ratmountgroundpound || state == states.ratmountpunch || state == states.antigrav || ratmount_movespeed == 12 || state == states.slipbanan || state == states.shoulderbash)
     instakillmove = true;
 else
     instakillmove = false;
@@ -1156,7 +1154,7 @@ if (state == states.ratmountbounce && vsp < 0)
 else
     stunmove = false;
 
-if (flash == true && alarm[0] <= 0)
+if (flash && alarm[0] <= 0)
     alarm[0] = 0.15 * room_speed;
 
 if (state != states.ladder)
@@ -1203,7 +1201,7 @@ if (state != states.jump)
 
 if (state == states.mach3 || state == states.mach2 || ratmount_movespeed == 12)
 {
-    if (macheffect == false)
+    if (!macheffect)
     {
         macheffect = true;
         toomuchalarm1 = 6;
@@ -1257,16 +1255,16 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
     visible = false;
     hsp = 0;
     vsp = 0;
-    scr_soundeffect(27);
+    scr_soundeffect(sfx_groundpound);
     
     with (instance_create(x, y + 540, obj_technicaldifficulty))
     {
         playerid = other.id;
         
         if (!other.isgustavo)
-            sprite = choose(264, 896, 2780);
+            sprite = choose(spr_technicaldifficulty1, spr_technicaldifficulty2, spr_technicaldifficulty3);
         else
-            sprite = 2787;
+            sprite = spr_technicaldifficulty4;
     }
     
     with (obj_ghostfollow)
@@ -1288,7 +1286,7 @@ if (character != "M")
 {
     if (!scr_solid_player(x, y))
     {
-        if (state != UnknownEnum.Value_260 && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_player_breakdancesuper && sprite_index != spr_player_barrelslipnslide && sprite_index != spr_player_barrelroll && sprite_index != spr_bombpepintro && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol && sprite_index != spr_player_crouchshoot) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
+        if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_player_breakdancesuper && sprite_index != spr_player_barrelslipnslide && sprite_index != spr_player_barrelroll && sprite_index != spr_bombpepintro && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol && sprite_index != spr_player_crouchshoot) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
             mask_index = spr_player_mask;
         else
             mask_index = spr_crouchmask;
@@ -1308,7 +1306,7 @@ if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_
 else
     cutscene = false;
 
-if (((place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_doorblocked)) || place_meeting(x, y, obj_taxi) || place_meeting(x, y, obj_dialognpc) || place_meeting(x, y, obj_dresser) || (place_meeting(x, y, obj_keydoor) || place_meeting(x, y, obj_filedoor) || place_meeting(x, y, obj_optiondoor)) || (place_meeting(x, y, obj_exitgate) && global.panic == true)) && !instance_exists(obj_uparrow) && scr_solid(x, y + 1) && state == states.normal && obj_player1.spotlight == true)
+if (((place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_doorblocked)) || place_meeting(x, y, obj_taxi) || place_meeting(x, y, obj_dialognpc) || place_meeting(x, y, obj_dresser) || (place_meeting(x, y, obj_keydoor) || place_meeting(x, y, obj_filedoor) || place_meeting(x, y, obj_optiondoor)) || (place_meeting(x, y, obj_exitgate) && global.panic == true)) && !instance_exists(obj_uparrow) && scr_solid(x, y + 1) && state == states.normal && obj_player1.spotlight)
 {
     with (instance_create(x, y, obj_uparrow))
         playerid = other.object_index;
@@ -1346,178 +1344,3 @@ if (state != states.comingoutdoor)
 prevstate = state;
 prevsprite = sprite_index;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5,
-    Value_6,
-    Value_7,
-    Value_8,
-    Value_9,
-    Value_10,
-    Value_11,
-    Value_12,
-    Value_13,
-    Value_14,
-    Value_15,
-    Value_16,
-    Value_17,
-    Value_18,
-    Value_19,
-    Value_20,
-    Value_21,
-    Value_22,
-    Value_23,
-    Value_24,
-    Value_25,
-    Value_26,
-    Value_27,
-    Value_28,
-    Value_29,
-    Value_30,
-    Value_31,
-    Value_32,
-    Value_33,
-    Value_34,
-    Value_35,
-    Value_36,
-    Value_37,
-    Value_38,
-    Value_39,
-    Value_40,
-    Value_41,
-    Value_42,
-    Value_43,
-    Value_44,
-    Value_45,
-    Value_46,
-    Value_47,
-    Value_48,
-    Value_49,
-    Value_50,
-    Value_51,
-    Value_52,
-    Value_53,
-    Value_54,
-    Value_55,
-    Value_56,
-    Value_57,
-    Value_58,
-    Value_59,
-    Value_60,
-    Value_61,
-    Value_62,
-    Value_63,
-    Value_64,
-    Value_65,
-    Value_66,
-    Value_67,
-    Value_68,
-    Value_69,
-    Value_70,
-    Value_71,
-    Value_72,
-    Value_73,
-    Value_74,
-    Value_75,
-    Value_76,
-    Value_77,
-    Value_78,
-    Value_79,
-    Value_80,
-    Value_81,
-    Value_82,
-    Value_83,
-    Value_84,
-    Value_85,
-    Value_86,
-    Value_87,
-    Value_88,
-    Value_89,
-    Value_90,
-    Value_91,
-    Value_92,
-    Value_93,
-    Value_94,
-    Value_95,
-    Value_96,
-    Value_97,
-    Value_98,
-    Value_99,
-    Value_100,
-    Value_101,
-    Value_102,
-    Value_103,
-    Value_104,
-    Value_105,
-    Value_106,
-    Value_107,
-    Value_108,
-    Value_109,
-    Value_111 = 111,
-    Value_112,
-    Value_113,
-    Value_114,
-    Value_115,
-    Value_116,
-    Value_117,
-    Value_118,
-    Value_119,
-    Value_120,
-    Value_121,
-    Value_122,
-    Value_123,
-    Value_124,
-    Value_137 = 137,
-    Value_144 = 144,
-    Value_146 = 146,
-    Value_147,
-    Value_148,
-    Value_150 = 150,
-    Value_152 = 152,
-    Value_153,
-    Value_154,
-    Value_156 = 156,
-    Value_165 = 165,
-    Value_183 = 183,
-    Value_184,
-    Value_185,
-    Value_186,
-    Value_187,
-    Value_190 = 190,
-    Value_191,
-    Value_192,
-    Value_193,
-    Value_194,
-    Value_195,
-    Value_196,
-    Value_197,
-    Value_198,
-    Value_200 = 200,
-    Value_201,
-    Value_202,
-    Value_203,
-    Value_204,
-    Value_206 = 206,
-    Value_207,
-    Value_208,
-    Value_210 = 210,
-    Value_211,
-    Value_212,
-    Value_213,
-    Value_214,
-    Value_215,
-    Value_216,
-    Value_225 = 225,
-    Value_252 = 252,
-    Value_254 = 254,
-    Value_257 = 257,
-    Value_259 = 259,
-    Value_260,
-    Value_261,
-    Value_265 = 265
-}

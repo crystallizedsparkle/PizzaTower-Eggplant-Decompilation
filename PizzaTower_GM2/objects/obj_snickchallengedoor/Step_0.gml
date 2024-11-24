@@ -1,4 +1,4 @@
-if (visited == true && sprite_index != spr_pepperdoor)
+if (visited && sprite_index != spr_pepperdoor)
     sprite_index = spr_goldendoorvisited;
 
 if (instance_exists(obj_noisesatellite))

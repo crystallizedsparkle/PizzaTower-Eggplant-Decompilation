@@ -1,7 +1,7 @@
 if (grounded)
     hsp = image_xscale * 5;
 
-if (drop == true)
+if (drop)
 {
     if (place_meeting(x, y, obj_player))
     {

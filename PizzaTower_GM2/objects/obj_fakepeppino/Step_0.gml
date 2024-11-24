@@ -1,17 +1,15 @@
-var xx, yy, ixs, v, msk, b;
-
 if (!touched)
 {
-    xx = obj_player1.x;
-    yy = obj_player1.y;
-    ixs = obj_player1.xscale;
-    v = obj_player1.vsp;
-    msk = obj_player1.mask_index;
+    var xx = obj_player1.x;
+    var yy = obj_player1.y;
+    var ixs = obj_player1.xscale;
+    var v = obj_player1.vsp;
+    var msk = obj_player1.mask_index;
     ds_queue_enqueue(followqueue, [xx, yy, ixs, v, msk]);
     
     if (ds_queue_size(followqueue) > LAG_STEPS)
     {
-        b = ds_queue_dequeue(followqueue);
+        var b = ds_queue_dequeue(followqueue);
         x = b[0];
         y = b[1];
         image_xscale = b[2];
@@ -98,10 +96,3 @@ if (!touched)
     grounded = scr_solid(x, y + 1);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_12 = 12,
-    Value_92 = 92
-}

@@ -34,7 +34,3 @@ function scr_player_morthook()
     }
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12
-}

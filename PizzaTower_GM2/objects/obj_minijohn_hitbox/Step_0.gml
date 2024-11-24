@@ -18,8 +18,3 @@ if (instance_exists(ID))
     }
 }
 
-enum UnknownEnum
-{
-    Value_125 = 125,
-    Value_141 = 141
-}

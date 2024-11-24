@@ -46,7 +46,7 @@ function scr_player_ratmountskid()
     else if (key_slap2 && !brick)
     {
         ratmountpunchtimer = 25;
-        state = UnknownEnum.Value_259;
+        state = states.ratmountpunch;
         image_index = 0;
         
         if (move != 0)
@@ -66,10 +66,3 @@ function scr_player_ratmountskid()
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_191 = 191,
-    Value_192,
-    Value_259 = 259
-}

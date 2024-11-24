@@ -1,6 +1,6 @@
 hsp = 0;
 vsp = 0;
-vmovespeed = -4;
+vmovespeed = noone;
 hmovespeed = 0;
 hdir = 1;
 vdir = -1;

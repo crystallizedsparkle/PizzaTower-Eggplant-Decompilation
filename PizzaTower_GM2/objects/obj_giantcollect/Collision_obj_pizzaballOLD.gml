@@ -1,5 +1,3 @@
-var _x, _y, _xstart, yy, xx;
-
 if (obj_player1.character == "V")
     global.playerhealth = clamp(global.playerhealth + 100, 0, 100);
 
@@ -8,17 +6,17 @@ global.heattime = 60;
 with (obj_camera)
     healthshaketime = 120;
 
-scr_soundeffect(18);
+scr_soundeffect(sfx_collectgiantpizza);
 global.collect += 1000;
-_x = x - 48;
-_y = y - 48;
-_xstart = _x;
+var _x = x - 48;
+var _y = y - 48;
+var _xstart = _x;
 
-for (yy = 0; yy < 4; yy++)
+for (var yy = 0; yy < 4; yy++)
 {
-    for (xx = 0; xx < 4; xx++)
+    for (var xx = 0; xx < 4; xx++)
     {
-        create_collect(_x, _y, choose(1563, 1559, 2709, 1561));
+        create_collect(_x, _y, choose(spr_sausagecollect, spr_shroomcollect, spr_shrimpcollect, spr_tomatocollect));
         _x += 16;
     }
     

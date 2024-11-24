@@ -27,8 +27,3 @@ else
     trace(colliding, ", Hsp: ", hsp, "Vsp: ", vsp);
 }
 
-enum UnknownEnum
-{
-    Value_137 = 137,
-    Value_138
-}

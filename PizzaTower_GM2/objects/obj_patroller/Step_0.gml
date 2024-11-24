@@ -1,5 +1,3 @@
-var p;
-
 if (room == rm_editor)
     exit;
 
@@ -108,7 +106,7 @@ if (state == states.walk)
 
 if (state == states.walk && point_in_camera(x, y, view_camera[0]))
 {
-    p = false;
+    var p = false;
     
     with (obj_player)
     {
@@ -138,7 +136,7 @@ if (state == states.punch)
 if (state == states.stun || state == states.grabbed || state == states.hit)
     alarm[5] = -1;
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -149,7 +147,7 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -158,7 +156,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -169,21 +167,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_80 = 80,
-    Value_84 = 84,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_135,
-    Value_136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

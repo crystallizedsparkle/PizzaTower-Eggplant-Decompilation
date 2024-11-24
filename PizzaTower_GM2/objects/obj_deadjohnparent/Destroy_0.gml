@@ -2,7 +2,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 {
     repeat (8)
     {
-        with (create_debris(x + random_range(0, sprite_width), y + random_range(0, sprite_height), 1253))
+        with (create_debris(x + random_range(0, sprite_width), y + random_range(0, sprite_height), spr_deadjohndebris))
         {
             hsp = random_range(-5, 5);
             vsp = random_range(-10, 10);
@@ -26,7 +26,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(15, 16);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     instance_create(x + 32, y + (sprite_height / 2), obj_bangeffect);
     ds_list_add(global.saveroom, id);
 }

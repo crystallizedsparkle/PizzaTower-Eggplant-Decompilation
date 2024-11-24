@@ -1,6 +1,4 @@
-var x_old;
-
-x_old = x;
+var x_old = x;
 event_inherited();
 
 if (x != x_old)

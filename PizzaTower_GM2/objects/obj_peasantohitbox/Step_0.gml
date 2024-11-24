@@ -14,7 +14,3 @@ x = ID.x + (ID.image_xscale * 12);
 y = ID.y;
 image_xscale = ID.image_xscale;
 
-enum UnknownEnum
-{
-    Value_128 = 128
-}

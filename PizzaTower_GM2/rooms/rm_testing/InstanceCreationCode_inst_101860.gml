@@ -14,7 +14,3 @@ stepfunc = function()
     }
 };
 
-enum UnknownEnum
-{
-    Value_55 = 55
-}

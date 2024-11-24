@@ -7,7 +7,3 @@ if (sprite_index == spr_phone)
     sprite_index = spr_phonepicked;
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

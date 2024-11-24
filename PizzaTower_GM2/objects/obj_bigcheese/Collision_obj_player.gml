@@ -10,8 +10,3 @@ if (state != states.throwing)
     other.sprite_index = other.spr_tumble;
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_74 = 74
-}

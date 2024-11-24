@@ -37,9 +37,3 @@ function cutscene_gustavofail_start()
     }
 }
 
-enum UnknownEnum
-{
-    Value_95 = 95,
-    Value_119 = 119,
-    Value_146 = 146
-}

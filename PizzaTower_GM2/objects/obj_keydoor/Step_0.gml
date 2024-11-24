@@ -1,10 +1,10 @@
-if (!global.horse && !instance_exists(obj_jumpscare) && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && sprite_index == spr_doorkey && obj_player1.key_up && obj_player1.grounded && global.key_inv == true && place_meeting(x, y, obj_player1))
+if (!global.horse && !instance_exists(obj_jumpscare) && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && sprite_index == spr_doorkey && obj_player1.key_up && obj_player1.grounded && global.key_inv && place_meeting(x, y, obj_player1))
 {
     ds_list_add(global.saveroom, id);
     obj_player1.state = states.victory;
     obj_player1.image_index = 0;
     
-    if (instance_exists(obj_player2) && global.coop == true)
+    if (instance_exists(obj_player2) && global.coop)
     {
         obj_player2.x = obj_player1.x;
         obj_player2.y = obj_player1.y;
@@ -21,7 +21,7 @@ if (!global.horse && !instance_exists(obj_jumpscare) && (obj_player1.state == st
 
 if (instance_exists(obj_player2))
 {
-    if (!global.horse && !instance_exists(obj_jumpscare) && obj_player2.state == states.normal && obj_player2.grounded && obj_player2.key_up && global.key_inv == true && place_meeting(x, y, obj_player2))
+    if (!global.horse && !instance_exists(obj_jumpscare) && obj_player2.state == states.normal && obj_player2.grounded && obj_player2.key_up && global.key_inv && place_meeting(x, y, obj_player2))
     {
         ds_list_add(global.saveroom, id);
         obj_player2.state = states.victory;
@@ -48,7 +48,7 @@ if (place_meeting(x, y, obj_player1) && !instance_exists(obj_jumpscare) && floor
         obj_player1.targetDoor = other.targetDoor;
         obj_player1.targetRoom = other.targetRoom;
         
-        if (instance_exists(obj_player2) && global.coop == true)
+        if (instance_exists(obj_player2) && global.coop)
         {
             obj_player2.targetDoor = other.targetDoor;
             obj_player2.targetRoom = other.targetRoom;
@@ -77,13 +77,3 @@ if (place_meeting(x, y, obj_doorE))
 if (place_meeting(x, y, obj_doorF))
     targetDoor = "F";
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_98 = 98,
-    Value_99,
-    Value_103 = 103,
-    Value_104,
-    Value_121 = 121
-}

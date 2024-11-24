@@ -45,7 +45,3 @@ function timedgate_add_objects(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1
-}

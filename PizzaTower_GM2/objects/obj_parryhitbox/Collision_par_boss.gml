@@ -1,22 +1,20 @@
-var _boss, hb, upb, sb, p, pstate, pmovespeed, psprite;
-
-_boss = other.id;
-hb = id;
+var _boss = other.id;
+var hb = id;
 
 if (collisioned)
     exit;
 
 with (_boss)
 {
-    upb = ds_map_find_value(boss_unparryablestates, state);
-    sb = ds_map_find_value(boss_hurtstates, state);
+    var upb = ds_map_find_value(boss_unparryablestates, state);
+    var sb = ds_map_find_value(boss_hurtstates, state);
     
     if (!is_undefined(sb) && is_undefined(upb))
     {
-        p = (hb.player_id == 1) ? obj_player1.id : obj_player2.id;
-        pstate = p.tauntstoredstate;
-        pmovespeed = p.tauntstoredmovespeed;
-        psprite = p.tauntstoredsprite;
+        var p = (hb.player_id == 1) ? obj_player1.id : obj_player2.id;
+        var pstate = p.tauntstoredstate;
+        var pmovespeed = p.tauntstoredmovespeed;
+        var psprite = p.tauntstoredsprite;
         
         if (object_index == obj_pizzafaceboss && phase > 1)
         {

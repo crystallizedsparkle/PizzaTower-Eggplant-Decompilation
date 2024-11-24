@@ -1,5 +1,3 @@
-var i, bpos;
-
 if (instance_number(obj_monstertrackingrooms) > 1)
 {
     instance_destroy();
@@ -16,7 +14,7 @@ map_height = 5;
 sound_pos = new Vector2(-1, -1);
 sound_buffer = 0;
 room_grid = ds_grid_create(map_width, map_height);
-ds_grid_clear(room_grid, -4);
+ds_grid_clear(room_grid, noone);
 ds_grid_add(room_grid, 0, 0, room_get_name(kidsparty_floor1_1));
 ds_grid_add(room_grid, 1, 0, room_get_name(kidsparty_floor1_2));
 ds_grid_add(room_grid, 2, 0, room_get_name(kidsparty_floor1_3));
@@ -37,31 +35,31 @@ monster_alarm[0] = 300;
 monster_pos[0] = new Vector2(3, 0);
 monster_dir[0] = new Vector2(1, 0);
 monster_active[0] = true;
-monster_room[0] = -4;
+monster_room[0] = noone;
 monster_alarm[1] = 300;
 monster_pos[1] = new Vector2(3, 1);
 monster_dir[1] = new Vector2(0, 0);
 monster_active[1] = true;
-monster_room[1] = -4;
+monster_room[1] = noone;
 monster_alarm[2] = 10;
 monster_pos[2] = new Vector2(3, 2);
 last_puppet_pos = new Vector2(monster_pos[2].x, monster_pos[2].y);
 monster_dir[2] = new Vector2(0, 0);
 monster_active[2] = true;
-monster_room[2] = -4;
+monster_room[2] = noone;
 monster_alarm[3] = 300;
 monster_pos[3] = new Vector2(3, 3);
 monster_dir[3] = new Vector2(0, 0);
 monster_active[3] = true;
-monster_room[3] = -4;
+monster_room[3] = noone;
 monster_pos[4] = new Vector2(3, 4);
 monster_alarm[4] = 360;
 monster_active[4] = false;
-monster_room[4] = -4;
+monster_room[4] = noone;
 
-for (i = 0; i < array_length(monster_pos); i++)
+for (var i = 0; i < array_length(monster_pos); i++)
 {
-    bpos = monster_pos[i];
+    var bpos = monster_pos[i];
     monster_startpos[i] = new Vector2(bpos.x, bpos.y);
 }
 
@@ -74,12 +72,10 @@ player_posY = ds_grid_value_y(room_grid, 0, 0, map_width - 1, map_height - 1, ro
 
 function robot_create(argument0, argument1)
 {
-    var _inst, _dir, _hinst, _doorInst;
-    
     if (!instance_exists(obj_robotmonster))
     {
-        _inst = instance_create(x, y, obj_robotmonster);
-        _dir = monster_dir[0];
+        var _inst = instance_create(x, y, obj_robotmonster);
+        var _dir = monster_dir[0];
         
         with (_inst)
         {
@@ -87,7 +83,7 @@ function robot_create(argument0, argument1)
             
             if (argument0)
             {
-                _hinst = -4;
+                var _hinst = noone;
                 
                 with (obj_hallwaymonster)
                 {
@@ -109,7 +105,7 @@ function robot_create(argument0, argument1)
             }
             else
             {
-                _doorInst = -4;
+                var _doorInst = noone;
                 
                 with (obj_doorMonster)
                 {
@@ -138,13 +134,11 @@ function robot_create(argument0, argument1)
 }
 
 function blob_create(argument0, argument1)
-{
-    var _inst, _dir, _hinst, _doorInst, i;
-    
+{    
     if (!instance_exists(obj_blobmonster))
     {
-        _inst = instance_create(x, y, obj_blobmonster);
-        _dir = monster_dir[1];
+        var _inst = instance_create(x, y, obj_blobmonster);
+        var _dir = monster_dir[1];
         
         with (_inst)
         {
@@ -152,7 +146,7 @@ function blob_create(argument0, argument1)
             
             if (argument0)
             {
-                _hinst = -4;
+                var _hinst = noone;
                 
                 with (obj_hallwaymonster)
                 {
@@ -174,7 +168,7 @@ function blob_create(argument0, argument1)
             }
             else
             {
-                _doorInst = -4;
+                var _doorInst = noone;
                 
                 with (obj_doorMonster)
                     _doorInst = id;
@@ -192,7 +186,7 @@ function blob_create(argument0, argument1)
                     
                     if (place_meeting(x, y, obj_monstersolid))
                     {
-                        i = 0;
+                        var i = 0;
                         
                         while (place_meeting(x, y, obj_monstersolid))
                         {
@@ -215,17 +209,15 @@ function blob_create(argument0, argument1)
 
 function puppet_create(argument0, argument1)
 {
-    instance_create_unique(0, 0, 751);
+    instance_create_unique(0, 0, obj_puppetmonster);
 }
 
 function hillbilly_create(argument0, argument1)
 {
-    var _inst, _dir, _hinst, _doorInst;
-    
     if (!instance_exists(obj_hillbillymonster))
     {
-        _inst = instance_create(x, y, obj_hillbillymonster);
-        _dir = monster_dir[3];
+        var _inst = instance_create(x, y, obj_hillbillymonster);
+        var _dir = monster_dir[3];
         
         with (_inst)
         {
@@ -233,7 +225,7 @@ function hillbilly_create(argument0, argument1)
             
             if (argument0)
             {
-                _hinst = -4;
+                var _hinst = noone;
                 
                 with (obj_hallwaymonster)
                 {
@@ -255,7 +247,7 @@ function hillbilly_create(argument0, argument1)
             }
             else
             {
-                _doorInst = -4;
+                var _doorInst = noone;
                 
                 with (obj_doorMonster)
                 {
@@ -288,7 +280,7 @@ function grid_meeting(argument0, argument1)
     if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
         return false;
     
-    if (ds_grid_get(room_grid, argument0, argument1) != -4)
+    if (ds_grid_get(room_grid, argument0, argument1) != noone)
         return true;
     
     return false;
@@ -296,9 +288,7 @@ function grid_meeting(argument0, argument1)
 
 function grid_length_x(argument0, argument1, argument2)
 {
-    var count;
-    
-    count = 0;
+    var count = 0;
     
     while (grid_meeting(argument0 + argument2, argument1))
     {
@@ -312,7 +302,7 @@ function grid_length_x(argument0, argument1, argument2)
 function room_place(argument0, argument1)
 {
     if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
-        return -4;
+        return noone;
     
     return ds_grid_get(room_grid, argument0, argument1);
 }

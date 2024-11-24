@@ -228,32 +228,3 @@ function baddiecollisionbox_update(argument0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_4 = 4,
-    Value_10 = 10,
-    Value_37 = 37,
-    Value_42 = 42,
-    Value_51 = 51,
-    Value_58 = 58,
-    Value_65 = 65,
-    Value_76 = 76,
-    Value_79 = 79,
-    Value_80,
-    Value_91 = 91,
-    Value_92,
-    Value_97 = 97,
-    Value_102 = 102,
-    Value_103,
-    Value_104,
-    Value_105,
-    Value_107 = 107,
-    Value_108,
-    Value_121 = 121,
-    Value_124 = 124,
-    Value_138 = 138,
-    Value_141 = 141,
-    Value_154 = 154,
-    Value_155
-}

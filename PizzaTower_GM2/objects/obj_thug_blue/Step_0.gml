@@ -1,11 +1,9 @@
-var targetplayer, inst_front, inst_down, inst_down2, inst_up;
-
 event_inherited();
 
 if (room == rm_editor)
     exit;
 
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (bombreset > 0)
     bombreset--;
@@ -70,11 +68,11 @@ else if (state == states.chase)
         chasespeed = 0;
     }
     
-    inst_front = collision_line(x, y + 25, x + (sign(hsp) * 78), y + 25, obj_solid, false, true);
+    var inst_front = collision_line(x, y + 25, x + (sign(hsp) * 78), y + 25, obj_solid, false, true);
     
     if (bombreset == 0)
     {
-        if ((targetplayer.x > (x - attackthreshold_x) && targetplayer.x < (x + attackthreshold_x)) && (targetplayer.y > (y - attackthreshold_y) && targetplayer.y < (y + attackthreshold_y)) && (inst_front == -4 || (inst_front != -4 && x > inst_front.x && targetplayer.x > inst_front.x) || (inst_front != -4 && x < inst_front.x && targetplayer.x < inst_front.x)))
+        if ((targetplayer.x > (x - attackthreshold_x) && targetplayer.x < (x + attackthreshold_x)) && (targetplayer.y > (y - attackthreshold_y) && targetplayer.y < (y + attackthreshold_y)) && (inst_front == noone || (inst_front != noone && x > inst_front.x && targetplayer.x > inst_front.x) || (inst_front != noone && x < inst_front.x && targetplayer.x < inst_front.x)))
         {
             state = states.charge;
             hsp = 0;
@@ -82,9 +80,9 @@ else if (state == states.chase)
         }
     }
     
-    inst_down = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_solid, false, true);
-    inst_down2 = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_platform, false, true);
-    inst_up = collision_line(x + (sign(hsp) * 96), y + 25, x + (sign(hsp) * 96), (y - 78) + 50, obj_platform, false, true);
+    var inst_down = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_solid, false, true);
+    var inst_down2 = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_platform, false, true);
+    var inst_up = collision_line(x + (sign(hsp) * 96), y + 25, x + (sign(hsp) * 96), (y - 78) + 50, obj_platform, false, true);
     
     if (image_index > (image_number - 1))
     {
@@ -106,7 +104,7 @@ else if (state == states.chase)
         image_index = 0;
     }
     
-    if (((inst_front != -4 || inst_up != -4) || (inst_down == -4 && inst_down2 == -4)) && targetplayer.y <= (y + 32) && grounded && state != states.charge)
+    if (((inst_front != noone || inst_up != noone) || (inst_down == noone && inst_down2 == noone)) && targetplayer.y <= (y + 32) && grounded && state != states.charge)
     {
         vsp = -11;
         sprite_index = spr_shrimp_jump;
@@ -172,7 +170,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -186,7 +184,7 @@ if (sprite_index == scaredspr && state == states.idle)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 scr_scareenemy();
@@ -197,7 +195,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -208,17 +206,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141
-}

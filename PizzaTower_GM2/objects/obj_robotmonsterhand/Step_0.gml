@@ -34,7 +34,3 @@ if (turn == 1)
 x += hsp;
 y += vsp;
 
-enum UnknownEnum
-{
-    Value_141 = 141
-}

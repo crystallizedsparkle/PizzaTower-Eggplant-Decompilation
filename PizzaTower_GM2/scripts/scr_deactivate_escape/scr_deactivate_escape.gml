@@ -59,8 +59,3 @@ function scr_deactivate_escape()
     }
 }
 
-enum UnknownEnum
-{
-    Value_142 = 142,
-    Value_143
-}

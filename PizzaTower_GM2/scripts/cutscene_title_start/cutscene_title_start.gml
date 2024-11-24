@@ -43,8 +43,3 @@ function cutscene_title_end()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_146 = 146
-}

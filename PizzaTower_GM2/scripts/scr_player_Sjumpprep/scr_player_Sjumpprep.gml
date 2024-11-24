@@ -120,8 +120,3 @@ function scr_player_Sjumpprep()
     }
 }
 
-enum UnknownEnum
-{
-    Value_97 = 97,
-    Value_121 = 121
-}

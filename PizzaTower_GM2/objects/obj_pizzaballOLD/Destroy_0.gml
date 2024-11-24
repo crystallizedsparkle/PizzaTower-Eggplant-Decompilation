@@ -1,9 +1,7 @@
-var _repeat;
-
-if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
+if (ds_list_find_index(global.baddieroom, id) == -1 && !important)
 {
-    obj_camera.targetgolf = -4;
-    _repeat = 10;
+    obj_camera.targetgolf = noone;
+    var _repeat = 10;
     
     if (global.golfhit < 10)
         _repeat = 10;
@@ -19,7 +17,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
         depth = other.player.depth;
         targetplayer = other.player.id;
         _times = _repeat;
-        content = 548;
+        content = obj_pizzaslice;
         sprite_index = spr_pizzaslice;
         timer = 10;
         alarm[0] = timer;

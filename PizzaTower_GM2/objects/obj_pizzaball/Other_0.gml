@@ -9,7 +9,3 @@ sit = true;
 stunned = 0;
 instance_create(x, y, obj_genericpoofeffect);
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

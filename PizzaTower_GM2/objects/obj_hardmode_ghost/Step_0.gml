@@ -1,9 +1,7 @@
-var _instY, _col, n;
-
 highest_y = -270;
-_instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
+var _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
 
-if (_instY != -4)
+if (_instY != noone)
     highest_y = -abs(obj_player1.y - (_instY.y + _instY.sprite_height)) - 32;
 
 if (random_buffer > 0)
@@ -12,11 +10,11 @@ if (random_buffer > 0)
 }
 else
 {
-    _col = collision_line(x, y, obj_player1.x, obj_player1.y, obj_solid, false, true);
+    var _col = collision_line(x, y, obj_player1.x, obj_player1.y, obj_solid, false, true);
     
-    if (!place_meeting(x, y, obj_solid) && !place_meeting(x, y, obj_slope) && _col == -4)
+    if (!place_meeting(x, y, obj_solid) && !place_meeting(x, y, obj_slope) && _col == noone)
     {
-        n = irandom(array_length(content) - 1);
+        var n = irandom(array_length(content) - 1);
         
         with (instance_create(x, y, content[n]))
         {
@@ -34,7 +32,3 @@ vsp = Wave(highest_y + 78, highest_y + 152, 1, 0);
 x = obj_player1.x + hsp;
 y = obj_player1.y + obj_player1.vsp + vsp;
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

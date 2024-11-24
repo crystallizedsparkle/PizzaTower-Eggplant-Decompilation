@@ -56,7 +56,3 @@ if (global.anarchistcutscene2 == -4)
 if (global.anarchistcutscene2)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_0
-}

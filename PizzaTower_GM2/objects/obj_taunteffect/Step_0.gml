@@ -5,7 +5,3 @@ x = player.x;
 y = player.y;
 image_xscale = player.xscale;
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

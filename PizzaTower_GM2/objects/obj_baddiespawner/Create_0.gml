@@ -1,5 +1,5 @@
 image_speed = 0;
-baddieid = 523;
+baddieid = obj_null;
 content = 0;
 refresh = 20;
 depth = 1;
@@ -8,7 +8,7 @@ vsp = 0;
 grounded = false;
 grav = 0.5;
 mask_index = spr_baddiespawner;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 countdown = 50;

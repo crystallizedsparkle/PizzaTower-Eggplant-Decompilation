@@ -5,7 +5,7 @@ with (obj_player)
     image_index = 0;
     sprite_index = spr_player_haulingstart;
     
-    if (other.heavy == true)
+    if (other.heavy)
         heavy = true;
     else
         heavy = false;
@@ -16,8 +16,3 @@ with (obj_player)
 state = states.grabbed;
 instance_destroy(other);
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_79 = 79
-}

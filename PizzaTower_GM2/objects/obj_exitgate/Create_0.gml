@@ -18,7 +18,3 @@ handindex = 0;
 if (obj_player.character == "S")
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_0
-}

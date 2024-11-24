@@ -15,7 +15,3 @@ if (state != states.blockstance)
     instance_destroy(other, false);
 }
 
-enum UnknownEnum
-{
-    Value_206 = 206
-}

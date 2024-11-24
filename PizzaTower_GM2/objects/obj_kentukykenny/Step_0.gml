@@ -1,5 +1,3 @@
-var targetplayer;
-
 switch (state)
 {
     case states.idle:
@@ -41,7 +39,7 @@ switch (state)
 
 scr_scareenemy();
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -52,13 +50,13 @@ if (state == states.stun && stunned > 40 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-idlespr = 300;
-stunfallspr = 301;
-walkspr = 297;
-stunspr = 301;
-grabbedspr = 301;
+idlespr = spr_kentukykenny_idle;
+stunfallspr = spr_kentukykenny_stun;
+walkspr = spr_kentukykenny_walk;
+stunspr = spr_kentukykenny_stun;
+grabbedspr = spr_kentukykenny_stun;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -70,7 +68,7 @@ if (state != states.stun)
 if (bombreset > 0)
     bombreset--;
 
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
 
 if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0 && grounded && targetplayer.state != states.firemouth)
 {
@@ -86,7 +84,7 @@ if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0 && grou
     }
 }
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -97,16 +95,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_10 = 10,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

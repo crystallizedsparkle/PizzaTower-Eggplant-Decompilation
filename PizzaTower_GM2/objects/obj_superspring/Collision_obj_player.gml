@@ -47,14 +47,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_48,
-    Value_51 = 51,
-    Value_97 = 97,
-    Value_108 = 108,
-    Value_146 = 146,
-    Value_186 = 186
-}

@@ -16,8 +16,3 @@ with (obj_ghostfollow)
     y = ystart;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_191 = 191
-}

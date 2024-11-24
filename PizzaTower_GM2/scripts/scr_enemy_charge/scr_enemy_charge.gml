@@ -107,8 +107,3 @@ function scr_enemy_charge()
     }
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134,
-    Value_138 = 138
-}

@@ -10,9 +10,9 @@ if (round_timer <= 0)
 {
     round_timer = 0;
     
-    if (bell_sprite != 1436)
+    if (bell_sprite != spr_bosstimer_hitbell)
     {
-        bell_sprite = 1436;
+        bell_sprite = spr_bosstimer_hitbell;
         bell_index = 0;
     }
     else if (floor(bell_index) == (sprite_get_number(spr_bosstimer_hitbell) - 1) && !instance_exists(obj_fadeout))
@@ -25,7 +25,7 @@ if (round_timer <= 0)
             sprite_index = spr_Timesup;
             image_index = 0;
             audio_stop_all();
-            scr_soundeffect(120);
+            scr_soundeffect(mu_timesup);
         }
     }
 }
@@ -46,8 +46,3 @@ if (!instance_exists(bossID) && !bossdead)
     }
 }
 
-enum UnknownEnum
-{
-    Value_64 = 64,
-    Value_144 = 144
-}

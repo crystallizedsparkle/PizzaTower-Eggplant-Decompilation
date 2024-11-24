@@ -22,8 +22,3 @@ if (global.switchbuffer == 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_146 = 146
-}

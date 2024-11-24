@@ -27,7 +27,3 @@ else
     scene_info = [[cutscene_wait, 15]];
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

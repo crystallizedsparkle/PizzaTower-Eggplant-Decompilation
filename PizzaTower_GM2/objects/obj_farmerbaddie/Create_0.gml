@@ -1,8 +1,8 @@
 scr_initenemy();
 idle = true;
 cooldown = 0;
-leaderID = -4;
-hitboxID = -4;
+leaderID = noone;
+hitboxID = noone;
 attackspeed = 0;
 attackmaxspeed = 8;
 outofsight = false;
@@ -23,33 +23,29 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 2449;
-idlespr = 2449;
-fallspr = 2449;
-stunfallspr = 2007;
-walkspr = 2002;
-turnspr = 2449;
-recoveryspr = 2007;
-grabbedspr = 2007;
-scaredspr = 2562;
-ragespr = 1682;
+landspr = spr_farmer1_idle;
+idlespr = spr_farmer1_idle;
+fallspr = spr_farmer1_idle;
+stunfallspr = spr_farmer1_stun;
+walkspr = spr_farmer1_walk;
+turnspr = spr_farmer1_idle;
+recoveryspr = spr_farmer1_stun;
+grabbedspr = spr_farmer1_stun;
+scaredspr = spr_farmer1_scared;
+ragespr = spr_farmer1_attack;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2643;
+spr_dead = spr_farmer1_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 snotty = false;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

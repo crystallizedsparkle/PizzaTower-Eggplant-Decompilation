@@ -1,8 +1,6 @@
-var poo;
+var poo = 5;
 
-poo = 5;
-
-if (drop == true)
+if (drop)
     poo = 10;
 
 if (vsp < poo)

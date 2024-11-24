@@ -14,13 +14,13 @@ obj_player.y = 498;
 obj_player.sprite_index = spr_player_levelcomplete;
 obj_player.state = states.bossintro;
 
-if (reset == false)
+if (!reset)
 {
     instance_create(x, y, obj_bangeffect);
     
-    if (stomped == false && shot == false)
+    if (!stomped && !shot)
     {
-        if (cigar == true)
+        if (cigar)
         {
             with (obj_camera)
             {
@@ -44,9 +44,9 @@ if (reset == false)
         }
     }
     
-    if (stomped == true && shot == false)
+    if (stomped && !shot)
     {
-        if (cigar == true)
+        if (cigar)
         {
             with (instance_create(x, y, obj_sausageman_dead))
             {
@@ -81,9 +81,9 @@ if (reset == false)
         }
     }
     
-    if (shot == true && stomped == false)
+    if (shot && !stomped)
     {
-        if (cigar == true)
+        if (cigar)
         {
             with (instance_create(x, y, obj_sausageman_dead))
             {
@@ -119,7 +119,3 @@ if (reset == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_88 = 88
-}

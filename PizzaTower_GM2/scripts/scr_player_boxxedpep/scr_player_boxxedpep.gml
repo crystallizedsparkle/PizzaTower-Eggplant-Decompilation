@@ -147,8 +147,3 @@ function scr_player_boxxedpep()
         steppy = false;
 }
 
-enum UnknownEnum
-{
-    Value_34 = 34,
-    Value_35
-}

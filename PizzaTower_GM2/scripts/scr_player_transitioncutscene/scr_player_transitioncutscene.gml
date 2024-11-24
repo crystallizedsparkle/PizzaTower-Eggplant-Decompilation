@@ -62,11 +62,3 @@ function scr_player_transitioncutscene()
         image_speed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_103 = 103,
-    Value_104,
-    Value_112 = 112,
-    Value_121 = 121
-}

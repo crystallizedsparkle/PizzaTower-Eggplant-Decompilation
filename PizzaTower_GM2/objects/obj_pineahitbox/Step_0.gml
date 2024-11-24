@@ -15,8 +15,3 @@ with (ID)
     }
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126,
-    Value_134 = 134
-}

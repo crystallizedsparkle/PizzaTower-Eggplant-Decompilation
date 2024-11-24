@@ -18,7 +18,7 @@ function state_boss_chainsaw()
     }
 }
 
-function state_boss_walk(argument0)
+function state_boss_walk(_func)
 {
     var b;
     
@@ -39,7 +39,7 @@ function state_boss_walk(argument0)
         {
             if (attack_cooldown <= 0)
             {
-                argument0();
+                _func();
                 
                 if (object_index != obj_mrstickboss)
                     image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : targetxscale;
@@ -206,8 +206,3 @@ function state_player_arenaround()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_84 = 84
-}

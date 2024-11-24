@@ -1,5 +1,3 @@
-var _os_r, resolutionX, resolutionY;
-
 if (!instance_exists(obj_keyconfig) && !instance_exists(obj_audioconfig))
     scr_getinput();
 
@@ -8,13 +6,13 @@ if (!instance_exists(obj_keyconfig) && !instance_exists(obj_audioconfig))
     if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
     {
         optionselected -= 1;
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     }
     
     if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 4)
     {
         optionselected += 1;
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     }
 }
 
@@ -50,9 +48,9 @@ if (optionselected == 1)
         ini_write_real("Option", "resolution", optionsaved_resolution);
         ini_close();
         global.option_resolution = optionsaved_resolution;
-        _os_r = optionsaved_resolution;
-        resolutionX = (_os_r == 0) ? 480 : ((_os_r == 1) ? 960 : 1920);
-        resolutionY = (_os_r == 0) ? 270 : ((_os_r == 1) ? 540 : 1080);
+        var _os_r = optionsaved_resolution;
+        var resolutionX = (_os_r == 0) ? 480 : ((_os_r == 1) ? 960 : 1920);
+        var resolutionY = (_os_r == 0) ? 270 : ((_os_r == 1) ? 540 : 1080);
         window_set_size(resolutionX, resolutionY);
     }
 }
@@ -107,7 +105,7 @@ if (optionselected == 4)
 
 if ((key_slap2 || keyboard_check_pressed(vk_escape)) && !instance_exists(obj_keyconfig) && !instance_exists(obj_audioconfig))
 {
-    scr_soundeffect(20);
+    scr_soundeffect(sfx_enemyprojectile);
     
     if (instance_exists(obj_mainmenuselect))
         obj_mainmenuselect.selected = false;

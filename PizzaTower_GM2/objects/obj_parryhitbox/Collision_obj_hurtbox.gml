@@ -1,11 +1,9 @@
-var current_hspd, _dir;
-
 if (other.object_index == obj_spitcheesespike || other.object_index == obj_banditochicken_projectile || other.object_index == obj_robotknife)
 {
     with (other)
     {
-        current_hspd = abs(hsp);
-        _dir = sign(hsp);
+        var current_hspd = abs(hsp);
+        var _dir = sign(hsp);
         
         if (x != other.x)
             _dir = sign(x - other.x);

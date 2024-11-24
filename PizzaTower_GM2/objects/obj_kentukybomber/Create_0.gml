@@ -18,17 +18,17 @@ reset = false;
 hp = 2;
 hitboxcreate = false;
 grounded = false;
-idlespr = 2673;
-stunfallspr = 2636;
-walkspr = 2673;
-grabbedspr = 2636;
-scaredspr = 2624;
+idlespr = spr_kentukybomber_move;
+stunfallspr = spr_kentukybomber_stun;
+walkspr = spr_kentukybomber_move;
+grabbedspr = spr_kentukybomber_stun;
+scaredspr = spr_kentukybomber_scared;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2621;
+spr_dead = spr_kentukybomber_dead;
 important = false;
 heavy = false;
 depth = 0;
@@ -39,7 +39,3 @@ shoot = false;
 turntimer = 0;
 turnstart = false;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

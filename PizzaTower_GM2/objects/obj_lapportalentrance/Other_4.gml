@@ -1,6 +1,4 @@
-var p;
-
-p = false;
+var p = false;
 
 with (obj_player)
 {
@@ -27,7 +25,3 @@ if (!p)
 else
     active = true;
 
-enum UnknownEnum
-{
-    Value_146 = 146
-}

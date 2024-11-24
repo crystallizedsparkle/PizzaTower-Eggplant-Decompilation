@@ -1,10 +1,8 @@
-var _alreadyactive;
-
 active = place_meeting(x, y, obj_baddie);
 
 if (active != preactive)
 {
-    _alreadyactive = false;
+    var _alreadyactive = false;
     
     with (obj_baddiebutton)
     {

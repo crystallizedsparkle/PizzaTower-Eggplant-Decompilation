@@ -1,12 +1,10 @@
-var s;
-
 if (!noisethrow)
 {
     event_inherited();
 }
 else
 {
-    s = other.state;
+    var s = other.state;
     scr_hurtplayer(other);
     
     if (s != other.state)
@@ -20,7 +18,3 @@ else
     }
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

@@ -14,7 +14,3 @@ if (count < countmax)
 if (savedcount > 0 && alarm[0] < 0)
     alarm[0] = 20;
 
-enum UnknownEnum
-{
-    Value_4 = 4
-}

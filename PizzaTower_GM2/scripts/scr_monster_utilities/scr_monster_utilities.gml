@@ -200,13 +200,3 @@ function scr_monster_audio_check()
     return false;
 }
 
-enum UnknownEnum
-{
-    Value_100 = 100,
-    Value_135 = 135,
-    Value_217 = 217,
-    Value_218,
-    Value_219,
-    Value_220,
-    Value_221
-}

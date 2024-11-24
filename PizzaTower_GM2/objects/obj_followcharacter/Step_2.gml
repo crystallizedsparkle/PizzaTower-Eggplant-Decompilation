@@ -1,6 +1,4 @@
-var tx, xx, yy, msk, ixs, _x, _y, uc;
-
-if (followid != -4 && !instance_exists(obj_player1))
+if (followid != noone && !instance_exists(obj_player1))
     exit;
 
 playerid = obj_player1.id;
@@ -21,14 +19,14 @@ else
 if (dir != playerid.xscale)
     dir = playerid.xscale;
 
-if (followid != -4 && !instance_exists(followid))
-    followid = -4;
+if (followid != noone && !instance_exists(followid))
+    followid = noone;
 
-tx = round(xoffset * space);
-xx = (followid == -4) ? playerid.x : followid.x;
-yy = (followid == -4) ? playerid.y : followid.y;
-msk = (followid == -4) ? playerid.mask_index : followid.mask_index;
-ixs = (followid == -4) ? playerid.xscale : followid.image_xscale;
+var tx = round(xoffset * space);
+var xx = (followid == noone) ? playerid.x : followid.x;
+var yy = (followid == noone) ? playerid.y : followid.y;
+var msk = (followid == noone) ? playerid.mask_index : followid.mask_index;
+var ixs = (followid == noone) ? playerid.xscale : followid.image_xscale;
 ds_queue_enqueue(followqueue, xx + tx);
 ds_queue_enqueue(followqueue, yy);
 ds_queue_enqueue(followqueue, msk);
@@ -36,9 +34,9 @@ ds_queue_enqueue(followqueue, ixs);
 
 if (ds_queue_size(followqueue) > (LAG_STEPS * 2))
 {
-    _x = ds_queue_dequeue(followqueue);
-    _y = ds_queue_dequeue(followqueue);
-    uc = use_collision;
+    var _x = ds_queue_dequeue(followqueue);
+    var _y = ds_queue_dequeue(followqueue);
+    var uc = use_collision;
     
     if (lastplayerposx == _x && lastplayerposy == _y)
     {
@@ -65,9 +63,3 @@ if (ds_queue_size(followqueue) > (LAG_STEPS * 2))
 if (use_collision)
     scr_collide();
 
-enum UnknownEnum
-{
-    Value_93 = 93,
-    Value_95 = 95,
-    Value_112 = 112
-}

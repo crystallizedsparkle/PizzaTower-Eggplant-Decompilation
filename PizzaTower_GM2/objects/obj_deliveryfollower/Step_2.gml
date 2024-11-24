@@ -1,7 +1,5 @@
-var xx, yy;
-
-xx = x;
-yy = y;
+var xx = x;
+var yy = y;
 image_speed = 0.35;
 event_inherited();
 

@@ -121,9 +121,3 @@ function scr_player_Sjump()
     scr_collide_player();
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_123 = 123
-}

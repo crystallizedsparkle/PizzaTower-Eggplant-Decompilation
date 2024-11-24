@@ -14,12 +14,12 @@ ds_map_set(boss_hurtstates, states.supershoulderbash, 90);
 ds_map_set(boss_hurtstates, states.superslam, 200);
 ds_map_set(boss_hurtstates, states.punch, 30);
 ds_map_set(boss_hurtstates, states.freefall, 70);
-stunfallspr = 2220;
-walkspr = 2823;
-idlespr = 2592;
-spr_dead = 2328;
-tauntspr = 1295;
-fallspr = 1449;
+stunfallspr = spr_pepperman_hurtplayer;
+walkspr = spr_pepperman_move;
+idlespr = spr_pepperman_idle;
+spr_dead = spr_pepperman_timesup;
+tauntspr = spr_pepperman_taunt;
+fallspr = spr_pepperman_fall;
 defeatplayerspr = 609;
 normal_spd = 6;
 shoulder_spd = 12;
@@ -134,11 +134,9 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    var _prevstate;
-    
     if (argument1.state != states.backbreaker || argument1.parry_inst == -4)
     {
-        _prevstate = state;
+        var _prevstate = state;
         SUPER_player_hurt(argument0, argument1);
         
         if (_prevstate == states.shoulderbash || _prevstate == states.supershoulderbash || _prevstate == states.shoulder || _prevstate == states.superslam)
@@ -212,26 +210,3 @@ function player_hurt(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_41 = 41,
-    Value_42,
-    Value_61 = 61,
-    Value_76 = 76,
-    Value_80 = 80,
-    Value_83 = 83,
-    Value_84,
-    Value_97 = 97,
-    Value_104 = 104,
-    Value_108 = 108,
-    Value_121 = 121,
-    Value_137 = 137,
-    Value_138,
-    Value_145 = 145,
-    Value_147 = 147,
-    Value_153 = 153,
-    Value_157 = 157,
-    Value_162 = 162
-}

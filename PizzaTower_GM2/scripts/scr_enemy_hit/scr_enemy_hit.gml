@@ -49,9 +49,3 @@ function scr_enemy_hit()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_104 = 104,
-    Value_138 = 138
-}

@@ -3,7 +3,7 @@ with (other)
     if (vsp < 0)
     {
         repeat (2)
-            create_debris(x, y + 43, 2814);
+            create_debris(x, y + 43, spr_cheesechunk);
         
         vsp *= 0.5;
         audio_stop_sound(sfx_cheesejump);
@@ -16,20 +16,14 @@ with (other)
     
     if (hsp != 0 && (floor(image_index) % 4) == 0)
     {
-        create_debris(x, y + 43, 2814);
+        create_debris(x, y + 43, spr_cheesechunk);
         
         if (!other.stepped)
         {
-            scr_soundeffect(56);
+            scr_soundeffect(sfx_cheesefloor);
             other.stepped = true;
             other.alarm[0] = 8;
         }
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_37 = 37,
-    Value_92 = 92
-}

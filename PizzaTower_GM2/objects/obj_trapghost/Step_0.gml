@@ -1,10 +1,8 @@
-var dir, xto, yto;
-
 switch (state)
 {
     case states.normal:
         sprite_index = spr_kingghost;
-        dir = point_direction(x, y, obj_player1.x, obj_player1.y);
+        var dir = point_direction(x, y, obj_player1.x, obj_player1.y);
         x = lerp(x, obj_player1.x - (100 * obj_player1.xscale), 0.05);
         y = lerp(y, obj_player1.y - 100, 0.05);
         
@@ -21,9 +19,9 @@ switch (state)
         
         if (instance_exists(trapid))
         {
-            xto = trapid.x + trapid.xoffset;
-            yto = trapid.y + trapid.yoffset;
-            dir = point_direction(x, y, xto, yto);
+            var xto = trapid.x + trapid.xoffset;
+            var yto = trapid.y + trapid.yoffset;
+            var dir = point_direction(x, y, xto, yto);
             x = Approach(x, xto, abs(lengthdir_x(32, dir)));
             y = Approach(y, yto, abs(lengthdir_y(32, dir)));
             
@@ -113,12 +111,3 @@ visible = state != states.chase;
 if (room == rank_room)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_135 = 135,
-    Value_141 = 141
-}

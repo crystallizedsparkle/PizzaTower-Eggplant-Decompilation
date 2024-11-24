@@ -17,23 +17,23 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 145;
-idlespr = 1923;
-fallspr = 2428;
-stunfallspr = 1271;
-walkspr = 2620;
-turnspr = 2620;
-recoveryspr = 2620;
-grabbedspr = 2428;
-scaredspr = 2428;
-spr_palette = 1108;
+landspr = spr_slimebounce;
+idlespr = spr_golfdemon_idle;
+fallspr = spr_golfdemon_dead;
+stunfallspr = spr_golfdemon_stun;
+walkspr = spr_golfdemon_walk;
+turnspr = spr_golfdemon_walk;
+recoveryspr = spr_golfdemon_walk;
+grabbedspr = spr_golfdemon_dead;
+scaredspr = spr_golfdemon_dead;
+spr_palette = spr_minijohn_palette;
 image_xscale = -1;
 hp = 4;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2428;
+spr_dead = spr_golfdemon_dead;
 important = false;
 heavy = false;
 depth = 0;
@@ -45,7 +45,3 @@ image_speed = 0.35;
 steppy = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

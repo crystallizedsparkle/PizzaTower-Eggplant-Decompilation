@@ -7,7 +7,3 @@ if (other.clowntimer <= 0)
     other.clowntimer = 150;
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104
-}

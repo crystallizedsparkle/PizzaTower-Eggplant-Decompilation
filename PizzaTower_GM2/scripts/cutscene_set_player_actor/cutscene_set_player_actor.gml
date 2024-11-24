@@ -12,7 +12,3 @@ function cutscene_set_player_actor()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_146 = 146
-}

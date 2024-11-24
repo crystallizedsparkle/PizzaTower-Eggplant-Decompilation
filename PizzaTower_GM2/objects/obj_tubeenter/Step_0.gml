@@ -30,8 +30,3 @@ if (state == states.tube)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_150 = 150
-}

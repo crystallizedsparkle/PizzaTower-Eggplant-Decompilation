@@ -1,6 +1,4 @@
-var _destroyed;
-
-_destroyed = false;
+var _destroyed = false;
 
 if (ds_list_find_index(global.baddieroom, id) != -1)
 {
@@ -8,7 +6,7 @@ if (ds_list_find_index(global.baddieroom, id) != -1)
     instance_destroy();
 }
 
-if (escape == true && !_destroyed)
+if (escape && !_destroyed)
 {
     instance_deactivate_object(id);
     

@@ -5,7 +5,3 @@ if (cooldown == 0 && other.state == states.freefallland)
     cooldown = 10;
 }
 
-enum UnknownEnum
-{
-    Value_111 = 111
-}

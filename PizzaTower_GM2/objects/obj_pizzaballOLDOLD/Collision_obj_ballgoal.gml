@@ -12,7 +12,3 @@ if (vsp > 0)
     obj_player.image_index = 0;
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

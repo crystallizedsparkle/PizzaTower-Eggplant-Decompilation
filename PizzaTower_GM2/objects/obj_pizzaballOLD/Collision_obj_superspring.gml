@@ -15,7 +15,3 @@ with (obj_camera)
     targetgolf = other.id;
 }
 
-enum UnknownEnum
-{
-    Value_148 = 148
-}

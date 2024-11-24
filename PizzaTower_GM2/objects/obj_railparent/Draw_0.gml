@@ -1,6 +1,4 @@
-var i;
-
-for (i = 0; i < abs(image_xscale); i++)
+for (var i = 0; i < abs(image_xscale); i++)
     draw_sprite_ext(sprite_index, image_index, x + (32 * i), y, 1, image_yscale, image_angle, image_blend, image_alpha);
 
 if (!place_meeting(x - 1, y, obj_solid))

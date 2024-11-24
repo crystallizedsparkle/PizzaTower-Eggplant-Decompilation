@@ -34,26 +34,26 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 437;
-idlespr = 425;
-fallspr = 430;
-stunfallspr = 442;
-walkspr = 427;
-turnspr = 134;
-recoveryspr = 132;
-grabbedspr = 442;
-scaredspr = 446;
+landspr = spr_shrimp_land;
+idlespr = spr_shrimp_idle;
+fallspr = spr_shrimp_fall;
+stunfallspr = spr_shrimp_stun;
+walkspr = spr_shrimp_walk;
+turnspr = spr_slimeturn;
+recoveryspr = spr_slimerecovery;
+grabbedspr = spr_shrimp_stun;
+scaredspr = spr_shrimp_scared;
 hp = 5;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 443;
+spr_dead = spr_shrimp_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 447;
+spr_palette = spr_shrimppalette;
 sprite_index = spr_shrimp_idle;
 grabbedby = 0;
 stuntouchbuffer = 0;
@@ -62,7 +62,3 @@ image_speed = 0.35;
 movespeed = 0;
 mask_index = spr_player_mask;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

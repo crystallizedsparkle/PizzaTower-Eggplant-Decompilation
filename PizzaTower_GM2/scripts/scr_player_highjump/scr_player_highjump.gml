@@ -94,9 +94,3 @@ function scr_player_highjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92,
-    Value_122 = 122
-}

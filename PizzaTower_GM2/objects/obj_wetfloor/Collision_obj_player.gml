@@ -6,7 +6,3 @@ with (obj_player)
         movespeed = 8;
 }
 
-enum UnknownEnum
-{
-    Value_94 = 94
-}

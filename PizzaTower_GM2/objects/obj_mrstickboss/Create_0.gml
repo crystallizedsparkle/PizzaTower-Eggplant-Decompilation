@@ -1,11 +1,11 @@
 event_inherited();
 boss_array[0] = -4;
-boss_array[1] = [52, 1];
-boss_array[2] = [832, 1];
-boss_array[3] = [191, 1];
-boss_array[4] = [52, 6];
-boss_array[5] = [832, 6];
-boss_array[6] = [191, 6];
+boss_array[1] = [obj_pepperman, 1];
+boss_array[2] = [obj_vigilanteboss, 1];
+boss_array[3] = [obj_noiseboss, 1];
+boss_array[4] = [obj_pepperman, 6];
+boss_array[5] = [obj_vigilanteboss, 6];
+boss_array[6] = [obj_noiseboss, 6];
 state = states.arena_round;
 attack_pool = [states.boss_shield, states.helicopterhat, states.panicjump, states.jump, states.smokebombstart, states.springshoes, states.cardboard];
 ds_map_set(player_hurtstates, states.handstandjump, 30);
@@ -18,13 +18,13 @@ phase = 1;
 max_phase = 7;
 max_hp = 500 * max_phase;
 hp = max_hp;
-stunfallspr = 1093;
-walkspr = 1703;
-idlespr = 1703;
-spr_dead = 1093;
-fallspr = 2470;
-bumpspr = 1093;
-defeatplayerspr = 1703;
+stunfallspr = spr_mrstick_hurt;
+walkspr = spr_mrstick_idle;
+idlespr = spr_mrstick_idle;
+spr_dead = spr_mrstick_hurt;
+fallspr = spr_mrstick_fall;
+bumpspr = spr_mrstick_hurt;
+defeatplayerspr = spr_mrstick_idle;
 movespeed = 0;
 move = 0;
 normal_spd = 6;
@@ -107,7 +107,7 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == -4))
+    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == noone))
     {
         hitstate = state;
         hithsp = hsp;
@@ -122,20 +122,3 @@ function player_hurt(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_41 = 41,
-    Value_42,
-    Value_80 = 80,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_121 = 121,
-    Value_145 = 145,
-    Value_174 = 174,
-    Value_175,
-    Value_176,
-    Value_177,
-    Value_179 = 179,
-    Value_180
-}

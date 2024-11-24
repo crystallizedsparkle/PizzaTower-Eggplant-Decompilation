@@ -9,10 +9,10 @@ if (place_meeting(x, y, obj_file1))
     }
     
     if (!audio_is_playing(sfx_santa1))
-        scr_soundeffect(91);
+        scr_soundeffect(sfx_santa1);
 }
 
-if (go == true)
+if (go)
 {
     hsp = 10;
     vsp -= 0.05;

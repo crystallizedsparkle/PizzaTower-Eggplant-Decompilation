@@ -17,8 +17,3 @@ if (obj_player.state != states.chainsaw && obj_player.state != states.chainsawpo
 
 image_speed = 0.35;
 
-enum UnknownEnum
-{
-    Value_56 = 56,
-    Value_61 = 61
-}

@@ -13,7 +13,7 @@ if (sprite_index == spr_taximove && pickedup)
         obj_player.image_index = 0;
         obj_player.mach2 = 0;
         
-        if (instance_exists(obj_player2) && global.coop == true)
+        if (instance_exists(obj_player2) && global.coop)
         {
             if (object_index == obj_player2)
             {
@@ -31,7 +31,7 @@ if (sprite_index == spr_taximove && pickedup)
         if (!instance_exists(obj_fadeout))
         {
             instance_create(x, y, obj_fadeout);
-            scr_soundeffect(76);
+            scr_soundeffect(sfx_door);
         }
     }
 }

@@ -15,15 +15,15 @@ phase = 1;
 max_phase = 6;
 max_hp = 500 * max_phase;
 hp = max_hp;
-stunfallspr = 2323;
-walkspr = 2308;
-idlespr = 2297;
-spr_dead = 2324;
-tauntspr = 2369;
-fallspr = 2310;
-bumpspr = 2316;
-parryspr = 2387;
-defeatplayerspr = 2387;
+stunfallspr = spr_playerV_hurt;
+walkspr = spr_playerV_move;
+idlespr = spr_playerV_idle;
+spr_dead = spr_playerV_dead;
+tauntspr = spr_playerV_taunt;
+fallspr = spr_playerV_fall;
+bumpspr = spr_playerV_bump;
+parryspr = spr_playerV_hitwall;
+defeatplayerspr = spr_playerV_hitwall;
 movespeed = 0;
 move = 0;
 normal_spd = 6;
@@ -41,7 +41,7 @@ cancel_buffer = 0;
 cancel_max = ds_map_create();
 cancel_maxdefault = 60;
 ds_map_set(cancel_max, states.millionpunch, millionpunch_max / 2);
-ds_map_set(cancel_max, UnknownEnum.Value_164, 10);
+ds_map_set(cancel_max, states.groundpunchstart, 10);
 ds_map_set(cancel_max, states.revolver, 30);
 ds_map_set(cancel_max, states.mach1, 120);
 combo_count = 0;
@@ -52,7 +52,7 @@ duelseconds_threshold = 25;
 duel_buffer = 0;
 duel_max = 120;
 duel_random = 80;
-duelinst = -4;
+duelinst = noone;
 revolver_count = 0;
 revolver_jump = -1;
 revolver_jumpcount = 0;
@@ -136,7 +136,7 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == -4))
+    if (!argument1.inv_frames && (argument1.state != states.backbreaker || argument1.parry_inst == noone))
     {
         hitstate = state;
         hithsp = hsp;
@@ -161,21 +161,3 @@ function player_hurt(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_41 = 41,
-    Value_42,
-    Value_80 = 80,
-    Value_82 = 82,
-    Value_84 = 84,
-    Value_102 = 102,
-    Value_103,
-    Value_104,
-    Value_108 = 108,
-    Value_121 = 121,
-    Value_145 = 145,
-    Value_160 = 160,
-    Value_164 = 164,
-    Value_166 = 166
-}

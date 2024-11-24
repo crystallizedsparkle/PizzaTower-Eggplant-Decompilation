@@ -1,5 +1,3 @@
-var x1, t, d;
-
 if (room == rm_editor)
     exit;
 
@@ -10,12 +8,12 @@ switch (state)
     case states.idle:
         sprite_index = idlespr;
         playerid = instance_nearest(x, y, obj_player);
-        x1 = 370;
+        var x1 = 370;
         
         if (image_xscale > 0)
-            t = playerid.x > (x - 16) && playerid.x < (x + x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
+            var t = playerid.x > (x - 16) && playerid.x < (x + x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
         else
-            t = playerid.x < (x + 16) && playerid.x > (x - x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
+            var t = playerid.x < (x + 16) && playerid.x > (x - x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
         
         if (cooldown > 0)
         {
@@ -37,7 +35,7 @@ switch (state)
     
     case states.walk:
         sprite_index = idlespr;
-        d = point_direction(x, y, xstart, ystart);
+        var d = point_direction(x, y, xstart, ystart);
         x += lengthdir_x(8, d);
         y += lengthdir_y(8, d);
         hsp = 0;
@@ -122,7 +120,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -148,7 +146,7 @@ if (bombreset > 0)
 if (grounded && state == states.enemy_throw && floor(image_index) == 3)
     vsp = -5;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -159,19 +157,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_8 = 8,
-    Value_80 = 80,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

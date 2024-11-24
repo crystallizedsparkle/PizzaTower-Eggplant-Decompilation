@@ -72,8 +72,3 @@ function scr_player_ratmountgrind()
     }
 }
 
-enum UnknownEnum
-{
-    Value_3 = 3,
-    Value_192 = 192
-}

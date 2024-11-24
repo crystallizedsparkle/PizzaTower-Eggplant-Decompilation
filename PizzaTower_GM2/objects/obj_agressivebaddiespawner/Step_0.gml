@@ -1,5 +1,3 @@
-var found;
-
 if (point_in_rectangle(x, y, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]), camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])))
 {
     for (i = 0; i < (array_length_1d(baddieid) - 1); i += 1)
@@ -20,11 +18,11 @@ if (refresh <= 0)
             state = states.stun;
             stunned = 50;
             vsp = -5;
-            found = false;
+            var found = false;
             
             for (i = 0; i < (array_length_1d(other.baddieid) - 1); i += 1)
             {
-                if (other.baddieid[i] == -1 && found == false)
+                if (other.baddieid[i] == -1 && !found)
                 {
                     other.baddieid[i] = id;
                     found = true;
@@ -44,7 +42,3 @@ for (i = 0; i < (array_length_1d(baddieid) - 1); i += 1)
         baddieid[i] = -1;
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

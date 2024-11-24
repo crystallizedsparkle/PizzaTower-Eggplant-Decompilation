@@ -4,7 +4,3 @@ if (other.state == states.punch)
         event_user(0);
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80
-}

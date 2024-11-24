@@ -15,7 +15,3 @@ function scr_player_pizzathrow()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

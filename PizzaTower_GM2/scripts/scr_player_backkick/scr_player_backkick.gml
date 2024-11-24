@@ -137,7 +137,3 @@ function scr_player_backkick()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

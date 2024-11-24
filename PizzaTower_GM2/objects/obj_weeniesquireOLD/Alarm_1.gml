@@ -6,5 +6,5 @@ with (instance_create(x, y, obj_afterimage))
 
 flash = true;
 
-if (charge == true)
+if (charge)
     alarm[1] = 10;

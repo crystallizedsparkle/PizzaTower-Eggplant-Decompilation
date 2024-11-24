@@ -1,5 +1,3 @@
-var b, s;
-
 switch (state)
 {
     case states.idle:
@@ -44,7 +42,7 @@ if (sprite_index != spr_pizzaboy)
 
 scr_scareenemy();
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -100,8 +98,8 @@ if (state == states.walk)
         
         if (place_meeting(x, y, obj_ninja) || place_meeting(x + hsp, y, obj_ninja))
         {
-            b = instance_place(x, y, obj_ninja);
-            s = 2;
+            var b = instance_place(x, y, obj_ninja);
+            var s = 2;
             
             if (!instance_exists(b))
             {
@@ -215,7 +213,7 @@ else
     invincible = false;
 }
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -224,7 +222,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -235,17 +233,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_6 = 6,
-    Value_80 = 80,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

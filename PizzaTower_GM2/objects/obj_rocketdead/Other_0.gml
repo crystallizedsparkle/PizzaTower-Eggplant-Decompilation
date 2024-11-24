@@ -1,2 +1,2 @@
 instance_destroy();
-scr_soundeffect(14);
+scr_soundeffect(sfx_explosion);

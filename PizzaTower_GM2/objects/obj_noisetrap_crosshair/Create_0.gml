@@ -1,3 +1,3 @@
-trapID = -4;
+trapID = noone;
 locked = false;
 spd = 5;

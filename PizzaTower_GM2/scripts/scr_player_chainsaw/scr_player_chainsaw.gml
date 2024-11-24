@@ -70,12 +70,3 @@ function scr_player_chainsaw()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_6 = 6,
-    Value_42 = 42,
-    Value_43,
-    Value_91 = 91,
-    Value_92
-}

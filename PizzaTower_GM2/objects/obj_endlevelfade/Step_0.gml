@@ -1,20 +1,18 @@
-var accel, tx, ty, dir, lx, ly;
-
-accel = 2;
+var accel = 2;
 
 with (obj_player)
 {
     if (room == rank_room && check_player_coop())
     {
-        tx = 480;
+        var tx = 480;
         
         if (object_index == obj_player2)
             tx += 100;
         
-        ty = 270;
-        dir = point_direction(x, y, tx, ty);
-        lx = lengthdir_x(accel, dir);
-        ly = lengthdir_y(accel, dir);
+        var ty = 270;
+        var dir = point_direction(x, y, tx, ty);
+        var lx = lengthdir_x(accel, dir);
+        var ly = lengthdir_y(accel, dir);
         x = Approach(x, tx, abs(lx));
         y = Approach(y, ty, abs(ly));
     }
@@ -30,7 +28,7 @@ if (fadealpha > 1)
         room = rank_room;
 }
 
-if (fadein == false)
+if (!fadein)
     fadealpha += 0.1;
-else if (fadein == true)
+else if (fadein)
     fadealpha -= 0.1;

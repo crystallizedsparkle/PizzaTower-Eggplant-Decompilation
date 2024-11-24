@@ -1,4 +1,4 @@
-if (lastform == false)
+if (!lastform)
 {
     ds_list_add(global.baddieroom, id);
     instance_destroy(other);
@@ -41,4 +41,4 @@ else
     instance_destroy();
 }
 
-scr_soundeffect(42);
+scr_soundeffect(sfx_hitenemy);

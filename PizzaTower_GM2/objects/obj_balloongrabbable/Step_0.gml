@@ -11,7 +11,3 @@ else if (!active)
 
 visible = active;
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

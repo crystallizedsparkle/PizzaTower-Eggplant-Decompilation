@@ -9,10 +9,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_11 = 11,
-    Value_12,
-    Value_13,
-    Value_190 = 190
-}

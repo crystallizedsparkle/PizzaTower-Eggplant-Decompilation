@@ -1,6 +1,4 @@
-var _obj, _max, i;
-
-_obj = id;
+var _obj = id;
 
 with (other)
 {
@@ -16,7 +14,7 @@ with (other)
             sprite_index = spr_tumble;
             other.image_index = 0;
             other.sprite_index = spr_goblinbot_kick;
-            _max = 45;
+            var _max = 45;
             y = other.y - _max;
             
             if (place_meeting(x, y, obj_platform))
@@ -24,7 +22,7 @@ with (other)
             
             if (scr_solid(x, y))
             {
-                i = 0;
+                var i = 0;
                 
                 while (i <= _max)
                 {
@@ -61,12 +59,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_84 = 84,
-    Value_106 = 106,
-    Value_186 = 186
-}

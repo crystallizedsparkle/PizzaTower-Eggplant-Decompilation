@@ -18,10 +18,3 @@ if (other.state == states.climbwall)
     other.state = states.jump;
 }
 
-enum UnknownEnum
-{
-    Value_6 = 6,
-    Value_37 = 37,
-    Value_92 = 92,
-    Value_186 = 186
-}

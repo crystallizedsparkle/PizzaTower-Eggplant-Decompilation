@@ -8,7 +8,3 @@ with (obj_player)
     state = states.titlescreen;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

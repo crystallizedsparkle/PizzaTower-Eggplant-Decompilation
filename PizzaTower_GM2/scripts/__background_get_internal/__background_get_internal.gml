@@ -88,21 +88,3 @@ function __background_get_internal(argument0, argument1, argument2)
     return __res;
 }
 
-enum e__BG
-{
-    Visible,
-    Foreground,
-    Index,
-    X,
-    Y,
-    Width,
-    Height,
-    HTiled,
-    VTiled,
-    XScale,
-    YScale,
-    HSpeed,
-    VSpeed,
-    Blend,
-    Alpha
-}

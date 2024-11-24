@@ -23,31 +23,27 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 199;
-idlespr = 199;
-fallspr = 2676;
-stunfallspr = 199;
-walkspr = 2676;
-turnspr = 199;
-recoveryspr = 199;
-grabbedspr = 199;
-scaredspr = 199;
+landspr = spr_meatball_idle;
+idlespr = spr_meatball_idle;
+fallspr = spr_meatball_roll;
+stunfallspr = spr_meatball_idle;
+walkspr = spr_meatball_roll;
+turnspr = spr_meatball_idle;
+recoveryspr = spr_meatball_idle;
+grabbedspr = spr_meatball_idle;
+scaredspr = spr_meatball_idle;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 229;
+spr_dead = spr_meatball_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

@@ -166,7 +166,3 @@ function scr_enemy_bounce()
     scr_collide();
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

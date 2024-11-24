@@ -1,4 +1,4 @@
-if (cigar == true)
+if (cigar)
 {
     pal_swap_set(60, 1, false);
     draw_self();

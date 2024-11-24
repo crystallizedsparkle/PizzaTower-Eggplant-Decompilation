@@ -1,7 +1,7 @@
 event_inherited();
-idlespr = 692;
-walkspr = 1895;
-chasespr = 212;
-spr_dead = 2541;
-spr_intro = 2306;
-spr_introidle = 2482;
+idlespr = spr_monstercheese_idle;
+walkspr = spr_monstercheese_walk;
+chasespr = spr_monstercheese_chase;
+spr_dead = spr_monstercheese_dead;
+spr_intro = spr_monstercheese_intro;
+spr_introidle = spr_monstercheese_introidle;

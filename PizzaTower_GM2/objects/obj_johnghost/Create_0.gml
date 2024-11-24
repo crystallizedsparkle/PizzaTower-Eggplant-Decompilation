@@ -6,7 +6,3 @@ attack_buffer = 0;
 attack_max = 120;
 hitboxcreate = false;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

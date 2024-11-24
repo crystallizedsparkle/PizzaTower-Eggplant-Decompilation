@@ -15,34 +15,30 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 145;
-idlespr = 148;
-fallspr = 137;
-stunspr = 141;
-stunfallspr = 141;
-walkspr = 146;
-turnspr = 134;
-recoveryspr = 132;
-grabbedspr = 144;
-scaredspr = 150;
+landspr = spr_slimebounce;
+idlespr = spr_slimeidle;
+fallspr = spr_slimefall;
+stunspr = spr_slimestun;
+stunfallspr = spr_slimestun;
+walkspr = spr_slimemove;
+turnspr = spr_slimeturn;
+recoveryspr = spr_slimerecovery;
+grabbedspr = spr_slimegrabbed;
+scaredspr = spr_slime_scared;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 138;
+spr_dead = spr_slimedead;
 important = true;
 heavy = false;
 depth = 0;
 paletteselect = 1;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 sprite_index = spr_slimemove;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

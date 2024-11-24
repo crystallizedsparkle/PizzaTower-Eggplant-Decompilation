@@ -1,5 +1,5 @@
 event_inherited();
-spr_hidden = 163;
-spr_idle = 1341;
-spr_attack = 1852;
+spr_hidden = spr_fakepeplimb2_hidden;
+spr_idle = spr_fakepeplimb2_idle;
+spr_attack = spr_fakepeplimb2_attack;
 ceiling = true;

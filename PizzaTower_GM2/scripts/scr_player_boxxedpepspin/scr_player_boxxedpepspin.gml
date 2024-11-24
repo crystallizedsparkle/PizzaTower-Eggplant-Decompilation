@@ -44,7 +44,3 @@ function scr_player_boxxedpepspin()
     }
 }
 
-enum UnknownEnum
-{
-    Value_35 = 35
-}

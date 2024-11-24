@@ -13,7 +13,3 @@ if (cooldown == 0 && !instance_exists(boulderID))
 if (cooldown > 0)
     cooldown--;
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

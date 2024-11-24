@@ -1,12 +1,10 @@
-var _pindex, _dvc, p;
-
 if (!global.option_vibration)
     exit;
 
 with (obj_player)
 {
-    _pindex = (object_index == obj_player1) ? 0 : 1;
-    _dvc = other.player_input_device[_pindex];
+    var _pindex = (object_index == obj_player1) ? 0 : 1;
+    var _dvc = other.player_input_device[_pindex];
     
     if (state != other.prevstate[_pindex])
     {
@@ -91,7 +89,7 @@ with (obj_player)
     }
 }
 
-for (p = 0; p < array_length(vibration); p++)
+for (var p = 0; p < array_length(vibration); p++)
 {
     _dvc = player_input_device[p];
     vibration[p][0] *= vibration[p][2];
@@ -106,21 +104,3 @@ for (p = 0; p < array_length(vibration); p++)
     gamepad_set_vibration(_dvc, vibration[p][0], vibration[p][1]);
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_9 = 9,
-    Value_10,
-    Value_47 = 47,
-    Value_51 = 51,
-    Value_61 = 61,
-    Value_79 = 79,
-    Value_91 = 91,
-    Value_97 = 97,
-    Value_99 = 99,
-    Value_106 = 106,
-    Value_107,
-    Value_111 = 111,
-    Value_123 = 123,
-    Value_147 = 147
-}

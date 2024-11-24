@@ -10,7 +10,3 @@ with (obj_player)
         instance_destroy(other);
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

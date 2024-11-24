@@ -6,9 +6,9 @@ with (other)
     }
     else if (scr_transformationcheck())
     {
-        if (state != states.firemouth && state != states.parry && hurted == false)
+        if (state != states.firemouth && state != states.parry && !hurted)
         {
-            tv_push_prompt_once(tv_create_prompt("This is the firemouth transformation text", tvprompt_type.transformation, 1139, 3), "firemouth");
+            tv_push_prompt_once(tv_create_prompt("This is the firemouth transformation text", tvprompt_type.transformation, spr_tv_firemouth, 3), "firemouth");
             is_firing = false;
             hsp = 0;
             movespeed = 0;
@@ -22,9 +22,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_2 = 2,
-    Value_10 = 10,
-    Value_147 = 147
-}

@@ -1,21 +1,15 @@
-var _xx, _yy, _mt;
-
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, image_blend, image_alpha);
 
 if (state == states.golf)
 {
-    _xx = lengthdir_x(128, m_angle);
-    _yy = lengthdir_y(128, m_angle);
+    var _xx = lengthdir_x(128, m_angle);
+    var _yy = lengthdir_y(128, m_angle);
     draw_sprite(spr_ball_move, 0, player.x + _xx, player.y + _yy);
     
     if (meter)
     {
-        _mt = (m_meter / 1) * 100;
+        var _mt = (m_meter / 1) * 100;
         draw_healthbar(player.x - (50 * image_xscale), player.y - 32, player.x - (40 * image_xscale), player.y + 32, _mt, c_black, c_blue, c_red, 3, true, true);
     }
 }
 
-enum UnknownEnum
-{
-    Value_148 = 148
-}

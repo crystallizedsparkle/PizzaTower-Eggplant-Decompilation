@@ -36,7 +36,3 @@ function cutscene_farm_end()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

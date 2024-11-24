@@ -2,13 +2,13 @@ scr_initenemy();
 patrolling = false;
 patrolmax = 100;
 spawnreset = 200;
-targetplayer = -4;
+targetplayer = noone;
 threshold_x = 400;
 threshold_y = 60;
 attackmode = 2;
 nextattack = 0;
-content = 431;
-spr_content_dead = 138;
+content = obj_cheeseslime;
+spr_content_dead = spr_slimedead;
 ram_count = 0;
 ram_max = 30;
 ram_spd = 0;
@@ -46,30 +46,26 @@ reset = false;
 hp = 8;
 hitboxcreate = false;
 grounded = true;
-idlespr = 413;
-stunspr = 421;
-stunfallspr = 421;
-walkspr = 413;
-grabbedspr = 421;
-scaredspr = 421;
-turnspr = 423;
+idlespr = spr_tank_walk;
+stunspr = spr_tank_stun;
+stunfallspr = spr_tank_stun;
+walkspr = spr_tank_walk;
+grabbedspr = spr_tank_stun;
+scaredspr = spr_tank_stun;
+turnspr = spr_tank_turn;
 sprite_index = idlespr;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 422;
+spr_dead = spr_tank_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 1;
-spr_palette = 168;
+spr_palette = palette_forknight;
 grabbedby = 0;
 stuntouchbuffer = 0;
 forcespawn = false;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

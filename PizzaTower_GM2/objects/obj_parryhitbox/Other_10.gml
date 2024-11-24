@@ -1,6 +1,4 @@
-var myplayer;
-
-myplayer = obj_player1.id;
+var myplayer = obj_player1.id;
 
 if (player_id == 2)
     myplayer = obj_player2.id;
@@ -25,7 +23,3 @@ with (myplayer)
 alarm[0] = die_time;
 collisioned = true;
 
-enum UnknownEnum
-{
-    Value_147 = 147
-}

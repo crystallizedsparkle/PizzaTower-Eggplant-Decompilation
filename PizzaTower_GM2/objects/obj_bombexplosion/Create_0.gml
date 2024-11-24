@@ -5,5 +5,5 @@ if (point_in_camera(x, y, view_camera[0]))
     if (audio_is_playing(sfx_explosion))
         audio_stop_sound(sfx_explosion);
     
-    scr_soundeffect(14);
+    scr_soundeffect(sfx_explosion);
 }

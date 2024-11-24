@@ -5,7 +5,3 @@ if (playerid.object_index == obj_vigilanteboss && place_meeting(x, y, obj_player
     playerid.movespeed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

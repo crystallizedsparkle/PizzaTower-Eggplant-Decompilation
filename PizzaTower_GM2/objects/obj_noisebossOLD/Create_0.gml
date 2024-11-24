@@ -37,15 +37,15 @@ phase = 1;
 max_phase = 9;
 max_hp = 500 * max_phase;
 hp = max_hp;
-stunfallspr = 997;
-walkspr = 1035;
-idlespr = 1006;
-spr_dead = 997;
-tauntspr = 1069;
-fallspr = 1025;
-bumpspr = 990;
-parryspr = 859;
-defeatplayerspr = 859;
+stunfallspr = spr_playerN_hurt;
+walkspr = spr_playerN_move;
+idlespr = spr_playerN_idle;
+spr_dead = spr_playerN_hurt;
+tauntspr = spr_playerN_taunt;
+fallspr = spr_playerN_fall;
+bumpspr = spr_playerN_bump;
+parryspr = spr_playerN_spin;
+defeatplayerspr = spr_playerN_spin;
 movespeed = 0;
 move = 0;
 normal_spd = 6;
@@ -136,8 +136,6 @@ function boss_destroy(argument0)
 
 function boss_hurt(argument0, argument1)
 {
-    var ps;
-    
     if (targetstunned > 0)
     {
         targetstunned -= targetstunnedminus[phase - 1];
@@ -152,7 +150,7 @@ function boss_hurt(argument0, argument1)
         targetstunned = 150;
     }
     
-    ps = state;
+    var ps = state;
     SUPER_boss_hurt(argument0, argument1);
     
     if (ps == states.pogo)
@@ -212,31 +210,3 @@ function player_hurt(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_8 = 8,
-    Value_41 = 41,
-    Value_42,
-    Value_58 = 58,
-    Value_74 = 74,
-    Value_77 = 77,
-    Value_80 = 80,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_104 = 104,
-    Value_121 = 121,
-    Value_138 = 138,
-    Value_145 = 145,
-    Value_167 = 167,
-    Value_168,
-    Value_169,
-    Value_170,
-    Value_171,
-    Value_172,
-    Value_173
-}

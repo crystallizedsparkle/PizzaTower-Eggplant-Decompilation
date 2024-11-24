@@ -14,7 +14,3 @@ repeat (2)
     }
 }
 
-enum UnknownEnum
-{
-    Value_21 = 21
-}

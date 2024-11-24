@@ -4,7 +4,7 @@ scr_playerreset();
 with (obj_player)
 {
     targetDoor = "A";
-    targetRoom = 58;
+    targetRoom = rm_levelselect;
     room = rm_levelselect;
     x = -100;
     y = -100;
@@ -12,7 +12,3 @@ with (obj_player)
     image_blend = c_white;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

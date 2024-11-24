@@ -59,8 +59,3 @@ function mrstick_end_round()
     instance_destroy(obj_mrstickcardboard);
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_138 = 138
-}

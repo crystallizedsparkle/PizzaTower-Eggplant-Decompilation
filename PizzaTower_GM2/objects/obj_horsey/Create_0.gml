@@ -14,7 +14,3 @@ with (obj_racestart)
 with (obj_raceend)
     depth = 50;
 
-enum UnknownEnum
-{
-    Value_0
-}

@@ -79,9 +79,3 @@ function scr_player_ratmountbounce()
     ratmount_dotaunt();
 }
 
-enum UnknownEnum
-{
-    Value_191 = 191,
-    Value_195 = 195,
-    Value_197 = 197
-}

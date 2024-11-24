@@ -1,6 +1,4 @@
-var accel;
-
-accel = 0.015;
+var accel = 0.015;
 
 if (!fadeout)
 {
@@ -20,7 +18,7 @@ else if (changeroom)
     {
         with (obj_player)
         {
-            targetRoom = 58;
+            targetRoom = rm_levelselect;
             targetDoor = "A";
         }
         

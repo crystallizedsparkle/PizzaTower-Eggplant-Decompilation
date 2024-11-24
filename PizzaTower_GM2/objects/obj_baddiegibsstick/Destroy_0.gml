@@ -1,17 +1,15 @@
-var i, arr, tombRoom, X, Y;
-
-if (storedx != -4 && storedy != -4)
+if (storedx != noone && storedy != noone)
 {
-    i = 0;
+    var i = 0;
     
     if (!ds_list_empty(global.baddietomb))
     {
         repeat (ds_list_size(global.baddietomb))
         {
-            arr = ds_list_find_value(global.baddietomb, i);
-            tombRoom = arr[0];
-            X = arr[1];
-            Y = arr[2];
+            var arr = ds_list_find_value(global.baddietomb, i);
+            var tombRoom = arr[0];
+            var X = arr[1];
+            var Y = arr[2];
             
             if (tombRoom == room && X == storedx && Y == storedy)
             {

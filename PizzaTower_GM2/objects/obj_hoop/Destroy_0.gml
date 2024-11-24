@@ -5,7 +5,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     if (audio_is_playing(sfx_collecttopping))
         audio_stop_sound(sfx_collecttopping);
     
-    scr_soundeffect(17);
+    scr_soundeffect(sfx_collecttopping);
     global.heattime += 10;
     global.heattime = clamp(global.heattime, 0, 60);
     
@@ -20,7 +20,3 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     create_particle(x, y, particles.genericpoofeffect, 0);
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

@@ -1,6 +1,4 @@
-var _block;
-
-_block = id;
+var _block = id;
 
 with (obj_player)
 {
@@ -12,7 +10,3 @@ with (obj_player)
     }
 }
 
-enum UnknownEnum
-{
-    Value_89 = 89
-}

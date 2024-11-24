@@ -17,26 +17,22 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 394;
-stunfallspr = 395;
-walkspr = 394;
-stunspr = 395;
-grabbedspr = 395;
-scaredspr = 397;
+idlespr = spr_archergoblin_walk;
+stunfallspr = spr_archergoblin_stun;
+walkspr = spr_archergoblin_walk;
+stunspr = spr_archergoblin_stun;
+grabbedspr = spr_archergoblin_stun;
+scaredspr = spr_archergoblin_scared;
 sprite_index = spr_archergoblin_walk;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 399;
+spr_dead = spr_archergoblin_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

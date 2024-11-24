@@ -5,8 +5,3 @@ instance_destroy(other);
 obj_player.suplexhavetomash = 5;
 obj_player.sprite_index = spr_player_grab;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_79 = 79
-}

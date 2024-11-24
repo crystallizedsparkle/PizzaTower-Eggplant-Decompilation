@@ -4,8 +4,3 @@ with (obj_player)
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_146 = 146
-}

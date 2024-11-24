@@ -1,10 +1,8 @@
-var i, q, _destroy, outofx, outofy, b, _dir;
-
 if (!ds_list_empty(global.debris_list))
 {
-    for (i = 0; i < ds_list_size(global.debris_list); i++)
+    for (var i = 0; i < ds_list_size(global.debris_list); i++)
     {
-        q = ds_list_find_value(global.debris_list, i);
+        var q = ds_list_find_value(global.debris_list, i);
         
         if (is_struct(q))
         {
@@ -21,7 +19,7 @@ if (!ds_list_empty(global.debris_list))
                 
                 x += hsp;
                 y += vsp;
-                _destroy = false;
+                var _destroy = false;
                 
                 if (animated)
                 {
@@ -36,8 +34,8 @@ if (!ds_list_empty(global.debris_list))
                     }
                 }
                 
-                outofx = x > (room_width + sprw) || x < -sprw;
-                outofy = y > (room_height + sprh) || y < -sprh;
+                var outofx = x > (room_width + sprw) || x < -sprw;
+                var outofy = y > (room_height + sprh) || y < -sprh;
                 
                 if (outofx || outofy || (type == debris.fade_effect && alpha <= 0))
                     _destroy = true;
@@ -58,15 +56,15 @@ if (!ds_list_empty(global.debris_list))
 
 if (!ds_list_empty(global.collect_list))
 {
-    for (i = 0; i < ds_list_size(global.collect_list); i++)
+    for (var i = 0; i < ds_list_size(global.collect_list); i++)
     {
-        b = ds_list_find_value(global.collect_list, i);
+        var b = ds_list_find_value(global.collect_list, i);
         
         if (is_struct(b))
         {
             with (b)
             {
-                _dir = point_direction(x, y, 110, 80);
+                var _dir = point_direction(x, y, 110, 80);
                 hsp = lengthdir_x(16, _dir);
                 vsp = lengthdir_y(16, _dir);
                 x += hsp;
@@ -96,7 +94,3 @@ if (!ds_list_empty(global.collect_list))
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1
-}

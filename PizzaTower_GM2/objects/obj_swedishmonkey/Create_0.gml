@@ -17,25 +17,21 @@ reset = false;
 bombreset = 0;
 hp = 3;
 grounded = true;
-spr_palette = 415;
-idlespr = 331;
-stunfallspr = 335;
-walkspr = 330;
-stunspr = 335;
-grabbedspr = 335;
-scaredspr = 336;
+spr_palette = spr_swedishmonkey_palette;
+idlespr = spr_swedishmonkey_idle;
+stunfallspr = spr_swedishmonkey_stun;
+walkspr = spr_swedishmonkey_walk;
+stunspr = spr_swedishmonkey_stun;
+grabbedspr = spr_swedishmonkey_stun;
+scaredspr = spr_swedishmonkey_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 338;
+spr_dead = spr_swedishmonkey_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

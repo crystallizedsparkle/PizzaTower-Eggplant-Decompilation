@@ -14,10 +14,3 @@ visible = !(room == rank_room);
 if (place_meeting(x, y, obj_secretportal) || place_meeting(x, y, obj_secretportalstart))
     visible = false;
 
-enum UnknownEnum
-{
-    Value_102 = 102,
-    Value_121 = 121,
-    Value_153 = 153,
-    Value_184 = 184
-}

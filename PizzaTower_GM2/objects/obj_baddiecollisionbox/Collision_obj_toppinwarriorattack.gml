@@ -15,8 +15,3 @@ if (instance_exists(baddieID))
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_138 = 138
-}

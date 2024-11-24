@@ -3,7 +3,7 @@ if (other.state != states.gotoplayer)
     if (audio_is_playing(sfx_collecttopping))
         audio_stop_sound(sfx_collecttopping);
     
-    scr_soundeffect(17);
+    scr_soundeffect(sfx_collecttopping);
     
     with (other)
         pizzashield = true;
@@ -11,7 +11,3 @@ if (other.state != states.gotoplayer)
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

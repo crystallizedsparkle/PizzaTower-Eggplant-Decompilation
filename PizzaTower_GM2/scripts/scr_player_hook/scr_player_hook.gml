@@ -10,7 +10,3 @@ function scr_player_hook()
     }
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92
-}

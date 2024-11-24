@@ -4,7 +4,3 @@ if (other.state == states.punch && other.image_index > 8 && other.image_index < 
         event_user(0);
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80
-}

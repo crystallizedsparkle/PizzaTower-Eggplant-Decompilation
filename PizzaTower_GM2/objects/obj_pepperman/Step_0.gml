@@ -60,7 +60,7 @@ else
     savedthrown = false;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -90,7 +90,7 @@ else
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -99,7 +99,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -110,15 +110,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_153 = 153,
-    Value_154,
-    Value_155
-}

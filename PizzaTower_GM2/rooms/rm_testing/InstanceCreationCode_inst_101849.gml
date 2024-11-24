@@ -9,7 +9,3 @@ func = function(argument0)
     }
 };
 
-enum UnknownEnum
-{
-    Value_111 = 111
-}

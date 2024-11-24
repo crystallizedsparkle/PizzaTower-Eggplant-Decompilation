@@ -52,7 +52,3 @@ function scr_getinput2()
         stickpressed = false;
 }
 
-enum UnknownEnum
-{
-    Value_99 = 99
-}

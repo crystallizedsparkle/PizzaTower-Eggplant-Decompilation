@@ -4,7 +4,3 @@ with (obj_player1)
     visible = true;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

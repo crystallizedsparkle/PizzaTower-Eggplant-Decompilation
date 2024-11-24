@@ -1,5 +1,3 @@
-var t;
-
 targetplayer = instance_nearest(x, y, obj_player);
 
 switch (state)
@@ -46,7 +44,7 @@ switch (state)
         if (sprite_index != spr_monstercheese_jump)
             sprite_index = chasespr;
         
-        t = grounded;
+        var t = grounded;
         
         if (object_index == obj_blobmonster)
             t = scr_monster_solid(x, y + (grav * 2));
@@ -149,7 +147,7 @@ switch (state)
         break;
     
     case states.robot_investigate:
-        scr_monsterinvestigate(10, 2837, 34);
+        scr_monsterinvestigate(10, spr_monstershroom_chase, spr_monstershroom_idle);
         break;
 }
 
@@ -165,13 +163,3 @@ if (object_index == obj_robotmonster || object_index == obj_hillbillymonster)
 
 scr_monster_collide();
 
-enum UnknownEnum
-{
-    Value_135 = 135,
-    Value_217 = 217,
-    Value_218,
-    Value_219,
-    Value_220,
-    Value_221,
-    Value_222
-}

@@ -1,5 +1,3 @@
-var p;
-
 if (state == states.tube)
 {
     if (floor(image_index) >= 6)
@@ -30,7 +28,7 @@ if (state == states.tube)
             if (movespeed < 14)
                 movespeed = 14;
             
-            p = (object_index == obj_player1) ? 0 : 1;
+            var p = (object_index == obj_player1) ? 0 : 1;
             GamepadSetVibration(p, 1, 1, 0.9);
         }
     }
@@ -48,9 +46,3 @@ if (state == states.tube)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_121 = 121,
-    Value_150 = 150
-}

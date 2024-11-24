@@ -1,12 +1,10 @@
-var xx, yy, t, q, x2, y2, i;
-
 if (addseconds <= 0)
     draw_set_font(global.wartimerfont1);
 else
     draw_set_font(global.wartimerfont2);
 
-xx = 480;
-yy = 540;
+var xx = 480;
+var yy = 540;
 
 if (obj_player.y > (room_height - 139))
     draw_set_alpha(0.3);
@@ -16,20 +14,20 @@ else
 draw_sprite(spr_wartimer, (addseconds > 0) ? 1 : 0, xx, yy);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-t = string(minutes);
+var t = string(minutes);
 
 if (string_length(t) < 2)
     t = concat("0", minutes);
 
-q = string(seconds);
+var q = string(seconds);
 
 if (string_length(q) < 2)
     q = concat("0", seconds);
 
-x2 = xx - 51;
-y2 = yy - 57;
+var x2 = xx - 51;
+var y2 = yy - 57;
 
-for (i = 0; i < string_length(t); i++)
+for (var i = 0; i < string_length(t); i++)
     draw_text(x2 + (i * 43), y2, string_char_at(t, i + 1));
 
 x2 = xx + 65;

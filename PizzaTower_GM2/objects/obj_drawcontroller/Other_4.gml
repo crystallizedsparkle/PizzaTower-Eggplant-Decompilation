@@ -1,8 +1,6 @@
-var roomname, i;
-
 if (room != kidsparty_entrance1)
 {
-    roomname = room_get_name(room);
+    var roomname = room_get_name(room);
     roomname = string_letters(roomname);
     
     if (roomname == "kidspartyfloor" || roomname == "kidspartyentrance")
@@ -26,7 +24,7 @@ if (room == dungeon_5 || room == dungeon_6)
 {
     use_dark = true;
     
-    for (i = 0; i < array_length(dark_arr); i++)
+    for (var i = 0; i < array_length(dark_arr); i++)
         layer_shader(dark_arr[i], 5);
 }
 else

@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && baddieID.stun == true && (other.state == states.handstandjump || other.state == states.punch || other.instakillmove == true))
+if (instance_exists(baddieID) && baddieID.stun && (other.state == states.handstandjump || other.state == states.punch || other.instakillmove))
 {
     with (other)
     {
@@ -10,7 +10,7 @@ if (instance_exists(baddieID) && baddieID.stun == true && (other.state == states
         instance_destroy(other);
     }
     
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
@@ -22,9 +22,3 @@ if (instance_exists(baddieID) && baddieID.stun == true && (other.state == states
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_80 = 80,
-    Value_91 = 91
-}

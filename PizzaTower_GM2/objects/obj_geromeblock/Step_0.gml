@@ -1,4 +1,4 @@
-if (global.gerome == false)
+if (!global.gerome)
 {
     x = xstart;
     y = ystart;

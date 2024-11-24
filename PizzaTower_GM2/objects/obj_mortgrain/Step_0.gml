@@ -1,6 +1,6 @@
 with (instance_place(x - 1, y, obj_player))
 {
-    if (state == states.mort && other.eaten == false)
+    if (state == states.mort && !other.eaten)
     {
         movespeed = abs(movespeed);
         other.eaten = true;
@@ -11,7 +11,7 @@ with (instance_place(x - 1, y, obj_player))
 
 with (instance_place(x + 1, y, obj_player))
 {
-    if (state == states.mort && other.eaten == false)
+    if (state == states.mort && !other.eaten)
     {
         movespeed = abs(movespeed);
         other.eaten = true;
@@ -30,8 +30,3 @@ if (eaten)
         ds_list_add(global.saveroom, id);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_11 = 11
-}

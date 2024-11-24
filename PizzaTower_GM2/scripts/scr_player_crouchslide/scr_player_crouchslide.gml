@@ -76,8 +76,3 @@ function scr_player_crouchslide()
     image_speed = movespeed / 24;
 }
 
-enum UnknownEnum
-{
-    Value_100 = 100,
-    Value_104 = 104
-}

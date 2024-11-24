@@ -14,12 +14,12 @@ if (obj_player.state == states.taxi)
     if (!global.pizzadelivery)
     {
         with (instance_create(obj_stopsign.x - 480, obj_stopsign.y, obj_taxidud))
-            playerid = 324;
+            playerid = obj_player1;
     }
     else
     {
         with (instance_create(obj_checkpoint.x - 480, obj_checkpoint.y - 50, obj_taxidud))
-            playerid = 324;
+            playerid = obj_player1;
         
         with (obj_player)
         {
@@ -38,11 +38,3 @@ if (obj_player.state == states.taxi_police)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_18 = 18,
-    Value_84 = 84,
-    Value_119 = 119,
-    Value_152 = 152
-}

@@ -189,11 +189,3 @@ function scr_pepperman_shoulderbash()
     }
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_134 = 134,
-    Value_138 = 138,
-    Value_153 = 153
-}

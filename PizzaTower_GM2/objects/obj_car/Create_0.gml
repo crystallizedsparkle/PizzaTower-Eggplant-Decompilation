@@ -1,8 +1,4 @@
-inst = -4;
+inst = noone;
 hsp = 0;
 state = states.normal;
 
-enum UnknownEnum
-{
-    Value_0
-}

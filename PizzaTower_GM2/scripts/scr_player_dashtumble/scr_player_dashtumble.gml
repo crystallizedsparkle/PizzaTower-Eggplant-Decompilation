@@ -46,8 +46,3 @@ function scr_player_dashtumble()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92,
-    Value_104 = 104
-}

@@ -15,8 +15,3 @@ if (state != states.titlescreen && other.grounded && other.key_up2)
     other.image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18,
-    Value_146 = 146
-}

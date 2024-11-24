@@ -18,7 +18,7 @@ if (!start && ds_list_find_index(global.saveroom, id) == -1)
     with (obj_raceend)
         start = true;
     
-    sprite = 1451;
+    sprite = spr_horsey_start2;
     start_index = 0;
     global.horse = true;
 }

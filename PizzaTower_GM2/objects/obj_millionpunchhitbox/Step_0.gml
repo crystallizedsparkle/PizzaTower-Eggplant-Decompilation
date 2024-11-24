@@ -21,8 +21,3 @@ else if (col_buffer == 0)
 if (baddieID.state != states.millionpunch && baddieID.state != states.chainsaw)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_166 = 166
-}

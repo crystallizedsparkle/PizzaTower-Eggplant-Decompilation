@@ -15,4 +15,4 @@ if (x != obj_player.x)
 depth = -999;
 paletteselect = 0;
 spr_palette = 0;
-d = 255;
+d = c_red;

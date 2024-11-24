@@ -1,6 +1,4 @@
-var num, i;
-
-if (grounded && grabbed == false && !ratgrabbed)
+if (grounded && !grabbed && !ratgrabbed)
     thrown = false;
 
 if (!ratgrabbed)
@@ -9,7 +7,7 @@ if (!ratgrabbed)
 if (ratgrabbed && ratplayerid.ratgrabbedID != id)
     ratgrabbed = false;
 
-if (grabbed == true && !ratgrabbed)
+if (grabbed && !ratgrabbed)
 {
     image_xscale = -playerid.xscale;
     grav = 0;
@@ -270,10 +268,10 @@ if (grabbed == true && !ratgrabbed)
 if (vsp > 0 && grounded && !place_meeting(x, y, obj_spike))
     hsp = 0;
 
-if (grabbed == false && ratgrabbed == false && use_collision)
+if (!grabbed && !ratgrabbed && use_collision)
     scr_collide();
 
-if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
+if (place_meeting(x, y, obj_swordhitbox) && !thrown)
 {
     grabbed = false;
     thrown = true;
@@ -320,27 +318,11 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
 
 if (thrown)
 {
-    num = instance_place_list(x + hsp, y, 332, global.instancelist, false);
+    var num = instance_place_list(x + hsp, y, 332, global.instancelist, false);
     
-    for (i = 0; i < num; i++)
+    for (var i = 0; i < num; i++)
         instance_destroy(ds_list_find_value(global.instancelist, i));
     
     ds_list_clear(global.instancelist);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_6 = 6,
-    Value_20 = 20,
-    Value_55 = 55,
-    Value_74 = 74,
-    Value_75,
-    Value_76,
-    Value_79 = 79,
-    Value_80,
-    Value_81,
-    Value_82,
-    Value_83,
-    Value_107 = 107
-}

@@ -1,12 +1,10 @@
-var _maxy;
-
 if (collide)
 {
     if (vsp < 20)
         vsp += grav;
     
     y += vsp;
-    _maxy = 112;
+    var _maxy = 112;
     
     if (y > _maxy)
     {
@@ -18,7 +16,7 @@ if (collide)
             vsp = -6;
             
             repeat (8)
-                create_debris(irandom_range(bbox_left, bbox_right), bbox_bottom, 1123);
+                create_debris(irandom_range(bbox_left, bbox_right), bbox_bottom, spr_debris);
             
             with (obj_camera)
             {

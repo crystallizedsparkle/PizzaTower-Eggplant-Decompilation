@@ -1,4 +1,4 @@
-if (side == true)
+if (side)
     x += spd;
 else
     y += spd;

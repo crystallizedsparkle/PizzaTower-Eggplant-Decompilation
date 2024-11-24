@@ -1,8 +1,6 @@
-var xx, _dir;
-
 active = false;
-xx = room_width + 64;
-_dir = -1;
+var xx = room_width + 64;
+var _dir = -1;
 
 if (x < (room_width / 2))
 {

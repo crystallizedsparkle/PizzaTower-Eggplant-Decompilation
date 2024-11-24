@@ -12,7 +12,7 @@ else
     sprite_index = spr_pose;
 }
 
-if (sprite_index == spr_run && scr_solid(x, y + 1) && visible == true)
+if (sprite_index == spr_run && scr_solid(x, y + 1) && visible)
     steppy--;
 
 if (steppy == 0)
@@ -29,7 +29,3 @@ else if (playerid.hsp == 0)
 if (dir != playerid.xscale)
     dir = playerid.xscale;
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

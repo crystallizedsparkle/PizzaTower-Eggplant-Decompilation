@@ -1,6 +1,4 @@
-var lag;
-
-if (instance_exists(baddieID) && baddieID.state != states.hit && baddieID.invtime == 0 && other.thrown == true && !baddieID.invincible && (baddieID.object_index != obj_noiseboss || (other.object_index != obj_pepjunk || !other.noisethrow)) && baddieID.destroyable)
+if (instance_exists(baddieID) && baddieID.state != states.hit && baddieID.invtime == 0 && other.thrown && !baddieID.invincible && (baddieID.object_index != obj_noiseboss || (other.object_index != obj_pepjunk || !other.noisethrow)) && baddieID.destroyable)
 {
     if (baddieID.destroyable && (!baddieID.elite || baddieID.elitehit <= 0))
     {
@@ -9,7 +7,7 @@ if (instance_exists(baddieID) && baddieID.state != states.hit && baddieID.invtim
     }
     else
     {
-        lag = 2;
+        var lag = 2;
         baddieID.hitLag = lag;
         baddieID.hitX = baddieID.x;
         baddieID.hitY = baddieID.y;
@@ -36,7 +34,3 @@ if (instance_exists(baddieID) && baddieID.state != states.hit && baddieID.invtim
     }
 }
 
-enum UnknownEnum
-{
-    Value_137 = 137
-}

@@ -40,8 +40,3 @@ function scr_player_balloon()
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_92 = 92
-}

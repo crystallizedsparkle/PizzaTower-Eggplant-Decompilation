@@ -1,6 +1,4 @@
-var num, i, _player;
-
-if (playerid != -4)
+if (playerid != noone)
 {
     with (playerid)
     {
@@ -17,11 +15,11 @@ if (playerid != -4)
 
 if (!got)
 {
-    num = instance_place_list(x, y, 322, global.instancelist, false);
+    var num = instance_place_list(x, y, obj_player, global.instancelist, false);
     
-    for (i = 0; i < num; i++)
+    for (var i = 0; i < num; i++)
     {
-        _player = ds_list_find_value(global.instancelist, i);
+        var _player = ds_list_find_value(global.instancelist, i);
         
         with (_player)
         {
@@ -32,13 +30,13 @@ if (!got)
                     hsp = 0;
                     vsp = 0;
                     state = states.gottreasure;
-                    scr_soundeffect(21);
+                    scr_soundeffect(sfx_secretfound);
                     
                     with (other)
                     {
                         got = true;
                         
-                        if (got_func != -4)
+                        if (got_func != noone)
                             got_func();
                         
                         alarm[0] = 150;
@@ -56,8 +54,3 @@ if (!got)
     ds_list_clear(global.instancelist);
 }
 
-enum UnknownEnum
-{
-    Value_46 = 46,
-    Value_186 = 186
-}

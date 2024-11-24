@@ -6,7 +6,3 @@ if (playerid.state != states.freefall)
 
 visible = !(room == rank_room);
 
-enum UnknownEnum
-{
-    Value_108 = 108
-}

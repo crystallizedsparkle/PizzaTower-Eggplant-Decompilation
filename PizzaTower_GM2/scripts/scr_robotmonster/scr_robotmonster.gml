@@ -103,10 +103,3 @@ function scr_robot_detect()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_74 = 74,
-    Value_130 = 130,
-    Value_141 = 141
-}

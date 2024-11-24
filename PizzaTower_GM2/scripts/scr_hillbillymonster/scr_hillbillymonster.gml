@@ -84,9 +84,3 @@ function scr_hillbilly_destroyables()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_105 = 105,
-    Value_141 = 141
-}

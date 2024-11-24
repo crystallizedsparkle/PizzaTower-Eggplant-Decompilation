@@ -29,7 +29,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -43,49 +43,49 @@ if (state != states.stun)
 if (hp <= 0)
     instance_destroy();
 
-if (cigar == true)
+if (cigar)
 {
-    landspr = 89;
-    idlespr = 100;
-    fallspr = 93;
-    hitceillingspr = 82;
-    stunfalltransspr = 80;
-    hitwallspr = 73;
-    stunfallspr = 77;
-    rollingspr = 67;
-    walkspr = 97;
-    turnspr = 95;
-    flyingspr = 84;
-    hitspr = 86;
-    stunlandspr = 71;
-    stunspr = 69;
-    recoveryspr = 65;
-    stompedspr = 75;
-    grabbedspr = 63;
+    landspr = spr_sausageman_land;
+    idlespr = spr_sausageman_idle;
+    fallspr = spr_sausageman_fall;
+    hitceillingspr = spr_sausageman_hitceilling;
+    stunfalltransspr = spr_sausageman_stunfalltrans;
+    hitwallspr = spr_sausageman_hitwall;
+    stunfallspr = spr_sausageman_stunfall;
+    rollingspr = spr_sausageman_rolling;
+    walkspr = spr_sausageman_walk;
+    turnspr = spr_sausageman_turn;
+    flyingspr = spr_sausageman_flying;
+    hitspr = spr_sausageman_hit;
+    stunlandspr = spr_sausageman_stunland;
+    stunspr = spr_sausageman_stun;
+    recoveryspr = spr_sausageman_recovery;
+    stompedspr = spr_sausageman_stomped;
+    grabbedspr = spr_sausageman_grabbed;
 }
 
-if (cigar == false)
+if (!cigar)
 {
-    landspr = 87;
-    idlespr = 99;
-    fallspr = 92;
-    hitceillingspr = 81;
-    stunfalltransspr = 79;
-    hitwallspr = 72;
-    stunfallspr = 76;
-    rollingspr = 66;
-    walkspr = 96;
-    turnspr = 94;
-    flyingspr = 83;
-    hitspr = 85;
-    stunlandspr = 70;
-    stunspr = 68;
-    recoveryspr = 64;
-    stompedspr = 74;
-    grabbedspr = 61;
+    landspr = spr_sausagemannocigar_land;
+    idlespr = spr_sausagemannocigar_idle;
+    fallspr = spr_sausagemannocigar_fall;
+    hitceillingspr = spr_sausagemannocigar_hitceilling;
+    stunfalltransspr = spr_sausagemannocigar_stunfalltrans;
+    hitwallspr = spr_sausagemannocigar_hitwall;
+    stunfallspr = spr_sausagemannocigar_stunfall;
+    rollingspr = spr_sausagemannocigar_rolling;
+    walkspr = spr_sausagemannocigar_walk;
+    turnspr = spr_sausagemannocigar_turn;
+    flyingspr = spr_sausagemannocigar_flying;
+    hitspr = spr_sausagemannocigar_hit;
+    stunlandspr = spr_sausagemannocigar_stunland;
+    stunspr = spr_sausagemannocigar_stun;
+    recoveryspr = spr_sausagemannocigar_recovery;
+    stompedspr = spr_sausagemannocigar_stomped;
+    grabbedspr = spr_sausagemannocigar_grabbed;
 }
 
-if (cigar == true && cigarcreate == false && (state == states.idle || state == states.walk || state == states.turn || state == states.land))
+if (cigar && !cigarcreate && (state == states.idle || state == states.walk || state == states.turn || state == states.land))
 {
     cigarcreate = true;
     
@@ -99,16 +99,6 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_130 = 130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

@@ -20,21 +20,17 @@ reset = false;
 hp = 2;
 hitboxcreate = false;
 grounded = true;
-idlespr = 253;
-stunfallspr = 251;
-walkspr = 253;
-grabbedspr = 251;
-scaredspr = 251;
+idlespr = spr_bigcheese_idle;
+stunfallspr = spr_bigcheese_stun;
+walkspr = spr_bigcheese_idle;
+grabbedspr = spr_bigcheese_stun;
+scaredspr = spr_bigcheese_stun;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 248;
+spr_dead = spr_bigcheese_dead;
 important = false;
 heavy = true;
 depth = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

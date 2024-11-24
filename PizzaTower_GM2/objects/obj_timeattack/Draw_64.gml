@@ -1,4 +1,4 @@
-if (global.timeattack == true)
+if (global.timeattack)
 {
     if (global.taseconds < 10)
     {

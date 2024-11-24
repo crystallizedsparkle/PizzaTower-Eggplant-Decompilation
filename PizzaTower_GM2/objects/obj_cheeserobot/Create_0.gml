@@ -18,18 +18,14 @@ reset = false;
 bombreset = 0;
 hp = 5;
 grounded = true;
-idlespr = 221;
-stunfallspr = 214;
-walkspr = 218;
-stunspr = 214;
-grabbedspr = 214;
-scaredspr = 214;
+idlespr = spr_cheeserobot_idle;
+stunfallspr = spr_cheeserobot_stun;
+walkspr = spr_cheeserobot_walk;
+stunspr = spr_cheeserobot_stun;
+grabbedspr = spr_cheeserobot_stun;
+scaredspr = spr_cheeserobot_stun;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

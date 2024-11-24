@@ -161,6 +161,7 @@ enum states
     shoulderturn = 161,
     fistmatch = 162,
     fistmatchend = 163,
+	groundpunchstart = 164,
     slipbanan = 165,
     millionpunch = 166,
     skateboard_turn = 167,
@@ -245,6 +246,8 @@ enum states
     pizzahead_bigkick = 247,
     pizzahead_slamhead = 248,
     pizzahead_slamhead2 = 249,
+    tv_whitenoise = 250,
+    tv_expression = 251,
     playersuperattack = 252,
     // no usage here
     jetpackjump = 254,

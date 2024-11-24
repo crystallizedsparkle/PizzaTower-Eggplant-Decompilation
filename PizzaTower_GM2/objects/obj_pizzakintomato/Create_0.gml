@@ -1,8 +1,8 @@
 event_inherited();
-spr_intro = 1242;
-spr_idle = 1232;
-spr_run = 1231;
-spr_panic = 1230;
-spr_intro_strongcold = 2163;
-spr_idle_strongcold = 2151;
-spr_run_strongcold = 2162;
+spr_intro = spr_toppintomato_intro;
+spr_idle = spr_toppintomato;
+spr_run = spr_toppintomato_run;
+spr_panic = spr_toppintomato_panic;
+spr_intro_strongcold = spr_xmastomatotoppin_intro;
+spr_idle_strongcold = spr_xmastomatotoppin_idle;
+spr_run_strongcold = spr_xmastomatotoppin_walk;

@@ -1,5 +1,3 @@
-var num, i, _player;
-
 if (player == 1)
 {
     if (got && obj_player1.state != states.gottreasure)
@@ -14,11 +12,11 @@ if (player == 2)
 
 if (player == 0 && place_meeting(x, y, obj_player))
 {
-    num = instance_place_list(x, y, 322, global.instancelist, false);
+    var num = instance_place_list(x, y, obj_player, global.instancelist, false);
     
-    for (i = 0; i < num; i++)
+    for (var i = 0; i < num; i++)
     {
-        _player = ds_list_find_value(global.instancelist, i);
+        var _player = ds_list_find_value(global.instancelist, i);
         
         with (_player)
         {
@@ -40,7 +38,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
                     {
                         other.alarm[0] = 150;
                         state = states.gottreasure;
-                        scr_soundeffect(21);
+                        scr_soundeffect(sfx_secretfound);
                     }
                     
                     other.got = true;
@@ -63,8 +61,3 @@ if (player == 0 && place_meeting(x, y, obj_player))
     ds_list_clear(global.instancelist);
 }
 
-enum UnknownEnum
-{
-    Value_46 = 46,
-    Value_186 = 186
-}

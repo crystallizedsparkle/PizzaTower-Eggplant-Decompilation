@@ -7,7 +7,3 @@ with (obj_player)
     }
 }
 
-enum UnknownEnum
-{
-    Value_32 = 32
-}

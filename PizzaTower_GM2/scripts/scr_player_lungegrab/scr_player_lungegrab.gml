@@ -24,8 +24,3 @@ function scr_player_lungegrab()
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92
-}

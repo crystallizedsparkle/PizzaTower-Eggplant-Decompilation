@@ -62,9 +62,3 @@ function scr_player_pistolaim()
         image_speed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_72 = 72,
-    Value_92 = 92
-}

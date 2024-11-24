@@ -38,8 +38,3 @@ function scr_player_ratmountballoon()
     }
 }
 
-enum UnknownEnum
-{
-    Value_13 = 13,
-    Value_192 = 192
-}

@@ -21,25 +21,21 @@ hp = 2;
 lasthp = hp;
 hitboxcreate = false;
 grounded = true;
-idlespr = 22;
-stunfallspr = 2667;
-walkspr = 22;
-grabbedspr = 2667;
-scaredspr = 2667;
+idlespr = spr_noisey_walk;
+stunfallspr = spr_noisey_stun;
+walkspr = spr_noisey_walk;
+grabbedspr = spr_noisey_stun;
+scaredspr = spr_noisey_stun;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 269;
+spr_dead = spr_noisey_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 1;
-spr_palette = 168;
+spr_palette = palette_forknight;
 grabbedby = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

@@ -68,12 +68,3 @@ function scr_player_pistol()
         instance_create(x, y, obj_slidecloud);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_104 = 104,
-    Value_106 = 106
-}

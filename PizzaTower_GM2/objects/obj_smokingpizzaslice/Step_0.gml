@@ -1,5 +1,3 @@
-var old_substate, player;
-
 if (room == rm_editor)
     exit;
 
@@ -16,7 +14,7 @@ switch (state)
         else
         {
             substate_buffer = substate_max;
-            old_substate = substate;
+            var old_substate = substate;
             
             while (substate == old_substate)
                 substate = choose(states.walk, states.idle, states.turn);
@@ -110,7 +108,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -121,10 +119,10 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 if (state == states.walk)
 {
@@ -170,7 +168,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -181,15 +179,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

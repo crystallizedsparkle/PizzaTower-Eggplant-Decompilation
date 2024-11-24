@@ -28,8 +28,3 @@ function scr_enemy_lungeattack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_43 = 43,
-    Value_138 = 138
-}

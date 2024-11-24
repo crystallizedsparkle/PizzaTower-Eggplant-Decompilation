@@ -24,4 +24,4 @@ space = 0;
 maxspace = 1;
 spaceaccel = 0.2;
 idlespr = sprite_index;
-walkspr = 268;
+walkspr = spr_peasanto_walk;

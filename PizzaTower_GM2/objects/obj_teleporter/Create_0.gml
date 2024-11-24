@@ -6,10 +6,6 @@ storedstate = states.normal;
 storedmovespeed = 6;
 storedgrav = 0.5;
 storedimageindex = 0;
-storedspriteindex = 715;
+storedspriteindex = spr_player_idle;
 storedfreefallsmash = 0;
 
-enum UnknownEnum
-{
-    Value_0
-}

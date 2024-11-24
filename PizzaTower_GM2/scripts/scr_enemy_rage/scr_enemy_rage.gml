@@ -298,10 +298,3 @@ function scr_enemy_rage()
     }
 }
 
-enum UnknownEnum
-{
-    Value_128 = 128,
-    Value_134 = 134,
-    Value_138 = 138,
-    Value_141 = 141
-}

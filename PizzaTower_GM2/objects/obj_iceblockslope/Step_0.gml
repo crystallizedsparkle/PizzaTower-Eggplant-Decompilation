@@ -1,8 +1,6 @@
-var _dir;
-
 if (place_meeting(x, y - 1, obj_player))
 {
-    _dir = sign(image_xscale);
+    var _dir = sign(image_xscale);
     
     with (obj_player)
     {
@@ -17,7 +15,3 @@ if (place_meeting(x, y - 1, obj_player))
     }
 }
 
-enum UnknownEnum
-{
-    Value_37 = 37
-}

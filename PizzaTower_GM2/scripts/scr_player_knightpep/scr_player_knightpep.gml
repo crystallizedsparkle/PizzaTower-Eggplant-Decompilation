@@ -239,8 +239,3 @@ function scr_player_knightpep()
     }
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_38 = 38
-}

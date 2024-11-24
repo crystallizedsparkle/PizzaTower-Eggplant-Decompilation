@@ -28,7 +28,3 @@ function scr_player_timesup()
         image_speed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_89 = 89
-}

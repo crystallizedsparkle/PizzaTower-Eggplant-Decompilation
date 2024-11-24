@@ -16,11 +16,3 @@ else if (sprite_index == spr_swordstonetaken && instance_exists(ID))
     instance_destroy(ID);
 }
 
-enum UnknownEnum
-{
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_48,
-    Value_49,
-    Value_61 = 61
-}

@@ -23,23 +23,19 @@ hp = 3;
 hitboxcreate = false;
 grounded = true;
 chargereset = 0;
-idlespr = 270;
-stunfallspr = 266;
-walkspr = 268;
-grabbedspr = 266;
+idlespr = spr_peasanto_idle;
+stunfallspr = spr_peasanto_stun;
+walkspr = spr_peasanto_walk;
+grabbedspr = spr_peasanto_stun;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
 angry = false;
-spr_dead = 260;
+spr_dead = spr_peasanto_dead;
 important = false;
 heavy = false;
 depth = 0;
 angrytime = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

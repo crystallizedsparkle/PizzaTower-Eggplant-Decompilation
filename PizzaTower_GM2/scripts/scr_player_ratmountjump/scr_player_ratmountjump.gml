@@ -125,7 +125,7 @@ function scr_player_ratmountjump()
     }
     else if (key_slap2 && !brick)
     {
-        state = UnknownEnum.Value_259;
+        state = states.ratmountpunch;
         vsp = -6;
         ratmountpunchtimer = 25;
         image_index = 0;
@@ -182,11 +182,3 @@ function scr_player_ratmountjump()
     ratmount_dotaunt();
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_191 = 191,
-    Value_197 = 197,
-    Value_198,
-    Value_259 = 259
-}

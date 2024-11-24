@@ -7,7 +7,3 @@ if (other.instakillmove || other.state == states.handstandjump)
     }
 }
 
-enum UnknownEnum
-{
-    Value_42 = 42
-}

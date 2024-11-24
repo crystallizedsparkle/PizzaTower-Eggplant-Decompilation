@@ -1,4 +1,4 @@
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (obj_bosscontroller.state == states.arena_intro)
     exit;
@@ -77,63 +77,63 @@ switch (state)
         boss_pizzahead_fishing();
         break;
     
-    case UnknownEnum.Value_235:
+    case states.pizzahead_bombrun:
         boss_pizzahead_bombrun();
         break;
     
-    case UnknownEnum.Value_236:
+    case states.pizzahead_npcthrow:
         boss_pizzahead_npcthrow();
         break;
     
-    case UnknownEnum.Value_237:
+    case states.pizzahead_portraitthrow:
         boss_pizzahead_portraitthrow();
         break;
     
-    case UnknownEnum.Value_238:
+    case states.pizzahead_enguarde:
         boss_pizzahead_enguarde();
         break;
     
-    case UnknownEnum.Value_239:
+    case states.pizzahead_sexypicture:
         boss_pizzahead_sexypicture();
         break;
     
-    case UnknownEnum.Value_240:
+    case states.pizzahead_pullinglevel:
         boss_pizzahead_pullinglevel();
         break;
     
-    case UnknownEnum.Value_241:
+    case states.pizzahead_eat:
         boss_pizzahead_eat();
         break;
     
-    case UnknownEnum.Value_242:
+    case states.pizzahead_surprisebox:
         boss_pizzahead_surprisebox();
         break;
     
-    case UnknownEnum.Value_243:
+    case states.pizzahead_spinningrun:
         boss_pizzahead_spinningrun();
         break;
     
-    case UnknownEnum.Value_244:
+    case states.pizzahead_spinningkick:
         boss_pizzahead_spinningkick();
         break;
     
-    case UnknownEnum.Value_245:
+    case states.pizzahead_spinningpunch:
         boss_pizzahead_spinningpunch();
         break;
     
-    case UnknownEnum.Value_246:
+    case states.pizzahead_groundpunch:
         boss_pizzahead_groundpunch();
         break;
     
-    case UnknownEnum.Value_247:
+    case states.pizzahead_bigkick:
         boss_pizzahead_bigkick();
         break;
     
-    case UnknownEnum.Value_248:
+    case states.pizzahead_slamhead:
         boss_pizzahead_slamhead();
         break;
     
-    case UnknownEnum.Value_249:
+    case states.pizzahead_slamhead2:
         boss_pizzahead_slamhead2();
         break;
     
@@ -183,7 +183,7 @@ if (phase == 0 && state != states.pizzaface_ram)
 else
     invincible = false;
 
-attacking = state == states.pizzaface_ram || state == states.pizzaface_nose || state == UnknownEnum.Value_244 || state == UnknownEnum.Value_245 || state == UnknownEnum.Value_246 || state == UnknownEnum.Value_248 || state == UnknownEnum.Value_249;
+attacking = state == states.pizzaface_ram || state == states.pizzaface_nose || state == states.pizzahead_spinningkick || state == states.pizzahead_spinningpunch || state == states.pizzahead_groundpunch || state == states.pizzahead_slamhead || state == states.pizzahead_slamhead2;
 colliding = state != states.pizzaface_ram;
 
 if (phase > 0)
@@ -193,39 +193,3 @@ if (phase > 0)
     walkspr = spr_pizzahead_giddy;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_61 = 61,
-    Value_84 = 84,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_144 = 144,
-    Value_145,
-    Value_147 = 147,
-    Value_162 = 162,
-    Value_226 = 226,
-    Value_227,
-    Value_228,
-    Value_229,
-    Value_230,
-    Value_231,
-    Value_232,
-    Value_233,
-    Value_235 = 235,
-    Value_236,
-    Value_237,
-    Value_238,
-    Value_239,
-    Value_240,
-    Value_241,
-    Value_242,
-    Value_243,
-    Value_244,
-    Value_245,
-    Value_246,
-    Value_247,
-    Value_248,
-    Value_249
-}

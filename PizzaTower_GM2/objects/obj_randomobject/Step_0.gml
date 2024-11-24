@@ -1,5 +1,3 @@
-var moveH, moveV, spd;
-
 mask_index = spr_player_mask;
 
 switch (state)
@@ -12,8 +10,8 @@ switch (state)
         switch (substate)
         {
             case states.normal:
-                moveH = playerid.key_left + playerid.key_right;
-                moveV = playerid.key_down - playerid.key_up;
+                var moveH = playerid.key_left + playerid.key_right;
+                var moveV = playerid.key_down - playerid.key_up;
                 
                 if (moveH != 0 || moveV != 0)
                 {
@@ -33,7 +31,7 @@ switch (state)
                 break;
             
             case states.jump:
-                spd = 24;
+                var spd = 24;
                 hsp = moveX * spd;
                 vsp = moveY * spd;
                 angle += 64;
@@ -72,10 +70,3 @@ switch (state)
 scr_collide();
 event_inherited();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_16 = 16,
-    Value_17,
-    Value_92 = 92
-}

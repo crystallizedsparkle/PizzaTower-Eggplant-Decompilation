@@ -336,14 +336,3 @@ function scr_noise_pistol()
     }
 }
 
-enum UnknownEnum
-{
-    Value_66 = 66,
-    Value_69 = 69,
-    Value_72 = 72,
-    Value_92 = 92,
-    Value_126 = 126,
-    Value_130 = 130,
-    Value_134 = 134,
-    Value_174 = 174
-}

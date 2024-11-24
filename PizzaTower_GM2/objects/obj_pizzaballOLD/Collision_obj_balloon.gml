@@ -13,8 +13,3 @@ with (other)
     respawn = 100;
 }
 
-enum UnknownEnum
-{
-    Value_6 = 6,
-    Value_148 = 148
-}

@@ -1,4 +1,4 @@
-if (obj_explosion == 376)
+if (obj_explosion == obj_canonexplosion)
 {
     instance_destroy();
     instance_create(x, y, obj_explosion);

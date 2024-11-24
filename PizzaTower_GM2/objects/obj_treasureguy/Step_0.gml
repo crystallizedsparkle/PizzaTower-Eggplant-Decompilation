@@ -1,5 +1,3 @@
-var player;
-
 if (room == rm_editor)
     exit;
 
@@ -38,7 +36,7 @@ switch (state)
         break;
     
     case states.underground:
-        player = instance_nearest(x, y, obj_player);
+        var player = instance_nearest(x, y, obj_player);
         hsp = 0;
         
         if (underground)
@@ -69,7 +67,7 @@ switch (state)
                 vsp = -4;
                 
                 repeat (3)
-                    create_debris(x, y, 1123);
+                    create_debris(x, y, spr_debris);
             }
         }
         else if (grounded)
@@ -81,7 +79,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -92,10 +90,10 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (state == states.walk)
 {
@@ -179,7 +177,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -203,18 +201,3 @@ else
     image_blend = c_white;
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_111 = 111,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141,
-    Value_189 = 189
-}

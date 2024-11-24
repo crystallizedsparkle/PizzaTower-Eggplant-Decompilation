@@ -22,7 +22,3 @@ function scr_enemy_land()
     }
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

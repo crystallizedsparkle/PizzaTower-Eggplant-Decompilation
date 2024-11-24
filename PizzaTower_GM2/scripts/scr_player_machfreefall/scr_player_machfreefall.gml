@@ -94,11 +94,3 @@ function scr_player_machfreefall()
     image_speed = 0.5;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_42 = 42,
-    Value_106 = 106,
-    Value_111 = 111,
-    Value_137 = 137
-}

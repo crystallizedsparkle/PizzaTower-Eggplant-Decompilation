@@ -1,6 +1,6 @@
 image_xscale = playerid.xscale;
 
-if (playerid.pizzashield == false)
+if (!playerid.pizzashield)
     instance_destroy();
 
 x = playerid.x;

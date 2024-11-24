@@ -1,81 +1,81 @@
 if (picy == 640)
 {
-    if (snickshotgun == false && global.SAGEshotgunsnick == true)
+    if (!snickshotgun && global.SAGEshotgunsnick)
     {
         up = true;
-        sprite = 2067;
+        sprite = bg_SAGEsnickshotgun;
         snickshotgun = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (dungeonbackup == false && global.SAGEdungeonbackup == true)
+    else if (!dungeonbackup && global.SAGEdungeonbackup)
     {
         up = true;
-        sprite = 2068;
+        sprite = bg_SAGEdungeonbackup;
         dungeonbackup = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (srank == false && global.SAGEsrank == true)
+    else if (!srank && global.SAGEsrank)
     {
         up = true;
-        sprite = 2069;
+        sprite = bg_SAGEsrank;
         srank = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (snicksrank == false && global.SAGEsnicksrank == true)
+    else if (!snicksrank && global.SAGEsnicksrank)
     {
         up = true;
-        sprite = 2070;
+        sprite = bg_SAGEsnicksrank;
         snicksrank = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (combo10 == false && global.SAGEcombo10 == true)
+    else if (!combo10 && global.SAGEcombo10)
     {
         up = true;
-        sprite = 2071;
+        sprite = bg_SAGEcombo10;
         combo10 = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (secret == false && global.SAGEsecret == true)
+    else if (!secret && global.SAGEsecret)
     {
         up = true;
-        sprite = 2072;
+        sprite = bg_SAGEsecret;
         secret = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (knight == false && global.SAGEknight == true)
+    else if (!knight && global.SAGEknight)
     {
         up = true;
-        sprite = 2073;
+        sprite = bg_SAGEknight;
         knight = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (toppin == false && global.SAGEtoppin == true)
+    else if (!toppin && global.SAGEtoppin)
     {
         up = true;
-        sprite = 2074;
+        sprite = bg_SAGEtoppin;
         toppin = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
-    else if (treasure == false && global.SAGEtreasure == true)
+    else if (!treasure && global.SAGEtreasure)
     {
         up = true;
-        sprite = 2075;
+        sprite = bg_SAGEtreasure;
         treasure = true;
         alarm[0] = 250;
-        scr_soundeffect(18);
+        scr_soundeffect(sfx_collectgiantpizza);
     }
 }
 
 if (picy == 300)
     up = false;
 
-if (up == true)
+if (up)
     picy -= 10;

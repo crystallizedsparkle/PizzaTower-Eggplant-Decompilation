@@ -1,9 +1,7 @@
-var targetplayer;
-
 if (room == rm_editor)
     exit;
 
-targetplayer = instance_nearest(x, y, obj_player);
+var targetplayer = instance_nearest(x, y, obj_player);
 
 if (slide_buffer > 0)
     slide_buffer--;
@@ -120,7 +118,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -158,7 +156,7 @@ if (state == states.arena_spawn)
     }
 }
 
-if (state == states.walk && bombreset == 0 && forcespawn == false)
+if (state == states.walk && bombreset == 0 && !forcespawn)
 {
     attackmode = choose(0, 0, 1, 1);
     
@@ -195,7 +193,7 @@ if (state == states.walk && bombreset == 0 && forcespawn == false)
     }
 }
 
-if (state == states.walk && bombreset == 0 && forcespawn == true)
+if (state == states.walk && bombreset == 0 && forcespawn)
 {
     nextattack = 2;
     
@@ -230,7 +228,7 @@ if (state == states.stun)
     }
 }
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -239,17 +237,3 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141,
-    Value_142
-}

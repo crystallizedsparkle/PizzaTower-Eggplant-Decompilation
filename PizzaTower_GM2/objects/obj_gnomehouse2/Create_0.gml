@@ -1,7 +1,7 @@
 event_inherited();
-content = 540;
+content = obj_pizzakincheese;
 gnome_id = 1;
 customer_x = 27;
 customer_y = 144;
-spr_idle = 2256;
-spr_happy = 2258;
+spr_idle = spr_gnome1_idle;
+spr_happy = spr_gnome1_happy;

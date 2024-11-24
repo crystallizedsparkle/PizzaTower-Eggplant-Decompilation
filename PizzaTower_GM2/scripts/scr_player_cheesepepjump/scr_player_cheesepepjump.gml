@@ -53,8 +53,3 @@ function scr_player_cheesepepjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_24 = 24,
-    Value_25
-}

@@ -1,8 +1,6 @@
-var yy;
-
 image_alpha = 0.5;
 ventilator_index = 0;
-yy = 0;
+var yy = 0;
 
 while (yy < abs(sprite_height))
 {

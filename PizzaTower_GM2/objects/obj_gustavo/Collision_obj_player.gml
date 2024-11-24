@@ -10,7 +10,3 @@ if (sprite_index == spr_gustavo_showpizza)
     global.heattime = 60;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

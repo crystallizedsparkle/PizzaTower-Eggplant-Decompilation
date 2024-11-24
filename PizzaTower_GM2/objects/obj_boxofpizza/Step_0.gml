@@ -1,5 +1,3 @@
-var _box;
-
 if (global.horse)
     exit;
 
@@ -12,7 +10,7 @@ with (obj_player)
             obj_player1.lastroom = room;
             obj_player2.lastroom = room;
             other.depth = -10;
-            scr_soundeffect(85);
+            scr_soundeffect(sfx_box);
             obj_player1.box = true;
             obj_player2.box = true;
             mach2 = 0;
@@ -23,9 +21,9 @@ with (obj_player)
             obj_player2.targetDoor = other.targetDoor;
             obj_player2.targetRoom = other.targetRoom;
             
-            if (global.coop == true)
+            if (global.coop)
             {
-                _box = other.id;
+                var _box = other.id;
                 
                 with (obj_player)
                 {
@@ -57,7 +55,7 @@ with (obj_player)
         {
             obj_player1.lastroom = room;
             obj_player2.lastroom = room;
-            scr_soundeffect(85);
+            scr_soundeffect(sfx_box);
             other.depth = -10;
             obj_player1.box = true;
             obj_player2.box = true;
@@ -73,9 +71,9 @@ with (obj_player)
             obj_player1.vsp = 0;
             obj_player2.vsp = 0;
             
-            if (global.coop == true)
+            if (global.coop)
             {
-                _box = other.id;
+                var _box = other.id;
                 
                 with (obj_player)
                 {
@@ -120,25 +118,3 @@ if (place_meeting(x, y + 1, obj_doorE) || place_meeting(x, y - 1, obj_doorE))
 if (place_meeting(x, y + 1, obj_doorF) || place_meeting(x, y - 1, obj_doorF))
     targetDoor = "F";
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_58 = 58,
-    Value_65 = 65,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_95 = 95,
-    Value_97 = 97,
-    Value_99 = 99,
-    Value_100,
-    Value_102 = 102,
-    Value_103,
-    Value_104,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_112,
-    Value_121 = 121,
-    Value_123 = 123,
-    Value_186 = 186
-}

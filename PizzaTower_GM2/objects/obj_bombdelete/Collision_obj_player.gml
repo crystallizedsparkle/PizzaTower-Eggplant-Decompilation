@@ -7,9 +7,3 @@ if (!collide)
     }
 }
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_43,
-    Value_183 = 183
-}

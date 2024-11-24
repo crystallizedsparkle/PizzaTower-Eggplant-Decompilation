@@ -1,8 +1,6 @@
-var t;
-
 event_inherited();
 dmg = 40;
-t = 324;
+var t = 324;
 
 if (global.coop)
     t = instance_nearest(x, y, obj_player);
@@ -13,9 +11,7 @@ parried = false;
 
 function parry()
 {
-    var prevparried;
-    
-    prevparried = parried;
+    var prevparried = parried;
     SUPER_parry();
     
     if (prevparried != parried)

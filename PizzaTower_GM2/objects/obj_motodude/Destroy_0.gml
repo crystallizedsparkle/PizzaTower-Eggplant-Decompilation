@@ -1,10 +1,8 @@
-var i;
-
-i = 0;
+var i = 0;
 
 repeat (sprite_get_number(spr_pizzacar_debris))
 {
-    with (create_debris(x, y, 2804))
+    with (create_debris(x, y, spr_pizzacar_debris))
     {
         image_index = i;
         vsp = irandom_range(-7, -11);

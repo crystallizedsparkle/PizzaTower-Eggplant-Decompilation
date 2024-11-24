@@ -463,10 +463,3 @@ function scr_playerreset()
     instance_destroy(obj_shotgunback);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_64 = 64,
-    Value_89 = 89,
-    Value_95 = 95
-}

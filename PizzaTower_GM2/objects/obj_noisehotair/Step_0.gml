@@ -1,4 +1,4 @@
-if ((obj_player.x > (x - 200) && obj_player.x < (x + 200)) && sprite_index != spr_noisehotairthrow && goingup == false)
+if ((obj_player.x > (x - 200) && obj_player.x < (x + 200)) && sprite_index != spr_noisehotairthrow && !goingup)
 {
     sprite_index = spr_noisehotairthrow;
     image_index = 0;
@@ -13,5 +13,5 @@ if (sprite_index == spr_noisehotairthrow && floor(image_index) == (image_number 
     goingup = true;
 }
 
-if (goingup == true)
+if (goingup)
     y -= 5;

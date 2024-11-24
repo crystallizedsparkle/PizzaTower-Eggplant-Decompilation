@@ -1,6 +1,4 @@
-var p;
-
-p = other.id;
+var p = other.id;
 
 with (instance_create(x, y - 60, obj_grabbiehand))
 {
@@ -11,7 +9,3 @@ with (instance_create(x, y - 60, obj_grabbiehand))
 
 instance_destroy();
 
-enum UnknownEnum
-{
-    Value_55 = 55
-}

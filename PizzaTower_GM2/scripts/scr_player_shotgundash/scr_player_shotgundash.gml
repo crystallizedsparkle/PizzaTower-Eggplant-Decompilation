@@ -18,8 +18,3 @@ function scr_player_shotgundash()
     }
 }
 
-enum UnknownEnum
-{
-    Value_57 = 57,
-    Value_66 = 66
-}

@@ -20,7 +20,3 @@ function scr_fakepeppino_idle()
     }
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

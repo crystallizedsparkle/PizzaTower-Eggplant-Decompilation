@@ -18,8 +18,3 @@ if (other.state != states.grabbed && playerid.state != states.grab)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_79 = 79
-}

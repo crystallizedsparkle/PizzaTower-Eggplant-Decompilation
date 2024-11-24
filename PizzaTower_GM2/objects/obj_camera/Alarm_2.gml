@@ -1,4 +1,4 @@
-if (global.timedgate == true)
+if (global.timedgate)
 {
     global.timedgate = false;
     global.seconds = 30;
@@ -6,7 +6,7 @@ if (global.timedgate == true)
     alarm[2] = -1;
 }
 
-if (global.miniboss == true)
+if (global.miniboss)
 {
     with (obj_player)
     {
@@ -18,14 +18,10 @@ if (global.miniboss == true)
         state = states.ejected;
         vsp = -10;
         audio_stop_all();
-        scr_soundeffect(120);
+        scr_soundeffect(mu_timesup);
     }
     
     alarm[2] = -1;
     global.miniboss = false;
 }
 
-enum UnknownEnum
-{
-    Value_7 = 7
-}

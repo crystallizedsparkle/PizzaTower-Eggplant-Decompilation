@@ -1,5 +1,3 @@
-var func;
-
 if (textbuffer > 0)
 {
     textbuffer--;
@@ -26,11 +24,11 @@ else
             obj_player.key_jump = false;
             dialogheight = scr_calculate_height(currenttext);
             dialogsprite = dialog[currentdialog][1];
-            func = dialog[currentdialog][2];
+            var func = dialog[currentdialog][2];
             
-            if (func != -4)
+            if (func != noone)
             {
-                if (npcID != -4 && instance_exists(npcID))
+                if (npcID != noone && instance_exists(npcID))
                 {
                     with (npcID)
                         method(id, func)();

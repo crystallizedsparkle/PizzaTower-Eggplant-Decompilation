@@ -1,8 +1,6 @@
-var p;
-
 if (!attacking && !invincible && lungehurt)
 {
-    p = other.playerid;
+    var p = other.playerid;
     
     with (p)
     {
@@ -27,7 +25,3 @@ if (!attacking && !invincible && lungehurt)
     }
 }
 
-enum UnknownEnum
-{
-    Value_43 = 43
-}

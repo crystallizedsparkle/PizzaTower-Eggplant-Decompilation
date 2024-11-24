@@ -1,6 +1,4 @@
-var player, targetplayer;
-
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 switch (state)
 {
@@ -124,7 +122,7 @@ switch (state)
                 vsp = -4;
                 
                 repeat (3)
-                    create_debris(x, y, 1123);
+                    create_debris(x, y, spr_debris);
             }
         }
         else if (grounded)
@@ -136,7 +134,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -185,7 +183,7 @@ if (ragecooldown > 0)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.chase)
@@ -193,10 +191,10 @@ if (state != states.chase)
 
 if (state == states.walk || state == states.idle)
 {
-    targetplayer = 324;
+    var targetplayer = obj_player1;
     
-    if (obj_player1.spotlight == false)
-        targetplayer = 323;
+    if (!obj_player1.spotlight)
+        targetplayer = obj_player2;
     
     movespeed = 4;
     
@@ -227,7 +225,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -251,21 +249,3 @@ else
     image_blend = c_white;
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_121 = 121,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141,
-    Value_154 = 154,
-    Value_155,
-    Value_189 = 189
-}

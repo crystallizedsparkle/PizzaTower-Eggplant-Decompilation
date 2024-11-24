@@ -1,5 +1,3 @@
-var _state, _transfo, spr, b, change_pos, spd;
-
 if (room == Realtitlescreen || room == rm_eggplantdisclaimer || room == rank_room || room == rm_levelselect || room == timesuproom || room == boss_room1 || room == characterselect || room == hub_loadingscreen)
 {
     visible = false;
@@ -15,18 +13,18 @@ if (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud)
 
 image_speed = 0.35;
 
-if (targetgolf != -4 && !instance_exists(targetgolf))
-    targetgolf = -4;
+if (targetgolf != noone && !instance_exists(targetgolf))
+    targetgolf = noone;
 
-if (targetgolf != -4 && !view_visible[1])
+if (targetgolf != noone && !view_visible[1])
 {
     view_visible[1] = true;
     view_enabled = true;
 }
 
-if (bubblespr != -4 && bubblespr != 1324)
+if (bubblespr != noone && bubblespr != spr_tv_bubbleclosed)
 {
-    if (prompt != -4)
+    if (prompt != noone)
         prompt_buffer = 2;
     
     bubbleindex += image_speed;
@@ -37,15 +35,15 @@ if (bubblespr != -4 && bubblespr != 1324)
         
         switch (bubblespr)
         {
-            case 455:
-                bubblespr = 1293;
+            case spr_tv_bubbleopen:
+                bubblespr = spr_tv_bubble;
                 break;
             
-            case 433:
-                bubblespr = 1324;
+            case spr_tv_bubbleclose:
+                bubblespr = spr_tv_bubbleclosed;
                 
-                if (prompt == -4 || prompt == "")
-                    bubblespr = -4;
+                if (prompt == noone || prompt == "")
+                    bubblespr = noone;
                 
                 break;
         }
@@ -55,20 +53,20 @@ if (bubblespr != -4 && bubblespr != 1324)
 switch (state)
 {
     case states.normal:
-        idlespr = 2700;
+        idlespr = spr_tv_idle;
         
         if (!obj_player.ispeppino)
-            idlespr = 802;
+            idlespr = spr_tv_idleN;
         
         if (obj_player.isgustavo)
         {
-            idlespr = 2769;
+            idlespr = spr_tv_idleG;
             
             if (global.panic)
-                idlespr = 1767;
+                idlespr = spr_tv_escapeG;
         }
         
-        _state = obj_player1.state;
+        var _state = obj_player1.state;
         
         if (_state == states.backbreaker || _state == states.chainsaw)
             _state = obj_player1.tauntstoredstate;
@@ -80,39 +78,39 @@ switch (state)
             case states.knightpep:
             case states.knightpepattack:
             case states.knightpepslopes:
-                idlespr = 596;
+                idlespr = spr_tv_knight;
                 break;
             
             case states.bombpep:
-                idlespr = 2590;
+                idlespr = spr_tv_bombpep;
                 break;
             
             case states.fireass:
-                idlespr = 550;
+                idlespr = spr_tv_fireass;
                 
                 if (obj_player1.sprite_index == obj_player1.spr_scaredjump1 || obj_player1.sprite_index == obj_player1.spr_scaredjump2)
-                    idlespr = 2803;
+                    idlespr = spr_tv_scaredjump;
                 
                 break;
             
             case states.tumble:
                 if (obj_player1.sprite_index == obj_player1.spr_tumble || obj_player1.sprite_index == obj_player1.spr_tumblestart || obj_player1.sprite_index == obj_player1.spr_tumbleend)
-                    idlespr = 1711;
+                    idlespr = spr_tv_tumble;
                 
                 break;
             
             case states.firemouth:
-                idlespr = 1139;
+                idlespr = spr_tv_firemouth;
                 break;
             
             case states.ghost:
             case states.ghostpossess:
-                idlespr = 2147;
+                idlespr = spr_tv_ghost;
                 break;
             
             case states.stunned:
                 if (obj_player1.sprite_index == obj_player1.spr_squished)
-                    idlespr = 339;
+                    idlespr = spr_tv_squished;
                 
                 break;
             
@@ -124,9 +122,9 @@ switch (state)
                 with (obj_player1)
                 {
                     if (shotgunAnim)
-                        other.idlespr = 334;
+                        other.idlespr = spr_tv_shotgun;
                     else if (global.mort)
-                        other.idlespr = 2654;
+                        other.idlespr = spr_tv_mort;
                 }
                 
                 break;
@@ -135,13 +133,13 @@ switch (state)
             case states.freefall:
             case states.freefallland:
                 if (obj_player1.shotgunAnim)
-                    idlespr = 334;
+                    idlespr = spr_tv_shotgun;
                 
                 break;
             
             case states.pistol:
                 if (global.mort)
-                    idlespr = 2654;
+                    idlespr = spr_tv_mort;
                 
                 break;
             
@@ -151,36 +149,36 @@ switch (state)
             case states.shotgundash:
             case states.shotguncrouch:
             case states.shotguncrouchjump:
-                idlespr = 334;
+                idlespr = spr_tv_shotgun;
                 break;
             
             case states.barrel:
-                idlespr = 185;
+                idlespr = spr_tv_barrel;
                 break;
             
             case states.golf:
-                idlespr = 1296;
+                idlespr = spr_tv_golf;
                 break;
             
             case states.rocket:
-                idlespr = 135;
+                idlespr = spr_tv_rocket;
                 break;
             
             case states.cheeseball:
-                idlespr = 2240;
+                idlespr = spr_tv_cheeseball;
                 break;
             
             case states.cheesepep:
             case states.cheesepepstick:
             case states.cheesepepstickside:
             case states.cheesepepstickup:
-                idlespr = 2457;
+                idlespr = spr_tv_cheesepep;
                 break;
             
             case states.boxxedpep:
             case states.boxxedpepjump:
             case states.boxxedpepspin:
-                idlespr = 2832;
+                idlespr = spr_tv_boxxedpep;
                 break;
             
             case states.mach2:
@@ -188,18 +186,18 @@ switch (state)
             case states.machroll:
             case states.grind:
                 if (obj_player1.skateboarding)
-                    idlespr = 1197;
+                    idlespr = spr_tv_clown;
                 
                 break;
             
             default:
-                _transfo = false;
+                var _transfo = false;
                 break;
         }
         
         if (!obj_player1.ispeppino)
         {
-            spr = sprite_get_name(idlespr);
+            var spr = sprite_get_name(idlespr);
             spr = asset_get_index(concat(spr, "N"));
             
             if (spr > -1)
@@ -210,18 +208,18 @@ switch (state)
         {
             with (obj_player1)
             {
-                if (mach4mode == true)
-                    tv_do_expression(2845);
+                if (mach4mode)
+                    tv_do_expression(spr_tv_exprmach4);
                 else if (state == states.mach3 || sprite_index == spr_mach3boost)
-                    tv_do_expression(855);
+                    tv_do_expression(spr_tv_exprmach3);
                 else if (state == states.hurt)
-                    tv_do_expression(1319);
+                    tv_do_expression(spr_tv_exprhurt);
                 else if (state == states.ratmounthurt)
-                    tv_do_expression(1497);
+                    tv_do_expression(spr_tv_hurtG);
                 else if (global.combo >= 3 && !obj_player.isgustavo)
-                    tv_do_expression(2453);
+                    tv_do_expression(spr_tv_exprcombo);
                 else if (global.stylethreshold >= 3 && !obj_player.isgustavo)
-                    tv_do_expression(307);
+                    tv_do_expression(spr_tv_exprheat);
             }
         }
         
@@ -278,7 +276,7 @@ switch (state)
                     idleanim = 240 + (60 * irandom_range(-1, 2));
                 }
                 
-                if (idlespr != 2700 && idlespr != 802)
+                if (idlespr != spr_tv_idle && idlespr != spr_tv_idleN)
                     sprite_index = idlespr;
                 
                 break;
@@ -291,12 +289,12 @@ switch (state)
         {
             if (!ds_list_empty(tvprompts_list))
             {
-                b = ds_list_find_value(tvprompts_list, 0);
+                var b = ds_list_find_value(tvprompts_list, 0);
                 prompt_buffer = prompt_max;
                 
-                if (b[0] != "" && b[0] != -4)
+                if (b[0] != "" && b[0] != noone)
                 {
-                    bubblespr = 455;
+                    bubblespr = spr_tv_bubbleopen;
                     bubbleindex = 0;
                     prompt = b[0];
                     promptspd = b[3];
@@ -304,15 +302,15 @@ switch (state)
                 }
                 else
                 {
-                    if (bubblespr != -4 && bubblespr != 1324)
-                        bubblespr = 433;
+                    if (bubblespr != noone && bubblespr != spr_tv_bubbleclosed)
+                        bubblespr = spr_tv_bubbleclose;
                     
-                    if (bubblespr == 1324)
-                        bubblespr = -4;
+                    if (bubblespr == spr_tv_bubbleclosed)
+                        bubblespr = noone;
                     
                     bubbleindex = 0;
                     promptx = promptxstart;
-                    prompt = -4;
+                    prompt = noone;
                 }
                 
                 if (b[1] == states.normal)
@@ -351,7 +349,7 @@ switch (state)
             }
             else
             {
-                bubblespr = -4;
+                bubblespr = noone;
             }
         }
         
@@ -377,7 +375,7 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_250:
+    case states.tv_whitenoise:
         sprite_index = spr_tv_whitenoise;
         
         if (noisebuffer > 0)
@@ -388,9 +386,9 @@ switch (state)
         {
             noisebuffer = noisemax;
             
-            if (expressionsprite != -4)
+            if (expressionsprite != noone)
             {
-                state = UnknownEnum.Value_251;
+                state = states.tv_expression;
                 sprite_index = expressionsprite;
             }
             else
@@ -403,10 +401,10 @@ switch (state)
         
         break;
     
-    case UnknownEnum.Value_251:
+    case states.tv_expression:
         switch (expressionsprite)
         {
-            case 1319:
+            case spr_tv_exprhurt:
                 if (obj_player1.state != states.hurt)
                 {
                     if (expressionbuffer > 0)
@@ -415,14 +413,14 @@ switch (state)
                     }
                     else
                     {
-                        state = UnknownEnum.Value_250;
-                        expressionsprite = -4;
+                        state = states.tv_whitenoise;
+                        expressionsprite = noone;
                     }
                 }
                 
                 break;
             
-            case 1497:
+            case spr_tv_hurtG:
                 if (obj_player1.state != states.ratmounthurt)
                 {
                     if (expressionbuffer > 0)
@@ -431,18 +429,18 @@ switch (state)
                     }
                     else
                     {
-                        state = UnknownEnum.Value_250;
-                        expressionsprite = -4;
+                        state = states.tv_whitenoise;
+                        expressionsprite = noone;
                     }
                 }
                 
                 break;
             
-            case 2453:
+            case spr_tv_exprcombo:
                 if (global.combo < 3 || obj_player1.isgustavo)
                 {
-                    state = UnknownEnum.Value_250;
-                    expressionsprite = -4;
+                    state = states.tv_whitenoise;
+                    expressionsprite = noone;
                     
                     if (obj_player1.state == states.hurt)
                         tv_do_expression(1319);
@@ -450,46 +448,46 @@ switch (state)
                 
                 break;
             
-            case 731:
-            case 263:
+            case spr_tv_exprcollect:
+            case spr_tv_happyG:
                 if (expressionbuffer > 0)
                 {
                     expressionbuffer--;
                 }
                 else
                 {
-                    state = UnknownEnum.Value_250;
-                    expressionsprite = -4;
+                    state = states.tv_whitenoise;
+                    expressionsprite = noone;
                 }
                 
                 break;
             
-            case 855:
+            case spr_tv_exprmach3:
                 with (obj_player1)
                 {
                     if (state != states.mach3 && (state != states.chainsaw || tauntstoredstate != states.mach3) && sprite_index != spr_mach3boost && mach4mode == false)
                     {
-                        other.state = UnknownEnum.Value_250;
-                        other.expressionsprite = -4;
+                        other.state = states.tv_whitenoise;
+                        other.expressionsprite = noone;
                     }
                 }
                 
                 break;
             
-            case 2845:
+            case spr_tv_exprmach4:
                 with (obj_player1)
                 {
-                    if (mach4mode == false)
+                    if (!mach4mode)
                     {
-                        other.state = UnknownEnum.Value_250;
-                        other.expressionsprite = -4;
+                        other.state = states.tv_whitenoise;
+                        other.expressionsprite = noone;
                     }
                 }
                 
                 break;
             
-            case 307:
-                _transfo = false;
+            case spr_tv_exprheat:
+                var _transfo = false;
                 
                 with (obj_player1)
                 {
@@ -502,8 +500,8 @@ switch (state)
                 
                 if (global.stylethreshold < 3 || _transfo)
                 {
-                    state = UnknownEnum.Value_250;
-                    expressionsprite = -4;
+                    state = states.tv_whitenoise;
+                    expressionsprite = noone;
                 }
                 
                 break;
@@ -511,22 +509,22 @@ switch (state)
         
         if (!ds_list_empty(tvprompts_list))
         {
-            state = UnknownEnum.Value_250;
-            expressionsprite = -4;
+            state = states.tv_whitenoise;
+            expressionsprite = noone;
         }
         
         break;
 }
 
-change_pos = false;
+var change_pos = false;
 
 if (obj_player.x > (room_width - 224) && obj_player.y < 187)
     change_pos = true;
 
-if (bubblespr != -4 && obj_player.x > 316 && obj_player.y < 101)
+if (bubblespr != noone && obj_player.x > 316 && obj_player.y < 101)
     change_pos = true;
 
-spd = 15;
+var spd = 15;
 
 if (change_pos)
     hud_posY = Approach(hud_posY, -300, spd);
@@ -548,16 +546,16 @@ if (global.panic && global.fill > 0)
 }
 else if (global.panic)
 {
-    if (pizzaface_sprite == 2201)
+    if (pizzaface_sprite == spr_timer_pizzaface1)
     {
-        pizzaface_sprite = 906;
+        pizzaface_sprite = spr_timer_pizzaface2;
         pizzaface_index = 0;
     }
-    else if (pizzaface_sprite == 906)
+    else if (pizzaface_sprite == spr_timer_pizzaface2)
     {
         if (floor(pizzaface_index) == (sprite_get_number(pizzaface_sprite) - 1))
         {
-            pizzaface_sprite = 2662;
+            pizzaface_sprite = spr_timer_pizzaface3;
             pizzaface_index = 0;
         }
     }
@@ -572,13 +570,13 @@ else if (global.panic)
 }
 else
 {
-    pizzaface_sprite = 2201;
-    hand_sprite = 1117;
+    pizzaface_sprite = spr_timer_pizzaface1;
+    hand_sprite = spr_timer_hand1;
     timer_y = timer_ystart + 212;
 }
 
 if (global.panic && global.fill < (chunkmax / 5))
-    hand_sprite = 2670;
+    hand_sprite = spr_timer_hand2;
 
 barfill_x -= 0.2;
 
@@ -658,54 +656,3 @@ combofill_index += 0.35;
 if (combofill_index > (sprite_get_number(spr_tv_combobubblefill) - 1))
     combofill_index = frac(combofill_index);
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_8 = 8,
-    Value_9,
-    Value_10,
-    Value_16 = 16,
-    Value_17,
-    Value_21 = 21,
-    Value_24 = 24,
-    Value_25,
-    Value_29 = 29,
-    Value_30,
-    Value_33 = 33,
-    Value_34,
-    Value_35,
-    Value_37 = 37,
-    Value_38,
-    Value_42 = 42,
-    Value_47 = 47,
-    Value_48,
-    Value_51 = 51,
-    Value_57 = 57,
-    Value_59 = 59,
-    Value_61 = 61,
-    Value_65 = 65,
-    Value_66,
-    Value_67,
-    Value_68,
-    Value_70 = 70,
-    Value_71,
-    Value_72,
-    Value_78 = 78,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_93,
-    Value_100 = 100,
-    Value_104 = 104,
-    Value_107 = 107,
-    Value_108,
-    Value_111 = 111,
-    Value_113 = 113,
-    Value_121 = 121,
-    Value_122,
-    Value_148 = 148,
-    Value_184 = 184,
-    Value_196 = 196,
-    Value_250 = 250,
-    Value_251
-}

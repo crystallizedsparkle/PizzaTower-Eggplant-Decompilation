@@ -43,9 +43,3 @@ function scr_player_gotoplayer()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_9 = 9
-}

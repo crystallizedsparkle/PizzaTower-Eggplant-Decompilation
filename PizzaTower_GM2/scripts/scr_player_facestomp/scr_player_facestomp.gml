@@ -79,11 +79,3 @@ function scr_player_facestomp()
         input_buffer_jump = 0;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_42 = 42,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_111 = 111
-}

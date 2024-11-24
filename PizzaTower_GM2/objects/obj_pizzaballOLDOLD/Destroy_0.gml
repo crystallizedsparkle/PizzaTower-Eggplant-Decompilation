@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
+if (ds_list_find_index(global.baddieroom, id) == -1 && !important)
 {
     if (global.golfhit < 10)
     {

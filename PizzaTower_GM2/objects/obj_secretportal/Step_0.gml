@@ -72,9 +72,3 @@ if (floor(image_index) == (image_number - 1))
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_104 = 104,
-    Value_121 = 121
-}

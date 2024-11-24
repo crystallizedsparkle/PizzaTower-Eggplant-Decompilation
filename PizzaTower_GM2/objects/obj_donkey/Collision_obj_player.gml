@@ -1,6 +1,6 @@
 if (cooldown == 0)
 {
-    scr_soundeffect(11);
+    scr_soundeffect(sfx_cowkick);
     other.x = x - (image_xscale * 35);
     other.y = y;
     sprite_index = spr_cowkick;
@@ -19,7 +19,3 @@ if (cooldown == 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_165 = 165
-}

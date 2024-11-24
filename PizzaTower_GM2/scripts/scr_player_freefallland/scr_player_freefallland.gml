@@ -28,7 +28,3 @@ function scr_player_freefallland()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

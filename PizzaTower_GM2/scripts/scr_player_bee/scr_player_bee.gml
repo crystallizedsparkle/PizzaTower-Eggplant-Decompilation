@@ -14,7 +14,3 @@ function scr_player_bee()
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

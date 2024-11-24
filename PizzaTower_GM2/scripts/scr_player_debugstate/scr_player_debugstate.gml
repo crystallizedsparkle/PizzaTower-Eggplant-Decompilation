@@ -21,7 +21,3 @@ function scr_player_debugstate()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

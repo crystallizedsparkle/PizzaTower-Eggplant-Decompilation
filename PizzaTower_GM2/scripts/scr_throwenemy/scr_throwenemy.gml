@@ -34,7 +34,3 @@ function scr_throwenemy()
     }
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

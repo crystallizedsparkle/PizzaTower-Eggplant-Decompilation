@@ -1,7 +1,5 @@
-var _cam_x, _cam_y;
-
-_cam_x = camera_get_view_x(view_camera[0]);
-_cam_y = camera_get_view_y(view_camera[0]);
+var _cam_x = camera_get_view_x(view_camera[0]);
+var _cam_y = camera_get_view_y(view_camera[0]);
 layer_x("Assets_BG", _cam_x * 0.2);
 layer_y("Assets_BG", _cam_y * 0.2);
 layer_x("Backgrounds_1", bg_1xoffset + (_cam_x * 0.18));

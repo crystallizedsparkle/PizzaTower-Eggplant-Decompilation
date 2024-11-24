@@ -68,7 +68,7 @@ function scr_collide_destructibles()
                 }
             }
             
-            if (state == states.trashroll || state == states.boxxedpepspin || ratmount_movespeed == 12 || state == UnknownEnum.Value_259 || state == states.ratmounttumble || state == states.punch || state == states.handstandjump || state == states.ratmountattack || state == states.lungeattack || state == states.cheeseball || state == states.bombpepside || state == states.rocket || state == states.shotgundash || state == states.faceplant || state == states.slipnslide || state == states.tacklecharge || sprite_index == spr_barrelroll || state == states.chainsawbump || state == states.mach3 || state == states.knightpep || state == states.machroll || state == states.knightpepslopes || state == states.knightpepattack || state == states.tumble || state == states.hookshot || state == states.shoulderbash)
+            if (state == states.trashroll || state == states.boxxedpepspin || ratmount_movespeed == 12 || state == states.ratmountpunch || state == states.ratmounttumble || state == states.punch || state == states.handstandjump || state == states.ratmountattack || state == states.lungeattack || state == states.cheeseball || state == states.bombpepside || state == states.rocket || state == states.shotgundash || state == states.faceplant || state == states.slipnslide || state == states.tacklecharge || sprite_index == spr_barrelroll || state == states.chainsawbump || state == states.mach3 || state == states.knightpep || state == states.machroll || state == states.knightpepslopes || state == states.knightpepattack || state == states.tumble || state == states.hookshot || state == states.shoulderbash)
             {
                 if (place_meeting(x + hsp, y, obj_destructibles))
                 {
@@ -98,7 +98,7 @@ function scr_collide_destructibles()
                 }
             }
             
-            if ((state == states.knightpep || sprite_index == spr_lonegustavo_groundpoundstart || sprite_index == spr_lonegustavo_groundpound || state == UnknownEnum.Value_254 || state == states.firemouth || state == states.slipbanan || state == states.superslam || state == states.hookshot || (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
+            if ((state == states.knightpep || sprite_index == spr_lonegustavo_groundpoundstart || sprite_index == spr_lonegustavo_groundpound || state == states.jetpackjump || state == states.firemouth || state == states.slipbanan || state == states.superslam || state == states.hookshot || (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
             {
                 if (place_meeting(x, y + 1, obj_destructibles))
                 {
@@ -108,7 +108,7 @@ function scr_collide_destructibles()
                         instance_destroy();
                     }
                     
-                    if (state == states.firemouth || state == UnknownEnum.Value_254)
+                    if (state == states.firemouth || state == states.jetpackjump)
                     {
                         with (instance_place(x, y + 1, obj_tntblock))
                         {
@@ -139,7 +139,7 @@ function scr_collide_destructibles()
             
             ds_list_clear(global.instancelist);
             
-            if (vsp <= 0.5 && (state == states.jump || state == states.ratmountjump || state == states.mach3 || state == states.mach2 || state == UnknownEnum.Value_265 || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.cheeseballclimbwall || state == states.mach3 || (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
+            if (vsp <= 0.5 && (state == states.jump || state == states.ratmountjump || state == states.mach3 || state == states.mach2 || state == states.antigrav || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.cheeseballclimbwall || state == states.mach3 || (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
             {
                 vy = -1;
                 
@@ -253,53 +253,3 @@ function scr_collide_destructibles()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_6,
-    Value_9 = 9,
-    Value_10,
-    Value_19 = 19,
-    Value_20,
-    Value_21,
-    Value_22,
-    Value_31 = 31,
-    Value_34 = 34,
-    Value_37 = 37,
-    Value_38,
-    Value_41 = 41,
-    Value_42,
-    Value_43,
-    Value_47 = 47,
-    Value_48,
-    Value_53 = 53,
-    Value_54,
-    Value_58 = 58,
-    Value_65 = 65,
-    Value_70 = 70,
-    Value_76 = 76,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_94 = 94,
-    Value_97 = 97,
-    Value_102 = 102,
-    Value_104 = 104,
-    Value_107 = 107,
-    Value_108,
-    Value_111 = 111,
-    Value_121 = 121,
-    Value_124 = 124,
-    Value_153 = 153,
-    Value_165 = 165,
-    Value_184 = 184,
-    Value_187 = 187,
-    Value_192 = 192,
-    Value_193,
-    Value_197 = 197,
-    Value_198,
-    Value_201 = 201,
-    Value_211 = 211,
-    Value_254 = 254,
-    Value_259 = 259,
-    Value_265 = 265
-}

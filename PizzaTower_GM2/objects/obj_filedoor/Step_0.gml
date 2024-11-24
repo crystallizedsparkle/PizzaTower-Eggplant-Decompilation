@@ -1,8 +1,6 @@
-var str;
-
 if (distance_to_object(obj_player1) < 50)
 {
-    str = "";
+    var str = "";
     
     if (obj_player1.state == states.bombdelete)
         str = "DELETE ";
@@ -15,7 +13,3 @@ if (distance_to_object(obj_player1) < 50)
     }
 }
 
-enum UnknownEnum
-{
-    Value_183 = 183
-}

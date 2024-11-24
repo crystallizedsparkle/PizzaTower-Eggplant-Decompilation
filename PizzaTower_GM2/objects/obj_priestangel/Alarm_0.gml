@@ -6,7 +6,3 @@ with (priestID)
 
 state = states.jump;
 
-enum UnknownEnum
-{
-    Value_92 = 92
-}

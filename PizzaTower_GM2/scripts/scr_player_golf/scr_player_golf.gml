@@ -27,9 +27,3 @@ function scr_player_golf()
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_148 = 148,
-    Value_156 = 156
-}

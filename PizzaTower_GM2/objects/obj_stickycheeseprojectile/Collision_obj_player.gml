@@ -1,6 +1,6 @@
 alarm[0] = 60;
 sticked = true;
-create_debris(x + random_range(-5, 5), y + random_range(-5, 5), 1136, false);
+create_debris(x + random_range(-5, 5), y + random_range(-5, 5), spr_slimedebris, false);
 x = other.x;
 y = other.y;
 
@@ -14,7 +14,3 @@ with (other)
 
 instance_destroy();
 
-enum UnknownEnum
-{
-    Value_26 = 26
-}

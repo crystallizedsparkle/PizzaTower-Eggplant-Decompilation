@@ -1,5 +1,3 @@
-var num, i;
-
 switch (state)
 {
     case states.normal:
@@ -8,9 +6,9 @@ switch (state)
         break;
     
     case states.fall:
-        num = instance_place_list(x, y + vsp + 1, 332, global.instancelist, false);
+        var num = instance_place_list(x, y + vsp + 1, obj_destructibles, global.instancelist, false);
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
             instance_destroy(ds_list_find_value(global.instancelist, i));
         
         ds_list_clear(global.instancelist);
@@ -19,7 +17,7 @@ switch (state)
         
         if (grounded)
         {
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             create_particle(x, y, particles.landcloud);
             state = states.jump;
             
@@ -44,10 +42,3 @@ switch (state)
 if (!place_meeting(x, y, obj_trapghost) && !place_meeting(xstart, ystart, obj_trapghost))
     sprite_index = spr_kingghost_anchor;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_12 = 12,
-    Value_92 = 92,
-    Value_135 = 135
-}

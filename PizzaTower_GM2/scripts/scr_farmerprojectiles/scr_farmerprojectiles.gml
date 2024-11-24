@@ -77,7 +77,3 @@ function scr_change_farmers()
     farmer_rearrange();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

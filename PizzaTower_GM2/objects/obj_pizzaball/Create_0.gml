@@ -1,5 +1,5 @@
 scr_initenemy();
-pointerID = -4;
+pointerID = noone;
 destroyable = false;
 shakestun = false;
 hitspeed = 0;
@@ -20,32 +20,28 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 254;
-idlespr = 258;
-fallspr = 254;
-stunfallspr = 254;
-walkspr = 255;
-turnspr = 255;
-recoveryspr = 254;
-grabbedspr = 254;
-scaredspr = 254;
-ragespr = 152;
+landspr = spr_pizzaball_stun;
+idlespr = spr_pizzaball_idle2;
+fallspr = spr_pizzaball_stun;
+stunfallspr = spr_pizzaball_stun;
+walkspr = spr_pizzaball_walk;
+turnspr = spr_pizzaball_walk;
+recoveryspr = spr_pizzaball_stun;
+grabbedspr = spr_pizzaball_stun;
+scaredspr = spr_pizzaball_stun;
+ragespr = spr_cheeseslime_rage;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 254;
+spr_dead = spr_pizzaball_stun;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

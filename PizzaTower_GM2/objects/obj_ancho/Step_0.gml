@@ -1,5 +1,3 @@
-var player;
-
 if (room == rm_editor)
     exit;
 
@@ -54,7 +52,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -76,7 +74,7 @@ if (state == states.stun)
 else
     grav = 0;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -87,7 +85,7 @@ if (state != states.charge)
 
 if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number - 1))
 {
-    if (hitboxcreate == false && state == states.charge)
+    if (!hitboxcreate && state == states.charge)
     {
         hitboxcreate = true;
         
@@ -99,12 +97,12 @@ if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number
     movespeed = 10;
 }
 
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 if (ragebuffer > 0)
     ragebuffer--;
 
-if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y >= (player.y - 60)) && important == false)
+if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y >= (player.y - 60)) && !important)
 {
     if (state != states.rage && ragebuffer == 0 && elite && (state == states.walk || state == states.charge))
     {
@@ -129,7 +127,7 @@ if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y
         
         create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
     }
-    else if (x != player.x && state != states.charge && y == ystart && important == false)
+    else if (x != player.x && state != states.charge && y == ystart && !important)
     {
         if (state == states.walk)
         {
@@ -147,7 +145,7 @@ if (state == states.stun || state == states.walk)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -158,18 +156,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

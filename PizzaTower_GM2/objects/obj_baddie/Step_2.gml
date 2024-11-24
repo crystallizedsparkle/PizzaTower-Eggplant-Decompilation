@@ -2,7 +2,7 @@ if (state == states.grabbed)
     scr_enemy_grabbed();
 else if (state == states.lungeattack)
     scr_enemy_lungeattack();
-else if (state == UnknownEnum.Value_266)
+else if (state == states.secret)
     scr_enemy_secret();
 
 scr_squash();
@@ -59,17 +59,3 @@ if (y > (room_height + 100))
 if (thrown && (x > (room_width + 100) || x < -100 || y < -100))
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_4 = 4,
-    Value_43 = 43,
-    Value_84 = 84,
-    Value_128 = 128,
-    Value_129,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_154 = 154,
-    Value_266 = 266
-}

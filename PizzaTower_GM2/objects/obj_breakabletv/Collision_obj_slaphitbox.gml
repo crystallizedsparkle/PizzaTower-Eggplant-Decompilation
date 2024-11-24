@@ -11,7 +11,3 @@ with (obj_player1)
 
 grabbed = true;
 
-enum UnknownEnum
-{
-    Value_79 = 79
-}

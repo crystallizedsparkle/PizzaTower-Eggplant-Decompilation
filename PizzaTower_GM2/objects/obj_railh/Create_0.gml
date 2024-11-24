@@ -1,4 +1,4 @@
 event_inherited();
 dir = -1;
-spr_left = 14;
-spr_right = 12;
+spr_left = spr_railhleft;
+spr_right = spr_railhright;

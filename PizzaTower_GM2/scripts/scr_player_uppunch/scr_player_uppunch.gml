@@ -131,7 +131,3 @@ function scr_player_uppunch()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

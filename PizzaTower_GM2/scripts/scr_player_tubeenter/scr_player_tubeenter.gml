@@ -45,8 +45,3 @@ function scr_player_tubeenter()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_150 = 150
-}

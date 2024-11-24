@@ -28,7 +28,3 @@ if (obj_player2.state == states.bombpep && obj_player2.sprite_index != obj_playe
     }
 }
 
-enum UnknownEnum
-{
-    Value_51 = 51
-}

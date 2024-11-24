@@ -1,9 +1,9 @@
-if (obj_player1.spotlight == true)
-    playerid = 324;
+if (obj_player1.spotlight)
+    playerid = obj_player1;
 else
-    playerid = 323;
+    playerid = obj_player2;
 
-if (playerid.mort == false)
+if (!playerid.mort)
     visible = true;
 else
     visible = false;
@@ -20,5 +20,5 @@ else
 
 depth = -6;
 
-if (global.mort == false)
+if (!global.mort)
     instance_destroy();

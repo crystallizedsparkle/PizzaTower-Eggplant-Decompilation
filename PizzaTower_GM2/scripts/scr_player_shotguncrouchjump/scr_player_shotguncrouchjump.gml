@@ -33,7 +33,3 @@ function scr_player_shotguncrouchjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_67 = 67
-}

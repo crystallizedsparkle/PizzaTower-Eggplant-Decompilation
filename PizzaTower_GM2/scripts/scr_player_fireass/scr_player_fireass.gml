@@ -100,8 +100,3 @@ function scr_player_fireass()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_7 = 7
-}

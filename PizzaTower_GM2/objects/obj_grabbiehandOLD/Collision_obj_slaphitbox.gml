@@ -1,4 +1,4 @@
-if (thumbingup == false && (x <= (xstarte + 5) && x >= (xstarte - 5)) && (y <= (ystarte + 5) && y >= (ystarte - 5)) && grabbing == false)
+if (!thumbingup && (x <= (xstarte + 5) && x >= (xstarte - 5)) && (y <= (ystarte + 5) && y >= (ystarte - 5)) && !grabbing)
 {
     delay = 5;
     image_xscale = -obj_player.xscale;

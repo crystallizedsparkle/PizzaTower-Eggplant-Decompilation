@@ -5,7 +5,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 {
     repeat (2)
     {
-        with (create_debris(x + random_range(0, sprite_width), y + random_range(0, sprite_height), 2619, true))
+        with (create_debris(x + random_range(0, sprite_width), y + random_range(0, sprite_height), spr_towerblockdebris, true))
         {
             hsp = random_range(-5, 5);
             vsp = random_range(-10, 10);
@@ -28,6 +28,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(15, 16);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
 }

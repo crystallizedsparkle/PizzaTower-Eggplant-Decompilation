@@ -24,44 +24,44 @@ function string_split(argument0, argument1)
     return _list;
 }
 
-function function_overload(argument0, argument1)
+function function_overload(_array, _func)
 {
     var _size;
     
-    _size = array_length(argument0);
+    _size = array_length(_array);
     
     switch (_size - 1)
     {
         case -1:
-            argument1();
+            _func();
             break;
         
         case 0:
-            argument1(argument0[0]);
+            _func(_array[0]);
             break;
         
         case 1:
-            argument1(argument0[0], argument0[1]);
+            _func(_array[0], _array[1]);
             break;
         
         case 2:
-            argument1(argument0[0], argument0[1], argument0[2]);
+            _func(_array[0], _array[1], _array[2]);
             break;
         
         case 3:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3]);
+            _func(_array[0], _array[1], _array[2], _array[3]);
             break;
         
         case 4:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4]);
+            _func(_array[0], _array[1], _array[2], _array[3], _array[4]);
             break;
         
         case 5:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4], argument0[5]);
+            _func(_array[0], _array[1], _array[2], _array[3], _array[4], _array[5]);
             break;
         
         case 6:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4], argument0[5], argument0[6]);
+            _func(_array[0], _array[1], _array[2], _array[3], _array[4], _array[5], _array[6]);
             break;
     }
 }

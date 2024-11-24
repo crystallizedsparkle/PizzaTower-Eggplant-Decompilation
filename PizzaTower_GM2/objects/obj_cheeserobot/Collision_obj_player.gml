@@ -2,7 +2,7 @@ if (state != states.grabbed)
 {
     with (obj_player)
     {
-        if (y < other.y && attacking == false && state == states.jump && vsp > 0)
+        if (y < other.y && !attacking && state == states.jump && vsp > 0)
         {
             if (vsp > 0)
             {
@@ -60,7 +60,7 @@ if (state != states.grabbed)
             state = states.tackle;
         }
         
-        if ((state == states.mach2 || state == states.grab) && other.grounded == true)
+        if ((state == states.mach2 || state == states.grab) && other.grounded)
         {
             instance_create(x, y, obj_bumpeffect);
             other.vsp = -10;
@@ -77,7 +77,7 @@ if (state != states.grabbed)
             }
         }
         
-        if (attacking == true && state != states.mach2)
+        if (attacking && state != states.mach2)
         {
             if (state == states.mach3)
                 other.shot = true;
@@ -90,7 +90,7 @@ if (state != states.grabbed)
                 vsp = -10;
         }
         
-        if (attacking == false && (state != states.tackle && state != states.hurt) && !(y < other.y) && grabbing == false && other.state != states.stun)
+        if (!attacking && (state != states.tackle && state != states.hurt) && !(y < other.y) && !grabbing && other.state != states.stun)
         {
             if (x != other.x)
             {
@@ -116,21 +116,3 @@ if (state != states.grabbed)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_79 = 79,
-    Value_91 = 91,
-    Value_92,
-    Value_103 = 103,
-    Value_104,
-    Value_106 = 106,
-    Value_107,
-    Value_108,
-    Value_121 = 121,
-    Value_126 = 126,
-    Value_130 = 130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_138 = 138
-}

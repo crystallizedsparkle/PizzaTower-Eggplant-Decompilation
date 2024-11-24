@@ -1,12 +1,10 @@
-var gp_num, gp_num2, gp_connected, i;
-
-if (ready == false)
+if (!ready)
 {
-    gp_num = gamepad_get_device_count();
-    gp_num2 = 0;
-    gp_connected = false;
+    var gp_num = gamepad_get_device_count();
+    var gp_num2 = 0;
+    var gp_connected = false;
     
-    for (i = 0; i < gp_num; i++)
+    for (var i = 0; i < gp_num; i++)
     {
         if (gamepad_is_connected(i))
         {
@@ -22,7 +20,7 @@ if (ready == false)
     {
         draw_sprite(spr_player1cursor, -1, 344, 94);
         
-        if (global.coop == true)
+        if (global.coop)
             draw_sprite(spr_player2cursor, -1, 528, 94);
         else if (gp_connected)
             draw_sprite(spr_player2cursor_start, -1, random_range(-1, 1) + 528, random_range(-1, 1) + 94);
@@ -32,7 +30,7 @@ if (ready == false)
     {
         draw_sprite(spr_player1cursor, -1, 528, 94);
         
-        if (global.coop == true)
+        if (global.coop)
             draw_sprite(spr_player2cursor, -1, 344, 94);
         else if (gp_connected)
             draw_sprite(spr_player2cursor_start, -1, random_range(-1, 1) + 344, random_range(-1, 1) + 94);
@@ -44,7 +42,7 @@ else
     {
         draw_sprite(spr_player1cursorselected, -1, 344, 94);
         
-        if (global.coop == true)
+        if (global.coop)
             draw_sprite(spr_player2cursorselected, -1, 528, 94);
     }
     
@@ -52,7 +50,7 @@ else
     {
         draw_sprite(spr_player1cursorselected, -1, 528, 94);
         
-        if (global.coop == true)
+        if (global.coop)
             draw_sprite(spr_player2cursorselected, -1, 344, 94);
     }
 }

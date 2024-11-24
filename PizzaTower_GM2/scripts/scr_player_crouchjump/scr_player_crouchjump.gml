@@ -52,7 +52,3 @@ function scr_player_crouchjump()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_100 = 100
-}

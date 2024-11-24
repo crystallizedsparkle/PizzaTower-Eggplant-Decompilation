@@ -1,11 +1,11 @@
 if (room == rm_editor)
     exit;
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 {
     with (obj_baddie)
     {
-        if (escape == true)
+        if (escape)
         {
             visible = true;
             instance_create(x, y, obj_genericpoofeffect);
@@ -23,7 +23,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
     with (obj_escapecollectbig)
         image_alpha = 1;
     
-    scr_soundeffect(43);
+    scr_soundeffect(sfx_escaperumble);
     obj_camera.alarm[1] = 60;
     instance_create(x, y, obj_bangeffect);
     instance_create(x, y, obj_slapstar);
@@ -33,7 +33,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
     instance_create(x, y, obj_baddiegibs);
     instance_create(x, y, obj_baddiegibs);
     
-    if (global.coop == true)
+    if (global.coop)
     {
         obj_player1.x = x;
         obj_player2.x = x;
@@ -52,7 +52,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
     with (instance_create(x, y, obj_sausageman_dead))
         sprite_index = spr_hungrypillar_dead;
     
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y + 600, obj_itspizzatime);
     global.panic = true;
     

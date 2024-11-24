@@ -1,8 +1,6 @@
-var hdeccel, vdeccel, v;
-
 if (active)
 {
-    hdeccel = abs(h_velocity) / 24;
+    var hdeccel = abs(h_velocity) / 24;
     
     if (hdir != hscale)
     {
@@ -19,7 +17,7 @@ if (active)
         hmovespeed = Approach(hmovespeed, h_velocity, hdeccel);
     }
     
-    vdeccel = abs(v_velocity) / 24;
+    var vdeccel = abs(v_velocity) / 24;
     
     if (vdir != vscale)
     {
@@ -43,7 +41,7 @@ if (active)
     
     with (instance_place(x, y - (2 + abs(v_velocity)), obj_player))
     {
-        v = 0;
+        var v = 0;
         
         if (abs(other.vsp) > 2)
             v = abs(other.vsp);

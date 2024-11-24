@@ -23,7 +23,7 @@ if (place_meeting(x, y, obj_player))
     }
 }
 
-if (grabbed == true)
+if (grabbed)
 {
     image_xscale = -obj_player.xscale;
     grav = 0;
@@ -240,30 +240,12 @@ if (grabbed == true)
 if (vsp > 0 && grounded)
     hsp = 0;
 
-if (place_meeting(x + hsp, y, obj_solid) && thrown == true)
+if (place_meeting(x + hsp, y, obj_solid) && thrown)
     instance_destroy();
 
-if (grounded == true && thrown == true && vsp > 0)
+if (grounded && thrown && vsp > 0)
     instance_destroy();
 
-if (grabbed == false)
+if (!grabbed)
     scr_collide();
 
-enum UnknownEnum
-{
-    Value_6 = 6,
-    Value_20 = 20,
-    Value_55 = 55,
-    Value_74 = 74,
-    Value_75,
-    Value_76,
-    Value_79 = 79,
-    Value_80,
-    Value_81,
-    Value_82,
-    Value_83,
-    Value_103 = 103,
-    Value_104,
-    Value_106 = 106,
-    Value_121 = 121
-}

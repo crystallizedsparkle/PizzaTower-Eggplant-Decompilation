@@ -33,8 +33,3 @@ function scr_player_barrelclimbwall()
     }
 }
 
-enum UnknownEnum
-{
-    Value_114 = 114,
-    Value_116 = 116
-}

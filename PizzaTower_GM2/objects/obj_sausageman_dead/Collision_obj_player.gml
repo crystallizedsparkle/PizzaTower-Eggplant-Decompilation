@@ -1,4 +1,4 @@
-if (buffer == 0 && other.instakillmove == true)
+if (buffer == 0 && other.instakillmove)
 {
     vsp = random_range(-10, -18);
     hsp = sign(x - obj_player.x) * random_range(10, 18);

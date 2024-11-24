@@ -3,7 +3,7 @@ var lag;
 if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable)
 {
     baddieID.invtime = 25;
-    scr_soundeffect(46);
+    scr_soundeffect(sfx_punch);
     
     if (!baddieID.important)
     {
@@ -38,8 +38,3 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
     baddieID.hithsp = other.image_xscale * 15;
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_137 = 137
-}

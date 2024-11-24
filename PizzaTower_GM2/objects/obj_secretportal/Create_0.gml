@@ -2,6 +2,6 @@ targetRoom = room;
 active = true;
 trigger = 0;
 touched = false;
-playerid = -4;
+playerid = noone;
 secret = false;
 depth = 107;

@@ -1,7 +1,7 @@
 if (room == rm_editor)
     exit;
 
-if (obj_player.state != states.hurt && global.pineapplefollow == false)
+if (obj_player.state != states.hurt && !global.pineapplefollow)
 {
     global.heattime = 60;
     global.style += 10;
@@ -20,7 +20,3 @@ if (obj_player.state != states.hurt && global.pineapplefollow == false)
     panic = false;
 }
 
-enum UnknownEnum
-{
-    Value_107 = 107
-}

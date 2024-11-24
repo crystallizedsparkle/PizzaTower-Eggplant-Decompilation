@@ -3,13 +3,13 @@ if (!instance_exists(obj_keyconfig))
     if ((-obj_player.key_left2 || keyboard_check_pressed(vk_left)) && optionselected > 0)
     {
         optionselected -= 1;
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     }
     
     if ((obj_player.key_right2 || keyboard_check_pressed(vk_right)) && optionselected < 1)
     {
         optionselected += 1;
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     }
 }
 
@@ -17,7 +17,7 @@ if (optionselected == 1 && (obj_player.key_jump || keyboard_check_pressed(vk_ent
 {
     file_delete("saveData.ini");
     scr_initinput();
-    scr_soundeffect(15);
+    scr_soundeffect(sfx_breakblock1);
     ini_open("saveData.ini");
     
     if (!ini_section_exists("SAGE2019"))
@@ -65,7 +65,7 @@ if (optionselected == 1 && (obj_player.key_jump || keyboard_check_pressed(vk_ent
 
 if ((obj_player.key_slap2 || keyboard_check_pressed(vk_escape)) || (optionselected == 0 && (obj_player.key_jump || keyboard_check_pressed(vk_enter))))
 {
-    scr_soundeffect(20);
+    scr_soundeffect(sfx_enemyprojectile);
     obj_mainmenuselect.selected = false;
     instance_destroy();
 }

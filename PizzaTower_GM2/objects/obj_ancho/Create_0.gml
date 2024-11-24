@@ -17,23 +17,19 @@ reset = false;
 hp = 1;
 hitboxcreate = false;
 grounded = false;
-idlespr = 239;
-stunfallspr = 238;
-walkspr = 239;
-grabbedspr = 238;
-scaredspr = 242;
+idlespr = spr_ancho;
+stunfallspr = spr_anchobounce;
+walkspr = spr_ancho;
+grabbedspr = spr_anchobounce;
+scaredspr = spr_ancho_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 237;
+spr_dead = spr_anchodead;
 important = false;
 heavy = false;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

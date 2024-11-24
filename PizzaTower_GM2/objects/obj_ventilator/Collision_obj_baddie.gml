@@ -12,7 +12,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4
-}

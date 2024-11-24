@@ -1,4 +1,4 @@
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (hp <= 0 && state != states.arena_round)
 {
@@ -123,25 +123,3 @@ switch (state)
 angry = phase > 6;
 attacking = state == states.handstandjump || state == states.crouchslide || state == states.skateboard || state == states.skateboard_turn || state == states.pogo || state == states.jetpackstart || state == states.boss_jetpack || state == states.jetpackspin || state == states.throwing;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_42 = 42,
-    Value_58 = 58,
-    Value_61 = 61,
-    Value_74 = 74,
-    Value_77 = 77,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_106 = 106,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_145 = 145,
-    Value_147 = 147,
-    Value_167 = 167,
-    Value_170 = 170,
-    Value_171,
-    Value_173 = 173
-}

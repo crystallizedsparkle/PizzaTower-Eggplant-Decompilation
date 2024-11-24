@@ -1,12 +1,10 @@
-var roomname;
-
 visible = (room == rank_room || room == timesuproom) ? false : playerid.visible;
 
 if (obj_player.state == states.pizzathrow)
     visible = false;
 
-playerid = obj_player1.spotlight ? 324 : 323;
-roomname = string_letters(room_get_name(room));
+playerid = obj_player1.spotlight ? obj_player1 : obj_player2;
+var roomname = string_letters(room_get_name(room));
 
 if (roomname == "strongcoldminiboss")
     roomname = "strongcold";
@@ -54,7 +52,3 @@ else if (object_index == obj_pizzakinpineapple)
     }
 }
 
-enum UnknownEnum
-{
-    Value_87 = 87
-}

@@ -37,7 +37,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -48,13 +48,13 @@ if (state == states.stun && stunned > 40 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-idlespr = 221;
-stunfallspr = 214;
-walkspr = 218;
-stunspr = 214;
-grabbedspr = 214;
+idlespr = spr_cheeserobot_idle;
+stunfallspr = spr_cheeserobot_stun;
+walkspr = spr_cheeserobot_walk;
+stunspr = spr_cheeserobot_stun;
+grabbedspr = spr_cheeserobot_stun;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (hp <= 0)
@@ -82,15 +82,3 @@ if (x != obj_player.x && state != states.enemy_throw && bombreset == 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

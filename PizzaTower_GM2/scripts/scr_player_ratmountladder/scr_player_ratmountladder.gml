@@ -54,7 +54,3 @@ function scr_player_ratmountladder()
     }
 }
 
-enum UnknownEnum
-{
-    Value_192 = 192
-}

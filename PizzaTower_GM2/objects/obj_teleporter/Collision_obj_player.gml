@@ -30,11 +30,3 @@ if (player < 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_11 = 11,
-    Value_61 = 61,
-    Value_84 = 84,
-    Value_137 = 137,
-    Value_186 = 186
-}

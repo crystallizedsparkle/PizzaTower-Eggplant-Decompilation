@@ -1,6 +1,4 @@
-var player;
-
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 switch (state)
 {
@@ -47,8 +45,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8
-}

@@ -47,7 +47,3 @@ function scr_player_thrown()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

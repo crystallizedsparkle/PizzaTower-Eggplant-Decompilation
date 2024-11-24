@@ -1,10 +1,10 @@
 with (instance_create(x, y, obj_fadeout))
 {
-    obj_player1.targetRoom = 364;
+    obj_player1.targetRoom = hub_loadingscreen;
     obj_player1.targetDoor = "A";
     obj_player1.state = states.normal;
     
-    if (global.coop == true)
+    if (global.coop)
     {
         obj_player2.state = states.normal;
         obj_player2.targetDoor = "A";
@@ -13,7 +13,3 @@ with (instance_create(x, y, obj_fadeout))
 
 gamesave_async_load();
 
-enum UnknownEnum
-{
-    Value_0
-}

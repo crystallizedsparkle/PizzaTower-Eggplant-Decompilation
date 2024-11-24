@@ -8,7 +8,3 @@ x = baddieID.x;
 y = baddieID.y;
 image_xscale = baddieID.image_xscale;
 
-enum UnknownEnum
-{
-    Value_5 = 5
-}

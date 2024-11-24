@@ -1,6 +1,4 @@
-var _self, _col;
-
-_self = id;
+var _self = id;
 
 with (other)
 {
@@ -10,9 +8,9 @@ with (other)
     }
     else
     {
-        _col = collision_line(x + (35 * image_xscale), y + (16 * image_yscale), _self.x, _self.y, obj_solid, false, true);
+        var _col = collision_line(x + (35 * image_xscale), y + (16 * image_yscale), _self.x, _self.y, obj_solid, false, true);
         
-        if (_col == -4)
+        if (_col == noone)
             instance_destroy();
     }
 }

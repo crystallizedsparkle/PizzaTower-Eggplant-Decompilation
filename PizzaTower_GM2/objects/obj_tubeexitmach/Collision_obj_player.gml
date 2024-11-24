@@ -1,5 +1,3 @@
-var _offset_x, _offset_y;
-
 if (playerid > -1)
     exit;
 
@@ -15,8 +13,8 @@ if (other.state == states.gotoplayer)
 if (object_index != obj_tubeenter && other.state != states.tube)
     exit;
 
-_offset_x = 32 * image_xscale;
-_offset_y = 14 * image_yscale;
+var _offset_x = 32 * image_xscale;
+var _offset_y = 14 * image_yscale;
 
 with (other)
 {
@@ -56,10 +54,3 @@ if (floor(other.x) == (xstart + _offset_x) && floor(other.y) == (ystart + _offse
     state = states.tube;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_107 = 107,
-    Value_150 = 150,
-    Value_186 = 186
-}

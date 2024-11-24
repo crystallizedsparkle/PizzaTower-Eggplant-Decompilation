@@ -3,13 +3,9 @@ if (state != states.taxi_police)
 
 if (!instance_exists(obj_fadeout))
 {
-    scr_soundeffect(76);
+    scr_soundeffect(sfx_door);
     
     with (instance_create(x, y, obj_fadeout))
         roomreset = true;
 }
 
-enum UnknownEnum
-{
-    Value_152 = 152
-}

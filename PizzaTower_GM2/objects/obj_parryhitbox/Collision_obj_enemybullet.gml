@@ -1,9 +1,7 @@
-var current_hspd, _dir;
-
 with (other)
 {
-    current_hspd = abs(hsp);
-    _dir = sign(hsp);
+    var current_hspd = abs(hsp);
+    var _dir = sign(hsp);
     
     if (x != other.x)
         _dir = sign(x - other.x);

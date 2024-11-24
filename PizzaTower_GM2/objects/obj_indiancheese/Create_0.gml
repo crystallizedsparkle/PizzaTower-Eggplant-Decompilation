@@ -22,17 +22,17 @@ reset = false;
 hp = 2;
 hitboxcreate = false;
 grounded = true;
-idlespr = 312;
-stunfallspr = 313;
-walkspr = 312;
-grabbedspr = 313;
-scaredspr = 318;
+idlespr = spr_indiancheese_walk;
+stunfallspr = spr_indiancheese_stun;
+walkspr = spr_indiancheese_walk;
+grabbedspr = spr_indiancheese_stun;
+scaredspr = spr_indiancheese_scared;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 314;
+spr_dead = spr_indiancheese_dead;
 important = false;
 heavy = false;
 depth = 0;
@@ -40,7 +40,3 @@ jumptimer = 50;
 arcprojectiletimer = 25;
 elite = true;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

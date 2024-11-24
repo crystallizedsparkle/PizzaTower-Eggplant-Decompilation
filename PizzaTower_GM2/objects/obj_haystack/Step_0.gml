@@ -54,10 +54,10 @@ else if (sprite_index == spr_haystackburning)
     if (ds_list_find_index(global.saveroom, id) == -1)
         ds_list_add(global.saveroom, id);
     
-    if (firetimer > 0 && sprite_index == spr_haystackburning && firetimeinf == false)
+    if (firetimer > 0 && sprite_index == spr_haystackburning && !firetimeinf)
         firetimer--;
     
-    if (firetimer <= 0 && sprite_index == spr_haystackburning && firetimeinf == false)
+    if (firetimer <= 0 && sprite_index == spr_haystackburning && !firetimeinf)
     {
         sprite_index = spr_haystack;
         firetimer = 200;
@@ -76,10 +76,10 @@ else if (sprite_index == spr_haystackburning)
             else if (scr_transformationcheck())
             {
                 scr_losepoints();
-                scr_soundeffect(54);
+                scr_soundeffect(sfx_scream3);
                 
                 if (state != states.fireass)
-                    tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt_type.transformation, 550, 3), "fireass");
+                    tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt_type.transformation, spr_tv_fireass, 3), "fireass");
                 
                 state = states.fireass;
                 image_index = 0;
@@ -105,14 +105,3 @@ if (state == states.transitioncutscene)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_2 = 2,
-    Value_4 = 4,
-    Value_8 = 8,
-    Value_9,
-    Value_10,
-    Value_47 = 47,
-    Value_128 = 128
-}

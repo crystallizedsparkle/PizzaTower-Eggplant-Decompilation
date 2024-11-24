@@ -4,7 +4,7 @@ if (room == custom_lvl_room)
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     repeat (4)
-        create_debris(x + 16, y, 1123);
+        create_debris(x + 16, y, spr_debris);
     
     tile_layer_delete_at(1, x, y);
     
@@ -14,6 +14,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(15, 16);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
 }

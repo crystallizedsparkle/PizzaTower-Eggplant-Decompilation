@@ -40,7 +40,3 @@ function scr_player_ratmountpunch()
     }
 }
 
-enum UnknownEnum
-{
-    Value_191 = 191
-}

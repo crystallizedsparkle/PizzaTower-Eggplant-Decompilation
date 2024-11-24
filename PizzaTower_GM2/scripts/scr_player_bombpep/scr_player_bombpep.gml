@@ -401,11 +401,3 @@ function scr_player_bombpep()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_84 = 84,
-    Value_106 = 106,
-    Value_111 = 111,
-    Value_123 = 123
-}

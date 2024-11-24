@@ -1,5 +1,3 @@
-var _number;
-
 if (other.state != states.gotoplayer)
 {
     if (obj_player1.character == "V")
@@ -12,7 +10,7 @@ if (other.state != states.gotoplayer)
     
     scr_soundeffect(44);
     instance_destroy();
-    _number = 0;
+    var _number = 0;
     
     if (global.fill <= 2500)
     {
@@ -31,7 +29,3 @@ if (other.state != states.gotoplayer)
         number = string(_number);
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

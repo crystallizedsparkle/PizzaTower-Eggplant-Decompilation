@@ -29,8 +29,3 @@ function scr_player_mortattack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_11 = 11,
-    Value_12
-}

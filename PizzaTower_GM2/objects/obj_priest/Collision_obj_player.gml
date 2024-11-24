@@ -1,6 +1,4 @@
-var _transfo, p, val, i;
-
-_transfo = false;
+var _transfo = false;
 
 with (other)
 {
@@ -23,7 +21,7 @@ with (other)
 
 if (_transfo)
 {
-    p = other.id;
+    var p = other.id;
     
     with (instance_create(other.x - 540, camera_get_view_y(view_camera[0]) - 100, obj_priestangel))
     {
@@ -37,32 +35,21 @@ if (_transfo)
     if (collect && ds_list_find_index(global.saveroom, id) == -1)
     {
         ds_list_add(global.saveroom, id);
-        val = 500;
+        var val = 500;
         global.collect += val;
         global.combotime = 60;
         
         with (instance_create(x + 16, y, obj_smallnumber))
             number = string(val);
         
-        scr_soundeffect(17);
-        i = 0;
+        scr_soundeffect(sfx_collecttopping);
+        var i = 0;
         
         while (i < val)
         {
-            create_collect(other.x + irandom_range(-60, 60), other.y + irandom_range(-60, 60), choose(1559, 1561, 1562, 1563, 1560));
+            create_collect(other.x + irandom_range(-60, 60), other.y + irandom_range(-60, 60), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect));
             i += round(val / 16);
         }
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_9 = 9,
-    Value_11 = 11,
-    Value_12,
-    Value_14 = 14,
-    Value_33 = 33,
-    Value_34,
-    Value_35
-}

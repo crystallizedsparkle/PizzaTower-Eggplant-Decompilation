@@ -1,5 +1,3 @@
-var _os_r, resolutionX, resolutionY;
-
 if (instance_number(object_index) > 1)
 {
     instance_destroy();
@@ -23,7 +21,7 @@ scale_xs = 1;
 scale_ys = 1;
 verticalbuffer = 0;
 verticalstate = states.normal;
-webID = -4;
+webID = noone;
 float = false;
 boxxedpepjump = 10;
 boxxedpepjumpmax = 10;
@@ -49,7 +47,7 @@ vsp_carry = 0;
 hsp_carry = 0;
 rocketvsp = 0;
 sticking = false;
-platformid = -4;
+platformid = noone;
 xscale = 1;
 yscale = 1;
 facehurt = false;
@@ -71,9 +69,9 @@ cow_buffer = 0;
 balloonbuffer = 0;
 shoot_buffer = 0;
 shoot_max = 20;
-dynamite_inst = -4;
-golfid = -4;
-bombgrabID = -4;
+dynamite_inst = noone;
+golfid = noone;
+bombgrabID = noone;
 barrelslope = false;
 barrel_maxmovespeed = 16;
 barrel_maxfootspeed = 10;
@@ -91,7 +89,7 @@ invhurt_max = 30;
 ratmount_movespeed = 8;
 ratmount_fallingspeed = 0;
 ratgrabbedID = -4;
-ratpowerup = -4;
+ratpowerup = noone;
 ratshootbuffer = 0;
 rateaten = false;
 gustavodash = 0;
@@ -106,7 +104,7 @@ pepperman_accel_air = 0.15;
 pepperman_deccel_air = 0.25;
 pepperman_maxhsp_normal = 6;
 pepperman_jumpspeed = 11;
-pepperman_grabID = -4;
+pepperman_grabID = noone;
 shoulderbash_mspeed_start = 12;
 shoulderbash_mspeed_loop = 10;
 shoulderbash_jumpspeed = 11;
@@ -129,7 +127,7 @@ stop_buffer = 8;
 slope_buffer = 8;
 stop_max = 16;
 parry = false;
-parry_inst = -4;
+parry_inst = noone;
 taunt_to_parry_max = 10;
 parry_count = 0;
 parry_max = 8;
@@ -185,7 +183,7 @@ suplexhavetomash = 0;
 anger = 0;
 angry = false;
 baddiegrabbedID = 0;
-spr_palette = 535;
+spr_palette = spr_peppalette;
 character = "P";
 scr_characterspr();
 paletteselect = 1;
@@ -196,7 +194,7 @@ treasure_room = 0;
 wallspeed = 0;
 tauntstoredstate = states.normal;
 tauntstoredmovespeed = 6;
-tauntstoredsprite = 715;
+tauntstoredsprite = spr_player_idle;
 taunttimer = 20;
 tauntstoredvsp = 0;
 tauntstoredisgustavo = false;
@@ -235,13 +233,13 @@ backupweapon = false;
 stickpressed = false;
 spotlight = true;
 macheffect = false;
-chargeeffectid = 523;
-dashcloudid = 523;
-crazyruneffectid = 523;
+chargeeffectid = obj_null;
+dashcloudid = obj_null;
+crazyruneffectid = obj_null;
 fightball = false;
-superslameffectid = 523;
-speedlineseffectid = 523;
-angryeffectid = 523;
+superslameffectid = obj_null;
+speedlineseffectid = obj_null;
+angryeffectid = obj_null;
 thrown = false;
 mach1snd = -1;
 mach2snd = -1;
@@ -269,10 +267,10 @@ pogospeedprev = false;
 fightballadvantage = false;
 coopdelay = 0;
 supercharged = false;
-superchargedeffectid = 523;
+superchargedeffectid = obj_null;
 used_supercharge = false;
 pizzashield = false;
-pizzashieldid = 523;
+pizzashieldid = obj_null;
 pizzapepper = 0;
 transformation[0] = states.bombpep;
 transformation[1] = states.knightpep;
@@ -330,7 +328,7 @@ sjumpvsp = -12;
 freefallvsp = 15;
 hitlist = ds_list_create();
 animlist = ds_list_create();
-lungeattackID = -4;
+lungeattackID = noone;
 lunge_hits = 0;
 lunge_hit_buffer = 0;
 lunge_buffer = 0;
@@ -414,22 +412,22 @@ if (!variable_global_exists("saveroom"))
     if (global.option_fullscreen == 1)
         window_set_fullscreen(true);
     
-    _os_r = global.option_resolution;
+    var _os_r = global.option_resolution;
     
     if (_os_r == 0)
     {
-        resolutionX = 480;
-        resolutionY = 270;
+        var resolutionX = 480;
+        var resolutionY = 270;
     }
     else if (_os_r == 1)
     {
-        resolutionX = 960;
-        resolutionY = 540;
+        var resolutionX = 960;
+        var resolutionY = 540;
     }
     else
     {
-        resolutionX = 1920;
-        resolutionY = 1080;
+        var resolutionX = 1920;
+        var resolutionY = 1080;
     }
     
     window_set_size(resolutionX, resolutionY);
@@ -467,14 +465,14 @@ if (!variable_global_exists("saveroom"))
     global.attackstyle = 0;
     global.pummeltest = true;
     global.horse = false;
-    global.checkpoint_room = -4;
+    global.checkpoint_room = noone;
     global.checkpoint_door = "A";
     global.kungfu = false;
     global.graffiticount = 0;
     global.graffitimax = 20;
     global.noisejetpack = false;
     global.hasfarmer = array_create(3, false);
-    global.savedattackstyle = -4;
+    global.savedattackstyle = noone;
 }
 
 angle = 0;
@@ -495,46 +493,3 @@ breakdance_speed = 0.25;
 notecreate = 50;
 jetpackbounce = false;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_9 = 9,
-    Value_10,
-    Value_11,
-    Value_12,
-    Value_13,
-    Value_14,
-    Value_16 = 16,
-    Value_17,
-    Value_18,
-    Value_21 = 21,
-    Value_22,
-    Value_24 = 24,
-    Value_25,
-    Value_29 = 29,
-    Value_30,
-    Value_31,
-    Value_32,
-    Value_33,
-    Value_34,
-    Value_35,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_48,
-    Value_49,
-    Value_51 = 51,
-    Value_52,
-    Value_53,
-    Value_54,
-    Value_59 = 59,
-    Value_89 = 89,
-    Value_112 = 112,
-    Value_113,
-    Value_114,
-    Value_116 = 116,
-    Value_146 = 146,
-    Value_150 = 150,
-    Value_184 = 184,
-    Value_185,
-    Value_186
-}

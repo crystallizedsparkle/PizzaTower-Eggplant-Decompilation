@@ -94,7 +94,3 @@ function scr_player_rideweenie()
     image_speed = 0.5;
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104
-}

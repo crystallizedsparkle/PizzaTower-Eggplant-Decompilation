@@ -57,10 +57,3 @@ function scr_player_ratmounttumble()
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_191 = 191,
-    Value_196 = 196,
-    Value_197
-}

@@ -1,5 +1,3 @@
-var _taunt;
-
 if (room == rm_editor)
     exit;
 
@@ -65,7 +63,7 @@ if (!hitboxcreate && state == states.walk)
 if (inv_timer <= 0)
     scr_scareenemy();
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -85,7 +83,7 @@ if (state == states.walk)
     
     if (point_in_camera(x, y, view_camera[0]))
     {
-        _taunt = false;
+        var _taunt = false;
         
         with (obj_player)
         {
@@ -155,7 +153,7 @@ switch (state)
         if (instance_exists(taunteffect_inst) && taunteffect_inst.object_index == obj_baddietaunteffect)
         {
             instance_destroy(taunteffect_inst);
-            taunteffect_inst = -4;
+            taunteffect_inst = noone;
         }
         
         if (movespeed > 0)
@@ -232,7 +230,7 @@ switch (state)
         break;
 }
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -241,7 +239,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -252,18 +250,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_84 = 84,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_147 = 147
-}

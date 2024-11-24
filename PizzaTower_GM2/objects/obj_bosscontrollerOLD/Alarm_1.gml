@@ -40,8 +40,3 @@ else
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_145 = 145
-}

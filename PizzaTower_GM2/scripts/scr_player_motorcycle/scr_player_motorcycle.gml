@@ -83,7 +83,3 @@ function scr_player_motorcycle()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5
-}

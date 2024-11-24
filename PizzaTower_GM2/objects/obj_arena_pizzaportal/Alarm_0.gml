@@ -1,4 +1,4 @@
-if (stored_id != -4)
+if (stored_id != noone)
 {
     instance_activate_object(stored_id);
     
@@ -10,7 +10,3 @@ sprite_index = spr_pizzaportal_disappear;
 image_speed = 0.35;
 image_index = 0;
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

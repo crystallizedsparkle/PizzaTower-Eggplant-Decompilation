@@ -1,9 +1,9 @@
-if (x > 1200 && !instance_exists(obj_fadeout) && ok == false)
+if (x > 1200 && !instance_exists(obj_fadeout) && !ok)
 {
     with (instance_create(x, y, obj_fadeout))
-        obj_player.targetRoom = 377;
+        obj_player.targetRoom = Titlescreen;
 }
-else if (x > 1200 && ok == true)
+else if (x > 1200 && ok)
 {
     instance_destroy();
 }

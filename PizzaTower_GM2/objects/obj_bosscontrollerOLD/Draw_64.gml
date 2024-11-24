@@ -1,6 +1,4 @@
-var sprplayer, sprboss, xx, yy, _round, _currentbarpos, _perc, _max_x, _barpos, _barfillpos, clip_x, clip_y, i, sp;
-
-if (bossID == -4)
+if (bossID == noone)
     exit;
 
 if (!instance_exists(bossID))
@@ -16,12 +14,12 @@ switch (state)
 {
     case states.arena_intro:
         draw_sprite_tiled(spr_versusflame, -1, 0, flamey);
-        sprplayer = (playerx != 0) ? playersprshadow : playerspr;
-        sprboss = (playerx != 0) ? bosssprshadow : bossspr;
+        var sprplayer = (playerx != 0) ? playersprshadow : playerspr;
+        var sprboss = (playerx != 0) ? bosssprshadow : bossspr;
         draw_sprite(sprplayer, -1, playerx, room_height - sprite_get_height(sprplayer));
         draw_sprite(sprboss, -1, bossx, room_height - sprite_get_height(sprboss));
-        xx = irandom_range(-1, 1);
-        yy = irandom_range(-1, 1);
+        var xx = irandom_range(-1, 1);
+        var yy = irandom_range(-1, 1);
         draw_sprite(vstitle, -1, xx, vsy + yy);
         
         if (flash)
@@ -37,35 +35,35 @@ switch (state)
         break;
 }
 
-_round = round_count - 1;
+var _round = round_count - 1;
 
 if (_round > 5)
     _round = 5;
 
 draw_sprite(spr_bossrounds, _round, round_x, round_y);
-_currentbarpos = round_timermax - round_timer;
-_perc = _currentbarpos / round_timermax;
-_max_x = 430;
-_barpos = _max_x * _perc;
+var _currentbarpos = round_timermax - round_timer;
+var _perc = _currentbarpos / round_timermax;
+var _max_x = 430;
+var _barpos = _max_x * _perc;
 
 if (!surface_exists(bar_surface))
     bar_surface = surface_create(_max_x, 38);
 
-_barfillpos = floor(_barpos) + 6;
+var _barfillpos = floor(_barpos) + 6;
 
 if (_barfillpos > 0)
 {
     surface_resize(bar_surface, _barfillpos, 30);
     surface_set_target(bar_surface);
     draw_clear_alpha(c_black, 0);
-    clip_x = bosstimer_x + 8;
-    clip_y = bosstimer_y + 8;
+    var clip_x = bosstimer_x + 8;
+    var clip_y = bosstimer_y + 8;
     barfill_x += 0.4;
     
     if (barfill_x > 23)
         barfill_x = 0;
     
-    for (i = -1; i < round(_max_x / 23); i++)
+    for (var i = -1; i < round(_max_x / 23); i++)
         draw_sprite(spr_bosstimer_barfill, 0, barfill_x + (i * 23), 0);
     
     surface_reset_target();
@@ -74,11 +72,11 @@ if (_barfillpos > 0)
 
 draw_sprite(spr_bosstimer_bar, -1, bosstimer_x, bosstimer_y);
 
-if (bell_sprite != 1436)
+if (bell_sprite != spr_bosstimer_hitbell)
     draw_sprite(spr_bosstimer_hammer, -1, bosstimer_x + 11 + _barpos, bosstimer_y + 12);
 
 draw_sprite(bell_sprite, bell_index, bosstimer_x + 440, bosstimer_y + 21);
-sp = (super / supermax) * 100;
+var sp = (super / supermax) * 100;
 
 if (super > supermax)
     sp = 100;
@@ -90,7 +88,3 @@ draw_sprite(portrait1_sprite, portrait1_index, 113, 104);
 shader_reset();
 draw_sprite_ext(portrait2_sprite, portrait2_index, 848, 104, -1, 1, 0, c_white, 1);
 
-enum UnknownEnum
-{
-    Value_144 = 144
-}

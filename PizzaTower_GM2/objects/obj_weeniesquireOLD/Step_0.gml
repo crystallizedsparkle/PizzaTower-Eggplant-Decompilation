@@ -1,17 +1,17 @@
 if (room == rm_editor)
     exit;
 
-if (charge == true && grounded == true)
+if (charge && grounded)
     hsp = image_xscale * movespeed;
-else if (stun == true && grounded == false)
+else if (stun && !grounded)
     hsp = -image_xscale * movespeed;
-else if (stun == true && grounded == true)
+else if (stun && grounded)
     hsp = 0;
 
 if (stun == false && chargebuffer > 0)
     chargebuffer--;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionboxother))
     {
@@ -22,7 +22,7 @@ if (boundbox == false)
     }
 }
 
-if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 20) && y >= (obj_player1.y - 20)) && charge == false && stun == false && chargebuffer == 0)
+if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 20) && y >= (obj_player1.y - 20)) && !charge && !stun && chargebuffer == 0)
 {
     vsp = -7;
     charge = true;
@@ -33,13 +33,13 @@ if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_playe
     image_speed = 0.5;
 }
 
-if (charge == true)
+if (charge)
     movespeed += 0.1;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.05 * room_speed;
 
-if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && charge == true)
+if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && charge)
 {
     instance_create(x + (image_xscale * 30), y, obj_bumpeffect);
     stunned = 80;
@@ -58,7 +58,7 @@ if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && c
     image_speed = 0.35;
 }
 
-if (stun == true)
+if (stun)
 {
     stunned--;
     
@@ -75,7 +75,7 @@ if (stun == true)
     chargebuffer = 80;
 }
 
-if (hitboxcreate == false && stun == false)
+if (!hitboxcreate && !stun)
 {
     hitboxcreate = true;
     
@@ -86,7 +86,7 @@ if (hitboxcreate == false && stun == false)
     }
 }
 
-if (charge == true && scr_solid(x, y + 1))
+if (charge && scr_solid(x, y + 1))
     steppy--;
 
 if (steppy == 0)

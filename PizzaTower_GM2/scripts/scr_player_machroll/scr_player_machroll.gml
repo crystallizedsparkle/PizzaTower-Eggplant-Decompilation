@@ -216,9 +216,3 @@ function scr_player_machroll()
     }
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104,
-    Value_106 = 106,
-    Value_121 = 121
-}

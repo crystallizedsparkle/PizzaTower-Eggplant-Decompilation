@@ -1,19 +1,19 @@
 if (!is_solid)
     shotgun = true;
 
-if (shotgun == true)
+if (shotgun)
 {
     with (instance_place(x + spd, y, obj_shotgunblock))
         instance_destroy();
 }
 
-if (shotgun == true)
+if (shotgun)
 {
     with (instance_place(x, y - spdh, obj_shotgunblock))
         instance_destroy();
 }
 
-if (brick == true)
+if (brick)
 {
     x = brickid.x;
     y = brickid.y;

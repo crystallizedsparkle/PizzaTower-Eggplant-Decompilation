@@ -1,5 +1,3 @@
-var spd;
-
 if (launch)
 {
     if (rotate)
@@ -10,7 +8,7 @@ if (launch)
             alarm[1] = 100;
     }
     
-    spd = 6;
+    var spd = 6;
     x += lengthdir_x(spd, image_angle);
     y += lengthdir_y(spd, image_angle);
 }

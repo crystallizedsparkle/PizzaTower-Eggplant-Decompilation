@@ -1,11 +1,9 @@
-var i, t;
-
 if (room == rank_room)
     visible = false;
 else
     visible = true;
 
-for (i = 0; i < array_length(monster_alarm); i++)
+for (var i = 0; i < array_length(monster_alarm); i++)
 {
     if (monster_active[i])
     {
@@ -62,11 +60,11 @@ if (player_posX != -1 && player_posY != -1)
 
 if (sound_buffer > 0)
 {
-    for (i = 0; i < array_length(monster_alarm); i++)
+    for (var i = 0; i < array_length(monster_alarm); i++)
     {
         if (monster_active[i])
         {
-            t = floor(monster_alarm[i] / 3);
+            var t = floor(monster_alarm[i] / 3);
             
             if (i == 2)
                 t = 1;

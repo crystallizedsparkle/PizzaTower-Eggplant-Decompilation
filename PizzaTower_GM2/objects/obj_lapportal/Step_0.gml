@@ -1,16 +1,14 @@
-var i, b, q, t;
-
 if (global.panic)
 {
     image_alpha = 1;
     
     if (sprite_index == spr_pizzaportal)
     {
-        playerid = -4;
+        playerid = noone;
         
         with (obj_player)
         {
-            if (other.playerid == -4 && place_meeting(x, y, other))
+            if (other.playerid == noone && place_meeting(x, y, other))
             {
                 state = states.actor;
                 visible = false;
@@ -42,11 +40,11 @@ if (global.panic)
                     targetRoom = other.targetRoom;
                 }
                 
-                for (i = 0; i < ds_list_size(global.escaperoom); i++)
+                for (var i = 0; i < ds_list_size(global.escaperoom); i++)
                 {
-                    b = ds_list_find_value(global.escaperoom, i);
-                    q = ds_list_find_index(global.baddieroom, b);
-                    t = false;
+                    var b = ds_list_find_value(global.escaperoom, i);
+                    var q = ds_list_find_index(global.baddieroom, b);
+                    var t = false;
                     
                     if (q == -1)
                     {
@@ -75,7 +73,3 @@ else
     image_alpha = 0.5;
 }
 
-enum UnknownEnum
-{
-    Value_146 = 146
-}

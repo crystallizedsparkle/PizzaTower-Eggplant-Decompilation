@@ -1,4 +1,4 @@
-if (global.panic == false && escape == true)
+if (!global.panic && escape)
 {
     x = -300;
     y = -300;

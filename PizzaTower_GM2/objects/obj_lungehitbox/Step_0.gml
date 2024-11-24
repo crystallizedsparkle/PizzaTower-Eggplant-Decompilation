@@ -7,8 +7,3 @@ if (playerid.state != states.lungeattack && playerid.state != states.handstandju
 x = playerid.x + (24 * playerid.xscale);
 y = playerid.y;
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_43
-}

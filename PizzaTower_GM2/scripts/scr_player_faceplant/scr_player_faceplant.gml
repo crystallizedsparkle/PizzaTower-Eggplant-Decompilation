@@ -74,10 +74,3 @@ function scr_player_faceplant()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_102 = 102,
-    Value_104 = 104,
-    Value_106 = 106
-}

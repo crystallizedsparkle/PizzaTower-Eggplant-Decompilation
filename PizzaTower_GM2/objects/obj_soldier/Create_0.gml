@@ -25,32 +25,28 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 2427;
-idlespr = 2224;
-fallspr = 2427;
-stunfallspr = 2427;
-walkspr = 2846;
-turnspr = 2846;
-recoveryspr = 2427;
-grabbedspr = 2427;
-scaredspr = 1815;
+landspr = spr_soldier_stun;
+idlespr = spr_soldier_idle;
+fallspr = spr_soldier_stun;
+stunfallspr = spr_soldier_stun;
+walkspr = spr_soldier_walk;
+turnspr = spr_soldier_walk;
+recoveryspr = spr_soldier_stun;
+grabbedspr = spr_soldier_stun;
+scaredspr = spr_soldier_scared;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 1079;
+spr_dead = spr_soldier_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

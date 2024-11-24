@@ -20,7 +20,3 @@ function cutscene_space_end()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

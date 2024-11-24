@@ -1,5 +1,3 @@
-var val;
-
 if (room == rm_editor)
     exit;
 
@@ -16,9 +14,9 @@ if (image_alpha == 1)
             healthshaketime = 60;
         
         global.combotime = 60;
-        scr_soundeffect(44);
+        scr_soundeffect(sfx_collectpizza);
         instance_destroy();
-        val = heat_calculate(100);
+        var val = heat_calculate(100);
         
         if (other.object_index == obj_player1)
             global.collect += val;
@@ -32,7 +30,3 @@ if (image_alpha == 1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

@@ -42,9 +42,3 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
     }
 }
 
-enum UnknownEnum
-{
-    Value_3 = 3,
-    Value_4,
-    Value_5
-}

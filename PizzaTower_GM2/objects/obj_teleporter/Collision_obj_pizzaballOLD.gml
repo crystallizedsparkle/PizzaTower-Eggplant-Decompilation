@@ -1,6 +1,6 @@
 if (start == 1)
 {
-    if (other.visible == true)
+    if (other.visible)
     {
         repeat (8)
             create_particle(x + random_range(50, -50), y + random_range(50, -50), particles.teleporteffect, 0);
@@ -12,7 +12,3 @@ if (start == 1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_11 = 11
-}

@@ -1,5 +1,3 @@
-var num;
-
 if (timermax > 1)
     timermax -= 2;
 
@@ -11,14 +9,14 @@ repeat (round(explosionsnum))
     with (instance_create(irandom_range(50, room_width - 50), irandom_range(50, room_height - 50), obj_explosioneffect))
     {
         sprite_index = spr_bombexplosion;
-        num = irandom_range(6, 10);
+        var num = irandom_range(6, 10);
         image_speed = other.explosionsnum / num;
         
         if (image_speed < 0.35)
             image_speed = 0.35;
         
         repeat (3)
-            create_debris(x, y, 1123);
+            create_debris(x, y, spr_debris);
     }
 }
 

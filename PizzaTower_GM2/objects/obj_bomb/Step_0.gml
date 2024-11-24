@@ -1,5 +1,3 @@
-var _railinst;
-
 countdown -= 0.5;
 
 if (place_meeting(x + 1, y, obj_ratblock) || place_meeting(x - 1, y, obj_ratblock) || place_meeting(x, y - 1, obj_ratblock) || place_meeting(x, y + 1, obj_ratblock))
@@ -13,7 +11,7 @@ if (place_meeting(x, y + 1, obj_solid))
 
 if (place_meeting(x, y + 1, obj_railparent))
 {
-    _railinst = instance_place(x, y + 1, obj_railparent);
+    var _railinst = instance_place(x, y + 1, obj_railparent);
     hsp = _railinst.movespeed * _railinst.dir;
 }
 

@@ -1,6 +1,4 @@
-var cx;
-
-cx = camera_get_view_x(view_camera[0]);
+var cx = camera_get_view_x(view_camera[0]);
 
 switch (state)
 {
@@ -53,9 +51,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80,
-    Value_128 = 128,
-    Value_134 = 134
-}

@@ -341,9 +341,3 @@ function scr_pizzagoblin_throw()
         hsp -= 0.1;
 }
 
-enum UnknownEnum
-{
-    Value_6 = 6,
-    Value_126 = 126,
-    Value_134 = 134
-}

@@ -39,7 +39,3 @@ function scr_player_ejected()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

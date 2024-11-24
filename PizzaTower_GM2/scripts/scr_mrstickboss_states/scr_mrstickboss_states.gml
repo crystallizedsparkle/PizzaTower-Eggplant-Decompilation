@@ -389,18 +389,3 @@ function boss_mrstick_mockery()
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92,
-    Value_138 = 138,
-    Value_174 = 174,
-    Value_175,
-    Value_176,
-    Value_177,
-    Value_178,
-    Value_179,
-    Value_180,
-    Value_181,
-    Value_182
-}

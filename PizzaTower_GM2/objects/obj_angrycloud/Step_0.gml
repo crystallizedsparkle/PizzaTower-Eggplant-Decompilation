@@ -6,7 +6,3 @@ y = playerid.y;
 if (global.stylethreshold < 2 || playerid.state != states.normal)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_0
-}

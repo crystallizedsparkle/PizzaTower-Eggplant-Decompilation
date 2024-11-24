@@ -1,5 +1,3 @@
-var targetplayer, mv;
-
 if (room == rm_editor)
     exit;
 
@@ -65,7 +63,7 @@ switch (state)
         break;
 }
 
-targetplayer = instance_nearest(x, y, obj_player);
+var targetplayer = instance_nearest(x, y, obj_player);
 
 if (cooldown > 0)
     cooldown--;
@@ -85,7 +83,7 @@ if (state == states.walk && cooldown <= 0)
 
 if (state == states.punch)
 {
-    mv = 8;
+    var mv = 8;
     image_speed = 0.35;
     
     if (sprite_index == spr_badrat_attack1)
@@ -138,7 +136,7 @@ if (state == states.punch)
     }
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -158,7 +156,7 @@ if (place_meeting(x, y, obj_canonexplosion))
 if (state != states.grabbed)
     depth = 0;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -172,20 +170,3 @@ if (boundbox == false)
 if (state != states.stun)
     thrown = false;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_80 = 80,
-    Value_106 = 106,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

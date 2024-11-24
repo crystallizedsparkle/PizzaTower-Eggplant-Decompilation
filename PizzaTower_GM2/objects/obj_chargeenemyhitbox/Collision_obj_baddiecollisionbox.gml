@@ -7,7 +7,3 @@ if (instance_exists(other.baddieID))
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4
-}

@@ -12,7 +12,3 @@ function player_hurt(argument0, argument1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_145 = 145
-}

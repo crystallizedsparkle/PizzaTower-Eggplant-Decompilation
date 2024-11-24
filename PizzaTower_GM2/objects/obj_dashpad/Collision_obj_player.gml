@@ -1,10 +1,8 @@
-var changecoord;
-
 with (other)
 {
     if (state != states.gotoplayer && state != states.actor)
     {
-        changecoord = true;
+        var changecoord = true;
         
         if (place_meeting(x, y, obj_superspring))
             changecoord = false;
@@ -15,7 +13,7 @@ with (other)
         vsp = 0;
         create_particle(x, y, particles.jumpdust, 0);
         
-        if (boxxed == false && isgustavo == false)
+        if (!boxxed && !isgustavo)
         {
             if (character == "P")
             {
@@ -79,12 +77,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_33 = 33,
-    Value_121 = 121,
-    Value_146 = 146,
-    Value_186 = 186,
-    Value_191 = 191
-}

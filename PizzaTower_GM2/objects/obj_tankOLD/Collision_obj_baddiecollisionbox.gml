@@ -1,13 +1,11 @@
-var _tank, _baddie;
-
-_tank = id;
-_baddie = other.id;
+var _tank = id;
+var _baddie = other.id;
 
 with (_baddie)
 {
     if (instance_exists(baddieID) && baddieID != other.id)
     {
-        if (baddieID.state == states.stun && baddieID.thrown == true)
+        if (baddieID.state == states.stun && baddieID.thrown)
         {
             with (_tank)
                 instance_destroy();
@@ -15,7 +13,3 @@ with (_baddie)
     }
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

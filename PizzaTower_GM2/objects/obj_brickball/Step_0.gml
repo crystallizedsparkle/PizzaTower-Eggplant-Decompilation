@@ -1,5 +1,3 @@
-var x1, y1, _col;
-
 hsp = image_xscale * movespeed;
 instance_destroy(instance_place(x + 16, y, obj_metalblock));
 instance_destroy(instance_place(x + hsp, y, obj_metalblock));
@@ -25,7 +23,7 @@ else
         playerid = other.id;
 }
 
-if (hitbox == false)
+if (!hitbox)
 {
     with (instance_create(x, y, obj_shotgunbullet))
     {
@@ -38,7 +36,7 @@ if (hitbox == false)
     }
 }
 
-if (scr_solid(x, y + 1) && bounce == false)
+if (scr_solid(x, y + 1) && !bounce)
 {
     vsp = -5;
     bounce = true;
@@ -55,11 +53,11 @@ with (instance_place(x + image_xscale, y, obj_destructibles))
     }
     else if (other.kicked)
     {
-        x1 = other.x;
-        y1 = other.y;
-        _col = collision_line(x + (35 * image_xscale), y + (16 * image_yscale), x1, y1, obj_solid, false, true);
+        var x1 = other.x;
+        var y1 = other.y;
+        var _col = collision_line(x + (35 * image_xscale), y + (16 * image_yscale), x1, y1, obj_solid, false, true);
         
-        if (_col == -4)
+        if (_col == noone)
             instance_destroy();
         else
             instance_destroy(other);

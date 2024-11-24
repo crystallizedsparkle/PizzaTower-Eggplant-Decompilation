@@ -13,11 +13,11 @@ if (place_meeting(x, y - 1, obj_player1))
                 y -= 1;
         }
         
-        if (key_down && place_meeting(x, y + 1, obj_ladder) && !place_meeting(other.x + 16, y + 1, obj_solid) && state == UnknownEnum.Value_260 && place_meeting(x, y + 1, obj_platform))
+        if (key_down && place_meeting(x, y + 1, obj_ladder) && !place_meeting(other.x + 16, y + 1, obj_solid) && state == states.ratmountcrouch && place_meeting(x, y + 1, obj_platform))
         {
-            state = UnknownEnum.Value_261;
+            state = states.ratmountladder;
             
-            if (brick == true)
+            if (brick)
             {
                 with (instance_create(x, y, obj_brickcomeback))
                 {
@@ -57,12 +57,3 @@ if (instance_exists(obj_player2))
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_93 = 93,
-    Value_100 = 100,
-    Value_103 = 103,
-    Value_260 = 260,
-    Value_261
-}

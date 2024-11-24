@@ -1,5 +1,3 @@
-var i, b, _doorfinish;
-
 switch (state)
 {
     case states.normal:
@@ -58,9 +56,9 @@ switch (state)
     case states.arena_spawn:
         if (!ds_list_empty(baddielist))
         {
-            for (i = 0; i < ds_list_size(baddielist); i++)
+            for (var i = 0; i < ds_list_size(baddielist); i++)
             {
-                b = ds_list_find_value(baddielist, i);
+                var b = ds_list_find_value(baddielist, i);
                 
                 if (b[0] == wave)
                 {
@@ -105,7 +103,7 @@ switch (state)
         break;
     
     case states.arena:
-        _doorfinish = true;
+        var _doorfinish = true;
         
         with (obj_arenadoor)
         {
@@ -160,14 +158,3 @@ switch (state)
 if (state != states.normal && state != states.arena_intro)
     visible = false;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_46 = 46,
-    Value_98 = 98,
-    Value_142 = 142,
-    Value_143,
-    Value_144,
-    Value_145
-}

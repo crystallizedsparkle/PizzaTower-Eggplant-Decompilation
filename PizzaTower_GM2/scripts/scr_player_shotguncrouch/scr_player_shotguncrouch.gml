@@ -80,9 +80,3 @@ function scr_player_shotguncrouch()
     }
 }
 
-enum UnknownEnum
-{
-    Value_66 = 66,
-    Value_68 = 68,
-    Value_69
-}

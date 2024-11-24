@@ -29,7 +29,3 @@ if (place_meeting(x, y, obj_doorE))
 if (place_meeting(x, y, obj_doorF))
     targetDoor = "F";
 
-enum UnknownEnum
-{
-    Value_1 = 1
-}

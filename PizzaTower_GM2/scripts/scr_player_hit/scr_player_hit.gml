@@ -31,7 +31,3 @@ function scr_player_hit()
     }
 }
 
-enum UnknownEnum
-{
-    Value_156 = 156
-}

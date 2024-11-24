@@ -8,8 +8,3 @@ if (!graffiti && other.state == states.backbreaker && global.graffiticutscene)
     quick_ini_write_real(get_savefile_ini(), "cutscene", "factorygraffiti", true);
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84,
-    Value_85
-}

@@ -868,27 +868,3 @@ function boss_noise_jetpackspin()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_5 = 5,
-    Value_12 = 12,
-    Value_42 = 42,
-    Value_58 = 58,
-    Value_74 = 74,
-    Value_77 = 77,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_106 = 106,
-    Value_167 = 167,
-    Value_168,
-    Value_169,
-    Value_170,
-    Value_171,
-    Value_172,
-    Value_173
-}

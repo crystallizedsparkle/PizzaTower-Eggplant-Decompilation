@@ -1,5 +1,3 @@
-var player;
-
 if (room == rm_editor)
     exit;
 
@@ -54,7 +52,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -66,7 +64,7 @@ if (state != states.stun)
     birdcreated = false;
 
 scr_scareenemy();
-player = instance_nearest(x, y, obj_player);
+var player = instance_nearest(x, y, obj_player);
 
 if (ragebuffer > 0)
     ragebuffer--;
@@ -90,7 +88,7 @@ if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y
     }
     else if (x != player.x && grounded)
     {
-        if (state == states.walk && charging == false)
+        if (state == states.walk && !charging)
         {
             with (instance_create(x, y, obj_forkhitbox))
                 ID = other.id;
@@ -113,10 +111,10 @@ if (state == states.stun || state == states.walk)
 if (sprite_index == spr_fencer_chargestart && floor(image_index) == (image_number - 1))
     sprite_index = spr_fencer_charge;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == false && (state == states.walk || state == states.rage || state == states.charge))
+if (!hitboxcreate && (state == states.walk || state == states.rage || state == states.charge))
 {
     hitboxcreate = true;
     
@@ -130,7 +128,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -140,18 +138,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

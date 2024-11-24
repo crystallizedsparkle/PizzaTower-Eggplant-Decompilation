@@ -8,8 +8,3 @@ if (state != states.throwing && (other.hsp != 0 || other.thrown || other.state =
     image_index = 0;
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_74 = 74
-}

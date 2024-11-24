@@ -48,7 +48,3 @@ function scr_player_slipbanan()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

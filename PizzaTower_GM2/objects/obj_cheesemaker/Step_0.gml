@@ -1,4 +1,4 @@
-if (floor(image_index) == 3 && madecheese == false)
+if (floor(image_index) == 3 && !madecheese)
 {
     instance_create(x + 32, y + 64, obj_cheeseblob);
     madecheese = true;

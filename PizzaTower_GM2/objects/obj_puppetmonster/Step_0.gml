@@ -1,5 +1,3 @@
-var pid, dir;
-
 image_speed = 0.35;
 depth = -10;
 
@@ -34,10 +32,10 @@ switch (state)
                 
                 if (yy > 440)
                 {
-                    pid = scr_puppet_detect();
+                    var pid = scr_puppet_detect();
                     trace(pid);
                     
-                    if (pid != -4)
+                    if (pid != noone)
                     {
                         playerid = pid;
                         substate = states.chase;
@@ -83,7 +81,7 @@ switch (state)
     case states.robot_chase:
         playerid = instance_nearest(x, y, obj_player);
         sprite_index = spr_monstertomato_chase;
-        dir = point_direction(x, y, playerid.x, playerid.y);
+        var dir = point_direction(x, y, playerid.x, playerid.y);
         
         if (!(x > (playerid.x - 8) && x < (playerid.x + 8) && y > (playerid.y - 8) && y < (playerid.y + 8)))
         {
@@ -102,13 +100,3 @@ if (state != states.robot_idle)
 
 depth = (state == states.robot_walking) ? 100 : -6;
 
-enum UnknownEnum
-{
-    Value_92 = 92,
-    Value_135 = 135,
-    Value_141 = 141,
-    Value_217 = 217,
-    Value_218,
-    Value_219,
-    Value_220
-}

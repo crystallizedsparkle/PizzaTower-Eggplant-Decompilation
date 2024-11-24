@@ -1,6 +1,4 @@
-var _ty;
-
-if (global.panic == true)
+if (global.panic)
     image_index = 1;
 
 if (drop && global.panic)
@@ -11,7 +9,7 @@ if (drop && global.panic)
             if (distance_to_object(obj_player1) < 300)
             {
                 dropstate = states.hook;
-                handsprite = 206;
+                handsprite = spr_grabbiehand_fall;
                 hand_y = camera_get_view_y(view_camera[0]) - 100;
             }
             
@@ -24,7 +22,7 @@ if (drop && global.panic)
             }
             else
             {
-                handsprite = 205;
+                handsprite = spr_grabbiehand_catch;
                 handindex = 0;
                 dropstate = states.grabbed;
             }
@@ -33,7 +31,7 @@ if (drop && global.panic)
         
         case states.grabbed:
             depth = 80;
-            _ty = drop_y - 100;
+            var _ty = drop_y - 100;
             y = Approach(y, _ty, 3);
             hand_y = y - 128;
             
@@ -41,7 +39,7 @@ if (drop && global.panic)
             {
                 dropstate = states.fall;
                 handindex = 0;
-                handsprite = 204;
+                handsprite = spr_grabbiehand_release;
                 vsp = 0;
             }
             
@@ -56,10 +54,10 @@ if (drop && global.panic)
             if (y >= drop_y)
             {
                 depth = 50;
-                scr_soundeffect(27);
+                scr_soundeffect(sfx_groundpound);
                 y = drop_y;
                 dropstate = states.idle;
-                handsprite = 207;
+                handsprite = spr_grabbiehand_idle;
                 
                 with (obj_camera)
                 {
@@ -75,17 +73,9 @@ if (drop && global.panic)
             break;
     }
     
-    if (handsprite == 204 && floor(handindex) == (sprite_get_number(handsprite) - 1))
+    if (handsprite == spr_grabbiehand_release && floor(handindex) == (sprite_get_number(handsprite) - 1))
         handindex = sprite_get_number(handsprite) - 1;
     
     handindex += 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_4 = 4,
-    Value_15 = 15,
-    Value_126 = 126,
-    Value_135 = 135
-}

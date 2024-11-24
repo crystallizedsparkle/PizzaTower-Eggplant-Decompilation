@@ -1,15 +1,13 @@
-var w, h, pad, yy, i, txt, c;
-
 if (state == states.titlescreen)
 {
-    w = 0;
-    h = 0;
-    pad = 16;
-    yy = 0;
+    var w = 0;
+    var h = 0;
+    var pad = 16;
+    var yy = 0;
     
-    for (i = 0; i < array_length(hub_array); i++)
+    for (var i = 0; i < array_length(hub_array); i++)
     {
-        txt = hub_array[i][1];
+        var txt = hub_array[i][1];
         
         if (string_width(txt) > w)
             w = string_width(txt);
@@ -27,14 +25,10 @@ if (state == states.titlescreen)
     
     for (i = 0; i < array_length(hub_array); i++)
     {
-        c = (selected == i) ? 16777215 : 8421504;
+        var c = (selected == i) ? c_white : c_gray;
         txt = hub_array[i][1];
         draw_text_color(480, yy, txt, c, c, c, c, 1);
         yy -= string_height(txt);
     }
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

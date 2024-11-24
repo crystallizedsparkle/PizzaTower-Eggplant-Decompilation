@@ -1,9 +1,7 @@
-var xx, yy, title;
-
-xx = obj_player1.x;
-yy = obj_player1.y - 100;
+var xx = obj_player1.x;
+var yy = obj_player1.y - 100;
 draw_sprite(spr_comboend, 0, xx, yy);
-title = floor(combo / 5);
+var title = floor(combo / 5);
 title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 5));
 draw_sprite(spr_comboend_title1, (title * 2) + title_index, xx, yy + 30);
 draw_set_font(global.smallfont);

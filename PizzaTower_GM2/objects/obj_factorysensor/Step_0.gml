@@ -1,7 +1,5 @@
-var _closed;
-
 prevclosed = closed;
-_closed = false;
+var _closed = false;
 
 if (!graffiti)
 {
@@ -52,7 +50,3 @@ if (prevclosed != closed)
     }
 }
 
-enum UnknownEnum
-{
-    Value_8 = 8
-}

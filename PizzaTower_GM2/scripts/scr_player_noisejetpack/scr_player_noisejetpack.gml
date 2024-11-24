@@ -59,9 +59,3 @@ function scr_player_noisejetpack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_121 = 121,
-    Value_122
-}

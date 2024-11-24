@@ -11,7 +11,3 @@ function scr_do_noisejetpack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_215 = 215
-}

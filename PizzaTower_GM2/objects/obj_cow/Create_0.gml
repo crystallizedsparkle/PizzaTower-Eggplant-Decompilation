@@ -6,13 +6,9 @@ grounded = false;
 movespeed = 0;
 offscreen = false;
 state = states.idle;
-blockinst = -4;
+blockinst = noone;
 depth = -5;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

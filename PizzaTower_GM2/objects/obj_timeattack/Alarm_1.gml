@@ -1,4 +1,4 @@
-if (global.timeattack == true && stop == false)
+if (global.timeattack && !stop)
 {
     global.taseconds += 1;
     

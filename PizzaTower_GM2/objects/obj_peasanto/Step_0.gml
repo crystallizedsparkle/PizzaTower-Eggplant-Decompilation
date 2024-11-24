@@ -37,7 +37,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -97,7 +97,7 @@ if (flame_buffer > 0)
 if (attack_cooldown > 0)
     attack_cooldown--;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -106,7 +106,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -120,16 +120,3 @@ if (boundbox == false)
 if (sprite_index == idlespr && (hsp != 0 || vsp != 0))
     sprite_index = walkspr;
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

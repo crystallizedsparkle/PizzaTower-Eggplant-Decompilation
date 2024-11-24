@@ -76,8 +76,3 @@ function scr_player_superslam()
         image_speed = 0.5;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_92 = 92
-}

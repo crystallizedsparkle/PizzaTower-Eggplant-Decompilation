@@ -1,25 +1,25 @@
 switch (targetRoom)
 {
-    case 636:
+    case space_1:
         global.levelcompletename = "SPACE";
         break;
     
-    case 583:
+    case forest_1:
         global.levelcompletename = "FOREST";
         break;
     
-    case 639:
+    case chateau_1:
         global.levelcompletename = "CHATEAU";
         break;
     
     default:
-        global.levelcompletename = -4;
+        global.levelcompletename = noone;
         break;
 }
 
 with (obj_player1)
 {
-    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && obj_player1.spotlight == true)
+    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && obj_player1.spotlight)
     {
         audio_stop_all();
         global.leveltosave = other.level;
@@ -34,7 +34,7 @@ with (obj_player1)
         obj_player2.backtohubstarty = y;
         obj_player2.backtohubroom = room;
         
-        if (global.coop == true)
+        if (global.coop)
         {
             with (obj_player2)
             {
@@ -51,7 +51,7 @@ with (obj_player1)
 
 with (obj_player2)
 {
-    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && obj_player1.spotlight == false)
+    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && !obj_player1.spotlight)
     {
         audio_stop_all();
         global.leveltosave = other.level;
@@ -66,7 +66,7 @@ with (obj_player2)
         obj_player1.backtohubstarty = y;
         obj_player1.backtohubroom = room;
         
-        if (global.coop == true)
+        if (global.coop)
         {
             with (obj_player1)
             {
@@ -113,12 +113,3 @@ if ((floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_pla
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_95 = 95,
-    Value_98 = 98,
-    Value_103 = 103,
-    Value_104,
-    Value_121 = 121
-}

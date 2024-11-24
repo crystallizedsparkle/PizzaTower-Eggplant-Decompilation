@@ -17,26 +17,22 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 119;
-stunfallspr = 107;
-walkspr = 118;
-stunspr = 107;
-grabbedspr = 107;
-scaredspr = 120;
+idlespr = spr_pizzagoblin_idle;
+stunfallspr = spr_pizzagoblin_stun;
+walkspr = spr_pizzagoblin_walk;
+stunspr = spr_pizzagoblin_stun;
+grabbedspr = spr_pizzagoblin_stun;
+scaredspr = spr_pizzagoblin_scared;
 sprite_index = spr_pizzagoblin_walk;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 102;
+spr_dead = spr_pizzagoblin_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

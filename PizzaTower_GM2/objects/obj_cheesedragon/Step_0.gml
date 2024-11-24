@@ -1,7 +1,7 @@
-if (obj_player1.spotlight == true)
-    playerid = 324;
+if (obj_player1.spotlight)
+    playerid = obj_player1;
 else
-    playerid = 323;
+    playerid = obj_player2;
 
 if (floor(image_index) == (image_number - 1) && (sprite_index == spr_cheesedragon_flames || sprite_index == spr_cheesedragon_stomp))
 {
@@ -10,7 +10,7 @@ if (floor(image_index) == (image_number - 1) && (sprite_index == spr_cheesedrago
     attackcycle = choose(0, 2);
 }
 
-if (attackcycle == 0 && attacked == false && floor(image_index) == 13 && sprite_index == spr_cheesedragon_stomp)
+if (attackcycle == 0 && !attacked && floor(image_index) == 13 && sprite_index == spr_cheesedragon_stomp)
 {
     with (obj_baddie)
     {
@@ -21,7 +21,7 @@ if (attackcycle == 0 && attacked == false && floor(image_index) == 13 && sprite_
         }
     }
     
-    scr_soundeffect(27);
+    scr_soundeffect(sfx_groundpound);
     
     with (obj_camera)
     {

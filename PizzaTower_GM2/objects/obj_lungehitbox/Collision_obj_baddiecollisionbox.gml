@@ -1,6 +1,4 @@
-var _baddieID, lag, baddie_id, debriscount;
-
-_baddieID = other.baddieID;
+var _baddieID = other.baddieID;
 
 if (!instance_exists(_baddieID))
     exit;
@@ -11,8 +9,8 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
     {
         if ((floor(image_index) < 4 || (global.attackstyle == 3 && image_index < 6)) && (state == states.lungeattack || state == states.handstandjump) && state != states.chainsaw && _baddieID.state != states.hit)
         {
-            lag = 5;
-            baddie_id = _baddieID.id;
+            var lag = 5;
+            var baddie_id = _baddieID.id;
             movespeed = 6;
             
             if (ds_list_find_index(hitlist, baddie_id) == -1)
@@ -50,7 +48,7 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
                 if (state == states.handstandjump)
                 {
                     state = states.lungeattack;
-                    randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+                    randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
                     image_index = 0;
                 }
                 
@@ -68,12 +66,12 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
                     hitvsp = vsp;
                 
                 hitY = y;
-                scr_soundeffect(26);
-                debriscount = floor(lunge_hits / 5);
+                scr_soundeffect(sfx_killingblow );
+                var debriscount = floor(lunge_hits / 5);
                 
                 repeat (2 + debriscount)
                 {
-                    with (create_debris(x, y, 1141))
+                    with (create_debris(x, y, spr_slapstar))
                         vsp = irandom_range(-6, -11);
                 }
                 
@@ -83,12 +81,3 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_42 = 42,
-    Value_43,
-    Value_61 = 61,
-    Value_137 = 137
-}

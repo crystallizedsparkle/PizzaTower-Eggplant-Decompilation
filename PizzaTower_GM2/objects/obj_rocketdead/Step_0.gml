@@ -13,7 +13,7 @@ if (scr_solid(x, y + 1))
     
     if (sprite_index != spr_bombexplosion)
     {
-        scr_soundeffect(14);
+        scr_soundeffect(sfx_explosion);
         image_index = 0;
         sprite_index = spr_bombexplosion;
     }

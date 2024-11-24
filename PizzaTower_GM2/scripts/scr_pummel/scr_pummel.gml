@@ -7,7 +7,3 @@ function scr_pummel()
     vsp = -3;
 }
 
-enum UnknownEnum
-{
-    Value_91 = 91
-}

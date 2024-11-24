@@ -1,10 +1,10 @@
 with (other)
 {
-    if (state != UnknownEnum.Value_265)
+    if (state != states.antigrav)
     {
-        state = UnknownEnum.Value_265;
+        state = states.antigrav;
         vsp = 0;
-        scr_soundeffect(149);
+        scr_soundeffect(sfx_antigravstart);
         
         with (obj_antigravbubble)
         {
@@ -20,7 +20,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_265 = 265
-}

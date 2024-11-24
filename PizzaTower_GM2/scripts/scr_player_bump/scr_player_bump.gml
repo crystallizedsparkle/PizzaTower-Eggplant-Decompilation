@@ -54,8 +54,3 @@ function scr_player_bump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_104 = 104
-}

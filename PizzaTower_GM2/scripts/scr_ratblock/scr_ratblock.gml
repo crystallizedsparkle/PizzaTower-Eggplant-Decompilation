@@ -55,19 +55,3 @@ function scr_ratblock_destroy()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_11 = 11,
-    Value_33 = 33,
-    Value_34,
-    Value_35,
-    Value_47 = 47,
-    Value_49 = 49,
-    Value_51 = 51,
-    Value_52,
-    Value_113 = 113,
-    Value_146 = 146,
-    Value_150 = 150,
-    Value_186 = 186
-}

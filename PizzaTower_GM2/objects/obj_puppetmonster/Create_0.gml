@@ -1,29 +1,27 @@
-var a, lowestdepth, i, b;
-
 hsp = 0;
 vsp = 0;
 hsp_carry = 0;
 vsp_carry = 0;
-platformid = -4;
+platformid = noone;
 grav = 0.5;
 grounded = false;
 event_inherited();
 monsterid = 2;
-spr_dead = 2768;
-spr_intro = 2507;
-spr_introidle = 2736;
+spr_dead = spr_monstertomato_dead;
+spr_intro = spr_puppet_intro;
+spr_introidle = spr_puppet_introidle;
 state = states.robot_idle;
 inactivebuffer = 900;
 xs = room_width / 2;
 yy = -100;
 substate = states.fall;
-backgroundID = -4;
-a = layer_get_all();
-lowestdepth = 10000;
+backgroundID = noone;
+var a = layer_get_all();
+var lowestdepth = 10000;
 
-for (i = 0; i < array_length(a); i++)
+for (var i = 0; i < array_length(a); i++)
 {
-    b = a[i];
+    var b = a[i];
     
     if (layer_get_element_type(b) == 1)
     {
@@ -41,8 +39,3 @@ for (i = 0; i < array_length(a); i++)
 trace(backgroundID);
 trace(a);
 
-enum UnknownEnum
-{
-    Value_135 = 135,
-    Value_217 = 217
-}

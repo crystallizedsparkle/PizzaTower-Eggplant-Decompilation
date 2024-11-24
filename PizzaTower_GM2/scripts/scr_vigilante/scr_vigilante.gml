@@ -466,23 +466,3 @@ function scr_vigilante_crouch()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5,
-    Value_12 = 12,
-    Value_37 = 37,
-    Value_74 = 74,
-    Value_92 = 92,
-    Value_100 = 100,
-    Value_104 = 104,
-    Value_105,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_122 = 122,
-    Value_134 = 134
-}

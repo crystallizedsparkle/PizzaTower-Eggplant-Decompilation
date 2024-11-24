@@ -580,20 +580,3 @@ function scr_player_normal()
         state_pepperman_normal();
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_2,
-    Value_4 = 4,
-    Value_42 = 42,
-    Value_58 = 58,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_99 = 99,
-    Value_100,
-    Value_103 = 103,
-    Value_104,
-    Value_121 = 121,
-    Value_153 = 153,
-    Value_206 = 206
-}

@@ -5,23 +5,23 @@ visible = obj_tv.visible;
 switch (global.stylethreshold)
 {
     case 0:
-        pop = 2743;
-        idle = 39;
+        pop = spr_mildpop;
+        idle = spr_mild;
         break;
     
     case 1:
-        pop = 2792;
-        idle = 2838;
+        pop = spr_antsypop;
+        idle = spr_antsy;
         break;
     
     case 2:
-        pop = 2411;
-        idle = 2459;
+        pop = spr_madpop;
+        idle = spr_mad;
         break;
     
     case 3:
-        pop = 2373;
-        idle = 1014;
+        pop = spr_crazypop;
+        idle = spr_crazy;
         break;
 }
 
@@ -33,23 +33,23 @@ if (global.style > 55 && global.stylethreshold < 3)
     switch (global.stylethreshold)
     {
         case 0:
-            pop = 2743;
-            idle = 39;
+            pop = spr_mildpop;
+            idle = spr_mild;
             break;
         
         case 1:
-            pop = 2792;
-            idle = 2838;
+            pop = spr_antsypop;
+            idle = spr_antsy;
             break;
         
         case 2:
-            pop = 2411;
-            idle = 2459;
+            pop = spr_madpop;
+            idle = spr_mad;
             break;
         
         case 3:
-            pop = 2373;
-            idle = 1014;
+            pop = spr_crazypop;
+            idle = spr_crazy;
             break;
     }
     
@@ -66,23 +66,23 @@ if (global.style < 0 && global.stylethreshold != 0)
     switch (global.stylethreshold)
     {
         case 0:
-            pop = 2743;
-            idle = 39;
+            pop = spr_mildpop;
+            idle = spr_mild;
             break;
         
         case 1:
-            pop = 2792;
-            idle = 2838;
+            pop = spr_antsypop;
+            idle = spr_antsy;
             break;
         
         case 2:
-            pop = 2411;
-            idle = 2459;
+            pop = spr_madpop;
+            idle = spr_mad;
             break;
         
         case 3:
-            pop = 2373;
-            idle = 1014;
+            pop = spr_crazypop;
+            idle = spr_crazy;
             break;
     }
     

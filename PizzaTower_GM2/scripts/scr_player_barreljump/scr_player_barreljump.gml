@@ -43,8 +43,3 @@ function scr_player_barreljump()
         movespeed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_113 = 113
-}

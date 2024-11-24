@@ -46,8 +46,3 @@ function scr_player_cheeseballclimbwall()
         create_debris(x + (xscale * 30), y, 1136);
 }
 
-enum UnknownEnum
-{
-    Value_21 = 21,
-    Value_26 = 26
-}

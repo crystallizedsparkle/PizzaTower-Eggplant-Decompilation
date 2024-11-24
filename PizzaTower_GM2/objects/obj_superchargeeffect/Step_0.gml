@@ -1,8 +1,8 @@
 image_xscale = playerid.xscale;
 
-if (playerid.supercharged == false)
+if (!playerid.supercharged)
 {
-    playerid.superchargedeffectid = -4;
+    playerid.superchargedeffectid = noone;
     instance_destroy();
 }
 
@@ -18,12 +18,7 @@ if (global.combotime == 0)
 {
     playerid.supercharged = false;
     playerid.supercharge = 0;
-    playerid.superchargedeffectid = -4;
+    playerid.superchargedeffectid = noone;
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_95 = 95,
-    Value_112 = 112
-}

@@ -68,7 +68,7 @@ switch (state)
                 if (grounded)
                 {
                     substate = states.normal;
-                    scr_soundeffect(27);
+                    scr_soundeffect(sfx_groundpound);
                     
                     with (obj_camera)
                     {
@@ -86,10 +86,3 @@ switch (state)
 scr_collide();
 event_inherited();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_17 = 17,
-    Value_92 = 92,
-    Value_108 = 108
-}

@@ -5,7 +5,3 @@ with (obj_player)
     y = -100;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

@@ -58,9 +58,3 @@ function do_dialog_cutscene(argument0, argument1 = 0, argument2 = 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_17 = 17,
-    Value_138 = 138,
-    Value_146 = 146
-}

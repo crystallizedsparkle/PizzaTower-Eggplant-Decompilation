@@ -4,13 +4,8 @@ image_xscale = obj_player.xscale;
 
 if (obj_player.state == states.knightpepslopes || obj_player.state == states.knightpep || room == rank_room)
     visible = false;
-else if (global.cowboyhat == true)
+else if (global.cowboyhat)
     visible = true;
 else
     visible = false;
 
-enum UnknownEnum
-{
-    Value_38 = 38,
-    Value_47 = 47
-}

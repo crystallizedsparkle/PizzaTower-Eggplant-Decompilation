@@ -1,19 +1,17 @@
-var objectlist, instancelist, i, obj, l, j, _currentobj;
-
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
-    objectlist = ds_list_create();
-    ds_list_add(objectlist, 407, 534, 545);
-    instancelist = ds_list_create();
+    var objectlist = ds_list_create();
+    ds_list_add(objectlist, obj_baddie, obj_collect, obj_bigcollect);
+    var instancelist = ds_list_create();
     
-    for (i = 0; i < ds_list_size(objectlist); i++)
+    for (var i = 0; i < ds_list_size(objectlist); i++)
     {
-        obj = ds_list_find_value(objectlist, i);
-        l = instance_place_list(x, y, obj, instancelist, false);
+        var obj = ds_list_find_value(objectlist, i);
+        var l = instance_place_list(x, y, obj, instancelist, false);
         
-        for (j = 0; j < l; j++)
+        for (var j = 0; j < l; j++)
         {
-            _currentobj = ds_list_find_value(instancelist, j);
+            var _currentobj = ds_list_find_value(instancelist, j);
             
             if (ds_list_find_index(deactivatedlist, _currentobj.id) == -1)
             {
@@ -21,7 +19,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
                 
                 switch (obj)
                 {
-                    case 407:
+                    case obj_baddie:
                         if (_currentobj.boundbox)
                             boundbox = false;
                         

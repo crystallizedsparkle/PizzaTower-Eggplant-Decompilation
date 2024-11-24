@@ -276,24 +276,3 @@ function scr_player_grabbed()
     image_speed = 0.4;
 }
 
-enum UnknownEnum
-{
-    Value_6 = 6,
-    Value_20 = 20,
-    Value_55 = 55,
-    Value_74 = 74,
-    Value_75,
-    Value_76,
-    Value_79 = 79,
-    Value_80,
-    Value_81,
-    Value_82,
-    Value_83,
-    Value_92 = 92,
-    Value_107 = 107,
-    Value_121 = 121,
-    Value_191 = 191,
-    Value_192,
-    Value_193,
-    Value_194
-}

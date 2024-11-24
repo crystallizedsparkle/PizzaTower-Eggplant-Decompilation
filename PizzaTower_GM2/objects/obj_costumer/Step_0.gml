@@ -1,6 +1,6 @@
 cutscenetimer--;
 
-if (cutscenetimer < 0 && moving == false && throwcoin == false)
+if (cutscenetimer < 0 && !moving && !throwcoin)
 {
     cutscenetimer = 30;
     moving = true;
@@ -9,14 +9,14 @@ if (cutscenetimer < 0 && moving == false && throwcoin == false)
 if (moving == true && cutscenetimer > 0)
     x += 1;
 
-if (cutscenetimer < 0 && moving == true && throwcoin == false)
+if (cutscenetimer < 0 && moving && !throwcoin)
 {
     moving = false;
     throwcoin = true;
     cutscenetimer = 20;
 }
 
-if (cutscenetimer < 0 && throwcoin == true && numberofcoinsthrow != 0)
+if (cutscenetimer < 0 && throwcoin && numberofcoinsthrow != 0)
 {
     numberofcoinsthrow -= 1;
     cutscenetimer = 30;
@@ -28,7 +28,7 @@ if (cutscenetimer < 0 && throwcoin == true && numberofcoinsthrow != 0)
     }
 }
 
-if (numberofcoinsthrow == 0 && done == false)
+if (numberofcoinsthrow == 0 && !done)
 {
     with (obj_player)
     {

@@ -1,10 +1,8 @@
-var lay_id, s;
-
-lay_id = layer_get_id("Assets_1");
-s = layer_sprite_get_id(lay_id, "graphic_45C096A");
+var lay_id = layer_get_id("Assets_1");
+var s = layer_sprite_get_id(lay_id, "graphic_45C096A");
 layer_sprite_speed(s, 0.35);
 
-if (santaed == false)
+if (!santaed)
 {
     if (obj_mainmenuselect.optionselected == 0)
     {

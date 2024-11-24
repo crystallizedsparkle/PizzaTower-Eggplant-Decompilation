@@ -15,9 +15,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_31 = 31,
-    Value_42 = 42,
-    Value_80 = 80
-}

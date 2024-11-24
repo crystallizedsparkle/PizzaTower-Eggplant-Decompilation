@@ -6,7 +6,7 @@ if (global.collectsound < 10)
 
 if (distance_to_object(obj_player) < 10)
 {
-    if (global.timeattack == true)
+    if (global.timeattack)
         instance_destroy();
 }
 
@@ -15,7 +15,7 @@ if (place_meeting(x, y, obj_destructibles))
 else
     depth = 2;
 
-if (global.panic == true)
+if (global.panic)
 {
     if (!gotowardsplayer && abs(distance_to_object(obj_player1)) < 25)
     {
@@ -23,7 +23,7 @@ if (global.panic == true)
         scr_ghostcollectible();
     }
     
-    if (gotowardsplayer == true)
+    if (gotowardsplayer)
     {
         move_towards_point(obj_player.x, obj_player.y, movespeed);
         movespeed++;

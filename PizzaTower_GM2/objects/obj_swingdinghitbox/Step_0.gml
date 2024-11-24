@@ -7,7 +7,3 @@ with (playerid)
         instance_destroy(other);
 }
 
-enum UnknownEnum
-{
-    Value_79 = 79
-}

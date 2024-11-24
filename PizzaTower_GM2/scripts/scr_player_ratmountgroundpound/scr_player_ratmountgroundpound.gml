@@ -143,10 +143,3 @@ function scr_player_ratmountgroundpound()
     }
 }
 
-enum UnknownEnum
-{
-    Value_14 = 14,
-    Value_138 = 138,
-    Value_191 = 191,
-    Value_192
-}

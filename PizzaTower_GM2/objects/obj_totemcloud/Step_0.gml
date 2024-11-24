@@ -1,6 +1,4 @@
-var found_active;
-
-found_active = false;
+var found_active = false;
 
 with (obj_totem)
 {

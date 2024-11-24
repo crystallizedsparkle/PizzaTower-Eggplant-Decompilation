@@ -107,7 +107,7 @@ else if (state == states.throwing)
     }
 }
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -127,17 +127,3 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_5,
-    Value_74 = 74,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

@@ -8,8 +8,3 @@ if (abs(playerid.hsp) <= 0 || playerid.movespeed < 16 || playerid.state == state
 if (room == timesuproom)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_95 = 95,
-    Value_112 = 112
-}

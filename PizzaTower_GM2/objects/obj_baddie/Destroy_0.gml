@@ -26,11 +26,11 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && (!elite || elitehit <= 0)
     }
     else if (object_index == obj_ghoul)
     {
-        i = 0;
+        var i = 0;
         
         repeat (sprite_get_number(spr_ghoul_gibs))
         {
-            with (create_debris(x, y, 2468))
+            with (create_debris(x, y, spr_ghoul_gibs))
             {
                 image_index = i;
                 vsp = -irandom_range(10, 14);
@@ -50,7 +50,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && (!elite || elitehit <= 0)
     }
 }
 
-if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
+if (ds_list_find_index(global.baddieroom, id) == -1 && !important)
 {
     if (!elite || elitehit <= 0)
     {
@@ -66,16 +66,16 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
     
     if (!elite || elitehit <= 0)
     {
-        combototal = 10 + round(10 * (global.combo * 0.5));
+        var combototal = 10 + round(10 * (global.combo * 0.5));
         global.collect += combototal;
         global.comboscore += combototal;
     }
     
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     
     repeat (3)
     {
-        with (create_debris(x, y, 1141))
+        with (create_debris(x, y, spr_slapstar))
         {
             hsp = random_range(-5, 5);
             vsp = random_range(-10, 10);
@@ -95,7 +95,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
     if (escape)
         ds_list_add(global.escaperoom, id);
 }
-else if (ds_list_find_index(global.baddieroom, id) == -1 && important == true)
+else if (ds_list_find_index(global.baddieroom, id) == -1 && important)
 {
     trace("destroy unimportant");
     instance_create(x, y, obj_slapstar);

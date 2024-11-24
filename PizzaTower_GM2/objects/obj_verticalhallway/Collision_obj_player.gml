@@ -1,5 +1,3 @@
-var _x, _percentage, bbox_size, i;
-
 if (obj_player1.state == states.debugstate)
     exit;
 
@@ -7,8 +5,8 @@ with (other)
 {
     if (!instance_exists(obj_fadeout))
     {
-        _x = x - other.x;
-        _percentage = _x / other.sprite_width;
+        var _x = x - other.x;
+        var _percentage = _x / other.sprite_width;
         obj_player1.vertical_x = _percentage;
         obj_player2.vertical_x = _percentage;
         obj_player1.verticalhall_vsp = vsp;
@@ -31,13 +29,13 @@ with (other)
         }
         
         other.visited = true;
-        scr_soundeffect(76);
+        scr_soundeffect(sfx_door);
         instance_create(x, y, obj_fadeout);
     }
     
     y = other.y + (other.sprite_height - 46);
     x = other.x + (other.sprite_width * vertical_x);
-    bbox_size = abs(bbox_right - bbox_left);
+    var bbox_size = abs(bbox_right - bbox_left);
     x = clamp(x, other.x + bbox_size, other.bbox_right - bbox_size);
     y = other.y;
     
@@ -46,7 +44,7 @@ with (other)
         trace("climbwall verticalhallway");
         verticalbuffer = 10;
         verticalstate = states.climbwall;
-        i = 0;
+        var i = 0;
         x = floor(x);
         
         while (!scr_solid(x + xscale, y))
@@ -60,8 +58,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_37 = 37,
-    Value_208 = 208
-}

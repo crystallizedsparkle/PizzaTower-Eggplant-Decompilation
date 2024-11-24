@@ -7,4 +7,4 @@ spdh = 0;
 pistol = false;
 shotgun = false;
 brick = false;
-brickid = 523;
+brickid = obj_null;

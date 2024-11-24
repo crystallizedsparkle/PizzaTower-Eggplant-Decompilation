@@ -1,8 +1,6 @@
-var tx, ty, acc;
-
-tx = playerid.x;
-ty = playerid.y - 60;
-acc = 0.1;
+var tx = playerid.x;
+var ty = playerid.y - 60;
+var acc = 0.1;
 
 switch (state)
 {
@@ -35,9 +33,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_92 = 92
-}

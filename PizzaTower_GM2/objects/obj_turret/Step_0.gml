@@ -1,4 +1,4 @@
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 switch (state)
 {
@@ -17,8 +17,3 @@ if (invtime > 0)
 if (hp <= 0)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_128 = 128
-}

@@ -61,14 +61,3 @@ if (place_meeting(x, y + 1, obj_player2) || place_meeting(x, y - 1, obj_player2)
     }
 }
 
-enum UnknownEnum
-{
-    Value_19 = 19,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_121 = 121,
-    Value_153 = 153,
-    Value_184 = 184
-}

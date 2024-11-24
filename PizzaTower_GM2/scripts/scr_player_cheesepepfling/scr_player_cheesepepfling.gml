@@ -26,8 +26,3 @@ function scr_player_cheesepepfling()
     }
 }
 
-enum UnknownEnum
-{
-    Value_24 = 24,
-    Value_28 = 28
-}

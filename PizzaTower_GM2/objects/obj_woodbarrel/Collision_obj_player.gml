@@ -1,4 +1,4 @@
-if ((other.state == states.handstandjump || other.state == states.punch) && other.grounded == true)
+if ((other.state == states.handstandjump || other.state == states.punch) && other.grounded)
 {
     instance_create(x + (obj_player1.xscale * 40), y, obj_punchdust);
     
@@ -33,14 +33,3 @@ if (other.state == states.mach2 || other.state == states.mach3 || (other.state =
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_42 = 42,
-    Value_65 = 65,
-    Value_79 = 79,
-    Value_80,
-    Value_104 = 104,
-    Value_113 = 113,
-    Value_121 = 121
-}

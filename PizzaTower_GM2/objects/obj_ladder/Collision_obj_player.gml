@@ -12,7 +12,7 @@ with (other)
     
     if (key_up && ladderbuffer == 0 && (state == states.ratmountjump || state == states.ratmount))
     {
-        state = UnknownEnum.Value_261;
+        state = states.ratmountladder;
         
         if (brick == true)
         {
@@ -32,22 +32,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_57 = 57,
-    Value_58,
-    Value_60 = 60,
-    Value_92 = 92,
-    Value_93,
-    Value_103 = 103,
-    Value_104,
-    Value_105,
-    Value_107 = 107,
-    Value_108,
-    Value_111 = 111,
-    Value_121 = 121,
-    Value_191 = 191,
-    Value_192,
-    Value_261 = 261
-}

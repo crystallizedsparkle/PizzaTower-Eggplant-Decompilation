@@ -11,7 +11,3 @@ if (hsp != 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1
-}

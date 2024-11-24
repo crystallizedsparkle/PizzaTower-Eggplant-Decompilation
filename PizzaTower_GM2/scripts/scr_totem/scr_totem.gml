@@ -70,7 +70,3 @@ function totem_count(argument0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_188 = 188
-}

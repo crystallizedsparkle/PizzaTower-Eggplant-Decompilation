@@ -1,8 +1,6 @@
-var b;
-
 with (other)
 {
-    b = 1;
+    var b = 1;
     
     for (i = 0; i < array_length(transformation); i += 1)
     {
@@ -16,11 +14,7 @@ with (other)
         image_index = 0;
         vsp = -25;
         sprite_index = spr_fireass;
-        scr_soundeffect(57);
+        scr_soundeffect(sfx_scream5);
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

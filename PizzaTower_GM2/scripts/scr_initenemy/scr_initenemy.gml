@@ -130,7 +130,3 @@ function scr_initenemy()
     dashcloudid = 523;
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

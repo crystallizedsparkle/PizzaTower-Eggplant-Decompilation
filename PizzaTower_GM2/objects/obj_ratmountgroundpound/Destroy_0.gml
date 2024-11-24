@@ -22,7 +22,3 @@ repeat (3)
 instance_create(x, y, obj_bangeffect);
 create_particle(x, y + 3, particles.groundpoundeffect, 0);
 
-enum UnknownEnum
-{
-    Value_14 = 14
-}

@@ -23,8 +23,3 @@ if (state == states.superattack)
     duel_buffer = duel_max + irandom(duel_random);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_160 = 160
-}

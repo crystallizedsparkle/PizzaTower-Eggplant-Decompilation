@@ -1,6 +1,6 @@
 if (obj_player.x > (x - 200) && obj_player.x < (x + 200))
 {
-    if (pushing == false)
+    if (!pushing)
     {
         hsp = image_xscale * 3;
         pushing = true;
@@ -11,7 +11,7 @@ if (obj_player.x > (x - 200) && obj_player.x < (x + 200))
 if (place_meeting(x + hsp, y, obj_noiserock))
     obj_noiserock.hsp = hsp;
 
-if ((obj_noiserock.falling == true || obj_noiserock.hit == true) && jumpaway == false)
+if ((obj_noiserock.falling || obj_noiserock.hit) && !jumpaway)
 {
     sprite_index = spr_playerN_jump;
     image_index = 0;

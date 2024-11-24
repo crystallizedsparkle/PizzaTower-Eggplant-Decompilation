@@ -1,23 +1,23 @@
-if (global.timeattack == true)
+if (global.timeattack)
     instance_destroy();
 
 if (ds_list_find_index(global.saveroom, id) != -1)
     instance_destroy();
 
-if (content == 539 && global.shroomfollow)
+if (content == obj_pizzakinshroom && global.shroomfollow)
     instance_destroy();
 
-if (content == 540 && global.cheesefollow)
+if (content == obj_pizzakincheese && global.cheesefollow)
     instance_destroy();
 
-if (content == 541 && global.tomatofollow)
+if (content == obj_pizzakintomato && global.tomatofollow)
     instance_destroy();
 
-if (content == 542 && global.sausagefollow)
+if (content == obj_pizzakinsausage && global.sausagefollow)
     instance_destroy();
 
-if (content == 543 && global.pineapplefollow)
+if (content == obj_pizzakinpineapple && global.pineapplefollow)
     instance_destroy();
 
-if (global.snickchallenge == true)
+if (global.snickchallenge)
     instance_destroy();

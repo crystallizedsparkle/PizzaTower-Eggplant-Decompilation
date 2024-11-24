@@ -72,8 +72,3 @@ function scr_player_ladder()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92
-}

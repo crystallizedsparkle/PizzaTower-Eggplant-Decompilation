@@ -2,7 +2,7 @@ with (other)
 {
     if (state != states.gotoplayer && state != states.fireass)
     {
-        scr_soundeffect(57);
+        scr_soundeffect(sfx_scream5);
         image_index = 0;
         state = states.fireass;
         vsp = -21;
@@ -11,8 +11,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_186 = 186
-}

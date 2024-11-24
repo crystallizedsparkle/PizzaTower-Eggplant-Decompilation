@@ -63,9 +63,3 @@ function scr_pizzaball_go_to_thrown(argument0, argument1, argument2 = true)
     substate = states.thrown;
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104,
-    Value_148 = 148,
-    Value_156 = 156
-}

@@ -19,7 +19,3 @@ if (state == states.flush_transition)
     }
 }
 
-enum UnknownEnum
-{
-    Value_224 = 224
-}

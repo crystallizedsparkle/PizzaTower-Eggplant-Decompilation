@@ -33,13 +33,3 @@ if (place_meeting(x, y - 1, obj_player))
 with (instance_place(x, y - 1, obj_baddie))
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_121 = 121,
-    Value_147 = 147,
-    Value_186 = 186,
-    Value_209 = 209,
-    Value_210,
-    Value_211
-}

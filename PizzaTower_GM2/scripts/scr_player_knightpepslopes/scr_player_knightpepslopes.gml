@@ -87,8 +87,3 @@ function scr_player_knightpepslopes()
     }
 }
 
-enum UnknownEnum
-{
-    Value_47 = 47,
-    Value_49 = 49
-}

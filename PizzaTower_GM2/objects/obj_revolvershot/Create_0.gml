@@ -5,11 +5,9 @@ parryable = true;
 
 function player_hurt(argument0, argument1)
 {
-    var prevstate;
-    
     if (!collisioned)
     {
-        prevstate = argument1.state;
+        var prevstate = argument1.state;
         SUPER_player_hurt(argument0, argument1);
         argument1.xscale = -image_xscale;
         argument1.hitxscale = -image_xscale;
@@ -28,9 +26,7 @@ function player_hurt(argument0, argument1)
 
 function parry()
 {
-    var prevparried;
-    
-    prevparried = parried;
+    var prevparried = parried;
     SUPER_parry();
     
     if (prevparried != parried)
@@ -41,7 +37,3 @@ function parry()
     }
 }
 
-enum UnknownEnum
-{
-    Value_160 = 160
-}

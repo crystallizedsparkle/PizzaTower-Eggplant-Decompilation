@@ -1,17 +1,17 @@
-if (playerid.visible == false)
+if (!playerid.visible)
 {
     global.hp = 8;
     global.failcutscene = false;
     
     with (obj_player1)
     {
-        scr_soundeffect(93);
+        scr_soundeffect(sfx_taxi1);
         state = states.normal;
         instance_create(x, y, obj_genericpoofeffect);
         cutscene = false;
     }
     
-    if (global.coop == true)
+    if (global.coop)
     {
         with (obj_player2)
         {
@@ -24,7 +24,3 @@ if (playerid.visible == false)
     obj_player2.visible = true;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

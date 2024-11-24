@@ -1,5 +1,3 @@
-var old_y;
-
 if (spawn)
 {
     with (instance_create(x, y, content))
@@ -16,7 +14,7 @@ if (spawn)
             default:
                 if (scr_solid(x, y))
                 {
-                    old_y = y;
+                    var old_y = y;
                     
                     while (scr_solid(x, y))
                     {

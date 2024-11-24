@@ -3,11 +3,11 @@ hsp = 0;
 vsp = 0;
 movespeed = 0;
 slopespeed = 0;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 chair = true;
-player = 324;
+player = obj_player1;
 state = states.normal;
 deccel = 0.025;
 meter = false;
@@ -24,7 +24,3 @@ depth = 0;
 mask_index = spr_player_mask;
 thrown = false;
 
-enum UnknownEnum
-{
-    Value_0
-}

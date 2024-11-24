@@ -1,16 +1,14 @@
-var _collidewithplayer, _oldmask;
-
 if (spawn_buffer > 0)
 {
     spawn_buffer--;
 }
-else if (content != -4)
+else if (content != noone)
 {
-    _collidewithplayer = false;
+    var _collidewithplayer = false;
     
     with (obj_player)
     {
-        _oldmask = mask_index;
+        var _oldmask = mask_index;
         mask_index = spr_player_mask;
         
         if (place_meeting(x, y, other))
@@ -33,7 +31,3 @@ else if (content != -4)
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

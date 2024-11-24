@@ -1,5 +1,3 @@
-var a;
-
 switch (global.boxhp)
 {
     case 20:
@@ -121,7 +119,7 @@ with (instance_place(x, y, obj_player))
                 }
                 
                 global.boxhp -= 1;
-                scr_soundeffect(23);
+                scr_soundeffect(sfx_killenemy);
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);
@@ -145,7 +143,7 @@ with (instance_place(x, y, obj_player))
                     shake_mag_acc = 40 / room_speed;
                 }
                 
-                scr_soundeffect(23);
+                scr_soundeffect(sfx_killenemy);
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);
@@ -161,7 +159,7 @@ with (instance_place(x, y, obj_player))
     }
 }
 
-if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown == true && sprite_index != spr_present)
+if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown && sprite_index != spr_present)
 {
     if (character == 0)
     {
@@ -172,7 +170,7 @@ if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown == true && sprite_index
         }
         
         global.boxhp -= 1;
-        scr_soundeffect(23);
+        scr_soundeffect(sfx_killenemy);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -196,7 +194,7 @@ if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown == true && sprite_index
             shake_mag_acc = 40 / room_speed;
         }
         
-        scr_soundeffect(23);
+        scr_soundeffect(sfx_killenemy);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -221,7 +219,7 @@ if (place_meeting(x, y, obj_shotgunbullet) && sprite_index != spr_present)
         }
         
         global.boxhp -= 1;
-        scr_soundeffect(23);
+        scr_soundeffect(sfx_killenemy);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -245,7 +243,7 @@ if (place_meeting(x, y, obj_shotgunbullet) && sprite_index != spr_present)
             shake_mag_acc = 40 / room_speed;
         }
         
-        scr_soundeffect(23);
+        scr_soundeffect(sfx_killenemy);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_slapstar);
@@ -262,38 +260,38 @@ if (place_meeting(x, y, obj_shotgunbullet) && sprite_index != spr_present)
 switch (character)
 {
     case 0:
-        upspr = 2099;
-        spr = 2100;
-        downspr = 2101;
-        deadspr = 997;
+        upspr = spr_noisepresentup;
+        spr = spr_noisepresent;
+        downspr = spr_noisepresentdown;
+        deadspr = spr_playerN_hurt;
         break;
     
     case 1:
-        upspr = 2102;
-        spr = 2103;
-        downspr = 2105;
-        deadspr = 2104;
+        upspr = spr_gustavopresentup;
+        spr = spr_gustavopresent;
+        downspr = spr_gustavopresentdown;
+        deadspr = spr_gustavopresentdead;
         break;
     
     case 2:
-        upspr = 2107;
-        spr = 2108;
-        downspr = 2111;
-        deadspr = 2110;
+        upspr = spr_snickpresentup;
+        spr = spr_snickpresent;
+        downspr = spr_snickpresentdown;
+        deadspr = spr_snickpresentdead;
         break;
     
     case 3:
-        upspr = 2112;
-        spr = 2113;
-        downspr = 2115;
-        deadspr = 2114;
+        upspr = spr_slimepresentup;
+        spr = spr_slimepresent;
+        downspr = spr_slimepresentdown;
+        deadspr = spr_slimepresentdead;
         break;
     
     case 4:
-        upspr = 2116;
-        spr = 2119;
-        downspr = 2122;
-        deadspr = 2121;
+        upspr = spr_stickpresentup;
+        spr = spr_stickpresent;
+        downspr = spr_stickpresentdown;
+        deadspr = spr_stickpresentdead;
         break;
 }
 
@@ -312,7 +310,7 @@ if (floor(image_index) == (image_number - 1) && sprite_index == upspr)
     {
         with (instance_create(x, y, obj_pizzagoblinbomb))
         {
-            a = 1;
+            var a = 1;
             
             if (x != obj_player1.x)
                 a = -sign(x - obj_player1.x);
@@ -350,7 +348,7 @@ if (!instance_exists(obj_baddiespawner) && global.boxhp == 10)
 {
     with (instance_create(480, 288, obj_baddiespawner))
     {
-        content = 468;
+        content = obj_noisey;
         
         repeat (6)
             instance_create(x + random_range(-25, 25), y + random_range(-25, 25), obj_cloudeffect);
@@ -372,10 +370,3 @@ if (box == 4)
 if (box == 5)
     character = ds_list_find_index(global.boxlist, "box5");
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_43,
-    Value_80 = 80,
-    Value_91 = 91
-}

@@ -1,7 +1,5 @@
-var _destroy, spd, accel, deccel;
-
 mask_index = spr_player_mask;
-_destroy = false;
+var _destroy = false;
 
 switch (state)
 {
@@ -22,9 +20,9 @@ switch (state)
         key_right = playerid.key_right;
         key_jump = playerid.key_jump;
         move = key_left + key_right;
-        spd = 12;
-        accel = 0.1;
-        deccel = 0.2;
+        var spd = 12;
+        var accel = 0.1;
+        var deccel = 0.2;
         
         switch (substate)
         {
@@ -115,11 +113,3 @@ if (_destroy)
 scr_collide();
 event_inherited();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_9 = 9,
-    Value_16 = 16,
-    Value_17,
-    Value_92 = 92
-}

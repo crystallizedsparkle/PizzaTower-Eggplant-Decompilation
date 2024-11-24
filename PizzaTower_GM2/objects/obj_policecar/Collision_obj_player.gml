@@ -25,8 +25,3 @@ hsp = 10;
 image_xscale = 1;
 vsp = 0;
 
-enum UnknownEnum
-{
-    Value_152 = 152,
-    Value_186 = 186
-}

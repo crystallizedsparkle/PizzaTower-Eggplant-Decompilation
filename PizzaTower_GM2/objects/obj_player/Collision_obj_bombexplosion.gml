@@ -1,8 +1,6 @@
-var dir;
-
 if (scr_transformationcheck() && state != states.bombpepside && state != states.bombpepup && state != states.Sjump && state != states.Sjumpprep)
 {
-    dir = point_direction(other.x, other.y, x, y);
+    var dir = point_direction(other.x, other.y, x, y);
     trace(dir);
     
     if (!grounded && dir >= 45 && dir < 135)
@@ -40,10 +38,3 @@ if (scr_transformationcheck() && state != states.bombpepside && state != states.
     }
 }
 
-enum UnknownEnum
-{
-    Value_53 = 53,
-    Value_54,
-    Value_97 = 97,
-    Value_99 = 99
-}

@@ -19,11 +19,3 @@ if (state != states.throwing && state != states.stun && state != states.grabbed)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_74 = 74,
-    Value_134 = 134,
-    Value_138 = 138,
-    Value_156 = 156
-}

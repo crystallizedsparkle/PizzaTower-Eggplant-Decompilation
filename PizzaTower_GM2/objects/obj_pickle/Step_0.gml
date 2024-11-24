@@ -1,5 +1,3 @@
-var yy, ground, i, old_xscale, tx;
-
 if (room == rm_editor)
     exit;
 
@@ -52,7 +50,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -63,7 +61,7 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -87,7 +85,7 @@ if (sprite_index == scaredspr)
 if (bombreset == 0 && state == states.walk)
 {
     attacking = false;
-    targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+    targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
     
     if ((targetplayer.x > (x - threshold_x) && targetplayer.x < (x + threshold_x)) && (y <= (targetplayer.y + threshold_y) && y >= (targetplayer.y - threshold_y)))
     {
@@ -129,10 +127,10 @@ if (state == states.chase)
             
             if (!scr_solid(x, y + 1))
             {
-                yy = y;
-                ground = false;
+                var yy = y;
+                var ground = false;
                 
-                for (i = 1; i < ground_check; i++)
+                for (var i = 1; i < ground_check; i++)
                 {
                     if (scr_solid(x, y + i))
                     {
@@ -160,7 +158,7 @@ if (state == states.chase)
             image_alpha = 1;
             image_index = 0;
             sprite_index = spr_pickle_attack;
-            old_xscale = image_xscale;
+            var old_xscale = image_xscale;
             image_xscale = -sign(x - targetplayer.x);
             
             if (image_xscale == 0)
@@ -168,9 +166,9 @@ if (state == states.chase)
             
             state = states.enemy_throw;
             
-            if (elite && cloneid == -4)
+            if (elite && cloneid == noone)
             {
-                tx = image_xscale * 32;
+                var tx = image_xscale * 32;
                 
                 if (scr_solid(x + tx, y))
                     tx = 0;
@@ -208,7 +206,7 @@ if (state == states.idle)
     }
 }
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -219,16 +217,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141
-}

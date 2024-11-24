@@ -1,5 +1,3 @@
-var _railinst;
-
 switch (state)
 {
     case states.idle:
@@ -45,7 +43,7 @@ switch (state)
             
             if (place_meeting(x, y + 1, obj_railparent))
             {
-                _railinst = instance_place(x, y + 1, obj_railparent);
+                var _railinst = instance_place(x, y + 1, obj_railparent);
                 hsp += (_railinst.movespeed * _railinst.dir);
             }
             
@@ -61,7 +59,7 @@ switch (state)
         
         if (place_meeting(x, y + 1, obj_railparent))
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             railmovespeed = _railinst.movespeed * _railinst.dir;
         }
         else
@@ -89,7 +87,7 @@ switch (state)
             
             if (place_meeting(x, y + 1, obj_railparent))
             {
-                _railinst = instance_place(x, y + 1, obj_railparent);
+                var _railinst = instance_place(x, y + 1, obj_railparent);
                 hsp += (_railinst.movespeed * _railinst.dir);
             }
             
@@ -127,7 +125,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
     birdcreated = true;
     
@@ -138,7 +136,7 @@ if (state == states.stun && stunned > 40 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -199,7 +197,7 @@ if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0)
     }
 }
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -232,19 +230,3 @@ else
     hitboxcreate = false;
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_23 = 23,
-    Value_91 = 91,
-    Value_103 = 103,
-    Value_104,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

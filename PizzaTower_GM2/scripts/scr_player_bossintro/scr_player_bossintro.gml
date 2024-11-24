@@ -17,7 +17,3 @@ function scr_player_bossintro()
         image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

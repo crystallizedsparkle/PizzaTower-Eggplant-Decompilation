@@ -1,8 +1,6 @@
-var i;
-
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
-    instance_create_unique(0, 0, 251);
+    instance_create_unique(0, 0, obj_wartimer);
     
     with (obj_wartimer)
     {
@@ -13,9 +11,9 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         alarm[2] = 1;
     }
     
-    for (i = 0; i < sprite_get_number(spr_warterminal_debris); i++)
+    for (var i = 0; i < sprite_get_number(spr_warterminal_debris); i++)
     {
-        with (create_debris(x, y, 2236))
+        with (create_debris(x, y, spr_warterminal_debris))
             image_index = i;
     }
     
@@ -30,6 +28,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(15, 16);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
 }

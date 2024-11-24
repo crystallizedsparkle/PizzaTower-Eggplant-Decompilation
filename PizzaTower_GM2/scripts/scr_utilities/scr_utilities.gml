@@ -124,11 +124,9 @@ function get_solid_difference(argument0, argument1, argument2)
 
 function trace()
 {
-    var _string, i;
+    var _string = "";
     
-    _string = "";
-    
-    for (i = 0; i < argument_count; i++)
+    for (var i = 0; i < argument_count; i++)
         _string += string(argument[i]);
     
     show_debug_message(_string);

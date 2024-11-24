@@ -1,6 +1,4 @@
-var current_scene;
-
-current_scene = scene_info[scene];
+var current_scene = scene_info[scene];
 
 switch (array_length(current_scene) - 1)
 {

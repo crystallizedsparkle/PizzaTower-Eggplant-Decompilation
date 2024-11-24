@@ -1,5 +1,3 @@
-var _dir, spd, tx, ty, s1;
-
 targetplayer = instance_nearest(x, y, obj_player);
 image_speed = 0.35;
 
@@ -8,12 +6,12 @@ switch (state)
     case states.normal:
         hand_xscale = (drawhandx < x) ? 1 : -1;
         idlebuffer = 0;
-        spr_hand = 507;
+        spr_hand = spr_mrpinch_hand1;
         sprite_index = spr_mrpinch_face1;
-        _dir = point_direction(x, y, targetplayer.x, targetplayer.y);
-        spd = (shootbuffer > 0) ? 3 : 10;
-        tx = targetplayer.x;
-        ty = targetplayer.y;
+        var _dir = point_direction(x, y, targetplayer.x, targetplayer.y);
+        var spd = (shootbuffer > 0) ? 3 : 10;
+        var tx = targetplayer.x;
+        var ty = targetplayer.y;
         
         if (point_distance(x, y, handx, handy) >= (maxhandlen - 20))
         {
@@ -58,7 +56,7 @@ switch (state)
     
     case states.hook:
         sprite_index = spr_mrpinch_face2;
-        spr_hand = 2688;
+        spr_hand = spr_mrpinch_hand2;
         handx = playerid.x;
         handy = playerid.y;
         drawhandx = handx;
@@ -128,13 +126,13 @@ switch (state)
     
     case states.hookshot:
         sprite_index = spr_mrpinch_face2;
-        hand_index = 2688;
+        hand_index = spr_mrpinch_hand2;
         hand_xscale = playerid.xscale;
         handy = playerid.y;
         handx = playerid.x;
         drawhandx = handx;
         drawhandy = handy;
-        s1 = 0.9;
+        var s1 = 0.9;
         hsp += lengthdir_x(s1, launch_dir);
         vsp += lengthdir_y(s1, launch_dir);
         
@@ -173,7 +171,7 @@ switch (state)
     
     case states.transitioncutscene:
         hand_xscale = 1;
-        spr_hand = 2383;
+        spr_hand = spr_mrpinch_hand3;
         sprite_index = spr_mrpinch_face3;
         handx = Approach(handx, x - 40, 4);
         handy = Approach(handy, y + 5, 4);
@@ -198,14 +196,3 @@ hand_index += 0.35;
 if (hand_index > (sprite_get_number(hand_index) - 1))
     hand_index = frac(hand_index);
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_15 = 15,
-    Value_19 = 19,
-    Value_26 = 26,
-    Value_92 = 92,
-    Value_150 = 150,
-    Value_214 = 214
-}

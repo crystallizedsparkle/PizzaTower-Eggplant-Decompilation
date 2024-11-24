@@ -57,9 +57,3 @@ function scr_player_grind()
         instance_create(x, y, obj_grindeffect);
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104,
-    Value_106 = 106,
-    Value_121 = 121
-}

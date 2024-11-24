@@ -82,12 +82,3 @@ function scr_player_parry()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_4 = 4,
-    Value_137 = 137,
-    Value_138,
-    Value_191 = 191
-}

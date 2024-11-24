@@ -183,12 +183,3 @@ function scr_player_mach1()
     scr_dotaunt();
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_5 = 5,
-    Value_104 = 104,
-    Value_122 = 122
-}

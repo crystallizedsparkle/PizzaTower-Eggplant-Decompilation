@@ -1,14 +1,12 @@
-var baddie, _xs;
-
-baddie = id;
+var baddie = id;
 
 if (state != states.chase)
 {
     with (other)
     {
-        if (y < other.y && attacking == false && sprite_index != spr_player_mach2jump && ((state == states.boots && vsp > 0) || state == states.jump || state == states.mach1 || state == states.grab) && vsp > 0 && other.vsp >= 0 && sprite_index != spr_stompprep)
+        if (y < other.y && !attacking && sprite_index != spr_player_mach2jump && ((state == states.boots && vsp > 0) || state == states.jump || state == states.mach1 || state == states.grab) && vsp > 0 && other.vsp >= 0 && sprite_index != spr_stompprep)
         {
-            scr_soundeffect(24);
+            scr_soundeffect(sfx_stompenemy);
             image_index = 0;
             
             if (key_jump2)
@@ -31,14 +29,14 @@ if (state != states.chase)
             }
         }
         
-        if (y >= other.y && other.thrown == false && other.stuntouchbuffer == 0 && other.vsp > 0 && state != states.bump && other.state != states.chase)
+        if (y >= other.y && !other.thrown && other.stuntouchbuffer == 0 && other.vsp > 0 && state != states.bump && other.state != states.chase)
         {
-            scr_soundeffect(28);
+            scr_soundeffect(sfx_bumpwall);
             
             if (state != states.bombpep && state != states.mach1 && state != states.crouchslide)
                 movespeed = 0;
             
-            _xs = sign(x - baddie.x);
+            var _xs = sign(x - baddie.x);
             
             if (floor(_xs) == 0)
                 _xs = xscale;
@@ -65,15 +63,3 @@ else
     }
 }
 
-enum UnknownEnum
-{
-    Value_3 = 3,
-    Value_51 = 51,
-    Value_59 = 59,
-    Value_79 = 79,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_103,
-    Value_106 = 106,
-    Value_141 = 141
-}

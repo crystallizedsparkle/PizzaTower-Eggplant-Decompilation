@@ -176,13 +176,3 @@ function DoFinisher()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_2 = 2,
-    Value_4 = 4,
-    Value_5,
-    Value_42 = 42,
-    Value_43,
-    Value_80 = 80
-}

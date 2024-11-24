@@ -1,4 +1,4 @@
-if (visible == true && obj_player.state != states.ejected)
+if (visible && obj_player.state != states.ejected)
 {
     if (place_meeting(x, y - 1, obj_player1))
     {
@@ -39,7 +39,7 @@ if (visible == true && obj_player.state != states.ejected)
     }
 }
 
-if (visible == false && global.boxhp <= 5)
+if (!visible && global.boxhp <= 5)
 {
     x = xstart;
     y = ystart;
@@ -49,15 +49,8 @@ if (visible == false && global.boxhp <= 5)
         instance_create(x, y, obj_debris);
     
     if (!audio_is_playing(sfx_breakblock1))
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_breakblock1);
     
     mask_index = sprite_index;
 }
 
-enum UnknownEnum
-{
-    Value_7 = 7,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_94 = 94
-}

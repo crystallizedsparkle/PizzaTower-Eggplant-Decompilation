@@ -1,5 +1,5 @@
 event_inherited();
-tube_spr = 2143;
+tube_spr = spr_pipe_enter;
 hsp = 0;
 vsp = 1;
 approach_spd = 4;
@@ -8,7 +8,3 @@ playerid = -1;
 state = states.normal;
 stored_spd = 0;
 
-enum UnknownEnum
-{
-    Value_0
-}

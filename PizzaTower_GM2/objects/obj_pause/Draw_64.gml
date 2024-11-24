@@ -1,22 +1,20 @@
-var pad, xx, yy, i, c, rank;
-
 if (pause)
 {
-    pad = 48;
+    var pad = 48;
     draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, false);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    xx = 490;
-    yy = 48;
+    var xx = 490;
+    var yy = 48;
     
-    for (i = 0; i < array_length(pause_menu); i++)
+    for (var i = 0; i < array_length(pause_menu); i++)
     {
-        c = 8421504;
+        var c = c_gray;
         yy = 96 + (pad * i);
         
         if (selected == i)
         {
-            c = 16777215;
+            var c = c_white;
             draw_sprite(spr_cursor, cursor_index, xx - 48, yy + (cursor_sprite_height / 2));
         }
         

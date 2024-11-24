@@ -1,4 +1,4 @@
-if (up == true)
+if (up)
 {
     vsp = -8;
     movespeed = 8;

@@ -1,6 +1,4 @@
-var ch;
-
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (hp <= 0 && state != states.arena_round && state != states.fistmatch)
 {
@@ -16,7 +14,7 @@ if (chooseparry_buffer > 0)
 
 if (important && honor && nexthonor && phase > 3 && state != states.superattack)
 {
-    ch = false;
+    var ch = false;
     
     with (obj_player)
     {
@@ -112,7 +110,7 @@ switch (state)
         boss_vigilante_punch();
         break;
     
-    case UnknownEnum.Value_164:
+    case states.groundpunchstart:
         grav = 0.5;
         boss_vigilante_groundpunchstart();
         break;
@@ -211,38 +209,5 @@ if (hitstate == states.superattack || state == states.superattack)
     }
 }
 
-attacking = state == states.revolver || state == states.mach1 || state == states.charge || state == states.punch || state == UnknownEnum.Value_164 || state == states.millionpunch || state == states.freefall || state == states.uppunch || state == states.handstandjump || state == states.superattack || state == states.superattackstart || state == states.crouchslide;
+attacking = state == states.revolver || state == states.mach1 || state == states.charge || state == states.punch || state == states.groundpunchstart || state == states.millionpunch || state == states.freefall || state == states.uppunch || state == states.handstandjump || state == states.superattack || state == states.superattackstart || state == states.crouchslide;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_41 = 41,
-    Value_42,
-    Value_61 = 61,
-    Value_80 = 80,
-    Value_82 = 82,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_103,
-    Value_105 = 105,
-    Value_106,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_122 = 122,
-    Value_128 = 128,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_145 = 145,
-    Value_147 = 147,
-    Value_149 = 149,
-    Value_156 = 156,
-    Value_158 = 158,
-    Value_160 = 160,
-    Value_162 = 162,
-    Value_164 = 164,
-    Value_166 = 166
-}

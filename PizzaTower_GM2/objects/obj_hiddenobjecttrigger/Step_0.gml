@@ -1,6 +1,4 @@
-var _sound;
-
-_sound = false;
+var _sound = false;
 
 if (place_meeting(x, y, obj_player))
 {
@@ -15,4 +13,4 @@ if (place_meeting(x, y, obj_player))
 }
 
 if (_sound)
-    scr_soundeffect(18);
+    scr_soundeffect(sfx_collectgiantpizza);

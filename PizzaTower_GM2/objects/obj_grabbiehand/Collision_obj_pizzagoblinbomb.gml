@@ -7,7 +7,3 @@ if (state != states.grabbing && x == xstart && y == ystart)
     }
 }
 
-enum UnknownEnum
-{
-    Value_55 = 55
-}

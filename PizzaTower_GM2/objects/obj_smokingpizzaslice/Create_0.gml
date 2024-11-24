@@ -20,32 +20,28 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 876;
-idlespr = 1181;
-fallspr = 876;
-stunfallspr = 521;
-walkspr = 876;
-turnspr = 386;
-recoveryspr = 521;
-grabbedspr = 521;
-scaredspr = 1465;
+landspr = spr_pizzaslug_walk;
+idlespr = spr_pizzaslug_idle;
+fallspr = spr_pizzaslug_walk;
+stunfallspr = spr_pizzaslug_stun;
+walkspr = spr_pizzaslug_walk;
+turnspr = spr_pizzaslug_turn;
+recoveryspr = spr_pizzaslug_stun;
+grabbedspr = spr_pizzaslug_stun;
+scaredspr = spr_pizzaslug_scared;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 244;
+spr_dead = spr_pizzaslug_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 1;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

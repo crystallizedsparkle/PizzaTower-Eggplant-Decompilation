@@ -8,4 +8,4 @@ with (obj_camera)
 }
 
 repeat (5)
-    create_debris(x, y, 1475);
+    create_debris(x, y, spr_metalblockdebris);

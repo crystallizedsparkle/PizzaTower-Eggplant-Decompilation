@@ -9,7 +9,7 @@ if (!kicked)
     y = obj_player.y + 60;
 }
 
-if (hitbox == false)
+if (!hitbox)
 {
     with (instance_create(x, y, obj_shotgunbullet))
     {

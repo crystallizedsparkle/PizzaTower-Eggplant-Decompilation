@@ -13,7 +13,3 @@ function scr_player_blockstance()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

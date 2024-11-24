@@ -1,4 +1,4 @@
-if (!global.horse && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && obj_player1.key_up && obj_player1.grounded && (global.gerome == true || image_index == 1) && place_meeting(x, y, obj_player1))
+if (!global.horse && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && obj_player1.key_up && obj_player1.grounded && (global.gerome || image_index == 1) && place_meeting(x, y, obj_player1))
 {
     ds_list_add(global.saveroom, id);
     
@@ -22,7 +22,7 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
         obj_player1.state = states.victory;
         obj_player1.image_index = 0;
         
-        if (instance_exists(obj_player2) && global.coop == true)
+        if (instance_exists(obj_player2) && global.coop)
         {
             obj_player2.x = obj_player1.x;
             obj_player2.y = obj_player1.y;
@@ -75,14 +75,3 @@ if (place_meeting(x, y, obj_doorE))
 if (place_meeting(x, y, obj_doorF))
     targetDoor = "F";
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_98 = 98,
-    Value_99,
-    Value_103 = 103,
-    Value_104,
-    Value_112 = 112,
-    Value_121 = 121
-}

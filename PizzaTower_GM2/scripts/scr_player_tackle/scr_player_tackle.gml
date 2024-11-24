@@ -28,7 +28,3 @@ function scr_player_tackle()
         image_speed = 0;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

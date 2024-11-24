@@ -20,9 +20,3 @@ else
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_16 = 16,
-    Value_38 = 38,
-    Value_47 = 47
-}

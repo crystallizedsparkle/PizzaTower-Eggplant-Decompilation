@@ -1,9 +1,7 @@
-var _actor;
-
 if (locked)
     exit;
 
-_actor = false;
+var _actor = false;
 
 with (obj_player)
 {
@@ -28,7 +26,7 @@ if (!place_meeting(x, y, obj_doorblocked))
         {
             obj_player1.lastroom = room;
             obj_player2.lastroom = room;
-            scr_soundeffect(76);
+            scr_soundeffect(sfx_door);
             obj_camera.chargecamera = 0;
             ds_list_add(global.saveroom, id);
             
@@ -58,7 +56,7 @@ if (!place_meeting(x, y, obj_doorblocked))
                 mach2 = 0;
             }
             
-            if (instance_exists(obj_player2) && global.coop == true)
+            if (instance_exists(obj_player2) && global.coop)
             {
                 if (object_index == obj_player2)
                 {
@@ -85,17 +83,3 @@ if (!place_meeting(x, y, obj_doorblocked))
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_95 = 95,
-    Value_99 = 99,
-    Value_103 = 103,
-    Value_104,
-    Value_112 = 112,
-    Value_121 = 121,
-    Value_146 = 146,
-    Value_186 = 186,
-    Value_191 = 191
-}

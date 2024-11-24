@@ -31,7 +31,3 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

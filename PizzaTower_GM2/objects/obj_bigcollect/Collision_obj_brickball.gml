@@ -1,5 +1,3 @@
-var val;
-
 if (image_alpha == 1)
 {
     if (obj_player1.character == "V")
@@ -10,10 +8,10 @@ if (image_alpha == 1)
     with (obj_camera)
         healthshaketime = 60;
     
-    scr_soundeffect(44);
+    scr_soundeffect(sfx_collectpizza);
     instance_destroy();
     global.combotime = 60;
-    val = heat_calculate(100);
+    var val = heat_calculate(100);
     
     if (other.object_index == obj_player1)
         global.collect += val;
@@ -25,5 +23,5 @@ if (image_alpha == 1)
     with (instance_create(x + 16, y, obj_smallnumber))
         number = string(val);
     
-    tv_do_expression(731);
+    tv_do_expression(spr_tv_exprcollect);
 }

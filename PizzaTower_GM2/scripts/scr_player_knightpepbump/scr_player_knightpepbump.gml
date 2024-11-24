@@ -20,8 +20,3 @@ function scr_player_knightpepbump()
         image_index = image_number - 1;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_47 = 47
-}

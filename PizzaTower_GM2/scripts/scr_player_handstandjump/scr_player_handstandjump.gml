@@ -178,12 +178,3 @@ function scr_player_handstandjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_37 = 37,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_106 = 106
-}

@@ -5,20 +5,20 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
     
     repeat (3)
     {
-        with (create_debris(x, y, 1141))
+        with (create_debris(x, y, spr_slapstar))
         {
             hsp = random_range(-5, 5);
             vsp = random_range(-10, 10);
         }
     }
     
-    if (reset == false)
+    if (!reset)
     {
         instance_create(x, y, obj_bangeffect);
         
-        if (stomped == false && shot == false)
+        if (!stomped && !shot)
         {
-            if (cigar == true)
+            if (cigar)
             {
                 with (obj_camera)
                 {
@@ -48,9 +48,9 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
             }
         }
         
-        if (stomped == true && shot == false)
+        if (stomped && !shot)
         {
-            if (cigar == true)
+            if (cigar)
             {
                 with (instance_create(x, y, obj_sausageman_dead))
                 {
@@ -89,9 +89,9 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
             }
         }
         
-        if (shot == true && stomped == false)
+        if (shot && !stomped)
         {
-            if (cigar == true)
+            if (cigar)
             {
                 with (instance_create(x, y, obj_sausageman_dead))
                 {

@@ -24,7 +24,3 @@ if (!horseyfinish && start)
     instance_destroy(obj_horseyblock);
 }
 
-enum UnknownEnum
-{
-    Value_89 = 89
-}

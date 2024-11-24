@@ -1,20 +1,18 @@
-var i, p;
-
 if (other.state == states.gotoplayer)
     exit;
 
-if (sprite_index == spr_grabbiehand_fall && player == -4)
+if (sprite_index == spr_grabbiehand_fall && player == noone)
 {
     with (other)
     {
         if (state == states.boxxedpep)
         {
-            i = 0;
-            p = id;
+            var i = 0;
+            var p = id;
             
             repeat (4)
             {
-                with (create_debris(x, y, 518))
+                with (create_debris(x, y, spr_boxxeddebris))
                 {
                     image_index = i;
                     vsp = random_range(-10, -5);
@@ -44,7 +42,7 @@ if (sprite_index == spr_grabbiehand_fall && player == -4)
         {
             repeat (8)
             {
-                with (create_debris(x, y, 1136))
+                with (create_debris(x, y, spr_slimedebris))
                 {
                     vsp = random_range(-5, 0);
                     hsp = random_range(-3, 3);
@@ -83,11 +81,3 @@ if (sprite_index == spr_grabbiehand_catch)
     other.y = y;
 }
 
-enum UnknownEnum
-{
-    Value_24 = 24,
-    Value_25,
-    Value_33 = 33,
-    Value_106 = 106,
-    Value_186 = 186
-}

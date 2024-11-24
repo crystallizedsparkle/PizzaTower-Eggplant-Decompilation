@@ -61,8 +61,3 @@ function scr_player_chainsawpogo()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_41 = 41,
-    Value_61 = 61
-}

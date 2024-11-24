@@ -36,7 +36,3 @@ function CheckUsedIndex(argument0)
     return false;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

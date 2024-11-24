@@ -1,13 +1,11 @@
-var b, i;
-
 if (!ds_exists(tex_list, ds_type_list))
     exit;
 
 if (!ds_list_empty(tex_list))
 {
-    b = ds_list_find_value(tex_list, 0);
+    var b = ds_list_find_value(tex_list, 0);
     
-    for (i = 0; i < array_length(b); i++)
+    for (var i = 0; i < array_length(b); i++)
     {
         if (!texture_is_ready(b[i]))
             texture_prefetch(b[i]);

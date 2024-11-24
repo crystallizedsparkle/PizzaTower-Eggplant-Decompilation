@@ -1,4 +1,4 @@
-if (floor(image_index) == 2 && canthrowbomb == true)
+if (floor(image_index) == 2 && canthrowbomb)
 {
     with (instance_create(x + (image_xscale * 10), y - 20, obj_bomb))
     {
@@ -10,7 +10,7 @@ if (floor(image_index) == 2 && canthrowbomb == true)
     canthrowbomb = false;
 }
 
-if (floor(image_index) == (image_number - 1) && canthrowbomb == false)
+if (floor(image_index) == (image_number - 1) && !canthrowbomb)
     image_speed = 0;
 else
     image_speed = 0.35;
@@ -20,7 +20,3 @@ if (!instance_exists(obj_bomb) && obj_player.state != states.bombpep)
 else
     canthrowbomb = false;
 
-enum UnknownEnum
-{
-    Value_51 = 51
-}

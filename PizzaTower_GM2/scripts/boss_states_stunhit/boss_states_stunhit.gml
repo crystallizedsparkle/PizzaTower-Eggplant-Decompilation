@@ -46,8 +46,3 @@ function state_boss_stun()
     }
 }
 
-enum UnknownEnum
-{
-    Value_8 = 8,
-    Value_134 = 134
-}

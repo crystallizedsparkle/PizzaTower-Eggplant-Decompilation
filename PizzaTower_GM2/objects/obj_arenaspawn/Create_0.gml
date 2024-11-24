@@ -3,7 +3,7 @@ collisioned = false;
 targetplayer = -4;
 state = states.normal;
 offset = 200;
-block_inst = -4;
+block_inst = noone;
 targetDoor = "A";
 minutes = 0;
 seconds = 5;
@@ -18,7 +18,3 @@ baddielist = ds_list_create();
 wave = 0;
 maxwave = 0;
 
-enum UnknownEnum
-{
-    Value_0
-}

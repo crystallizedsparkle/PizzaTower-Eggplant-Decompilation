@@ -119,10 +119,3 @@ function scr_player_crouch()
     image_speed = 0.45;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_101 = 101
-}

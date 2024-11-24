@@ -1,8 +1,8 @@
-if (global.panic == true && start == false)
+if (global.panic && !start)
 {
     alarm[0] = 5;
     start = true;
 }
 
-if (global.panic == false)
+if (!global.panic)
     alarm[0] = -1;

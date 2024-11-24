@@ -30,8 +30,3 @@ function scr_fakepeppino_walk()
     }
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92,
-    Value_126 = 126
-}

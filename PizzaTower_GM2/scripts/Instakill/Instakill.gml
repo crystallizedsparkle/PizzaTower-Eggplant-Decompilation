@@ -154,17 +154,3 @@ function Instakill()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_34 = 34,
-    Value_41 = 41,
-    Value_42,
-    Value_61 = 61,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_108 = 108,
-    Value_121 = 121,
-    Value_137 = 137,
-    Value_138
-}

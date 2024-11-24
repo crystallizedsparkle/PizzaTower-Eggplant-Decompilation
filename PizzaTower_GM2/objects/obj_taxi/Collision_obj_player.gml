@@ -1,6 +1,6 @@
 with (other)
 {
-    if (key_up && grounded && ((state == states.ratmount && brick) || state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.taxi && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
+    if (key_up && grounded && ((state == states.ratmount && brick) || state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.taxi && ((obj_player1.spotlight && object_index == obj_player1) || (!obj_player1.spotlight && object_index == obj_player2)))
     {
         with (other)
         {
@@ -10,17 +10,17 @@ with (other)
             obj_player1.hsp = 0;
             obj_player1.vsp = 0;
             obj_player1.state = states.taxi;
-            scr_soundeffect(94);
-            playerid = 324;
+            scr_soundeffect(sfx_taxi2);
+            playerid = obj_player1;
             sprite_index = spr_taximove;
             hsp = 10;
             obj_player1.cutscene = true;
             
-            if (global.coop == true)
+            if (global.coop)
             {
                 obj_player2.sprite_index = obj_player2.spr_idle;
-                scr_soundeffect(94);
-                playerid = 323;
+                scr_soundeffect(sfx_taxi2);
+                playerid = obj_player2;
                 sprite_index = spr_taximove;
                 hsp = 10;
                 obj_player2.visible = false;
@@ -33,14 +33,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_99 = 99,
-    Value_103 = 103,
-    Value_104,
-    Value_119 = 119,
-    Value_121 = 121,
-    Value_191 = 191
-}

@@ -9,7 +9,3 @@ if (room != Realtitlescreen && room != rm_levelselect && room != characterselect
     }
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

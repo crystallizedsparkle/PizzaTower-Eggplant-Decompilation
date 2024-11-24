@@ -55,8 +55,3 @@ function scr_player_stringfall()
     hsp = movespeed;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_12 = 12
-}

@@ -1,4 +1,4 @@
-if (other.cutscene == false && sprite_index != spr_bigmushroom_bounce && other.state != states.freefall && other.state != states.freefallprep && other.state != states.gotoplayer)
+if (!other.cutscene && sprite_index != spr_bigmushroom_bounce && other.state != states.freefall && other.state != states.freefallprep && other.state != states.gotoplayer)
 {
     other.jumpstop = true;
     
@@ -44,15 +44,3 @@ if (other.cutscene == false && sprite_index != spr_bigmushroom_bounce && other.s
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_37 = 37,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_105,
-    Value_108 = 108,
-    Value_122 = 122,
-    Value_186 = 186,
-    Value_192 = 192
-}

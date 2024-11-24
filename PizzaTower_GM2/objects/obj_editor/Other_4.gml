@@ -6,7 +6,3 @@ with (obj_player)
     visible = false;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

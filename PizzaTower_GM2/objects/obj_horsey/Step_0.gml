@@ -33,9 +33,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_6 = 6,
-    Value_89 = 89
-}

@@ -1,15 +1,13 @@
-var num, i, b;
-
 switch (state)
 {
     case states.normal:
         if (place_meeting(x, y, obj_player))
         {
-            num = instance_place_list(x, y, 322, global.instancelist, false);
+            var num = instance_place_list(x, y, obj_player, global.instancelist, false);
             
-            for (i = 0; i < num; i++)
+            for (var i = 0; i < num; i++)
             {
-                b = ds_list_find_value(global.instancelist, i);
+                var b = ds_list_find_value(global.instancelist, i);
                 
                 if (b.state == states.mach3)
                 {
@@ -20,7 +18,7 @@ switch (state)
                         hsp = player_inst.xscale;
                     
                     instance_destroy(inst);
-                    scr_soundeffect(26);
+                    scr_soundeffect(sfx_killingblow);
                     
                     with (b)
                     {
@@ -68,10 +66,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_61 = 61,
-    Value_121 = 121,
-    Value_137 = 137
-}

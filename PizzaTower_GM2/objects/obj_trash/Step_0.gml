@@ -97,9 +97,3 @@ switch (state)
 
 scr_collide();
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_209 = 209,
-    Value_210
-}

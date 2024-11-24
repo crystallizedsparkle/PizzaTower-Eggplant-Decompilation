@@ -16,19 +16,15 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 2634;
-idlespr = 2634;
-fallspr = 2634;
-stunfallspr = 2634;
-walkspr = 2634;
-turnspr = 2634;
-recoveryspr = 2634;
-grabbedspr = 2634;
-scaredspr = 2634;
-spr_dead = 2469;
+landspr = spr_clownmato_fall;
+idlespr = spr_clownmato_fall;
+fallspr = spr_clownmato_fall;
+stunfallspr = spr_clownmato_fall;
+walkspr = spr_clownmato_fall;
+turnspr = spr_clownmato_fall;
+recoveryspr = spr_clownmato_fall;
+grabbedspr = spr_clownmato_fall;
+scaredspr = spr_clownmato_fall;
+spr_dead = spr_clownmato_dead;
 balloontimer = 100;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

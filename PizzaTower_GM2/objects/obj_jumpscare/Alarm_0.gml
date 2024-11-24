@@ -2,7 +2,7 @@ state++;
 
 if (state == 1)
 {
-    scr_soundeffect(52, 59, 55);
+    scr_soundeffect(sfx_scream1, sfx_scream7, sfx_scream4);
     alarm[0] = 100;
 }
 else if (state == 2)

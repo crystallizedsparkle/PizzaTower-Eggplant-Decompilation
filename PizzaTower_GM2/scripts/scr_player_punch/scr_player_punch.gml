@@ -182,11 +182,3 @@ function scr_player_punch()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_80 = 80,
-    Value_104 = 104,
-    Value_105,
-    Value_121 = 121
-}

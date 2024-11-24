@@ -1,7 +1,7 @@
 ds_map_destroy(player_hurtstates);
 ds_map_destroy(boss_hurtstates);
 ds_map_destroy(boss_unparryablestates);
-scr_soundeffect(23);
+scr_soundeffect(sfx_killenemy);
 instance_create(x, y, obj_slapstar);
 instance_create(x, y, obj_slapstar);
 instance_create(x, y, obj_slapstar);

@@ -41,9 +41,3 @@ function scr_player_ratmounttrickjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_191 = 191,
-    Value_201 = 201
-}

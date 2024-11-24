@@ -1,2 +1,2 @@
-content = 431;
+content = obj_cheeseslime;
 visible = false;

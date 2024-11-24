@@ -160,10 +160,3 @@ function scr_player_slap()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_121 = 121
-}

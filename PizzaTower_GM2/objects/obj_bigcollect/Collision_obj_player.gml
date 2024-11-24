@@ -1,5 +1,3 @@
-var val;
-
 if (other.state != states.gotoplayer)
 {
     if (obj_player1.character == "V")
@@ -10,10 +8,10 @@ if (other.state != states.gotoplayer)
     with (obj_camera)
         healthshaketime = 60;
     
-    scr_soundeffect(44);
+    scr_soundeffect(sfx_collectpizza);
     instance_destroy();
     global.combotime = 60;
-    val = heat_calculate(100);
+    var val = heat_calculate(100);
     
     if (other.object_index == obj_player1)
         global.collect += val;
@@ -25,10 +23,6 @@ if (other.state != states.gotoplayer)
     with (instance_create(x + 16, y, obj_smallnumber))
         number = string(val);
     
-    tv_do_expression(731);
+    tv_do_expression(spr_tv_exprcollect);
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

@@ -1,5 +1,3 @@
-var _max;
-
 if (state == states.golf)
     exit;
 
@@ -10,7 +8,7 @@ vsp = 0;
 kicked = true;
 other.image_index = 0;
 other.sprite_index = spr_goblinbot_kick;
-_max = 45;
+var _max = 45;
 y = other.y - _max;
 thrown = true;
 
@@ -20,7 +18,3 @@ with (obj_camera)
     targetgolf = other.id;
 }
 
-enum UnknownEnum
-{
-    Value_148 = 148
-}

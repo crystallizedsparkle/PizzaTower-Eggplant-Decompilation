@@ -1,10 +1,10 @@
 if (!trapped)
 {
-    if (comeback == true)
+    if (comeback)
     {
         other.brick = true;
         
-        if (other.state != UnknownEnum.Value_260 && other.state != states.backbreaker)
+        if (other.state != states.ratmountcrouch && other.state != states.backbreaker)
         {
             if (!other.grounded)
                 other.sprite_index = spr_player_ratmountfall;
@@ -16,9 +16,9 @@ if (!trapped)
         instance_destroy();
     }
 }
-else if (other.state == UnknownEnum.Value_259 && baddieID == -4)
+else if (other.state == states.ratmountpunch && baddieID == noone)
 {
-    scr_soundeffect(46);
+    scr_soundeffect(sfx_punch);
     vsp = -6;
     hsp = other.xscale * 8;
     trapped = false;
@@ -27,9 +27,3 @@ else if (other.state == UnknownEnum.Value_259 && baddieID == -4)
     alarm[0] = 30;
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84,
-    Value_259 = 259,
-    Value_260
-}

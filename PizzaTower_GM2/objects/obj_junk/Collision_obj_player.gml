@@ -1,4 +1,4 @@
-if (!grabbed && (other.state == states.handstandjump || other.state == states.punch || other.state == states.lungeattack) && unpickable == false)
+if (!grabbed && (other.state == states.handstandjump || other.state == states.punch || other.state == states.lungeattack) && !unpickable)
 {
     instance_create(x + (obj_player1.xscale * 40), y, obj_punchdust);
     
@@ -24,13 +24,3 @@ if (!grabbed && !unpickable && !ratgrabbed && other.state == states.ratmountatta
     other.state = states.ratmount;
 }
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_43,
-    Value_79 = 79,
-    Value_80,
-    Value_191 = 191,
-    Value_193 = 193,
-    Value_205 = 205
-}

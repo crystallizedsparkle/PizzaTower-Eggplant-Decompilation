@@ -1,4 +1,4 @@
-if (obj_player.isgustavo == false)
+if (!obj_player.isgustavo)
 {
     instance_create(x, y, obj_genericpoofeffect);
     instance_destroy();
@@ -6,7 +6,7 @@ if (obj_player.isgustavo == false)
 
 if (!trapped)
 {
-    if (obj_player1.sprite_index == spr_lonegustavo_hurt || obj_player1.state == UnknownEnum.Value_259 || obj_player1.state == states.ratmountgroundpound || obj_player1.state == states.ratmountgrind || obj_player1.state == UnknownEnum.Value_261 || obj_player1.state == UnknownEnum.Value_260)
+    if (obj_player1.sprite_index == spr_lonegustavo_hurt || obj_player1.state == states.ratmountpunch || obj_player1.state == states.ratmountgroundpound || obj_player1.state == states.ratmountgrind || obj_player1.state == states.ratmountladder || obj_player1.state == states.ratmountcrouch)
     {
         wait = true;
         sprite_index = spr_lonebrick_wait;
@@ -15,14 +15,14 @@ if (!trapped)
         comeback = false;
     }
     
-    if (comeback == true)
+    if (comeback)
     {
         depth = -99;
         x = Approach(x, obj_player1.x, cbspeed);
         y = Approach(y, obj_player1.y, cbspeed);
         cbspeed = Approach(cbspeed, 20, 1);
     }
-    else if (wait == false)
+    else if (!wait)
     {
         x += hsp;
         y += vsp;
@@ -48,11 +48,3 @@ else if (!instance_exists(baddieID))
     trapped = false;
 }
 
-enum UnknownEnum
-{
-    Value_197 = 197,
-    Value_202 = 202,
-    Value_259 = 259,
-    Value_260,
-    Value_261
-}

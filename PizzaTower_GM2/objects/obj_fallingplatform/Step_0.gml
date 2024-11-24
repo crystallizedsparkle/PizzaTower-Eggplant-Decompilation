@@ -51,7 +51,3 @@ switch (fall)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1
-}

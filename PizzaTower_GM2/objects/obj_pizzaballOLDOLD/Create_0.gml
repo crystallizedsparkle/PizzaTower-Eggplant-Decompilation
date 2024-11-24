@@ -18,9 +18,9 @@ hp = 5;
 hitboxcreate = false;
 grounded = true;
 idlespr = spr_pizzaball_idle;
-stunfallspr = 254;
-walkspr = 255;
-grabbedspr = 254;
+stunfallspr = spr_pizzaball_stun;
+walkspr = spr_pizzaball_walk;
+grabbedspr = spr_pizzaball_stun;
 image_xscale = -1;
 flash = false;
 slapped = false;
@@ -30,7 +30,3 @@ important = false;
 heavy = false;
 depth = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

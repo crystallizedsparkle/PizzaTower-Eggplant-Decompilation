@@ -17,27 +17,23 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 319;
-stunfallspr = 321;
-walkspr = 319;
-stunspr = 321;
-grabbedspr = 321;
-scaredspr = 324;
+idlespr = spr_pizzard_walk;
+stunfallspr = spr_pizzard_stun;
+walkspr = spr_pizzard_walk;
+stunspr = spr_pizzard_stun;
+grabbedspr = spr_pizzard_stun;
+scaredspr = spr_pizzard_scared;
 image_xscale = -1;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 325;
+spr_dead = spr_pizzard_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 paletteselect = 1;
-spr_palette = 329;
+spr_palette = palette_pizzard;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

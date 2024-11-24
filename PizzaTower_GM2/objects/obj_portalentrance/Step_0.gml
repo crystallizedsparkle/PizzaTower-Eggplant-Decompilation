@@ -6,7 +6,3 @@ if (obj_player.state == states.portal)
     obj_player.y = y;
 }
 
-enum UnknownEnum
-{
-    Value_39 = 39
-}

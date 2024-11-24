@@ -1,5 +1,5 @@
 scr_initenemy();
-coneID = -4;
+coneID = noone;
 cooldown = 0;
 patroltimer = 0;
 patroltimermax = 4;
@@ -22,23 +22,19 @@ reset = false;
 hp = 1;
 hitboxcreate = false;
 grounded = false;
-idlespr = 2400;
-stunfallspr = 249;
-walkspr = 2400;
-grabbedspr = 249;
-scaredspr = 249;
+idlespr = spr_teeth_idle;
+stunfallspr = spr_teeth_stun;
+walkspr = spr_teeth_idle;
+grabbedspr = spr_teeth_stun;
+scaredspr = spr_teeth_stun;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2492;
+spr_dead = spr_teeth_dead;
 important = false;
 heavy = false;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

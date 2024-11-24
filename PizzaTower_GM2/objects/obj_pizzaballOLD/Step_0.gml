@@ -32,17 +32,10 @@ with (instance_place(x, y + 1, obj_destructibleplatform))
 {
     falling = true;
     
-    if (falling == true)
+    if (falling)
         image_speed = 0.35;
 }
 
 if (grounded && obj_player.state == states.freefallland)
     vsp = -11;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_5 = 5,
-    Value_111 = 111,
-    Value_148 = 148
-}

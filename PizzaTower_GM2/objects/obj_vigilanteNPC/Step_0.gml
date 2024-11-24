@@ -1,8 +1,6 @@
-var dis, b;
-
 with (obj_player)
 {
-    dis = abs(x - other.x);
+    var dis = abs(x - other.x);
     
     if (!instance_exists(obj_dialogcontroller))
     {
@@ -14,7 +12,7 @@ with (obj_player)
                 {
                     dialog[0] = dialog_create("Not one step closer!", -4, vigilante_add_battle);
                     do_dialog(dialog);
-                    dialog = -4;
+                    dialog = noone;
                     warned = true;
                 }
             }
@@ -43,7 +41,7 @@ with (obj_player)
 
 if (waitforhurt && !instance_exists(obj_dialogcontroller))
 {
-    b = false;
+    var b = false;
     
     with (obj_player)
     {
@@ -54,17 +52,10 @@ if (waitforhurt && !instance_exists(obj_dialogcontroller))
     if (!b)
     {
         waitforhurt = false;
-        dialog[0] = dialog_create("You gotta fight me!", -4, vigilante_add_battle);
+        dialog[0] = dialog_create("You gotta fight me!", noone, vigilante_add_battle);
         do_dialog(dialog);
-        dialog = -4;
+        dialog = noone;
         warned = true;
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_17 = 17,
-    Value_107 = 107,
-    Value_138 = 138
-}

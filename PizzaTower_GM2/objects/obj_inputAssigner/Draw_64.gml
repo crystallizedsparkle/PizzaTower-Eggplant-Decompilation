@@ -1,7 +1,5 @@
-var _halign, _valign, _txt, _h;
-
-_halign = draw_get_halign();
-_valign = draw_get_halign();
+var _halign = draw_get_halign();
+var _valign = draw_get_halign();
 draw_set_halign(fa_center);
 draw_set_halign(fa_center);
 draw_set_alpha(1);
@@ -21,8 +19,8 @@ else
 {
     draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, false);
     draw_set_font(global.smallfont);
-    _txt = "CONTROLLER DISCONNECTED\n\nPRESS START TO CONTINUE";
-    _h = string_height(_txt) / 2;
+    var _txt = "CONTROLLER DISCONNECTED\n\nPRESS START TO CONTINUE";
+    var _h = string_height(_txt) / 2;
     draw_text(480, 270 - _h, _txt);
 }
 

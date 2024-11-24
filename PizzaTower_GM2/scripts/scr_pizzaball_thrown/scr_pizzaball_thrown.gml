@@ -60,9 +60,3 @@ function scr_pizzaball_thrown()
     }
 }
 
-enum UnknownEnum
-{
-    Value_100 = 100,
-    Value_134 = 134,
-    Value_156 = 156
-}

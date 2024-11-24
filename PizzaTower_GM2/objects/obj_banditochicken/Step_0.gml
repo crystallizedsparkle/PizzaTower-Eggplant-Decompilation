@@ -1,5 +1,3 @@
-var targetplayer, old_y, t;
-
 if (room == rm_editor)
     exit;
 
@@ -42,7 +40,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -53,10 +51,10 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 160) && y >= (targetplayer.y - 160)))
 {
@@ -67,7 +65,7 @@ if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetp
 if (!activated && (state == states.walk || state == states.idle))
     sprite_index = spr_banditochicken_sleep;
 
-if ((state == states.walk || state == states.idle) && activated == true && sprite_index != spr_banditochicken_wake && sprite_index != spr_banditochicken_scared)
+if ((state == states.walk || state == states.idle) && activated && sprite_index != spr_banditochicken_wake && sprite_index != spr_banditochicken_scared)
 {
     movespeed = 0;
     image_xscale = -sign(x - targetplayer.x);
@@ -107,8 +105,8 @@ if (bonebuffer == 0)
         image_xscale = other.image_xscale;
         hsp = 0;
         instance_create(x, y, obj_genericpoofeffect);
-        old_y = y;
-        t = false;
+        var old_y = y;
+        var t = false;
         
         while (y < room_height)
         {
@@ -147,15 +145,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

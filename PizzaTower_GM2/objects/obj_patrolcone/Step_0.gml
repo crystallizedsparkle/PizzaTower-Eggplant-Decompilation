@@ -1,5 +1,3 @@
-var points, _col;
-
 if (!instance_exists(baddieID))
 {
     instance_destroy();
@@ -19,8 +17,8 @@ patrolalert_index += 0.35;
 if (patrolalert_index > 2)
     patrolalert_index = frac(patrolalert_index);
 
-points = get_triangle_points(x, y, image_angle, len, size);
-_col = false;
+var points = get_triangle_points(x, y, image_angle, len, size);
+var _col = false;
 
 if (!instance_exists(obj_jumpscare))
 {

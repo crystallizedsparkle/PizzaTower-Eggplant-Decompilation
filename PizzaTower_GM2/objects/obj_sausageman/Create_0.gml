@@ -17,34 +17,30 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 97;
-idlespr = 97;
-fallspr = 97;
-stunfallspr = 69;
-walkspr = 97;
-turnspr = 97;
-recoveryspr = 97;
-grabbedspr = 69;
-scaredspr = 235;
-ragespr = 235;
+landspr = spr_sausageman_walk;
+idlespr = spr_sausageman_walk;
+fallspr = spr_sausageman_walk;
+stunfallspr = spr_sausageman_stun;
+walkspr = spr_sausageman_walk;
+turnspr = spr_sausageman_walk;
+recoveryspr = spr_sausageman_walk;
+grabbedspr = spr_sausageman_stun;
+scaredspr = spr_sausageman_scared;
+ragespr = spr_sausageman_scared;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 62;
+spr_dead = spr_sausageman_shot;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 sprite_index = spr_sausageman_walk;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

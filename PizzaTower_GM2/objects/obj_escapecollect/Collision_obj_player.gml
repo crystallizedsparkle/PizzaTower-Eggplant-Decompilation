@@ -1,5 +1,3 @@
-var val;
-
 if (room == rm_editor)
     exit;
 
@@ -10,7 +8,7 @@ if (image_alpha == 1)
         if (audio_is_playing(sfx_collecttopping))
             audio_stop_sound(sfx_collecttopping);
         
-        scr_soundeffect(17);
+        scr_soundeffect(sfx_collecttopping);
         
         if (obj_player1.character == "V")
             global.playerhealth = clamp(global.playerhealth + 1, 0, 100);
@@ -23,7 +21,7 @@ if (image_alpha == 1)
         with (obj_camera)
             healthshaketime = 30;
         
-        val = heat_calculate(10);
+        var val = heat_calculate(10);
         
         if (other.object_index == obj_player1)
             global.collect += val;
@@ -39,7 +37,3 @@ if (image_alpha == 1)
     }
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

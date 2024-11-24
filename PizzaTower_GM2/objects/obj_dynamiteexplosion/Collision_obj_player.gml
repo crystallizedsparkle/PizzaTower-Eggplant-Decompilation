@@ -1,6 +1,6 @@
 with (other)
 {
-    if (other.hurtplayer == false)
+    if (!other.hurtplayer)
     {
         if (key_jump2)
         {
@@ -20,8 +20,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92
-}

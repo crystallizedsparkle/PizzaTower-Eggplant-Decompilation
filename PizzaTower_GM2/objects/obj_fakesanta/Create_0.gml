@@ -1,5 +1,5 @@
 scr_initenemy();
-content = [439];
+content = [obj_snowman];
 random_buffer = 100;
 random_max = 100;
 possess_movespeed = 0;
@@ -20,33 +20,29 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 2735;
-idlespr = 2735;
-fallspr = 2735;
-stunfallspr = 2735;
-walkspr = 2735;
-turnspr = 2735;
-recoveryspr = 2735;
-grabbedspr = 2735;
-scaredspr = 2735;
+landspr = spr_fakesanta_idle;
+idlespr = spr_fakesanta_idle;
+fallspr = spr_fakesanta_idle;
+stunfallspr = spr_fakesanta_idle;
+walkspr = spr_fakesanta_idle;
+turnspr = spr_fakesanta_idle;
+recoveryspr = spr_fakesanta_idle;
+grabbedspr = spr_fakesanta_idle;
+scaredspr = spr_fakesanta_idle;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2735;
+spr_dead = spr_fakesanta_idle;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 activated = false;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

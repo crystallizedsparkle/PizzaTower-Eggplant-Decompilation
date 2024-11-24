@@ -1,6 +1,4 @@
-var _railinst;
-
-if (defused == true)
+if (defused)
     countdown -= 0.5;
 
 if (countdown < 50)
@@ -37,7 +35,7 @@ switch (state)
         
         if (place_meeting(x, y + 1, obj_railparent))
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             hsp = _railinst.movespeed * _railinst.dir;
         }
         
@@ -69,10 +67,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_4 = 4,
-    Value_52 = 52,
-    Value_76 = 76
-}

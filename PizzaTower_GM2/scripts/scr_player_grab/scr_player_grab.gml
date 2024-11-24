@@ -287,11 +287,3 @@ function scr_player_grab()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_6 = 6,
-    Value_76 = 76,
-    Value_80 = 80,
-    Value_100 = 100
-}

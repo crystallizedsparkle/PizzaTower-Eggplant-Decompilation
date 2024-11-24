@@ -69,8 +69,3 @@ function scr_blob_chase()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_135 = 135
-}

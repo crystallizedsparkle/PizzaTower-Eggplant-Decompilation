@@ -29,10 +29,3 @@ if (state != states.arena_round)
 if (state == states.arena || state == states.arena_spawn)
     alarm[0] = 60;
 
-enum UnknownEnum
-{
-    Value_7 = 7,
-    Value_142 = 142,
-    Value_143,
-    Value_145 = 145
-}

@@ -1,5 +1,3 @@
-var _vinst, bbox_size, i, _inst;
-
 savedhallwaydirection = hallwaydirection;
 savedhallway = hallway;
 savedvhallwaydirection = vhallwaydirection;
@@ -26,16 +24,16 @@ if (global.levelreset)
     global.levelreset = false;
 }
 
-if (state == states.comingoutdoor && global.coop == true && !place_meeting(x, y, obj_exitgate))
+if (state == states.comingoutdoor && global.coop && !place_meeting(x, y, obj_exitgate))
 {
-    if (object_index == obj_player1 && obj_player1.spotlight == false)
+    if (object_index == obj_player1 && !obj_player1.spotlight)
         visible = false;
     
-    if (object_index == obj_player2 && obj_player1.spotlight == true)
+    if (object_index == obj_player2 && obj_player1.spotlight)
         visible = false;
 }
 
-if (global.coop == true)
+if (global.coop)
 {
     scr_changetoppings();
     
@@ -56,13 +54,13 @@ if (place_meeting(x, y, obj_boxofpizza) || place_meeting(x, y - 1, obj_boxofpizz
     state = states.crouch;
 }
 
-if (object_index != obj_player2 || global.coop == true)
+if (object_index != obj_player2 || global.coop)
 {
     if (targetDoor == "A" && instance_exists(obj_doorA))
     {
-        if (hallway == true)
+        if (hallway)
             x = obj_doorA.x + (hallwaydirection * 100);
-        else if (box == true)
+        else if (box)
             x = obj_doorA.x + 32;
         else
             x = obj_doorA.x + 16;
@@ -72,9 +70,9 @@ if (object_index != obj_player2 || global.coop == true)
     
     if (targetDoor == "B" && instance_exists(obj_doorB))
     {
-        if (hallway == true)
+        if (hallway)
             x = obj_doorB.x + (hallwaydirection * 100);
-        else if (box == true)
+        else if (box)
             x = obj_doorB.x + 32;
         else
             x = obj_doorB.x + 16;
@@ -84,9 +82,9 @@ if (object_index != obj_player2 || global.coop == true)
     
     if (targetDoor == "C" && instance_exists(obj_doorC))
     {
-        if (hallway == true)
+        if (hallway)
             x = obj_doorC.x + (hallwaydirection * 100);
-        else if (box == true)
+        else if (box)
             x = obj_doorC.x + 32;
         else
             x = obj_doorC.x + 16;
@@ -96,9 +94,9 @@ if (object_index != obj_player2 || global.coop == true)
     
     if (targetDoor == "D" && instance_exists(obj_doorD))
     {
-        if (hallway == true)
+        if (hallway)
             x = obj_doorD.x + (hallwaydirection * 100);
-        else if (box == true)
+        else if (box)
             x = obj_doorD.x + 32;
         else
             x = obj_doorD.x + 16;
@@ -108,9 +106,9 @@ if (object_index != obj_player2 || global.coop == true)
     
     if (targetDoor == "E" && instance_exists(obj_doorE))
     {
-        if (hallway == true)
+        if (hallway)
             x = obj_doorE.x + (hallwaydirection * 100);
-        else if (box == true)
+        else if (box)
             x = obj_doorE.x + 32;
         else
             x = obj_doorE.x + 16;
@@ -134,7 +132,7 @@ if (object_index != obj_player2 || global.coop == true)
 if (verticalhallway)
 {
     verticalbuffer = 2;
-    _vinst = -4;
+    var _vinst = noone;
     
     with (obj_verticalhallway)
     {
@@ -144,10 +142,10 @@ if (verticalhallway)
             _vinst = id;
     }
     
-    if (_vinst != -4)
+    if (_vinst != noone)
     {
         x = _vinst.x + (_vinst.sprite_width * vertical_x);
-        bbox_size = abs(bbox_right - bbox_left);
+        var bbox_size = abs(bbox_right - bbox_left);
         x = clamp(x, _vinst.x + bbox_size, _vinst.bbox_right - bbox_size);
         trace(x, _vinst.x);
         
@@ -162,7 +160,7 @@ if (verticalhallway)
         if (state == states.climbwall)
         {
             x = round(x);
-            i = 0;
+            var i = 0;
             
             while (!scr_solid(x + xscale, y))
             {
@@ -188,7 +186,7 @@ if (character == "M" && place_meeting(x, y, obj_boxofpizza))
 {
     while (place_meeting(x, y, obj_boxofpizza))
     {
-        _inst = instance_place(x, y, obj_boxofpizza);
+        var _inst = instance_place(x, y, obj_boxofpizza);
         y -= _inst.image_yscale;
     }
 }
@@ -221,12 +219,3 @@ if (room == rank_room)
 roomstartx = x;
 roomstarty = y;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_37 = 37,
-    Value_79 = 79,
-    Value_95 = 95,
-    Value_100 = 100,
-    Value_119 = 119
-}

@@ -8,7 +8,3 @@ state = states.normal;
 trapid = -4;
 image_speed = 0.35;
 
-enum UnknownEnum
-{
-    Value_0
-}

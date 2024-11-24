@@ -1,6 +1,6 @@
 if (instance_exists(baddieID))
 {
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);

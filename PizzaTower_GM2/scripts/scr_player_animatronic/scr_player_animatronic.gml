@@ -60,7 +60,3 @@ function scr_player_animatronic()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

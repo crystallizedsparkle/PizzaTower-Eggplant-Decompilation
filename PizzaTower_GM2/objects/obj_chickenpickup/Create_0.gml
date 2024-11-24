@@ -1,2 +1,2 @@
 event_inherited();
-content = 227;
+content = obj_chickenfollow;

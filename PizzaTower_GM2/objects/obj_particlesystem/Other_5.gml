@@ -1,10 +1,8 @@
-var i, q;
-
 if (!ds_list_empty(global.debris_list))
 {
-    for (i = 0; i < ds_list_size(global.debris_list); i++)
+    for (var i = 0; i < ds_list_size(global.debris_list); i++)
     {
-        q = ds_list_find_value(global.debris_list, i);
+        var q = ds_list_find_value(global.debris_list, i);
         
         if (is_struct(q))
             q = undefined;

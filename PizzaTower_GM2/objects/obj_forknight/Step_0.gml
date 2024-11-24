@@ -1,5 +1,3 @@
-var player, check;
-
 if (room == rm_editor)
     exit;
 
@@ -58,7 +56,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -73,8 +71,8 @@ scr_scareenemy();
 
 if (elite && ragecooldown == 0)
 {
-    player = instance_nearest(x, y, obj_player);
-    check = (image_xscale > 0) ? (player.x > x && player.x < (x + 400)) : (player.x < x && player.x > (x - 400));
+    var player = instance_nearest(x, y, obj_player);
+    var check = (image_xscale > 0) ? (player.x > x && player.x < (x + 400)) : (player.x < x && player.x > (x - 400));
     
     if (state == states.walk)
     {
@@ -108,7 +106,7 @@ if (ragecooldown > 0)
 if (flash == true && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == false && state == states.walk)
+if (!hitboxcreate && state == states.walk)
 {
     hitboxcreate = true;
     
@@ -122,7 +120,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -133,19 +131,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

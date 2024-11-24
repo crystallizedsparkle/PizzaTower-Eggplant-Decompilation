@@ -1,5 +1,3 @@
-var spd, _dir;
-
 switch (state)
 {
     case states.normal:
@@ -15,7 +13,7 @@ switch (state)
         break;
     
     case states.fall:
-        spd = 12;
+        var spd = 12;
         shootdir = angle_rotate(shootdir, point_direction(x, y, targetplayer.x, targetplayer.y), turnspeed);
         hsp = lengthdir_x(spd, shootdir);
         vsp = lengthdir_y(spd, shootdir);
@@ -54,7 +52,7 @@ switch (state)
         break;
     
     case states.ejected:
-        _dir = point_direction(x, y, xstart, ystart);
+        var _dir = point_direction(x, y, xstart, ystart);
         x = Approach(x, xstart, abs(lengthdir_x(8, _dir)));
         y = Approach(y, ystart, abs(lengthdir_y(8, _dir)));
         
@@ -120,13 +118,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_7 = 7,
-    Value_8,
-    Value_55 = 55,
-    Value_106 = 106,
-    Value_135 = 135,
-    Value_138 = 138
-}

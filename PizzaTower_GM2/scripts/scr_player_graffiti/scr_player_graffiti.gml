@@ -16,8 +16,3 @@ function scr_player_graffiti()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_191 = 191
-}

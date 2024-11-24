@@ -4,18 +4,14 @@ if (object_index != obj_pizzaball)
     {
         if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID != other.id && other.baddieID.killbyenemy)
         {
-            if (baddieID.state == states.stun && baddieID.thrown == true)
+            if (baddieID.state == states.stun && baddieID.thrown)
             {
                 instance_destroy(other.baddieID);
                 
-                if (baddieID.pepperman_grab == true)
+                if (baddieID.pepperman_grab)
                     instance_destroy(baddieID);
             }
         }
     }
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

@@ -1,6 +1,6 @@
 image_speed = 0.35;
 
-if (stationned == false)
+if (!stationned)
     hsp = image_xscale * 6;
 
 xscale = image_xscale;
@@ -18,7 +18,7 @@ if (vsp > 0 && grounded)
     }
 }
 
-if (stationned == false)
+if (!stationned)
 {
     if (spewcrap > 0)
         spewcrap--;

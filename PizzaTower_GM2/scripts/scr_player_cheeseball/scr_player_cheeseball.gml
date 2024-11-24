@@ -74,7 +74,3 @@ function scr_player_cheeseball()
         create_debris(x, y + 43, 1136);
 }
 
-enum UnknownEnum
-{
-    Value_26 = 26
-}

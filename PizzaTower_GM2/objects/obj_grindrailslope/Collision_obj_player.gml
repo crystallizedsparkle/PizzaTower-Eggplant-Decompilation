@@ -23,10 +23,3 @@ if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y
     }
 }
 
-enum UnknownEnum
-{
-    Value_78 = 78,
-    Value_84 = 84,
-    Value_106 = 106,
-    Value_202 = 202
-}

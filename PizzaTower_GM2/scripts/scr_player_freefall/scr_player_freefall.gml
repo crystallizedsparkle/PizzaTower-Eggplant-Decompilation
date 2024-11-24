@@ -160,11 +160,3 @@ function scr_player_freefall()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_14 = 14,
-    Value_92 = 92,
-    Value_111 = 111,
-    Value_138 = 138
-}

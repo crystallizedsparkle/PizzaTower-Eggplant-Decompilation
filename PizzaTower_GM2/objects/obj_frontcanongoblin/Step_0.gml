@@ -1,10 +1,8 @@
-var thr, dir;
-
-thr = 20;
+var thr = 20;
 
 if (!(captain_x > (captain_xto - thr) && captain_x < (captain_xto + thr) && captain_y > (captain_yto - thr) && captain_y < (captain_yto + thr)))
 {
-    dir = point_direction(captain_x, captain_y, captain_xto, captain_yto);
+    var dir = point_direction(captain_x, captain_y, captain_xto, captain_yto);
     captain_x += lengthdir_x(5, dir);
     captain_y += lengthdir_y(5, dir);
 }
@@ -17,7 +15,7 @@ switch (state)
     case states.transitioncutscene:
         if (floor(captain_index) == (sprite_get_number(captain_sprite) - 1))
         {
-            captain_sprite = 1388;
+            captain_sprite = spr_captainbomb;
             state = states.normal;
             
             with (instance_create(crosshair_x, camera_get_view_y(view_camera[0]) - 32, obj_frontcanonbomb))
@@ -33,9 +31,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_89 = 89
-}

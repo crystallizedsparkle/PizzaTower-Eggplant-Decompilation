@@ -66,9 +66,3 @@ if (state != states.robot_idle && other.state != states.actor && !other.cutscene
     }
 }
 
-enum UnknownEnum
-{
-    Value_112 = 112,
-    Value_146 = 146,
-    Value_217 = 217
-}

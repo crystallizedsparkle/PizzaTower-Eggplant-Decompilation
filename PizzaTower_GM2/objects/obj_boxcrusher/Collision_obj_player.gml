@@ -11,7 +11,7 @@ if (sprite_index == spr_boxcrusher_fall)
 else if (sprite_index == spr_boxcrusher_land)
 {
     if (other.state != states.boxxedpep)
-        tv_push_prompt_once(tv_create_prompt("This is the boxxed transformation text", tvprompt_type.transformation, 2832, 3), "boxxedpep");
+        tv_push_prompt_once(tv_create_prompt("This is the boxxed transformation text", tvprompt_type.transformation, spr_tv_boxxedpep, 3), "boxxedpep");
     
     other.boxxed = true;
     other.movespeed = 0;
@@ -27,10 +27,3 @@ else if (sprite_index == spr_boxcrusher_land)
     other.y = y - 20;
 }
 
-enum UnknownEnum
-{
-    Value_2 = 2,
-    Value_33 = 33,
-    Value_106 = 106,
-    Value_186 = 186
-}

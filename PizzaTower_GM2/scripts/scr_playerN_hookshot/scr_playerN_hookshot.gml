@@ -70,8 +70,3 @@ function scr_playerN_hookshot()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92,
-    Value_126 = 126
-}

@@ -12,8 +12,3 @@ with (other)
 sprite_index = spr_clownmato_bounce;
 image_index = 0;
 
-enum UnknownEnum
-{
-    Value_10 = 10,
-    Value_92 = 92
-}

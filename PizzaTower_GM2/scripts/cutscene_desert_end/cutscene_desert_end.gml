@@ -13,7 +13,3 @@ function cutscene_desert_end()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

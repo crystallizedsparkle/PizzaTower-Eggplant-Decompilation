@@ -11,8 +11,3 @@ if (other.id != baddieID && other.state != states.tumble && other.state != state
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_138 = 138
-}

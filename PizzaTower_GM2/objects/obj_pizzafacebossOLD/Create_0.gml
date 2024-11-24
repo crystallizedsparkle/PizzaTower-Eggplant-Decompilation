@@ -4,11 +4,11 @@ ds_map_set(player_hurtstates, states.chainsawbump, 50);
 ds_map_set(player_hurtstates, states.mach2, 20);
 ds_map_set(player_hurtstates, states.mach3, 30);
 ds_map_set(player_hurtstates, states.knightpep, 60);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_244, 60);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_245, 50);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_246, 50);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_248, 50);
-ds_map_set(boss_hurtstates, UnknownEnum.Value_249, 50);
+ds_map_set(boss_hurtstates, states.pizzahead_spinningkick, 60);
+ds_map_set(boss_hurtstates, states.pizzahead_spinningpunch, 50);
+ds_map_set(boss_hurtstates, states.pizzahead_groundpunch, 50);
+ds_map_set(boss_hurtstates, states.pizzahead_slamhead, 50);
+ds_map_set(boss_hurtstates, states.pizzahead_slamhead2, 50);
 hitlist = ds_list_create();
 image_speed = 0.35;
 max_hp = 3600;
@@ -25,16 +25,14 @@ parrycount = 0;
 transitionstate = 0;
 bombtimer = 0;
 hasbomb = false;
-bombgrabID = -4;
+bombgrabID = noone;
 knightbuffer = 0;
-spawnpool = [465, 431];
+spawnpool = [obj_forknight, obj_cheeseslime];
 hitplayer = false;
 
 function player_hurt(argument0, argument1)
 {
-    var _prevstate;
-    
-    _prevstate = state;
+    var _prevstate = state;
     
     if (phase < 2)
     {
@@ -100,23 +98,3 @@ function boss_hurt_noplayer(argument0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_41 = 41,
-    Value_42,
-    Value_43,
-    Value_47 = 47,
-    Value_84 = 84,
-    Value_104 = 104,
-    Value_121 = 121,
-    Value_147 = 147,
-    Value_226 = 226,
-    Value_227,
-    Value_228,
-    Value_229,
-    Value_244 = 244,
-    Value_245,
-    Value_246,
-    Value_248 = 248,
-    Value_249
-}

@@ -1,8 +1,6 @@
-var _inst;
-
 if (place_meeting(x, y + 1, obj_railparent))
 {
-    _inst = instance_place(x, y + 1, obj_railparent);
+    var _inst = instance_place(x, y + 1, obj_railparent);
     hsp = _inst.dir * _inst.movespeed;
 }
 else if (object_index != obj_haystack || state == states.normal)
@@ -24,7 +22,3 @@ if (hsp != 0)
 
 scr_collide();
 
-enum UnknownEnum
-{
-    Value_0
-}

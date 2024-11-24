@@ -11,5 +11,5 @@ treasure = ini_read_string("SAGE2019", "treasure", false);
 ini_close();
 picy = 640;
 up = false;
-sprite = 2071;
+sprite = bg_SAGEcombo10;
 depth = -9999;

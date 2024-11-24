@@ -76,7 +76,3 @@ function scr_player_cheesepep()
     }
 }
 
-enum UnknownEnum
-{
-    Value_26 = 26
-}

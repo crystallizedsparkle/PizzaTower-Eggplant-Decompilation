@@ -20,7 +20,7 @@ switch (state)
                         targetRoom = other.hub_array[other.selected][0];
                         targetDoor = "A";
                         
-                        if (targetRoom == 274)
+                        if (targetRoom == hub_farmland)
                             targetDoor = "F";
                         
                         if (check_player_coop())
@@ -49,9 +49,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_18 = 18,
-    Value_191 = 191
-}

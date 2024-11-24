@@ -18,7 +18,3 @@ function cutscene_medieval_end()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

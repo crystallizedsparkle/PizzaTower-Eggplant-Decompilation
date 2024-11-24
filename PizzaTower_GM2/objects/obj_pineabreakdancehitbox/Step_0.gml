@@ -7,7 +7,7 @@ if (!instance_exists(ID))
 if (ID.state != states.punch)
 {
     instance_destroy();
-    ID.breakdanceinst = -4;
+    ID.breakdanceinst = noone;
     exit;
 }
 
@@ -16,7 +16,3 @@ y = ID.y;
 image_xscale = ID.image_xscale;
 image_index = ID.image_index;
 
-enum UnknownEnum
-{
-    Value_80 = 80
-}

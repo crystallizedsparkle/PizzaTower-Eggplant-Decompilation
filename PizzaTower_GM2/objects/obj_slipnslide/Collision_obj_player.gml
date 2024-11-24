@@ -18,10 +18,3 @@ with (other)
     instance_destroy(other);
 }
 
-enum UnknownEnum
-{
-    Value_21 = 21,
-    Value_165 = 165,
-    Value_210 = 210,
-    Value_211
-}

@@ -33,7 +33,3 @@ function cutscene_gustavo_end()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

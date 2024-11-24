@@ -1,7 +1,5 @@
-var i;
-
 pause = false;
-i = false;
+var i = false;
 color = make_color_rgb(121, 103, 151);
 selected = 0;
 stickpressed = false;
@@ -11,14 +9,14 @@ pause_menu = ["RESUME", "OPTIONS", "RESTART LEVEL", "EXIT LEVEL"];
 cursor_index = 0;
 cursor_sprite_number = sprite_get_number(spr_cursor);
 cursor_sprite_height = sprite_get_height(spr_cursor);
-peppino_sprite = 715;
+peppino_sprite = spr_player_idle;
 peppino_sprite_number = sprite_get_number(peppino_sprite);
 peppino_index = 0;
-toppin_sprite[0] = 1228;
-toppin_sprite[1] = 1218;
-toppin_sprite[2] = 1223;
-toppin_sprite[3] = 1237;
-toppin_sprite[4] = 1232;
+toppin_sprite[0] = spr_toppincheese;
+toppin_sprite[1] = spr_toppinpineapple;
+toppin_sprite[2] = spr_toppinsausage;
+toppin_sprite[3] = spr_toppinshroom;
+toppin_sprite[4] = spr_toppintomato;
 
 for (i = 0; i < array_length(toppin_sprite); i++)
 {

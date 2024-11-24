@@ -668,26 +668,3 @@ function scr_player_jump()
         state_pepperman_jump();
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_4 = 4,
-    Value_7 = 7,
-    Value_12 = 12,
-    Value_42 = 42,
-    Value_58 = 58,
-    Value_72 = 72,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_99 = 99,
-    Value_100,
-    Value_103 = 103,
-    Value_104,
-    Value_108 = 108,
-    Value_109,
-    Value_111 = 111,
-    Value_121 = 121,
-    Value_153 = 153
-}

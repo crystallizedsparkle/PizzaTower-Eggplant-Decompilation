@@ -1,5 +1,3 @@
-var p;
-
 switch (state)
 {
     case 0:
@@ -22,7 +20,7 @@ switch (state)
         break;
     
     case 1:
-        p = instance_nearest(x, y, obj_player);
+        var p = instance_nearest(x, y, obj_player);
         visible = false;
         image_index = 0;
         
@@ -62,8 +60,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_138 = 138
-}

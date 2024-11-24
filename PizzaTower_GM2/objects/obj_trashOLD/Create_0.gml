@@ -19,22 +19,18 @@ hp = 3;
 hitboxcreate = false;
 grounded = true;
 bombreset = 0;
-idlespr = 243;
-stunfallspr = 247;
-walkspr = 243;
-grabbedspr = 247;
-scaredspr = 247;
+idlespr = spr_trash;
+stunfallspr = spr_trash_bump;
+walkspr = spr_trash;
+grabbedspr = spr_trash_bump;
+scaredspr = spr_trash_bump;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
 points = false;
 important = false;
-spr_dead = 246;
+spr_dead = spr_trash_dead;
 heavy = true;
 depth = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

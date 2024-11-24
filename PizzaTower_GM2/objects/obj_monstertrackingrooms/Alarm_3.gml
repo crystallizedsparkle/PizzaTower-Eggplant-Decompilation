@@ -1,10 +1,8 @@
-var hillbilly_pos, _h;
-
-hillbilly_pos = monster_pos[3];
+var hillbilly_pos = monster_pos[3];
 
 if (room_place(hillbilly_pos.x, hillbilly_pos.y) != room_get_name(room))
 {
-    _h = monster_dir[3].x;
+    var _h = monster_dir[3].x;
     
     if (_h == 0)
         _h = choose(-1, 1);
@@ -34,7 +32,3 @@ if (room_place(hillbilly_pos.x, hillbilly_pos.y) != room_get_name(room))
     }
 }
 
-enum UnknownEnum
-{
-    Value_221 = 221
-}

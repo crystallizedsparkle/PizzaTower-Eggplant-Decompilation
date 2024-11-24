@@ -7,7 +7,3 @@ with (other)
     vsp = -4;
 }
 
-enum UnknownEnum
-{
-    Value_106 = 106
-}

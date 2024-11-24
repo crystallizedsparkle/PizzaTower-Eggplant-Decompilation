@@ -1,4 +1,4 @@
-sprite_index = !collide ? spr_bomb : -4;
+sprite_index = !collide ? spr_bomb : noone;
 
 if (instance_exists(obj_bomb))
     collide = false;
@@ -6,7 +6,3 @@ if (instance_exists(obj_bomb))
 if (obj_player1.state != states.bombdelete)
     collide = false;
 
-enum UnknownEnum
-{
-    Value_183 = 183
-}

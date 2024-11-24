@@ -1,5 +1,3 @@
-var _found;
-
 if (state == states.flush_idle)
 {
     state = states.flush_transition;
@@ -20,7 +18,7 @@ if (state == states.flush_idle)
             break;
     }
     
-    _found = false;
+    var _found = false;
     
     with (obj_flush)
     {
@@ -38,8 +36,3 @@ if (state == states.flush_idle)
     }
 }
 
-enum UnknownEnum
-{
-    Value_223 = 223,
-    Value_224
-}

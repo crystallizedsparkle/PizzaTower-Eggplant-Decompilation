@@ -7,7 +7,3 @@ func = function(argument0)
     }
 };
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

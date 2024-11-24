@@ -9,7 +9,3 @@ with (playerid)
 x = playerid.x;
 y = playerid.y - 50;
 
-enum UnknownEnum
-{
-    Value_0
-}

@@ -4,11 +4,7 @@ playerid = -1;
 state = states.normal;
 stored_spd = 0;
 movespeed = 0;
-tube_spr = 91;
+tube_spr = spr_pipe_exit;
 image_speed = 0;
 tube_angle = 0;
 
-enum UnknownEnum
-{
-    Value_0
-}

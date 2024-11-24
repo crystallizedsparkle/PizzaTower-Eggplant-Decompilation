@@ -154,7 +154,3 @@ function scr_player_jetpackjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

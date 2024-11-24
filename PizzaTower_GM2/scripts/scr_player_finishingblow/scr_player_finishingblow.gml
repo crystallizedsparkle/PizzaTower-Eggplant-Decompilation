@@ -44,7 +44,3 @@ function scr_player_finishingblow()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

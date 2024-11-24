@@ -26,11 +26,11 @@ hp = 2;
 hitboxcreate = false;
 grounded = true;
 chargereset = 0;
-idlespr = 1964;
-stunfallspr = 2852;
-walkspr = 1964;
-grabbedspr = 2852;
-scaredspr = 2852;
+idlespr = spr_ninja_idle;
+stunfallspr = spr_ninja_stun;
+walkspr = spr_ninja_idle;
+grabbedspr = spr_ninja_stun;
+scaredspr = spr_ninja_stun;
 image_xscale = -1;
 flash = false;
 slapped = false;
@@ -39,13 +39,9 @@ boundbox = false;
 attack = false;
 sprite_index = spr_pizzaboy;
 important = false;
-spr_dead = 2535;
+spr_dead = spr_ninja_dead;
 heavy = false;
 depth = 0;
 paletteselect = random_range(0, 4);
-spr_palette = 2539;
+spr_palette = palette_ninja;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

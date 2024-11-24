@@ -17,7 +17,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     }
     
     GamepadSetVibration(playerindex, 1, 1, 0.8);
-    scr_soundeffect(83);
+    scr_soundeffect(sfx_breakmetal);
     ds_list_add(global.saveroom, id);
 }
 

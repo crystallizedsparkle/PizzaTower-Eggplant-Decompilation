@@ -18,28 +18,24 @@ reset = false;
 hp = 1;
 hitboxcreate = false;
 grounded = true;
-idlespr = 164;
-stunfallspr = 160;
-walkspr = 162;
-grabbedspr = 161;
-scaredspr = 166;
+idlespr = spr_forknight_idle;
+stunfallspr = spr_forknight_stun;
+walkspr = spr_forknight_walk;
+grabbedspr = spr_forknight_grabbed;
+scaredspr = spr_forknight_scared;
 sprite_index = spr_forknight_walk;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 153;
+spr_dead = spr_forknight_dead;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 168;
+spr_palette = palette_forknight;
 grabbedby = 0;
 stuntouchbuffer = 0;
 ragedash = 0;
 ragecooldown = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

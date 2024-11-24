@@ -591,25 +591,3 @@ function check_grabbed_solid(argument0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_4 = 4,
-    Value_6 = 6,
-    Value_20 = 20,
-    Value_55 = 55,
-    Value_61 = 61,
-    Value_74 = 74,
-    Value_75,
-    Value_76,
-    Value_79 = 79,
-    Value_80,
-    Value_81,
-    Value_82,
-    Value_83,
-    Value_92 = 92,
-    Value_137 = 137,
-    Value_138,
-    Value_147 = 147,
-    Value_154 = 154
-}

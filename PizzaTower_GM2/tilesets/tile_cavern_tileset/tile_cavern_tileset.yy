@@ -1,23 +1,26 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_cavern_tileset",
   "spriteId": {
-    "name": "tile_cavern_tileset_sprite",
-    "path": "sprites/tile_cavern_tileset_sprite/tile_cavern_tileset_sprite.yy"
+    "name": "tile_cavern",
+    "path": "sprites/tile_cavern/tile_cavern.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "desertgroup",
-    "path": "texturegroups/desertgroup"
+    "path": "texturegroups/desertgroup",
   },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 28,
-  "tile_count": 810,
+  "out_tilehborder": 0,
+  "out_tilevborder": 0,
+  "out_columns": 29,
+  "tile_count": 820,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -832,22 +835,27 @@
       806,
       807,
       808,
-      809
+      809,
+      810,
+      811,
+      812,
+      813,
+      814,
+      815,
+      816,
+      817,
+      818,
+      819,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_cavern_tileset",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

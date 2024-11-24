@@ -17,10 +17,3 @@ if (state == states.ghostpossess)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_9 = 9,
-    Value_16 = 16,
-    Value_17
-}

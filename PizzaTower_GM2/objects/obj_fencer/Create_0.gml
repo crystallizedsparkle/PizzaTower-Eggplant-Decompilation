@@ -18,16 +18,16 @@ reset = false;
 hp = 3;
 hitboxcreate = false;
 grounded = true;
-idlespr = 290;
-stunfallspr = 291;
-walkspr = 290;
-grabbedspr = 291;
-scaredspr = 295;
+idlespr = spr_fencer;
+stunfallspr = spr_fencer_stun;
+walkspr = spr_fencer;
+grabbedspr = spr_fencer_stun;
+scaredspr = spr_fencer_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 292;
+spr_dead = spr_fencer_dead;
 important = false;
 heavy = false;
 depth = 0;
@@ -35,7 +35,3 @@ charging = false;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

@@ -1,4 +1,4 @@
-if (special_prompts == -4 && room != Realtitlescreen && room != characterselect)
+if (special_prompts == noone && room != Realtitlescreen && room != characterselect)
 {
     special_prompts = ds_map_create();
     ini_open(concat("saveData", global.currentsavefile, ".ini"));
@@ -19,10 +19,10 @@ if (special_prompts == -4 && room != Realtitlescreen && room != characterselect)
 
 if (room == Realtitlescreen)
 {
-    if (special_prompts != -4)
+    if (special_prompts != noone)
         ds_map_destroy(special_prompts);
     
-    special_prompts = -4;
+    special_prompts = noone;
 }
 
 if (room == entrance_1)

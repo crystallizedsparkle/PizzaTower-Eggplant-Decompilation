@@ -6,18 +6,14 @@ grav = 0.5;
 jumpspeed = 5;
 grounded = false;
 state = states.walk;
-deadspr = 357;
-walkspr = 2634;
-stunspr = 356;
+deadspr = spr_banditochicken_dead;
+walkspr = spr_clownmato_fall;
+stunspr = spr_banditochicken_stun;
 stunbuffer = 0;
 stuntouchbuffer = 0;
 stunmax = 50;
 image_speed = 0.35;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

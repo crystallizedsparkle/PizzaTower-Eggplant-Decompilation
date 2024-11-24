@@ -48,7 +48,3 @@ function scr_player_antigrav()
     image_speed = abs(vsp) / 15;
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92
-}

@@ -18,8 +18,3 @@ if (!place_meeting(x, y, obj_trapghost))
 if (cooldown > 0 && state != states.punch)
     cooldown--;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_80 = 80
-}

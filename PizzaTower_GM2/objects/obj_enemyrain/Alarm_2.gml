@@ -1,21 +1,19 @@
-var spawnx, spawny, randompositionx, spawnxrandom;
-
-if (obj_player1.spotlight == true)
-    playerid = 324;
+if (obj_player1.spotlight)
+    playerid = obj_player1;
 else
-    playerid = 323;
+    playerid = obj_player2;
 
 spawn = true;
 
 if (instance_number(obj_baddie) < 20)
 {
-    spawnx = playerid.x;
-    spawny = playerid.y - 200;
-    randompositionx = random_range(-500, 500);
-    spawnxrandom = spawnx + randompositionx;
-    objects[0] = 312;
-    objects[1] = 311;
-    objects[2] = 332;
+    var spawnx = playerid.x;
+    var spawny = playerid.y - 200;
+    var randompositionx = random_range(-500, 500);
+    var spawnxrandom = spawnx + randompositionx;
+    objects[0] = obj_solid;
+    objects[1] = obj_slope;
+    objects[2] = obj_destructibles;
     
     for (i = 0; i < 3; i += 1)
     {
@@ -53,7 +51,3 @@ if (instance_number(obj_baddie) < 20)
 
 alarm[2] = 150;
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

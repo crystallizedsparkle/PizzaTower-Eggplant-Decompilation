@@ -1,6 +1,4 @@
-var _actor;
-
-_actor = false;
+var _actor = false;
 
 with (obj_player)
 {
@@ -18,11 +16,11 @@ if (!place_meeting(x, y, obj_doorblocked))
 {
     with (other)
     {
-        if (key_up && !instance_exists(obj_jumpscare) && other.image_index == 1 && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && ((character != "M" && y == (other.y + 50)) || (character == "M" && y == (other.y + 55))) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor && ((obj_player1.spotlight == true && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
+        if (key_up && !instance_exists(obj_jumpscare) && other.image_index == 1 && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && ((character != "M" && y == (other.y + 50)) || (character == "M" && y == (other.y + 55))) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor && ((obj_player1.spotlight && object_index == obj_player1) || (obj_player1.spotlight == false && object_index == obj_player2)))
         {
             obj_player1.lastroom = room;
             obj_player2.lastroom = room;
-            scr_soundeffect(76);
+            scr_soundeffect(sfx_door);
             obj_camera.chargecamera = 0;
             ds_list_add(global.saveroom, id);
             
@@ -47,7 +45,7 @@ if (!place_meeting(x, y, obj_doorblocked))
                 mach2 = 0;
             }
             
-            if (instance_exists(obj_player2) && global.coop == true)
+            if (instance_exists(obj_player2) && global.coop)
             {
                 if (object_index == obj_player2)
                 {
@@ -68,16 +66,3 @@ if (!place_meeting(x, y, obj_doorblocked))
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_95 = 95,
-    Value_99 = 99,
-    Value_103 = 103,
-    Value_104,
-    Value_112 = 112,
-    Value_121 = 121,
-    Value_146 = 146,
-    Value_186 = 186
-}

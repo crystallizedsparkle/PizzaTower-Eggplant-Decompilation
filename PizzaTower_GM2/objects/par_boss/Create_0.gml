@@ -1,5 +1,5 @@
 mach3destroy = false;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 thrown = false;
@@ -46,8 +46,6 @@ colliding = true;
 
 function SUPER_player_destroy(argument0)
 {
-    var lag;
-    
     depth = argument0.depth;
     playerdestroyed = true;
     
@@ -55,7 +53,7 @@ function SUPER_player_destroy(argument0)
     {
         camera_zoom(1, 0.1);
         scr_soundeffect(26);
-        lag = room_speed * 3;
+        var lag = room_speed * 3;
         other.hitLag = lag;
         other.hitX = room_width / 2;
         other.hitY = room_height / 2;
@@ -89,8 +87,6 @@ function SUPER_player_destroy(argument0)
 
 function SUPER_boss_destroy(argument0)
 {
-    var lag;
-    
     destroyed = true;
     depth = argument0.depth;
     global.attackstyle = 0;
@@ -115,7 +111,7 @@ function SUPER_boss_destroy(argument0)
             tauntstoredstate = state;
         }
         
-        lag = room_speed * 3;
+        var lag = room_speed * 3;
         other.image_xscale = -xscale;
         other.hitLag = lag;
         other.hitX = (room_width / 2) + (xscale * 16);
@@ -153,12 +149,10 @@ function SUPER_boss_destroy(argument0)
 
 function SUPER_boss_hurt(argument0, argument1)
 {
-    var atstate, lag;
-    
     if (important)
         hp -= argument0;
     
-    if (argument1.state != UnknownEnum.Value_252)
+    if (argument1.state != states.playersuperattack)
     {
         with (obj_bosscontroller)
             super += 30;
@@ -166,7 +160,7 @@ function SUPER_boss_hurt(argument0, argument1)
     
     with (argument1)
     {
-        atstate = state;
+        var atstate = state;
         
         if (state == states.handstandjump)
         {
@@ -177,14 +171,14 @@ function SUPER_boss_hurt(argument0, argument1)
         
         if (state != states.chainsaw)
         {
-            scr_soundeffect(26);
+            scr_soundeffect(sfx_killingblow);
             tauntstoredmovespeed = movespeed;
             tauntstoredsprite = sprite_index;
             tauntstoredstate = state;
         }
         
         state = states.chainsaw;
-        lag = 8;
+        var lag = 8;
         hitLag = lag;
         hitX = x;
         hitY = y;
@@ -235,18 +229,16 @@ function SUPER_boss_hurt(argument0, argument1)
 
 function SUPER_boss_hurt_noplayer(argument0)
 {
-    var lag;
-    
     if (important)
         hp -= argument0;
     
-    if (obj_player.state != UnknownEnum.Value_252)
+    if (obj_player.state != states.playersuperattack)
     {
         with (obj_bosscontroller)
             super += 30;
     }
     
-    lag = 8;
+    var lag = 8;
     
     if (state == states.hit || state == states.chainsaw)
     {
@@ -278,8 +270,6 @@ function SUPER_boss_hurt_noplayer(argument0)
 
 function SUPER_player_hurt(argument0, argument1)
 {
-    var lag;
-    
     if (instance_exists(obj_bosscontroller))
         obj_bosscontroller.player_hp -= argument0;
     
@@ -288,8 +278,8 @@ function SUPER_player_hurt(argument0, argument1)
     
     with (argument1)
     {
-        scr_soundeffect(26);
-        lag = 8;
+        scr_soundeffect(sfx_killingblow);
+        var lag = 8;
         
         if (state == states.hit || state == states.chainsaw)
         {
@@ -368,17 +358,3 @@ function boss_hurt_noplayer(argument0)
     SUPER_boss_hurt_noplayer(argument0);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_6 = 6,
-    Value_42 = 42,
-    Value_61 = 61,
-    Value_84 = 84,
-    Value_137 = 137,
-    Value_145 = 145,
-    Value_147 = 147,
-    Value_160 = 160,
-    Value_162 = 162,
-    Value_252 = 252
-}

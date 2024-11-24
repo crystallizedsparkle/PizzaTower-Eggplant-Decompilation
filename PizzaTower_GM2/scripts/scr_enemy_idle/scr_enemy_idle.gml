@@ -74,9 +74,3 @@ function scr_enemy_idle()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_134 = 134,
-    Value_141 = 141
-}

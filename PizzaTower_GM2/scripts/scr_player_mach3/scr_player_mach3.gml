@@ -859,18 +859,3 @@ function scr_player_mach3()
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_2,
-    Value_5 = 5,
-    Value_37 = 37,
-    Value_42 = 42,
-    Value_43,
-    Value_58 = 58,
-    Value_65 = 65,
-    Value_92 = 92,
-    Value_99 = 99,
-    Value_105 = 105,
-    Value_106
-}

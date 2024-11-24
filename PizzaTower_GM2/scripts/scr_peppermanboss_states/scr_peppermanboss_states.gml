@@ -762,23 +762,3 @@ function boss_pepperman_summonbricks()
     instance_create(room_width - (room_width / 5), -64, obj_peppermanbrick);
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_76 = 76,
-    Value_83 = 83,
-    Value_84,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_122 = 122,
-    Value_128 = 128,
-    Value_138 = 138,
-    Value_153 = 153,
-    Value_156 = 156,
-    Value_157,
-    Value_158,
-    Value_159,
-    Value_161 = 161,
-    Value_163 = 163
-}

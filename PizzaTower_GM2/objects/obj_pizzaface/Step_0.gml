@@ -1,13 +1,11 @@
-var playerid, dir;
+var playerid = obj_player1;
 
-playerid = 324;
-
-if (obj_player1.spotlight == false)
-    playerid = 323;
+if (!obj_player1.spotlight)
+    playerid = obj_player2;
 
 if (image_alpha == 1)
 {
-    dir = point_direction(x, y, playerid.x, playerid.y);
+    var dir = point_direction(x, y, playerid.x, playerid.y);
     x += lengthdir_x(maxspeed, dir);
     y += lengthdir_y(maxspeed, dir);
 }
@@ -48,7 +46,7 @@ if (place_meeting(x, y, playerid) && !playerid.cutscene && playerid.state != sta
             sprite_index = spr_Timesup;
             image_index = 0;
             audio_stop_all();
-            scr_soundeffect(120);
+            scr_soundeffect(mu_timesup);
         }
     }
     
@@ -58,8 +56,3 @@ if (place_meeting(x, y, playerid) && !playerid.cutscene && playerid.state != sta
 if (maxspeed < 3 && image_alpha == 1)
     maxspeed += 0.01;
 
-enum UnknownEnum
-{
-    Value_64 = 64,
-    Value_146 = 146
-}

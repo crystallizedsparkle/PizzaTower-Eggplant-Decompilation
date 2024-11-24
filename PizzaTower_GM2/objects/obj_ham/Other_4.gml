@@ -1,4 +1,4 @@
 event_inherited();
 
-if (unpickable == true)
+if (unpickable)
     sprite_index = spr_tombstone2;

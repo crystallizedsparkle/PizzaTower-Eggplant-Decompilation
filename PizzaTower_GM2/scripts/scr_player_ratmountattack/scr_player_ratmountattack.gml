@@ -27,8 +27,3 @@ function scr_player_ratmountattack()
         ledge_bump((vsp >= 0) ? 32 : 22);
 }
 
-enum UnknownEnum
-{
-    Value_191 = 191,
-    Value_192
-}

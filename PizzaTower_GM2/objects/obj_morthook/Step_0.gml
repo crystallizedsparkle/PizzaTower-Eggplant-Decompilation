@@ -1,6 +1,4 @@
-var _found;
-
-_found = false;
+var _found = false;
 
 with (obj_player)
 {
@@ -13,10 +11,3 @@ if (_found)
 else
     image_alpha = 0.5;
 
-enum UnknownEnum
-{
-    Value_11 = 11,
-    Value_12,
-    Value_13,
-    Value_14
-}

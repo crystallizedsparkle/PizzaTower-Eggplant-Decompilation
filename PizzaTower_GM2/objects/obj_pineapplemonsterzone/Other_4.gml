@@ -1,2 +1,2 @@
-if (global.panic == false)
+if (!global.panic)
     instance_destroy();

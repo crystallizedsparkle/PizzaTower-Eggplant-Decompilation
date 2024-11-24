@@ -42,8 +42,3 @@ function scr_player_ratmountclimbwall()
     }
 }
 
-enum UnknownEnum
-{
-    Value_192 = 192,
-    Value_198 = 198
-}

@@ -4,7 +4,7 @@ if (room == rm_editor)
     exit;
 }
 
-if (global.panic == false)
+if (!global.panic)
 {
     x = -100;
     y = -100;

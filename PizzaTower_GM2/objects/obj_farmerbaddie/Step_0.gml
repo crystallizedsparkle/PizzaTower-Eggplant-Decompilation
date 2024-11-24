@@ -1,5 +1,3 @@
-var x1, t, b, q;
-
 if (room == rm_editor)
     exit;
 
@@ -70,21 +68,21 @@ if (state != states.walk)
 
 if (state == states.walk)
 {
-    x1 = 270;
+    var x1 = 270;
     playerid = instance_nearest(x, y, obj_player);
-    t = playerid.x > (x - x1) && playerid.x < (x + x1) && playerid.y > (y - 100) && playerid.y < (y + 100);
+    var t = playerid.x > (x - x1) && playerid.x < (x + x1) && playerid.y > (y - 100) && playerid.y < (y + 100);
     
     if (cooldown > 0)
     {
         cooldown--;
     }
-    else if (t && collision_line(x, y, playerid.x, playerid.y, obj_solid, false, true) == -4)
+    else if (t && collision_line(x, y, playerid.x, playerid.y, obj_solid, false, true) == noone)
     {
-        b = id;
+        var b = id;
         
         with (obj_farmerbaddie)
         {
-            if ((id == b || distance_to_object(other) < 300) && state != states.grabbed && state != states.stun && state != states.hit && state != UnknownEnum.Value_266)
+            if ((id == b || distance_to_object(other) < 300) && state != states.grabbed && state != states.stun && state != states.hit && state != states.secret)
             {
                 state = states.jump;
                 sprite_index = ragespr;
@@ -97,7 +95,7 @@ if (state == states.walk)
                 if (id != b)
                     leaderID = b;
                 else
-                    leaderID = -4;
+                    leaderID = noone;
             }
         }
     }
@@ -122,15 +120,15 @@ else if (state == states.punch)
         }
     }
     
-    x1 = 450;
+    var x1 = 450;
     playerid = instance_nearest(x, y, obj_player);
-    t = playerid.x > (x - x1) && playerid.x < (x + x1) && playerid.y > (y - 400) && playerid.y < (y + 400);
+    var t = playerid.x > (x - x1) && playerid.x < (x + x1) && playerid.y > (y - 400) && playerid.y < (y + 400);
     hsp = image_xscale * attackspeed;
-    q = outofsight;
+    var q = outofsight;
     
-    if (leaderID == -4)
+    if (leaderID == noone)
     {
-        if (!t || collision_line(x, y, playerid.x, playerid.y, obj_solid, true, false) != -4)
+        if (!t || collision_line(x, y, playerid.x, playerid.y, obj_solid, true, false) != noone)
             outofsight = true;
         
         if (t)
@@ -142,7 +140,7 @@ else if (state == states.punch)
     }
     else
     {
-        leaderID = -4;
+        leaderID = noone;
     }
     
     if (outofsight)
@@ -176,10 +174,10 @@ else if (state == states.punch)
 if (state != states.punch && hitboxID != -4 && instance_exists(hitboxID))
 {
     instance_destroy(hitboxID);
-    hitboxID = -4;
+    hitboxID = noone;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -199,7 +197,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -210,21 +208,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155,
-    Value_266 = 266
-}

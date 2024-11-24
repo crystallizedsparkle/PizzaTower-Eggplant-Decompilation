@@ -1,5 +1,3 @@
-var _is_brick, _xs, dis, m, tx, ty, _dir, _dis, x1, y1;
-
 if (room == rm_editor)
     exit;
 
@@ -26,7 +24,7 @@ switch (state)
         if (x != playerid.x)
             image_xscale = -sign(x - playerid.x);
         
-        _is_brick = playerid.object_index == obj_brickcomeback;
+        var _is_brick = playerid.object_index == obj_brickcomeback;
         
         if (!_is_brick)
         {
@@ -38,13 +36,13 @@ switch (state)
                 }
                 else if (!launched)
                 {
-                    _xs = 0;
+                    var _xs = 0;
                     
                     if (x != other.x)
                         _xs = -sign(x - other.x);
                     
-                    dis = (abs(hsp) < 12) ? 100 : 180;
-                    m = (abs(x - other.x) > dis) ? abs(hsp) : (abs(hsp) - max(0, abs(hsp) - 2));
+                    var dis = (abs(hsp) < 12) ? 100 : 180;
+                    var m = (abs(x - other.x) > dis) ? abs(hsp) : (abs(hsp) - max(0, abs(hsp) - 2));
                     
                     if (hsp == 0)
                         m = _xs;
@@ -64,7 +62,7 @@ switch (state)
                     
                     if (state == states.grind || state == states.climbwall || state == states.Sjumpprep || state == states.Sjump || state == states.Sjumpland || y < (other.y - 400))
                     {
-                        scr_soundeffect(28);
+                        scr_soundeffect(sfx_bumpwall);
                         vsp = -4;
                         hsp = -3 * xscale;
                         state = states.bump;
@@ -112,12 +110,12 @@ switch (state)
         {
             with (playerid)
             {
-                tx = other.x + (other.image_xscale * 32);
-                ty = other.y;
+                var tx = other.x + (other.image_xscale * 32);
+                var ty = other.y;
                 
                 if (distance_between_points(x, y, tx, ty) > 10)
                 {
-                    _dir = point_direction(x, y, tx, ty);
+                    var _dir = point_direction(x, y, tx, ty);
                     x += lengthdir_x(10, _dir);
                     y += lengthdir_y(10, _dir);
                 }
@@ -163,7 +161,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -174,14 +172,14 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.walk)
     attract_player = false;
 
-_dis = 300;
+var _dis = 300;
 
 if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && obj_player1.state != states.taxi && ((distance_to_object(obj_player) < _dis && obj_player1.brick) || distance_to_object(obj_ratmountgroundpound) < _dis || (distance_to_object(obj_brickcomeback) < _dis && instance_exists(obj_brickcomeback) && !obj_brickcomeback.trapped) || distance_to_object(obj_brickball) < _dis))
 {
     state = states.blockstance;
     sprite_index = spr_hamkuff_chain1;
-    x1 = obj_player1.x;
-    y1 = obj_player1.y;
+    var x1 = obj_player1.x;
+    var y1 = obj_player1.y;
     
     if (instance_exists(obj_ratmountgroundpound))
     {
@@ -221,7 +219,7 @@ if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && ob
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state != states.grabbed)
@@ -230,32 +228,3 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_37 = 37,
-    Value_78 = 78,
-    Value_92 = 92,
-    Value_97 = 97,
-    Value_99 = 99,
-    Value_105 = 105,
-    Value_106,
-    Value_119 = 119,
-    Value_121 = 121,
-    Value_123 = 123,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_152 = 152,
-    Value_154 = 154,
-    Value_155,
-    Value_191 = 191,
-    Value_206 = 206
-}

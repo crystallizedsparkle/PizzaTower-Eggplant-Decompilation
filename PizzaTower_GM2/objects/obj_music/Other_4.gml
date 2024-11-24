@@ -1,20 +1,18 @@
-var i, b, prevmusic, prevmuID;
-
 if (!global.panic)
 {
-    for (i = 0; i < array_length(room_arr); i++)
+    for (var i = 0; i < array_length(room_arr); i++)
     {
-        b = room_arr[i];
+        var b = room_arr[i];
         
         if (room == b[0])
         {
-            prevmusic = music;
+            var prevmusic = music;
             music = b[1];
             secretmusic = b[2];
             
             if (music != prevmusic)
             {
-                prevmuID = musicID;
+                var prevmuID = musicID;
                 musicID = scr_music(music);
                 
                 if (b[3])
@@ -25,14 +23,14 @@ if (!global.panic)
             
             audio_stop_sound(secretmusicID);
             audio_stop_sound(pillarmusicID);
-            secretmusicID = -4;
+            secretmusicID = noone;
             break;
         }
     }
     
     if (instance_exists(obj_hungrypillar))
     {
-        pillarmusicID = scr_music(129);
+        pillarmusicID = scr_music(mu_dungeondepth);
         audio_sound_gain(pillarmusicID, 0, 0);
     }
 }
@@ -55,7 +53,7 @@ if (room == rank_room)
     audio_stop_sound(musicID);
     audio_stop_sound(secretmusicID);
     audio_stop_sound(pillarmusicID);
-    musicID = -4;
-    secretmusicID = -4;
-    pillarmusicID = -4;
+    musicID = noone;
+    secretmusicID = noone;
+    pillarmusicID = noone;
 }

@@ -98,10 +98,3 @@ function scr_player_secondjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_12 = 12,
-    Value_60 = 60,
-    Value_122 = 122
-}

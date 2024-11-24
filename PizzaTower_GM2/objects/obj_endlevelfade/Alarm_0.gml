@@ -23,5 +23,5 @@ if (global.collectN > global.collect)
     repeat (6)
         instance_create(obj_player1.x, obj_player1.y, obj_baddiegibs);
     
-    scr_soundeffect(14);
+    scr_soundeffect(sfx_explosion);
 }

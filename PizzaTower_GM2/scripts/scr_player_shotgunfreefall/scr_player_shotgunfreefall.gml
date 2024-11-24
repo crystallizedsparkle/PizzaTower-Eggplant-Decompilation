@@ -60,8 +60,3 @@ function scr_player_shotgunfreefall()
     }
 }
 
-enum UnknownEnum
-{
-    Value_12 = 12,
-    Value_66 = 66
-}

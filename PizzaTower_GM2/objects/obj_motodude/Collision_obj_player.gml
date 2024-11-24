@@ -17,8 +17,3 @@ else
     scr_hurtplayer(other);
 }
 
-enum UnknownEnum
-{
-    Value_32 = 32,
-    Value_108 = 108
-}

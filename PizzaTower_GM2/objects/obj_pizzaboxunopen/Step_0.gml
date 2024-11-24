@@ -1,6 +1,4 @@
-var roomname;
-
-roomname = string_letters(room_get_name(room));
+var roomname = string_letters(room_get_name(room));
 
 if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 {
@@ -8,9 +6,9 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
     ds_list_add(global.saveroom, id);
     
     if (!audio_is_playing(sfx_collecttoppin))
-        scr_soundeffect(19);
+        scr_soundeffect(sfx_collecttoppin);
     
-    if (content == 544)
+    if (content == obj_noisebomb)
     {
         with (obj_player)
         {
@@ -56,7 +54,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
             scr_panicbg_init();
     }
     
-    if (content == 539)
+    if (content == obj_pizzakinshroom)
     {
         with (instance_create(x, y, obj_smallnumber))
             number = "1000";
@@ -88,7 +86,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         global.shroomfollow = true;
     }
     
-    if (content == 540)
+    if (content == obj_pizzakincheese)
     {
         with (instance_create(x, y, obj_smallnumber))
             number = "1000";
@@ -120,7 +118,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         global.cheesefollow = true;
     }
     
-    if (content == 541)
+    if (content == obj_pizzakintomato)
     {
         with (instance_create(x, y, obj_smallnumber))
             number = "1000";
@@ -152,7 +150,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         global.tomatofollow = true;
     }
     
-    if (content == 542)
+    if (content == obj_pizzakinsausage)
     {
         with (instance_create(x, y, obj_smallnumber))
             number = "1000";
@@ -184,7 +182,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         global.sausagefollow = true;
     }
     
-    if (content == 543)
+    if (content == obj_pizzakinpineapple)
     {
         with (instance_create(x, y, obj_smallnumber))
             number = "1000";
@@ -219,9 +217,9 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         global.pineapplefollow = true;
     }
     
-    if (content == 468)
+    if (content == obj_noisey)
     {
-        scr_soundeffect(20);
+        scr_soundeffect(sfx_enemyprojectile);
         
         with (instance_create(x, y - 25, content))
         {
@@ -238,8 +236,3 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 if (sprite_index == spr_pizzaboxopen && floor(image_index) == 16)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_84 = 84,
-    Value_138 = 138
-}

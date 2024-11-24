@@ -18,16 +18,16 @@ reset = false;
 hp = 2;
 hitboxcreate = false;
 grounded = false;
-idlespr = 359;
-stunfallspr = 360;
-walkspr = 359;
-grabbedspr = 360;
-scaredspr = 361;
+idlespr = spr_ufolive;
+stunfallspr = spr_ufolive_stun;
+walkspr = spr_ufolive;
+grabbedspr = spr_ufolive_stun;
+scaredspr = spr_ufolive_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 362;
+spr_dead = spr_ufolive_dead;
 important = false;
 heavy = false;
 depth = 0;
@@ -39,7 +39,3 @@ turntimer = 0;
 turnstart = false;
 turner = true;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

@@ -1,6 +1,4 @@
-var _actor;
-
-_actor = false;
+var _actor = false;
 
 with (obj_player)
 {
@@ -20,13 +18,3 @@ with (other)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_58 = 58,
-    Value_99 = 99,
-    Value_103 = 103,
-    Value_104,
-    Value_121 = 121,
-    Value_146 = 146
-}

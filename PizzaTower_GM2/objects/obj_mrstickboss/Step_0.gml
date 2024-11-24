@@ -1,4 +1,4 @@
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (hp <= 0 && state != states.arena_round)
 {
@@ -109,24 +109,3 @@ switch (state)
 colliding = !(state == states.jump || state == states.cardboard || state == states.cardboardend);
 attacking = state == states.boss_shield || state == states.jump || state == states.cardboard || state == states.cardboardend || state == states.smokebombstart;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_61 = 61,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_145 = 145,
-    Value_147 = 147,
-    Value_174 = 174,
-    Value_175,
-    Value_176,
-    Value_177,
-    Value_178,
-    Value_179,
-    Value_180,
-    Value_181,
-    Value_182
-}

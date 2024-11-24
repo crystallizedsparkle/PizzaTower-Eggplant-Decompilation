@@ -1,8 +1,8 @@
-if (playerid.visible == false)
+if (!playerid.visible)
 {
     with (obj_player1)
     {
-        scr_soundeffect(93);
+        scr_soundeffect(sfx_taxi1);
         
         if (isgustavo)
             state = states.ratmount;
@@ -13,7 +13,7 @@ if (playerid.visible == false)
         cutscene = false;
     }
     
-    if (global.coop == true)
+    if (global.coop)
     {
         with (obj_player2)
         {
@@ -26,8 +26,3 @@ if (playerid.visible == false)
     obj_player2.visible = true;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_191 = 191
-}

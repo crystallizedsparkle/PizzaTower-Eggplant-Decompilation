@@ -1,4 +1,4 @@
-if (drop == false)
+if (!drop)
 {
     instance_create(x, y, obj_bumpeffect);
     hsp = -hsp;

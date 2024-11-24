@@ -1,260 +1,258 @@
-var i, lay_id, map_id, ts, t, _w32, yy, xx, _x, _y, data, _id, xi, yi, j;
-
 alpha = 1;
 depth = -8;
 tiles[0] = array_create(0);
 tiles[1] = array_create(0);
 tiles[2] = array_create(0);
 
-for (i = 0; i < 3; i++)
+for (var i = 0; i < 3; i++)
 {
-    lay_id = layer_get_id(concat("Tiles_Secret", i + 1));
-    tilemap_sprite[i] = -4;
+    var lay_id = layer_get_id(concat("Tiles_Secret", i + 1));
+    tilemap_sprite[i] = noone;
     
     if (lay_id != -1)
     {
-        map_id = layer_tilemap_get_id(lay_id);
-        ts = tilemap_get_tileset(map_id);
-        t = -4;
+        var map_id = layer_tilemap_get_id(lay_id);
+        var ts = tilemap_get_tileset(map_id);
+        var t = noone;
         
         switch (ts)
         {
-            case 74:
-                t = 1851;
+            case tileset_ruin:
+                t = tile_ruin;
                 break;
             
-            case 75:
-                t = 1853;
+            case tileset_ruin2:
+                t = tile_ruin2;
                 break;
             
-            case 90:
-                t = 1958;
+            case tileset_tile_beachtest:
+                t = sprite_tile_beachtest;
                 break;
             
-            case 91:
-                t = 1959;
+            case tileset_tile_beachtest2:
+                t = sprite_tile_beachtest2;
                 break;
             
-            case 94:
-                t = 1965;
+            case tileset_tile_beachtest2dark:
+                t = sprite_tile_beachtest2dark;
                 break;
             
-            case 79:
-                t = 1886;
+            case tileset_chateau1:
+                t = tile_chateau1;
                 break;
             
-            case 49:
-                t = 1744;
+            case tile_desert_tileset:
+                t = tile_desert;
                 break;
             
-            case 51:
-                t = 1737;
+            case tile_ufo_tileset:
+                t = tile_ufo;
                 break;
             
-            case 50:
-                t = 1743;
+            case tile_cavern_tileset:
+                t = tile_cavern;
                 break;
             
-            case 76:
-                t = 1873;
+            case tileset_dungeon:
+                t = tile_dungeon;
                 break;
             
-            case 77:
-                t = 1874;
+            case tileset_dungeon2:
+                t = tile_dungeon2;
                 break;
             
-            case 78:
-                t = 1875;
+            case tileset_dungeon3:
+                t = tile_dungeon3;
                 break;
             
-            case 65:
-                t = 1902;
+            case tileset_entrance:
+                t = tile_entrance1;
                 break;
             
-            case 64:
-                t = 1797;
+            case tile_tower_tileset:
+                t = tile_tower;
                 break;
             
-            case 86:
-                t = 1942;
+            case tileset_farm:
+                t = tile_farm;
                 break;
             
-            case 95:
-                t = 1971;
+            case tileset_tile_forest:
+                t = sprite_tile_forest;
                 break;
             
-            case 96:
-                t = 1972;
+            case tileset_tile_forest1_shade:
+                t = sprite_tile_forest1_shade;
                 break;
             
-            case 97:
-                t = 1978;
+            case tileset_tile_forest2:
+                t = sprite_tile_forest2;
                 break;
             
-            case 123:
-                t = 1835;
+            case tileset_freezer:
+                t = bg_tilefreezer;
                 break;
             
-            case 23:
-                t = 2506;
+            case tileset_freezer2:
+                t = tile_freezer2;
                 break;
             
-            case 83:
-                t = 1928;
+            case tileset_graveyard:
+                t = tile_graveyard1;
                 break;
             
-            case 85:
-                t = 1937;
+            case tileset_graveyardinterior:
+                t = tile_graveyard3;
                 break;
             
-            case 84:
-                t = 1936;
+            case tileset_graveyardunderground:
+                t = tile_graveyard2;
                 break;
             
-            case 47:
-                t = 1718;
+            case tile_factory_tileset:
+                t = tile_factory;
                 break;
             
-            case 25:
-                t = 2040;
+            case tile_factory2:
+                t = tile_factory2424;
                 break;
             
-            case 125:
-                t = 2639;
+            case tile_kidsparty:
+                t = spr_kidspartytile;
                 break;
             
-            case 99:
-                t = 2006;
+            case tileset_tile_kungfu:
+                t = sprite_tile_kungfu;
                 break;
             
-            case 100:
-                t = 2013;
+            case tileset_tile_kungfucity:
+                t = tile_kunfucity;
                 break;
             
-            case 101:
-                t = 2011;
+            case tileset_tile_kungfustructure:
+                t = sprite_tile_kungfustructure;
                 break;
             
-            case 12:
-                t = 985;
+            case tile_mansion2:
+                t = spr_mansiontile2;
                 break;
             
-            case 55:
-                t = 1760;
+            case tile_castle_tileset:
+                t = tile_castle;
                 break;
             
-            case 71:
-                t = 1840;
+            case tileset_medieval:
+                t = tile_medieval;
                 break;
             
-            case 72:
-                t = 1841;
+            case tileset_medieval2:
+                t = tile_medieval2;
                 break;
             
-            case 73:
-                t = 1842;
+            case tileset_medieval3:
+                t = tile_medieval3;
                 break;
             
-            case 102:
-                t = 2020;
+            case tileset_tile_minigolf:
+                t = sprite_tile_minigolf;
                 break;
             
-            case 103:
-                t = 2021;
+            case tileset_tile_minigolf2:
+                t = sprite_tile_minigolf2;
                 break;
             
-            case 104:
-                t = 2022;
+            case tileset_tile_minigolf2_shad:
+                t = sprite_tile_minigolf2_shad;
                 break;
             
-            case 70:
-                t = 1870;
+            case tileset_secret:
+                t = tile_secret;
                 break;
             
-            case 13:
-                t = 172;
+            case tileset_tile_space1:
+                t = sprite_tile_space1;
                 break;
             
-            case 115:
-                t = 1394;
+            case tileset_tile_spaceback1:
+                t = sprite_tile_spaceback1;
                 break;
             
-            case 109:
-                t = 862;
+            case tileset_tile_space2:
+                t = sprite_tile_space2;
                 break;
             
-            case 87:
-                t = 1955;
+            case tileset_pinball1:
+                t = tile_pinball1;
                 break;
             
-            case 88:
-                t = 1956;
+            case tileset_pinball2:
+                t = tile_pinball2;
                 break;
             
-            case 89:
-                t = 1957;
+            case tileset_pinball3:
+                t = tile_pinball3;
                 break;
             
-            case 31:
-                t = 2731;
+            case tileset_tile_war1:
+                t = sprite_tile_war1;
                 break;
             
-            case 17:
-                t = 1803;
+            case tileset_tile_war2:
+                t = sprite_tile_war2;
                 break;
             
-            case 129:
-                t = 2418;
+            case tileset_tile_war3:
+                t = sprite_tile_war3;
                 break;
             
-            case 6:
-                t = 1102;
+            case tileset_tile_war4:
+                t = sprite_tile_war4;
                 break;
             
-            case 29:
-                t = 1820;
+            case tileset_tile_war1shadow:
+                t = sprite_tile_war1shadow;
                 break;
             
-            case 7:
-                t = 1201;
+            case tileset_tile_space2shadow:
+                t = sprite_tile_space2shadow;
                 break;
             
-            case 132:
-                t = 1973;
+            case tileset_tile_citycarnival:
+                t = sprite_tile_citycarnival;
                 break;
             
-            case 16:
-                t = 116;
+            case tileset_tile_citydark:
+                t = sprite_tile_citydark;
                 break;
             
-            case 122:
-                t = 2836;
+            case tile_medievalinterior:
+                t = spr_medievalinterior;
                 break;
             
-            case 133:
-                t = 1357;
+            case tile_medievallibrary:
+                t = spr_medievallibrary;
                 break;
             
-            case 4:
-                t = 2095;
+            case tile_interior:
+                t = spr_interiortile;
                 break;
         }
         
         tilemap_sprite[i] = t;
-        _w32 = sprite_get_width(t) / 32;
+        var _w32 = sprite_get_width(t) / 32;
         
-        for (yy = 0; yy < image_yscale; yy++)
+        for (var yy = 0; yy < image_yscale; yy++)
         {
-            for (xx = 0; xx < image_xscale; xx++)
+            for (var xx = 0; xx < image_xscale; xx++)
             {
-                _x = x + (xx * 32);
-                _y = y + (yy * 32);
-                data = tilemap_get_at_pixel(map_id, _x, _y);
-                _id = tile_get_index(data);
-                xi = 0;
-                yi = 0;
+                var _x = x + (xx * 32);
+                var _y = y + (yy * 32);
+                var data = tilemap_get_at_pixel(map_id, _x, _y);
+                var _id = tile_get_index(data);
+                var xi = 0;
+                var yi = 0;
                 
-                for (j = 0; j < _id; j++)
+                for (var j = 0; j < _id; j++)
                 {
                     xi++;
                     

@@ -1,10 +1,8 @@
-var blob_pos, _h;
-
-blob_pos = monster_pos[1];
+var blob_pos = monster_pos[1];
 
 if (room_place(blob_pos.x, blob_pos.y) != room_get_name(room))
 {
-    _h = monster_dir[1].x;
+    var _h = monster_dir[1].x;
     
     if (_h == 0)
         _h = choose(-1, 1);
@@ -34,7 +32,3 @@ if (room_place(blob_pos.x, blob_pos.y) != room_get_name(room))
     }
 }
 
-enum UnknownEnum
-{
-    Value_221 = 221
-}

@@ -1,6 +1,4 @@
-var s;
-
-s = other.state;
+var s = other.state;
 scr_hurtplayer(other);
 
 if (noiseboss && s != other.state)

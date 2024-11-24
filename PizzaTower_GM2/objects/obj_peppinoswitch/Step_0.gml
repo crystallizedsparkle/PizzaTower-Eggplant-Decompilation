@@ -19,7 +19,3 @@ if (sprite_index == spr_peppinoswitch2 && floor(image_index) == (image_number - 
     sprite_index = spr_gustavosign;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

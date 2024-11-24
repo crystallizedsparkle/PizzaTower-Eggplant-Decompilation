@@ -101,22 +101,3 @@ function __background_set_internal(argument0, argument1, argument2, argument3)
     
     return -1;
 }
-
-enum e__BG
-{
-    Visible,
-    Foreground,
-    Index,
-    X,
-    Y,
-    Width,
-    Height,
-    HTiled,
-    VTiled,
-    XScale,
-    YScale,
-    HSpeed,
-    VSpeed,
-    Blend,
-    Alpha
-}

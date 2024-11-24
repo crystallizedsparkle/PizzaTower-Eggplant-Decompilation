@@ -1,5 +1,3 @@
-var _p1spr, _spr;
-
 if (room == rank_room)
     visible = false;
 else
@@ -7,8 +5,8 @@ else
 
 playerid = obj_player1.id;
 image_speed = 0;
-_p1spr = obj_player1.sprite_index;
-_spr = obj_player2.spr_idle;
+var _p1spr = obj_player1.sprite_index;
+var _spr = obj_player2.spr_idle;
 
 switch (_p1spr)
 {

@@ -1,5 +1,3 @@
-var val, _x, _y, _xstart, yy, xx;
-
 if (other.state != states.gotoplayer)
 {
     if (obj_player1.character == "V")
@@ -10,8 +8,8 @@ if (other.state != states.gotoplayer)
     with (obj_camera)
         healthshaketime = 120;
     
-    scr_soundeffect(18);
-    val = heat_calculate(1000);
+    scr_soundeffect(sfx_collectgiantpizza);
+    var val = heat_calculate(1000);
     
     if (other.object_index == obj_player1)
         global.collect += val;
@@ -21,15 +19,15 @@ if (other.state != states.gotoplayer)
     if (global.bullet < 3)
         global.bullet += 1;
     
-    _x = x - 48;
-    _y = y - 48;
-    _xstart = _x;
+    var _x = x - 48;
+    var _y = y - 48;
+    var _xstart = _x;
     
-    for (yy = 0; yy < 4; yy++)
+    for (var yy = 0; yy < 4; yy++)
     {
-        for (xx = 0; xx < 4; xx++)
+        for (var xx = 0; xx < 4; xx++)
         {
-            create_collect(_x, _y, obj_player1.ispeppino ? choose(1563, 1559, 2709, 1561) : choose(2080, 2082, 2086, 2087, 2088));
+            create_collect(_x, _y, obj_player1.ispeppino ? choose(spr_sausagecollect, spr_shroomcollect, spr_shrimpcollect, spr_tomatocollect) : choose(spr_halloweencollectibles1, spr_halloweencollectibles2, spr_halloweencollectibles3, spr_halloweencollectibles4, spr_halloweencollectibles5));
             _x += 16;
         }
         
@@ -54,7 +52,3 @@ if (other.state != states.gotoplayer)
     }
 }
 
-enum UnknownEnum
-{
-    Value_186 = 186
-}

@@ -46,8 +46,3 @@ function scr_player_skateboard()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104,
-    Value_106 = 106
-}

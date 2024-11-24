@@ -13,7 +13,7 @@ if (state != states.stun)
         }
         else
         {
-            scr_soundeffect(46);
+            scr_soundeffect(sfx_punch);
             instance_destroy();
         }
     }
@@ -38,9 +38,9 @@ if (state != states.stun)
             other.playerid = id;
         }
     }
-    else if (other.state == UnknownEnum.Value_259)
+    else if (other.state == states.ratmountpunch)
     {
-        scr_soundeffect(46);
+        scr_soundeffect(sfx_punch);
         instance_destroy();
     }
     else
@@ -54,11 +54,3 @@ if (state != states.stun)
     }
 }
 
-enum UnknownEnum
-{
-    Value_121 = 121,
-    Value_138 = 138,
-    Value_196 = 196,
-    Value_206 = 206,
-    Value_259 = 259
-}

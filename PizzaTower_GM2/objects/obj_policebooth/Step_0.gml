@@ -1,7 +1,7 @@
 if (!released && global.panic)
 {
-    if (inst != -4 && !instance_exists(inst))
-        inst = -4;
+    if (inst != noone && !instance_exists(inst))
+        inst = noone;
     
     if (obj_player.x > x)
     {
@@ -12,7 +12,7 @@ if (!released && global.panic)
 else if (floor(image_index) == 3 && !instance_exists(inst))
 {
     inst = instance_create(obj_player1.x, y + 13, obj_policecar);
-    inst.targetplayer = 324;
+    inst.targetplayer = obj_player1;
     inst.targetRoom = targetRoom;
     inst.targetDoor = targetDoor;
 }

@@ -25,8 +25,3 @@ if (buffer <= 0 && other.state != states.ghost && other.grounded)
     }
 }
 
-enum UnknownEnum
-{
-    Value_16 = 16,
-    Value_211 = 211
-}

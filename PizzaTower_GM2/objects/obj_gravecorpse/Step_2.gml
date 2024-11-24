@@ -13,8 +13,3 @@ if (playerid.sprite_index == spr_player_corpsestart)
 if (playerid.state != states.trashroll && playerid.state != states.chainsaw)
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_211 = 211
-}

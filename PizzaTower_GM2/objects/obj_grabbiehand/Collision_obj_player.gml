@@ -12,7 +12,7 @@ if (state != states.grabbing && x == xstart && y == ystart)
         
         state = states.bump;
         
-        if (boxxed == false)
+        if (!boxxed)
             sprite_index = spr_player_catched;
         else
             sprite_index = spr_boxxedpep_air;
@@ -22,9 +22,3 @@ if (state != states.grabbing && x == xstart && y == ystart)
     }
 }
 
-enum UnknownEnum
-{
-    Value_55 = 55,
-    Value_61 = 61,
-    Value_106 = 106
-}

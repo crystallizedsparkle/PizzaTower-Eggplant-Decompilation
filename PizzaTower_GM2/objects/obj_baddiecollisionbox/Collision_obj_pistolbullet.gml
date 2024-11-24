@@ -1,9 +1,7 @@
-var lag;
-
 if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable)
 {
     baddieID.invtime = 15;
-    scr_soundeffect(46);
+    scr_soundeffect(sfx_punch);
     
     if (!baddieID.important)
     {
@@ -12,7 +10,7 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
         global.heattime = 60;
     }
     
-    lag = 10;
+    var lag = 10;
     baddieID.hitLag = lag;
     baddieID.hitX = baddieID.x;
     baddieID.hitY = baddieID.y;
@@ -35,8 +33,3 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_137 = 137
-}

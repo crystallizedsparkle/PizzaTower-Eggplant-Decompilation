@@ -38,7 +38,3 @@ if (floor(image_index) == (image_number - 1))
 if (press < 8)
     closed = true;
 
-enum UnknownEnum
-{
-    Value_88 = 88
-}

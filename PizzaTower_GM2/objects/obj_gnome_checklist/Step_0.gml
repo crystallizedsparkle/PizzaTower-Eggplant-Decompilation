@@ -1,5 +1,3 @@
-var hide;
-
 if (start)
 {
     yy -= start_spd;
@@ -18,10 +16,10 @@ else if (finish)
         instance_destroy();
 }
 
-if (global.panic == true)
+if (global.panic)
     finish = true;
 
-hide = false;
+var hide = false;
 
 with (obj_player)
 {

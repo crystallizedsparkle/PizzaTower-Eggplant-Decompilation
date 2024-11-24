@@ -1,22 +1,20 @@
-var s, by, bx;
-
 if (used)
     image_index = 1;
 else
     image_index = 0;
 
-s = 16;
+var s = 16;
 
 if (place_meeting(x, y - s, obj_player))
 {
     with (obj_player)
     {
-        by = 4;
+        var by = 4;
         
         if (state == states.mach3)
             by = 10;
         
-        bx = 8;
+        var bx = 8;
         
         if (state == states.mach3 || state == states.ratmounttumble)
             bx = 18;
@@ -50,13 +48,3 @@ if (place_meeting(x, y - s, obj_player))
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_104 = 104,
-    Value_121 = 121,
-    Value_187 = 187,
-    Value_201 = 201,
-    Value_203 = 203,
-    Value_211 = 211
-}

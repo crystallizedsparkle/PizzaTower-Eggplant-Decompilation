@@ -1,2 +1,2 @@
-create_debris(random(room_width), 10, 1123);
+create_debris(random(room_width), 10, spr_debris);
 alarm[0] = 5;

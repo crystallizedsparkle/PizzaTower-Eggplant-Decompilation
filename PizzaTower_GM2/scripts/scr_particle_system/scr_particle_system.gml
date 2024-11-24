@@ -20,9 +20,7 @@ function particle_set_scale(argument0, argument1, argument2)
 
 function create_debris(argument0, argument1, argument2, argument3 = false)
 {
-    var q;
-    
-    q = 
+    var q = 
     {
         x: argument0,
         y: argument1,
@@ -94,7 +92,3 @@ function create_particle(argument0, argument1, argument2, argument3 = 0)
     part_emitter_burst(global.particle_system, global.part_emitter, ds_map_find_value(global.part_map, argument2), 1);
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

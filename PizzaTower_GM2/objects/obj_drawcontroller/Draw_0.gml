@@ -1,21 +1,19 @@
-var i, b, _kungfu, _stun, c, x1, y1, dis, w, len, dir, xx, yy;
-
 if (use_dark)
 {
-    for (i = 0; i < array_length(objdark_arr); i++)
+    for (var i = 0; i < array_length(objdark_arr); i++)
     {
         with (objdark_arr[i])
         {
             if (visible)
             {
-                b = get_dark(image_blend, other.use_dark);
+                var b = get_dark(image_blend, other.use_dark);
                 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, image_alpha);
             }
         }
     }
 }
 
-if (obj_player1.finisher || obj_player2.finisher || (obj_player.state == UnknownEnum.Value_252 && obj_player.superattackstate == states.transitioncutscene))
+if (obj_player1.finisher || obj_player2.finisher || (obj_player.state == states.playersuperattack && obj_player.superattackstate == states.transitioncutscene))
     finisher_alpha = Approach(finisher_alpha, 0.3, 0.1);
 else if (finisher_alpha > 0)
     finisher_alpha = Approach(finisher_alpha, 0, 0.02);
@@ -27,31 +25,31 @@ if (finisher_alpha > 0)
     draw_set_alpha(1);
 }
 
-_kungfu = global.kungfu;
+var _kungfu = global.kungfu;
 
 with (obj_baddie)
 {
-    _stun = 0;
+    var _stun = 0;
     
-    if (state == states.stun && thrown == false)
+    if (state == states.stun && !thrown)
         _stun = 25;
     
     if (visible && object_index != obj_pizzaball && bbox_in_camera(view_camera[0], 32))
     {
-        c = image_blend;
+        var c = image_blend;
         
         if (elite)
-            c = 65535;
+            c = c_yellow;
         
         if (elitegrab)
-            c = 32768;
+            c = c_green;
         
-        b = get_dark(c, other.use_dark);
+        var b = get_dark(c, other.use_dark);
         
         if (object_index == obj_peppinoclone)
         {
             shader_set(global.Pal_Shader);
-            pal_swap_set(535, 1, false);
+            pal_swap_set(spr_peppalette, 1, false);
         }
         else if (usepalette)
         {
@@ -76,8 +74,8 @@ with (obj_baddie)
         {
             if (state == states.blockstance && instance_exists(playerid))
             {
-                x1 = x + 3;
-                y1 = y + 30;
+                var x1 = x + 3;
+                var y1 = y + 30;
                 
                 if (sprite_index == spr_hamkuff_chain2)
                 {
@@ -85,14 +83,14 @@ with (obj_baddie)
                     y1 = y + 33;
                 }
                 
-                dis = point_distance(x1, y1, playerid.x, playerid.y);
-                w = 24;
-                len = dis div w;
-                dir = point_direction(x1, y1, playerid.x, playerid.y + 16);
-                xx = lengthdir_x(w, dir);
-                yy = lengthdir_y(w, dir);
+                var dis = point_distance(x1, y1, playerid.x, playerid.y);
+                var w = 24;
+                var len = dis div w;
+                var dir = point_direction(x1, y1, playerid.x, playerid.y + 16);
+                var xx = lengthdir_x(w, dir);
+                var yy = lengthdir_y(w, dir);
                 
-                for (i = 0; i < len; i++)
+                for (var i = 0; i < len; i++)
                     draw_sprite_ext(spr_hamkuff_sausage, -1, x1 + (xx * i), y1 + (yy * i), 1, 1, dir, b, 1);
             }
         }
@@ -106,7 +104,7 @@ with (obj_sausageman_dead)
     if (visible && bbox_in_camera(view_camera[0], 32))
     {
         pal_swap_set(spr_palette, paletteselect, false);
-        b = get_dark(image_blend, other.use_dark);
+        var b = get_dark(image_blend, other.use_dark);
         draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, b, image_alpha);
     }
 }
@@ -125,7 +123,7 @@ with (obj_player2)
     if (visible && bbox_in_camera(view_camera[0], 32))
     {
         pal_swap_set(spr_palette, paletteselect, false);
-        b = get_dark(image_blend, other.use_dark);
+        var b = get_dark(image_blend, other.use_dark);
         draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, image_angle, b, image_alpha);
     }
 }
@@ -135,7 +133,7 @@ with (obj_player1)
     if (visible && bbox_in_camera(view_camera[0], 32))
     {
         pal_swap_set(spr_palette, paletteselect, false);
-        b = get_dark(image_blend, other.use_dark);
+        var b = get_dark(image_blend, other.use_dark);
         draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
     }
 }
@@ -173,10 +171,3 @@ with (obj_smallnumber)
 
 shader_reset();
 
-enum UnknownEnum
-{
-    Value_8 = 8,
-    Value_138 = 138,
-    Value_206 = 206,
-    Value_252 = 252
-}

@@ -1,16 +1,14 @@
-var i, t, h, n, range;
-
 if (!shot)
 {
-    i = 0;
-    t = 4;
-    h = sprite_height;
-    n = h / t;
-    range = 500;
+    var i = 0;
+    var t = 4;
+    var h = sprite_height;
+    var n = h / t;
+    var range = 500;
     
     for (i = 0; i < t; i++)
     {
-        if (collision_line(x, y + (i * n), x + (image_xscale * range), y + (i * n), obj_player, false, true) != -4)
+        if (collision_line(x, y + (i * n), x + (image_xscale * range), y + (i * n), obj_player, false, true) != noone)
         {
             shot = true;
             break;

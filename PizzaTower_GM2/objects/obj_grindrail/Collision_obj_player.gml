@@ -23,11 +23,3 @@ if (place_meeting(x, y, other) && other.state != states.tumble && other.state !=
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_78 = 78,
-    Value_84 = 84,
-    Value_106 = 106,
-    Value_202 = 202
-}

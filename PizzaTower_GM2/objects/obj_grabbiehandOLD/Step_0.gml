@@ -1,5 +1,3 @@
-var i, targetplayer, _normalaccel;
-
 if (sprite_index == spr_grabbiehand_hifive && floor(image_index) == (image_number - 1))
 {
     sprite_index = spr_grabbiehand_idle;
@@ -7,9 +5,9 @@ if (sprite_index == spr_grabbiehand_hifive && floor(image_index) == (image_numbe
     image_xscale = 1;
 }
 
-for (i = 0; i < 2; i++)
+for (var i = 0; i < 2; i++)
 {
-    targetplayer = asset_get_index(concat("obj_player", i + 1));
+    var targetplayer = asset_get_index(concat("obj_player", i + 1));
     
     if (distance_to_pos(x, y, xstart, ystart, 6, 6) && targetplayer.sprite_index != spr_player_catched && targetplayer.x > (x - 50) && targetplayer.x < (x + 50) && targetplayer.y > y && targetplayer.y < (y + 200) && !thumbingup)
     {
@@ -29,7 +27,7 @@ if (grabbing)
 {
     if (sprite_index == spr_grabbiehand_catch && !released)
     {
-        _normalaccel = true;
+        var _normalaccel = true;
         
         if (distance_to_pos(x, y, grab_xstart, grab_ystart, 78, 78))
         {
@@ -108,7 +106,3 @@ else
         vsp = 0;
 }
 
-enum UnknownEnum
-{
-    Value_108 = 108
-}

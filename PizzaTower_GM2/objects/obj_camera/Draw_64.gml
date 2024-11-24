@@ -1,5 +1,3 @@
-var sw, sh, b, hud_xx, hud_yy, _score, rx, ry, rank_ix, spr_w, spr_h, spr_xo, spr_yo, perc, t, top, text_y, cs, sc, str, num, w, xx, i, yy, c;
-
 if (is_bossroom() || room == editor_room)
     exit;
 
@@ -45,18 +43,18 @@ if (obj_player.state != states.gameover)
             pizzascore_index = 0;
     }
     
-    sw = sprite_get_width(spr_heatmeter_fill);
-    sh = sprite_get_height(spr_heatmeter_fill);
-    b = global.stylemultiplier;
-    hud_xx = 121 + irandom_range(-collect_shake, collect_shake);
-    hud_yy = 70 + irandom_range(-collect_shake, collect_shake) + hud_posY;
+    var sw = sprite_get_width(spr_heatmeter_fill);
+    var sh = sprite_get_height(spr_heatmeter_fill);
+    var b = global.stylemultiplier;
+    var hud_xx = 121 + irandom_range(-collect_shake, collect_shake);
+    var hud_yy = 70 + irandom_range(-collect_shake, collect_shake) + hud_posY;
     draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, sw * b, sh, hud_xx - 95, hud_yy + 24);
     shader_set(global.Pal_Shader);
-    pal_swap_set(98, global.stylethreshold, false);
+    pal_swap_set(spr_heatmeter_palette, global.stylethreshold, false);
     draw_sprite_ext(spr_heatmeter, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
     shader_reset();
     draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-    _score = global.collect;
+    var _score = global.collect;
     
     if (global.coop)
         _score += global.collectN;
@@ -73,9 +71,9 @@ if (obj_player.state != states.gameover)
     if (_score >= global.srank)
         draw_sprite_ext(spr_pizzascore_shroom, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
     
-    rx = hud_xx + 142;
-    ry = hud_yy - 22;
-    rank_ix = 0;
+    var rx = hud_xx + 142;
+    var ry = hud_yy - 22;
+    var rank_ix = 0;
     
     if (_score >= global.srank)
         rank_ix = 4;
@@ -93,11 +91,11 @@ if (obj_player.state != states.gameover)
     }
     
     rank_scale = Approach(rank_scale, 1, 0.2);
-    spr_w = sprite_get_width(spr_ranks_hudfill);
-    spr_h = sprite_get_height(spr_ranks_hudfill);
-    spr_xo = sprite_get_xoffset(spr_ranks_hudfill);
-    spr_yo = sprite_get_yoffset(spr_ranks_hudfill);
-    perc = 0;
+    var spr_w = sprite_get_width(spr_ranks_hudfill);
+    var spr_h = sprite_get_height(spr_ranks_hudfill);
+    var spr_xo = sprite_get_xoffset(spr_ranks_hudfill);
+    var spr_yo = sprite_get_yoffset(spr_ranks_hudfill);
+    var perc = 0;
     
     switch (rank_ix)
     {
@@ -121,14 +119,14 @@ if (obj_player.state != states.gameover)
             perc = _score / global.crank;
     }
     
-    t = spr_h * perc;
-    top = spr_h - t;
+    var t = spr_h * perc;
+    var top = spr_h - t;
     draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, spr_h - top, rx - spr_xo, (ry - spr_yo) + top);
     draw_sprite_ext(spr_ranks_hudeggplant, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1);
     draw_set_valign(fa_top);
     draw_set_halign(fa_left);
     draw_set_font(global.collectfont);
-    text_y = 0;
+    var text_y = 0;
     
     switch (floor(pizzascore_index))
     {
@@ -157,22 +155,22 @@ if (obj_player.state != states.gameover)
             break;
     }
     
-    cs = 0;
+    var cs = 0;
     
     with (obj_comboend)
         cs += comboscore;
     
-    sc = _score - global.comboscore - cs;
-    str = string(sc);
-    num = string_length(str);
-    w = string_width(str);
-    xx = hud_xx - (w / 2);
+    var sc = _score - global.comboscore - cs;
+    var str = string(sc);
+    var num = string_length(str);
+    var w = string_width(str);
+    var xx = hud_xx - (w / 2);
     
     if (lastcollect != sc)
     {
         color_array = array_create(num, 0);
         
-        for (i = 0; i < array_length(color_array); i++)
+        for (var i = 0; i < array_length(color_array); i++)
             color_array[i] = choose(irandom(3));
         
         lastcollect = sc;
@@ -183,8 +181,8 @@ if (obj_player.state != states.gameover)
     
     for (i = 0; i < num; i++)
     {
-        yy = (((i + 1) % 2) == 0) ? -5 : 0;
-        c = color_array[i];
+        var yy = (((i + 1) % 2) == 0) ? -5 : 0;
+        var c = color_array[i];
         pal_swap_set(201, c, false);
         draw_text(xx, (hud_yy - 56) + text_y + yy, string_char_at(str, i + 1));
         xx += (w / num);
@@ -205,7 +203,3 @@ if (obj_player.state != states.gameover)
         draw_sprite_ext(spr_key, -1, 41, 150, 1, 1, 1, c_white, alpha);
 }
 
-enum UnknownEnum
-{
-    Value_89 = 89
-}

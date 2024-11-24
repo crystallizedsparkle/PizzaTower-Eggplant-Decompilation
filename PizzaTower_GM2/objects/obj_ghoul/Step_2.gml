@@ -13,7 +13,3 @@ if (state == states.stun)
     }
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138
-}

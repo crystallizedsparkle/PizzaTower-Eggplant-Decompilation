@@ -1,5 +1,5 @@
 event_inherited();
 grabbable = false;
-bomblit_spr = 2862;
+bomblit_spr = spr_banditodynamite;
 defused = true;
 countdown = 80;

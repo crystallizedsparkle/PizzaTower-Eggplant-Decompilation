@@ -1,15 +1,13 @@
-var b, p, current_hspd, _dir;
-
-b = false;
-p = (player_id == 1) ? obj_player1.id : obj_player2.id;
+var b = false;
+var p = (player_id == 1) ? obj_player1.id : obj_player2.id;
 
 with (other)
 {
     if (defused)
     {
         b = true;
-        current_hspd = abs(hsp);
-        _dir = sign(hsp);
+        var current_hspd = abs(hsp);
+        var _dir = sign(hsp);
         
         if (x != other.x)
             _dir = sign(x - other.x);

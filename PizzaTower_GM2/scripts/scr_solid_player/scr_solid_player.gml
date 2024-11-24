@@ -141,12 +141,3 @@ function check_slope_player(argument0)
     return false;
 }
 
-enum UnknownEnum
-{
-    Value_16 = 16,
-    Value_61 = 61,
-    Value_78 = 78,
-    Value_93 = 93,
-    Value_105 = 105,
-    Value_121 = 121
-}

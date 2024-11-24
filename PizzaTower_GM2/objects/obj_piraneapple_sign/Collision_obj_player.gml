@@ -1,8 +1,6 @@
-var _sign_id;
-
 if (!active)
 {
-    _sign_id = id;
+    var _sign_id = id;
     
     with (obj_piraneapple_spawn)
     {
@@ -19,7 +17,3 @@ if (!active)
     active = true;
 }
 
-enum UnknownEnum
-{
-    Value_8 = 8
-}

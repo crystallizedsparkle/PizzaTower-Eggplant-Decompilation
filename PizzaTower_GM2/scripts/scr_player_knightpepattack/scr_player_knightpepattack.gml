@@ -62,8 +62,3 @@ function scr_player_knightpepattack()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_38 = 38,
-    Value_47 = 47
-}

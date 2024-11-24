@@ -25,7 +25,3 @@ function scr_fakepeppino_jump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

@@ -32,7 +32,3 @@ function scr_dotaunt()
     }
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

@@ -210,12 +210,3 @@ function scr_player_climbwall()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92,
-    Value_104 = 104,
-    Value_106 = 106,
-    Value_121 = 121,
-    Value_123 = 123
-}

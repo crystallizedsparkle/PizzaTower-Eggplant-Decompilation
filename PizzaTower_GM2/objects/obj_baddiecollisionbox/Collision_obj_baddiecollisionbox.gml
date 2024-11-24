@@ -1,8 +1,6 @@
-var lag;
-
 if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown == true && other.baddieID.state != states.hit && baddieID.killbyenemy && baddieID != other.id && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
 {
-    scr_soundeffect(46);
+    scr_soundeffect(sfx_punch);
     
     if (!baddieID.important)
     {
@@ -11,7 +9,7 @@ if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach
         global.heattime = 60;
     }
     
-    lag = 5;
+    var lag = 5;
     
     if (baddieID.object_index != obj_tank || baddieID.hp <= 0)
     {
@@ -47,8 +45,3 @@ if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_137 = 137
-}

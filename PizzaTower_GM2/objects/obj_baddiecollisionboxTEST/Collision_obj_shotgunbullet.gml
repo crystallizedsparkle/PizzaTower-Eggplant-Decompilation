@@ -6,8 +6,8 @@ if (instance_exists(baddieID) && !baddieID.invincible && baddieID.hp < 1)
 else if (instance_exists(baddieID) && !baddieID.invincible)
 {
     baddieID.hp -= 1;
-    scr_soundeffect(42);
-    scr_soundeffect(25);
+    scr_soundeffect(sfx_hitenemy);
+    scr_soundeffect(sfx_machpunch);
     global.hit += 1;
     global.combotime = 60;
     instance_create(baddieID.x, baddieID.y, obj_slapstar);
@@ -21,7 +21,3 @@ else if (instance_exists(baddieID) && !baddieID.invincible)
     baddieID.stagger_dir = -baddieID.image_xscale;
 }
 
-enum UnknownEnum
-{
-    Value_155 = 155
-}

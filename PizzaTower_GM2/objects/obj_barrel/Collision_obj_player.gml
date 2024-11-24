@@ -15,10 +15,3 @@ if (active)
     }
 }
 
-enum UnknownEnum
-{
-    Value_113 = 113,
-    Value_114,
-    Value_115,
-    Value_116
-}

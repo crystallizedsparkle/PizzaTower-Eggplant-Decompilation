@@ -1,15 +1,13 @@
-var obj;
-
-obj = 243;
+var obj = obj_farmerpeasantoprojectile;
 
 switch (object_index)
 {
     case obj_farmer2follow:
-        obj = 127;
+        obj = obj_farmer2projectile;
         break;
     
     case obj_farmer3follow:
-        obj = 87;
+        obj = obj_farmer3projectile;
         break;
 }
 

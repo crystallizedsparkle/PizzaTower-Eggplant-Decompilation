@@ -19,23 +19,19 @@ hp = 2;
 hitboxcreate = false;
 grounded = true;
 bombreset = 50;
-idlespr = 383;
-stunfallspr = 378;
-walkspr = 383;
-grabbedspr = 378;
-scaredspr = 376;
+idlespr = spr_spitcheese_idle;
+stunfallspr = spr_spitcheese_stun;
+walkspr = spr_spitcheese_idle;
+grabbedspr = spr_spitcheese_stun;
+scaredspr = spr_spitcheese_scared;
 sprite_index = spr_spitcheese_idle;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 382;
+spr_dead = spr_spitcheese_dead;
 important = false;
 heavy = false;
 depth = 0;
-spitcheesespr = 375;
+spitcheesespr = spr_spitcheese_spit;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

@@ -23,7 +23,3 @@ function scr_enemy_secret()
     }
 }
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

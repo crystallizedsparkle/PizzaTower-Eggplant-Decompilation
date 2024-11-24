@@ -34,7 +34,3 @@ function cutscene_save_game()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

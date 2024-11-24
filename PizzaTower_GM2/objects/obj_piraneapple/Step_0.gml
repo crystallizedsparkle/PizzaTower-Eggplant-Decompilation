@@ -1,15 +1,13 @@
-var targetplayer;
-
 if (room == rm_editor)
     exit;
 
 switch (state)
 {
     case states.walk:
-        targetplayer = obj_player1.id;
+        var targetplayer = obj_player1.id;
         
-        if (hamspotted == true)
-            targetplayer = 818;
+        if (hamspotted)
+            targetplayer = obj_ham;
         
         if ((targetplayer.x > x && image_xscale < 0) || (targetplayer.x < x && image_xscale > 0))
         {
@@ -37,14 +35,14 @@ switch (state)
         
         if (instance_exists(obj_ham))
         {
-            if (hamspotted == false && (obj_ham.x > (x - 400) && obj_ham.x < (x + 400)) && (y <= (obj_ham.y + 20) && y >= (obj_ham.y - 20)))
+            if (!hamspotted && (obj_ham.x > (x - 400) && obj_ham.x < (x + 400)) && (y <= (obj_ham.y + 20) && y >= (obj_ham.y - 20)))
                 hamspotted = true;
         }
         
         if (flash == true && alarm[2] <= 0)
             alarm[2] = 0.05 * room_speed;
         
-        if (hitboxcreate == false)
+        if (!hitboxcreate)
         {
             with (instance_create(x, y, obj_forkhitbox))
             {
@@ -82,8 +80,3 @@ switch (state)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_8 = 8,
-    Value_134 = 134
-}

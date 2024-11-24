@@ -39,7 +39,3 @@ function scr_player_trashjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_211 = 211
-}

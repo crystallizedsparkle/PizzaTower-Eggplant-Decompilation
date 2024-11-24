@@ -6,8 +6,6 @@ team = 1;
 
 function SUPER_player_hurt(argument0, argument1)
 {
-    var lag;
-    
     if (!collisioned && argument1.state != states.arena_round)
     {
         if (instance_exists(obj_bosscontroller))
@@ -17,8 +15,8 @@ function SUPER_player_hurt(argument0, argument1)
         
         with (argument1)
         {
-            scr_soundeffect(26);
-            lag = 8;
+            scr_soundeffect(sfx_killingblow);
+            var lag = 8;
             
             if (state == states.chainsaw || state == states.hit)
             {
@@ -86,9 +84,3 @@ function player_hurt(argument0, argument1)
     SUPER_player_hurt(argument0, argument1);
 }
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_137 = 137,
-    Value_145 = 145
-}

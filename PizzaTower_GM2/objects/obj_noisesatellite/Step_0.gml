@@ -36,23 +36,23 @@ stunned = 100;
 
 if (cigar == false)
 {
-    landspr = 25;
-    idlespr = 25;
-    fallspr = 25;
-    hitceillingspr = 25;
-    stunfalltransspr = 25;
-    hitwallspr = 25;
-    stunfallspr = 23;
-    rollingspr = 25;
-    walkspr = 25;
-    turnspr = 25;
-    flyingspr = 25;
-    hitspr = 25;
-    stunlandspr = 25;
-    stunspr = 25;
-    recoveryspr = 25;
-    stompedspr = 25;
-    grabbedspr = 23;
+    landspr = spr_noisesatellite;
+    idlespr = spr_noisesatellite;
+    fallspr = spr_noisesatellite;
+    hitceillingspr = spr_noisesatellite;
+    stunfalltransspr = spr_noisesatellite;
+    hitwallspr = spr_noisesatellite;
+    stunfallspr = spr_noisesatellitestun;
+    rollingspr = spr_noisesatellite;
+    walkspr = spr_noisesatellite;
+    turnspr = spr_noisesatellite;
+    flyingspr = spr_noisesatellite;
+    hitspr = spr_noisesatellite;
+    stunlandspr = spr_noisesatellite;
+    stunspr = spr_noisesatellite;
+    recoveryspr = spr_noisesatellite;
+    stompedspr = spr_noisesatellite;
+    grabbedspr = spr_noisesatellitestun;
 }
 
 if (state != states.grabbed)
@@ -61,16 +61,6 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_126 = 126,
-    Value_130 = 130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138
-}

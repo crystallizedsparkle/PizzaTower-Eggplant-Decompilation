@@ -1,6 +1,6 @@
 if (!released)
 {
-    if (!instance_exists(inst) && global.chase == true)
+    if (!instance_exists(inst) && global.chase)
     {
         released = true;
         image_speed = 0.35;
@@ -17,13 +17,9 @@ else if (!instance_exists(inst))
     }
 }
 
-if (global.key_inv == true && obj_player.state != states.keyget)
+if (global.key_inv && obj_player.state != states.keyget)
     global.chase = true;
 
-if (global.panic == true)
+if (global.panic)
     global.chase = true;
 
-enum UnknownEnum
-{
-    Value_90 = 90
-}

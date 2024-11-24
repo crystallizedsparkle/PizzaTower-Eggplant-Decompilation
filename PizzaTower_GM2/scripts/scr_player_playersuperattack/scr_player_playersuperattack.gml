@@ -72,7 +72,7 @@ function scr_player_playersuperattack()
                     with (bossID)
                     {
                         boss_hurt_noplayer(25);
-                        state = UnknownEnum.Value_252;
+                        state = states.playersuperattack;
                     }
                 }
                 else
@@ -121,13 +121,3 @@ function scr_player_playersuperattack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_79 = 79,
-    Value_80,
-    Value_92 = 92,
-    Value_137 = 137,
-    Value_252 = 252
-}

@@ -68,7 +68,3 @@ function scr_player_meteorpep()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

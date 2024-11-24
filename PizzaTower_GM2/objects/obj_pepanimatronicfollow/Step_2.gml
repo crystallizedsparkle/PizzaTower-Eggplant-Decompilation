@@ -1,7 +1,5 @@
-var _dist;
-
 event_inherited();
-_dist = distance_between_points(x, y, xprevious, yprevious);
+var _dist = distance_between_points(x, y, xprevious, yprevious);
 
 if (_dist >= 10 && _dist < 15)
     fast_count = 1;

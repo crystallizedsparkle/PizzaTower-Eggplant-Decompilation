@@ -67,7 +67,3 @@ function scr_player_slam()
     sprite_index = spr_player_slam;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

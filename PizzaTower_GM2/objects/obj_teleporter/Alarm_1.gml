@@ -29,7 +29,3 @@ with (player)
 
 player = -1;
 
-enum UnknownEnum
-{
-    Value_11 = 11
-}

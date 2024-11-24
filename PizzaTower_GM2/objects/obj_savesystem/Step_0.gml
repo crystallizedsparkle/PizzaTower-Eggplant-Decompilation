@@ -1,12 +1,10 @@
-var t;
-
 if (room == hub_loadingscreen && state != 2 && !instance_exists(obj_fadeout))
 {
     with (obj_player)
     {
-        targetRoom = 229;
+        targetRoom = hub_reception;
         targetDoor = "D";
-        targetRoom = 69;
+        targetRoom = rm_eggplantdisclaimer;
         targetDoor = "A";
     }
     
@@ -32,7 +30,7 @@ if (showicon)
     
     if (icon_index > (icon_max - 1))
     {
-        t = frac(icon_index);
+        var t = frac(icon_index);
         icon_index = t;
     }
 }

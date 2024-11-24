@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && other.thrown == true && !baddieID.instantkillable)
+if (instance_exists(baddieID) && other.thrown && !baddieID.instantkillable)
 {
     instance_destroy(other);
     instance_destroy();

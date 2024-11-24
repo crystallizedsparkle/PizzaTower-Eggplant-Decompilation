@@ -1,5 +1,3 @@
-var b;
-
 with (obj_player)
 {
     if ((object_index != obj_player2 || global.coop) && state != states.actor && !instance_exists(obj_dialogcontroller))
@@ -17,7 +15,7 @@ with (obj_player)
 
 if (waitforhurt && !instance_exists(obj_dialogcontroller))
 {
-    b = false;
+    var b = false;
     
     with (obj_player)
     {
@@ -31,13 +29,8 @@ if (waitforhurt && !instance_exists(obj_dialogcontroller))
         dialog[0] = dialog_create("Becaw!");
         dialog[1] = dialog_create("You gotta wait in line sir.");
         do_dialog(dialog);
-        dialog = -4;
+        dialog = noone;
         warned = true;
     }
 }
 
-enum UnknownEnum
-{
-    Value_107 = 107,
-    Value_146 = 146
-}

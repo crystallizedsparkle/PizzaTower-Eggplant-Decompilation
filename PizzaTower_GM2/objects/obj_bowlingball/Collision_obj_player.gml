@@ -1,6 +1,6 @@
-if (drop == false)
+if (!drop)
 {
-    scr_soundeffect(22);
+    scr_soundeffect(sfx_pephurt);
     instance_create(x, y, obj_stompeffect);
     other.image_index = 0;
     other.state = states.stunned;
@@ -17,7 +17,3 @@ if (drop == false)
     drop = true;
 }
 
-enum UnknownEnum
-{
-    Value_59 = 59
-}

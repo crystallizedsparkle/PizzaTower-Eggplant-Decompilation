@@ -1,5 +1,3 @@
-var p, t;
-
 switch (state)
 {
     case 0:
@@ -8,8 +6,8 @@ switch (state)
         break;
     
     case 1:
-        p = 4;
-        t = 0;
+        var p = 4;
+        var t = 0;
         
         if (yy > p)
         {

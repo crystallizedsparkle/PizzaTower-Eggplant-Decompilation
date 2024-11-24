@@ -9,7 +9,3 @@ function cutscene_set_player_normal()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

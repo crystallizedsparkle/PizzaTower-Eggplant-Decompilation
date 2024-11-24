@@ -1,12 +1,10 @@
-var _m, _levelinfo, i;
-
 if (!instance_exists(obj_option))
 {
     scr_getinput();
     
     if (!instance_exists(obj_fadeout))
     {
-        _m = key_down2 - key_up2;
+        var _m = key_down2 - key_up2;
         selected_world += _m;
         selected_world = clamp(selected_world, 0, array_length(level_array) - 1);
         
@@ -29,7 +27,7 @@ if (!instance_exists(obj_option))
     
     if (key_jump2 && !instance_exists(obj_fadeout))
     {
-        _levelinfo = level_array[selected_world][selected_level];
+        var _levelinfo = level_array[selected_world][selected_level];
         
         with (obj_player)
         {
@@ -52,7 +50,7 @@ if (!instance_exists(obj_option))
     }
 }
 
-for (i = 0; i < array_length(toppin_info); i++)
+for (var i = 0; i < array_length(toppin_info); i++)
 {
     toppin_info[i][0] += 0.35;
     
@@ -60,7 +58,3 @@ for (i = 0; i < array_length(toppin_info); i++)
         toppin_info[i][0] = frac(toppin_info[i][0]);
 }
 
-enum UnknownEnum
-{
-    Value_95 = 95
-}

@@ -35,7 +35,3 @@ function scr_player_stunned()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

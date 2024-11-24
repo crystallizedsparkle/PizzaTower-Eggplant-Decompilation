@@ -9,7 +9,7 @@ depth = -1;
 appeartimer = 200;
 start_x = 0;
 start_y = 0;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
 followqueue = ds_queue_create();
@@ -19,7 +19,3 @@ targetRoom = room;
 targetDoor = obj_player1.targetDoor;
 steppy = false;
 
-enum UnknownEnum
-{
-    Value_0
-}

@@ -20,8 +20,3 @@ function scr_enemy_turn()
     }
 }
 
-enum UnknownEnum
-{
-    Value_126 = 126,
-    Value_134 = 134
-}

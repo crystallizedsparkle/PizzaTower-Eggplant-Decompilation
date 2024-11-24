@@ -1,4 +1,4 @@
-if (obj_player1.spotlight == true)
+if (obj_player1.spotlight)
 {
     x = obj_player1.x;
     y = obj_player1.y;

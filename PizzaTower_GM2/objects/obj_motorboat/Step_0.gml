@@ -43,16 +43,10 @@ switch (state)
                 shake_mag_acc = 5 / room_speed;
             }
             
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             dir *= -1;
         }
         
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_134 = 134,
-    Value_146 = 146
-}

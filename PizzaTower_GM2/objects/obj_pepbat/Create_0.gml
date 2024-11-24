@@ -18,26 +18,22 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 2762;
-stunfallspr = 2576;
-walkspr = 881;
-stunspr = 2576;
-grabbedspr = 2576;
-scaredspr = 1414;
+idlespr = spr_pepbat_idle;
+stunfallspr = spr_pepbat_stun;
+walkspr = spr_pepbat_move;
+stunspr = spr_pepbat_stun;
+grabbedspr = spr_pepbat_stun;
+scaredspr = spr_pepbat_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2782;
+spr_dead = spr_pepbat_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 paletteselect = 1;
-spr_palette = 231;
+spr_palette = palette_pepgoblin;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

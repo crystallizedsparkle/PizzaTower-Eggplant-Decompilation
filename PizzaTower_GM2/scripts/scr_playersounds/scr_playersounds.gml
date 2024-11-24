@@ -108,14 +108,3 @@ function scr_playersounds()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_37 = 37,
-    Value_38,
-    Value_42 = 42,
-    Value_99 = 99,
-    Value_103 = 103,
-    Value_121 = 121,
-    Value_184 = 184
-}

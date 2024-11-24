@@ -176,12 +176,3 @@ function scr_enemy_staggered()
     }
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80,
-    Value_91 = 91,
-    Value_134 = 134,
-    Value_138 = 138,
-    Value_154 = 154,
-    Value_155
-}

@@ -23,22 +23,18 @@ hp = 2;
 hitboxcreate = false;
 grounded = true;
 bombreset = 50;
-idlespr = 413;
-stunfallspr = 421;
-walkspr = 413;
-grabbedspr = 421;
-scaredspr = 421;
+idlespr = spr_tank_walk;
+stunfallspr = spr_tank_stun;
+walkspr = spr_tank_walk;
+grabbedspr = spr_tank_stun;
+scaredspr = spr_tank_stun;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 382;
+spr_dead = spr_spitcheese_dead;
 important = false;
 heavy = false;
 depth = 0;
 escape = false;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

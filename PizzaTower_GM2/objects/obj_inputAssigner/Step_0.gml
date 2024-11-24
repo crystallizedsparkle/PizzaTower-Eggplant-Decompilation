@@ -1,12 +1,10 @@
-var i, _index;
-
 if (!deactivated)
 {
     if (!device_selected[0] && instance_exists(obj_pause) && obj_pause.pause == 0)
     {
-        for (i = 0; i < 8; i++)
+        for (var i = 0; i < 8; i++)
         {
-            _index = scr_anybutton_pressed(i);
+            var _index = scr_anybutton_pressed(i);
             
             if (_index >= 0)
             {
@@ -17,7 +15,7 @@ if (!deactivated)
         }
     }
     
-    for (i = 0; i < 2; i++)
+    for (var i = 0; i < 2; i++)
     {
         if (device_selected[i] && player_input_device[i] >= 0)
         {
@@ -35,7 +33,7 @@ if (!deactivated)
 }
 else
 {
-    for (i = 0; i < 8; i++)
+    for (var i = 0; i < 8; i++)
     {
         _index = scr_button_pressed(i);
         

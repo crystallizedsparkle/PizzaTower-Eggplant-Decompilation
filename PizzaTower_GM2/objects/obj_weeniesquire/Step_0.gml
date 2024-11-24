@@ -1,5 +1,3 @@
-var player, check;
-
 if (room == rm_editor)
     exit;
 
@@ -79,7 +77,7 @@ switch (state)
 if (state == states.walk && grounded && vsp > 0)
     hsp = 0;
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -90,11 +88,11 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-player = instance_nearest(x, y, obj_player);
-check = player.x > (x - 300) && player.x < (x + 300);
+var player = instance_nearest(x, y, obj_player);
+var check = player.x > (x - 300) && player.x < (x + 300);
 
 if (state == states.walk && check && y <= (player.y + 60) && y >= (player.y - 60) && state != states.punch && chargebuffer <= 0)
 {
@@ -124,7 +122,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -135,19 +133,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_17 = 17,
-    Value_80 = 80,
-    Value_125 = 125,
-    Value_126,
-    Value_129 = 129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

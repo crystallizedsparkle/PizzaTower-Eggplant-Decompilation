@@ -1,7 +1,5 @@
-var empty;
-
 totem_clear(id);
-empty = totem_empty(id);
+var empty = totem_empty(id);
 
 if (empty)
 {
@@ -23,8 +21,3 @@ if (empty)
 
 active = totem_count(id) > 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134,
-    Value_188 = 188
-}

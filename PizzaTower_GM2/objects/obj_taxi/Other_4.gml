@@ -1,4 +1,4 @@
-if (global.panic == true && escape == false)
+if (global.panic && !escape)
     instance_destroy();
-else if (global.panic == false && escape == true)
+else if (!global.panic && escape)
     instance_destroy();

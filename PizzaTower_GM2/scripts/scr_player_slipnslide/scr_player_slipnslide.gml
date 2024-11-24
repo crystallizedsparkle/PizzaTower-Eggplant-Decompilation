@@ -64,9 +64,3 @@ function scr_player_slipnslide()
         sprite_index = spr_currentplayer;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92,
-    Value_165 = 165
-}

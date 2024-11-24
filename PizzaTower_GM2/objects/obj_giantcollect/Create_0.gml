@@ -3,10 +3,10 @@ if (obj_player.character == "S")
 
 image_speed = 0.35;
 
-if (obj_player1.character == "P" && obj_player1.spotlight == true && obj_player1.ispeppino)
+if (obj_player1.character == "P" && obj_player1.spotlight && obj_player1.ispeppino)
     sprite_index = spr_giantpizza;
 
-if ((obj_player1.character == "N" || !obj_player1.ispeppino) && obj_player1.spotlight == true)
+if ((obj_player1.character == "N" || !obj_player1.ispeppino) && obj_player1.spotlight)
     sprite_index = spr_giantpizzahalloween;
 
 depth = 11;

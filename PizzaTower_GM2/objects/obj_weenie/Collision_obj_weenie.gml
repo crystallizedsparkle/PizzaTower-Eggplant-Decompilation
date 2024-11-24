@@ -9,8 +9,3 @@ if (state == states.stun && thrown && other.state != states.tumble && other.stat
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_138 = 138
-}

@@ -1,6 +1,4 @@
-var mh_id;
-
-mh_id = other.id;
+var mh_id = other.id;
 
 with (playerid)
 {
@@ -15,7 +13,3 @@ with (playerid)
     }
 }
 
-enum UnknownEnum
-{
-    Value_14 = 14
-}

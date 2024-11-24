@@ -7,7 +7,3 @@ if (currentscore < maxscore && global.pigtotal >= maxscore && other.state == sta
     ini_close();
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

@@ -86,9 +86,3 @@ function scr_player_boxxedpepjump()
     }
 }
 
-enum UnknownEnum
-{
-    Value_33 = 33,
-    Value_34,
-    Value_35
-}

@@ -13,10 +13,6 @@ captain_y = 550;
 captain_xto = 234;
 captain_yto = 367;
 captain_index = 0;
-captain_sprite = 1388;
+captain_sprite = spr_captainbomb;
 destroyed = false;
 
-enum UnknownEnum
-{
-    Value_0
-}

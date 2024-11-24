@@ -23,7 +23,3 @@ function scr_player_keyget()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

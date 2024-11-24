@@ -9,7 +9,3 @@ with (other)
 
 instance_destroy();
 
-enum UnknownEnum
-{
-    Value_4 = 4
-}

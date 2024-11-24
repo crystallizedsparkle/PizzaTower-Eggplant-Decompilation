@@ -25,7 +25,3 @@ function scr_player_ratmounthurt()
     image_speed = 0.35;
 }
 
-enum UnknownEnum
-{
-    Value_191 = 191
-}

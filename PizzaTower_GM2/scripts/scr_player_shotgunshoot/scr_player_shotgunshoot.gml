@@ -45,8 +45,3 @@ function scr_player_shotgunshoot()
         scr_shotgunshoot();
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_92 = 92
-}

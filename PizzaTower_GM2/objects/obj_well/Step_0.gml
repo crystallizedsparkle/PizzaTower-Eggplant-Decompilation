@@ -6,10 +6,3 @@ if (!instance_exists(ID) && obj_player.state != states.mortattack && obj_player.
         other.ID = id;
 }
 
-enum UnknownEnum
-{
-    Value_11 = 11,
-    Value_12,
-    Value_13,
-    Value_14
-}

@@ -61,7 +61,3 @@ function scr_player_freefallprep()
     }
 }
 
-enum UnknownEnum
-{
-    Value_108 = 108
-}

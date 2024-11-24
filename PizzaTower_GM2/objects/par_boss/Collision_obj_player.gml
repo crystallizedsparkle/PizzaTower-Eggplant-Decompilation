@@ -1,6 +1,4 @@
-var _player, s, sb;
-
-_player = other.id;
+var _player = other.id;
 
 if (ds_map_empty(player_hurtstates))
     exit;
@@ -9,7 +7,7 @@ if (!attacking)
 {
     if (!invincible)
     {
-        s = ds_map_find_value(player_hurtstates, _player.state);
+        var s = ds_map_find_value(player_hurtstates, _player.state);
         
         if (!is_undefined(s))
         {
@@ -22,7 +20,7 @@ if (!attacking)
 }
 else
 {
-    sb = ds_map_find_value(boss_hurtstates, state);
+    var sb = ds_map_find_value(boss_hurtstates, state);
     
     if (!is_undefined(sb) && state != states.chainsaw && state != states.stun)
     {
@@ -31,8 +29,3 @@ else
     }
 }
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_138 = 138
-}

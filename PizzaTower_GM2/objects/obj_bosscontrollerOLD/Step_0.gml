@@ -1,6 +1,4 @@
-var round_yto, p, lag, hit;
-
-if (!instance_exists(bossID) && bossID != -4 && state != states.victory && !fakedeath)
+if (!instance_exists(bossID) && bossID != noone && state != states.victory && !fakedeath)
 {
     state = states.victory;
     alarm[1] = room_speed * 4;
@@ -12,7 +10,7 @@ if (player_hp <= 0)
     
     if (state != states.transitioncutscene && state != states.gameover)
     {
-        if (endroundfunc != -4)
+        if (endroundfunc != noone)
             endroundfunc();
         
         depth = obj_player1.depth + 1;
@@ -97,7 +95,7 @@ switch (state)
         break;
     
     case states.arena_round:
-        round_yto = 437;
+        var round_yto = 437;
         round_y = Approach(round_y, round_yto, 7);
         
         if (round_y != round_yto)
@@ -114,7 +112,7 @@ switch (state)
             }
             else
             {
-                bell_sprite = 2081;
+                bell_sprite = spr_bosstimer_bell;
                 round_timer = Approach(round_timer, round_timermax, 60);
             }
             
@@ -166,13 +164,13 @@ switch (state)
         }
         else
         {
-            if (startroundfunc != -4)
+            if (startroundfunc != noone)
                 startroundfunc();
             
             minutes = maxminutes;
             seconds = maxseconds;
             round_timer = round_timermax;
-            bell_sprite = 2081;
+            bell_sprite = spr_bosstimer_bell;
             alarm[0] = 1;
             state = states.normal;
             
@@ -189,12 +187,12 @@ switch (state)
         break;
     
     case states.normal:
-        bell_sprite = 2081;
+        bell_sprite = spr_bosstimer_bell;
         round_y = Approach(round_y, round_ystart, 4);
         
-        if (super >= supermax && obj_player.state != UnknownEnum.Value_252)
+        if (super >= supermax && obj_player.state != states.playersuperattack)
         {
-            p = false;
+            var p = false;
             
             with (obj_player)
             {
@@ -202,9 +200,9 @@ switch (state)
                 {
                     other.super = 0;
                     p = true;
-                    state = UnknownEnum.Value_252;
+                    state = states.playersuperattack;
                     superattackstate = states.transitioncutscene;
-                    lag = 60;
+                    var lag = 60;
                     hitX = x;
                     hitY = y;
                     hitLag = lag;
@@ -219,7 +217,7 @@ switch (state)
                         hitX = x;
                         hitY = y;
                         hitLag = lag;
-                        state = UnknownEnum.Value_252;
+                        state = states.playersuperattack;
                         sprite_index = stunfallspr;
                     }
                 }
@@ -251,7 +249,7 @@ switch (state)
                 super_portrait_index += 0.35;
                 super_portrait_x += 1;
                 
-                if (obj_player.state != UnknownEnum.Value_252 || obj_player.superattackstate != states.transitioncutscene)
+                if (obj_player.state != states.playersuperattack || obj_player.superattackstate != states.transitioncutscene)
                     super_portrait_state = 0;
                 
                 break;
@@ -273,7 +271,7 @@ switch (state)
         }
         else
         {
-            hit = false;
+            var hit = false;
             
             with (obj_player)
             {
@@ -319,21 +317,3 @@ else
     portrait2_sprite = portrait2_idle;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8,
-    Value_61 = 61,
-    Value_89 = 89,
-    Value_95 = 95,
-    Value_98 = 98,
-    Value_137 = 137,
-    Value_138,
-    Value_144 = 144,
-    Value_145,
-    Value_146,
-    Value_156 = 156,
-    Value_180 = 180,
-    Value_181,
-    Value_252 = 252
-}

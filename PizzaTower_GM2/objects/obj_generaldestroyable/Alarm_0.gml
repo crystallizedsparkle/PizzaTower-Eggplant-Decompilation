@@ -1,8 +1,6 @@
-var i;
-
 if (scr_solid(x, y))
 {
-    i = 0;
+    var i = 0;
     
     while (scr_solid(x, y))
     {

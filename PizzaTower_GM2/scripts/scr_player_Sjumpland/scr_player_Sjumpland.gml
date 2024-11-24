@@ -24,7 +24,3 @@ function scr_player_Sjumpland()
     }
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92
-}

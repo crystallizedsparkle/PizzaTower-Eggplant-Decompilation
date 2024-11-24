@@ -1,6 +1,4 @@
-var _active;
-
-_active = false;
+var _active = false;
 
 with (obj_wirewall)
 {
@@ -30,5 +28,5 @@ if (active)
 
 image_index = active;
 
-if (active == false)
+if (!active)
     instance_destroy();

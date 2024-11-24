@@ -141,11 +141,3 @@ function scr_player_shotgunjump()
         sprite_index = spr_shotgunfall;
 }
 
-enum UnknownEnum
-{
-    Value_57 = 57,
-    Value_66 = 66,
-    Value_69 = 69,
-    Value_70,
-    Value_71
-}

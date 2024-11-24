@@ -84,9 +84,3 @@ function scr_player_mortjump()
     mort_attack();
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_11 = 11,
-    Value_12
-}

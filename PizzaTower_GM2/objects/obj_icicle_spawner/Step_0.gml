@@ -1,4 +1,4 @@
-if (global.panic == true)
+if (global.panic)
 {
     delay--;
     

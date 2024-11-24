@@ -21,27 +21,23 @@ reset = false;
 hp = 2;
 hitboxcreate = false;
 grounded = true;
-idlespr = 1175;
-stunfallspr = 1175;
-walkspr = 1175;
-grabbedspr = 1175;
-scaredspr = 2716;
+idlespr = spr_ghostknight_move;
+stunfallspr = spr_ghostknight_move;
+walkspr = spr_ghostknight_move;
+grabbedspr = spr_ghostknight_move;
+scaredspr = spr_ghostknight_scared;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2716;
+spr_dead = spr_ghostknight_scared;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 168;
+spr_palette = palette_forknight;
 grabbedby = 0;
 stuntouchbuffer = 0;
 ragedash = 0;
 ragecooldown = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

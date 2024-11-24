@@ -1,2 +1,2 @@
 event_inherited();
-walkspr = 88;
+walkspr = spr_farmer2_walk;

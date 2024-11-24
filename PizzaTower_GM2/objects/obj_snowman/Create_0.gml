@@ -16,28 +16,24 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 1793;
-idlespr = 1793;
-fallspr = 1793;
-stunfallspr = 2580;
-walkspr = 1793;
-turnspr = 1793;
-recoveryspr = 1793;
-grabbedspr = 2580;
-scaredspr = 2580;
+landspr = spr_newpizzice_walk;
+idlespr = spr_newpizzice_walk;
+fallspr = spr_newpizzice_walk;
+stunfallspr = spr_newpizzice_stun;
+walkspr = spr_newpizzice_walk;
+turnspr = spr_newpizzice_walk;
+recoveryspr = spr_newpizzice_walk;
+grabbedspr = spr_newpizzice_stun;
+scaredspr = spr_newpizzice_stun;
 hp = 2;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
 hitboxcreate = false;
-spr_dead = 2580;
+spr_dead = spr_newpizzice_stun;
 important = false;
 depth = 0;
 heavy = false;
 mask_index = spr_player_mask;
 
-enum UnknownEnum
-{
-    Value_128 = 128
-}

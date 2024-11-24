@@ -110,9 +110,3 @@ function scr_player_pogo()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_12 = 12,
-    Value_84 = 84
-}

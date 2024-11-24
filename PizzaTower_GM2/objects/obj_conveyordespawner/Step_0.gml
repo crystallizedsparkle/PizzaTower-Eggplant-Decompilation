@@ -1,8 +1,6 @@
-var i, b;
-
-for (i = 0; i < array_length(objectlist); i++)
+for (var i = 0; i < array_length(objectlist); i++)
 {
-    b = objectlist[i];
+    var b = objectlist[i];
     
     with (instance_place(x, y, b))
     {
@@ -11,7 +9,3 @@ for (i = 0; i < array_length(objectlist); i++)
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9
-}

@@ -1,5 +1,3 @@
-var i;
-
 hsp = 0;
 vsp = 0;
 grav = 0.5;
@@ -12,10 +10,10 @@ depth = -10;
 kick = false;
 drop = false;
 mask_index = spr_player_mask;
-platformid = -4;
+platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
-i = 0;
+var i = 0;
 
 while (scr_solid(x, y))
 {

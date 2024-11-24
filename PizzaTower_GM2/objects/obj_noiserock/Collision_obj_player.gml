@@ -1,4 +1,4 @@
-if (falling == true && vsp > 0)
+if (falling && vsp > 0)
 {
     hit = true;
     instance_create(x, y, obj_stompeffect);
@@ -15,7 +15,3 @@ if (falling == true && vsp > 0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_59 = 59
-}

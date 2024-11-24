@@ -1,5 +1,3 @@
-var val;
-
 with (obj_collect)
 {
     if (place_meeting(x, y, other))
@@ -12,10 +10,10 @@ with (obj_collect)
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     repeat (6)
-        create_debris(x + 32, y + 32, 2516);
+        create_debris(x + 32, y + 32, spr_icedebris);
     
     instance_create(x + 32, y + 32, obj_parryeffect);
-    val = heat_calculate(10);
+    var val = heat_calculate(10);
     
     if (other.object_index == obj_player1)
         global.collect += val;

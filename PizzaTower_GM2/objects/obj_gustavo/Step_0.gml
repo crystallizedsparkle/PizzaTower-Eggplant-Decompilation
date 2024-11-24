@@ -1,5 +1,3 @@
-var player;
-
 if (sprite_index == spr_gustavo_showpizza)
 {
     if (image_index > (image_number - 1))
@@ -17,7 +15,7 @@ if (sprite_index == spr_gustavo_givepizza)
 
 if (state == states.normal)
 {
-    player = instance_nearest(x, y, obj_player);
+    var player = instance_nearest(x, y, obj_player);
     
     if (player.x != x)
         image_xscale = -sign(x - player.x);
@@ -25,7 +23,3 @@ if (state == states.normal)
 
 scr_collide();
 
-enum UnknownEnum
-{
-    Value_0
-}

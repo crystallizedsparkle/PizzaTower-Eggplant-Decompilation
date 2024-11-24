@@ -4,12 +4,12 @@ if (room == rank_room || room == timesuproom)
 if (obj_player.state == states.pizzathrow)
     visible = false;
 
-if (obj_player1.spotlight == true)
-    playerid = 324;
+if (obj_player1.spotlight)
+    playerid = obj_player1;
 else
-    playerid = 323;
+    playerid = obj_player2;
 
-if (global.miniboss == false)
+if (!global.miniboss)
     instance_destroy();
 
 if (sprite_index == spr_noisebomb_intro && floor(image_index) == (image_number - 1))
@@ -19,7 +19,7 @@ if (sprite_index == spr_noisebomb_intro && floor(image_index) == (image_number -
     y = playerid.y;
 }
 
-if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
+if (global.miniboss && sprite_index != spr_noisebomb_intro)
 {
     image_alpha = obj_player.image_alpha;
     
@@ -30,27 +30,27 @@ if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
     
     depth = -6;
     
-    if (global.pineapplefollow == true)
+    if (global.pineapplefollow)
     {
         ds_queue_enqueue(followQueue, obj_pizzakinpineapple.x + (image_xscale * 4));
         ds_queue_enqueue(followQueue, obj_pizzakinpineapple.y - 2);
     }
-    else if (global.sausagefollow == true)
+    else if (global.sausagefollow)
     {
         ds_queue_enqueue(followQueue, obj_pizzakinsausage.x + (image_xscale * 4));
         ds_queue_enqueue(followQueue, obj_pizzakinsausage.y - 2);
     }
-    else if (global.tomatofollow == true)
+    else if (global.tomatofollow)
     {
         ds_queue_enqueue(followQueue, obj_pizzakintomato.x + (image_xscale * 4));
         ds_queue_enqueue(followQueue, obj_pizzakintomato.y - 2);
     }
-    else if (global.cheesefollow == true)
+    else if (global.cheesefollow)
     {
         ds_queue_enqueue(followQueue, obj_pizzakincheese.x + (image_xscale * 4));
         ds_queue_enqueue(followQueue, obj_pizzakincheese.y - 2);
     }
-    else if (global.shroomfollow == true)
+    else if (global.shroomfollow)
     {
         ds_queue_enqueue(followQueue, obj_pizzakinshroom.x + (image_xscale * 4));
         ds_queue_enqueue(followQueue, obj_pizzakinshroom.y - 2);
@@ -72,7 +72,3 @@ if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
     image_xscale = playerid.xscale;
 }
 
-enum UnknownEnum
-{
-    Value_87 = 87
-}

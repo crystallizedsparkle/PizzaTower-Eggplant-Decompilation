@@ -83,7 +83,7 @@ else
     savedthrown = false;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -122,7 +122,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -133,20 +133,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_66 = 66,
-    Value_72 = 72,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_130 = 130,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_154 = 154,
-    Value_155,
-    Value_174 = 174
-}

@@ -48,9 +48,3 @@ function scr_enemy_ratgrabbed()
     }
 }
 
-enum UnknownEnum
-{
-    Value_138 = 138,
-    Value_194 = 194,
-    Value_205 = 205
-}

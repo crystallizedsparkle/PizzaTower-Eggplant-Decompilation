@@ -152,9 +152,3 @@ function Mort_DownMovement()
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_12 = 12,
-    Value_13
-}

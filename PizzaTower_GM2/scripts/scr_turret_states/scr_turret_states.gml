@@ -47,8 +47,3 @@ function state_turret_charge()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_128 = 128
-}

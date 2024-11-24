@@ -24,8 +24,3 @@ function scr_player_dynamite()
     image_speed = 0.4;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_104 = 104
-}

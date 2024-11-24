@@ -54,7 +54,7 @@ function vigilante_cancel_attack()
                 movespeed = 0;
                 break;
             
-            case UnknownEnum.Value_164:
+            case states.groundpunchstart:
                 vsp = -14;
                 image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : ((x < (room_width / 2)) ? 1 : -1);
                 sprite_index = spr_playerV_jump;
@@ -246,7 +246,7 @@ function vigilante_decide_attack_phase4()
         att_max = attack_max[phase - 1];
         attack_cooldown = att_max + irandom_range(-att_max, att_max + 20);
         attack_cooldown = (phase > 4) ? attack_max[phase - 1] : attack_cooldown;
-        state = choose(UnknownEnum.Value_164, states.charge, states.millionpunch);
+        state = choose(states.groundpunchstart, states.charge, states.millionpunch);
         
         if (state == states.charge)
         {
@@ -254,7 +254,7 @@ function vigilante_decide_attack_phase4()
             image_index = 0;
             movespeed = 0;
         }
-        else if (state == UnknownEnum.Value_164)
+        else if (state == states.groundpunchstart)
         {
             vsp = -14;
             image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : ((x < (room_width / 2)) ? 1 : -1);
@@ -709,7 +709,7 @@ function boss_vigilante_crouchslide()
     }
     
     if (phase > 4)
-        vigilante_cancel_attack(UnknownEnum.Value_164, states.charge, states.uppunch);
+        vigilante_cancel_attack(states.groundpunchstart, states.charge, states.uppunch);
 }
 
 function boss_vigilante_machslide()
@@ -839,7 +839,7 @@ function boss_vigilante_punch()
     }
     
     if (phase > 4)
-        vigilante_cancel_attack(UnknownEnum.Value_164, states.uppunch);
+        vigilante_cancel_attack(states.groundpunchstart, states.uppunch);
 }
 
 function boss_vigilante_groundpunchstart()
@@ -976,7 +976,7 @@ function boss_vigilante_millionpunch()
         state = states.normal;
     
     if (phase > 4)
-        vigilante_cancel_attack(UnknownEnum.Value_164, states.uppunch);
+        vigilante_cancel_attack(states.groundpunchstart, states.uppunch);
 }
 
 function boss_vigilante_uppunch()
@@ -1155,30 +1155,3 @@ function boss_vigilante_superattack()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_42 = 42,
-    Value_61 = 61,
-    Value_80 = 80,
-    Value_82 = 82,
-    Value_84 = 84,
-    Value_92 = 92,
-    Value_102 = 102,
-    Value_103,
-    Value_105 = 105,
-    Value_106,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_122 = 122,
-    Value_128 = 128,
-    Value_137 = 137,
-    Value_149 = 149,
-    Value_156 = 156,
-    Value_158 = 158,
-    Value_160 = 160,
-    Value_164 = 164,
-    Value_166 = 166
-}

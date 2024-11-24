@@ -1,21 +1,19 @@
-var _w, _h, ds_h, x1, y1;
+var _w = obj_camera.original_cam_width;
+var _h = obj_camera.original_cam_height;
+var ds_h = 0;
 
-_w = obj_camera.original_cam_width;
-_h = obj_camera.original_cam_height;
-ds_h = 0;
-
-if (dialogsprite != -4)
+if (dialogsprite != noone)
     ds_h = sprite_get_height(dialogsprite);
 
 display_set_gui_size(_w, _h);
 draw_set_font(font2);
-x1 = rpadding;
-y1 = _h - (dialogheight + rpadding + (padding * 2) + ds_h);
+var x1 = rpadding;
+var y1 = _h - (dialogheight + rpadding + (padding * 2) + ds_h);
 draw_rectangle_color(x1, y1, _w - rpadding, _h - rpadding, c_white, c_white, c_white, c_white, false);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-if (dialogsprite != -4)
+if (dialogsprite != noone)
     draw_sprite(dialogsprite, -1, x1 + padding, y1 + (padding / 2));
 
 draw_text_color(x1 + padding, y1 + padding + ds_h, displaytext, c_black, c_black, c_black, c_black, 1);

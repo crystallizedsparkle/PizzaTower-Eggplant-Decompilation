@@ -89,10 +89,3 @@ function scr_player_barrelslide()
     }
 }
 
-enum UnknownEnum
-{
-    Value_3 = 3,
-    Value_113 = 113,
-    Value_114,
-    Value_115
-}

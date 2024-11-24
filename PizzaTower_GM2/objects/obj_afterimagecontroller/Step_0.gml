@@ -1,12 +1,10 @@
-var i, b, l, p, m, t;
-
-for (i = 0; i < ds_list_size(global.afterimage_list); i++)
+for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 {
-    b = ds_list_find_value(global.afterimage_list, i);
+    var b = ds_list_find_value(global.afterimage_list, i);
     
     with (b)
     {
-        for (l = 0; l < array_length(alarm); l++)
+        for (var l = 0; l < array_length(alarm); l++)
         {
             if (alarm[l] >= 0)
                 alarm[l]--;
@@ -20,9 +18,9 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
                 
                 if (playerid.state == states.mach2 || playerid.state == states.mach1 || playerid.state == states.mach3)
                 {
-                    p = 4;
-                    m = playerid.movespeed - p;
-                    t = 12 - p;
+                    var p = 4;
+                    var m = playerid.movespeed - p;
+                    var t = 12 - p;
                     alpha = m / t;
                     alpha = clamp(alpha, 0, 1);
                 }
@@ -92,36 +90,3 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5,
-    Value_19 = 19,
-    Value_20,
-    Value_31 = 31,
-    Value_33 = 33,
-    Value_37 = 37,
-    Value_41 = 41,
-    Value_42,
-    Value_55 = 55,
-    Value_61 = 61,
-    Value_63 = 63,
-    Value_65 = 65,
-    Value_73 = 73,
-    Value_75 = 75,
-    Value_76,
-    Value_80 = 80,
-    Value_92 = 92,
-    Value_97 = 97,
-    Value_102 = 102,
-    Value_103,
-    Value_104,
-    Value_105,
-    Value_121 = 121,
-    Value_128 = 128,
-    Value_147 = 147,
-    Value_191 = 191
-}

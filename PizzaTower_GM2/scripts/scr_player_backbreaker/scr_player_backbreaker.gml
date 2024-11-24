@@ -166,9 +166,3 @@ function scr_player_backbreaker()
     image_speed = 0.4;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_105 = 105,
-    Value_137 = 137
-}

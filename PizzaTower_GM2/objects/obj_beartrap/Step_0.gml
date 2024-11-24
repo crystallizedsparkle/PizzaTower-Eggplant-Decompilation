@@ -1,4 +1,4 @@
-if (press >= 8 && drop == false)
+if (press >= 8 && !drop)
 {
     obj_player.image_index = 0;
     obj_player.alarm[8] = 60;
@@ -7,7 +7,7 @@ if (press >= 8 && drop == false)
     closed = false;
 }
 
-if (closed == true)
+if (closed)
     y = obj_player.y;
 
 if (drop == true)
@@ -40,7 +40,3 @@ if (drop == true)
         vsp += grav;
 }
 
-enum UnknownEnum
-{
-    Value_107 = 107
-}

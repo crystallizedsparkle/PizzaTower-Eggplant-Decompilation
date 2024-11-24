@@ -1,8 +1,6 @@
-var ident, status, error, buffstring;
-
-ident = ds_map_find_value(async_load, "id");
-status = ds_map_find_value(async_load, "status");
-error = ds_map_find_value(async_load, "error");
+var ident = ds_map_find_value(async_load, "id");
+var status = ds_map_find_value(async_load, "status");
+var error = ds_map_find_value(async_load, "error");
 
 switch (state)
 {
@@ -19,7 +17,7 @@ switch (state)
     case 2:
         if (ident == loadid)
         {
-            buffstring = buffer_read(loadbuff, buffer_string);
+            var buffstring = buffer_read(loadbuff, buffer_string);
             ini_open_from_string(buffstring);
             global.entrancecutscene = ini_read_real("cutscene", "entrance", false);
             global.medievalcutscene = ini_read_real("cutscene", "medieval", false);

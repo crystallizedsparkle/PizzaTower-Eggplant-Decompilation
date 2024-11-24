@@ -1,1 +1,1 @@
-content = 786;
+content = obj_alienfollow;

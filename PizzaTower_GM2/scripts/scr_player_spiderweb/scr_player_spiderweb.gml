@@ -34,7 +34,3 @@ function scr_player_spiderweb()
     }
 }
 
-enum UnknownEnum
-{
-    Value_92 = 92
-}

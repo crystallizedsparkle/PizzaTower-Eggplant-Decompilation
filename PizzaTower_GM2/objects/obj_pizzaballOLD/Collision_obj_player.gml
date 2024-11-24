@@ -1,9 +1,7 @@
-var _player, _pizzaball;
-
 if ((other.state == states.handstandjump || other.state == states.lungeattack) && state != states.golf)
 {
-    _player = other.id;
-    _pizzaball = id;
+    var _player = other.id;
+    var _pizzaball = id;
     
     with (_player)
     {
@@ -35,9 +33,3 @@ if ((other.state == states.handstandjump || other.state == states.lungeattack) &
     }
 }
 
-enum UnknownEnum
-{
-    Value_42 = 42,
-    Value_43,
-    Value_148 = 148
-}

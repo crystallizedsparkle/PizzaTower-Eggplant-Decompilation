@@ -3,7 +3,7 @@ if (place_meeting(x + hsp, y, obj_solid))
 
 scr_collide();
 
-if (global.timeattack == true)
+if (global.timeattack)
     instance_destroy();
 
 if (place_meeting(x, y, obj_destructibles))

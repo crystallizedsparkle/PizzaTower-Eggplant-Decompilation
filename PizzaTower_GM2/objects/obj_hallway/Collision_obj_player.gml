@@ -24,12 +24,8 @@ with (other)
         }
         
         other.visited = true;
-        scr_soundeffect(76);
+        scr_soundeffect(sfx_door);
         instance_create(x, y, obj_fadeout);
     }
 }
 
-enum UnknownEnum
-{
-    Value_208 = 208
-}

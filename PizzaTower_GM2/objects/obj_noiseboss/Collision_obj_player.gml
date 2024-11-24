@@ -1,8 +1,6 @@
-var s;
-
-if (state == states.walk && !other.brick && other.state == UnknownEnum.Value_259)
+if (state == states.walk && !other.brick && other.state == states.ratmountpunch)
 {
-    s = other.state;
+    var s = other.state;
     scr_hurtplayer(other);
     
     if (s != other.state)
@@ -16,9 +14,3 @@ if (state == states.walk && !other.brick && other.state == UnknownEnum.Value_259
     }
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80,
-    Value_134 = 134,
-    Value_259 = 259
-}

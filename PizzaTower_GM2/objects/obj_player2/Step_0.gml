@@ -1,6 +1,6 @@
 if (room == rm_editor)
 {
-    visible = 0;
+    visible = false;
     exit;
 }
 
@@ -37,11 +37,3 @@ if (!visible && state == states.comingoutdoor)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_18 = 18,
-    Value_95 = 95,
-    Value_121 = 121,
-    Value_186 = 186
-}

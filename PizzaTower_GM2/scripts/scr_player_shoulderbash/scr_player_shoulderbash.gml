@@ -53,7 +53,3 @@ function scr_player_shoulderbash()
         state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

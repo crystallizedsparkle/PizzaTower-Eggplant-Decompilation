@@ -100,11 +100,3 @@ switch (sprite_index)
         break;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_49 = 49,
-    Value_122 = 122
-}

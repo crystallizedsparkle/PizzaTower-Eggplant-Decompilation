@@ -33,10 +33,3 @@ if (instance_exists(obj_player2))
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_93 = 93,
-    Value_100 = 100,
-    Value_103 = 103
-}

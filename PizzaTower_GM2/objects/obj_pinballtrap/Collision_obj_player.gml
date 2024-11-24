@@ -1,6 +1,4 @@
-var _used, _obj, _max, i;
-
-_used = false;
+var _used = false;
 
 with (obj_trapghost)
 {
@@ -10,7 +8,7 @@ with (obj_trapghost)
 
 if (_used)
 {
-    _obj = id;
+    var _obj = id;
     
     with (other)
     {
@@ -26,7 +24,7 @@ if (_used)
                 sprite_index = spr_tumble;
                 other.image_index = 0;
                 other.sprite_index = spr_kingghost_pinball3;
-                _max = 45;
+                var _max = 45;
                 y = other.y - _max;
                 
                 if (place_meeting(x, y, obj_platform))
@@ -34,7 +32,7 @@ if (_used)
                 
                 if (scr_solid(x, y))
                 {
-                    i = 0;
+                    var i = 0;
                     
                     while (i <= _max)
                     {
@@ -72,13 +70,3 @@ if (_used)
     }
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_84 = 84,
-    Value_106 = 106,
-    Value_141 = 141,
-    Value_186 = 186
-}

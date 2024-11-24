@@ -179,7 +179,7 @@ function scr_player_ratmount()
     else if (key_slap2 && !brick)
     {
         ratmountpunchtimer = 25;
-        state = UnknownEnum.Value_259;
+        state = states.ratmountpunch;
         image_index = 0;
         
         if (move != 0)
@@ -200,7 +200,7 @@ function scr_player_ratmount()
     
     if ((key_down && grounded && vsp > 0) || scr_solid(x, y))
     {
-        state = UnknownEnum.Value_260;
+        state = states.ratmountcrouch;
         
         if (brick == true)
         {
@@ -298,15 +298,3 @@ function ratmount_shootpowerup()
     }
 }
 
-enum UnknownEnum
-{
-    Value_1 = 1,
-    Value_4 = 4,
-    Value_84 = 84,
-    Value_192 = 192,
-    Value_197 = 197,
-    Value_198,
-    Value_204 = 204,
-    Value_259 = 259,
-    Value_260
-}

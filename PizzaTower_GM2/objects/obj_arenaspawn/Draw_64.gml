@@ -5,7 +5,3 @@ draw_set_font(global.bigfont);
 if (state == states.arena_round)
     draw_text(random_range(1, -1) + 480, random_range(1, -1) + 500, "ROUND " + string(wave + 1));
 
-enum UnknownEnum
-{
-    Value_145 = 145
-}

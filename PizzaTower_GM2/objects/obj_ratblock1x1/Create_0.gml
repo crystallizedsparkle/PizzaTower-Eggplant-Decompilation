@@ -1,4 +1,4 @@
-spr_dead = 2706;
+spr_dead = spr_ratblock6_dead;
 depth = 2;
 anim = false;
 animy = 0;

@@ -18,25 +18,21 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 278;
-stunfallspr = 275;
-walkspr = 278;
-stunspr = 275;
-grabbedspr = 275;
-scaredspr = 2660;
+idlespr = spr_ranch_idle;
+stunfallspr = spr_ranch_stun;
+walkspr = spr_ranch_idle;
+stunspr = spr_ranch_stun;
+grabbedspr = spr_ranch_stun;
+scaredspr = spr_ranch_scared;
 sprite_index = spr_ranch_idle;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 273;
+spr_dead = spr_ranch_dead;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

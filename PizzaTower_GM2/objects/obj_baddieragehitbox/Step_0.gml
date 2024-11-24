@@ -19,7 +19,3 @@ else
     instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_125 = 125
-}

@@ -1,7 +1,10 @@
+gml_pragma("global", "__global_object_depths();"); // run the function to declare everything
 function __global_object_depths()
 {
     var len, i, objID;
     
+	
+	
     global.__objectDepths[0] = 98;
     global.__objectDepths[1] = -6;
     global.__objectDepths[2] = -9998;

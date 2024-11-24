@@ -1,4 +1,4 @@
-if (other.active == true && sprite_index != spr_entrancepillarsecret && global.panic == false)
+if (other.active && sprite_index != spr_entrancepillarsecret && !global.panic)
 {
     alarm[0] = 25;
     touched = true;

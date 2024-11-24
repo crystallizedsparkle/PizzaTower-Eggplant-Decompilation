@@ -7,7 +7,3 @@ with (other)
     other.y = other.ystart;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

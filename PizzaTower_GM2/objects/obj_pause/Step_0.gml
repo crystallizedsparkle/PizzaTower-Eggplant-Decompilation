@@ -1,8 +1,6 @@
-var _cutscenehandler, prevselected, roomname, rm, p, i, t;
-
 if (!pause && obj_player1.key_start)
 {
-    _cutscenehandler = false;
+    var _cutscenehandler = false;
     
     with (obj_cutscene_handler)
     {
@@ -38,12 +36,12 @@ if (pause && !instance_exists(obj_option))
 {
     scr_getinput();
     application_surface_draw_enable(true);
-    prevselected = selected;
+    var prevselected = selected;
     moveselect = -key_up2 + key_down2;
     selected += moveselect;
     
     if (moveselect != 0 && selected >= 0 && selected <= 2)
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     
     selected = clamp(selected, 0, array_length(pause_menu) - 1);
     
@@ -52,19 +50,19 @@ if (pause && !instance_exists(obj_option))
         switch (selected)
         {
             case 0:
-                peppino_sprite = 715;
+                peppino_sprite = spr_player_idle;
                 break;
             
             case 1:
-                peppino_sprite = 1437;
+                peppino_sprite = spr_file1;
                 break;
             
             case 2:
-                peppino_sprite = 658;
+                peppino_sprite = spr_player_panic;
                 break;
             
             case 3:
-                peppino_sprite = 633;
+                peppino_sprite = spr_player_winding;
                 break;
         }
         
@@ -83,16 +81,16 @@ if (pause && !instance_exists(obj_option))
                 break;
             
             case 2:
-                roomname = room_get_name(room);
+                var roomname = room_get_name(room);
                 
                 if (!global.snickchallenge)
                 {
-                    rm = -4;
+                    var rm = noone;
                     rm = global.leveltorestart;
                     ds_list_clear(global.saveroom);
                     ds_list_clear(global.baddieroom);
                     
-                    if (rm != -4 && rm != -1)
+                    if (rm != noone && rm != -1)
                     {
                         instance_activate_all();
                         global.levelreset = false;
@@ -107,14 +105,14 @@ if (pause && !instance_exists(obj_option))
                     }
                     else
                     {
-                        scr_soundeffect(20);
+                        scr_soundeffect(sfx_enemyprojectile);
                     }
                 }
                 
                 break;
             
             case 1:
-                scr_soundeffect(20);
+                scr_soundeffect(sfx_enemyprojectile);
                 
                 with (instance_create(x, y, obj_option))
                     depth = other.depth - 1;
@@ -168,7 +166,7 @@ if (pause && !instance_exists(obj_option))
     
     if (cursor_index > cursor_sprite_number)
     {
-        p = cursor_index - floor(cursor_index);
+        var p = cursor_index - floor(cursor_index);
         cursor_index = p;
     }
     
@@ -176,18 +174,18 @@ if (pause && !instance_exists(obj_option))
     
     if (peppino_index > peppino_sprite_number)
     {
-        p = peppino_index - floor(peppino_index);
+        var p = peppino_index - floor(peppino_index);
         peppino_index = p;
     }
     
-    for (i = 0; i < array_length(toppin_sprite); i++)
+    for (var i = 0; i < array_length(toppin_sprite); i++)
     {
         toppin_index[i] += 0.35;
         
         if (toppin_index[i] > toppin_number[i])
         {
-            t = toppin_index[i];
-            p = t - floor(t);
+            var t = toppin_index[i];
+            var p = t - floor(t);
             toppin_index[i] = p;
         }
     }
@@ -199,7 +197,3 @@ if (pause && !instance_exists(obj_option))
     toppin_has[4] = global.tomatofollow;
 }
 
-enum UnknownEnum
-{
-    Value_18 = 18
-}

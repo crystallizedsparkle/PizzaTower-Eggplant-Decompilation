@@ -1,9 +1,9 @@
-if (visible == true)
+if (visible)
 {
     if (audio_is_playing(sfx_collecttopping))
         audio_stop_sound(sfx_collecttopping);
     
-    scr_soundeffect(17);
+    scr_soundeffect(sfx_collecttopping);
     visible = false;
     
     repeat (6)
@@ -12,7 +12,7 @@ if (visible == true)
     with (other)
     {
         vsp = -14;
-        state = UnknownEnum.Value_254;
+        state = states.jetpackjump;
         sprite_index = spr_player_jetpackstart;
         doublejump = false;
         
@@ -23,7 +23,3 @@ if (visible == true)
     timetovisible = 100;
 }
 
-enum UnknownEnum
-{
-    Value_254 = 254
-}

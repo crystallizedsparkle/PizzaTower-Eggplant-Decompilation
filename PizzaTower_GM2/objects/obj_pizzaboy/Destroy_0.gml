@@ -1,6 +1,6 @@
-if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
+if (ds_list_find_index(global.baddieroom, id) == -1 && !important)
 {
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);
@@ -17,7 +17,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == false)
     with (instance_create(x, y, obj_sausageman_dead))
         sprite_index = other.spr_dead;
 }
-else if (ds_list_find_index(global.baddieroom, id) == -1 && important == true)
+else if (ds_list_find_index(global.baddieroom, id) == -1 && important)
 {
     instance_create(x, y, obj_slapstar);
     instance_create(x, y, obj_slapstar);

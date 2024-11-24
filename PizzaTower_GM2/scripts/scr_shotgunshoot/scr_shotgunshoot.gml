@@ -46,7 +46,3 @@ function scr_shotgunshoot()
     }
 }
 
-enum UnknownEnum
-{
-    Value_69 = 69
-}

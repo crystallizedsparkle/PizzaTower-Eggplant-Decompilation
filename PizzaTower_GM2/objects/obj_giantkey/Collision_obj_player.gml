@@ -1,13 +1,13 @@
-if (picked == false)
+if (!picked)
 {
     hsp = 0;
     vsp = 0;
     grav = 0;
     
     if (other.object_index == obj_player1)
-        playerid = 324;
+        playerid = obj_player1;
     else
-        playerid = 323;
+        playerid = obj_player2;
     
     alarm[0] = 150;
     y = playerid.y - 50;
@@ -16,7 +16,7 @@ if (picked == false)
     with (playerid)
     {
         state = states.gottreasure;
-        scr_soundeffect(21);
+        scr_soundeffect(sfx_secretfound);
         global.giantkey = true;
     }
     
@@ -27,7 +27,3 @@ if (picked == false)
     picked = true;
 }
 
-enum UnknownEnum
-{
-    Value_46 = 46
-}

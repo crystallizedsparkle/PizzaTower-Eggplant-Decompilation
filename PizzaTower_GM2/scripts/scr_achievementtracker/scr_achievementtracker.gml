@@ -181,7 +181,3 @@ function achievement_get_struct(argument0)
     return b;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

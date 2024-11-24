@@ -18,32 +18,28 @@ stomped = false;
 shot = false;
 reset = false;
 flash = false;
-landspr = 219;
-idlespr = 219;
-fallspr = 2653;
-stunfallspr = 2653;
-walkspr = 219;
-turnspr = 219;
-recoveryspr = 2653;
-grabbedspr = 2653;
-scaredspr = 2653;
+landspr = spr_hamkuff_idle;
+idlespr = spr_hamkuff_idle;
+fallspr = spr_hamkuff_stun;
+stunfallspr = spr_hamkuff_stun;
+walkspr = spr_hamkuff_idle;
+turnspr = spr_hamkuff_idle;
+recoveryspr = spr_hamkuff_stun;
+grabbedspr = spr_hamkuff_stun;
+scaredspr = spr_hamkuff_stun;
 image_xscale = -1;
 hp = 1;
 slapped = false;
 grounded = true;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2653;
+spr_dead = spr_hamkuff_stun;
 important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-spr_palette = 151;
+spr_palette = palette_cheeseslime;
 grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

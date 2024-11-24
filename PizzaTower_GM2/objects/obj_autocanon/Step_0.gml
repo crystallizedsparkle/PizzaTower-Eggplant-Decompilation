@@ -1,4 +1,4 @@
-if (cooldown <= 0 && (escape == false || global.panic == true))
+if (cooldown <= 0 && (!escape || global.panic))
 {
     with (instance_create(x + (image_xscale * 15), y, obj_canongoblinbomb))
     {
@@ -6,7 +6,7 @@ if (cooldown <= 0 && (escape == false || global.panic == true))
         image_xscale = other.image_xscale;
     }
     
-    if (cooldownrandom == true)
+    if (cooldownrandom)
         cooldownmax = random_range(50, 150);
     
     cooldown = cooldownmax;

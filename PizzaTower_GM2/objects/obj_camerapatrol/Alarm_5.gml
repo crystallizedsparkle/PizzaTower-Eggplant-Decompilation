@@ -12,7 +12,3 @@ else
     scr_monster_activate();
 }
 
-enum UnknownEnum
-{
-    Value_80 = 80
-}

@@ -1,8 +1,6 @@
-var a;
+var a = random_range(-20, 20);
 
-a = random_range(-20, 20);
-
-if (thrown == true)
+if (thrown)
     alarm[1] = 5;
 
 instance_create(x + a, y + a, obj_machalleffect);

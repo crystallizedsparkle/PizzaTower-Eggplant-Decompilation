@@ -9,8 +9,3 @@ if (ds_list_find_index(global.saveroom, id) == -1 && other.state == states.backb
     ds_list_add(global.saveroom, id);
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84,
-    Value_85
-}

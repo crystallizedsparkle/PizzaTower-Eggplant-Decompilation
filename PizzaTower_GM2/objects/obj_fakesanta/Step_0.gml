@@ -1,12 +1,10 @@
-var _instY, c, _col, n, ii;
-
 if (room == rm_editor)
     exit;
 
 if (point_in_camera(x, y, view_camera[0]))
     activated = true;
 
-if (activated == true)
+if (activated)
 {
     switch (state)
     {
@@ -34,9 +32,9 @@ if (activated == true)
     if (state == states.walk)
     {
         highest_y = -250;
-        _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
+        var _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
         
-        if (_instY != -4)
+        if (_instY != noone)
             highest_y = -abs(obj_player1.y - (_instY.y + _instY.sprite_height)) - 32;
         
         if (random_buffer > 0)
@@ -45,7 +43,7 @@ if (activated == true)
         }
         else
         {
-            c = 0;
+            var c = 0;
             
             with (obj_baddie)
             {
@@ -55,7 +53,7 @@ if (activated == true)
             
             if (c < 3)
             {
-                _col = collision_line(x, y, obj_player1.x, obj_player1.y, obj_solid, false, true);
+                var _col = collision_line(x, y, obj_player1.x, obj_player1.y, obj_solid, false, true);
                 
                 if (sprite_index != spr_fakesanta_dropenemy)
                 {
@@ -71,10 +69,10 @@ if (activated == true)
                         {
                             image_index = 8;
                             
-                            if (!place_meeting(x, y, obj_solid) && !place_meeting(x, y, obj_slope) && _col == -4)
+                            if (!place_meeting(x, y, obj_solid) && !place_meeting(x, y, obj_slope) && _col == noone)
                             {
                                 shot = true;
-                                n = irandom(array_length(content) - 1);
+                                var n = irandom(array_length(content) - 1);
                                 
                                 with (instance_create(x, y + 50, obj_fakesantapresent))
                                 {
@@ -105,7 +103,7 @@ if (activated == true)
     }
     else if (state == states.punch)
     {
-        ii = floor(image_index);
+        var ii = floor(image_index);
         hsp = 0;
         vsp = 0;
         
@@ -127,13 +125,3 @@ if (activated == true)
         thrown = false;
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_154 = 154,
-    Value_155
-}

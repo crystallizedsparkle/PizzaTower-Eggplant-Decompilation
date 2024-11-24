@@ -1,4 +1,4 @@
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (obj_bosscontroller.state == states.arena_intro)
     exit;
@@ -155,29 +155,3 @@ xscale = image_xscale;
 colliding = !(state == states.superslam || state == states.fistmatch || state == states.superattackstart || state == states.superattackcharge);
 attacking = state == states.shoulderbash || state == states.freefall || state == states.freefallprep || state == states.supershoulderbash || state == states.shoulder || state == states.superslam || state == states.fistmatch || state == states.superattackstart || state == states.superattackcharge || state == states.walk;
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_61 = 61,
-    Value_76 = 76,
-    Value_83 = 83,
-    Value_84,
-    Value_92 = 92,
-    Value_108 = 108,
-    Value_111 = 111,
-    Value_122 = 122,
-    Value_128 = 128,
-    Value_134 = 134,
-    Value_137 = 137,
-    Value_138,
-    Value_144 = 144,
-    Value_145,
-    Value_147 = 147,
-    Value_153 = 153,
-    Value_157 = 157,
-    Value_158,
-    Value_159,
-    Value_161 = 161,
-    Value_162,
-    Value_163
-}

@@ -1,10 +1,8 @@
-var choseattack, j;
-
 if (phase == 0 && attacking)
 {
     if (state == states.pizzaface_ram)
     {
-        if (other.state == states.backbreaker && other.parry_inst != -4)
+        if (other.state == states.backbreaker && other.parry_inst != noone)
         {
             state = states.normal;
             boss_hurt(10, other.id);
@@ -36,16 +34,16 @@ if (phase == 0 && attacking)
                 if (lostattacks > 0)
                 {
                     lostattacks--;
-                    choseattack = -4;
-                    j = 0;
+                    var choseattack = noone;
+                    var j = 0;
                     
-                    while (choseattack == -4)
+                    while (choseattack == noone)
                     {
                         j = irandom_range(1, array_length(phase1attacks)) - 1;
                         choseattack = phase1attacks[j];
                     }
                     
-                    phase1attacks[j] = -4;
+                    phase1attacks[j] = noone;
                     
                     with (instance_create(x, y, obj_pizzafacepart))
                     {
@@ -87,13 +85,3 @@ else if (phase > 0)
     event_inherited();
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_84 = 84,
-    Value_147 = 147,
-    Value_227 = 227,
-    Value_228,
-    Value_229,
-    Value_230
-}

@@ -196,9 +196,3 @@ function scr_enemy_ghostpossess()
     }
 }
 
-enum UnknownEnum
-{
-    Value_9 = 9,
-    Value_16 = 16,
-    Value_138 = 138
-}

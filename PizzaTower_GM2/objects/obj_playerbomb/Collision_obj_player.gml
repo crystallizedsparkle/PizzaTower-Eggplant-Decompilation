@@ -11,12 +11,7 @@ if (!kick && countdown <= 0)
     }
     
     countdown = 10;
-    scr_soundeffect(24);
+    scr_soundeffect(sfx_stompenemy);
     create_particle(x, y, particles.jumpdust, 0);
 }
 
-enum UnknownEnum
-{
-    Value_5 = 5,
-    Value_92 = 92
-}

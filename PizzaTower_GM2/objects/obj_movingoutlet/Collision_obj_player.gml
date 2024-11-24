@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes) && cutscene == false)
+    if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes) && !cutscene)
     {
         with (instance_create(x, y, obj_knightdebris))
             image_index = 0;
@@ -31,7 +31,7 @@ with (obj_player)
         obj_player.flash = true;
         state = states.bump;
     }
-    else if (state == states.bombpep && hurted == false)
+    else if (state == states.bombpep && !hurted)
     {
         instance_create(x, y, obj_bombexplosion);
     }
@@ -69,7 +69,7 @@ with (obj_player)
         
         repeat (8)
         {
-            with (create_debris(x, y, 1136))
+            with (create_debris(x, y, spr_slimedebris))
             {
                 vsp = random_range(-5, 0);
                 hsp = random_range(-3, 3);
@@ -87,7 +87,7 @@ with (obj_player)
         obj_player.flash = true;
         state = states.bump;
     }
-    else if (state != states.hurt && hurted == false && cutscene == false && state != states.bump)
+    else if (state != states.hurt && !hurted && !cutscene && state != states.bump)
     {
         global.hurtcounter += 1;
         alarm[8] = 60;
@@ -130,15 +130,3 @@ with (obj_player)
     }
 }
 
-enum UnknownEnum
-{
-    Value_24 = 24,
-    Value_25,
-    Value_33 = 33,
-    Value_38 = 38,
-    Value_47 = 47,
-    Value_48,
-    Value_51 = 51,
-    Value_106 = 106,
-    Value_107
-}

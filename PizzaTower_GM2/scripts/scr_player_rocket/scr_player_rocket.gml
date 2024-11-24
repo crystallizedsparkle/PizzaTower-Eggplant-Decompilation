@@ -168,9 +168,3 @@ function scr_player_rocket()
         image_speed = 0.4;
 }
 
-enum UnknownEnum
-{
-    Value_104 = 104,
-    Value_106 = 106,
-    Value_185 = 185
-}

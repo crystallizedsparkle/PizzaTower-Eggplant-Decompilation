@@ -8,7 +8,3 @@ if (obj_player1.character == "N")
         instance_destroy();
 }
 
-enum UnknownEnum
-{
-    Value_84 = 84
-}

@@ -130,7 +130,3 @@ function scr_pizzaball_roll()
     state = states.normal;
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

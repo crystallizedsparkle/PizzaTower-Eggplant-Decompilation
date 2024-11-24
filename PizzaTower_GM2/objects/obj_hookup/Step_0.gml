@@ -30,7 +30,3 @@ if (hooked)
     }
 }
 
-enum UnknownEnum
-{
-    Value_93 = 93
-}

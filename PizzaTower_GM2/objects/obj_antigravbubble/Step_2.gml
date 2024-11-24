@@ -10,12 +10,6 @@ if (place_meeting(x, y, obj_secretportal) || place_meeting(x, y, obj_secretporta
 else
     visible = playerid.visible;
 
-if (playerid.state != UnknownEnum.Value_265 && playerid.state != states.chainsaw && (playerid.state != states.backbreaker || playerid.tauntstoredstate != UnknownEnum.Value_265))
+if (playerid.state != states.antigrav && playerid.state != states.chainsaw && (playerid.state != states.backbreaker || playerid.tauntstoredstate != states.antigrav))
     instance_destroy();
 
-enum UnknownEnum
-{
-    Value_61 = 61,
-    Value_84 = 84,
-    Value_265 = 265
-}

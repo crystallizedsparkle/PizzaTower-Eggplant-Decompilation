@@ -48,8 +48,3 @@ function scr_player_ratmountcrouch()
         sprite_index = spr_lonegustavo_crouch;
 }
 
-enum UnknownEnum
-{
-    Value_191 = 191,
-    Value_192
-}

@@ -1,9 +1,7 @@
-var targetplayer, inst_front, inst_up, inst_down, inst_down2, num, i, player;
-
 if (room == rm_editor)
     exit;
 
-targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (bombreset > 0)
     bombreset--;
@@ -14,7 +12,7 @@ if (state == states.walk)
     {
         sprite_index = idlespr;
         
-        if (collision_line(x, y, targetplayer.x, targetplayer.y, obj_solid, false, true) == -4 && ((image_xscale < 0 && targetplayer.x < x) || (image_xscale > 0 && targetplayer.x > x)) && (targetplayer.y < (y + threshold_y) && targetplayer.y > (y - threshold_y)))
+        if (collision_line(x, y, targetplayer.x, targetplayer.y, obj_solid, false, true) == noone && ((image_xscale < 0 && targetplayer.x < x) || (image_xscale > 0 && targetplayer.x > x)) && (targetplayer.y < (y + threshold_y) && targetplayer.y > (y - threshold_y)))
             targetplayer = instance_nearest(x, y, obj_player);
         
         if ((targetplayer.x > (x - 150) && targetplayer.x < (x + 150)) && (y <= (targetplayer.y + 60) && y >= (targetplayer.y - 60)))
@@ -68,10 +66,10 @@ else if (state == states.chase)
         }
     }
     
-    inst_front = collision_line(x, y + 25, x + (sign(hsp) * 78), y + 25, obj_solid, false, true);
-    inst_up = collision_line(x + (sign(hsp) * 96), y + 25, x + (sign(hsp) * 96), (y - 78) + 50, obj_platform, false, true);
-    inst_down = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_solid, false, true);
-    inst_down2 = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_platform, false, true);
+    var inst_front = collision_line(x, y + 25, x + (sign(hsp) * 78), y + 25, obj_solid, false, true);
+    var inst_up = collision_line(x + (sign(hsp) * 96), y + 25, x + (sign(hsp) * 96), (y - 78) + 50, obj_platform, false, true);
+    var inst_down = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_solid, false, true);
+    var inst_down2 = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_platform, false, true);
     
     if (image_index > (image_number - 1))
     {
@@ -93,7 +91,7 @@ else if (state == states.chase)
         image_index = 0;
     }
     
-    if (((inst_front != -4 || inst_up != -4) || (inst_down == -4 && inst_down2 == -4)) && targetplayer.y <= (y + 32) && grounded && state != states.charge)
+    if (((inst_front != noone || inst_up != noone) || (inst_down == noone && inst_down2 == noone)) && targetplayer.y <= (y + 32) && grounded && state != states.charge)
     {
         vsp = -11;
         sprite_index = spr_shrimp_jump;
@@ -154,9 +152,9 @@ if (state == states.punch)
     
     if (place_meeting(x + sign(hsp), y, obj_destructibles))
     {
-        num = instance_place_list(x + sign(hsp), y, 332, global.instancelist, false);
+        var num = instance_place_list(x + sign(hsp), y, obj_destructibles, global.instancelist, false);
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
             instance_destroy(ds_list_find_value(global.instancelist, i));
         
         ds_list_clear(global.instancelist);
@@ -208,7 +206,7 @@ switch (state)
         break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
     birdcreated = true;
     
@@ -219,12 +217,12 @@ if (state == states.stun && stunned > 100 && birdcreated == false)
 if (state != states.stun)
     birdcreated = false;
 
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (elite && ragecooldown <= 0)
 {
-    player = instance_nearest(x, y, obj_player);
+    var player = instance_nearest(x, y, obj_player);
     
     if (state == states.walk || state == states.charge)
     {
@@ -257,7 +255,7 @@ if (state != states.grabbed)
 if (state != states.stun)
     thrown = false;
 
-if (boundbox == false)
+if (!boundbox)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))
     {
@@ -268,18 +266,3 @@ if (boundbox == false)
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_125 = 125,
-    Value_126,
-    Value_128 = 128,
-    Value_129,
-    Value_130,
-    Value_134 = 134,
-    Value_136 = 136,
-    Value_137,
-    Value_138,
-    Value_141 = 141
-}

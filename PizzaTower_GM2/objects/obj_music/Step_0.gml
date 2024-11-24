@@ -1,10 +1,8 @@
-var p;
-
 prevpillar_on_camera = pillar_on_camera;
 
 if (instance_exists(obj_hungrypillar))
 {
-    p = false;
+    var p = false;
     
     with (obj_hungrypillar)
     {
@@ -36,15 +34,15 @@ if (prevpillar_on_camera != pillar_on_camera)
 
 if (global.panic)
 {
-    if (music != 105 && music != 2)
+    if (music != mu_pizzatime && music != 2)
     {
-        music = 105;
+        music = mu_pizzatime;
         audio_stop_sound(musicID);
         musicID = scr_music(music);
         
-        if (pillarmusicID != -4)
+        if (pillarmusicID != noone)
             audio_stop_sound(pillarmusicID);
         
-        pillarmusicID = -4;
+        pillarmusicID = noone;
     }
 }

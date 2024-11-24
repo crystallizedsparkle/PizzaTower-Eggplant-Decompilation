@@ -10,7 +10,3 @@ function scr_player_portal()
     mach2 = 0;
 }
 
-enum UnknownEnum
-{
-    Value_108 = 108
-}

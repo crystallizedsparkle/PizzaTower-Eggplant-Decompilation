@@ -12,7 +12,3 @@ function cutscene_entrance_start()
     cutscene_end_action();
 }
 
-enum UnknownEnum
-{
-    Value_146 = 146
-}

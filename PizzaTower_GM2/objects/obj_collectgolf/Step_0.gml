@@ -4,7 +4,7 @@ if (room == rm_editor)
 if (global.collectsound < 10)
     global.collectsound += 1;
 
-if (global.timeattack == true)
+if (global.timeattack)
     instance_destroy();
 
 if (place_meeting(x, y, obj_destructibles))

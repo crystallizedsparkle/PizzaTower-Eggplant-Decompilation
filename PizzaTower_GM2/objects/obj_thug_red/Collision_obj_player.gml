@@ -1,7 +1,5 @@
-var player, baddie, _hsp_multi;
-
-player = other.id;
-baddie = id;
+var player = other.id;
+var baddie = id;
 
 if (state == states.punch && (image_index > 8 && image_index < 12))
 {
@@ -11,11 +9,11 @@ else
 {
     with (other)
     {
-        if (instakillmove == true && baddie.state != states.grabbed && baddie.thrown == false && !baddie.invincible)
+        if (instakillmove && baddie.state != states.grabbed && !baddie.thrown && !baddie.invincible)
         {
             if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
             {
-                if (fightball == false)
+                if (!fightball)
                     sprite_index = spr_mach3hit;
                 
                 image_index = 0;
@@ -32,7 +30,7 @@ else
             else
                 baddie.grabbedby = 2;
             
-            scr_soundeffect(46);
+            scr_soundeffect(sfx_punch);
             
             if (state == states.mach3)
             {
@@ -40,7 +38,7 @@ else
             }
             else
             {
-                _hsp_multi = 2;
+                var _hsp_multi = 2;
                 baddie.hsp = sign(baddie.x - x) * _hsp_multi;
                 
                 if (baddie.hsp == 0)
@@ -66,7 +64,7 @@ else
             
             if (!grounded && state != states.freefall && key_jump2)
             {
-                if (state == states.mach2 || (state == states.mach3 && fightball == false))
+                if (state == states.mach2 || (state == states.mach3 && !fightball))
                     sprite_index = spr_mach2jump;
                 
                 suplexmove = false;
@@ -76,13 +74,3 @@ else
     }
 }
 
-enum UnknownEnum
-{
-    Value_4 = 4,
-    Value_80 = 80,
-    Value_104 = 104,
-    Value_107 = 107,
-    Value_108,
-    Value_121 = 121,
-    Value_138 = 138
-}

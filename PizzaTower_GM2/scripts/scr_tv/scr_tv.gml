@@ -124,7 +124,7 @@ function tv_do_expression(argument0)
     {
         if (expressionsprite != argument0 && bubblespr == -4)
         {
-            state = UnknownEnum.Value_250;
+            state = states.tv_whitenoise;
             expressionsprite = argument0;
             sprite_index = spr_tv_whitenoise;
             
@@ -147,10 +147,3 @@ function tv_do_expression(argument0)
     }
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_250 = 250
-}

@@ -20,7 +20,7 @@ if (state != states.boxxedpepspin)
                 playerid = other.id;
             }
             
-            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", tvprompt_type.transformation, 2590, 3), "bombpep");
+            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", tvprompt_type.transformation, spr_tv_bombpep, 3), "bombpep");
         }
     }
 }
@@ -34,14 +34,3 @@ else if (other.kickbuffer <= 0)
     other.defused = true;
 }
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_2 = 2,
-    Value_4 = 4,
-    Value_34 = 34,
-    Value_42 = 42,
-    Value_43,
-    Value_52 = 52,
-    Value_80 = 80
-}

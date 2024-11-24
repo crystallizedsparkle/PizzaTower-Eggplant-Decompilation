@@ -40,7 +40,3 @@ function scr_player_bombdelete()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

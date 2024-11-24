@@ -254,7 +254,3 @@ function scr_player_firemouth()
     }
 }
 
-enum UnknownEnum
-{
-    Value_0
-}

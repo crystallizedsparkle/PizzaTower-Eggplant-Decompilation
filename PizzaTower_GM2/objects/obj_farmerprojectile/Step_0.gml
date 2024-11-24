@@ -1,15 +1,13 @@
-var num, i, b, t;
-
 x += hsp;
 y += vsp;
-num = collision_line_list(x, y, xprevious, yprevious, 380, false, true, global.instancelist, false);
+var num = collision_line_list(x, y, xprevious, yprevious, obj_haystack, false, true, global.instancelist, false);
 
 if (num > 0)
 {
-    for (i = 0; i < num; i++)
+    for (var i = 0; i < num; i++)
     {
-        b = ds_list_find_value(global.instancelist, i);
-        t = false;
+        var b = ds_list_find_value(global.instancelist, i);
+        var t = false;
         
         with (b)
         {
@@ -39,8 +37,3 @@ if (num > 0)
 
 ds_list_clear(global.instancelist);
 
-enum UnknownEnum
-{
-    Value_0,
-    Value_8 = 8
-}

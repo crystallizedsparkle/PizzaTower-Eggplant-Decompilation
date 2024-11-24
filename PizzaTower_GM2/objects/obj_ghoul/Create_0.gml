@@ -4,7 +4,7 @@ grav = 0.5;
 hsp = 0;
 vsp = 0;
 hit = false;
-playerid = -4;
+playerid = noone;
 attack_y = y;
 cooldown = 0;
 state = states.idle;
@@ -22,26 +22,22 @@ reset = false;
 bombreset = 0;
 hp = 2;
 grounded = true;
-idlespr = 1098;
-stunfallspr = 439;
-walkspr = 1098;
-stunspr = 439;
-grabbedspr = 439;
-scaredspr = 439;
+idlespr = spr_ghoul_idle;
+stunfallspr = spr_ghoul_stun;
+walkspr = spr_ghoul_idle;
+stunspr = spr_ghoul_stun;
+grabbedspr = spr_ghoul_stun;
+scaredspr = spr_ghoul_stun;
 flash = false;
 slapped = false;
 birdcreated = false;
 boundbox = false;
-spr_dead = 2468;
+spr_dead = spr_ghoul_gibs;
 important = false;
 heavy = true;
 depth = 0;
 grabbedby = 0;
 paletteselect = 1;
-spr_palette = 231;
+spr_palette = palette_pepgoblin;
 stuntouchbuffer = 0;
 
-enum UnknownEnum
-{
-    Value_126 = 126
-}

@@ -4,12 +4,8 @@ depth = 0;
 state = states.walk;
 flash = false;
 important = false;
-spr_dead = 309;
-spr_palette = 151;
+spr_dead = spr_grandpa_dead;
+spr_palette = palette_cheeseslime;
 paletteselect = 0;
 grounded = true;
 
-enum UnknownEnum
-{
-    Value_134 = 134
-}

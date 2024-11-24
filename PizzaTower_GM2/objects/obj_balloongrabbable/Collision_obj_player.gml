@@ -24,8 +24,3 @@ if (active)
     }
 }
 
-enum UnknownEnum
-{
-    Value_200 = 200,
-    Value_207 = 207
-}
