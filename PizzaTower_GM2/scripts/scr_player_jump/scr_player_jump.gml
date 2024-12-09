@@ -1,7 +1,5 @@
 function state_player_jump()
 {
-    var _playerid;
-    
     landAnim = true;
     
     if (!momemtum)
@@ -83,7 +81,7 @@ function state_player_jump()
         {
             if (place_meeting(x + xscale, y, obj_solid))
             {
-                scr_soundeffect(41);
+                scr_soundeffect(sfx_step);
                 sprite_index = spr_playerN_wallclingstart;
                 image_index = 0;
                 state = states.hang;
@@ -93,7 +91,7 @@ function state_player_jump()
             }
             else if (!doublejump && sprite_index != spr_freefall && sprite_index != spr_facestomp)
             {
-                scr_soundeffect(99);
+                scr_soundeffect(sfx_woosh);
                 sprite_index = spr_playerN_doublejump;
                 image_index = 0;
                 jumpstop = false;
@@ -122,9 +120,9 @@ function state_player_jump()
         if (global.mort && sprite_index != spr_mortdoublejump)
         {
             repeat (6)
-                create_debris(x, y, 1149);
+                create_debris(x, y, spr_feather);
             
-            scr_soundeffect(99);
+            scr_soundeffect(sfx_woosh);
             sprite_index = spr_mortdoublejump;
             image_index = 0;
             jumpstop = false;
@@ -137,7 +135,7 @@ function state_player_jump()
     {
         if (input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_facestomp || sprite_index == spr_freefall))
         {
-            scr_soundeffect(12);
+            scr_soundeffect(sfx_jump);
             stompAnim = false;
             vsp = -11;
             state = states.jump;
@@ -165,7 +163,7 @@ function state_player_jump()
         
         if (vsp > 0 && (!key_attack || sprite_index == spr_suplexbump))
         {
-            scr_soundeffect(41);
+            scr_soundeffect(sfx_step);
             
             if (key_attack || sprite_index == spr_shotgunshoot)
                 landAnim = false;
@@ -278,7 +276,7 @@ function state_player_jump()
         }
         else
         {
-            scr_soundeffect(26);
+            scr_soundeffect(sfx_killingblow);
             sprite_index = spr_shotgunjump1;
             image_index = 0;
             state = states.freefall;
@@ -320,7 +318,7 @@ function state_player_jump()
     
     if (grounded && (sprite_index == spr_facestomp || sprite_index == spr_freefall))
     {
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         sprite_index = spr_bodyslamland;
         state = states.freefallland;
@@ -362,10 +360,10 @@ function state_player_jump()
         {
             flash = true;
             
-            if (!instance_exists(parry_inst) && flash == true)
+            if (!instance_exists(parry_inst) && flash)
             {
                 parry_inst = instance_create(x, y, obj_parryhitbox);
-                _playerid = 1;
+                var _playerid = 1;
                 
                 if (object_index == obj_player2)
                     _playerid = 2;
@@ -506,7 +504,7 @@ function state_player_jump()
                     image_xscale = other.xscale;
                 }
                 
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
             }
             
             break;
@@ -514,7 +512,7 @@ function state_player_jump()
         case "N":
             if (key_attack2 && (pogochargeactive || pizzapepper > 0))
             {
-                scr_soundeffect(33);
+                scr_soundeffect(sfx_noisewoah);
                 
                 if (!key_up)
                     sprite_index = spr_playerN_jetpackstart;
@@ -593,7 +591,7 @@ function state_pepperman_jump()
     if (sprite_index == spr_jump && floor(image_index) == (image_number - 1))
         sprite_index = spr_fall;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5)
+    if (!key_jump2 && !jumpstop && vsp < 0.5)
     {
         vsp /= 20;
         jumpstop = true;
@@ -613,7 +611,7 @@ function state_pepperman_jump()
         sprite_index = spr_bodyslamfall;
     }
     
-    if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw)
+    if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw)
     {
         if (move != 0)
             xscale = move;
@@ -621,7 +619,7 @@ function state_pepperman_jump()
         state = states.shoulderbash;
         sprite_index = spr_pepperman_shoulderstart;
         image_index = 0;
-        scr_soundeffect(45);
+        scr_soundeffect(sfx_suplexdash);
     }
     
     if (sprite_index == spr_pepperman_throw && floor(image_index) == (image_number - 1))
@@ -635,7 +633,7 @@ function state_pepperman_jump()
     
     if (key_taunt2)
     {
-        scr_soundeffect(84);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredvsp = vsp;
@@ -643,7 +641,7 @@ function state_pepperman_jump()
         tauntstoredstate = state;
         state = states.backbreaker;
         
-        if (supercharged == true)
+        if (supercharged)
         {
             image_index = 0;
             sprite_index = choose(spr_supertaunt1, spr_supertaunt2, spr_supertaunt3, spr_supertaunt4);

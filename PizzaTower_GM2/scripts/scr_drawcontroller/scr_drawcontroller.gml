@@ -1,8 +1,8 @@
-function get_dark(argument0, argument1)
+function get_dark(_color, _bool)
 {
     var d, b, bb, dis, t;
     
-    if (argument1)
+    if (_bool)
     {
         d = room_width * room_height;
         b = d;
@@ -26,7 +26,7 @@ function get_dark(argument0, argument1)
         
         t = (b + 0.4) * 255;
         t = clamp(t, 0, 255);
-        return make_color_rgb(color_get_red(argument0) - t, color_get_green(argument0) - t, color_get_blue(argument0) - t);
+        return make_color_rgb(color_get_red(_color) - t, color_get_green(_color) - t, color_get_blue(_color) - t);
     }
     else
     {

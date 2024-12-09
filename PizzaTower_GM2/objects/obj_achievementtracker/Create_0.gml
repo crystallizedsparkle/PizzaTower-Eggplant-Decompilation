@@ -1,4 +1,4 @@
-enum notifications
+enum notification_type
 {
 	unknown0 = 0,
 	unknown1 = 1

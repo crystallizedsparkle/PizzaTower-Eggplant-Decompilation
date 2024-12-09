@@ -1,9 +1,9 @@
-function cutscene_set_object_pos(argument0, argument1, argument2)
+function cutscene_set_object_pos(_object, _x, _y)
 {
-    with (argument0)
+    with (_object)
     {
-        x = argument1;
-        y = argument2;
+        x = _x;
+        y = _y;
     }
     
     cutscene_end_action();

@@ -1,38 +1,36 @@
-function secret_add(argument0, argument1)
+function secret_add(_func1, _func2)
 {
     with (obj_secretmanager)
     {
-        ds_list_add(secrettriggers, [argument1]);
+        ds_list_add(secrettriggers, [_func2]);
         
-        if (argument0 != -4)
-            method(id, argument0)();
+        if (_func1 != noone)
+            method(id, _func1)();
     }
 }
 
-function secret_add_touchall(argument0, argument1, argument2)
+function secret_add_touchall(_room, _trigger, _id)
 {
     with (obj_secretmanager)
-        ds_list_add(touchall, [argument0, argument1, argument2]);
+        ds_list_add(touchall, [_room, _trigger, _id]);
 }
 
-function secret_add_touchall_requirement(argument0, argument1)
+function secret_add_touchall_requirement(_index, _requirement)
 {
-    touchrequirement[argument0] = [argument1, false];
+    touchrequirement[_index] = [_requirement, false];
 }
 
 function secret_check_touchall()
 {
-    var xx, t, i, b;
-    
-    if (touchrequirement != -4 && is_array(touchrequirement))
+    if (touchrequirement != noone && is_array(touchrequirement))
     {
-        for (xx = 0; xx < array_length(touchrequirement); xx++)
+        for (var xx = 0; xx < array_length(touchrequirement); xx++)
         {
-            t = 0;
+            var t = 0;
             
-            for (i = 0; i < ds_list_size(touchall); i++)
+            for (var i = 0; i < ds_list_size(touchall); i++)
             {
-                b = ds_list_find_value(touchall, i);
+                var b = ds_list_find_value(touchall, i);
                 
                 if (b[1] == xx)
                     t++;
@@ -42,9 +40,9 @@ function secret_check_touchall()
                 touchrequirement[xx][1] = true;
         }
         
-        b = true;
+        var b = true;
         
-        for (i = 0; i < array_length(touchrequirement); i++)
+        for (var i = 0; i < array_length(touchrequirement); i++)
         {
             if (!touchrequirement[i][1])
             {
@@ -60,15 +58,13 @@ function secret_check_touchall()
     return false;
 }
 
-function secret_check_trigger(argument0)
+function secret_check_trigger(_num)
 {
-    var _found;
-    
-    _found = false;
+    var _found = false;
     
     with (obj_secrettrigger)
     {
-        if (trigger == argument0 && active)
+        if (trigger == _num && active)
             _found = true;
     }
     
@@ -83,24 +79,24 @@ function secret_check_trigger(argument0)
     return _found;
 }
 
-function secret_open_portal(argument0)
+function secret_open_portal(_num)
 {
     with (obj_secretportal)
     {
-        if (trigger == argument0 && ds_list_find_index(global.saveroom, id) == -1 && !place_meeting(x, y, obj_marbleblock) && !place_meeting(x, y, obj_secretblock) && !place_meeting(x, y, obj_secretbigblock) && !place_meeting(x, y, obj_secretmetalblock) && !place_meeting(x, y, obj_secretdestroyable))
+        if (trigger == _num && ds_list_find_index(global.saveroom, id) == -1 && !place_meeting(x, y, obj_marbleblock) && !place_meeting(x, y, obj_secretblock) && !place_meeting(x, y, obj_secretbigblock) && !place_meeting(x, y, obj_secretmetalblock) && !place_meeting(x, y, obj_secretdestroyable))
             active = true;
     }
 }
 
-function secret_close_portal(argument0, argument1 = false)
+function secret_close_portal(_num, _bool = false)
 {
     with (obj_secretportal)
     {
-        if (trigger == argument0 && sprite_index != spr_secretportal_close)
+        if (trigger == _num && sprite_index != spr_secretportal_close)
         {
             sprite_index = spr_secretportal_close;
             
-            if (!argument1)
+            if (!_bool)
                 image_index = 0;
             else
                 image_index = 14;
@@ -110,9 +106,9 @@ function secret_close_portal(argument0, argument1 = false)
     }
 }
 
-function secret_close_portalID(argument0)
+function secret_close_portalID(_id)
 {
-    with (argument0)
+    with (_id)
     {
         sprite_index = spr_secretportal_close;
         image_index = 14;

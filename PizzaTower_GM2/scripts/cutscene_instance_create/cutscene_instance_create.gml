@@ -1,11 +1,9 @@
-function cutscene_instance_create(argument0, argument1, argument2, argument3)
+function cutscene_instance_create(_object_index, _x, _y, _image_xscale)
 {
-    var _obj, xx, yy, _xscale;
-    
-    _obj = argument0;
-    xx = argument1;
-    yy = argument2;
-    _xscale = argument3;
+    var _obj = _object_index;
+    var xx = _x;
+    var yy = _y;
+    var _xscale = _image_xscale;
     
     with (instance_create(xx, yy, _obj))
     {

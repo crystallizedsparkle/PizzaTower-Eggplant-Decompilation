@@ -1,12 +1,10 @@
-function totem_empty(argument0)
+function totem_empty(_obj)
 {
-    var i;
-    
-    with (argument0)
+    with (_obj)
     {
-        for (i = 0; i < array_length(cheeseID); i++)
+        for (var i = 0; i < array_length(cheeseID); i++)
         {
-            if (cheeseID[i] == -4)
+            if (cheeseID[i] == noone)
                 return true;
         }
         
@@ -14,17 +12,15 @@ function totem_empty(argument0)
     }
 }
 
-function totem_add(argument0, argument1)
+function totem_add(_obj1, _obj2)
 {
-    var i;
-    
-    with (argument0)
+    with (_obj1)
     {
-        for (i = 0; i < array_length(cheeseID); i++)
+        for (var i = 0; i < array_length(cheeseID); i++)
         {
-            if (cheeseID[i] == -4)
+            if (cheeseID[i] == noone)
             {
-                cheeseID[i] = argument1;
+                cheeseID[i] = _obj2;
                 return true;
             }
         }
@@ -33,34 +29,30 @@ function totem_add(argument0, argument1)
     }
 }
 
-function totem_clear(argument0)
+function totem_clear(_obj)
 {
-    var i;
-    
-    with (argument0)
+    with (_obj)
     {
-        for (i = 0; i < array_length(cheeseID); i++)
+        for (var i = 0; i < array_length(cheeseID); i++)
         {
             if (cheeseID[i] != -4 && (!instance_exists(cheeseID[i]) || cheeseID[i].state != states.totem))
             {
                 if (instance_exists(cheeseID[i]))
-                    cheeseID[i].totemID = -4;
+                    cheeseID[i].totemID = noone;
                 
-                cheeseID[i] = -4;
+                cheeseID[i] = noone;
             }
         }
     }
 }
 
-function totem_count(argument0)
+function totem_count(_obj)
 {
-    var c, i;
+    var c = 0;
     
-    c = 0;
-    
-    with (argument0)
+    with (_obj)
     {
-        for (i = 0; i < array_length(cheeseID); i++)
+        for (var i = 0; i < array_length(cheeseID); i++)
         {
             if (cheeseID[i] != -4)
                 c++;

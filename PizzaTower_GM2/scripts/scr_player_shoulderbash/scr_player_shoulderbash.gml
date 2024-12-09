@@ -28,7 +28,7 @@ function scr_player_shoulderbash()
     if (grounded)
         jumpstop = false;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5)
+    if (!key_jump2 && !jumpstop && vsp < 0.5)
     {
         vsp /= 20;
         jumpstop = true;
@@ -37,7 +37,7 @@ function scr_player_shoulderbash()
     if (input_buffer_jump < 8 && grounded)
     {
         vsp = -shoulderbash_jumpspeed;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
     }
     
     if (!instance_exists(dashcloudid) && grounded)

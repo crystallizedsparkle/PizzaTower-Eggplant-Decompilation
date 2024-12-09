@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown == true && other.baddieID.state != states.hit && baddieID.killbyenemy && baddieID != other.id && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
+if (instance_exists(baddieID) && /* this check is for compatibility */ instance_exists(other.baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown && other.baddieID.state != states.hit && baddieID.killbyenemy && baddieID != other.id && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
 {
     scr_soundeffect(sfx_punch);
     

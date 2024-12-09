@@ -1,1 +1,1 @@
-targetRoom = 575;
+targetRoom = beach_8;

@@ -1,6 +1,6 @@
 function scr_shotgunshoot()
 {
-    scr_soundeffect(26);
+    scr_soundeffect(sfx_killingblow);
     
     with (instance_create(x, y, obj_pistoleffect))
         image_xscale = other.xscale;

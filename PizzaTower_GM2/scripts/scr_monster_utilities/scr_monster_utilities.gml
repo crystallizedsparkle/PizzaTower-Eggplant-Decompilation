@@ -12,7 +12,7 @@ function scr_monster_activate()
         {
             active = true;
             instance_destroy(solidID);
-            solidID = -4;
+            solidID = noone;
             image_speed = 0.35;
         }
     }
@@ -20,30 +20,26 @@ function scr_monster_activate()
     warbg_init();
 }
 
-function get_triangle_points(argument0, argument1, argument2, argument3, argument4)
+function get_triangle_points(_x, _y, _angle, _len, _size)
 {
-    var x2, y2, x3, y3;
-    
-    x2 = argument0 + lengthdir_x(argument3, argument2 - argument4);
-    y2 = argument1 + lengthdir_y(argument3, argument2 - argument4);
-    x3 = argument0 + lengthdir_x(argument3, argument2 + argument4);
-    y3 = argument1 + lengthdir_y(argument3, argument2 + argument4);
+    var x2 = _x + lengthdir_x(_len, _angle - _size);
+    var y2 = _y + lengthdir_y(_len, _angle - _size);
+    var x3 = _x + lengthdir_x(_len, _angle + _size);
+    var y3 = _y + lengthdir_y(_len, _angle + _size);
     return [x2, y2, x3, y3];
 }
 
-function scr_monster_detect(argument0, argument1, argument2)
+function scr_monster_detect(_detection_x, _detection_y, _obj)
 {
-    var _dir, detect;
+    var _dir = (image_xscale > 0) ? (_obj.x > x) : (_obj.x < x);
     
-    _dir = (image_xscale > 0) ? (argument2.x > x) : (argument2.x < x);
-    
-    if (_dir && argument2.x < (x + argument0) && argument2.x > (x - argument0) && argument2.y < (y + argument1) && argument2.y > (y - argument1))
+    if (_dir && _obj.x < (x + _detection_x) && _obj.x > (x - _detection_x) && _obj.y < (y + _detection_y) && _obj.y > (y - _detection_y))
     {
-        detect = false;
+        var detect = false;
         
-        if (argument2.y > (y - 200))
+        if (_obj.y > (y - 200))
         {
-            with (argument2)
+            with (_obj)
             {
                 if (state != states.crouch || (!scr_solid(x, y - 24) && !place_meeting(x, y - 24, obj_platform)))
                     detect = true;
@@ -65,56 +61,54 @@ function scr_puppet_detect()
             return id;
     }
     
-    return -4;
+    return noone;
 }
 
-function scr_puppet_appear(argument0)
+function scr_puppet_appear(_obj)
 {
-    var _xdir, i, _col;
+    var _xdir = 96;
+    var i = 0;
     
-    _xdir = 96;
-    i = 0;
-    
-    while (collision_line(argument0.x, argument0.y, argument0.x + (_xdir * argument0.xscale), argument0.y, obj_solid, false, true))
+    while (collision_line(_obj.x, _obj.y, _obj.x + (_xdir * _obj.xscale), _obj.y, obj_solid, false, true))
     {
         _xdir--;
         i++;
         
         if (i > room_width)
         {
-            x = argument0.x;
+            x = _obj.x;
             break;
         }
     }
     
-    x = argument0.x + (abs(_xdir) * argument0.xscale);
-    y = argument0.y;
+    x = _obj.x + (abs(_xdir) * _obj.xscale);
+    y = _obj.y;
     state = states.robot_chase;
     substate = states.fall;
-    playerid = argument0;
+    playerid = _obj;
     
     while (place_meeting(x, y, obj_solid))
     {
-        x += ((argument0.x > x) ? 1 : -1);
+        x += ((_obj.x > x) ? 1 : -1);
         i++;
         
         if (i > room_width)
         {
-            x = argument0.x;
+            x = _obj.x;
             break;
         }
     }
     
-    _col = collision_line(x, y, x, y - room_height, obj_solid, true, false);
+    var _col = collision_line(x, y, x, y - room_height, obj_solid, true, false);
     
-    if (_col != -4)
+    if (_col != noone)
     {
         while (!place_meeting(x, y - 1, obj_solid))
             y--;
     }
 }
 
-function scr_monsterinvestigate(argument0, argument1, argument2)
+function scr_monsterinvestigate(_detection_x, _sprite, _sprite2)
 {
     targetplayer = instance_nearest(x, y, obj_player);
     image_speed = 0.35;
@@ -123,8 +117,8 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
     {
         case 0:
         case 1:
-            sprite_index = argument1;
-            hsp = image_xscale * argument0;
+            sprite_index = _sprite;
+            hsp = image_xscale * _detection_x;
             
             if (place_meeting(x + sign(hsp), y, obj_monstersolid) && (!place_meeting(x + sign(hsp), y, obj_monsterslope) || place_meeting(x + sign(hsp), y - 4, obj_solid)))
             {
@@ -144,7 +138,7 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
             break;
         
         case 2:
-            sprite_index = argument2;
+            sprite_index = _sprite2;
             hsp = 0;
             
             if (waitbuffer > 0)

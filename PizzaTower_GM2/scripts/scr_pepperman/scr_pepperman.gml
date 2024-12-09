@@ -1,7 +1,5 @@
 function scr_pepperman_walk()
 {
-    var b;
-    
     hsp = 0;
     sprite_index = spr_pepperman_idle;
     
@@ -18,7 +16,7 @@ function scr_pepperman_walk()
     else
     {
         idle_timer = idle_max - (wastedhits * 10);
-        b = targetplayer;
+        var b = targetplayer;
         
         if (distance_to_object(targetblock) < 300)
             b = targetblock;
@@ -49,7 +47,7 @@ function pepperman_nearestspot()
         if (targetspot == oldtargetspot)
         {
             do
-                targetspot = instance_nearest_random(238, 3);
+                targetspot = instance_nearest_random(obj_pepper_groundpoundspot, 3);
             until (targetspot != oldtargetspot && targetspot != undefined);
         }
     }
@@ -95,17 +93,15 @@ function scr_pepperman_jump()
 
 function scr_pepperman_freefall()
 {
-    var first_spot, b, t;
-    
     vsp = 20;
     
     if (grounded)
     {
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         oldtargetspot = targetspot;
         state = states.walk;
         
-        if (point_in_camera(x, y, 329))
+        if (point_in_camera(x, y, 329)) // the last argument should be a camera.
         {
             with (obj_camera)
             {
@@ -114,17 +110,17 @@ function scr_pepperman_freefall()
             }
         }
         
-        first_spot = false;
+        var first_spot = false;
         
         if (elitehit > 1)
         {
             repeat (marbleblockmax)
             {
-                b = false;
+                var b = false;
                 
                 do
                 {
-                    t = instance_random(836);
+                    var t = instance_random(obj_pepper_marblespot);
                     
                     if (!first_spot)
                     {

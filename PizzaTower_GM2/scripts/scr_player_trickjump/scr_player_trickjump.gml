@@ -43,7 +43,7 @@ function scr_player_trickjump()
         else
         {
             ramp_points = 0;
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             state = states.freefallland;
             sprite_index = spr_bodyslamland;
             image_index = 0;

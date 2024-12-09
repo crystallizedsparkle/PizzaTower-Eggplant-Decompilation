@@ -1,8 +1,6 @@
 function cutscene_gustavo_start()
 {
-    var _id;
-    
-    _id = id;
+    var _id = id;
     
     with (obj_cutscene_handler)
     {

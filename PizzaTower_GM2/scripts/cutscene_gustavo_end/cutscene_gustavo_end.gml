@@ -1,8 +1,6 @@
 function cutscene_gustavo_end()
 {
-    var finish;
-    
-    finish = false;
+    var finish = false;
     
     with (obj_player1)
     {

@@ -10,7 +10,7 @@ function scr_player_chainsawpogo()
     if (ladderbuffer > 0)
         ladderbuffer--;
     
-    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim)
     {
         vsp = grav;
         jumpstop = true;

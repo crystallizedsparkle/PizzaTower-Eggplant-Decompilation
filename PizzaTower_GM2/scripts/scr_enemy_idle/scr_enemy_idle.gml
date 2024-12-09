@@ -1,7 +1,5 @@
 function scr_enemy_idle()
 {
-    var _railinst;
-    
     hsp = 0;
     
     if (vsp > 1 && (grounded || (grounded && !place_meeting(x, y, obj_platform))))
@@ -67,7 +65,7 @@ function scr_enemy_idle()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp += (_railinst.movespeed * _railinst.dir);
     }
     

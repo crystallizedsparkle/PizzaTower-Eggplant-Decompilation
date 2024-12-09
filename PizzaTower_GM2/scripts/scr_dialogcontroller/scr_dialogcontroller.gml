@@ -1,11 +1,9 @@
-function scr_string_width(argument0)
+function scr_string_width(_str)
 {
-    var pos, w, originalstr, str_arr, i, b;
-    
-    pos = 0;
-    w = 0;
-    originalstr = argument0;
-    str_arr = array_create(0);
+    var pos = 0;
+    var w = 0;
+    var originalstr = _str;
+    var str_arr = array_create(0);
     
     while (pos < string_length(originalstr))
     {
@@ -27,9 +25,9 @@ function scr_string_width(argument0)
     if (array_length(str_arr) == 0)
         w = string_width(argument0);
     
-    for (i = 0; i < array_length(str_arr); i++)
+    for (var i = 0; i < array_length(str_arr); i++)
     {
-        b = str_arr[i];
+        var b = str_arr[i];
         
         if (string_width(b) > w)
             w = string_width(b);
@@ -38,18 +36,18 @@ function scr_string_width(argument0)
     return w;
 }
 
-function scr_separate_text(argument0)
+function scr_separate_text(_str)
 {
     var _pos, _oldpos;
     
     draw_set_font(font2);
     
-    while (scr_string_width(argument0) > (obj_camera.original_cam_width - (rpadding * 2) - string_width("a")))
+    while (scr_string_width(_str) > (obj_camera.original_cam_width - (rpadding * 2) - string_width("a")))
     {
-        _pos = string_length(argument0);
+        _pos = string_length(_str);
         _oldpos = _pos;
         
-        while (string_char_at(argument0, _pos) != " ")
+        while (string_char_at(_str, _pos) != " ")
         {
             _pos--;
             
@@ -57,16 +55,16 @@ function scr_separate_text(argument0)
                 _pos = _oldpos;
         }
         
-        if (string_char_at(argument0, _pos) == " ")
-            argument0 = string_delete(argument0, _pos, 1);
+        if (string_char_at(_str, _pos) == " ")
+            _str = string_delete(_str, _pos, 1);
         
-        argument0 = string_insert("\n", argument0, _pos);
+        _str = string_insert("\n", _str, _pos);
     }
     
-    return argument0;
+    return _str;
 }
 
-function scr_calculate_text(argument0)
+function scr_calculate_text(_str)
 {
     var pos, str2;
     
@@ -74,20 +72,20 @@ function scr_calculate_text(argument0)
     pos = 0;
     str2 = "";
     
-    while (pos <= string_length(argument0))
+    while (pos <= string_length(_str))
     {
         pos++;
-        str2 = string_insert(string_char_at(argument0, pos), str2, string_length(str2) + 1);
+        str2 = string_insert(string_char_at(_str, pos), str2, string_length(str2) + 1);
         str2 = scr_separate_text(str2);
     }
     
     return str2;
 }
 
-function scr_calculate_height(argument0)
+function scr_calculate_height(_str)
 {
     var str2;
     
-    str2 = scr_calculate_text(argument0);
+    str2 = scr_calculate_text(_str);
     return string_height(str2);
 }

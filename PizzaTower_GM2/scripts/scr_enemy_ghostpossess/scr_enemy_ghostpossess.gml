@@ -1,8 +1,6 @@
 function scr_enemy_ghostpossess()
-{
-    var _move, dir;
-    
-    _move = 0;
+{   
+    var _move = 0;
     
     with (playerid)
     {
@@ -129,7 +127,7 @@ function scr_enemy_ghostpossess()
                 if (sprite_index == spr_forknight_rageloop)
                 {
                     hsp = image_xscale * 8;
-                    dir = image_xscale * 8;
+                    var dir = image_xscale * 8;
                     
                     with (instance_place(x + dir, y, obj_destructibles))
                         instance_destroy();

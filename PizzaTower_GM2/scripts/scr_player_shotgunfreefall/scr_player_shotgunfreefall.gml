@@ -35,7 +35,7 @@ function scr_player_shotgunfreefall()
         {
             sprite_index = spr_shotgunjump2;
             image_index = 0;
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             create_particle(x, y, particles.landcloud, 0);
             
             with (obj_camera)

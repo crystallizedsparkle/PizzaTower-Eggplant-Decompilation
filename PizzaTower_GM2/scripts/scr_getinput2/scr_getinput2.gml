@@ -1,20 +1,18 @@
 function scr_getinput2()
 {
-    var _dvc, haxis, vaxis, _dir, _deadzone;
-    
     if (instance_exists(obj_debugcontroller) && obj_debugcontroller.active)
         exit;
     
-    _dvc = obj_inputAssigner.player_input_device[1];
+    var _dvc = obj_inputAssigner.player_input_device[1];
     gamepad_set_axis_deadzone(_dvc, 0.4);
     key_up = keyboard_check(global.key_upN) || gamepad_button_check(_dvc, global.key_upCN) || gamepad_axis_value(_dvc, gp_axislv) < 0;
-    key_up2 = keyboard_check_pressed(global.key_upN) || gamepad_button_check_pressed(_dvc, global.key_upCN) || (gamepad_axis_value(_dvc, gp_axislv) < -0.5 && stickpressed == false);
+    key_up2 = keyboard_check_pressed(global.key_upN) || gamepad_button_check_pressed(_dvc, global.key_upCN) || (gamepad_axis_value(_dvc, gp_axislv) < -0.5 && !stickpressed);
     key_right = keyboard_check(global.key_rightN) || gamepad_button_check(_dvc, global.key_rightCN) || gamepad_axis_value(_dvc, gp_axislh) > 0;
-    key_right2 = keyboard_check_pressed(global.key_rightN) || gamepad_button_check_pressed(_dvc, global.key_rightCN) || (gamepad_axis_value(_dvc, gp_axislh) > 0.5 && stickpressed == false);
+    key_right2 = keyboard_check_pressed(global.key_rightN) || gamepad_button_check_pressed(_dvc, global.key_rightCN) || (gamepad_axis_value(_dvc, gp_axislh) > 0.5 && !stickpressed);
     key_left = -(keyboard_check(global.key_leftN) || gamepad_button_check(_dvc, global.key_leftCN) || gamepad_axis_value(_dvc, gp_axislh) < 0);
-    key_left2 = -(keyboard_check_pressed(global.key_leftN) || gamepad_button_check_pressed(_dvc, global.key_leftCN) || (gamepad_axis_value(_dvc, gp_axislh) < -0.5 && stickpressed == false));
+    key_left2 = -(keyboard_check_pressed(global.key_leftN) || gamepad_button_check_pressed(_dvc, global.key_leftCN) || (gamepad_axis_value(_dvc, gp_axislh) < -0.5 && !stickpressed));
     key_down = keyboard_check(global.key_downN) || gamepad_button_check(_dvc, global.key_downCN) || gamepad_axis_value(_dvc, gp_axislv) > 0;
-    key_down2 = keyboard_check_pressed(global.key_downN) || gamepad_button_check_pressed(_dvc, global.key_downCN) || (gamepad_axis_value(_dvc, gp_axislv) > 0.5 && stickpressed == false);
+    key_down2 = keyboard_check_pressed(global.key_downN) || gamepad_button_check_pressed(_dvc, global.key_downCN) || (gamepad_axis_value(_dvc, gp_axislv) > 0.5 && !stickpressed);
     key_jump = keyboard_check_pressed(global.key_jumpN) || gamepad_button_check_pressed(_dvc, global.key_jumpCN);
     key_jump2 = keyboard_check(global.key_jumpN) || gamepad_button_check(_dvc, global.key_jumpCN);
     key_slap = keyboard_check(global.key_slapN) || gamepad_button_check(_dvc, global.key_slapCN);
@@ -32,14 +30,14 @@ function scr_getinput2()
     
     if (object_index == obj_player2 && state == states.Sjumpprep)
     {
-        haxis = gamepad_axis_value(_dvc, gp_axislh);
-        vaxis = gamepad_axis_value(_dvc, gp_axislv);
+        var haxis = gamepad_axis_value(_dvc, gp_axislh);
+        var vaxis = gamepad_axis_value(_dvc, gp_axislv);
         
         if (haxis != 0 || vaxis != 0)
         {
-            _dir = point_direction(0, 0, haxis, vaxis);
+            var _dir = point_direction(0, 0, haxis, vaxis);
             trace(_dir);
-            _deadzone = 5;
+            var _deadzone = 5;
             
             if (_dir >= _deadzone && _dir <= (180 - _deadzone))
                 key_up = true;

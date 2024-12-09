@@ -1,7 +1,5 @@
 function scr_enemy_charge()
 {
-    var _railinst;
-    
     if (object_index == obj_peasanto)
     {
         if (grounded || (grounded && !place_meeting(x, y, obj_platform)))
@@ -102,7 +100,7 @@ function scr_enemy_charge()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp += (_railinst.movespeed * _railinst.dir);
     }
 }

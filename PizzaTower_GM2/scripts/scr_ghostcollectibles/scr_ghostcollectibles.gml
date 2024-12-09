@@ -1,9 +1,7 @@
 function scr_ghostcollectible()
 {
-    var q, b;
-    
-    q = -4;
-    b = id;
+    var q = noone;
+    var b = id;
     
     with (obj_ghostcollectibles)
     {

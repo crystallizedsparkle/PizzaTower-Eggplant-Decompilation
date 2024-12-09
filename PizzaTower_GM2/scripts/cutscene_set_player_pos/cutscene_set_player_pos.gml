@@ -1,11 +1,11 @@
-function cutscene_set_player_pos(argument0, argument1)
+function cutscene_set_player_pos(_x, _y)
 {
     with (obj_player)
     {
         if (object_index != obj_player2 || global.coop)
         {
-            x = argument0;
-            y = argument1;
+            x = _x;
+            y = _y;
         }
     }
     

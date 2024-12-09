@@ -16,7 +16,7 @@ function scr_player_knightpepslopes()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5 && !stompAnim)
     {
         vsp /= 2;
         jumpstop = true;
@@ -59,7 +59,7 @@ function scr_player_knightpepslopes()
         sprite_index = spr_knightpep_bump;
         image_index = floor(image_number - 1);
         state = states.knightpepbump;
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
     }
     
     if (scr_slope())

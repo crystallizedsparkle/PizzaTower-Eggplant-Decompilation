@@ -1,4 +1,4 @@
-function create_baddiegibsticks(argument0, argument1)
+function create_baddiegibsticks(_x, _y)
 {
-    instance_create(argument0, argument1, obj_baddiegibsstick);
+    instance_create(_x, _y, obj_baddiegibsstick);
 }

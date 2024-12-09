@@ -1,7 +1,5 @@
 function scr_player_mach3()
 {
-    var _railinst, _bump;
-    
     switch (character)
     {
         case "P":
@@ -10,7 +8,7 @@ function scr_player_mach3()
             
             if (place_meeting(x, y + 1, obj_railparent))
             {
-                _railinst = instance_place(x, y + 1, obj_railparent);
+                var _railinst = instance_place(x, y + 1, obj_railparent);
                 railmovespeed = _railinst.movespeed;
                 raildir = _railinst.dir;
             }
@@ -27,7 +25,7 @@ function scr_player_mach3()
             {
                 if (movespeed < 20)
                 {
-                    if (mach4mode == false)
+                    if (!mach4mode)
                         movespeed += 0.025;
                     else
                         movespeed += 0.1;
@@ -39,7 +37,7 @@ function scr_player_mach3()
             move = key_right + key_left;
             move2 = key_right2 + key_left2;
             
-            if (fightball == true && global.coop == true)
+            if (fightball && global.coop)
             {
                 if (object_index == obj_player1)
                 {
@@ -74,7 +72,7 @@ function scr_player_mach3()
             
             crouchslideAnim = true;
             
-            if (!key_jump2 && jumpstop == false && vsp < 0.5)
+            if (!key_jump2 && !jumpstop && vsp < 0.5)
             {
                 vsp /= 20;
                 jumpstop = true;
@@ -85,7 +83,7 @@ function scr_player_mach3()
             
             if (input_buffer_jump < 8 && sprite_index != spr_mach3jump && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))
             {
-                scr_soundeffect(12);
+                scr_soundeffect(sfx_jump);
                 
                 if (sprite_index != spr_fightball)
                 {
@@ -99,7 +97,7 @@ function scr_player_mach3()
                     vsp = -13;
             }
             
-            if (fightball == false)
+            if (!fightball)
             {
                 if (sprite_index == spr_mach3jump && floor(image_index) == (image_number - 1))
                     sprite_index = spr_mach4;
@@ -116,7 +114,7 @@ function scr_player_mach3()
                     flash = true;
                     sprite_index = spr_crazyrun;
                     
-                    with (create_debris(x, y, 1141))
+                    with (create_debris(x, y, spr_slapstar))
                     {
                         hsp = random_range(-5, 5);
                         vsp = random_range(-10, 10);
@@ -147,24 +145,24 @@ function scr_player_mach3()
             if (key_jump)
                 input_buffer_jump = 0;
             
-            if (((!key_attack && fightball == false && !launched) && sprite_index != spr_dashpadmach && grounded && (character == "P" || character == "N")) || ((character == "S" && (move == 0 || move != xscale) && grounded) && fightball == false))
+            if (((!key_attack && !fightball && !launched) && sprite_index != spr_dashpadmach && grounded && (character == "P" || character == "N")) || ((character == "S" && (move == 0 || move != xscale) && grounded) && !fightball))
             {
                 sprite_index = spr_machslidestart;
-                scr_soundeffect(89);
+                scr_soundeffect(sfx_break);
                 state = states.machslide;
                 image_index = 0;
                 launched = false;
             }
             
-            if (move == -xscale && grounded && !launched && (character == "P" || character == "N") && fightball == false && sprite_index != spr_dashpadmach)
+            if (move == -xscale && grounded && !launched && (character == "P" || character == "N") && !fightball && sprite_index != spr_dashpadmach)
             {
-                scr_soundeffect(86);
+                scr_soundeffect(sfx_machslideboost);
                 sprite_index = spr_mach3boost;
                 state = states.machslide;
                 image_index = 0;
             }
             
-            if (key_down && fightball == false)
+            if (key_down && !fightball)
             {
                 particle_set_scale(particles.jumpdust, xscale, 1);
                 create_particle(x, y, particles.jumpdust, 0);
@@ -213,12 +211,12 @@ function scr_player_mach3()
                 flash = true;
             }
             
-            if (key_shoot2 && shotgunAnim == true)
+            if (key_shoot2 && shotgunAnim)
                 scr_shotgunshoot();
             
             if ((scr_solid(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_mach3solid)) && !scr_slope() && (scr_solid_slope(x + sign(hsp), y) || place_meeting(x + sign(hsp), y, obj_solid)) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_climbablewall) && grounded)
             {
-                _bump = ledge_bump((vsp >= 0) ? 32 : 22);
+                var _bump = ledge_bump((vsp >= 0) ? 32 : 22);
                 
                 if (_bump)
                 {
@@ -243,8 +241,8 @@ function scr_player_mach3()
                     if (!fightball)
                     {
                         sprite_index = spr_hitwall;
-                        scr_soundeffect(27);
-                        scr_soundeffect(28);
+                        scr_soundeffect(sfx_groundpound);
+                        scr_soundeffect(sfx_bumpwall);
                         hsp = 0;
                         flash = false;
                         state = states.bump;
@@ -261,8 +259,8 @@ function scr_player_mach3()
                         with (obj_player)
                         {
                             sprite_index = spr_hitwall;
-                            scr_soundeffect(27);
-                            scr_soundeffect(28);
+	                        scr_soundeffect(sfx_groundpound);
+	                        scr_soundeffect(sfx_bumpwall);
                             hsp = 0;
                             flash = false;
                             state = states.bump;
@@ -294,7 +292,7 @@ function scr_player_mach3()
             move = key_right + key_left;
             move2 = key_right2 + key_left2;
             
-            if (fightball == true && global.coop == true)
+            if (fightball && global.coop)
             {
                 if (object_index == obj_player1)
                 {
@@ -332,7 +330,7 @@ function scr_player_mach3()
             
             crouchslideAnim = true;
             
-            if (!key_jump2 && jumpstop == false && vsp < 0.5)
+            if (!key_jump2 && !jumpstop && vsp < 0.5)
             {
                 vsp /= 20;
                 jumpstop = true;
@@ -343,7 +341,7 @@ function scr_player_mach3()
             
             if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))
             {
-                scr_soundeffect(12);
+                scr_soundeffect(sfx_jump);
                 
                 if (sprite_index != spr_fightball)
                 {
@@ -354,7 +352,7 @@ function scr_player_mach3()
                 vsp = -11;
             }
             
-            if (fightball == false)
+            if (!fightball)
             {
                 if (sprite_index == spr_mach3jump && floor(image_index) == (image_number - 1))
                     sprite_index = spr_mach4;
@@ -396,7 +394,7 @@ function scr_player_mach3()
             
             if (floor(image_index) == 0 && sprite_index == spr_player_Sjumpcancelstart)
             {
-                scr_soundeffect(84);
+                scr_soundeffect(sfx_taunt);
                 taunttimer = 20;
                 tauntstoredsprite = sprite_index;
                 image_index = random_range(0, 11);
@@ -424,23 +422,23 @@ function scr_player_mach3()
             if (key_jump)
                 input_buffer_jump = 0;
             
-            if (((!key_attack && fightball == false) && grounded) || ((character == "S" && (move == 0 || move != xscale) && grounded) && fightball == false))
+            if (((!key_attack && !fightball) && grounded) || ((character == "S" && (move == 0 || move != xscale) && grounded) && !fightball))
             {
                 sprite_index = spr_machslidestart;
-                scr_soundeffect(89);
+                scr_soundeffect(sfx_break);
                 state = states.machslide;
                 image_index = 0;
             }
             
-            if (move == -xscale && grounded && fightball == false)
+            if (move == -xscale && grounded && !fightball)
             {
-                scr_soundeffect(86);
+                scr_soundeffect(sfx_machslideboost);
                 sprite_index = spr_mach3boost;
                 state = states.machslide;
                 image_index = 0;
             }
             
-            if (key_down && fightball == false && !place_meeting(x, y, obj_dashpad))
+            if (key_down && !fightball && !place_meeting(x, y, obj_dashpad))
             {
                 particle_set_scale(particles.jumpdust, xscale, 1);
                 create_particle(x, y, particles.jumpdust, 0);
@@ -449,19 +447,19 @@ function scr_player_mach3()
                 vsp = 10;
             }
             
-            if ((!grounded && place_meeting(x + hsp, y, obj_solid) && (!place_meeting(x + sign(hsp), y, 311 || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_mach3solid))) || (grounded && (place_meeting(x + hsp, y - 32, obj_solid) || scr_solid_slope(x + sign(hsp), y - 32)) && place_meeting(x, y + 1, obj_slope) && !place_meeting(x + hsp, y, obj_mach3solid)))
+            if ((!grounded && place_meeting(x + hsp, y, obj_solid) && (!place_meeting(x + sign(hsp), y, 311 /* I dont know why this is here */ || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_mach3solid))) || (grounded && (place_meeting(x + hsp, y - 32, obj_solid) || scr_solid_slope(x + sign(hsp), y - 32)) && place_meeting(x, y + 1, obj_slope) && !place_meeting(x + hsp, y, obj_mach3solid)))
             {
                 wallspeed = 10;
                 state = states.climbwall;
             }
             
-            if ((scr_solid(x + 1, y) && !place_meeting(x + 1, y, obj_mach3solid) && xscale == 1) && !scr_slope() && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (grounded || fightball == true))
+            if ((scr_solid(x + 1, y) && !place_meeting(x + 1, y, obj_mach3solid) && xscale == 1) && !scr_slope() && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (grounded || fightball))
             {
-                if (fightball == false)
+                if (!fightball)
                 {
                     sprite_index = spr_hitwall;
-                    scr_soundeffect(27);
-                    scr_soundeffect(28);
+                    scr_soundeffect(sfx_groundpound);
+                    scr_soundeffect(sfx_bumpwall);
                     
                     with (obj_camera)
                     {
@@ -492,13 +490,13 @@ function scr_player_mach3()
                     image_index = 0;
                     instance_create(x + 10, y + 10, obj_bumpeffect);
                 }
-                else if (fightball == true)
+                else if (fightball)
                 {
                     with (obj_player)
                     {
                         sprite_index = spr_hitwall;
-                        scr_soundeffect(27);
-                        scr_soundeffect(28);
+	                    scr_soundeffect(sfx_groundpound);
+	                    scr_soundeffect(sfx_bumpwall);
                         
                         with (obj_camera)
                         {
@@ -534,13 +532,13 @@ function scr_player_mach3()
                 }
             }
             
-            if ((scr_solid(x - 1, y) && !place_meeting(x - 1, y, obj_mach3solid) && xscale == -1) && !scr_slope() && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (grounded || fightball == true))
+            if ((scr_solid(x - 1, y) && !place_meeting(x - 1, y, obj_mach3solid) && xscale == -1) && !scr_slope() && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (grounded || fightball))
             {
-                if (fightball == false)
+                if (!fightball)
                 {
                     sprite_index = spr_hitwall;
-                    scr_soundeffect(27);
-                    scr_soundeffect(28);
+                    scr_soundeffect(sfx_groundpound);
+                    scr_soundeffect(sfx_bumpwall);
                     
                     with (obj_camera)
                     {
@@ -571,13 +569,13 @@ function scr_player_mach3()
                     image_index = 0;
                     instance_create(x - 10, y + 10, obj_bumpeffect);
                 }
-                else if (fightball == true)
+                else if (fightball)
                 {
                     with (obj_player)
                     {
                         sprite_index = spr_hitwall;
-                        scr_soundeffect(27);
-                        scr_soundeffect(28);
+	                    scr_soundeffect(sfx_groundpound);
+	                    scr_soundeffect(sfx_bumpwall);
                         
                         with (obj_camera)
                         {
@@ -627,7 +625,7 @@ function scr_player_mach3()
                     image_xscale = other.xscale;
                 }
                 
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
             }
             
             if (key_shoot2 && character == "V" && !instance_exists(dynamite_inst))
@@ -656,10 +654,10 @@ function scr_player_mach3()
             if (fightball == false)
                 vsp = 0;
             
-            if (key_up && fightball == false)
+            if (key_up && !fightball)
                 vsp = -3;
             
-            if (key_down && fightball == false)
+            if (key_down && !fightball)
                 vsp = 3;
             
             if (abs(hsp) < 24 && move == xscale)
@@ -692,7 +690,7 @@ function scr_player_mach3()
                 }
             }
             
-            if (key_attack2 && character == "N" && fightball == false)
+            if (key_attack2 && character == "N" && !fightball)
             {
                 sprite_index = spr_playerN_pogostart;
                 image_index = 0;
@@ -700,7 +698,7 @@ function scr_player_mach3()
                 pogospeed = movespeed;
             }
             
-            if (fightball == false)
+            if (!fightball)
             {
                 if (abs(hsp) > 20 && sprite_index != spr_crazyrun)
                 {
@@ -713,10 +711,10 @@ function scr_player_mach3()
                 }
             }
             
-            if (character == "N" && key_jump2 && fightball == false)
+            if (character == "N" && key_jump2 && !fightball)
             {
-                scr_soundeffect(12);
-                scr_soundeffect(99);
+                scr_soundeffect(sfx_jump);
+                scr_soundeffect(sfx_woosh);
                 jumpstop = false;
                 vsp = -15;
                 state = states.jump;
@@ -726,7 +724,7 @@ function scr_player_mach3()
                 create_particle(x, y, particles.jumpdust, 0);
             }
             
-            if (key_down && fightball == false && !place_meeting(x, y, obj_dashpad) && grounded)
+            if (key_down && !fightball && !place_meeting(x, y, obj_dashpad) && grounded)
             {
                 with (instance_create(x, y, obj_jumpdust))
                     image_xscale = other.xscale;
@@ -736,18 +734,18 @@ function scr_player_mach3()
                 state = states.machroll;
             }
             
-            if (!key_jump2 && jumpstop == false && vsp < 0.5 && fightball == true)
+            if (!key_jump2 && !jumpstop && vsp < 0.5 && fightball)
             {
                 vsp /= 20;
                 jumpstop = true;
             }
             
-            if (grounded && vsp > 0 && fightball == true)
+            if (grounded && vsp > 0 && fightball)
                 jumpstop = false;
             
-            if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && fightball == true)
+            if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && fightball)
             {
-                scr_soundeffect(12);
+                scr_soundeffect(sfx_jump);
                 
                 if (sprite_index != spr_fightball)
                 {
@@ -762,8 +760,8 @@ function scr_player_mach3()
             {
                 pizzapepper = 0;
                 sprite_index = spr_hitwall;
-                scr_soundeffect(27);
-                scr_soundeffect(28);
+                scr_soundeffect(sfx_groundpound);
+                scr_soundeffect(sfx_bumpwall);
                 
                 with (obj_camera)
                 {
@@ -802,7 +800,7 @@ function scr_player_mach3()
     {
         with (instance_create(x, y, obj_superdashcloud))
         {
-            if (other.fightball == true)
+            if (other.fightball)
                 instance_create(obj_player.x, obj_player.y, obj_slapstar);
             
             image_xscale = other.xscale;
@@ -814,7 +812,7 @@ function scr_player_mach3()
     {
         with (instance_create(x, y, obj_superdashcloud))
         {
-            if (other.fightball == true)
+            if (other.fightball)
                 instance_create(obj_player.x, obj_player.y, obj_slapstar);
             
             image_xscale = other.xscale;
@@ -843,7 +841,7 @@ function scr_player_mach3()
     else
         image_speed = 0.4;
     
-    if (key_up && fightball == false && character == "P" && grounded && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
+    if (key_up && !fightball && character == "P" && grounded && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
     {
         sprite_index = spr_superjumpprep;
         state = states.Sjumpprep;
@@ -853,7 +851,7 @@ function scr_player_mach3()
     
     if (global.attackstyle == 2 && key_slap2)
     {
-        randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+        randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
         image_index = 0;
         state = states.lungeattack;
     }

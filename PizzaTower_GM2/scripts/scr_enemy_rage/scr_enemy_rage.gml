@@ -1,7 +1,5 @@
 function scr_enemy_rage()
 {
-    var targetplayer, thespeed, _railinst;
-    
     switch (object_index)
     {
         case obj_forknight:
@@ -103,7 +101,7 @@ function scr_enemy_rage()
             break;
         
         case obj_miniufo:
-            if (floor(image_index) == 3 && shoot == false)
+            if (floor(image_index) == 3 && !shoot)
             {
                 shoot = true;
                 instance_create(x, y, obj_warplaserhoming);
@@ -146,10 +144,10 @@ function scr_enemy_rage()
             
             if (grounded && vsp > 0)
             {
-                targetplayer = 324;
+                var targetplayer = obj_player1;
                 
-                if (obj_player1.spotlight == false)
-                    targetplayer = 323;
+                if (!obj_player1.spotlight)
+                    targetplayer = obj_player2;
                 
                 movespeed = 4;
                 image_xscale = -sign(x - targetplayer.x);
@@ -160,7 +158,7 @@ function scr_enemy_rage()
             break;
         
         case obj_fencer:
-            thespeed = 0;
+            var thespeed = 0;
             
             if (image_index > 7)
                 thespeed = 12;
@@ -293,7 +291,7 @@ function scr_enemy_rage()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp += (_railinst.movespeed * _railinst.dir);
     }
 }

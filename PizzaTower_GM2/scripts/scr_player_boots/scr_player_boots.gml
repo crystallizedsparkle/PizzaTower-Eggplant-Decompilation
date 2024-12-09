@@ -10,13 +10,13 @@ function scr_player_boots()
         facehurt = false;
     }
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
     {
         vsp /= 20;
         jumpstop = true;
     }
     
-    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+    if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
     {
         vsp = grav;
         jumpstop = true;
@@ -25,7 +25,7 @@ function scr_player_boots()
     if (grounded && input_buffer_jump < 8 && !key_down && vsp > 0)
     {
         jumpstop = false;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_playerV_bootsjump;
         instance_create(x, y, obj_highjumpcloud2);
         vsp = -11;

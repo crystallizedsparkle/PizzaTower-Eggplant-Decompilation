@@ -27,7 +27,7 @@ function scr_player_revolver()
             image_xscale = other.xscale;
         }
         
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_killingblow);
     }
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerV_revolvershoot)

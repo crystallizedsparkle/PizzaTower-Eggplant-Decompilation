@@ -14,22 +14,20 @@ vibration[1][0] = 0;
 vibration[1][1] = 0;
 vibration[1][2] = 0;
 
-setVibration = function(argument0, argument1, argument2, argument3)
+setVibration = function(_vibration_index, _vibration1, _vibration2, _vibration3)
 {
-    vibration[argument0][0] = argument1;
-    vibration[argument0][1] = argument2;
+    vibration[_vibration_index][0] = _vibration1;
+    vibration[_vibration_index][1] = _vibration2;
     
-    if (argument3 != undefined)
-        vibration[argument0][2] = argument3;
+    if (_vibration3 != undefined)
+        vibration[_vibration_index][2] = _vibration3;
 };
 
-function CheckUsedIndex(argument0)
+function CheckUsedIndex(_val)
 {
-    var _x;
-    
-    for (_x = 0; _x < 2; _x++)
+    for (var _x = 0; _x < 2; _x++)
     {
-        if (player_input_device[_x] == argument0)
+        if (player_input_device[_x] == _val)
             return true;
     }
     

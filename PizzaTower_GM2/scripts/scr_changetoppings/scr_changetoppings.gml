@@ -4,10 +4,10 @@ function scr_changetoppings()
     {
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
-            if ((obj_player1.character == "P" && obj_player1.spotlight == true) || (obj_player2.character == "P" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "P" && obj_player1.spotlight) || (obj_player2.character == "P" && !obj_player1.spotlight))
                 sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect);
             
-            if ((obj_player1.character == "N" && obj_player1.spotlight == true) || (obj_player2.character == "N" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "N" && obj_player1.spotlight) || (obj_player2.character == "N" && !obj_player1.spotlight))
                 sprite_index = choose(spr_halloweencollectibles1, spr_halloweencollectibles2, spr_halloweencollectibles3, spr_halloweencollectibles4, spr_halloweencollectibles5);
             
             instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_cloudeffect);
@@ -21,10 +21,10 @@ function scr_changetoppings()
     {
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
-            if ((obj_player1.character == "P" && obj_player1.spotlight == true) || (obj_player2.character == "P" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "P" && obj_player1.spotlight) || (obj_player2.character == "P" && !obj_player1.spotlight))
                 sprite_index = choose(spr_pizzacollect1, spr_pizzacollect2, spr_pizzacollect3);
             
-            if ((obj_player1.character == "N" && obj_player1.spotlight == true) || (obj_player2.character == "N" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "N" && obj_player1.spotlight) || (obj_player2.character == "N" && !obj_player1.spotlight))
                 sprite_index = choose(spr_pizzacollect1halloween, spr_pizzacollect2halloween, spr_pizzacollect3halloween);
             
             instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_cloudeffect);
@@ -38,10 +38,10 @@ function scr_changetoppings()
     {
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
-            if ((obj_player1.character == "P" && obj_player1.spotlight == true) || (obj_player2.character == "P" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "P" && obj_player1.spotlight) || (obj_player2.character == "P" && !obj_player1.spotlight))
                 sprite_index = spr_giantpizza;
             
-            if ((obj_player1.character == "N" && obj_player1.spotlight == true) || (obj_player2.character == "N" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "N" && obj_player1.spotlight) || (obj_player2.character == "N" && !obj_player1.spotlight))
                 sprite_index = spr_giantpizzahalloween;
             
             instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_cloudeffect);
@@ -55,10 +55,10 @@ function scr_changetoppings()
     {
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
-            if ((obj_player1.character == "P" && obj_player1.spotlight == true) || (obj_player2.character == "P" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "P" && obj_player1.spotlight) || (obj_player2.character == "P" && !obj_player1.spotlight))
                 sprite_index = spr_destroyable2;
             
-            if ((obj_player1.character == "N" && obj_player1.spotlight == true) || (obj_player2.character == "N" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "N" && obj_player1.spotlight) || (obj_player2.character == "N" && !obj_player1.spotlight))
                 sprite_index = spr_halloweensmallblock;
             
             instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_cloudeffect);
@@ -72,10 +72,10 @@ function scr_changetoppings()
     {
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
-            if ((obj_player1.character == "P" && obj_player1.spotlight == true) || (obj_player2.character == "P" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "P" && obj_player1.spotlight) || (obj_player2.character == "P" && !obj_player1.spotlight))
                 sprite_index = spr_bigbreakable;
             
-            if ((obj_player1.character == "N" && obj_player1.spotlight == true) || (obj_player2.character == "N" && obj_player1.spotlight == false))
+            if ((obj_player1.character == "N" && obj_player1.spotlight) || (obj_player2.character == "N" && !obj_player1.spotlight))
                 sprite_index = spr_halloweenbigblock;
             
             instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_cloudeffect);

@@ -106,7 +106,7 @@ function scr_player_shotgun()
     
     if (key_slap2)
     {
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_killingblow);
         state = states.shotgunshoot;
         sprite_index = spr_shotgunshoot;
         image_index = 0;

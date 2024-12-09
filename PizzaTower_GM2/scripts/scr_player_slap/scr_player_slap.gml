@@ -1,7 +1,5 @@
 function scr_player_slap()
 {
-    var _railinst;
-    
     if (!grounded)
     {
         fallinganimation++;
@@ -23,7 +21,7 @@ function scr_player_slap()
         }
         else
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
         }
     }

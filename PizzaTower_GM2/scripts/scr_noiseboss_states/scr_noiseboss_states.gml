@@ -1,7 +1,5 @@
 function boss_noise_decide_attack()
 {
-    var c;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
@@ -9,7 +7,7 @@ function boss_noise_decide_attack()
     else if (attack_cooldown == 0)
     {
         current_attack = get_attack();
-        c = attack_type[current_attack];
+        var c = attack_type[current_attack];
         current_behaviour = c[angry];
         attack_cooldown = -1;
     }
@@ -17,10 +15,8 @@ function boss_noise_decide_attack()
 
 function get_attack()
 {
-    var chance, c, minphase, p;
-    
-    chance = irandom(100) > 40;
-    c = states.normal;
+    var chance = irandom(100) > 40;
+    var c = states.normal;
     
     if (chance)
     {
@@ -28,8 +24,8 @@ function get_attack()
     }
     else
     {
-        minphase = !angry ? 0 : 6;
-        p = irandom(phase - 2);
+        varminphase = !angry ? 0 : 6;
+        var p = irandom(phase - 2);
         p = clamp(p, minphase, max_phase - 1);
         c = attack_pool[p][irandom(array_length(attack_pool[p]) - 1)];
     }
@@ -138,8 +134,8 @@ function noise_do_attack_normal()
         case states.jetpackspin:
             movespeed = 10;
             state = states.jetpackspin;
-            scr_soundeffect(12);
-            scr_soundeffect(99);
+            scr_soundeffect(sfx_jump);
+            scr_soundeffect(sfx_woosh);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
@@ -255,8 +251,8 @@ function noise_do_attack_angry()
             jumpcount = 1;
             movespeed = 10;
             state = states.jetpackspin;
-            scr_soundeffect(12);
-            scr_soundeffect(99);
+            scr_soundeffect(sfx_jump);
+            scr_soundeffect(sfx_woosh);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
@@ -268,8 +264,6 @@ function noise_do_attack_angry()
 
 function noise_behaviour_none()
 {
-    var targetspeed;
-    
     move = 0;
     
     if (distance_to_object(targetplayer) < 300)
@@ -283,7 +277,7 @@ function noise_behaviour_none()
     if (x != targetplayer.x)
         image_xscale = sign(targetplayer.x - x);
     
-    targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
+    var targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
     
     if (move != 0)
     {
@@ -319,9 +313,7 @@ function noise_behaviour_none()
 
 function noise_behaviour_close()
 {
-    var dx;
-    
-    dx = abs(targetplayer.x - x);
+    var dx = abs(targetplayer.x - x);
     move = (dx > 80) ? sign(targetplayer.x - x) : 0;
     hsp = move * movespeed;
     
@@ -373,15 +365,13 @@ function noise_behaviour_anywhere()
 
 function noise_behaviour_far()
 {
-    var dx, i;
-    
-    dx = abs(targetplayer.x - x);
+    var dx = abs(targetplayer.x - x);
     image_speed = 0.35;
     sprite_index = idlespr;
     
     if (dx < 200)
     {
-        i = 0;
+        var i = 0;
         
         while (current_behaviour == states.dynamite)
         {
@@ -677,11 +667,9 @@ function boss_noise_throwing()
 
 function boss_noise_pogo()
 {
-    var maxpogo, dx, tx;
-    
     image_speed = 0.35;
     hsp = image_xscale * movespeed;
-    maxpogo = !bombpogo ? 24 : 15;
+    var maxpogo = !bombpogo ? 24 : 15;
     
     if (movespeed < 6 && !grounded)
         movespeed += 0.5;
@@ -722,8 +710,8 @@ function boss_noise_pogo()
     
     if (bombpogo && vsp < 5 && !grounded)
     {
-        dx = abs(targetplayer.x - x);
-        tx = 64;
+        var dx = abs(targetplayer.x - x);
+        var tx = 64;
         
         if (dx < tx && !bombpogoinst)
         {
@@ -769,17 +757,15 @@ function boss_noise_jetpackstart()
 
 function boss_noise_jetpack()
 {
-    var maxjetpack, tx, dx;
-    
     image_speed = 0.5;
-    maxjetpack = 15;
+    var maxjetpack = 15;
     hsp = image_xscale * movespeed;
     
     if (movespeed > maxjetpack)
         movespeed -= 0.1;
     
     vsp = 0;
-    tx = (y != targetplayer.y) ? sign(targetplayer.y - y) : 0;
+    var tx = (y != targetplayer.y) ? sign(targetplayer.y - y) : 0;
     
     if (tx != 0)
         vsp = 3 * tx;
@@ -801,13 +787,13 @@ function boss_noise_jetpack()
     
     if (jetpackcancel)
     {
-        dx = abs(targetplayer.x - x);
+        var dx = abs(targetplayer.x - x);
         
         if (dx < 200)
         {
             state = states.jetpackspin;
-            scr_soundeffect(12);
-            scr_soundeffect(99);
+            scr_soundeffect(sfx_jump);
+            scr_soundeffect(sfx_woosh);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;
@@ -819,11 +805,9 @@ function boss_noise_jetpack()
 
 function boss_noise_jetpackspin()
 {
-    var dx;
-    
     image_speed = 0.35;
     move = 0;
-    dx = abs(targetplayer.x - x);
+    var dx = abs(targetplayer.x - x);
     
     if (dx > 16)
         move = sign(targetplayer.x - x);
@@ -857,8 +841,8 @@ function boss_noise_jetpackspin()
             jumpcount--;
             movespeed = 10;
             state = states.jetpackspin;
-            scr_soundeffect(12);
-            scr_soundeffect(99);
+            scr_soundeffect(sfx_jump);
+            scr_soundeffect(sfx_woosh);
             vsp = -15;
             sprite_index = spr_playerN_noisebombspinjump;
             image_index = 0;

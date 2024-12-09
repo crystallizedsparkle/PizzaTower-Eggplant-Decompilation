@@ -70,7 +70,7 @@ function scr_player_shotgunjump()
     
     if (key_slap2)
     {
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_killingblow);
         
         if (!key_down)
         {

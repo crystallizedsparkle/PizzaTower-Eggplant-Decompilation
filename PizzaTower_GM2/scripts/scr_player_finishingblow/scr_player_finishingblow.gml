@@ -17,8 +17,8 @@ function scr_player_finishingblow()
     if (floor(image_index) == 0 && !instance_exists(obj_swordhitbox))
     {
         GamepadSetVibration((object_index == obj_player1) ? 0 : 1, 0.8, 0.8, 0.65);
-        scr_soundeffect(46);
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_punch);
+        scr_soundeffect(sfx_killingblow);
         
         with (instance_create(x, y, obj_swordhitbox))
             playerid = other.object_index;

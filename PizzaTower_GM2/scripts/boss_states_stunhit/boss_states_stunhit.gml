@@ -1,7 +1,5 @@
 function state_boss_stun()
 {
-    var mv;
-    
     stunned -= 1;
     
     if (stuntouchbuffer > 0)
@@ -12,7 +10,7 @@ function state_boss_stun()
     
     if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0)
     {
-        if (thrown == true && hp <= 0 && destroyable)
+        if (thrown && hp <= 0 && destroyable)
             instance_destroy();
         
         grav = 0.5;
@@ -29,12 +27,12 @@ function state_boss_stun()
         particle_set_scale(particles.impact, -image_xscale, 1);
         create_particle(x, y, particles.impact, 0);
         
-        if (thrown == true && hp <= 0 && destroyable)
+        if (thrown && hp <= 0 && destroyable)
             instance_destroy();
         
         grav = 0.5;
         image_xscale *= -1;
-        mv = movespeed;
+        var mv = movespeed;
         hsp = -image_xscale * mv;
     }
     

@@ -17,33 +17,31 @@ function tv_reset()
     }
 }
 
-function tv_create_prompt(argument0, argument1, argument2, argument3)
+function tv_create_prompt(_str, _type, _spr, _txtspd)
 {
-    return [argument0, argument1, argument2, argument3];
+    return [_str, _type, _spr, _txtspd];
 }
 
-function tv_push_prompt(argument0, argument1, argument2, argument3)
+function tv_push_prompt(_str, _type, _spr, _txtspd)
 {
-    var b, play, placed, i, b2;
-    
     with (obj_tv)
     {
-        b = [argument0, argument1, argument2, argument3];
-        play = false;
+        var b = [_str, _type, _spr, _txtspd];
+        var play = false;
         
-        switch (argument1)
+        switch (_type)
         {
-            case states.normal:
+            case tvprompt_type.normal:
                 play = true;
                 ds_list_insert(tvprompts_list, 0, b);
                 break;
             
-            case states.revolver:
-                placed = false;
+            case tvprompt_type.touch_trigger:
+                var placed = false;
                 
-                for (i = 0; i < ds_list_size(tvprompts_list); i++)
+                for (var i = 0; i < ds_list_size(tvprompts_list); i++)
                 {
-                    b2 = ds_list_find_value(tvprompts_list, i);
+                    var b2 = ds_list_find_value(tvprompts_list, i);
                     
                     if (b2[1] == tvprompt_type.transformation)
                     {
@@ -71,40 +69,36 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
     }
 }
 
-function tv_push_prompt_array(argument0)
+function tv_push_prompt_array(_arr)
 {
-    var i, b;
-    
-    for (i = 0; i < array_length(argument0); i++)
+    for (var i = 0; i < array_length(_arr); i++)
     {
         with (obj_tv)
         {
-            b = argument0[i];
+            var b = _arr[i];
             tv_push_prompt(b[0], b[1], b[2], b[3]);
         }
     }
 }
 
-function tv_push_prompt_once(argument0, argument1)
+function tv_push_prompt_once(_arr, _entry)
 {
-    var b;
-    
     with (obj_tv)
     {
-        if (special_prompts == -4)
+        if (special_prompts == noone)
             return false;
         
-        b = ds_map_find_value(special_prompts, argument1);
+        var b = ds_map_find_value(special_prompts, _entry);
         
         if (is_undefined(b))
             return false;
         
         if (b != 1)
         {
-            tv_push_prompt(argument0[0], argument0[1], argument0[2], argument0[3]);
-            ds_map_set(special_prompts, argument1, 1);
+            tv_push_prompt(_arr[0], _arr[1], _arr[2], _arr[3]);
+            ds_map_set(special_prompts, _entry, 1);
             ini_open_from_string(obj_savesystem.ini_str);
-            ini_write_real("Prompts", argument1, 1);
+            ini_write_real("Prompts", _entry, 1);
             obj_savesystem.ini_str = ini_close();
             return true;
         }
@@ -118,28 +112,28 @@ function tv_default_condition()
     return place_meeting(x, y, obj_player);
 }
 
-function tv_do_expression(argument0)
+function tv_do_expression(_spr)
 {
     with (obj_tv)
     {
-        if (expressionsprite != argument0 && bubblespr == -4)
+        if (expressionsprite != _spr && bubblespr == noone)
         {
             state = states.tv_whitenoise;
-            expressionsprite = argument0;
+            expressionsprite = _spr;
             sprite_index = spr_tv_whitenoise;
             
             switch (expressionsprite)
             {
-                case 1319:
-                case 1497:
+                case spr_tv_exprhurt:
+                case spr_tv_hurtG:
                     expressionbuffer = 60;
                     break;
                 
-                case 731:
+                case spr_tv_exprcollect:
                     expressionbuffer = 150;
                     
                     if (obj_player.isgustavo)
-                        expressionsprite = 263;
+                        expressionsprite = spr_tv_happyG;
                     
                     break;
             }

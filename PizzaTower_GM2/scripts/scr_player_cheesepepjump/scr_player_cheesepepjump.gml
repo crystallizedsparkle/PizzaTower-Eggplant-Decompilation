@@ -36,7 +36,7 @@ function scr_player_cheesepepjump()
         xscale = sign(movespeed);
         
         repeat (3)
-            create_debris(x + (xscale * 30), y + random_range(-8, 8), 2814);
+            create_debris(x + (xscale * 30), y + random_range(-8, 8), spr_cheesechunk);
         
         movespeed = 0;
     }
@@ -44,7 +44,7 @@ function scr_player_cheesepepjump()
     if (grounded)
     {
         repeat (3)
-            create_debris(x + random_range(-8, 8), y + 43, 2814);
+            create_debris(x + random_range(-8, 8), y + 43, spr_cheesechunk);
         
         state = states.cheesepep;
         sprite_index = spr_cheesepepland;

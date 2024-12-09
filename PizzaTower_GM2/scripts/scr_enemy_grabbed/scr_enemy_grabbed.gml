@@ -1,10 +1,8 @@
 function scr_enemy_grabbed()
 {
-    var _obj_player, lag, _player;
-    
     if (!pepperman_grab)
     {
-        _obj_player = asset_get_index(concat("obj_player", grabbedby));
+        var _obj_player = asset_get_index(concat("obj_player", grabbedby));
         image_xscale = -_obj_player.xscale;
         stunned = 200;
         _obj_player.baddiegrabbedID = id;
@@ -176,7 +174,7 @@ function scr_enemy_grabbed()
         if (_obj_player.state == states.finishingblow && (floor(_obj_player.image_index) >= 4 || (floor(_obj_player.image_index) < 1 && _obj_player.sprite_index == _obj_player.spr_swingdingend)))
         {
             thrown = true;
-            lag = 5;
+            var lag = 5;
             hitLag = lag;
             hitX = x;
             hitY = y;
@@ -498,7 +496,7 @@ function scr_enemy_grabbed()
     
     if (pepperman_grab)
     {
-        _player = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
+        var _player = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
         image_xscale = _player.xscale;
         
         if (!thrown)
@@ -518,7 +516,7 @@ function scr_enemy_grabbed()
             vsp = -6;
             _player.sprite_index = spr_pepperman_throw;
             _player.image_index = 0;
-            _player.pepperman_grabID = -4;
+            _player.pepperman_grabID = noone;
         }
         
         if (_player.key_attack && _player.key_up)
@@ -533,12 +531,12 @@ function scr_enemy_grabbed()
             vsp = -20;
             _player.sprite_index = spr_pepperman_throw;
             _player.image_index = 0;
-            _player.pepperman_grabID = -4;
+            _player.pepperman_grabID = noone;
         }
         
         if (_player.state != states.normal && _player.state != states.jump)
         {
-            _player.pepperman_grabID = -4;
+            _player.pepperman_grabID = noone;
             state = states.stun;
             pepperman_grab = false;
         }
@@ -550,20 +548,18 @@ function scr_enemy_grabbed()
 
 function check_grabbed_solid(argument0)
 {
-    var _dist, i;
-    
     if (instakilled)
         exit;
     
-    if (!place_meeting(x, y, obj_destructibles) && (scr_solid(x, y) || collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != -4))
+    if (!place_meeting(x, y, obj_destructibles) && (scr_solid(x, y) || collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != noone))
     {
-        _dist = abs(x - obj_player.x);
+        var _dist = abs(x - obj_player.x);
         x = argument0.x;
         y = argument0.y;
         
         if (!scr_solid(x + argument0.xscale, y))
         {
-            i = 0;
+            var i = 0;
             
             while (!scr_solid(x + argument0.xscale, y))
             {

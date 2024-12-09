@@ -1,10 +1,8 @@
 function scr_enemy_lungeattack()
 {
-    var _l;
-    
     hsp = -image_xscale * 4;
     vsp = 0;
-    _l = false;
+    var _l = false;
     
     with (obj_player)
     {

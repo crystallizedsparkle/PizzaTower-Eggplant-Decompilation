@@ -1,11 +1,9 @@
-function cutscene_set_sprite(argument0, argument1, argument2, argument3)
+function cutscene_set_sprite(_object_index, _sprite_index, _image_speed, _image_xscale)
 {
-    var _obj, _spr, _spd, _xscale;
-    
-    _obj = argument0;
-    _spr = argument1;
-    _spd = argument2;
-    _xscale = argument3;
+    var _obj = _object_index;
+    var _spr = _sprite_index;
+    var _spd = _image_speed;
+    var _xscale = _image_xscale;
     
     with (_obj)
     {

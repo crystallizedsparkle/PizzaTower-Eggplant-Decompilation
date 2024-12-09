@@ -1,29 +1,27 @@
-function scr_destroy_tiles(argument0, argument1, argument2 = 0)
+function scr_destroy_tiles(_tile_size, _tile_layer, _spread = 0)
 {
-    var lay_id, map_id, w, h, ix, iy, yy, xx;
-    
-    lay_id = layer_get_id(argument1);
+    var lay_id = layer_get_id(_tile_layer);
     
     if (lay_id != -1)
     {
-        map_id = layer_tilemap_get_id(lay_id);
-        w = abs(sprite_width) / argument0;
-        h = abs(sprite_height) / argument0;
-        ix = sign(image_xscale);
-        iy = sign(image_yscale);
+        var map_id = layer_tilemap_get_id(lay_id);
+        var w = abs(sprite_width) / _tile_size;
+        var h = abs(sprite_height) / _tile_size;
+        var ix = sign(image_xscale);
+        var iy = sign(image_yscale);
         
         if (ix < 0)
             w++;
         
-        yy = 0 - argument2;
+        var yy = 0 - _spread;
         
-        while (yy < (h + argument2))
+        while (yy < (h + _spread))
         {
-            xx = 0 - argument2;
+            var xx = 0 - _spread;
             
-            while (xx < (w + argument2))
+            while (xx < (w + _spread))
             {
-                scr_destroy_tile(x + (xx * argument0 * ix), y + (yy * argument0 * iy), map_id);
+                scr_destroy_tile(x + (xx * _tile_size * ix), y + (yy * _tile_size * iy), map_id);
                 xx++;
             }
             
@@ -32,21 +30,19 @@ function scr_destroy_tiles(argument0, argument1, argument2 = 0)
     }
 }
 
-function scr_destroy_tile(argument0, argument1, argument2)
+function scr_destroy_tile(_x, _y, _tilemap)
 {
-    var data;
-    
-    data = tilemap_get_at_pixel(argument2, argument0, argument1);
+    var data = tilemap_get_at_pixel(_tilemap, _x, _y);
     data = tile_set_empty(data);
-    tilemap_set_at_pixel(argument2, data, argument0, argument1);
+    tilemap_set_at_pixel(_tilemap, data, _x, _y);
 }
 
-function scr_solid_line(argument0)
+function scr_solid_line(_obj)
 {
-    if (collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != -4)
+    if (collision_line(x, y, _obj.x, _obj.y, obj_solid, false, true) != noone)
         return true;
     
-    if (collision_line(x, y, argument0.x, argument0.y, obj_slope, false, true) != -4)
+    if (collision_line(x, y, _obj.x, _obj.y, obj_slope, false, true) != noone)
         return true;
     
     return false;

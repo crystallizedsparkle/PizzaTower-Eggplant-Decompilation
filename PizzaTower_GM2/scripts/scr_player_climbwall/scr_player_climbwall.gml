@@ -15,7 +15,7 @@ function scr_player_climbwall()
             
             if (wallspeed < 0)
             {
-                if (mach4mode == false)
+                if (!mach4mode)
                     movespeed += 0.2;
                 else
                     movespeed += 0.4;
@@ -43,7 +43,7 @@ function scr_player_climbwall()
                 if (!skateboarding)
                 {
                     sprite_index = spr_superjumpland;
-                    scr_soundeffect(27);
+                    scr_soundeffect(sfx_groundpound);
                     image_index = 0;
                     state = states.Sjumpland;
                     machhitAnim = false;
@@ -131,7 +131,7 @@ function scr_player_climbwall()
             if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x - sign(hsp), y, obj_slope))
             {
                 sprite_index = spr_superjumpland;
-                scr_soundeffect(27);
+                scr_soundeffect(sfx_groundpound);
                 image_index = 0;
                 state = states.Sjumpland;
                 machhitAnim = false;

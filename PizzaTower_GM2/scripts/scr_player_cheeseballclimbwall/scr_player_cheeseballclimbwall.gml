@@ -5,7 +5,7 @@ function scr_player_cheeseballclimbwall()
     
     if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x - sign(hsp), y, obj_slope))
     {
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         movespeed = 0;
         cheesepeptimer = 2;
@@ -13,7 +13,7 @@ function scr_player_cheeseballclimbwall()
         sprite_index = spr_cheesepepfall;
         
         repeat (8)
-            create_debris(x + random_range(-8, 8), y + random_range(-8, 8), 2814);
+            create_debris(x + random_range(-8, 8), y + random_range(-8, 8), spr_cheesechunk);
     }
     
     wallspeed = Approach(wallspeed, 12, 1);
@@ -37,12 +37,12 @@ function scr_player_cheeseballclimbwall()
         state = states.cheeseball;
         
         repeat (4)
-            create_debris(x + (xscale * 30), y + random_range(-8, 8), 1136);
+            create_debris(x + (xscale * 30), y + random_range(-8, 8), spr_slimedebris);
         
         xscale *= -1;
     }
     
     if (grounded && (floor(image_index) % 4) == 0)
-        create_debris(x + (xscale * 30), y, 1136);
+        create_debris(x + (xscale * 30), y, spr_slimedebris);
 }
 

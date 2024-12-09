@@ -15,7 +15,7 @@ function following_character_init()
     vsp = 0;
     hsp_carry = 0;
     vsp_carry = 0;
-    platformid = -4;
+    platformid = noone;
     grav = 0.5;
     grounded = false;
     use_collision = false;
@@ -24,21 +24,19 @@ function following_character_init()
 
 function following_character_delete()
 {
-    var p, _id;
-    
-    p = ds_list_find_index(global.followerlist, id);
+    var p = ds_list_find_index(global.followerlist, id);
     
     if (p != -1)
     {
         ds_list_delete(global.followerlist, p);
-        _id = id;
+        var _id = id;
         
         with (obj_followcharacter)
         {
             if (id != _id)
             {
                 pos = ds_list_find_index(global.followerlist, id);
-                followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
+                followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : noone;
             }
         }
     }
@@ -49,7 +47,7 @@ function following_character_calculate()
     with (obj_followcharacter)
     {
         pos = ds_list_find_index(global.followerlist, id);
-        followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
+        followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : noone;
     }
 }
 
@@ -60,7 +58,7 @@ function following_add_to_front()
     
     ds_list_insert(global.followerlist, 0, id);
     pos = ds_list_find_index(global.followerlist, id);
-    followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
+    followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : noone;
     following_character_calculate();
 }
 
@@ -73,32 +71,28 @@ function farmer_rearrange()
     }
 }
 
-function following_has_follower(argument0)
+function following_has_follower(_obj)
 {
-    var i, b;
-    
-    for (i = 0; i < ds_list_size(global.followerlist); i++)
+    for (var i = 0; i < ds_list_size(global.followerlist); i++)
     {
-        b = ds_list_find_value(global.followerlist, i);
+        var b = ds_list_find_value(global.followerlist, i);
         
-        if (instance_exists(b) && b.object_index == argument0)
+        if (instance_exists(b) && b.object_index == _obj)
             return true;
     }
     
     return false;
 }
 
-function following_count(argument0)
+function following_count(_obj)
 {
-    var n, i, b;
+    var n = 0;
     
-    n = 0;
-    
-    for (i = 0; i < ds_list_size(global.followerlist); i++)
+    for (var i = 0; i < ds_list_size(global.followerlist); i++)
     {
-        b = ds_list_find_value(global.followerlist, i);
+        var b = ds_list_find_value(global.followerlist, i);
         
-        if (instance_exists(b) && b.object_index == argument0)
+        if (instance_exists(b) && b.object_index == _obj)
             n++;
     }
     

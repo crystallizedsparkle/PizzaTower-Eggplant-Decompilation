@@ -1,7 +1,5 @@
 function scr_noise_walk()
 {
-    var t, b, q;
-    
     hsp = 0;
     
     if (sprite_index != spr_playerN_land)
@@ -42,7 +40,7 @@ function scr_noise_walk()
         else
         {
             attackbuffer = 80 - (wastedhits * 10);
-            t = false;
+            var t = false;
             
             with (obj_brickcomeback)
             {
@@ -60,8 +58,8 @@ function scr_noise_walk()
                     case states.turn:
                         if (!instance_exists(obj_noisetrap_crosshair) && instance_exists(obj_noisetrap))
                         {
-                            b = -4;
-                            q = false;
+                            var b = noone;
+                            var q = false;
                             
                             with (obj_noisetrap)
                             {
@@ -116,19 +114,17 @@ function scr_noise_punch()
     }
 }
 
-function scr_noise_do_jump(argument0 = true)
+function scr_noise_do_jump(_change_state = true)
 {
-    var found, nearest, b, d;
-    
-    found = false;
-    nearest = room_width * room_height;
-    b = -4;
+    var found = false;
+    var nearest = room_width * room_height;
+    var b = noone;
     
     with (obj_noise_pogospot)
     {
         if (!instance_exists(trapID) && other.oldtargetspot != id && other.targetspot != id)
         {
-            d = distance_to_object(other);
+            var d = distance_to_object(other);
             
             if (d < nearest)
             {
@@ -142,7 +138,7 @@ function scr_noise_do_jump(argument0 = true)
     if (!found)
     {
         do
-            targetspot = instance_nearest_random(163, 2);
+            targetspot = instance_nearest_random(obj_noise_pogospot, 2);
         until (targetspot != oldtargetspot && targetspot != undefined);
     }
     else
@@ -162,7 +158,7 @@ function scr_noise_do_jump(argument0 = true)
     if (hsp != 0)
         image_xscale = sign(hsp);
     
-    if (argument0)
+    if (_change_state)
     {
         state = states.jump;
         sprite_index = spr_playerN_jump;
@@ -268,8 +264,6 @@ function scr_noise_shield()
 
 function scr_noise_pistol()
 {
-    var b;
-    
     switch (substate)
     {
         case states.shotgun:
@@ -284,7 +278,7 @@ function scr_noise_pistol()
         
         case states.idle:
             sprite_index = spr_playerN_minigunidle;
-            b = -4;
+            var b = noone;
             
             with (obj_player)
             {
@@ -295,7 +289,7 @@ function scr_noise_pistol()
             if (cooldown > 0)
                 cooldown--;
             
-            if (b != -4 && cooldown <= 0)
+            if (b != noone && cooldown <= 0)
             {
                 cooldown = 80;
                 shoot_buffer = 1;
@@ -319,7 +313,7 @@ function scr_noise_pistol()
             {
                 shoot_buffer = 6;
                 shoot_count--;
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
                 
                 with (instance_create(x + (image_xscale * 32), y + 10, obj_enemybullet))
                 {

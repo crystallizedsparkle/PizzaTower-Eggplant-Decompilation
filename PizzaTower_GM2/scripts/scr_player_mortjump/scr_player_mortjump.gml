@@ -55,7 +55,7 @@ function scr_player_mortjump()
             image_index = 0;
             doublejump = false;
             jumpstop = false;
-            scr_soundeffect(12);
+            scr_soundeffect(sfx_jump);
             create_particle(x, y, particles.jumpdust, 0);
         }
         else
@@ -68,7 +68,7 @@ function scr_player_mortjump()
     }
     else if (!doublejump && key_jump)
     {
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         jumpstop = false;
         input_buffer_jump = 8;
         doublejump = true;
@@ -78,7 +78,7 @@ function scr_player_mortjump()
         vsp = -11;
         
         repeat (4)
-            create_debris(x, y, 1149);
+            create_debris(x, y, spr_feather);
     }
     
     mort_attack();

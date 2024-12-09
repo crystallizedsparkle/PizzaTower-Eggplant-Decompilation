@@ -12,7 +12,7 @@ function scr_player_ratmountgroundpound()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (brick == true)
+    if (brick)
     {
         state = states.ratmountjump;
         sprite_index = spr_player_ratmountfall;
@@ -70,7 +70,7 @@ function scr_player_ratmountgroundpound()
             if (move != 0)
                 movespeed = xscale * 3;
             
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             sprite_index = spr_lonegustavo_groundpoundland;
             image_index = 0;
             jumpAnim = true;

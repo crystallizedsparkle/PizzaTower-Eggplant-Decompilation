@@ -10,8 +10,6 @@ function boss_pepperman_decide_attack()
 
 function pepperman_decide_attack_phase6()
 {
-    var fakephase;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
@@ -27,7 +25,7 @@ function pepperman_decide_attack_phase6()
         
         if (state != states.superattackstart)
         {
-            fakephase = irandom(100);
+            var fakephase = irandom(100);
             
             if (fakephase > 60)
             {
@@ -51,8 +49,6 @@ function pepperman_decide_attack_phase6()
 
 function pepperman_decide_attack_phase5()
 {
-    var d, t, jump_spd;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
@@ -88,9 +84,9 @@ function pepperman_decide_attack_phase5()
             groundpound_readjust = choose(1, 2);
             target_x = targetplayer.x;
             vsp = -18;
-            d = abs(targetplayer.x - x);
-            t = room_speed * 2;
-            jump_spd = ceil(get_velocity(d, t)) * 3;
+            var d = abs(targetplayer.x - x);
+            var t = room_speed * 2;
+            var jump_spd = ceil(get_velocity(d, t)) * 3;
             hsp = (target_x != x) ? (sign(target_x - x) * jump_spd) : (image_xscale * jump_spd);
             
             if (hsp != 0)
@@ -104,8 +100,6 @@ function pepperman_decide_attack_phase5()
 
 function pepperman_decide_attack_phase1()
 {
-    var chance_shoulder, chance_jumping, chance_fakeout, d, t, jump_spd, tx;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
@@ -114,7 +108,7 @@ function pepperman_decide_attack_phase1()
     {
         targetstunned = 0;
         attack_cooldown = attack_max[phase - 1];
-        chance_shoulder = 45 - ((5 * phase) - 1);
+        var chance_shoulder = 45 - ((5 * phase) - 1);
         state = (irandom(100) > chance_shoulder) ? states.shoulderbash : states.jump;
         shoulderpound_fakeout = (phase == 4) ? true : false;
         superjumping_pepper = (phase == 4) ? true : false;
@@ -127,8 +121,8 @@ function pepperman_decide_attack_phase1()
         
         if (phase > 1)
         {
-            chance_jumping = (phase == 2) ? 50 : 35;
-            chance_fakeout = (phase == 2) ? 60 : 50;
+            var chance_jumping = (phase == 2) ? 50 : 35;
+            var chance_fakeout = (phase == 2) ? 60 : 50;
             jumping_pepper = (irandom(100) > chance_jumping) ? true : false;
             shoulderbash_fakeout = (irandom(100) > chance_fakeout) ? true : false;
             
@@ -160,17 +154,17 @@ function pepperman_decide_attack_phase1()
             
             if (!jumping_pepper)
             {
-                d = abs(targetplayer.x - x);
-                t = room_speed * 2;
-                jump_spd = ceil(get_velocity(d, t)) * 3;
+                var d = abs(targetplayer.x - x);
+                var t = room_speed * 2;
+                var jump_spd = ceil(get_velocity(d, t)) * 3;
                 hsp = (target_x != x) ? (sign(target_x - x) * jump_spd) : (image_xscale * jump_spd);
             }
             else
             {
-                tx = (x < (room_width / 2)) ? (room_width - (room_width / 5)) : (room_width / 5);
-                d = abs(tx - x);
-                t = room_speed * 1.2;
-                jump_spd = ceil(get_velocity(d, t));
+                var tx = (x < (room_width / 2)) ? (room_width - (room_width / 5)) : (room_width / 5);
+                var d = abs(tx - x);
+                var t = room_speed * 1.2;
+                var jump_spd = ceil(get_velocity(d, t));
                 hsp = (x > (room_width / 2)) ? -jump_spd : jump_spd;
             }
             
@@ -185,14 +179,12 @@ function pepperman_decide_attack_phase1()
 
 function boss_pepperman_normal()
 {
-    var is_middle, is_middle_player, is_playerside;
-    
     image_speed = 0.35;
     
     if (targetplayer.state != states.thrown)
     {
-        is_middle = x > (room_width / 5) && x < (room_width - (room_width / 5));
-        is_middle_player = targetplayer.x > (room_width / 5) && targetplayer.x < (room_width - (room_width / 5));
+        var is_middle = x > (room_width / 5) && x < (room_width - (room_width / 5));
+        var is_middle_player = targetplayer.x > (room_width / 5) && targetplayer.x < (room_width - (room_width / 5));
         
         if (is_middle && hsp == 0)
         {
@@ -209,7 +201,7 @@ function boss_pepperman_normal()
     }
     else
     {
-        is_playerside = (targetplayer.x > (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
+        var is_playerside = (targetplayer.x > (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
         
         if (is_playerside)
         {
@@ -268,16 +260,14 @@ function boss_pepperman_phase3normal()
 
 function boss_pepperman_jump()
 {
-    var col, col2;
-    
     image_speed = 0.35;
     
     if (sprite_index == spr_pepperman_jump && image_index > (image_number - 1))
         sprite_index = spr_pepperman_fall;
     
-    col = collision_line(x, y, x, y + 96, obj_solid, false, true);
+    var col = collision_line(x, y, x, y + 96, obj_solid, false, true);
     
-    if (!jumping_pepper && !groundpound_fakeout && col == -4 && ((x > (target_x - 24) && x < (target_x + 24)) || (x > (targetplayer.x - 24) && x < (targetplayer.x + 24)) || vsp > 3))
+    if (!jumping_pepper && !groundpound_fakeout && col == noone && ((x > (target_x - 24) && x < (target_x + 24)) || (x > (targetplayer.x - 24) && x < (targetplayer.x + 24)) || vsp > 3))
     {
         state = states.freefallprep;
         vsp = 10;
@@ -288,9 +278,9 @@ function boss_pepperman_jump()
     
     if (groundpound_fakeout && (vsp > 3 || (x > (target_x - 24) && x < (target_x + 24))))
     {
-        col2 = collision_line(x, y, x, y + 148, obj_solid, false, true);
+        var col2 = collision_line(x, y, x, y + 148, obj_solid, false, true);
         
-        if (col2 == -4)
+        if (col2 == noone)
         {
             groundpound_readjust_buffer = groundpound_readjust_max;
             readjusting = true;
@@ -402,8 +392,6 @@ function boss_pepperman_freefallland()
 
 function boss_pepperman_shoulderbash()
 {
-    var d, t, jump_spd;
-    
     image_speed = 0.35;
     
     if (sprite_index == spr_pepperman_shoulderstart && image_index > (image_number - 1))
@@ -449,9 +437,9 @@ function boss_pepperman_shoulderbash()
             target_x = targetplayer.x;
             vsp = -18;
             jumping_pepper = false;
-            d = abs(targetplayer.x - x);
-            t = room_speed * 2;
-            jump_spd = ceil(get_velocity(d, t)) * 3;
+            var d = abs(targetplayer.x - x);
+            var t = room_speed * 2;
+            var jump_spd = ceil(get_velocity(d, t)) * 3;
             hsp = (target_x != x) ? (sign(target_x - x) * jump_spd) : (image_xscale * jump_spd);
             
             if (hsp != 0)
@@ -561,8 +549,6 @@ function boss_pepperman_shoulderturn()
 
 function boss_pepperman_superattackstart()
 {
-    var _spd, edge, tx;
-    
     hsp = 0;
     vsp = 0;
     
@@ -572,9 +558,9 @@ function boss_pepperman_superattackstart()
         image_index = 0;
     }
     
-    _spd = 12;
-    edge = 32;
-    tx = (x > (room_width / 2)) ? (room_width - edge) : edge;
+    var _spd = 12;
+    var edge = 32;
+    var tx = (x > (room_width / 2)) ? (room_width - edge) : edge;
     x = Approach(x, tx, 8);
     y = Approach(y, targetplayer.y, _spd);
     image_xscale = (x > (room_width / 2)) ? 1 : -1;
@@ -589,11 +575,9 @@ function boss_pepperman_superattackstart()
 
 function boss_pepperman_superattackcharge()
 {
-    var _spd;
-    
     hsp = 0;
     vsp = 0;
-    _spd = 12;
+    var _spd = 12;
     y = Approach(y, targetplayer.y, _spd);
     
     if (superattack_buffer > 0)
@@ -610,11 +594,9 @@ function boss_pepperman_superattackcharge()
 
 function boss_pepperman_superslam()
 {
-    var ss_spd, d;
-    
     image_speed = 0.35;
-    ss_spd = 16;
-    d = point_direction(x, y, targetplayer.x, targetplayer.y);
+    var ss_spd = 16;
+    var d = point_direction(x, y, targetplayer.x, targetplayer.y);
     hsp = lengthdir_x(ss_spd, d);
     vsp = lengthdir_y(ss_spd, d);
     
@@ -624,8 +606,6 @@ function boss_pepperman_superslam()
 
 function boss_pepperman_fistmatch()
 {
-    var lag;
-    
     x = hitX;
     y = hitY;
     hsp = 0;
@@ -640,7 +620,7 @@ function boss_pepperman_fistmatch()
         obj_bosscontroller.player_hp -= fist_dmg;
         sprite_index = spr_pepperman_shoulderstart;
         fist_buffer = fist_max;
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_killingblow);
         
         with (obj_camera)
         {
@@ -675,7 +655,7 @@ function boss_pepperman_fistmatch()
             {
                 if (key_slap2)
                 {
-                    scr_soundeffect(26);
+                    scr_soundeffect(sfx_killingblow);
                     
                     with (obj_camera)
                     {
@@ -708,7 +688,7 @@ function boss_pepperman_fistmatch()
     }
     else
     {
-        lag = 20;
+        var lag = 20;
         
         with (lastplayerid)
         {
@@ -733,10 +713,8 @@ function boss_pepperman_fistmatch()
 
 function boss_pepperman_fistmatchend()
 {
-    var c;
-    
     state_boss_arenaround();
-    c = false;
+    var c = false;
     
     with (obj_player)
     {

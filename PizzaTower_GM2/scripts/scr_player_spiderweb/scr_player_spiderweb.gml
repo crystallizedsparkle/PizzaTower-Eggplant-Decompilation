@@ -30,7 +30,7 @@ function scr_player_spiderweb()
         sprite_index = spr_jump;
         image_index = 0;
         jumpAnim = true;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
     }
 }
 

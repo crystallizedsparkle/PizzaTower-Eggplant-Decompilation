@@ -29,13 +29,13 @@ function scr_player_pogo()
     
     if (grounded && !key_slap2 && (sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach))
     {
-        scr_soundeffect(97);
+        scr_soundeffect(sfx_Npogo3);
         pogospeedprev = false;
         image_index = 0;
         movespeed = 0;
         vsp = 0;
         
-        if (pogochargeactive == true)
+        if (pogochargeactive)
             sprite_index = spr_playerN_pogobouncemach;
         else
             sprite_index = spr_playerN_pogobounce;
@@ -43,7 +43,7 @@ function scr_player_pogo()
         create_particle(x, y, particles.landcloud, 0);
     }
     
-    if (floor(image_index) == 3 && pogospeedprev == false && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach))
+    if (floor(image_index) == 3 && !pogospeedprev && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach))
     {
         if (key_jump2)
             vsp = -12;
@@ -64,13 +64,13 @@ function scr_player_pogo()
     
     if (floor(image_index) == (image_number - 1) && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogofallmach || sprite_index == spr_playerN_pogobouncemach || sprite_index == spr_playerN_pogostart))
     {
-        if (pogochargeactive == true)
+        if (pogochargeactive)
             sprite_index = spr_playerN_pogofallmach;
         else
             sprite_index = spr_playerN_pogofall;
     }
     
-    if (pogospeed > 12 && pogochargeactive == false)
+    if (pogospeed > 12 && !pogochargeactive)
     {
         pogochargeactive = true;
         pogocharge = 100;
@@ -87,14 +87,14 @@ function scr_player_pogo()
     
     if (key_taunt2 && sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach)
     {
-        scr_soundeffect(84);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;
         tauntstoredstate = state;
         state = states.backbreaker;
         
-        if (supercharged == true)
+        if (supercharged)
         {
             image_index = 0;
             sprite_index = choose(spr_supertaunt1, spr_supertaunt2, spr_supertaunt3, spr_supertaunt4);

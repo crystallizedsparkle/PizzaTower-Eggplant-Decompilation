@@ -1,13 +1,11 @@
 function scr_enemy_chase()
 {
-    var targetplayer, _railinst;
-    
     if (object_index == obj_minijohn || object_index == obj_banditochicken || object_index == obj_golfdemon)
     {
-        targetplayer = 324;
+        var targetplayer = obj_player1;
         
-        if (obj_player1.spotlight == false)
-            targetplayer = 323;
+        if (!obj_player1.spotlight)
+            var targetplayer = obj_player1;
         
         if (x != targetplayer.x && !(image_xscale == -sign(x - targetplayer.x)))
         {
@@ -44,7 +42,7 @@ function scr_enemy_chase()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp += (_railinst.movespeed * _railinst.dir);
     }
 }

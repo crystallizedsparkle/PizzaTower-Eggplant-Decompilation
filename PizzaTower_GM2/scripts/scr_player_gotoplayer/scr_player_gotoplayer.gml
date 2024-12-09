@@ -1,18 +1,16 @@
 function scr_player_gotoplayer()
 {
-    var _dir, t;
-    
     pogochargeactive = false;
     movespeed = 0;
     visible = false;
     
     if (!instance_exists(obj_coopplayerfollow))
     {
-        playerid = (object_index == obj_player2) ? 324 : 323;
-        _dir = point_direction(x, y, playerid.x, playerid.y);
+        playerid = (object_index == obj_player2) ? obj_player1 : obj_player2;
+        var _dir = point_direction(x, y, playerid.x, playerid.y);
         hsp = lengthdir_x(16, _dir);
         vsp = lengthdir_y(16, _dir);
-        t = 16;
+        var t = 16;
         
         repeat (8)
             create_particle(x + irandom_range(-t, t), y + irandom_range(-t, t), particles.cloudeffect, 0);

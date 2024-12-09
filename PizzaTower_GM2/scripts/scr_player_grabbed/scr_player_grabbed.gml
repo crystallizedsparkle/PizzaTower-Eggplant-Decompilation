@@ -1,15 +1,13 @@
 function scr_player_grabbed()
-{
-    var _obj_player;
+{   
+    var _obj_player = (object_index == obj_player2) ? obj_player1 : obj_player2;
     
-    _obj_player = (object_index == obj_player2) ? 324 : 323;
-    
-    if (fightball == false)
+    if (!fightball)
         xscale = -_obj_player.xscale;
     
     _obj_player.baddiegrabbedID = id;
     
-    if (_obj_player.state == states.mach3 && fightball == true)
+    if (_obj_player.state == states.mach3 && fightball)
     {
         x = _obj_player.x;
         y = _obj_player.y;
@@ -59,7 +57,7 @@ function scr_player_grabbed()
         
         if (!(state == states.grab || (state == states.mach3 && fightball == true) || (state == states.ratmount || state == states.ratmountattack || state == states.ratmountjump || state == states.ratmountspit) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
         {
-            baddiegrabbedID = 523;
+            baddiegrabbedID = obj_null;
             other.x = _obj_player.x;
             other.y = _obj_player.y;
             other.state = states.hurt;
@@ -105,7 +103,7 @@ function scr_player_grabbed()
         
         state = states.hurt;
         
-        if (scr_solid(x, y) || collision_line(x, y, _obj_player.x, _obj_player.y, obj_solid, false, true) != -4)
+        if (scr_solid(x, y) || collision_line(x, y, _obj_player.x, _obj_player.y, obj_solid, false, true) != noone)
         {
             x = _obj_player.x;
             y = _obj_player.y;

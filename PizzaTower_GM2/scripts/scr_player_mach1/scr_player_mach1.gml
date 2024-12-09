@@ -1,7 +1,5 @@
 function scr_player_mach1()
 {
-    var _railinst;
-    
     image_speed = 0.5;
     landAnim = false;
     machhitAnim = false;
@@ -22,7 +20,7 @@ function scr_player_mach1()
     }
     else
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
     }
     
@@ -68,7 +66,7 @@ function scr_player_mach1()
         
         if (key_jump)
         {
-            scr_soundeffect(12);
+            scr_soundeffect(sfx_jump);
             sprite_index = spr_airdash1;
             image_index = 0;
             dir = xscale;
@@ -108,7 +106,7 @@ function scr_player_mach1()
         case "V":
             if (key_slap2)
             {
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
                 sprite_index = spr_playerV_airrevolver;
                 image_index = 0;
                 vsp = -5;

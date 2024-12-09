@@ -1,8 +1,6 @@
-function cutscene_taxi_start(argument0)
+function cutscene_taxi_start(_player)
 {
-    var player;
-    
-    player = argument0;
+    var player = _player;
     
     with (player)
     {

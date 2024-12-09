@@ -3,13 +3,11 @@ function scr_editor_init_buttons()
     with (instance_create_depth(0, 0, -100, obj_button))
     {
         sprite_index = spr_bigbutton;
-        spr_icon = 2393;
+        spr_icon = spr_menuicon;
         
         OnSelect = function()
         {
-            var a;
-            
-            a = [["SAVE", -4, -4], ["LOAD LEVEL", -4, -4], ["EXIT EDITOR", -4, -4]];
+            var a = [["SAVE", noone, noone], ["LOAD LEVEL", noone, noone], ["EXIT EDITOR", noone, noone]];
             create_buttons_array(0, 64, 32, 24, a);
         };
         
@@ -26,20 +24,18 @@ function scr_editor_init_buttons()
     with (instance_create_depth(64, 0, -100, obj_button))
     {
         sprite_index = spr_bigbutton;
-        spr_icon = 2498;
+        spr_icon = spr_playicon;
     }
     
     with (instance_create_depth(128, 0, -100, obj_button))
     {
         sprite_index = spr_bigbutton;
-        spr_icon = 284;
+        spr_icon = spr_objecticon;
         selectedid = 0;
         
         OnSelect = function()
         {
-            var onselect, a, t;
-            
-            onselect = function()
+            var onselect = function()
             {
                 with (parent)
                     selectedid = other.buttonid;
@@ -52,9 +48,9 @@ function scr_editor_init_buttons()
                 }
             };
             
-            a = [["SCENERY", onselect, -4], ["ENEMIES", onselect, -4], ["TRIGGERS", onselect, -4]];
+            var a = [["SCENERY", onselect, noone], ["ENEMIES", onselect, noone], ["TRIGGERS", onselect, noone]];
             create_buttons_array(0, 64, 32, 24, a);
-            t = 0;
+            var t = 0;
             
             with (obj_textbutton)
             {

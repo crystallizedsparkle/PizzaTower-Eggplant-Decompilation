@@ -1,7 +1,5 @@
 function scr_player_ratmountballoon()
 {
-    var _jump;
-    
     sprite_index = spr_player_ratmountballoon;
     hsp = movespeed;
     move = key_left + key_right;
@@ -16,7 +14,7 @@ function scr_player_ratmountballoon()
     else
         movespeed = Approach(movespeed, 0, 0.5);
     
-    _jump = false;
+    var _jump = false;
     
     if (balloonbuffer > 0)
         balloonbuffer--;

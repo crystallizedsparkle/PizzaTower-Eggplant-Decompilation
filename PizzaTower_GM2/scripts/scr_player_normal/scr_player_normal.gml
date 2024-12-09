@@ -1,7 +1,5 @@
 function state_player_normal()
 {
-    var _railinst;
-    
     mach2 = 0;
     move = key_left + key_right;
     skateboarding = false;
@@ -49,7 +47,7 @@ function state_player_normal()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         railmovespeed = _railinst.movespeed;
         raildir = _railinst.dir;
         railmomentum = true;
@@ -280,7 +278,7 @@ function state_player_normal()
     {
         if ((key_jump || (input_buffer_jump < 8 && !key_attack && vsp > 0)) && !key_down)
         {
-            scr_soundeffect(12);
+            scr_soundeffect(sfx_jump);
             
             if (sprite_index != spr_shotgunshoot)
             {
@@ -408,7 +406,7 @@ function state_player_normal()
             {
                 if (key_attack2)
                 {
-                    scr_soundeffect(33);
+                    scr_soundeffect(sfx_noisewoah);
                     state = states.Sjumpprep;
                     image_index = 0;
                     sprite_index = !key_up ? spr_playerN_jetpackstart : spr_superjumpprep;
@@ -523,7 +521,7 @@ function state_pepperman_normal()
     
     if ((input_buffer_jump < 8 || key_jump) && (grounded && vsp > 0))
     {
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_jump;
         image_index = 0;
         vsp = -pepperman_jumpspeed;
@@ -539,7 +537,7 @@ function state_pepperman_normal()
         sprite_index = spr_fall;
     }
     
-    if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw)
+    if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw)
     {
         if (move != 0)
             xscale = move;
@@ -547,13 +545,13 @@ function state_pepperman_normal()
         state = states.shoulderbash;
         sprite_index = spr_pepperman_shoulderstart;
         image_index = 0;
-        scr_soundeffect(45);
+        scr_soundeffect(sfx_suplexdash);
     }
     
     if (sprite_index == spr_pepperman_throw && floor(image_index) == (image_number - 1))
         sprite_index = spr_pepperman_idle;
     
-    if (move != 0 && (floor(image_index) == 4 || floor(image_index) == 11) && steppy == false && character != "V")
+    if (move != 0 && (floor(image_index) == 4 || floor(image_index) == 11) && !steppy && character != "V")
     {
         instance_create(x, y + 38, obj_cloudeffect);
         steppy = true;
@@ -565,10 +563,10 @@ function state_pepperman_normal()
 
 function pepperman_grab_reset()
 {
-    if (pepperman_grabID != -4)
+    if (pepperman_grabID != noone)
     {
         if (!instance_exists(pepperman_grabID))
-            pepperman_grabID = -4;
+            pepperman_grabID = noone;
     }
 }
 

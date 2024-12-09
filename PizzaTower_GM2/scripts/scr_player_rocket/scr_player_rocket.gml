@@ -1,7 +1,5 @@
 function scr_player_rocket()
 {
-    var _spd, _accel;
-    
     hsp = xscale * movespeed;
     move = key_right + key_left;
     
@@ -15,8 +13,8 @@ function scr_player_rocket()
     
     if (sprite_index != spr_rocketstart)
     {
-        _spd = 6;
-        _accel = 1;
+        var _spd = 6;
+        var _accel = 1;
         
         if (key_up && !key_down)
             rocketvsp = Approach(rocketvsp, -_spd, _accel);
@@ -60,7 +58,7 @@ function scr_player_rocket()
         }
     }
     
-    if (fightball == false)
+    if (!fightball)
     {
         if (sprite_index != spr_rocketstart)
         {
@@ -78,7 +76,7 @@ function scr_player_rocket()
         if (move != 0 && move != xscale && sprite_index != spr_rocketstart)
         {
             state = states.rocketslide;
-            scr_soundeffect(86);
+            scr_soundeffect(sfx_machslideboost);
             sprite_index = spr_player_rocketslide;
             image_index = 0;
         }
@@ -88,8 +86,8 @@ function scr_player_rocket()
     {
         pizzapepper = 0;
         sprite_index = spr_rockethitwall;
-        scr_soundeffect(27);
-        scr_soundeffect(28);
+        scr_soundeffect(sfx_groundpound);
+        scr_soundeffect(sfx_bumpwall);
         
         with (obj_camera)
         {
@@ -126,7 +124,7 @@ function scr_player_rocket()
     {
         with (instance_create(x, y, obj_superdashcloud))
         {
-            if (other.fightball == true)
+            if (other.fightball)
                 instance_create(obj_player.x, obj_player.y, obj_slapstar);
             
             image_xscale = other.xscale;
@@ -138,7 +136,7 @@ function scr_player_rocket()
     {
         with (instance_create(x, y, obj_superdashcloud))
         {
-            if (other.fightball == true)
+            if (other.fightball)
                 instance_create(obj_player.x, obj_player.y, obj_slapstar);
             
             image_xscale = other.xscale;

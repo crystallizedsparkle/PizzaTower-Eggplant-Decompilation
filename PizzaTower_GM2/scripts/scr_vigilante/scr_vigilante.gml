@@ -209,8 +209,6 @@ function scr_vigilante_freefallprep()
 
 function scr_vigilante_freefall()
 {
-    var s;
-    
     if (sprite_index == spr_playerV_bodyslamprep && floor(image_index) == (image_number - 1))
         sprite_index = spr_playerV_bodyslam;
     
@@ -223,7 +221,7 @@ function scr_vigilante_freefall()
     {
         if (place_meeting(x, y, other))
         {
-            s = state;
+            var s = state;
             scr_hurtplayer(id);
             
             if (s != state)
@@ -235,7 +233,7 @@ function scr_vigilante_freefall()
     
     if (grounded && vsp > 0)
     {
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         state = states.freefallland;
         hsp = 0;
         sprite_index = spr_playerV_bodyslamland;
@@ -253,19 +251,17 @@ function scr_vigilante_freefallland()
         image_index = 0;
         
         if (!hit)
-            oldtargetspot = -4;
+            oldtargetspot = noone;
     }
 }
 
 function scr_vigilante_throwing()
 {
-    var s;
-    
     image_speed = 0.35;
     
     if (floor(image_index) == (image_number - 1))
     {
-        s = sprite_index;
+        var s = sprite_index;
         
         switch (sprite_index)
         {
@@ -324,13 +320,11 @@ function scr_vigilante_throwing()
 
 function scr_vigilante_revolver()
 {
-    var s;
-    
     image_speed = 0.35;
     
     if (floor(image_index) == (image_number - 1))
     {
-        s = sprite_index;
+        var s = sprite_index;
         
         switch (sprite_index)
         {
@@ -375,7 +369,7 @@ function scr_vigilante_revolver()
         image_index = 0;
         cooldown = 120 - (wastedhits * 10);
         revolver = 80;
-        scr_soundeffect(26);
+        scr_soundeffect(spr_ratblock4_dead);
         
         with (instance_create(x, y, obj_enemybullet))
         {
@@ -387,13 +381,11 @@ function scr_vigilante_revolver()
 
 function scr_vigilante_dynamite()
 {
-    var s;
-    
     image_speed = 0.35;
     
     if (floor(image_index) == (image_number - 1))
     {
-        s = sprite_index;
+        var s = sprite_index;
         
         switch (sprite_index)
         {

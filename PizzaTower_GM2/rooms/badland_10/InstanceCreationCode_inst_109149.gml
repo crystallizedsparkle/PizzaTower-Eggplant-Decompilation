@@ -1,2 +1,2 @@
-targetRoom = 96;
+targetRoom = badland_mart5;
 visible = false;

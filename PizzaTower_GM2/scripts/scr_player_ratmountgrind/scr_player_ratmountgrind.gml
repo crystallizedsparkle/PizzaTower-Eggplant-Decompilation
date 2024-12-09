@@ -1,7 +1,5 @@
 function scr_player_ratmountgrind()
 {
-    var inst;
-    
     hsp = movespeed;
     vsp = 0;
     move = key_left + key_right;
@@ -28,9 +26,9 @@ function scr_player_ratmountgrind()
     
     if (move != 0)
     {
-        inst = instance_place(x + hsp, y - 32, obj_grindrailslope);
+        var inst = instance_place(x + hsp, y - 32, obj_grindrailslope);
         
-        if (inst == -4)
+        if (inst == noone)
             inst = instance_place(x + hsp, y + 32, obj_grindrailslope);
         
         with (inst)

@@ -1,4 +1,4 @@
-pal_swap_init_system(2);
+pal_swap_init_system(shd_pal_swapper);
 global.boxlist = ds_list_create();
 ds_list_add(global.boxlist, "box1");
 ds_list_add(global.boxlist, "box2");

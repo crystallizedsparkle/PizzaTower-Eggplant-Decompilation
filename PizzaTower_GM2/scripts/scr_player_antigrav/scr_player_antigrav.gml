@@ -13,17 +13,17 @@ function scr_player_antigrav()
         movespeed = abs(hsp);
         state = states.jump;
         sprite_index = spr_machfreefall;
-        scr_soundeffect(148);
+        scr_soundeffect(sfx_antigravend);
     }
     
     if (scr_solid(x, y - 1))
     {
         audio_stop_sound(sfx_antigrav1);
         audio_stop_sound(sfx_antigrav2);
-        scr_soundeffect(7, 145);
+        scr_soundeffect(sfx_antigrav1, sfx_antigrav2);
         vsp = 8;
         
-        with (create_debris(x, y, 1141))
+        with (create_debris(x, y, spr_slapstar))
         {
             hsp = random_range(-5, 5);
             vsp = random_range(-10, 10);
@@ -32,12 +32,12 @@ function scr_player_antigrav()
     
     if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_ratblock) && !place_meeting(x + hsp, y, obj_destructibles))
     {
-        scr_soundeffect(147);
+        scr_soundeffect(sfx_antigrav3);
         hsp = -hsp * 0.8;
         
         repeat (3)
         {
-            with (create_debris(x, y, 1141))
+            with (create_debris(x, y, spr_slapstar))
             {
                 hsp = random_range(-5, 5);
                 vsp = random_range(-10, 10);

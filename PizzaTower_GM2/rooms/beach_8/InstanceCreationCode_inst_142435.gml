@@ -1,2 +1,2 @@
-if (global.panic == true && !global.gerome)
+if (global.panic && !global.gerome)
     image_xscale *= -1;

@@ -1,7 +1,5 @@
 function scr_player_handstandjump()
-{
-    var attackdash, airattackdash, airattackdashstart, _bump;
-    
+{   
     landAnim = false;
     hsp = xscale * movespeed;
     move = key_left + key_right;
@@ -40,21 +38,21 @@ function scr_player_handstandjump()
         }
     }
     
-    if (shoot == true)
-        attackdash = 1544;
+    if (shoot)
+        var attackdash = spr_player_pistolshot;
     else
         attackdash = spr_suplexdash;
     
     if (sprite_index == spr_player_lungestart && floor(image_index) == (image_number - 1))
         sprite_index = spr_player_lunge;
     
-    airattackdash = spr_suplexdashjump;
-    airattackdashstart = spr_suplexdashjumpstart;
+    var airattackdash = spr_suplexdashjump;
+    var airattackdashstart = spr_suplexdashjumpstart;
     
     if (global.attackstyle == 2)
         vsp = 0;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
     {
         vsp /= 20;
         jumpstop = true;
@@ -138,7 +136,7 @@ function scr_player_handstandjump()
     
     if ((grounded || !key_attack) && scr_solid(x + xscale, y) && !place_meeting(x + sign(hsp), y, obj_destructibles) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
     {
-        _bump = ledge_bump((vsp >= 0) ? 32 : 22);
+        var _bump = ledge_bump((vsp >= 0) ? 32 : 22);
         
         if (_bump)
         {

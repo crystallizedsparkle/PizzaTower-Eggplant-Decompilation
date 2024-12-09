@@ -1,7 +1,5 @@
 function scr_player_playersuperattack()
 {
-    var dir, spd;
-    
     image_speed = 0.5;
     
     switch (superattackstate)
@@ -31,8 +29,8 @@ function scr_player_playersuperattack()
         
         case states.jump:
             sprite_index = spr_grab;
-            dir = point_direction(x, y, bossID.x, bossID.y);
-            spd = 20;
+            var dir = point_direction(x, y, bossID.x, bossID.y);
+            var spd = 20;
             hsp = 0;
             vsp = 0;
             hsp = lengthdir_x(spd, dir);
@@ -41,7 +39,7 @@ function scr_player_playersuperattack()
             if (place_meeting(x, y, bossID))
             {
                 superattackstate = states.punch;
-                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
                 punchcount = 10;
                 image_index = 0;
             }
@@ -65,9 +63,9 @@ function scr_player_playersuperattack()
                 if (punchcount > 0)
                 {
                     punchcount--;
-                    randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+                    randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
                     image_index = 0;
-                    scr_soundeffect(26);
+                    scr_soundeffect(sfx_killingblow);
                     
                     with (bossID)
                     {
@@ -91,7 +89,7 @@ function scr_player_playersuperattack()
                         hitLag = 10;
                     }
                     
-                    scr_soundeffect(26);
+                    scr_soundeffect(sfx_killingblow);
                     superattackstate = states.grab;
                     sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5);
                     image_index = 0;

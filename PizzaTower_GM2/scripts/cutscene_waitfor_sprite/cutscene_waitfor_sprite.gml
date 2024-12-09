@@ -1,9 +1,7 @@
-function cutscene_waitfor_sprite(argument0)
+function cutscene_waitfor_sprite(_object)
 {
-    var _obj, finish;
-    
-    _obj = argument0;
-    finish = false;
+    var _obj = _object;
+    var finish = false;
     
     with (_obj)
     {

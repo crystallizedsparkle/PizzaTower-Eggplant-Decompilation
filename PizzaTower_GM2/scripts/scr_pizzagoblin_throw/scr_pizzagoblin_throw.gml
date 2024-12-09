@@ -1,7 +1,6 @@
 function scr_pizzagoblin_throw()
 {
-    var xx;
-    
+    // I have no words.
     if (!variable_global_exists("throw_frame"))
     {
         global.throw_frame = 0;
@@ -29,6 +28,7 @@ function scr_pizzagoblin_throw()
         global.throw_frame[470] = 3;
         global.throw_frame[805] = 7;
         global.throw_frame[281] = 11;
+		
         global.throw_sprite = 0;
         global.throw_sprite[444] = 104;
         global.throw_sprite[446] = 125;
@@ -54,6 +54,7 @@ function scr_pizzagoblin_throw()
         global.throw_sprite[470] = 2765;
         global.throw_sprite[805] = 19;
         global.throw_sprite[281] = 2460;
+		
         global.reset_timer = 0;
         global.reset_timer[444] = 200;
         global.reset_timer[446] = 200;
@@ -100,7 +101,7 @@ function scr_pizzagoblin_throw()
         sprite_index = global.throw_sprite[object_index];
         
         if (point_in_rectangle(x, y, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]), camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])))
-            scr_soundeffect(20);
+            scr_soundeffect(sfx_enemyprojectile);
         
         switch (object_index)
         {
@@ -142,7 +143,7 @@ function scr_pizzagoblin_throw()
                 break;
             
             case obj_spitcheese:
-                if (spitcheesespr == 375)
+                if (spitcheesespr == spr_spitcheese_spit)
                 {
                     with (instance_create(x + (image_xscale * 6), y - 6, obj_spitcheesespike))
                     {
@@ -328,7 +329,7 @@ function scr_pizzagoblin_throw()
                 break;
             
             case obj_bazookabaddie:
-                xx = x + (72 * image_xscale);
+                var xx = x + (72 * image_xscale);
                 instance_create(xx, y, obj_bazooka);
                 create_particle(xx, y, particles.balloonpop);
                 break;

@@ -1,7 +1,5 @@
 function scr_player_grab()
 {
-    var _railinst;
-    
     grav = 0.5;
     move = key_left + key_right;
     
@@ -26,7 +24,7 @@ function scr_player_grab()
         }
         else
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
         }
         
@@ -103,12 +101,12 @@ function scr_player_grab()
             if (move != 0 && move != xscale && sprite_index != spr_swingding)
                 movespeed = 2;
             
-            if (momemtum == false)
+            if (!momemtum)
                 hsp = move * movespeed;
             else
                 hsp = xscale * movespeed;
             
-            if (move != 0 && move != xscale && momemtum == true && movespeed != 0)
+            if (move != 0 && move != xscale && momemtum && movespeed != 0)
                 movespeed -= 0.05;
             
             if (movespeed == 0)
@@ -139,7 +137,7 @@ function scr_player_grab()
         
         landAnim = true;
         
-        if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+        if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
         {
             vsp /= 20;
             jumpstop = true;
@@ -148,7 +146,7 @@ function scr_player_grab()
         if (ladderbuffer > 0)
             ladderbuffer--;
         
-        if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+        if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
         {
             vsp = grav;
             jumpstop = true;
@@ -189,11 +187,11 @@ function scr_player_grab()
     
     if ((grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0) && sprite_index != spr_swingding)
     {
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_haulingjump;
         instance_create(x, y, obj_highjumpcloud2);
         
-        if (heavy == false)
+        if (!heavy)
             vsp = -11;
         else
             vsp = -6;
@@ -268,7 +266,7 @@ function scr_player_grab()
         idle = 0;
     }
     
-    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == false)
+    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
         steppy = true;
     
     if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)

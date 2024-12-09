@@ -1,7 +1,5 @@
 function scr_player_cheesepep()
 {
-    var _railinst;
-    
     key_particles = false;
     mach2 = 0;
     momemtum = false;
@@ -15,7 +13,7 @@ function scr_player_cheesepep()
     }
     else
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
     }
     
@@ -40,7 +38,7 @@ function scr_player_cheesepep()
     image_speed = 0.35;
     
     if ((grounded && (floor(image_index) % 4) == 0) && hsp != 0)
-        create_debris(x, y + 43, 1136);
+        create_debris(x, y + 43, spr_slimedebris);
     
     if (!grounded)
     {

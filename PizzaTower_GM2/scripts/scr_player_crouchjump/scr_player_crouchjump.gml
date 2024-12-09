@@ -5,13 +5,13 @@ function scr_player_crouchjump()
     hsp = move * movespeed;
     movespeed = 4;
     
-    if (!key_jump2 && jumpstop == false && jumpAnim == true)
+    if (!key_jump2 && !jumpstop && jumpAnim)
     {
         vsp /= 2;
         jumpstop = true;
     }
     
-    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+    if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
     {
         vsp = grav;
         jumpstop = true;
@@ -24,12 +24,12 @@ function scr_player_crouchjump()
         crouchAnim = true;
         image_index = 0;
         jumpstop = false;
-        scr_soundeffect(41);
+        scr_soundeffect(sfx_step);
     }
     
     if (jumpAnim == true)
     {
-        if (shotgunAnim == false)
+        if (!shotgunAnim)
             sprite_index = spr_crouchjump;
         else
             sprite_index = spr_crouchjump;
@@ -38,9 +38,9 @@ function scr_player_crouchjump()
             jumpAnim = false;
     }
     
-    if (jumpAnim == false)
+    if (!jumpAnim)
     {
-        if (shotgunAnim == false)
+        if (!shotgunAnim)
             sprite_index = spr_crouchfall;
         else
             sprite_index = spr_crouchfall;

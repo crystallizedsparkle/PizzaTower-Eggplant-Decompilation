@@ -10,8 +10,8 @@ function scr_player_hang()
     
     if (floor(image_index) == (image_number - 1))
     {
-        scr_soundeffect(12);
-        scr_soundeffect(99);
+        scr_soundeffect(sfx_jump);
+        scr_soundeffect(sfx_woosh);
         jumpstop = false;
         vsp = -15;
         state = states.jump;

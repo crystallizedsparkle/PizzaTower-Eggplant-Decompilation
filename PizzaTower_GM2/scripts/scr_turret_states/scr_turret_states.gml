@@ -1,15 +1,13 @@
 function state_turret_normal()
-{
-    var col, col2, colX, colY;
-    
+{    
     sprite_index = idlespr;
     can_fire = true;
-    col = collision_line(x, y, targetplayer.x, targetplayer.y, obj_solid, false, true);
-    col2 = collision_line(x, y, targetplayer.x, targetplayer.y, obj_slope, false, true);
-    colX = (image_xscale > 0) ? (targetplayer.x > x) : (targetplayer.x < x);
-    colY = targetplayer.bbox_bottom > bbox_top && targetplayer.bbox_top < bbox_bottom;
+    var col = collision_line(x, y, targetplayer.x, targetplayer.y, obj_solid, false, true);
+    var col2 = collision_line(x, y, targetplayer.x, targetplayer.y, obj_slope, false, true);
+    var colX = (image_xscale > 0) ? (targetplayer.x > x) : (targetplayer.x < x);
+    var colY = targetplayer.bbox_bottom > bbox_top && targetplayer.bbox_top < bbox_bottom;
     
-    if (col == -4 && col2 == -4 && colX && colY)
+    if (col == noone && col2 == noone && colX && colY)
     {
         state = states.charge;
         can_fire = true;

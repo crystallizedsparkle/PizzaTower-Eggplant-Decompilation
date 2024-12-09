@@ -1,7 +1,5 @@
 function scr_enemy_walk()
 {
-    var _railinst;
-    
     if (object_index != obj_robot && object_index != obj_pizzice && object_index != obj_spitcheese && object_index != obj_ninja && object_index != obj_camerapatrol && object_index != obj_trash && object_index != obj_fencer && object_index != obj_rancher && object_index != obj_banditochicken && object_index != obj_ancho && object_index != obj_pickle && object_index != obj_thug_red && object_index != obj_thug_green && object_index != obj_thug_blue)
     {
         hsp = (image_xscale * movespeed) + railmovespeed;
@@ -33,7 +31,7 @@ function scr_enemy_walk()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         railmovespeed = _railinst.movespeed * _railinst.dir;
     }
     else
@@ -44,7 +42,7 @@ function scr_enemy_walk()
     if (!grounded && object_index != obj_clownmato && object_index != obj_pizzaball && object_index != obj_camerapatrol && object_index != obj_noisey && object_index != obj_ancho && object_index != obj_miniufo && object_index != obj_kentukybomber && object_index != obj_clownmato)
         hsp = 0;
     
-    if (turntimer > 0 && turner == true)
+    if (turntimer > 0 && turner)
         turntimer--;
     
     if (((scr_solid(x + 1, y) && image_xscale == 1) || (scr_solid(x - 1, y) && image_xscale == -1) || place_meeting(x + hsp, y, obj_hallway)) || turntimer <= 0)

@@ -1,7 +1,5 @@
 function scr_pizzaball_hit()
 {
-    var s;
-    
     x = hitX + irandom_range(-6, 6);
     y = hitY + irandom_range(-6, 6);
     hitLag--;
@@ -11,7 +9,7 @@ function scr_pizzaball_hit()
     {
         x = hitX;
         y = hitY;
-        s = -1;
+        var s = -1;
         
         with (instance_nearest(x, y, obj_player))
             s = tauntstoredstate;
@@ -27,9 +25,7 @@ function scr_pizzaball_hit()
 
 function scr_pizzaball_grabbed()
 {
-    var pl;
-    
-    pl = (grabbedby == 1) ? 324 : 323;
+    var pl = (grabbedby == 1) ? obj_player1 : obj_player2;
     
     with (pl)
     {
@@ -45,16 +41,16 @@ function scr_pizzaball_grabbed()
     state = states.golf;
 }
 
-function scr_pizzaball_go_to_thrown(argument0, argument1, argument2 = true)
+function scr_pizzaball_go_to_thrown(_hsp, _vsp, _highjump = true)
 {
-    hitspeed = abs(argument0);
+    hitspeed = abs(_hsp);
     
-    if (sign(argument0) != 0)
-        image_xscale = sign(argument0);
+    if (sign(_hsp) != 0)
+        image_xscale = sign(_hsp);
     
-    jumpspeed = abs(argument1);
+    jumpspeed = abs(_vsp);
     
-    if (argument2 && jumpspeed < 12)
+    if (_highjump && jumpspeed < 12)
         jumpspeed = 12;
     
     vsp = -jumpspeed;

@@ -6,7 +6,7 @@ function scr_dotaunt()
         
         if (!finisher)
         {
-            scr_soundeffect(84);
+            scr_soundeffect(sfx_taunt);
             taunttimer = 20;
             tauntstoredmovespeed = movespeed;
             tauntstoredvsp = vsp;

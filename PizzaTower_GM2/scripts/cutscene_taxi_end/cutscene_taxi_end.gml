@@ -1,13 +1,11 @@
-function cutscene_taxi_end(argument0, argument1)
+function cutscene_taxi_end(_player, _room)
 {
-    var player, target_room, handler;
-    
-    player = argument0;
-    target_room = argument1;
+    var player = _player;
+    var target_room = _room;
     
     with (player)
     {
-        handler = other;
+        var handler = other;
         cutscene = true;
         state = states.actor;
         

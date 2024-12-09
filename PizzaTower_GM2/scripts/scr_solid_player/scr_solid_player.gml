@@ -1,20 +1,18 @@
-function scr_solid_player(argument0, argument1)
+function scr_solid_player(_x, _y)
 {
-    var old_x, old_y, num, _collided, i, b;
-    
-    old_x = x;
-    old_y = y;
-    x = argument0;
-    y = argument1;
+    var old_x = x;
+    var old_y = y;
+    x = _x;
+    y = _y;
     
     if (place_meeting(x, y, obj_solid))
     {
-        num = instance_place_list(x, y, 312, global.instancelist, false);
-        _collided = false;
+        var num = instance_place_list(x, y, obj_solid, global.instancelist, false);
+        var _collided = false;
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
         {
-            b = ds_list_find_value(global.instancelist, i);
+            var b = ds_list_find_value(global.instancelist, i);
             
             switch (b.object_index)
             {
@@ -50,12 +48,12 @@ function scr_solid_player(argument0, argument1)
     
     if (y > old_y && state != states.ladder && place_meeting(x, y, obj_platform))
     {
-        num = instance_place_list(x, y, 504, global.instancelist, false);
-        _collided = false;
+       var  num = instance_place_list(x, y, obj_platform, global.instancelist, false);
+        var _collided = false;
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
         {
-            b = ds_list_find_value(global.instancelist, i);
+            var b = ds_list_find_value(global.instancelist, i);
             
             if (!place_meeting(x, old_y, b) && place_meeting(x, y, b))
                 _collided = true;
@@ -81,14 +79,14 @@ function scr_solid_player(argument0, argument1)
         }
     }
     
-    if (check_slope_player(311))
+    if (check_slope_player(obj_slope))
     {
         x = old_x;
         y = old_y;
         return true;
     }
     
-    if (check_slope_player(1))
+    if (check_slope_player(obj_grindrailslope))
     {
         if (state == states.grind)
         {
@@ -103,19 +101,17 @@ function scr_solid_player(argument0, argument1)
     return false;
 }
 
-function check_slope_player(argument0)
+function check_slope_player(_obj)
 {
-    var slope, object_side, slope_start, slope_end, m;
-    
-    slope = instance_place(x, y, argument0);
+    var slope = instance_place(x, y, _obj);
     
     if (slope)
     {
         with (slope)
         {
-            object_side = 0;
-            slope_start = 0;
-            slope_end = 0;
+            var object_side = 0;
+            var slope_start = 0;
+            var slope_end = 0;
             
             if (image_xscale > 0)
             {
@@ -130,7 +126,7 @@ function check_slope_player(argument0)
                 slope_end = bbox_bottom;
             }
             
-            m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
+            var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
             slope = slope_start - round(m * (object_side - bbox_left));
             
             if (other.bbox_bottom >= slope)

@@ -1,6 +1,6 @@
-function scr_farmerpeasanto_projectile(argument0, argument1)
+function scr_farmerpeasanto_projectile(_inst, arg1)
 {
-    with (argument0)
+    with (_inst)
     {
         if (sprite_index != spr_haystackburning && sprite_index != spr_haystackburningup)
         {
@@ -14,23 +14,23 @@ function scr_farmerpeasanto_projectile(argument0, argument1)
     return false;
 }
 
-function scr_farmer2_projectile(argument0, argument1)
+function scr_farmer2_projectile(_inst1, _inst2)
 {
-    with (argument0)
+    with (_inst1)
     {
-        x_to = x + (64 * argument1.image_xscale);
-        dir = argument1.image_xscale;
+        x_to = x + (64 * _inst2.image_xscale);
+        dir = _inst2.image_xscale;
     }
     
     return true;
 }
 
-function scr_farmer3_projectile(argument0, argument1)
+function scr_farmer3_projectile(_inst1, _inst2)
 {
-    with (argument0)
+    with (_inst1)
     {
-        x_to = x + (64 * -argument1.image_xscale);
-        dir = -argument1.image_xscale;
+        x_to = x + (64 * -_inst2.image_xscale);
+        dir = -_inst2.image_xscale;
     }
     
     return true;
@@ -38,16 +38,14 @@ function scr_farmer3_projectile(argument0, argument1)
 
 function scr_shoot_farmerprojectile()
 {
-    var inst;
-    
     if (global.hasfarmer[farmerpos])
     {
-        inst = 243;
+        var inst = obj_farmerpeasantoprojectile;
         
         if (farmerpos == 1)
-            inst = 127;
+            inst = obj_farmer2projectile;
         else if (farmerpos == 2)
-            inst = 87;
+            inst = obj_farmer3projectile;
         
         with (instance_create(x, y, inst))
         {
@@ -59,9 +57,7 @@ function scr_shoot_farmerprojectile()
 
 function scr_change_farmers()
 {
-    var i;
-    
-    i = 0;
+    var i = 0;
     
     while (i < 3)
     {

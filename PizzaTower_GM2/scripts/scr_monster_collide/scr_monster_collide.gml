@@ -1,7 +1,5 @@
 function scr_monster_collide()
 {
-    var k;
-    
     repeat (abs(vsp))
     {
         if (!scr_monster_solid(x, y + sign(vsp)))
@@ -17,7 +15,7 @@ function scr_monster_collide()
     
     repeat (abs(hsp))
     {
-        for (k = 1; k <= 4; k++)
+        for (var k = 1; k <= 4; k++)
         {
             if (scr_monster_solid(x + sign(hsp), y) && !scr_monster_solid(x + sign(hsp), y - k))
                 y -= k;
@@ -50,14 +48,12 @@ function scr_monster_collide()
     grounded = scr_monster_solid(x, y + 1);
 }
 
-function scr_monster_solid(argument0, argument1)
+function scr_monster_solid(_x, _y)
 {
-    var old_x, old_y;
-    
-    old_x = x;
-    old_y = y;
-    x = argument0;
-    y = argument1;
+    var old_x = x;
+    var old_y = y;
+    x = _x;
+    y = _y;
     
     if (place_meeting(x, y, obj_monstersolid))
     {
@@ -66,7 +62,7 @@ function scr_monster_solid(argument0, argument1)
         return true;
     }
     
-    if (check_slope(184))
+    if (check_slope(obj_monsterslope))
     {
         x = old_x;
         y = old_y;

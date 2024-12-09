@@ -1,7 +1,5 @@
 function scr_enemy_stun()
 {
-    var t, b, _railinst;
-    
     if (object_index == obj_ninja)
         attack = true;
     
@@ -26,7 +24,7 @@ function scr_enemy_stun()
     if (stuntouchbuffer > 0)
         stuntouchbuffer--;
     
-    t = thrown;
+    var t = thrown;
     
     if (sprite_index != spr_tank_hitwall)
     {
@@ -67,7 +65,7 @@ function scr_enemy_stun()
     
     if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0 && !place_meeting(x + hsp, y, obj_destructibles))
     {
-        if (thrown == true)
+        if (thrown)
         {
             vsp = -5;
             
@@ -80,7 +78,7 @@ function scr_enemy_stun()
     
     if (hitvsp < 0 && place_meeting(x, y - 1, obj_solid) && !place_meeting(x, y - 1, obj_destructibles))
     {
-        if (thrown == true)
+        if (thrown)
         {
             if ((!elite || elitehit <= 0) && destroyable)
                 instance_destroy();
@@ -91,7 +89,7 @@ function scr_enemy_stun()
     
     if (hithsp != 0 && place_meeting(x + hithsp, y, obj_solid) && !place_meeting(x + hithsp, y, obj_destructibles))
     {
-        if (thrown == true)
+        if (thrown)
         {
             if ((!elite || elitehit <= 0) && destroyable)
                 instance_destroy();
@@ -122,7 +120,7 @@ function scr_enemy_stun()
         if (elitehit > 0)
         {
             event_perform(ev_destroy, 0);
-            b = ds_list_find_index(global.baddieroom, id);
+            var b = ds_list_find_index(global.baddieroom, id);
             
             if (b != -1)
                 ds_list_delete(global.baddieroom, b);
@@ -151,7 +149,7 @@ function scr_enemy_stun()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         railmovespeed = _railinst.movespeed * _railinst.dir;
         
         if (grounded && !thrown)

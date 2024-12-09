@@ -1,7 +1,5 @@
 function scr_player_Sjumpprep()
 {
-    var _railinst;
-    
     switch (character)
     {
         case "P":
@@ -16,7 +14,7 @@ function scr_player_Sjumpprep()
             }
             else
             {
-                _railinst = instance_place(x, y + 1, obj_railparent);
+                var _railinst = instance_place(x, y + 1, obj_railparent);
                 hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
             }
             
@@ -59,7 +57,7 @@ function scr_player_Sjumpprep()
             
             if (!key_up && grounded && (character == "S" || (sprite_index == spr_superjumppreplight || sprite_index == spr_superjumpleft || sprite_index == spr_superjumpright)) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
             {
-                scr_soundeffect(32);
+                scr_soundeffect(sfx_superjumprelease);
                 instance_create(x, y, obj_explosioneffect);
                 sprite_index = spr_superjump;
                 state = states.Sjump;
@@ -97,7 +95,7 @@ function scr_player_Sjumpprep()
                 }
                 else if (sprite_index == spr_superjumpprep)
                 {
-                    scr_soundeffect(32);
+                    scr_soundeffect(sfx_superjumprelease);
                     instance_create(x, y, obj_explosioneffect);
                     sprite_index = spr_superjump;
                     state = states.Sjump;

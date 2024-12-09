@@ -22,7 +22,7 @@ function scr_player_ratmountskid()
     {
         particle_set_scale(particles.highjumpcloud2, xscale, 1);
         create_particle(x, y, particles.highjumpcloud2, 0);
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         
         if (brick)
             sprite_index = spr_player_ratmountjump;

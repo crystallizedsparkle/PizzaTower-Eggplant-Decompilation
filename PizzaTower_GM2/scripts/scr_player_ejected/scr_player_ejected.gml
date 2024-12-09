@@ -25,7 +25,7 @@ function scr_player_ejected()
             obj_camera.ded = false;
         }
         
-        if (global.coop == true)
+        if (global.coop)
         {
             with (obj_player2)
             {

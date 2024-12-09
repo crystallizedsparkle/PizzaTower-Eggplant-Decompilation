@@ -1,1 +1,1 @@
-particlespr = 261;
+particlespr = spr_badlanddebris1;

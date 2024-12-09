@@ -3,8 +3,8 @@ function scr_player_ratmount()
     move = key_left + key_right;
     doublejump = false;
     
-    if (ratgrabbedID != -4 && !instance_exists(ratgrabbedID))
-        ratgrabbedID = -4;
+    if (ratgrabbedID != noone && !instance_exists(ratgrabbedID))
+        ratgrabbedID = noone;
     
     hsp = movespeed;
     
@@ -76,7 +76,7 @@ function scr_player_ratmount()
                 {
                     sprite_index = spr_player_ratmountidle;
                     
-                    if (ratgrabbedID == -4)
+                    if (ratgrabbedID == noone)
                     {
                         if (idle < 400)
                             idle++;
@@ -137,7 +137,7 @@ function scr_player_ratmount()
     {
         particle_set_scale(particles.highjumpcloud2, xscale, 1);
         create_particle(x, y, particles.highjumpcloud2, 0);
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         
         if (brick)
             sprite_index = spr_player_ratmountjump;
@@ -225,7 +225,7 @@ function ratmount_dotaunt()
 {
     if (key_taunt2 && state != states.backbreaker && brick)
     {
-        scr_soundeffect(84);
+        scr_soundeffect(sfx_taunt);
         tauntstoredisgustavo = true;
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
@@ -241,10 +241,8 @@ function ratmount_dotaunt()
 }
 
 function ratmount_kickbrick()
-{
-    var _pad;
-    
-    _pad = 32;
+{	
+    var _pad = 32;
     
     with (instance_create(x + (image_xscale * _pad), y, obj_brickball))
     {
@@ -265,17 +263,17 @@ function ratmount_kickbrick()
 
 function ratmount_shootpowerup()
 {
-    if (key_shoot2 && ratpowerup != -4 && ratshootbuffer <= 0)
+    if (key_shoot2 && ratpowerup != noone && ratshootbuffer <= 0)
     {
         switch (ratpowerup)
         {
-            case 445:
+            case obj_noisegoblin:
                 with (instance_create(x + (20 * xscale), y, obj_playernoisearrow))
                     direction = point_direction(x, y, x + (other.xscale * 4), y);
                 
                 break;
             
-            case 222:
+            case obj_smokingpizzaslice:
                 with (instance_create(x + (20 * xscale), y + 20, obj_playersmokehitbox))
                 {
                     spd += (other.movespeed / 2);
@@ -284,7 +282,7 @@ function ratmount_shootpowerup()
                 
                 break;
             
-            case 460:
+            case obj_spitcheese:
                 with (instance_create(x + (20 * xscale), y, obj_playerspikecheese))
                 {
                     spd += other.movespeed;

@@ -1,7 +1,5 @@
 function scr_player_ghost()
 {
-    var maxspeed, hspaccel, vspaccel;
-    
     visible = true;
     image_speed = 0.35;
     
@@ -9,9 +7,9 @@ function scr_player_ghost()
     {
         move_h = key_right + key_left;
         move_v = key_down - key_up;
-        maxspeed = 6;
-        hspaccel = 0.5;
-        vspaccel = 0.5;
+        var maxspeed = 6;
+        var hspaccel = 0.5;
+        var vspaccel = 0.5;
         
         if (move_h == 0)
             hspaccel = 0.25;

@@ -9,7 +9,7 @@ function scr_player_knightpepbump()
         state = states.knightpep;
         sprite_index = spr_knightpepland;
         image_index = 0;
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         create_particle(x, y, particles.landcloud, 0);
         
         if (hurted)

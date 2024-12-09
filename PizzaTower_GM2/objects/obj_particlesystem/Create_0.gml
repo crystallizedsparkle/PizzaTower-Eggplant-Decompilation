@@ -1,5 +1,3 @@
-var p;
-
 if (instance_number(obj_particlesystem) > 1)
 {
     instance_destroy();
@@ -13,6 +11,8 @@ global.part_depth = ds_map_create();
 global.part_emitter = part_emitter_create(global.particle_system);
 global.debris_list = ds_list_create();
 global.collect_list = ds_list_create();
+var p;
+
 p = declare_particle(particles.cloudeffect, spr_cloudeffect, 0.5, 99);
 part_type_speed(p, 0, 0, 0, 0);
 p = declare_particle(particles.crazyrunothereffect, spr_crazyrunothereffect, 0.5, -99);

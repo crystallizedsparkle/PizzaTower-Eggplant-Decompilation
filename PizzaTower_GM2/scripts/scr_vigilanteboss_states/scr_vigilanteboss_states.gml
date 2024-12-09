@@ -82,7 +82,7 @@ function vigilante_cancel_attack()
                 
                 with (instance_create(x, y, obj_dynamite))
                 {
-                    obj_explosion = 85;
+                    obj_explosion = obj_dynamiteexplosion_boss;
                     image_xscale = other.image_xscale;
                     movespeed = 6;
                     vsp = -6;
@@ -173,15 +173,13 @@ function boss_vigilante_decide_attack()
 
 function vigilante_decide_attack_phase6_nohonor()
 {
-    var attack_chance;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
     }
     else
     {
-        attack_chance = irandom(200);
+        var attack_chance = irandom(200);
         
         if (attack_chance >= 150)
         {
@@ -213,15 +211,13 @@ function vigilante_decide_attack_phase6_nohonor()
 
 function vigilante_decide_attack_phase5()
 {
-    var attack_chance;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
     }
     else
     {
-        attack_chance = irandom(100);
+        var attack_chance = irandom(100);
         
         if (attack_chance > 50)
             vigilante_decide_attack_phase4();
@@ -234,8 +230,6 @@ function vigilante_decide_attack_phase5()
 
 function vigilante_decide_attack_phase4()
 {
-    var att_max;
-    
     if (attack_cooldown > 0)
     {
         attack_cooldown--;
@@ -243,7 +237,7 @@ function vigilante_decide_attack_phase4()
     else
     {
         targetstunned = 0;
-        att_max = attack_max[phase - 1];
+        var att_max = attack_max[phase - 1];
         attack_cooldown = att_max + irandom_range(-att_max, att_max + 20);
         attack_cooldown = (phase > 4) ? attack_max[phase - 1] : attack_cooldown;
         state = choose(states.groundpunchstart, states.charge, states.millionpunch);
@@ -317,7 +311,7 @@ function vigilante_decide_attack_phase3()
             
             with (instance_create(x, y, obj_dynamite))
             {
-                obj_explosion = 85;
+                obj_explosion = obj_dynamiteexplosion_boss;
                 image_xscale = other.image_xscale;
                 movespeed = 6;
                 vsp = -6;
@@ -404,8 +398,6 @@ function vigilante_decide_normalattack()
 
 function boss_vigilante_normal_phase4()
 {
-    var targetspeed;
-    
     image_speed = 0.35;
     
     if (targetplayer.hsp != 0 && targetplayer.state != states.thrown && distance_to_object(targetplayer) < 500)
@@ -421,7 +413,7 @@ function boss_vigilante_normal_phase4()
     if (x != targetplayer.x)
         image_xscale = sign(targetplayer.x - x);
     
-    targetspeed = (move == image_xscale) ? normal_spd : (normal_spd - 2);
+    var targetspeed = (move == image_xscale) ? normal_spd : (normal_spd - 2);
     
     if (move != 0)
     {
@@ -465,8 +457,6 @@ function boss_vigilante_normal_phase4()
 
 function boss_vigilante_normal()
 {
-    var targetspeed;
-    
     image_speed = 0.35;
     
     if (targetplayer.hsp != 0 && targetplayer.state != states.thrown && distance_to_object(targetplayer) < 480)
@@ -485,7 +475,7 @@ function boss_vigilante_normal()
     if (x != targetplayer.x)
         image_xscale = sign(targetplayer.x - x);
     
-    targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
+    var targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
     
     if (move != 0)
     {
@@ -578,7 +568,7 @@ function boss_vigilante_revolver()
                 instance_create(x, y, obj_highjumpcloud2);
             }
             
-            scr_soundeffect(26);
+            scr_soundeffect(sfx_killingblow);
         }
         else if (sprite_index == spr_playerV_revolvershoot || sprite_index == spr_playerV_airrevolver)
         {
@@ -596,7 +586,7 @@ function boss_vigilante_revolver()
                 with (instance_create(x + (image_xscale * 20), y + 20, obj_revolvershot))
                     image_xscale = other.image_xscale;
                 
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
                 revolver_count--;
                 revolver_jumpcount++;
                 
@@ -616,8 +606,6 @@ function boss_vigilante_revolver()
 
 function boss_vigilante_mach1()
 {
-    var tx;
-    
     image_speed = 0.6;
     hsp = image_xscale * movespeed;
     
@@ -627,7 +615,7 @@ function boss_vigilante_mach1()
     if (sprite_index == spr_playerV_mach1 && image_index > (image_number - 1))
         sprite_index = spr_playerV_bootsmove;
     
-    tx = (phase == 1) ? 224 : 380;
+    var tx = (phase == 1) ? 224 : 380;
     
     if (!superkickattackpursuit && !superkickattack_jump && distance_to_pos(x, y, targetplayer.x, targetplayer.y, tx, 540) && grounded)
     {
@@ -1012,9 +1000,7 @@ function boss_vigilante_handstandjump()
 
 function boss_vigilante_superattackstart()
 {
-    var tx, tx2;
-    
-    tx = room_width - (room_width / 3);
+    var tx = room_width - (room_width / 3);
     x = Approach(x, tx, movespeed);
     hsp = 0;
     
@@ -1044,7 +1030,7 @@ function boss_vigilante_superattackstart()
     {
         if (object_index == obj_player1 || global.coop)
         {
-            tx2 = room_width / 3;
+            var tx2 = room_width / 3;
             x = Approach(x, tx2, movespeed);
             hsp = 0;
             
@@ -1124,7 +1110,7 @@ function boss_vigilante_superattack()
     if (duel_buffer == -1 && !instance_exists(duelinst))
     {
         duel_buffer = -2;
-        duelinst = -4;
+        duelinst = noone;
         sprite_index = spr_playerV_revolvershoot;
         image_index = 0;
         

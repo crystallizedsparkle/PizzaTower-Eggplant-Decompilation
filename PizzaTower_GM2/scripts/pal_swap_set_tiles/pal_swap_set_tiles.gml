@@ -1,9 +1,7 @@
 function pal_swap_set_tiles()
 {
-    var _low, _high, _end_exists;
-    
-    _low = argument[2] + 1;
-    _high = argument[3] - 1;
+    var _low = argument[2] + 1;
+    var _high = argument[3] - 1;
     
     if (_low < _high)
     {
@@ -11,7 +9,7 @@ function pal_swap_set_tiles()
         _high = argument[2] + 1;
     }
     
-    _end_exists = false;
+    var _end_exists = false;
     
     if (depth == _high)
     {

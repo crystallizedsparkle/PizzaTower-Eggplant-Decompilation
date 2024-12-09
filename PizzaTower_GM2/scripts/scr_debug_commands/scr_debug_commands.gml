@@ -1,16 +1,16 @@
-function string_split(argument0, argument1)
+function string_split(_input_str, _split_str)
 {
     var _current_str, _list, i, _char;
     
-    argument0 += " ";
-    _current_str = "";
-    _list = [0];
+    _input_str += " ";
+    var _current_str = "";
+    var _list = [0];
     
-    for (i = 1; i < (string_length(argument0) + 1); i++)
+    for (var i = 1; i < (string_length(_input_str) + 1); i++)
     {
-        _char = string_char_at(argument0, i);
+        var _char = string_char_at(_input_str, i);
         
-        if (_char != argument1)
+        if (_char != _split_str)
         {
             _current_str += _char;
         }
@@ -66,17 +66,17 @@ function function_overload(_array, _func)
     }
 }
 
-function DebugCommand(argument0, argument1, argument2, argument3) constructor
+function DebugCommand(_command, _desc, _format, _func) constructor
 {
-    command_id = argument0;
-    description = argument1;
-    format = argument2;
-    func = argument3;
+    command_id = _command;
+    description = _desc;
+    format = _format;
+    func = _func;
     
-    Invoke = function(argument0)
+    Invoke = function(_command)
     {
-        if (argument0 != undefined)
-            function_overload(argument0, func);
+        if (_command != undefined)
+            function_overload(_command, func);
         else
             func();
     };

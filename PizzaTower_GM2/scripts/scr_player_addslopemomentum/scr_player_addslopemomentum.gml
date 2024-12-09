@@ -1,43 +1,43 @@
-function scr_player_addslopemomentum(argument0, argument1)
+function scr_player_addslopemomentum(_arg0, _arg1)
 {
     with (instance_place(x, y + 1, obj_slope))
     {
         if (sign(image_xscale) == -sign(other.xscale))
         {
             if (abs(image_yscale) < abs(image_xscale))
-                other.movespeed += argument0;
+                other.movespeed += _arg0;
             else
-                other.movespeed += argument1;
+                other.movespeed += _arg1;
         }
         else if (abs(image_yscale) < abs(image_xscale))
         {
-            other.movespeed -= argument0;
+            other.movespeed -= _arg0;
         }
         else
         {
-            other.movespeed -= argument1;
+            other.movespeed -= _arg1;
         }
     }
 }
 
-function scr_pizzaball_addslopemomentum(argument0, argument1)
+function scr_pizzaball_addslopemomentum(_arg0, _arg1)
 {
     with (instance_place(x, y + 1, obj_slope))
     {
         if (sign(image_xscale) == -sign(other.image_xscale))
         {
             if (abs(image_yscale) < abs(image_xscale))
-                other.slopespeed += argument0;
+                other.slopespeed += _arg0;
             else
-                other.slopespeed += argument1;
+                other.slopespeed += _arg1;
         }
         else if (abs(image_yscale) < abs(image_xscale))
         {
-            other.slopespeed -= argument0;
+            other.slopespeed -= _arg0;
         }
         else
         {
-            other.slopespeed -= argument1;
+            other.slopespeed -= _arg1;
         }
     }
     

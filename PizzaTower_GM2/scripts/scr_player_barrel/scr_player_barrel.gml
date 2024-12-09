@@ -53,7 +53,7 @@ function scr_player_barrel()
         
         if (input_buffer_jump < 8 && !key_down)
         {
-            scr_soundeffect(12);
+            scr_soundeffect(sfx_jump);
             input_buffer_jump = 8;
             vsp = -8.5;
             

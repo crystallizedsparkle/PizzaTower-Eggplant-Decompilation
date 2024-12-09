@@ -1,8 +1,6 @@
 function cutscene_gustavofail_end(argument0)
 {
-    var time;
-    
-    time = argument0;
+    var time = argument0;
     timer++;
     
     with (obj_gustavo)
@@ -16,7 +14,7 @@ function cutscene_gustavofail_end(argument0)
         if (!instance_exists(obj_slapstar))
         {
             instance_create(x - 20, y - 20, obj_slapstar);
-            scr_soundeffect(22);
+            scr_soundeffect(sfx_pephurt);
             
             with (instance_create(x - 20, y - 20, obj_smallnumber))
             {
@@ -56,7 +54,7 @@ function cutscene_gustavofail_end(argument0)
             sprite_index = spr_gustavo_idle;
         }
         
-        scr_hurtplayer(324);
+        scr_hurtplayer(obj_player1);
         obj_player1.hsp = 0;
         obj_player1.movespeed = 0;
         obj_player1.xscale = 1;

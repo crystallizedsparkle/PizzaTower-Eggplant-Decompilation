@@ -1,7 +1,5 @@
 function scr_pizzaball_normal()
 {
-    var num, i, b, _currentinst, _deccel;
-    
     if (thrown)
     {
         hsp = image_xscale * (movespeed + slopespeed);
@@ -24,11 +22,11 @@ function scr_pizzaball_normal()
                 instance_destroy();
         }
         
-        num = instance_place_list(x + hsp, y, 527, global.instancelist, false);
+        var num = instance_place_list(x + hsp, y, obj_enemyblock, global.instancelist, false);
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
         {
-            b = ds_list_find_value(global.instancelist, i);
+            var b = ds_list_find_value(global.instancelist, i);
             instance_destroy(b);
         }
         
@@ -68,7 +66,7 @@ function scr_pizzaball_normal()
         
         if (place_meeting(x, y + 1, obj_current))
         {
-            _currentinst = instance_place(x, y + 1, obj_current);
+            var _currentinst = instance_place(x, y + 1, obj_current);
             movespeed = 8;
             image_xscale = sign(_currentinst.image_xscale);
             hsp = image_xscale * movespeed;
@@ -80,7 +78,7 @@ function scr_pizzaball_normal()
     {
         kicked = false;
         hsp = image_xscale * (movespeed + slopespeed);
-        _deccel = 0.1;
+        var _deccel = 0.1;
         
         if (movespeed > 0)
             movespeed -= _deccel;

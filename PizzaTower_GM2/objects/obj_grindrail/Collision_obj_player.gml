@@ -9,7 +9,7 @@ if (place_meeting(x, y, other) && other.state != states.tumble && other.state !=
     {
         with (other)
         {
-            if (brick == true)
+            if (brick)
             {
                 with (instance_create(x, y, obj_brickcomeback))
                     wait = true;

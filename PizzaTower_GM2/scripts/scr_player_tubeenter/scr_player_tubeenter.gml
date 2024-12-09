@@ -1,13 +1,11 @@
 function scr_player_tubeenter()
 {
-    var _offset_x, _offset_y;
-    
     visible = false;
     
     with (tube_id)
     {
-        _offset_x = 32 * image_xscale;
-        _offset_y = 14 * image_yscale;
+        var _offset_x = 32 * image_xscale;
+        var _offset_y = 14 * image_yscale;
         other.x = Approach(other.x, x + _offset_x, other.stored_hsp);
         other.y = Approach(other.y, y + _offset_y, other.stored_vsp);
         

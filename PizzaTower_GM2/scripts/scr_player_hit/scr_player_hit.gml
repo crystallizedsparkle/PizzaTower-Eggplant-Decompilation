@@ -10,7 +10,7 @@ function scr_player_hit()
     
     if (hitLag <= 0)
     {
-        scr_soundeffect(22);
+        scr_soundeffect(sfx_pephurt);
         image_speed = 0.35;
         x = hitX;
         y = hitY;

@@ -1,7 +1,5 @@
 function scr_collide()
 {
-    var vsp_final, hsp_final, k, i;
-    
     grounded = false;
     
     with (instance_place(x, y + 2, obj_movingplatform))
@@ -19,7 +17,7 @@ function scr_collide()
         }
     }
     
-    vsp_final = vsp + vsp_carry;
+    var vsp_final = vsp + vsp_carry;
     vsp_carry = 0;
     
     repeat (abs(vsp_final))
@@ -35,12 +33,12 @@ function scr_collide()
         }
     }
     
-    hsp_final = hsp + hsp_carry;
+    var hsp_final = hsp + hsp_carry;
     hsp_carry = 0;
     
     repeat (abs(hsp_final))
     {
-        for (k = 1; k <= 4; k++)
+        for (var k = 1; k <= 4; k++)
         {
             if (scr_solid(x + sign(hsp_final), y) && !scr_solid(x + sign(hsp_final), y - k))
                 y -= k;
@@ -63,11 +61,11 @@ function scr_collide()
     if (vsp < 10)
         vsp += grav;
     
-    if (platformid != -4)
+    if (platformid != noone)
     {
         if (vsp < 0 || !instance_exists(platformid) || !place_meeting(x, y + 12 + (abs(platformid.v_velocity) * 2), platformid))
         {
-            platformid = -4;
+            platformid = noone;
             y = floor(y);
         }
         else
@@ -82,7 +80,7 @@ function scr_collide()
             
             if (!place_meeting(x, y + 1, platformid))
             {
-                i = 0;
+                var i = 0;
                 
                 while (!place_meeting(x, y + 1, platformid))
                 {
@@ -97,7 +95,7 @@ function scr_collide()
             {
                 if (scr_solid(x, y))
                 {
-                    for (i = 0; scr_solid(x, y); i++)
+                    for (var i = 0; scr_solid(x, y); i++)
                     {
                         y--;
                         
@@ -108,7 +106,7 @@ function scr_collide()
                 
                 if (scr_solid(x, y))
                 {
-                    for (i = 0; scr_solid(x, y); i++)
+                    for (var i = 0; scr_solid(x, y); i++)
                     {
                         y++;
                         
@@ -123,6 +121,6 @@ function scr_collide()
     grounded |= scr_solid(x, y + 1);
     grounded |= (!place_meeting(x, y, obj_platform) && place_meeting(x, y + 1, obj_platform));
     
-    if (platformid != -4 || (place_meeting(x, y + 1, obj_movingplatform) && !place_meeting(x, y - 2, obj_movingplatform)))
+    if (platformid != noone || (place_meeting(x, y + 1, obj_movingplatform) && !place_meeting(x, y - 2, obj_movingplatform)))
         grounded = true;
 }

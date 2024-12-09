@@ -1,7 +1,5 @@
 function scr_enemy_land()
 {
-    var _railinst;
-    
     if (vsp > 0)
         hsp = 0;
     
@@ -17,7 +15,7 @@ function scr_enemy_land()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp += (_railinst.movespeed * _railinst.dir);
     }
 }

@@ -1,12 +1,10 @@
-function cutscene_move_player(argument0, argument1, argument2, argument3)
+function cutscene_move_player(_player, _x_target, _maxspd, _threshold)
 {
-    var player, x_to, max_hsp, threshold, finish;
-    
-    player = argument0;
-    x_to = argument1;
-    max_hsp = argument2;
-    threshold = argument3;
-    finish = false;
+    var player = _player;
+    var x_to = _x_target;
+    var max_hsp = _maxspd;
+    var threshold = _threshold;
+    var finish = false;
     
     with (player)
     {
@@ -46,7 +44,7 @@ function cutscene_move_player(argument0, argument1, argument2, argument3)
     
     with (player)
     {
-        if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == false && character != "V")
+        if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy && character != "V")
         {
             instance_create(x, y + 43, obj_cloudeffect);
             steppy = true;

@@ -11,8 +11,8 @@ function scr_player_faceplant()
     if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_destructibles))
     {
         sprite_index = spr_hitwall;
-        scr_soundeffect(27);
-        scr_soundeffect(28);
+        scr_soundeffect(sfx_groundpound);
+        scr_soundeffect(sfx_bumpwall);
         
         with (obj_camera)
         {

@@ -1,7 +1,5 @@
 function scr_player_cheeseball()
 {
-    var slope;
-    
     image_speed = 0.35;
     
     if ((x + hsp) == xprevious)
@@ -16,7 +14,7 @@ function scr_player_cheeseball()
     
     if (scr_slope())
     {
-        slope = instance_place(x, y + 1, obj_slope);
+        var slope = instance_place(x, y + 1, obj_slope);
         
         if (sign(slope.image_xscale) == xscale)
         {
@@ -25,7 +23,7 @@ function scr_player_cheeseball()
         }
     }
     
-    if ((x > (slopejumpx - 10) && x < (slopejumpx + 10)) && slopejump == true && cheeseballbounce == 0)
+    if ((x > (slopejumpx - 10) && x < (slopejumpx + 10)) && slopejump && cheeseballbounce == 0)
     {
         vsp = -12;
         cheeseballbounce = 1;
@@ -44,7 +42,7 @@ function scr_player_cheeseball()
         cheeseballbounce -= 1;
         
         repeat (2)
-            create_debris(x + random_range(-8, 8), y + 43, 2814);
+            create_debris(x + random_range(-8, 8), y + 43, spr_cheesechunk);
     }
     
     if (grounded)
@@ -56,7 +54,7 @@ function scr_player_cheeseball()
     {
         cheeseballbounce = 0;
         slopejump = false;
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         movespeed = 0;
         cheesepeptimer = 2;
@@ -64,13 +62,13 @@ function scr_player_cheeseball()
         sprite_index = spr_cheesepepfall;
         
         repeat (8)
-            create_debris(x + random_range(-8, 8), y + random_range(-8, 8), 2814);
+            create_debris(x + random_range(-8, 8), y + random_range(-8, 8), spr_cheesechunk);
     }
     
     if (key_jump)
         input_buffer_jump = 0;
     
     if (grounded && (floor(image_index) % 4) == 0)
-        create_debris(x, y + 43, 1136);
+        create_debris(x, y + 43, spr_slimedebris);
 }
 

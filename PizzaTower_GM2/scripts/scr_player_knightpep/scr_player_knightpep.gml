@@ -1,7 +1,5 @@
 function scr_player_knightpep()
 {
-    var _accel;
-    
     alarm[5] = 2;
     alarm[7] = 60;
     
@@ -20,7 +18,7 @@ function scr_player_knightpep()
     {
         hsp = xscale * movespeed;
         move = key_left + key_right;
-        _accel = 0.1;
+        var _accel = 0.1;
         
         if (move != 0)
         {
@@ -76,7 +74,7 @@ function scr_player_knightpep()
     else if (grounded && move == 0 && sprite_index == spr_knightpepwalk)
         sprite_index = spr_knightpepidle;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5 && !stompAnim)
     {
         vsp /= 2;
         jumpstop = true;
@@ -89,7 +87,7 @@ function scr_player_knightpep()
     {
         image_index = 0;
         sprite_index = spr_knightpepjumpstart;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
         
         if (move == 0)
@@ -127,7 +125,7 @@ function scr_player_knightpep()
         image_index = 0;
         freefallstart = 0;
         momemtum = false;
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         create_particle(x, y, particles.landcloud, 0);
         sprite_index = spr_knightpepland;
         GamepadSetVibration((object_index == obj_player1) ? 0 : 1, 1, 1, 0.9);
@@ -211,7 +209,7 @@ function scr_player_knightpep()
     if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
         instance_create(x, y + 43, obj_cloudeffect);
     
-    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == false)
+    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
         steppy = true;
     
     if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)

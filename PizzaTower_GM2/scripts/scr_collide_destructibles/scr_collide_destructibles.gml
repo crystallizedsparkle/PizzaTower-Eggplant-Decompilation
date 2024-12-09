@@ -1,14 +1,12 @@
 function scr_collide_destructibles()
 {
-    var i, _obj_player, num, k, vy, _inst, j, _max, _destroyed;
-    
-    for (i = 0; i < 2; i++)
+    for (var i = 0; i < 2; i++)
     {
-        _obj_player = asset_get_index(concat("obj_player", i + 1));
+        var _obj_player = asset_get_index(concat("obj_player", i + 1));
         
         with (_obj_player)
         {
-            if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive == true))
+            if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive))
             {
                 with (instance_place(x + xscale, y, obj_destructibles))
                 {
@@ -86,7 +84,7 @@ function scr_collide_destructibles()
                 }
             }
             
-            if (state == states.hurt && thrown == true)
+            if (state == states.hurt && thrown)
             {
                 if (place_meeting(x - hsp, y, obj_destructibles))
                 {
@@ -124,9 +122,9 @@ function scr_collide_destructibles()
                 }
             }
             
-            num = instance_place_list(x, y + 1, 592, global.instancelist, false);
+            var num = instance_place_list(x, y + 1, 592, global.instancelist, false);
             
-            for (k = 0; k < num; k++)
+            for (var k = 0; k < num; k++)
             {
                 with (ds_list_find_value(global.instancelist, k))
                 {
@@ -141,7 +139,7 @@ function scr_collide_destructibles()
             
             if (vsp <= 0.5 && (state == states.jump || state == states.ratmountjump || state == states.mach3 || state == states.mach2 || state == states.antigrav || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.cheeseballclimbwall || state == states.mach3 || (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
             {
-                vy = -1;
+                var vy = -1;
                 
                 if (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))
                     vy = vsp;
@@ -175,12 +173,12 @@ function scr_collide_destructibles()
                         {
                             if (place_meeting(x, y + vsp + 2, obj_bigdestructibles))
                             {
-                                _inst = instance_place(x, y + vsp + 2, obj_bigdestructibles);
+                                var _inst = instance_place(x, y + vsp + 2, obj_bigdestructibles);
                                 
                                 if (instance_exists(_inst))
                                 {
-                                    j = 0;
-                                    _max = 256;
+                                    var j = 0;
+                                    var _max = 256;
                                     
                                     while (!place_meeting(x, y + 1, obj_bigdestructibles))
                                     {
@@ -225,7 +223,7 @@ function scr_collide_destructibles()
                 {
                     if (place_meeting(x - _obj_player.hsp, y, _obj_player))
                     {
-                        _destroyed = false;
+                        var _destroyed = false;
                         
                         with (_obj_player)
                         {

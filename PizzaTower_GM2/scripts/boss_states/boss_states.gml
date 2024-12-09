@@ -20,8 +20,6 @@ function state_boss_chainsaw()
 
 function state_boss_walk(_func)
 {
-    var b;
-    
     image_speed = 0.35;
     sprite_index = fallspr;
     
@@ -29,7 +27,7 @@ function state_boss_walk(_func)
     {
         if (object_index != obj_mrstickboss)
         {
-            b = ds_map_find_value(player_hurtstates, targetplayer.state);
+            var b = ds_map_find_value(player_hurtstates, targetplayer.state);
             
             if (!is_undefined(b))
                 boss_decide_taunt(130);
@@ -67,10 +65,8 @@ function state_boss_bump()
 
 function state_boss_arenaround()
 {
-    var is_playerside;
-    
     image_speed = 0.35;
-    is_playerside = (targetplayer.x > (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
+    var is_playerside = (targetplayer.x > (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
     
     if (is_playerside)
     {
@@ -103,8 +99,6 @@ function boss_decide_taunt(argument0)
 
 function state_boss_taunt()
 {
-    var playerinst, s;
-    
     image_speed = 0;
     hsp = 0;
     vsp = 0;
@@ -115,8 +109,8 @@ function state_boss_taunt()
         
         if (place_meeting(x, y, obj_player))
         {
-            playerinst = instance_place(x, y, obj_player);
-            s = ds_map_find_value(player_hurtstates, playerinst.state);
+            var playerinst = instance_place(x, y, obj_player);
+            var s = ds_map_find_value(player_hurtstates, playerinst.state);
             
             if (!is_undefined(s))
             {
@@ -124,7 +118,7 @@ function state_boss_taunt()
                 image_xscale = -playerinst.xscale;
                 sprite_index = parryspr;
                 image_index = 0;
-                scr_soundeffect(101);
+                scr_soundeffect(sfx_parry);
                 taunt_buffer = 10;
                 player_hurt(30, playerinst);
             }
@@ -132,7 +126,7 @@ function state_boss_taunt()
         
         if (place_meeting(x, y, obj_lungehitbox))
         {
-            playerinst = instance_place(x, y, obj_lungehitbox);
+            var playerinst = instance_place(x, y, obj_lungehitbox);
             
             if (instance_exists(playerinst))
             {
@@ -141,7 +135,7 @@ function state_boss_taunt()
                 image_xscale = -playerinst.xscale;
                 sprite_index = parryspr;
                 image_index = 0;
-                scr_soundeffect(101);
+                scr_soundeffect(sfx_parry);
                 taunt_buffer = 10;
                 player_hurt(30, playerinst);
             }
@@ -174,10 +168,8 @@ function state_boss_parry()
 
 function state_player_arenaround()
 {
-    var _normal_spd, is_bossside;
-    
-    _normal_spd = 6;
-    is_bossside = (x < (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
+    var _normal_spd = 6;
+    var is_bossside = (x < (room_width / 2)) ? (x > (room_width / 5)) : (x < (room_width - (room_width / 5)));
     
     if (is_bossside)
     {

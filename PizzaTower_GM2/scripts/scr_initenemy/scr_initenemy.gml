@@ -1,8 +1,8 @@
 function scr_initenemy()
 {
-    santaID = -4;
+    santaID = noone;
     rattime = 0;
-    platformid = -4;
+    platformid = noone;
     usepalette = false;
     blur_effect = 0;
     hsp_carry = 0;
@@ -33,7 +33,7 @@ function scr_initenemy()
     depth = 0;
     grabbedby = 0;
     paletteselect = 0;
-    spr_palette = 168;
+    spr_palette = palette_forknight;
     stuntouchbuffer = 0;
     scaredbuffer = 0;
     movespeed = 1;
@@ -84,7 +84,7 @@ function scr_initenemy()
     turntimer = 0;
     turnstart = false;
     timedgate = false;
-    chargeID = -4;
+    chargeID = noone;
     angle = image_angle;
     is_controllable = false;
     possess_movespeed = 0;
@@ -110,12 +110,12 @@ function scr_initenemy()
     grounded = true;
     birdcreated = false;
     boundbox = false;
-    spr_dead = 138;
+    spr_dead = spr_slimedead;
     important = false;
     heavy = false;
     depth = 0;
     paletteselect = 0;
-    spr_palette = 151;
+    spr_palette = palette_cheeseslime;
     grabbedby = 0;
     stuntouchbuffer = 0;
     scaredbuffer = 0;
@@ -127,6 +127,6 @@ function scr_initenemy()
     elitegrab = false;
     ventilator_vsp = -5;
     linethrown = false;
-    dashcloudid = 523;
+    dashcloudid = obj_null;
 }
 

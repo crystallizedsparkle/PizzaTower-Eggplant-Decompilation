@@ -1,8 +1,6 @@
-function cutscene_player_pos_lerp(argument0, argument1, argument2)
+function cutscene_player_pos_lerp(_target_x, _target_y, _amount)
 {
-    var _finish;
-    
-    _finish = false;
+    var _finish = false;
     
     with (obj_player)
     {
@@ -11,10 +9,10 @@ function cutscene_player_pos_lerp(argument0, argument1, argument2)
         
         if (object_index != obj_player2 || global.coop)
         {
-            x = lerp(x, argument0, argument2);
-            y = lerp(y, argument1, argument2);
+            x = lerp(x, _target_x, _amount);
+            y = lerp(y, _target_y, _amount);
             
-            if (x > (argument0 - 4) && x < (x + 4) && y > (argument1 - 4) && y < (argument1 + 4))
+            if (x > (_target_x - 4) && x < (x + 4) && y > (_target_y - 4) && y < (_target_y + 4))
                 _finish = true;
         }
     }
@@ -22,3 +20,4 @@ function cutscene_player_pos_lerp(argument0, argument1, argument2)
     if (_finish)
         cutscene_end_action();
 }
+

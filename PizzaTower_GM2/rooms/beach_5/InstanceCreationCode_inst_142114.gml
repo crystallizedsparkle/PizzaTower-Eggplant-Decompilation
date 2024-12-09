@@ -1,1 +1,1 @@
-content = 539;
+content = farm_treasure;

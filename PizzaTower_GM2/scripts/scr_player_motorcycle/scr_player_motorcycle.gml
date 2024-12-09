@@ -1,7 +1,5 @@
 function scr_player_motorcycle()
 {
-    var i;
-    
     hsp = xscale * movespeed;
     
     if (grounded || !jumped)
@@ -19,7 +17,7 @@ function scr_player_motorcycle()
     
     if (grounded && input_buffer_jump < 8 && vsp > 0)
     {
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         input_buffer_jump = 8;
         vsp = -11;
         jumped = true;
@@ -40,11 +38,11 @@ function scr_player_motorcycle()
         vsp = -11;
         state = states.tumble;
         sprite_index = spr_mach2jump;
-        i = 0;
+        var i = 0;
         
         repeat (sprite_get_number(spr_pizzacar_debris) - 1)
         {
-            with (create_debris(x, y, 2804))
+            with (create_debris(x, y, spr_pizzacar_debris))
             {
                 image_index = i;
                 vsp = irandom_range(-7, -12);

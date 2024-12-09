@@ -57,7 +57,7 @@ function scr_player_Sjump()
             }
         }
         
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = states.Sjumpland;
         machhitAnim = false;
@@ -90,8 +90,8 @@ function scr_player_Sjump()
     
     if (character == "N" && key_jump2)
     {
-        scr_soundeffect(12);
-        scr_soundeffect(99);
+        scr_soundeffect(sfx_jump);
+        scr_soundeffect(sfx_woosh);
         jumpstop = false;
         vsp = -15;
         state = states.jump;

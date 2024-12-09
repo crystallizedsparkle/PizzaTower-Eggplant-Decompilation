@@ -1,12 +1,10 @@
-function cutscene_move_actor(argument0, argument1, argument2, argument3)
+function cutscene_move_actor(_object_index, _x, _y, _interp)
 {
-    var _obj, xx, yy, interp, finish;
-    
-    _obj = argument0;
-    xx = argument1;
-    yy = argument2;
-    interp = argument3;
-    finish = false;
+    var _obj = _object_index;
+    var xx = _x;
+    var yy = _y;
+    var interp = _interp;
+    var finish = false;
     
     with (_obj)
     {

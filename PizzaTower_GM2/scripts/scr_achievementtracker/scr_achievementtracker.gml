@@ -1,22 +1,20 @@
-function add_achievement_update(argument0, argument1, argument2, argument3)
+function add_achievement_update(_name, _update_rate, _func1, _func2)
 {
-    var q;
-    
-    q = 
+    var q = 
     {
-        name: argument0,
-        update_rate: argument1,
+        name: _name,
+        update_rate: _update_rate,
         frames: 0,
-        update_func: -4,
-        creation_code: -4,
+        update_func: noone,
+        creation_code: noone,
         variables: ds_map_create(),
         unlocked: false
     };
-    q.update_func = method(q, argument3);
+    q.update_func = method(q, _func2);
     
-    if (argument2 != -4)
+    if (_func1 != noone)
     {
-        q.creation_code = method(q, argument2);
+        q.creation_code = method(q, _func1);
         q.creation_code();
     }
     
@@ -24,23 +22,21 @@ function add_achievement_update(argument0, argument1, argument2, argument3)
     return q;
 }
 
-function add_achievement_notify(argument0, argument1, argument2)
+function add_achievement_notify(_name, _func1, _func2)
 {
-    var q;
-    
-    q = 
+    var q = 
     {
-        name: argument0,
-        creation_code: -4,
-        func: -4,
+        name: _name,
+        creation_code: noone,
+        func: noone,
         unlocked: false,
         variables: ds_map_create()
     };
-    q.func = method(q, argument2);
+    q.func = method(q, _func2);
     
-    if (argument1 != -4)
+    if (_func1 != noone)
     {
-        q.creation_code = method(q, argument1);
+        q.creation_code = method(q, _func1);
         q.creation_code();
     }
     
@@ -48,41 +44,37 @@ function add_achievement_notify(argument0, argument1, argument2)
     return q;
 }
 
-function notification_push(argument0, argument1)
+function notification_push(_notification_type, _notification_data)
 {
     with (obj_achievementtracker)
-        ds_queue_enqueue(notify_queue, [argument0, argument1]);
+        ds_queue_enqueue(notify_queue, [_notification_type, _notification_data]);
 }
 
-function achievement_add_variable(argument0, argument1, argument2 = false)
+function achievement_add_variable(_key, _value, _save = false)
 {
-    var q;
-    
-    q = 
+    var q = 
     {
-        init_value: argument1,
-        value: argument1,
-        save: argument2
+        init_value: _value,
+        value: _value,
+        save: _save
     };
-    ds_map_add(variables, argument0, q);
+    ds_map_add(variables, _key, q);
     return q;
 }
 
-function achievement_get_variable(argument0)
+function achievement_get_variable(_key)
 {
-    return ds_map_find_value(variables, argument0);
+    return ds_map_find_value(variables, _key);
 }
 
-function achievement_unlock(argument0, argument1, argument2)
+function achievement_unlock(_achievement, _text, _achievement_sprite)
 {
-    var b;
-    
-    b = achievement_get_struct(argument0);
+    var b = achievement_get_struct(_achievement);
     
     with (b)
     {
         unlocked = true;
-        tv_push_prompt(argument1, tvprompt_type.normal, argument2, 2);
+        tv_push_prompt(_text, tvprompt_type.normal, _achievement_sprite, 2);
         quick_ini_write_real(get_savefile_ini(), "achievements", name, true);
         gamesave_async_save();
     }
@@ -91,22 +83,20 @@ function achievement_unlock(argument0, argument1, argument2)
         event_perform(ev_other, ev_room_start);
 }
 
-function achievement_save_variables(argument0)
-{
-    var i, b, size, key, q;
-    
-    for (i = 0; i < ds_list_size(argument0); i++)
+function achievement_save_variables(_achievement_list)
+{    
+    for (var i = 0; i < ds_list_size(_achievement_list); i++)
     {
-        b = ds_list_find_value(argument0, i);
+        var b = ds_list_find_value(_achievement_list, i);
         
         with (b)
         {
-            size = ds_map_size(variables);
-            key = ds_map_find_first(variables);
+            var size = ds_map_size(variables);
+            var key = ds_map_find_first(variables);
             
             for (i = 0; i < size; i++)
             {
-                q = ds_map_find_value(variables, key);
+                var q = ds_map_find_value(variables, key);
                 
                 if (q.save)
                     quick_ini_write_real(get_savefile_ini(), "achievements_variables", key, q.value);
@@ -117,23 +107,21 @@ function achievement_save_variables(argument0)
     }
 }
 
-function achievements_load(argument0)
-{
-    var i, b, size, key, q;
-    
-    for (i = 0; i < ds_list_size(argument0); i++)
+function achievements_load(_achievement_list)
+{    
+    for (var i = 0; i < ds_list_size(_achievement_list); i++)
     {
-        b = ds_list_find_value(argument0, i);
+        var b = ds_list_find_value(_achievement_list, i);
         
         with (b)
         {
             unlocked = ini_read_real("achievements", name, false);
-            size = ds_map_size(variables);
-            key = ds_map_find_first(variables);
+            var size = ds_map_size(variables);
+            var key = ds_map_find_first(variables);
             
             for (i = 0; i < size; i++)
             {
-                q = ds_map_find_value(variables, key);
+                var q = ds_map_find_value(variables, key);
                 
                 if (q.save)
                     q.value = ini_read_real("achievements_variables", key, q.init_value);
@@ -144,25 +132,23 @@ function achievements_load(argument0)
     }
 }
 
-function achievement_get_struct(argument0)
+function achievement_get_struct(_achievement_name)
 {
-    var l, b, i, q;
+    var l = obj_achievementtracker.achievements_update;
+    var b = noone;
     
-    l = obj_achievementtracker.achievements_update;
-    b = -4;
-    
-    for (i = 0; i < ds_list_size(l); i++)
+    for (var i = 0; i < ds_list_size(l); i++)
     {
-        q = ds_list_find_value(l, i);
+        var q = ds_list_find_value(l, i);
         
-        if (q.name == argument0)
+        if (q.name == _achievement_name)
         {
             b = q;
             break;
         }
     }
     
-    if (b == -4)
+    if (b == noone)
     {
         l = obj_achievementtracker.achievements_notify;
         
@@ -170,7 +156,7 @@ function achievement_get_struct(argument0)
         {
             b = ds_list_find_value(l, i);
             
-            if (q.name == argument0)
+            if (q.name == _achievement_name)
             {
                 b = q;
                 break;

@@ -1,12 +1,12 @@
-function cutscene_customer_create(argument0, argument1, argument2, argument3, argument4)
+function cutscene_customer_create(_x, _y, _idle_sprite, _happy_sprite, sprite_xscale)
 {
     var xx, yy, _idle, _happy, _xscale;
     
-    xx = argument0;
-    yy = argument1;
-    _idle = argument2;
-    _happy = argument3;
-    _xscale = argument4;
+    var xx = _x;
+    var yy = _y;
+    var _idle = _idle_sprite;
+    var _happy = _happy_sprite;
+    var _xscale = sprite_xscale;
     
     with (instance_create(xx, yy, obj_customeractor))
     {

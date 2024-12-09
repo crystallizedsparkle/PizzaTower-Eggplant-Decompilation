@@ -1,7 +1,5 @@
 function scr_player_uppunch()
 {
-    var _railinst;
-    
     move = key_left + key_right;
     
     if (grounded)
@@ -22,7 +20,7 @@ function scr_player_uppunch()
         }
         else
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
         }
         
@@ -63,13 +61,13 @@ function scr_player_uppunch()
         else
             hsp = xscale * movespeed;
         
-        if (move != xscale && momemtum == true && movespeed != 0)
+        if (move != xscale && momemtum && movespeed != 0)
             movespeed -= 0.05;
         
         if (movespeed == 0)
             momemtum = false;
         
-        if ((move == 0 && momemtum == false) || scr_solid(x + hsp, y))
+        if ((move == 0 && !momemtum) || scr_solid(x + hsp, y))
         {
             movespeed = 0;
             mach2 = 0;
@@ -100,7 +98,7 @@ function scr_player_uppunch()
         
         landAnim = true;
         
-        if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+        if (!key_jump2 && jumpstop == false && vsp < 0.5 && !stompAnim)
         {
             vsp /= 5;
             jumpstop = true;
@@ -109,7 +107,7 @@ function scr_player_uppunch()
         if (ladderbuffer > 0)
             ladderbuffer--;
         
-        if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+        if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
         {
             vsp = grav;
             jumpstop = true;

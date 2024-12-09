@@ -1,10 +1,8 @@
 function scr_player_boxxedpepjump()
 {
-    var _railinst;
-    
     move = key_left + key_right;
     
-    if (boxxeddash == true)
+    if (boxxeddash)
         image_speed = abs(movespeed) / 15;
     else
         image_speed = 0.5;
@@ -14,7 +12,7 @@ function scr_player_boxxedpepjump()
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         railmovespeed = _railinst.movespeed;
         raildir = _railinst.dir;
     }
@@ -35,12 +33,12 @@ function scr_player_boxxedpepjump()
         if (((xscale > 0 && movespeed < 8) || (xscale < 0 && movespeed > -8)) && move == xscale)
             movespeed += (xscale * 0.8);
         
-        if (boxxeddash == false)
+        if (!boxxeddash)
             xscale = move;
         else if (move != xscale)
             movespeed = Approach(movespeed, 0, 0.8);
     }
-    else if (boxxeddash == false)
+    else if (!boxxeddash)
     {
         movespeed = Approach(movespeed, 0, 0.8);
     }

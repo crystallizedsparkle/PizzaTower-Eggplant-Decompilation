@@ -1,7 +1,5 @@
 function scr_player_backbreaker()
 {
-    var _playerid, c, lag;
-    
     mach2 = 0;
     
     if (sprite_index != spr_player_machfreefall)
@@ -28,7 +26,7 @@ function scr_player_backbreaker()
         if (!instance_exists(parry_inst) && taunttimer > parry_max)
         {
             parry_inst = instance_create(x, y, obj_parryhitbox);
-            _playerid = 1;
+            var _playerid = 1;
             
             if (object_index == obj_player2)
                 _playerid = 2;
@@ -45,15 +43,15 @@ function scr_player_backbreaker()
             if (instance_exists(parry_inst))
             {
                 instance_destroy(parry_inst);
-                parry_inst = -4;
+                parry_inst = noone;
             }
         }
         
-        if (supercharged == true && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4) && !instance_exists(obj_tauntaftereffectspawner))
+        if (supercharged && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4) && !instance_exists(obj_tauntaftereffectspawner))
         {
             instance_create(x, y, obj_tauntaftereffectspawner);
-            c = 0;
-            lag = 20;
+            var c = 0;
+            var lag = 20;
             
             with (obj_baddie)
             {
@@ -111,7 +109,7 @@ function scr_player_backbreaker()
         if (instance_exists(parry_inst))
         {
             instance_destroy(parry_inst);
-            parry_inst = -4;
+            parry_inst = noone;
         }
         
         if (is_array(global.hasfarmer) && global.hasfarmer[farmerpos])
@@ -128,7 +126,7 @@ function scr_player_backbreaker()
         if (instance_exists(parry_inst))
         {
             instance_destroy(parry_inst);
-            parry_inst = -4;
+            parry_inst = noone;
         }
         
         if (is_array(global.hasfarmer) && global.hasfarmer[farmerpos])
@@ -160,7 +158,7 @@ function scr_player_backbreaker()
         }
     }
     
-    if (global.miniboss == true && sprite_index == spr_bossintro && floor(image_index) == (image_number - 1))
+    if (global.miniboss && sprite_index == spr_bossintro && floor(image_index) == (image_number - 1))
         state = states.normal;
     
     image_speed = 0.4;

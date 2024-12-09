@@ -1,10 +1,8 @@
 function scr_pizzaball_golf()
 {
-    var _i;
-    
     sprite_index = spr_pizzaball_stun;
     image_speed = 0.35;
-    _i = 9;
+    var _i = 9;
     
     if (!player.ispeppino)
         _i = 7;
@@ -17,7 +15,7 @@ function scr_pizzaball_golf()
         x = player.x;
         y = player.y;
         global.golfhit++;
-        scr_soundeffect(46);
+        scr_soundeffect(sfx_punch);
         
         if (player.key_up)
             scr_pizzaball_go_to_thrown(player.xscale * 15, -16, false);

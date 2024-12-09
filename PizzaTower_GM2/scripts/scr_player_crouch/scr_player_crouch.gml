@@ -1,7 +1,5 @@
 function scr_player_crouch()
 {
-    var _railinst;
-    
     move = key_left + key_right;
     
     if (!place_meeting(x, y + 1, obj_railparent))
@@ -10,7 +8,7 @@ function scr_player_crouch()
     }
     else
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
     }
     
@@ -37,11 +35,11 @@ function scr_player_crouch()
         mask_index = spr_player_mask;
     }
     
-    if (crouchAnim == false)
+    if (!crouchAnim)
     {
         if (move == 0)
         {
-            if (shotgunAnim == false)
+            if (!shotgunAnim)
                 sprite_index = spr_crouch;
             else
                 sprite_index = spr_shotgunduck;
@@ -49,18 +47,18 @@ function scr_player_crouch()
         
         if (move != 0)
         {
-            if (shotgunAnim == false)
+            if (!shotgunAnim)
                 sprite_index = spr_crawl;
             else
                 sprite_index = spr_shotguncrawl;
         }
     }
     
-    if (crouchAnim == true)
+    if (crouchAnim)
     {
         if (move == 0)
         {
-            if (shotgunAnim == false)
+            if (!shotgunAnim)
                 sprite_index = spr_couchstart;
             else
                 sprite_index = spr_shotgungoduck;
@@ -78,7 +76,7 @@ function scr_player_crouch()
     
     if (key_jump && grounded && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
     {
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         vsp = -8;
         state = states.crouchjump;
         movespeed = 4;

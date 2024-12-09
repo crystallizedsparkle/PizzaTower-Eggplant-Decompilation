@@ -74,7 +74,7 @@ function scr_player_mort()
         vsp = -11;
         sprite_index = spr_player_mortjumpstart;
         image_index = 0;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         create_particle(x, y, particles.jumpdust, 0);
     }
     
@@ -83,8 +83,6 @@ function scr_player_mort()
 
 function mort_attack()
 {
-    var _angle;
-    
     if (key_slap2)
     {
         state = states.mortattack;
@@ -94,7 +92,7 @@ function mort_attack()
         if (move != 0)
             xscale = move;
         
-        _angle = 0;
+        var _angle = 0;
         
         if (key_up)
         {

@@ -1,8 +1,6 @@
 function Instakill()
 {
-    var lag;
-    
-    if (other.baddieID.elitegrab == false)
+    if (!other.baddieID.elitegrab)
     {
         other.baddieID.grabbedby = 1;
         
@@ -11,7 +9,7 @@ function Instakill()
         
         if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
         {
-            if (fightball == false)
+            if (!fightball)
                 sprite_index = spr_mach3hit;
             
             image_index = 0;
@@ -31,7 +29,7 @@ function Instakill()
         else
             other.baddieID.grabbedby = 2;
         
-        scr_soundeffect(46);
+        scr_soundeffect(sfx_punch);
         
         if (other.baddieID.elite && other.baddieID.object_index != obj_robot)
             other.baddieID.elitehit = 0;
@@ -60,7 +58,7 @@ function Instakill()
         
         if (!grounded && state != states.boxxedpepspin && state != states.freefall && (key_jump2 || input_buffer_jump == 0))
         {
-            if (state == states.mach3 && fightball == false)
+            if (state == states.mach3 && !fightball)
                 sprite_index = spr_player_mach2jump;
             
             suplexmove = false;
@@ -106,7 +104,7 @@ function Instakill()
             image_index = 0;
         }
         
-        lag = 5;
+        var lag = 5;
         other.baddieID.hitLag = lag;
         other.baddieID.hitX = other.baddieID.x;
         other.baddieID.hitY = other.baddieID.y;

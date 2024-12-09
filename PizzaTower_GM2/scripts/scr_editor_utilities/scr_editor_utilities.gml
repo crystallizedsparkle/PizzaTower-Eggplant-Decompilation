@@ -1,63 +1,55 @@
-function sprite_set_size(argument0, argument1)
+function sprite_set_size(_xscale, _yscale)
 {
-    image_xscale = argument0 / sprite_get_width(sprite_index);
-    image_yscale = argument1 / sprite_get_width(sprite_index);
+    image_xscale = _xscale / sprite_get_width(sprite_index);
+    image_yscale = _yscale / sprite_get_width(sprite_index);
 }
 
-function snap_tile(argument0, argument1)
+function snap_tile(_val1, _val2)
 {
-    return floor(argument0 / argument1) * argument1;
+    return floor(_val1 / _val2) * _val2;
 }
 
-function add_object(argument0, argument1, argument2, argument3, argument4 = 0, argument5 = 0)
+function add_object(_index, _name, _sprite, _object, _xoffset = 0, _yoffset = 0)
 {
-    var s;
+    var s = 1;
     
-    s = 1;
+    if (sprite_get_width(_sprite) >= 64 || sprite_get_height(_sprite) >= 64)
+        s = min(64 / sprite_get_width(_sprite), 64 / sprite_get_height(_sprite));
     
-    if (sprite_get_width(argument2) >= 64 || sprite_get_height(argument2) >= 64)
-        s = min(64 / sprite_get_width(argument2), 64 / sprite_get_height(argument2));
-    
-    ds_list_add(object_list[argument0], 
+    ds_list_add(object_list[_index], 
     {
-        name: argument1,
-        sprite_index: argument2,
+        name: _name,
+        sprite_index: _sprite,
         image_xscale: s,
         image_yscale: s,
-        object_index: argument3,
-        image_xoffset: argument4,
-        image_yoffset: argument5,
+        object_index: _object,
+        image_xoffset: _xoffset,
+        image_yoffset: _yoffset,
         place_xoffset: 0,
         place_yoffset: 0,
         layerdepth: 0
     });
 }
 
-function set_object_place_offset(argument0, argument1, argument2)
+function set_object_place_offset(_editor_id, _offset, arg2)
 {
-    var b;
-    
-    b = ds_list_find_value(array_get(object_list, argument0), ds_list_size(objectlist) - 1);
-    b.place_xoffset = argument1;
-    b.place_yoffset = argument1;
+    var b = ds_list_find_value(array_get(object_list, _editor_id), ds_list_size(objectlist) - 1);
+    b.place_xoffset = _offset;
+    b.place_yoffset = _offset;
 }
 
-function set_object_layerdepth(argument0, argument1)
+function set_object_layerdepth(_editor_id, _layerdepth)
 {
-    var b;
-    
-    b = ds_list_find_value(array_get(object_list, argument0), ds_list_size(objectlist) - 1);
-    b.layerdepth = argument1;
+    var b = ds_list_find_value(array_get(object_list, _editor_id), ds_list_size(objectlist) - 1);
+    b.layerdepth = _layerdepth;
 }
 
 function objectlist_calculate_scrollsize()
 {
-    var xx, yy, i;
+    var xx = 0;
+    var yy = 0;
     
-    xx = 0;
-    yy = 0;
-    
-    for (i = 0; i < ds_list_size(object_list); i++)
+    for (var i = 0; i < ds_list_size(object_list); i++)
     {
         xx += 64;
         
@@ -74,37 +66,35 @@ function objectlist_calculate_scrollsize()
         scroll_ymax = 0;
 }
 
-function create_buttons_array(argument0, argument1, argument2, argument3, argument4)
+function create_buttons_array(_x, _y, _xsize, _ysize, _array)
 {
-    var xsize, i, b, t;
-    
-    xsize = 0;
+    var xsize = 0;
     draw_set_font(global.editorfont);
     
-    for (i = 0; i < array_length(argument4); i++)
+    for (var i = 0; i < array_length(_array); i++)
     {
-        b = argument4[i];
-        t = string_width(b[0]);
+        var b = _array[i];
+        var t = string_width(b[0]);
         
         if (t > xsize)
-            xsize = t + argument2;
+            xsize = t + _xsize;
     }
     
-    for (i = 0; i < array_length(argument4); i++)
+    for (i = 0; i < array_length(_array); i++)
     {
-        b = argument4[i];
+        b = _array[i];
         
-        with (instance_create_depth(argument0, argument1 + (i * argument3), depth, obj_textbutton))
+        with (instance_create_depth(_x, _y + (i * _ysize), depth, obj_textbutton))
         {
             buttonid = i;
             sprite_index = spr_bigbutton;
-            sprite_set_size(xsize, argument3);
+            sprite_set_size(xsize, _ysize);
             label = b[0];
             
-            if (b[1] != -4)
+            if (b[1] != noone)
                 OnSelect = method(id, b[1]);
             
-            if (b[2] != -4)
+            if (b[2] != noone)
                 OnDeselect = method(id, b[2]);
             
             parent = other.id;

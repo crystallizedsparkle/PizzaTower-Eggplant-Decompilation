@@ -5,13 +5,13 @@ function noise_start_round()
         with (instance_create(256, 416, obj_baddiespawner))
         {
             create_particle(x, y, particles.genericpoofeffect, 0);
-            content = 468;
+            content = obj_noisey;
         }
         
         with (instance_create(672, 416, obj_baddiespawner))
         {
             create_particle(x, y, particles.genericpoofeffect, 0);
-            content = 468;
+            content = obj_noisey;
             image_xscale = -1;
         }
     }
@@ -19,16 +19,14 @@ function noise_start_round()
 
 function mrstick_start_round()
 {
-    var b, tx, xx;
-    
     with (obj_mrstickboss)
     {
-        b = boss_array[phase - 1];
+        var b = boss_array[phase - 1];
         
-        if (b != -4)
+        if (b != noone)
         {
-            tx = (x > (room_width / 2)) ? 1 : -1;
-            xx = tx * 32;
+            var tx = (x > (room_width / 2)) ? 1 : -1;
+            var xx = tx * 32;
             
             with (instance_create(x + xx, y, b[0]))
             {

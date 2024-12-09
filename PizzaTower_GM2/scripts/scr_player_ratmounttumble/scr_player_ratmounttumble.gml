@@ -51,7 +51,7 @@ function scr_player_ratmounttumble()
     {
         particle_set_scale(particles.highjumpcloud2, xscale, 1);
         create_particle(x, y, particles.highjumpcloud2, 0);
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
         jumpstop = false;
     }

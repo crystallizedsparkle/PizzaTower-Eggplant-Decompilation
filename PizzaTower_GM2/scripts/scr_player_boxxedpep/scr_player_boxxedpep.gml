@@ -1,7 +1,5 @@
 function scr_player_boxxedpep()
 {
-    var _railinst;
-    
     mask_index = spr_crouchmask;
     
     if (boxxeddash == true)
@@ -17,7 +15,7 @@ function scr_player_boxxedpep()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
     {
         vsp /= 2;
         jumpstop = true;
@@ -35,7 +33,7 @@ function scr_player_boxxedpep()
         
         if (place_meeting(x, y + 1, obj_railparent))
         {
-            _railinst = instance_place(x, y + 1, obj_railparent);
+            var _railinst = instance_place(x, y + 1, obj_railparent);
             railmovespeed = _railinst.movespeed;
             raildir = _railinst.dir;
         }
@@ -85,12 +83,12 @@ function scr_player_boxxedpep()
             if (((xscale > 0 && movespeed < 8) || (xscale < 0 && movespeed > -8)) && move == xscale)
                 movespeed += (xscale * 0.8);
             
-            if (boxxeddash == false)
+            if (!boxxeddash)
                 xscale = move;
             else if (move != xscale)
                 movespeed = Approach(movespeed, 0, 0.8);
         }
-        else if (boxxeddash == false)
+        else if (!boxxeddash)
         {
             movespeed = Approach(movespeed, 0, 0.8);
         }
@@ -140,7 +138,7 @@ function scr_player_boxxedpep()
     if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (sprite_index == spr_player_downslopes || sprite_index == spr_player_upslopes))
         instance_create(x, y + 43, obj_cloudeffect);
     
-    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == false)
+    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
         steppy = true;
     
     if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)

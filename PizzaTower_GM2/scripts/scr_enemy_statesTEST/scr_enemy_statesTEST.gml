@@ -1,8 +1,6 @@
 function scr_enemy_pummel()
 {
-    var _playerinst;
-    
-    _playerinst = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
+    var _playerinst = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
     sprite_index = stunfallspr;
     x = _playerinst.x + (_playerinst.xscale * 16);
     y = _playerinst.y;
@@ -47,7 +45,7 @@ function scr_enemy_pummel()
                 other.hp--;
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_baddiegibs);
-                scr_soundeffect(26);
+                scr_soundeffect(sfx_killingblow);
                 
                 with (obj_camera)
                 {
@@ -67,7 +65,7 @@ function scr_enemy_pummel()
                     instance_create(x, y, obj_highjumpcloud2);
                     instance_create(x, y, obj_slapstar);
                     instance_create(x, y, obj_baddiegibs);
-                    scr_soundeffect(26);
+                    scr_soundeffect(sfx_killingblow);
                     
                     with (obj_camera)
                     {
@@ -92,7 +90,7 @@ function scr_enemy_pummel()
                 }
                 else if (key_down)
                 {
-                    scr_soundeffect(100);
+                    scr_soundeffect(sfx_breakdance);
                     vsp = -4;
                     movespeed = 9;
                     state = states.punch;

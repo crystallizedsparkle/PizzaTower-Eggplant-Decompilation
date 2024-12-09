@@ -174,7 +174,7 @@ function scr_player_bombpepup()
             }
         }
         
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = states.Sjumpland;
         machhitAnim = false;
@@ -232,8 +232,8 @@ function scr_player_bombpepside()
     if (scr_solid(x + xscale, y) && (scr_solid_slope(x + sign(hsp), y) || place_meeting(x + sign(hsp), y, obj_solid)) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles))
     {
         sprite_index = spr_hitwall;
-        scr_soundeffect(27);
-        scr_soundeffect(28);
+        scr_soundeffect(sfx_groundpound);
+        scr_soundeffect(sfx_bumpwall);
         
         with (obj_camera)
         {
@@ -267,8 +267,6 @@ function scr_player_bombpepside()
 
 function scr_player_bombpep()
 {
-    var _dir, tx;
-    
     alarm[8] = 60;
     alarm[7] = 120;
     hurted = true;
@@ -276,7 +274,7 @@ function scr_player_bombpep()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
     {
         vsp /= 2;
         jumpstop = true;
@@ -328,7 +326,7 @@ function scr_player_bombpep()
     
     if (bombpeptimer == 0 && sprite_index == spr_bombpeprunabouttoexplode)
     {
-        scr_soundeffect(82);
+        scr_soundeffect(sfx_bombpep2);
         hurted = true;
         scr_losepoints();
         instance_create(x, y, obj_bombexplosion);
@@ -363,7 +361,7 @@ function scr_player_bombpep()
     else
         image_speed = 0.6;
     
-    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && steppy == false && grounded)
+    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && !steppy && grounded)
         steppy = true;
     
     if (floor(image_index) != 0 && floor(image_index) != 2)
@@ -385,8 +383,8 @@ function scr_player_bombpep()
             
             if (scr_solid(x, y))
             {
-                _dir = -sign(other.xscale);
-                tx = try_solid(_dir, 0, 312, 78);
+                var _dir = -sign(other.xscale);
+                var tx = try_solid(_dir, 0, obj_solid, 78);
                 
                 if (tx != -1)
                     x += (tx * _dir);

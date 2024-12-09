@@ -2,12 +2,12 @@ function scr_player_highjump()
 {
     move = key_left + key_right;
     
-    if (momemtum == false)
+    if (!momemtum)
         hsp = move * movespeed;
     else
         hsp = xscale * movespeed;
     
-    if (move == 0 && momemtum == false)
+    if (move == 0 && !momemtum)
         movespeed = 0;
     
     if (move != 0 && movespeed < 6)
@@ -24,7 +24,7 @@ function scr_player_highjump()
     
     landAnim = true;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0)
+    if (!key_jump2 && !jumpstop && vsp < 0)
     {
         vsp /= 2;
         jumpstop = true;
@@ -33,7 +33,7 @@ function scr_player_highjump()
     if (ladderbuffer > 0)
         ladderbuffer--;
     
-    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+    if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
     {
         vsp = grav;
         jumpstop = true;
@@ -68,7 +68,7 @@ function scr_player_highjump()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (jumpAnim == true)
+    if (jumpAnim)
     {
         sprite_index = spr_player_Sjumpstart;
         

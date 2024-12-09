@@ -8,9 +8,7 @@ function cutscene_title_start()
 
 function cutscene_title_middle()
 {
-    var finish;
-    
-    finish = false;
+    var finish = false;
     
     with (obj_title)
     {

@@ -1,7 +1,5 @@
 function scr_player_grabbing()
 {
-    var attackdash, airattackdash, airattackdashstart;
-    
     landAnim = false;
     hsp = xscale * movespeed;
     move = key_left + key_right;
@@ -16,9 +14,10 @@ function scr_player_grabbing()
             movespeed = 12;
     }
     
-    attackdash = 563;
-    airattackdash = 768;
-    airattackdashstart = 771;
+    var attackdash = spr_player_suplexdash;
+    var airattackdash = spr_player_suplexgrabjump;
+    var airattackdashstart = spr_player_suplexgrabjumpstart;
+
     
     if (sprite_index == attackdash && !grounded)
     {
@@ -59,7 +58,7 @@ function scr_player_grabbing()
     
     if ((scr_solid(x + 1, y) && xscale == 1) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
     {
-        scr_soundeffect(28);
+        scr_soundeffect(sfx_bumpwall);
         grav = 0.5;
         movespeed = 0;
         state = states.bump;
@@ -74,7 +73,7 @@ function scr_player_grabbing()
     
     if ((scr_solid(x - 1, y) && xscale == -1) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
     {
-        scr_soundeffect(28);
+        scr_soundeffect(sfx_bumpwall);
         grav = 0.5;
         movespeed = 0;
         state = states.bump;

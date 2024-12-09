@@ -1,11 +1,9 @@
-function scr_solid(argument0, argument1)
+function scr_solid(_x, _y)
 {
-    var old_x, old_y, num, _collided, i, b;
-    
-    old_x = x;
-    old_y = y;
-    x = argument0;
-    y = argument1;
+    var old_x = x;
+    var old_y = y;
+    x = _x;
+    y = _y;
     
     if (place_meeting(x, y, obj_solid) || place_meeting(x, y, obj_ghostwall) || place_meeting(x, y, obj_mach3solid))
     {
@@ -16,12 +14,12 @@ function scr_solid(argument0, argument1)
     
     if (y > old_y && place_meeting(x, y, obj_platform))
     {
-        num = instance_place_list(x, y, 504, global.instancelist, false);
-        _collided = false;
+        var num = instance_place_list(x, y, obj_platform, global.instancelist, false);
+        var _collided = false;
         
-        for (i = 0; i < num; i++)
+        for (var i = 0; i < num; i++)
         {
-            b = ds_list_find_value(global.instancelist, i);
+            var b = ds_list_find_value(global.instancelist, i);
             
             if (id != b.id && !place_meeting(x, old_y, b) && place_meeting(x, y, b))
                 _collided = true;
@@ -37,7 +35,7 @@ function scr_solid(argument0, argument1)
         }
     }
     
-    if (check_slope(311))
+    if (check_slope(obj_slope))
     {
         x = old_x;
         y = old_y;
@@ -49,19 +47,17 @@ function scr_solid(argument0, argument1)
     return false;
 }
 
-function check_slope(argument0)
+function check_slope(_obj)
 {
-    var slope, object_side, slope_start, slope_end, m;
-    
-    slope = instance_place(x, y, argument0);
+    var slope = instance_place(x, y, _obj);
     
     if (slope)
     {
         with (slope)
         {
-            object_side = 0;
-            slope_start = 0;
-            slope_end = 0;
+            var object_side = 0;
+            var slope_start = 0;
+            var slope_end = 0;
             
             if (image_xscale > 0)
             {
@@ -76,7 +72,7 @@ function check_slope(argument0)
                 slope_end = bbox_bottom;
             }
             
-            m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
+            var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
             slope = slope_start - round(m * (object_side - bbox_left));
             
             if (other.bbox_bottom >= slope)
@@ -87,18 +83,16 @@ function check_slope(argument0)
     return false;
 }
 
-function scr_solid_slope(argument0, argument1)
+function scr_solid_slope(_x, _y)
 {
-    var old_x, old_y, inst;
+    var old_x = x;
+    var old_y = y;
+    x = _x;
+    y = _y;
     
-    old_x = x;
-    old_y = y;
-    x = argument0;
-    y = argument1;
-    
-    if (check_slope(311))
+    if (check_slope(obj_slope))
     {
-        inst = instance_place(x, y, obj_slope);
+        var inst = instance_place(x, y, obj_slope);
         
         if (sign(inst.image_xscale) != xscale)
         {

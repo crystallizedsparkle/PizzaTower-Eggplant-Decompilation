@@ -1,7 +1,5 @@
 function scr_player_lungeattack()
 {
-    var cancelindex;
-    
     if (sprite_index != spr_player_backflip)
     {
         image_speed = 0.35;
@@ -37,7 +35,7 @@ function scr_player_lungeattack()
         sprite_index = spr_player_lunge;
     }
     
-    cancelindex = 4;
+    var cancelindex = 4;
     
     if (floor(image_index) > (image_number - 2) && !hit_connected)
     {
@@ -55,7 +53,7 @@ function scr_player_lungeattack()
                 
                 input_attack_buffer = 0;
                 state = states.lungeattack;
-                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
                 image_index = 0;
             }
         }
@@ -90,7 +88,7 @@ function scr_player_lungeattack()
                 
                 input_attack_buffer = 0;
                 state = states.lungeattack;
-                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch]);
+                randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);
                 image_index = 0;
             }
         }
@@ -106,15 +104,15 @@ function scr_player_lungeattack()
     }
 }
 
-function randomize_animations(argument0)
+function randomize_animations(_sprite_array)
 {
-    if (ds_list_size(animlist) >= array_length(argument0))
+    if (ds_list_size(animlist) >= array_length(_sprite_array))
         ds_list_clear(animlist);
     
-    sprite_index = argument0[irandom(array_length(argument0) - 1)];
+    sprite_index = _sprite_array[irandom(array_length(_sprite_array) - 1)];
     
     while (ds_list_find_index(animlist, sprite_index) != -1)
-        sprite_index = argument0[irandom(array_length(argument0) - 1)];
+        sprite_index = _sprite_array[irandom(array_length(_sprite_array) - 1)];
     
     ds_list_add(animlist, sprite_index);
 }

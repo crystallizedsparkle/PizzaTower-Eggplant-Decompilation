@@ -1,10 +1,8 @@
 function wrap()
 {
-    var _val, _max, _min, _old;
-    
-    _val = argument[0];
-    _max = argument[2];
-    _min = argument[1];
+    var _val = argument[0];
+    var _max = argument[2];
+    var _min = argument[1];
     
     if ((_val % 1) == 0)
     {
@@ -27,7 +25,7 @@ function wrap()
     }
     else
     {
-        _old = argument[0] + 1;
+        var _old = argument[0] + 1;
         
         while (_val != _old)
         {

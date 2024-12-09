@@ -1,10 +1,8 @@
 function scr_collide_player()
 {
-    var vsp_final, hsp_final, k, i;
-    
     grounded = false;
     grinding = false;
-    vsp_final = vsp + vsp_carry;
+    var vsp_final = vsp + vsp_carry;
     vsp_carry = 0;
     
     repeat (abs(vsp_final))
@@ -20,12 +18,12 @@ function scr_collide_player()
         }
     }
     
-    hsp_final = hsp + hsp_carry;
+    var hsp_final = hsp + hsp_carry;
     hsp_carry = 0;
     
     repeat (abs(hsp_final))
     {
-        for (k = 1; k <= 4; k++)
+        for (var k = 1; k <= 4; k++)
         {
             if (scr_solid_player(x + sign(hsp_final), y) && !scr_solid_player(x + sign(hsp_final), y - k))
                 y -= k;
@@ -72,7 +70,7 @@ function scr_collide_player()
             {
                 if (scr_solid(x, y))
                 {
-                    for (i = 0; scr_solid(x, y); i++)
+                    for (var i = 0; scr_solid(x, y); i++)
                     {
                         y--;
                         
@@ -83,7 +81,7 @@ function scr_collide_player()
                 
                 if (scr_solid(x, y))
                 {
-                    for (i = 0; scr_solid(x, y); i++)
+                    for (var i = 0; scr_solid(x, y); i++)
                     {
                         y++;
                         

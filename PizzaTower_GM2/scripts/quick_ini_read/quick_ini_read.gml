@@ -1,9 +1,7 @@
-function quick_ini_read_real(argument0, argument1, argument2, argument3)
+function quick_ini_read_real(_savefile_ini, _section, _key, _default)
 {
-    var b;
-    
     ini_open_from_string(obj_savesystem.ini_str);
-    b = ini_read_real(argument1, argument2, argument3);
+    var b = ini_read_real(_section, _key, _default);
     ini_close();
     return b;
 }

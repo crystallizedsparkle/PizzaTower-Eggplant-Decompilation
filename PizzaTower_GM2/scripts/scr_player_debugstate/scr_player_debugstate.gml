@@ -1,10 +1,8 @@
 function scr_player_debugstate()
 {
-    var _spd;
-    
     visible = true;
     image_blend = c_white;
-    _spd = 6;
+    var _spd = 6;
     
     if (key_attack)
         _spd = 10;

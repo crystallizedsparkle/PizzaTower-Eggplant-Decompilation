@@ -1,7 +1,5 @@
 function scr_player_bump()
 {
-    var can_end;
-    
     if (sprite_index != spr_player_wallsplat)
     {
         movespeed = 0;
@@ -12,7 +10,7 @@ function scr_player_bump()
         if (grounded && vsp > 0)
             hsp = 0;
         
-        can_end = true;
+        var can_end = true;
         
         if (sprite_index == spr_tumbleend)
             can_end = !place_meeting(x, y, obj_pepgoblin_kickhitbox);

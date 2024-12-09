@@ -30,7 +30,7 @@ function scr_player_animatronic()
     else
     {
         repeat (3)
-            create_debris(x, y, 1475);
+            create_debris(x, y, spr_metalblockdebris);
         
         state = states.normal;
     }
@@ -48,7 +48,7 @@ function scr_player_animatronic()
             global.collect -= 5;
             
             repeat (10)
-                create_debris(x, y, choose(1559, 1562, 1561, 1560, 1563), true);
+                create_debris(x, y, choose(spr_shroomcollect, spr_cheesecollect, spr_tomatocollect, spr_pineapplecollect, spr_sausagecollect), true);
         }
     }
     

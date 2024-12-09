@@ -1,14 +1,12 @@
 function scr_player_boxxedpepspin()
 {
-    var _railinst;
-    
     image_speed = 0.5;
     hsp = xscale * movespeed;
     doublejump = true;
     
     if (place_meeting(x, y + 1, obj_railparent))
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         railmovespeed = _railinst.movespeed;
         raildir = _railinst.dir;
     }

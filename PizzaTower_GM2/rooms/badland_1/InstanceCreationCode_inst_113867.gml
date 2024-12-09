@@ -1,1 +1,1 @@
-targetRoom = 121;
+targetRoom = badland_10;

@@ -1,8 +1,6 @@
 function cutscene_farm_middle()
 {
-    var _finish;
-    
-    _finish = false;
+    var _finish = false;
     
     with (obj_mort_inline)
     {
@@ -31,7 +29,7 @@ function cutscene_farm_end()
     
     global.levelcomplete = false;
     global.farmcutscene = true;
-    global.levelcompletename = -4;
+    global.levelcompletename = noone;
     quick_ini_write_real(get_savefile_ini(), "cutscene", "farm", true);
     cutscene_end_action();
 }

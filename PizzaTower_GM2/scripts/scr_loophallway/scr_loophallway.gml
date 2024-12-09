@@ -1,21 +1,19 @@
-function scr_loophallway(argument0)
+function scr_loophallway(_obj)
 {
-    var yy, _per;
-    
-    if (argument0.start)
+    if (_obj.start)
     {
-        yy = y - argument0.y;
-        _per = yy / argument0.sprite_height;
+        var yy = y - _obj.y;
+        var _per = yy / _obj.sprite_height;
         
         with (obj_loophallway)
         {
-            if (id != argument0.id && !start)
+            if (id != _obj.id && !start)
             {
                 other.x = x + (sprite_width / 2);
                 other.y = (y + (sprite_height * _per)) - 1;
                 
                 if (other.object_index == obj_vigilanteboss)
-                    other.oldtargetspot = -4;
+                    other.oldtargetspot = noone;
             }
         }
     }

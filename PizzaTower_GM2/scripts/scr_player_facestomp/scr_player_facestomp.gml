@@ -45,11 +45,11 @@ function scr_player_facestomp()
         freefallstart = 0;
     }
     
-    if (facestompAnim == false)
+    if (!facestompAnim)
     {
         sprite_index = spr_player_facestomp;
     }
-    else if (facestompAnim == true)
+    else if (facestompAnim)
     {
         sprite_index = spr_player_facestomphit;
         

@@ -1,4 +1,4 @@
-function draw_background_tiled(argument0, argument1, argument2)
+function draw_background_tiled(_spr, _x, _y)
 {
-    draw_sprite_tiled(argument0, 0, argument1, argument2);
+    draw_sprite_tiled(_spr, 0, _x, _y);
 }

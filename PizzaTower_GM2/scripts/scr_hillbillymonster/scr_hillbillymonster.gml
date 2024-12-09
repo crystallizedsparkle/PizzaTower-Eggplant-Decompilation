@@ -55,15 +55,13 @@ function scr_hillbilly_machslide()
 
 function scr_hillbilly_detect()
 {
-    var _col, _player_colX, _player_colY;
-    
     hsp = 0;
     sprite_index = idlespr;
-    _col = collision_line(x, y, playerinst.x, playerinst.y, obj_solid, false, true);
-    _player_colX = playerinst.x > (x - threshold_x) && playerinst.x < (x + threshold_x);
-    _player_colY = playerinst.y > (y - threshold_y) && playerinst.y < (y + threshold_y);
+    var _col = collision_line(x, y, playerinst.x, playerinst.y, obj_solid, false, true);
+    var _player_colX = playerinst.x > (x - threshold_x) && playerinst.x < (x + threshold_x);
+    var _player_colY = playerinst.y > (y - threshold_y) && playerinst.y < (y + threshold_y);
     
-    if (_col == -4 && _player_colX && _player_colY)
+    if (_col == noone && _player_colX && _player_colY)
     {
         image_xscale = (playerinst.x > x) ? 1 : -1;
         state = states.chase;

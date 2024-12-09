@@ -1,7 +1,5 @@
 function scr_player_trashjump()
 {
-    var slope;
-    
     image_speed = 0.35;
     hsp = movespeed;
     move = key_left + key_right;
@@ -27,7 +25,7 @@ function scr_player_trashjump()
     {
         if (instance_place(x, y + 1, obj_slope))
         {
-            slope = instance_place(x, y + 1, obj_slope);
+            var slope = instance_place(x, y + 1, obj_slope);
             xscale = -sign(slope.image_xscale);
         }
         

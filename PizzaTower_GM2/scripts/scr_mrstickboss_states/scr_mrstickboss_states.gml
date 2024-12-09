@@ -1,7 +1,5 @@
 function boss_mrstick_decide_attack()
 {
-    var sprw;
-    
     if (attack_cooldown <= 0)
     {
         targetstunned = 0;
@@ -65,7 +63,7 @@ function boss_mrstick_decide_attack()
                     depth = other.depth;
                 }
                 
-                sprw = abs(sprite_width);
+                var sprw = abs(sprite_width);
                 target_x = (x > (room_width / 2)) ? -sprw : (room_width + sprw);
                 cardboard_buffer = cardboard_max;
                 x = -400;
@@ -77,10 +75,8 @@ function boss_mrstick_decide_attack()
 
 function boss_mrstick_normal()
 {
-    var dx, targetspeed;
-    
     image_speed = 0.35;
-    dx = abs(targetplayer.x - x);
+    var dx = abs(targetplayer.x - x);
     move = 0;
     
     if (dx < 400)
@@ -94,7 +90,7 @@ function boss_mrstick_normal()
     if (x != targetplayer.x)
         image_xscale = sign(targetplayer.x - x);
     
-    targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
+    var targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
     
     if (move != 0)
     {
@@ -223,8 +219,6 @@ function boss_mrstick_panicjump()
 
 function boss_mrstick_jump()
 {
-    var sprw;
-    
     hsp = image_xscale * movespeed;
     
     if (sprite_index == spr_mrstick_jump && image_index > (image_number - 1))
@@ -235,7 +229,7 @@ function boss_mrstick_jump()
     
     if (!warped)
     {
-        sprw = abs(sprite_width);
+        var sprw = abs(sprite_width);
         image_xscale = (x > (room_width / 2)) ? 1 : -1;
         
         if (x > (room_width + sprw))
@@ -310,8 +304,6 @@ function boss_mrstick_smokebombcrawl()
 
 function boss_mrstick_springshoes()
 {
-    var tx;
-    
     hsp = image_xscale * movespeed;
     
     if (sprite_index == spr_mrstick_jump && image_index > (image_number - 1))
@@ -320,7 +312,7 @@ function boss_mrstick_springshoes()
         sprite_index = spr_mrstick_fall;
     }
     
-    tx = room_width / 2;
+    var tx = room_width / 2;
     
     if (movespeed > 0 && x > (tx - 16) && x < (tx + 16))
         movespeed -= 0.5;

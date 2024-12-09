@@ -83,7 +83,7 @@ function scr_player_firemouth()
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+    if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
     {
         vsp /= 2;
         jumpstop = true;
@@ -241,7 +241,7 @@ function scr_player_firemouth()
         image_speed = 0.35;
     }
     
-    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && steppy == false && grounded)
+    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && !steppy && grounded)
         steppy = true;
     
     if (floor(image_index) != 0 && floor(image_index) != 2)

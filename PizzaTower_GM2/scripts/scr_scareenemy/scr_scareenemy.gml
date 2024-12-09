@@ -1,8 +1,6 @@
 function scr_scareenemy()
 {
-    var player;
-    
-    player = instance_nearest(x, y, obj_player);
+    var player = instance_nearest(x, y, obj_player);
     
     if (state != states.grabbed && state != states.stun && state != states.hit && state != states.secret)
     {

@@ -1,7 +1,5 @@
 function scr_playerreset()
 {
-    var destroy;
-    
     trace("playerreset");
     global.lap = false;
     global.laps = 0;
@@ -10,8 +8,8 @@ function scr_playerreset()
     with (obj_music)
     {
         secret = false;
-        music = -4;
-        secretmusic = -4;
+        music = noone;
+        secretmusic = noone;
     }
     
     instance_destroy(obj_combotitle);
@@ -40,13 +38,13 @@ function scr_playerreset()
             shownrankc = false;
             ds_list_clear(tvprompts_list);
             prompt = "";
-            bubblespr = -4;
+            bubblespr = noone;
             promptx = promptxstart;
             
             if (!global.levelreset)
             {
                 sprite_index = spr_tv_off;
-                tvsprite = 2700;
+                tvsprite = spr_tv_idle;
                 state = states.normal;
                 tv_set_idle();
             }
@@ -56,7 +54,7 @@ function scr_playerreset()
         {
             ds_list_clear(secrettriggers);
             ds_list_clear(touchall);
-            touchrequirement = -4;
+            touchrequirement = noone;
             init = false;
         }
         
@@ -133,7 +131,7 @@ function scr_playerreset()
         global.panic = false;
         
         with (obj_stylebar)
-            sprite = 39;
+            sprite = spr_mild;
         
         with (obj_music)
             arena = false;
@@ -178,10 +176,10 @@ function scr_playerreset()
     
     with (obj_player)
     {
-        ratpowerup = -4;
+        ratpowerup = noone;
         scale_xs = 1;
         scale_ys = 1;
-        obj_camera.targetgolf = -4;
+        obj_camera.targetgolf = noone;
         ds_list_clear(global.baddietomb);
         obj_player.supercharge = 0;
         obj_player.supercharged = false;
@@ -189,7 +187,7 @@ function scr_playerreset()
         
         if (instance_exists(obj_gnome_checklist))
         {
-            destroy = true;
+            var destroy = true;
             
             with (obj_player)
             {
@@ -247,7 +245,7 @@ function scr_playerreset()
             xscale = 1;
             yscale = 1;
             parry = false;
-            parry_inst = -4;
+            parry_inst = noone;
             parry_count = 0;
             is_firing = false;
             pogospeed = 6;
@@ -363,7 +361,7 @@ function scr_playerreset()
         pogochargeactive = false;
         pogocharge = 100;
         parry = false;
-        parry_inst = -4;
+        parry_inst = noone;
         parry_count = 0;
         is_firing = false;
         x = backtohubstartx;

@@ -1,7 +1,5 @@
 function scr_deactivate_escape()
 {
-    var i, _id, b;
-    
     with (obj_baddie)
     {
         hitboxcreate = false;
@@ -13,9 +11,9 @@ function scr_deactivate_escape()
     {
         if (!ds_list_empty(deactivatedlist))
         {
-            for (i = 0; i < ds_list_size(deactivatedlist); i++)
+            for (var i = 0; i < ds_list_size(deactivatedlist); i++)
             {
-                _id = ds_list_find_value(deactivatedlist, i);
+                var _id = ds_list_find_value(deactivatedlist, i);
                 
                 if (object_get_parent(_id) == 407)
                     _id.boundbox = false;
@@ -31,9 +29,9 @@ function scr_deactivate_escape()
         {
             if (!ds_list_empty(baddielist))
             {
-                for (i = 0; i < ds_list_size(baddielist); i++)
+                for (var i = 0; i < ds_list_size(baddielist); i++)
                 {
-                    b = ds_list_find_value(baddielist, i);
+                    var b = ds_list_find_value(baddielist, i);
                     
                     if (b[0] != wave && instance_exists(b[1]))
                     {
@@ -45,9 +43,9 @@ function scr_deactivate_escape()
         }
         else if (!ds_list_empty(baddielist))
         {
-            for (i = 0; i < ds_list_size(baddielist); i++)
+            for (var i = 0; i < ds_list_size(baddielist); i++)
             {
-                b = array_get(ds_list_find_value(baddielist, i), 1);
+                var b = array_get(ds_list_find_value(baddielist, i), 1);
                 
                 if (instance_exists(b))
                 {

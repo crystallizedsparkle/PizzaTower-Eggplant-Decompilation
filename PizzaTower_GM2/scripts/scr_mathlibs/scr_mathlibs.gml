@@ -1,136 +1,128 @@
-function Vector2(argument0, argument1) constructor
+function Vector2(_x, _y) constructor
 {
-    static Update = function(argument0, argument1)
+    static Update = function(_x, _y)
     {
-        x = argument0;
-        y = argument1;
+        x = _x;
+        y = _y;
     };
     
-    static UpdateVector = function(argument0)
+    static UpdateVector = function(_vector)
     {
-        x = argument0.x;
-        y = argument0.y;
+        x = _vector.x;
+        y = _vector.y;
     };
     
-    static Add = function(argument0, argument1)
+    static Add = function(_x, _y)
     {
-        x += argument0;
-        y += argument1;
+        x += _x;
+        y += _y;
     };
     
-    static AddVector = function(argument0)
+    static AddVector = function(_vector)
     {
-        x += argument0.x;
-        y += argument0.y;
+        x += _vector.x;
+        y += _vector.y;
     };
     
-    static Multiply = function(argument0, argument1)
+    static Multiply = function(_x, _y)
     {
-        x *= argument0;
-        y *= argument1;
+        x *= _x;
+        y *= _y;
     };
     
-    static Divide = function(argument0, argument1)
+    static Divide = function(_x, _y)
     {
-        x /= argument0;
-        y /= argument1;
+        x /= _x;
+        y /= _y;
     };
     
-    static MultiplyVector = function(argument0)
+    static MultiplyVector = function(_vector)
     {
-        x *= argument0.x;
-        y *= argument0.y;
+        x *= _vector.x;
+        y *= _vector.y;
     };
     
-    static DivideVector = function(argument0)
+    static DivideVector = function(_vector)
     {
-        x /= argument0.x;
-        y /= argument0.y;
+        x /= _vector.x;
+        y /= _vector.y;
     };
     
-    x = argument0;
-    y = argument1;
+    x = _x;
+    y = _y;
 }
 
-function cycle(argument0, argument1, argument2)
+function cycle(_val, _min, _max)
 {
-    var delta, result;
-    
-    delta = argument2 - argument1;
-    result = (argument0 - argument1) % delta;
+    var delta = _max - _min;
+    var result = (_val - _min) % delta;
     
     if (result < 0)
         result += delta;
     
-    return result + argument1;
+    return result + _min;
 }
 
-function angle_rotate(argument0, argument1, argument2)
+function angle_rotate(_angle, _target, _speed)
 {
-    var diff;
+    var diff = cycle(_target - _angle, -180, 180);
     
-    diff = cycle(argument1 - argument0, -180, 180);
+    if (diff < -_speed)
+        return _angle - _speed;
     
-    if (diff < -argument2)
-        return argument0 - argument2;
+    if (diff > _speed)
+        return _angle + _speed;
     
-    if (diff > argument2)
-        return argument0 + argument2;
-    
-    return argument1;
+    return _target;
 }
 
-function get_velocity(argument0, argument1)
+function get_velocity(_var1, _var2)
 {
-    return argument0 / argument1;
+    return _var1 / _var2;
 }
 
-function Wave(argument0, argument1, argument2, argument3)
+function Wave(_from, _to, _duration, _offset)
 {
-    var a4;
-    
-    a4 = (argument1 - argument0) * 0.5;
-    return argument0 + a4 + (sin((((current_time * 0.001) + (argument2 * argument3)) / argument2) * (2 * pi)) * a4);
+    var a4 = (_to - _from) * 0.5;
+    return _from + a4 + (sin((((current_time * 0.001) + (_duration * _offset)) / _duration) * (2 * pi)) * a4);
 }
 
-function distance_to_pos(argument0, argument1, argument2, argument3, argument4, argument5)
+function distance_to_pos(_x1, _y1, _x2, _y2, _x_threshold, _y_threshold)
 {
-    return abs(argument0 - argument2) <= argument4 && abs(argument1 - argument3) <= argument5;
+    return abs(_x1 - _x2) <= _x_threshold && abs(_y1 - _y2) <= _y_threshold;
 }
 
-function distance_between_points(argument0, argument1, argument2, argument3)
+function distance_between_points(_x1, _y1, _x2, _y2)
 {
-    return sqrt(sqr(argument2 - argument0) + sqr(argument3 - argument1));
+    return sqrt(sqr(_x2 - _x1) + sqr(_y2 - _y1));
 }
 
-function calculate_jump_velocity_alt(argument0, argument1, argument2, argument3)
+function calculate_jump_velocity_alt(_target_x, _target_y, _speed, _grav)
 {
-    var xx, yy, g, tmp, a1, a2;
-    
-    xx = argument0 - x;
-    yy = argument1 - y;
-    g = argument3;
-    tmp = power(argument2, 4) - (g * ((g * power(xx, 2)) + (2 * yy * power(argument2, 2))));
+    var xx = _target_x - x;
+    var yy = _target_y - y;
+    var g = _grav;
+    var tmp = power(_speed, 4) - (g * ((g * power(xx, 2)) + (2 * yy * power(_speed, 2))));
     
     if (tmp > 0)
     {
         if (xx == 0)
         {
-            a1 = 1.5707963267948966;
+            var a1 = pi / 2;
             
             if (yy < 0)
-                a2 = -1.5707963267948966;
+                var a2 = -pi / 2;
             else
-                a2 = 1.5707963267948966;
+                var a2 = pi / 2;
         }
         else
         {
-            a1 = arctan2(power(argument2, 2) + sqrt(tmp), g * xx);
-            a2 = arctan2(power(argument2, 2) - sqrt(tmp), g * xx);
+            a1 = arctan2(power(_speed, 2) + sqrt(tmp), g * xx);
+            a2 = arctan2(power(_speed, 2) - sqrt(tmp), g * xx);
         }
         
-        hsp = cos(a1) * argument2 * 1.2;
-        vsp = cos(a2) * argument2;
+        hsp = cos(a1) * _speed * 1.2;
+        vsp = cos(a2) * _speed;
         
         if (vsp > 0)
             vsp *= -1;
@@ -139,27 +131,23 @@ function calculate_jump_velocity_alt(argument0, argument1, argument2, argument3)
     }
 }
 
-function calculate_jump_velocity(argument0, argument1, argument2, argument3)
+function calculate_jump_velocity(_target_x, _target_y, _spd, _grav)
 {
-    var a;
-    
-    a = get_projectile_angle(x, y, argument0, argument1, argument2, argument3);
-    hsp = lengthdir_x(argument2, a);
-    vsp = lengthdir_y(argument2, a);
+    var a = get_projectile_angle(x, y, _target_x, _target_y, _spd, _grav);
+    hsp = lengthdir_x(_spd, a);
+    vsp = lengthdir_y(_spd, a);
 }
 
-function get_projectile_angle(argument0, argument1, argument2, argument3, argument4, argument5)
+function get_projectile_angle(_x, _y, _target_x, _target_y, _spd, _grav)
 {
-    var xt, yt, root, angle;
-    
-    xt = floor(argument2 - argument0);
-    yt = -floor(argument3 - argument1);
-    root = power(argument4, 4) - (argument5 * ((argument5 * sqr(xt)) + (2 * sqr(argument4) * yt)));
-    angle = 0;
+    var xt = floor(_target_x - _x);
+    var yt = -floor(_target_y - _y);
+    var root = power(_spd, 4) - (_grav * ((_grav * sqr(xt)) + (2 * sqr(_spd) * yt)));
+    var angle = 0;
     
     if (root > 0)
     {
-        angle = radtodeg(arctan((sqr(argument4) + sqrt(root)) / (argument5 * xt)));
+        angle = radtodeg(arctan((sqr(_spd) + sqrt(root)) / (_grav * xt)));
         
         if (xt < 0)
             angle -= 180;

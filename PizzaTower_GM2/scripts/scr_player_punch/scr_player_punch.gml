@@ -1,7 +1,5 @@
 function scr_player_punch()
 {
-    var _kungfuground, _Sjumpcancel;
-    
     if (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend)
     {
         move = key_left + key_right;
@@ -71,8 +69,8 @@ function scr_player_punch()
                 }
                 
                 hsp = xscale * movespeed;
-                _kungfuground = sprite_index == spr_player_kungfu1 || sprite_index == spr_player_kungfu2 || sprite_index == spr_player_kungfu3 || sprite_index == spr_shotgunsuplexdash;
-                _Sjumpcancel = sprite_index == spr_player_Sjumpcancel || sprite_index == spr_player_Sjumpcancelland || sprite_index == spr_player_Sjumpcancelslide;
+                var _kungfuground = sprite_index == spr_player_kungfu1 || sprite_index == spr_player_kungfu2 || sprite_index == spr_player_kungfu3 || sprite_index == spr_shotgunsuplexdash;
+                var _Sjumpcancel = sprite_index == spr_player_Sjumpcancel || sprite_index == spr_player_Sjumpcancelland || sprite_index == spr_player_Sjumpcancelslide;
                 
                 if (_kungfuground && image_index > 7 && !key_attack && movespeed > 0)
                     movespeed -= 0.5;

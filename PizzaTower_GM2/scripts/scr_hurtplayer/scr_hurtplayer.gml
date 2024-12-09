@@ -1,10 +1,8 @@
-function scr_hurtplayer(argument0)
+function scr_hurtplayer(_player)
 {
-    var _hurt, loseamount;
+    var _hurt = false;
     
-    _hurt = false;
-    
-    with (argument0)
+    with (_player)
     {
         if (global.failcutscene)
         {
@@ -12,7 +10,7 @@ function scr_hurtplayer(argument0)
         else if (state == states.parry || state == states.debugstate || state == states.golf || state == states.slipbanan)
         {
         }
-        else if (state == states.handstandjump && flash == true)
+        else if (state == states.handstandjump && flash)
         {
         }
         else if (state == states.backbreaker || state == states.chainsaw)
@@ -37,7 +35,7 @@ function scr_hurtplayer(argument0)
                 
                 repeat (5)
                 {
-                    with (create_debris(x, y, 1141))
+                    with (create_debris(x, y, spr_slapstar))
                         vsp = irandom_range(-6, -11);
                 }
                 
@@ -85,7 +83,7 @@ function scr_hurtplayer(argument0)
                 movespeed = 6;
                 vsp = -9;
                 flash = true;
-                scr_soundeffect(22);
+                scr_soundeffect(sfx_pephurt);
                 alarm[8] = 100;
                 hurted = true;
                 instance_create(x, y, obj_spikehurteffect);
@@ -103,7 +101,7 @@ function scr_hurtplayer(argument0)
         }
         else if (state == states.ghostpossess)
         {
-            if (instance_exists(possessID) && object_get_parent(possessID) == 407)
+            if (instance_exists(possessID) && object_get_parent(possessID) == obj_baddie)
             {
                 state = states.ghost;
                 
@@ -123,7 +121,7 @@ function scr_hurtplayer(argument0)
         else if (state == states.chainsawbump)
         {
         }
-        else if (state == states.bombpep && hurted == false)
+        else if (state == states.bombpep && !hurted)
         {
         }
         else if (state == states.rideweenie)
@@ -143,7 +141,7 @@ function scr_hurtplayer(argument0)
             alarm[7] = 120;
             hurted = true;
         }
-        else if (pizzashield == true)
+        else if (pizzashield)
         {
             pizzashield = false;
             
@@ -158,9 +156,9 @@ function scr_hurtplayer(argument0)
             alarm[8] = 60;
             alarm[7] = 120;
             hurted = true;
-            scr_soundeffect(22);
+            scr_soundeffect(sfx_pephurt);
         }
-        else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (hurted == false || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && cutscene == false)
+        else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (!hurted || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && !cutscene)
         {
             if (state == states.mort || state == states.morthook || state == states.mortjump || state == states.mortattack)
             {
@@ -179,7 +177,7 @@ function scr_hurtplayer(argument0)
             if (state == states.barrel || state == states.barrelclimbwall || state == states.barreljump || state == states.barrelslide)
             {
                 repeat (4)
-                    create_debris(x, y, 398);
+                    create_debris(x, y, spr_barreldebris);
             }
             
             if (global.kungfu)
@@ -216,7 +214,7 @@ function scr_hurtplayer(argument0)
                     y = obj_player1.y;
             }
             
-            scr_soundeffect(22);
+            scr_soundeffect(sfx_pephurt);
             alarm[8] = 100;
             alarm[7] = 50;
             hurted = true;
@@ -240,7 +238,7 @@ function scr_hurtplayer(argument0)
             global.combotime -= 25;
             global.style -= 25;
             global.hurtcounter += 1;
-            loseamount = 50 * (global.stylethreshold + 1);
+            var loseamount = 50 * (global.stylethreshold + 1);
             
             if (!global.pizzadelivery)
             {

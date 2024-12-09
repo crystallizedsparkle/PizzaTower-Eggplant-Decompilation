@@ -1,7 +1,5 @@
 function scr_player_tacklecharge()
 {
-    var _railinst;
-    
     if (windingAnim < 2000)
         windingAnim++;
     
@@ -11,7 +9,7 @@ function scr_player_tacklecharge()
     }
     else
     {
-        _railinst = instance_place(x, y + 1, obj_railparent);
+        var _railinst = instance_place(x, y + 1, obj_railparent);
         hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
     }
     
@@ -23,7 +21,7 @@ function scr_player_tacklecharge()
     if (movespeed < 24 && move == xscale)
         movespeed += 0.05;
     
-    if (!key_jump2 && jumpstop == false && vsp < 0.5)
+    if (!key_jump2 && !jumpstop && vsp < 0.5)
     {
         vsp /= 20;
         jumpstop = true;
@@ -36,7 +34,7 @@ function scr_player_tacklecharge()
     {
         image_index = 0;
         sprite_index = spr_player_secondjump1;
-        scr_soundeffect(12);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
     }
     
@@ -45,7 +43,7 @@ function scr_player_tacklecharge()
     
     if (scr_solid(x + hsp, y) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_destructibles))
     {
-        if (baddiegrabbedID != 523)
+        if (baddiegrabbedID != obj_null)
         {
             if (baddiegrabbedID.object_index == obj_player1 || baddiegrabbedID.object_index == obj_player2)
             {
@@ -62,7 +60,7 @@ function scr_player_tacklecharge()
                     vsp = -10;
                     alarm[8] = 60;
                     alarm[7] = 120;
-                    other.baddiegrabbedID = 523;
+                    other.baddiegrabbedID = obj_null;
                 }
             }
         }
