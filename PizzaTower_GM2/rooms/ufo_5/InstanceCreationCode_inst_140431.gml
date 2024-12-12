@@ -1,1 +1,1 @@
-content = 470;
+content = obj_miniufo;

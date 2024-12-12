@@ -1,9 +1,6 @@
 {
-  "resourceType": "GMRoom",
-  "resourceVersion": "1.0",
-  "name": "medieval_7",
   "isDnd": false,
-  "volume": 1.0,
+  "volume": 1,
   "parentRoom": null,
   "views": [
     {
@@ -17,11 +14,11 @@
       "yport": 0,
       "wport": 1920,
       "hport": 1080,
-      "objectId": null,
       "hborder": 1280,
       "vborder": 960,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -34,11 +31,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -51,11 +48,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -68,11 +65,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -85,11 +82,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -102,11 +99,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -119,11 +116,11 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     },
     {
       "inherit": false,
@@ -136,22 +133,17 @@
       "yport": 0,
       "wport": 1024,
       "hport": 768,
-      "objectId": null,
       "hborder": 32,
       "vborder": 32,
       "hspeed": -1,
-      "vspeed": -1
+      "vspeed": -1,
+      "objectId": null
     }
   ],
   "layers": [
     {
-      "resourceType": "GMRInstanceLayer",
-      "resourceVersion": "1.0",
       "instances": [
         {
-          "resourceType": "GMRInstance",
-          "resourceVersion": "1.0",
-          "name": "inst_131014",
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -161,22 +153,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 6.0,
-          "scaleY": 3.0,
+          "rotation": 0,
+          "scaleX": 6,
+          "scaleY": 3,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 992,
-          "y": 608
-        },
-        {
+          "y": 608,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131015",
+          "name": "inst_131014"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -186,22 +178,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 59.0,
-          "scaleY": 3.0,
+          "rotation": 0,
+          "scaleX": 59,
+          "scaleY": 3,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 32,
-          "y": 320
-        },
-        {
+          "y": 320,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131016",
+          "name": "inst_131015"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -211,22 +203,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 23.0,
-          "scaleY": 5.0,
+          "rotation": 0,
+          "scaleX": 23,
+          "scaleY": 5,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 32,
-          "y": 608
-        },
-        {
+          "y": 608,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131017",
+          "name": "inst_131016"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -236,22 +228,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 19.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 19,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 736,
-          "y": 736
-        },
-        {
+          "y": 736,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131018",
+          "name": "inst_131017"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -261,22 +253,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 50.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 50,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1344,
-          "y": 608
-        },
-        {
+          "y": 608,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131019",
+          "name": "inst_131018"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -286,22 +278,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 16.0,
-          "scaleY": 4.0,
+          "rotation": 0,
+          "scaleX": 16,
+          "scaleY": 4,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1344,
-          "y": 640
-        },
-        {
+          "y": 640,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131020",
+          "name": "inst_131019"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -311,22 +303,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 992,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131021",
+          "name": "inst_131020"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -336,22 +328,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1024,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131022",
+          "name": "inst_131021"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -361,22 +353,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1056,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131023",
+          "name": "inst_131022"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -386,22 +378,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1088,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131024",
+          "name": "inst_131023"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -411,22 +403,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1120,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131025",
+          "name": "inst_131024"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -436,22 +428,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1152,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131026",
+          "name": "inst_131025"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -461,22 +453,22 @@
           "inheritCode": false,
           "hasCreationCode": true,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1280,
-          "y": 704
-        },
-        {
+          "y": 704,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131027",
+          "name": "inst_131026"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -486,22 +478,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1141,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131028",
+          "name": "inst_131027"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -511,22 +503,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1401,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131029",
+          "name": "inst_131028"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -536,22 +528,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 480,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131030",
+          "name": "inst_131029"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -561,22 +553,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 448,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131031",
+          "name": "inst_131030"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -586,22 +578,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 416,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131032",
+          "name": "inst_131031"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -611,22 +603,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 416,
-          "y": 576
-        },
-        {
+          "y": 576,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131033",
+          "name": "inst_131032"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -636,22 +628,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 448,
-          "y": 576
-        },
-        {
+          "y": 576,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131034",
+          "name": "inst_131033"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -661,22 +653,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 483,
-          "y": 498
-        },
-        {
+          "y": 498,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131035",
+          "name": "inst_131034"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -686,22 +678,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 12.0,
-          "scaleY": 3.0,
+          "rotation": 0,
+          "scaleX": 12,
+          "scaleY": 3,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 32,
-          "y": 416
-        },
-        {
+          "y": 416,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131036",
+          "name": "inst_131035"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -711,22 +703,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 832,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131037",
+          "name": "inst_131036"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -736,22 +728,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 864,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131038",
+          "name": "inst_131037"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -761,22 +753,22 @@
           "inheritCode": false,
           "hasCreationCode": true,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 2.0,
-          "scaleY": 2.0,
+          "rotation": 0,
+          "scaleX": 2,
+          "scaleY": 2,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 2560,
-          "y": 352
-        },
-        {
+          "y": 352,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131039",
+          "name": "inst_131038"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -786,22 +778,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 2560,
-          "y": 448
-        },
-        {
+          "y": 448,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131040",
+          "name": "inst_131039"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -811,22 +803,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1472,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131041",
+          "name": "inst_131040"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -836,22 +828,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1860,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131042",
+          "name": "inst_131041"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -861,22 +853,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1985,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131043",
+          "name": "inst_131042"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -886,22 +878,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1696,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131044",
+          "name": "inst_131043"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -911,22 +903,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1728,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131045",
+          "name": "inst_131044"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -936,22 +928,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 2.0,
-          "scaleY": 3.0,
+          "rotation": 0,
+          "scaleX": 2,
+          "scaleY": 3,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 32,
-          "y": 512
-        },
-        {
+          "y": 512,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131046",
+          "name": "inst_131045"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -961,22 +953,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 5.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 5,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1184,
-          "y": 640
-        },
-        {
+          "y": 640,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131047",
+          "name": "inst_131046"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -986,22 +978,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": -2.0,
-          "scaleY": 2.0,
+          "rotation": 0,
+          "scaleX": -2,
+          "scaleY": 2,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 832,
-          "y": 672
-        },
-        {
+          "y": 672,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131048",
+          "name": "inst_131047"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1011,22 +1003,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 2240,
-          "y": 384
-        },
-        {
+          "y": 384,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131049",
+          "name": "inst_131048"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1036,22 +1028,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 4.0,
-          "scaleY": 4.0,
+          "rotation": 0,
+          "scaleX": 4,
+          "scaleY": 4,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 2112,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131050",
+          "name": "inst_131049"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1061,22 +1053,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 25.0,
-          "scaleY": 4.0,
+          "rotation": 0,
+          "scaleX": 25,
+          "scaleY": 4,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 2240,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131051",
+          "name": "inst_131050"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1086,22 +1078,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 30.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 30,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1920,
-          "y": 320
-        },
-        {
+          "y": 320,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131052",
+          "name": "inst_131051"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1111,22 +1103,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 800,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131053",
+          "name": "inst_131052"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1136,22 +1128,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 768,
-          "y": 480
-        },
-        {
+          "y": 480,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131054",
+          "name": "inst_131053"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1161,22 +1153,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1632,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131055",
+          "name": "inst_131054"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1186,22 +1178,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1664,
-          "y": 544
-        },
-        {
+          "y": 544,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131056",
+          "name": "inst_131055"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1211,22 +1203,22 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": -1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": -1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 662,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131057",
+          "name": "inst_131056"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1236,22 +1228,22 @@
           "inheritCode": false,
           "hasCreationCode": true,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": -1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": -1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 1920,
-          "y": 562
-        },
-        {
+          "y": 562,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131058",
+          "name": "inst_131057"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1261,22 +1253,22 @@
           "inheritCode": false,
           "hasCreationCode": true,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 128,
-          "y": 512
-        },
-        {
+          "y": 512,
           "resourceType": "GMRInstance",
           "resourceVersion": "1.0",
-          "name": "inst_131059",
+          "name": "inst_131058"
+        },
+        {
           "properties": [],
           "isDnd": false,
           "objectId": {
@@ -1286,42 +1278,45 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "imageSpeed": 1,
           "imageIndex": 0,
-          "imageSpeed": 1.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
           "inheritItemSettings": false,
           "x": 160,
-          "y": 576
+          "y": 576,
+          "resourceType": "GMRInstance",
+          "resourceVersion": "1.0",
+          "name": "inst_131059"
         }
       ],
-      "name": "Instances_1",
       "visible": true,
-      "depth": 0.0,
+      "depth": 0,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
+      "properties": [],
+      "resourceType": "GMRInstanceLayer",
+      "resourceVersion": "1.0",
+      "name": "Instances_1"
     },
     {
-      "resourceType": "GMRTileLayer",
-      "resourceVersion": "1.1",
       "tilesetId": {
         "name": "tile_medievaldeco2",
         "path": "tilesets/tile_medievaldeco2/tile_medievaldeco2.yy"
       },
-      "x": 0.0,
-      "y": 0.0,
+      "x": 0,
+      "y": 0,
       "tiles": {
         "SerialiseWidth": 79,
         "SerialiseHeight": 33,
@@ -3935,29 +3930,29 @@
           0
         ]
       },
-      "name": "Tiles_2",
       "visible": true,
-      "depth": 100.0,
+      "depth": 100,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
-    },
-    {
+      "properties": [],
       "resourceType": "GMRTileLayer",
       "resourceVersion": "1.1",
+      "name": "Tiles_2"
+    },
+    {
       "tilesetId": {
         "name": "tile_medievallibrary",
         "path": "tilesets/tile_medievallibrary/tile_medievallibrary.yy"
       },
-      "x": 0.0,
-      "y": 0.0,
+      "x": 0,
+      "y": 0,
       "tiles": {
         "SerialiseWidth": 79,
         "SerialiseHeight": 33,
@@ -6571,29 +6566,29 @@
           100
         ]
       },
-      "name": "Tiles_1",
       "visible": true,
-      "depth": 200.0,
+      "depth": 200,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
-    },
-    {
+      "properties": [],
       "resourceType": "GMRTileLayer",
       "resourceVersion": "1.1",
+      "name": "Tiles_1"
+    },
+    {
       "tilesetId": {
         "name": "tile_medievaldeco2",
         "path": "tilesets/tile_medievaldeco2/tile_medievaldeco2.yy"
       },
-      "x": 0.0,
-      "y": 0.0,
+      "x": 0,
+      "y": 0,
       "tiles": {
         "SerialiseWidth": 79,
         "SerialiseHeight": 33,
@@ -9207,144 +9202,146 @@
           0
         ]
       },
-      "name": "Tiles_BG",
       "visible": true,
-      "depth": 300.0,
+      "depth": 300,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
+      "properties": [],
+      "resourceType": "GMRTileLayer",
+      "resourceVersion": "1.1",
+      "name": "Tiles_BG"
     },
     {
-      "resourceType": "GMRAssetLayer",
-      "resourceVersion": "1.0",
       "assets": [
         {
-          "resourceType": "GMRSpriteGraphic",
-          "resourceVersion": "1.0",
-          "name": "graphic_621C166D",
+          "x": 576,
+          "y": 224,
           "spriteId": {
             "name": "spr_rollsign",
             "path": "sprites/spr_rollsign/spr_rollsign.yy"
           },
-          "headPosition": 0.0,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
-          "animationSpeed": 1.0,
+          "headPosition": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "animationSpeed": 1,
           "colour": 4294967295,
-          "x": 576.0,
-          "y": 224.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
-          "inheritItemSettings": false
-        },
-        {
+          "inheritItemSettings": false,
           "resourceType": "GMRSpriteGraphic",
           "resourceVersion": "1.0",
-          "name": "graphic_4883D964",
+          "name": "graphic_621C166D"
+        },
+        {
+          "x": 119,
+          "y": 500,
           "spriteId": {
             "name": "spr_medievaldoor2",
             "path": "sprites/spr_medievaldoor2/spr_medievaldoor2.yy"
           },
-          "headPosition": 0.0,
-          "rotation": 0.0,
-          "scaleX": 1.0,
-          "scaleY": 1.0,
-          "animationSpeed": 1.0,
+          "headPosition": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "animationSpeed": 1,
           "colour": 4294967295,
-          "x": 119.0,
-          "y": 500.0,
           "inheritedItemId": null,
           "frozen": false,
           "ignore": false,
-          "inheritItemSettings": false
+          "inheritItemSettings": false,
+          "resourceType": "GMRSpriteGraphic",
+          "resourceVersion": "1.0",
+          "name": "graphic_4883D964"
         }
       ],
-      "name": "Assets_1",
       "visible": true,
-      "depth": 400.0,
+      "depth": 400,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
+      "properties": [],
+      "resourceType": "GMRAssetLayer",
+      "resourceVersion": "1.0",
+      "name": "Assets_1"
     },
     {
-      "resourceType": "GMRBackgroundLayer",
-      "resourceVersion": "1.0",
       "spriteId": {
         "name": "bg_medievallibrairy1",
         "path": "sprites/bg_medievallibrairy1/bg_medievallibrairy1.yy"
       },
       "colour": 4294967295,
-      "x": 0.0,
-      "y": 0.0,
+      "x": 0,
+      "y": 0,
       "htiled": true,
       "vtiled": true,
-      "hspeed": 0.0,
-      "vspeed": 0.0,
+      "hspeed": 0,
+      "vspeed": 0,
       "stretch": false,
-      "animationFPS": 15.0,
+      "animationFPS": 15,
       "animationSpeedType": 0,
-      "userdefinedAnimFPS": true,
-      "name": "Backgrounds_1",
+      "userdefinedAnimFPS": false,
       "visible": true,
-      "depth": 500.0,
+      "depth": 500,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
-    },
-    {
+      "properties": [],
       "resourceType": "GMRBackgroundLayer",
       "resourceVersion": "1.0",
+      "name": "Backgrounds_1"
+    },
+    {
       "spriteId": {
         "name": "bg_medievallibrairy2",
         "path": "sprites/bg_medievallibrairy2/bg_medievallibrairy2.yy"
       },
       "colour": 4294967295,
-      "x": 0.0,
-      "y": 0.0,
+      "x": 0,
+      "y": 0,
       "htiled": true,
       "vtiled": true,
-      "hspeed": 0.0,
-      "vspeed": 0.0,
+      "hspeed": 0,
+      "vspeed": 0,
       "stretch": false,
-      "animationFPS": 15.0,
+      "animationFPS": 15,
       "animationSpeedType": 0,
-      "userdefinedAnimFPS": true,
-      "name": "Backgrounds_2",
+      "userdefinedAnimFPS": false,
       "visible": true,
-      "depth": 600.0,
+      "depth": 600,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,
-      "gridX": 16.0,
-      "gridY": 16.0,
+      "gridX": 16,
+      "gridY": 16,
       "layers": [],
       "hierarchyFrozen": false,
       "effectEnabled": true,
       "effectType": null,
-      "properties": []
+      "properties": [],
+      "resourceType": "GMRBackgroundLayer",
+      "resourceVersion": "1.0",
+      "name": "Backgrounds_2"
     }
   ],
   "inheritLayers": false,
@@ -9547,18 +9544,21 @@
   "viewSettings": {
     "inheritViewSettings": false,
     "enableViews": true,
-    "clearViewBackground": false,
-    "clearDisplayBuffer": false
+    "clearViewBackground": true,
+    "clearDisplayBuffer": true
   },
   "physicsSettings": {
     "inheritPhysicsSettings": false,
     "PhysicsWorld": false,
-    "PhysicsWorldGravityX": 0.0,
-    "PhysicsWorldGravityY": 10.0,
+    "PhysicsWorldGravityX": 0,
+    "PhysicsWorldGravityY": 10,
     "PhysicsWorldPixToMetres": 0.1
   },
   "parent": {
     "name": "Rooms",
     "path": "folders/Rooms.yy"
-  }
+  },
+  "resourceType": "GMRoom",
+  "resourceVersion": "1.0",
+  "name": "medieval_7"
 }

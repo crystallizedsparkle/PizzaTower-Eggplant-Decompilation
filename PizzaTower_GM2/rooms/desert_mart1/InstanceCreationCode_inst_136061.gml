@@ -1,1 +1,1 @@
-targetRoom = 479;
+targetRoom = desert_mart2;

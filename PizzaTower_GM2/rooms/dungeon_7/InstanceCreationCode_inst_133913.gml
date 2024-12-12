@@ -1,1 +1,1 @@
-targetRoom = 457;
+targetRoom = dungeon_treasure;

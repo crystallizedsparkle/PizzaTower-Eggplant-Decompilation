@@ -1,1 +1,1 @@
-content = 264;
+content = obj_peppinoclone;

@@ -1,1 +1,1 @@
-content = 464;
+content = obj_ninja;

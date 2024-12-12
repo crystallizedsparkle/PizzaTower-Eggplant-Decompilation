@@ -1,2 +1,2 @@
 level = "chateau";
-targetRoom = 639;
+targetRoom = chateau_1;

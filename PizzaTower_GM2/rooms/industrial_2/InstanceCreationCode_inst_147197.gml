@@ -1,2 +1,2 @@
-targetRoom = 115;
+targetRoom = industrial_3;
 targetDoor = "A";

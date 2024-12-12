@@ -1,3 +1,3 @@
 trigger = 0;
 secret_close_portalID(id);
-targetRoom = 110;
+targetRoom = factory_secret1;

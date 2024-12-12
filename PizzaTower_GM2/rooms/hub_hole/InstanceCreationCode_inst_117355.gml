@@ -6,7 +6,11 @@ if (global.levelcomplete && !global.graveyardcutscene)
         other.backy = backtohubstarty;
     }
     
-    scene_info = [[cutscene_graveyard_end], [cutscene_save_game]];
+    scene_info =
+	[
+	[cutscene_graveyard_end],
+	[cutscene_save_game]
+	];
 }
 else if (global.levelcomplete)
 {

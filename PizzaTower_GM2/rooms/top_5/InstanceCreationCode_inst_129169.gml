@@ -1,1 +1,1 @@
-content = 469;
+content = obj_ancho;

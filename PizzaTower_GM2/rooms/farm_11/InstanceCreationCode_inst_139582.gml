@@ -1,1 +1,1 @@
-targetRoom = 534;
+targetRoom = farm_10;

@@ -1,1 +1,1 @@
-targetRoom = 185;
+targetRoom = space_9;

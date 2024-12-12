@@ -1,1 +1,1 @@
-targetRoom = 334;
+targetRoom = minigolf_secret3;

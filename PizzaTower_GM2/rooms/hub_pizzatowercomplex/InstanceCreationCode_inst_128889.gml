@@ -1,1 +1,1 @@
-targetRoom = 135;
+targetRoom = hub_medievallobby;

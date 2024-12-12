@@ -1,1 +1,1 @@
-targetRoom = 402;
+targetRoom = entrance_6c;

@@ -1,2 +1,2 @@
 secret_close_portalID(id);
-targetRoom = 496;
+targetRoom = desert_secret2;

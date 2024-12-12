@@ -1,1 +1,1 @@
-targetRoom = 16;
+targetRoom = freezer_secret1;

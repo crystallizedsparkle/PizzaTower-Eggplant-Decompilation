@@ -223,7 +223,7 @@ switch (state)
             {
                 sprite_index = walkspr;
                 state = states.walk;
-                breakdanceinst = -4;
+                breakdanceinst = noone;
             }
         }
         

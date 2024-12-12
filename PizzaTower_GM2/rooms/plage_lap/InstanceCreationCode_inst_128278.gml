@@ -1,1 +1,1 @@
-targetRoom = 30;
+targetRoom = plage_cavern2;

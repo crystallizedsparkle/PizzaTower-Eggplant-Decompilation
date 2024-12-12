@@ -1,1 +1,1 @@
-targetRoom = 4;
+targetRoom = street_secret1;

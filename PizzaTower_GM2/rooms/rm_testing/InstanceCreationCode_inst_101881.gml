@@ -1,6 +1,6 @@
 trigger = 6;
 
-func = function(argument0)
+func = function(arg0)
 {
     if (!active)
     {

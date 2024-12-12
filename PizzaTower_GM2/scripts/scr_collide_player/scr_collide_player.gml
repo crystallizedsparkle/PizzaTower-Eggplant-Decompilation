@@ -46,11 +46,11 @@ function scr_collide_player()
     if (vsp < 20)
         vsp += grav;
     
-    if (platformid != -4)
+    if (platformid != noone)
     {
         if (vsp < -1 || !instance_exists(platformid) || (!place_meeting(x, y + 16, platformid) || !place_meeting(x, y + 32, platformid)))
         {
-            platformid = -4;
+            platformid = noone;
             y = floor(y);
         }
         else
@@ -98,9 +98,9 @@ function scr_collide_player()
     grinding = !place_meeting(x, y, obj_grindrail) && place_meeting(x, y + 1, obj_grindrail);
     grounded |= grinding;
     
-    if (platformid != -4 || (place_meeting(x, y + 1, obj_movingplatform) && !place_meeting(x, y - 3, obj_movingplatform)) || place_meeting(x, y + 8, 101 && !place_meeting(x, y + 6, obj_movingplatform)))
+    if (platformid != noone || (place_meeting(x, y + 1, obj_movingplatform) && !place_meeting(x, y - 3, obj_movingplatform)) || place_meeting(x, y + 8, 101 && !place_meeting(x, y + 6, obj_movingplatform)))
         grounded = true;
     
-    if (grounded && platformid == -4)
+    if (grounded && platformid == noone)
         y = floor(y);
 }

@@ -171,7 +171,7 @@ else if (state == states.punch)
         image_xscale *= -1;
 }
 
-if (state != states.punch && hitboxID != -4 && instance_exists(hitboxID))
+if (state != states.punch && hitboxID != noone && instance_exists(hitboxID))
 {
     instance_destroy(hitboxID);
     hitboxID = noone;

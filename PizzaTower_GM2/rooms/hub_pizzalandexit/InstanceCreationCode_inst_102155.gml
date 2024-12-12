@@ -1,1 +1,1 @@
-targetRoom = 553;
+targetRoom = hub_golf;

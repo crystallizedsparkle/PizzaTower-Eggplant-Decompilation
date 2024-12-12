@@ -1,1 +1,1 @@
-targetRoom = 66;
+targetRoom = rm_testing6;

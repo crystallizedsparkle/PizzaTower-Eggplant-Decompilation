@@ -1,1 +1,1 @@
-targetRoom = 487;
+targetRoom = desert_10;

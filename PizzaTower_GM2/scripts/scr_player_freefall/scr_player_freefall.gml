@@ -91,7 +91,7 @@ function scr_player_freefall()
         }
         else
         {
-            scr_soundeffect(27);
+            scr_soundeffect(sfx_groundpound);
             
             if (sprite_index == spr_player_poundcancel1)
                 sprite_index = spr_player_poundcancel2;

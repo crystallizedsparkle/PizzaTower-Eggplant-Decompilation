@@ -1,7 +1,13 @@
 sprite_index = spr_canongoblin_walk;
-scene_info = [[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]], [cutscene_waitfor_dialog], [cutscene_set_player_actor], [cutscene_wait, 20], [function()
+scene_info =
+[
+[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]],
+[cutscene_waitfor_dialog],
+[cutscene_set_player_actor],
+[cutscene_wait, 20],
+[function()
 {
-    anarchist = 128596;
+    anarchist = inst_128596;
     
     with (anarchist)
     {
@@ -15,15 +21,21 @@ scene_info = [[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]]
     }
     
     cutscene_end_action();
-}], [function()
+}],
+[function()
 {
     if (!instance_exists(obj_pizzagoblinbomb))
         cutscene_end_action();
-}], [cutscene_wait, 10], [cutscene_do_dialog, [dialog_create("Let's go fella", -4, function()
+}],
+[cutscene_wait, 10],
+[cutscene_do_dialog, [dialog_create("Let's go fella", noone, function()
 {
     global.anarchistcutscene2 = true;
     quick_ini_write_real(get_savefile_ini(), "cutscene", "anarchist2", true);
-})]], [cutscene_waitfor_dialog], [cutscene_set_player_actor], [function()
+})]],
+[cutscene_waitfor_dialog],
+[cutscene_set_player_actor],
+[function()
 {
     with (anarchist)
     {
@@ -37,22 +49,23 @@ scene_info = [[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]]
                 cutscene_end_action();
         }
     }
-}], [cutscene_set_player_normal]];
+}], 
+[cutscene_set_player_normal]
+];
 
 dialog_func = function()
 {
     do_dialog_cutscene(scene_info);
 };
 
-if (global.anarchistcutscene1 == -4)
+if (global.anarchistcutscene1 == noone)
     global.anarchistcutscene1 = quick_ini_read_real(get_savefile_ini(), "cutscene", "anarchist1", false);
 
 if (!global.anarchistcutscene1)
     instance_destroy();
 
-if (global.anarchistcutscene2 == -4)
+if (global.anarchistcutscene2 == noone)
     global.anarchistcutscene2 = quick_ini_read_real(get_savefile_ini(), "cutscene", "anarchist2", false);
 
 if (global.anarchistcutscene2)
     instance_destroy();
-

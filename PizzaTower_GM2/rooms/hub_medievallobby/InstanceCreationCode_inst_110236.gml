@@ -1,2 +1,2 @@
-targetRoom = 362;
+targetRoom = hub_dungeonlobby;
 targetDoor = "C";

@@ -1,1 +1,1 @@
-targetRoom = 471;
+targetRoom = dragonlair_7;

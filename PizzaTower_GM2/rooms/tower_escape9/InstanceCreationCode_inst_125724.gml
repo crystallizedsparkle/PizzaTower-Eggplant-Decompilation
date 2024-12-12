@@ -1,1 +1,1 @@
-targetRoom = 272;
+targetRoom = tower_2;

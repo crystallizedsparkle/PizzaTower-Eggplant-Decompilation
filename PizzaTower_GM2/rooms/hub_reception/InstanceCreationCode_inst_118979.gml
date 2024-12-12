@@ -1,1 +1,1 @@
-targetRoom = 249;
+targetRoom = hub_hall;

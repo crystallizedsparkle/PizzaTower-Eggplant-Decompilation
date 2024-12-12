@@ -1,1 +1,1 @@
-targetRoom = 293;
+targetRoom = freezer_escape1;

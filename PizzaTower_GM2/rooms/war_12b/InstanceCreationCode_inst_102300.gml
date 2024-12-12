@@ -1,2 +1,2 @@
-targetRoom = 187;
+targetRoom = war_13;
 targetDoor = "B";

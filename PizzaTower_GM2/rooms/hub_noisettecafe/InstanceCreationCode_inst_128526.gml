@@ -1,5 +1,5 @@
 sprite_index = spr_playerN_idle;
-n_dialog[0] = [dialog_create("fight the noise", -4, function()
+n_dialog[0] = [dialog_create("fight the noise", noone, function()
 {
     if (!global.noisecutscene1)
     {

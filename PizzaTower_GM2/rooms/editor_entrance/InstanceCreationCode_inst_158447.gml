@@ -1,1 +1,1 @@
-targetRoom = 776;
+targetRoom = custom_lvl_room;

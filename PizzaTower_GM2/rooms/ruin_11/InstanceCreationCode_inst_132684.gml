@@ -1,1 +1,1 @@
-targetRoom = 443;
+targetRoom = ruin_secret6;

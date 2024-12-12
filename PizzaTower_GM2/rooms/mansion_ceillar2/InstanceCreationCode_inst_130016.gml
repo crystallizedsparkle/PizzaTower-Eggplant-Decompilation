@@ -1,2 +1,2 @@
-targetRoom = 308;
+targetRoom = mansion_fishingroom;
 targetDoor = "B";

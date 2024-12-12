@@ -1,2 +1,2 @@
-targetRoom = 218;
+targetRoom = plage_beach1;
 targetDoor = "B";

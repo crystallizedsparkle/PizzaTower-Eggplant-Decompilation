@@ -1,2 +1,2 @@
-targetRoom = 509;
+targetRoom = graveyard_4;
 targetDoor = "C";

@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_medievaldeco",
   "spriteId": {
     "name": "tile_medievaldeco_sprite",
-    "path": "sprites/tile_medievaldeco_sprite/tile_medievaldeco_sprite.yy"
+    "path": "sprites/tile_medievaldeco_sprite/tile_medievaldeco_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "medievalgroup",
-    "path": "texturegroups/medievalgroup"
+    "path": "texturegroups/medievalgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -562,22 +565,17 @@
       536,
       537,
       538,
-      539
+      539,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_medievaldeco",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

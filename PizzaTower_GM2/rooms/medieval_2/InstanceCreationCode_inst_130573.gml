@@ -1,2 +1,2 @@
-targetRoom = 411;
+targetRoom = medieval_3;
 visible = false;

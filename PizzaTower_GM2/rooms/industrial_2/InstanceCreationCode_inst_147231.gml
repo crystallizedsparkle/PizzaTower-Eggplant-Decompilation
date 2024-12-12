@@ -1,2 +1,1 @@
 chosenstate = states.slap;
-

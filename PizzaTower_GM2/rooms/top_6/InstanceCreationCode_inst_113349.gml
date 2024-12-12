@@ -1,1 +1,1 @@
-targetRoom = 220;
+targetRoom = top_7;

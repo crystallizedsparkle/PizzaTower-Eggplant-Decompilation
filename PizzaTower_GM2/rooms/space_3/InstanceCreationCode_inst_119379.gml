@@ -1,1 +1,1 @@
-targetRoom = 346;
+targetRoom = space_secret1;

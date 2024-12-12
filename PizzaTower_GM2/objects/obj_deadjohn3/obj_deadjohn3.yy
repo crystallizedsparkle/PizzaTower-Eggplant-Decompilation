@@ -4,21 +4,34 @@
   "name": "obj_deadjohn3",
   "spriteId": {
     "name": "spr_deadjohn3",
-    "path": "sprites/spr_deadjohn3/spr_deadjohn3.yy"
+    "path": "sprites/spr_deadjohn3/spr_deadjohn3.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
+  "visible": true,
   "managed": false,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "obj_deadjohnparent",
-    "path": "objects/obj_deadjohnparent/obj_deadjohnparent.yy"
+    "path": "objects/obj_deadjohnparent/obj_deadjohnparent.yy",
   },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
+  "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Objects.yy"
-  }
+    "path": "folders/Objects.yy",
+  },
 }

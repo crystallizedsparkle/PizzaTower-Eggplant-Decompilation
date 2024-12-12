@@ -31,7 +31,7 @@ function scr_noise_walk()
         
         scr_noise_do_jump();
     }
-    else if (attackpool != -4)
+    else if (attackpool != noone)
     {
         if (attackbuffer > 0)
         {

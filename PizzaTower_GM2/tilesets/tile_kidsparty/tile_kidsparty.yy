@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_kidsparty",
   "spriteId": {
     "name": "tile_kidsparty_sprite",
-    "path": "sprites/tile_kidsparty_sprite/tile_kidsparty_sprite.yy"
+    "path": "sprites/tile_kidsparty_sprite/tile_kidsparty_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "kidspartygroup",
-    "path": "texturegroups/kidspartygroup"
+    "path": "texturegroups/kidspartygroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -1542,22 +1545,17 @@
       1516,
       1517,
       1518,
-      1519
+      1519,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_kidsparty",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

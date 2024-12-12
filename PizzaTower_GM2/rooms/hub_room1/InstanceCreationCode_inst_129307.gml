@@ -1,2 +1,2 @@
 level = "dungeon";
-targetRoom = 444;
+targetRoom = dungeon_1;

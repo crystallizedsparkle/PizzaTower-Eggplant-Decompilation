@@ -1,1 +1,1 @@
-content = 543;
+content = obj_pizzakinpineapple;

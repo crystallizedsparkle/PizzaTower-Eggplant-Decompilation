@@ -1,1 +1,1 @@
-content = 619;
+content = obj_woodbarrel;

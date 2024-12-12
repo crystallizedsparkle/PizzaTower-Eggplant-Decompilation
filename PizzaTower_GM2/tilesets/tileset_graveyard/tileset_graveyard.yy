@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tileset_graveyard",
   "spriteId": {
     "name": "tileset_graveyard_sprite",
-    "path": "sprites/tileset_graveyard_sprite/tileset_graveyard_sprite.yy"
+    "path": "sprites/tileset_graveyard_sprite/tileset_graveyard_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "graveyardgroup",
-    "path": "texturegroups/graveyardgroup"
+    "path": "texturegroups/graveyardgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -202,22 +205,17 @@
       176,
       177,
       178,
-      179
+      179,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tileset_graveyard",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

@@ -1,5 +1,5 @@
 event_inherited();
-boss_array[0] = -4;
+boss_array[0] = noone;
 boss_array[1] = [obj_pepperman, 1];
 boss_array[2] = [obj_vigilanteboss, 1];
 boss_array[3] = [obj_noiseboss, 1];
@@ -49,7 +49,7 @@ attack_max[4] = 40;
 attack_max[5] = 40;
 attack_max[6] = 40;
 attack_cooldown = attack_max[0];
-dashcloudid = -4;
+dashcloudid = noone;
 targetstunned = 0;
 targetstunnedminus[0] = 30;
 targetstunnedminus[1] = 30;

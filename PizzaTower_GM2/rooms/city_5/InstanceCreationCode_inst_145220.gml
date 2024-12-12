@@ -1,1 +1,1 @@
-targetRoom = 261;
+targetRoom = city_treasure;

@@ -1,1 +1,1 @@
-content = 442;
+content = obj_robot;

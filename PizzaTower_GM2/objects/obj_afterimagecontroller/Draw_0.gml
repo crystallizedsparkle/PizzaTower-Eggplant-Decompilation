@@ -26,7 +26,7 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
                 
                 if (instance_exists(playerid))
                 {
-                    if (playerid != -4 && playerid.object_index != obj_pepgoblin)
+                    if (playerid != noone && playerid.object_index != obj_pepgoblin)
                     {
                         shader_set(global.Pal_Shader);
                         pal_swap_set(playerid.spr_palette, playerid.paletteselect, false);
@@ -36,7 +36,7 @@ for (i = 0; i < ds_list_size(global.afterimage_list); i++)
             
             draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 0, image_blend, a);
             
-            if (identifier == states.boots || identifier == states.grabbed || (identifier == states.tumble && playerid != -4))
+            if (identifier == states.boots || identifier == states.grabbed || (identifier == states.tumble && playerid != noone))
                 shader_reset();
         }
     }

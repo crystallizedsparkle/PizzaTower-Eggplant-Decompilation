@@ -1,1 +1,1 @@
-content = 444;
+content = obj_pizzagoblin;

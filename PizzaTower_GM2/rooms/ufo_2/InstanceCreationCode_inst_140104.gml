@@ -1,1 +1,1 @@
-targetRoom = 543;
+targetRoom = ufo_3;

@@ -1,1 +1,1 @@
-content = 457;
+content = obj_bigcheese;

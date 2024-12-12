@@ -20,7 +20,7 @@ repeat (round(explosionsnum))
     }
 }
 
-scr_soundeffect(14);
+scr_soundeffect(sfx_explosion);
 
 with (obj_camera)
 {

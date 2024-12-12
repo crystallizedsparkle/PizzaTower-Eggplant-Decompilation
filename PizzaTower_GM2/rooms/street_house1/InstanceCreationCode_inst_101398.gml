@@ -1,1 +1,1 @@
-targetRoom = 777;
+targetRoom = street_1;

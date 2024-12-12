@@ -48,7 +48,7 @@ function scr_robot_chase()
     
     var _col = collision_line(x, y, playerinst.x, playerinst.y, obj_solid, false, true);
     
-    if (playerinst.y < (y - attack_threshold_y) && _col == -4 && playerinst.x > (x - attack_threshold_x) && playerinst.x < (x + attack_threshold_x))
+    if (playerinst.y < (y - attack_threshold_y) && _col == noone && playerinst.x > (x - attack_threshold_x) && playerinst.x < (x + attack_threshold_x))
     {
         hsp = 0;
         state = states.throwing;

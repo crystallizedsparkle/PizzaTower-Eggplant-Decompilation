@@ -1,1 +1,1 @@
-targetRoom = 10;
+targetRoom = city_8;

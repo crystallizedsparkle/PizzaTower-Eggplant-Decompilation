@@ -1,1 +1,1 @@
-targetRoom = 133;
+targetRoom = space_lap;

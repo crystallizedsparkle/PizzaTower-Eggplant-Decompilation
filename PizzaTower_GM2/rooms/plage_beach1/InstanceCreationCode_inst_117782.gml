@@ -1,1 +1,1 @@
-targetRoom = 302;
+targetRoom = plage_treasure;

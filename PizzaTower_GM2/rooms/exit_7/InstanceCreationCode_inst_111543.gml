@@ -1,2 +1,2 @@
-content = 826;
+content = obj_blobmonster;
 trigger = 1;

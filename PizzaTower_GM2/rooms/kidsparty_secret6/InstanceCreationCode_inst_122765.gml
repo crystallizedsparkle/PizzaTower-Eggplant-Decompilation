@@ -1,2 +1,2 @@
-content = 441;
+content = obj_pizzaboy;
 trigger = 1;

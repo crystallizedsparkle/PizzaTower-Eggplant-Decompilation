@@ -1,1 +1,1 @@
-targetRoom = 295;
+targetRoom = sewer_treasure;

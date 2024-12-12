@@ -2,7 +2,7 @@ if (room == rm_editor)
     exit;
 
 if (!instance_exists(cloneid))
-    cloneid = -4;
+    cloneid = noone;
 
 switch (state)
 {

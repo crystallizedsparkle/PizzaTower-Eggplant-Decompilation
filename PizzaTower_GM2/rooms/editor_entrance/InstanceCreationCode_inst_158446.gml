@@ -1,1 +1,1 @@
-targetRoom = 775;
+targetRoom = rm_editor;

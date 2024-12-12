@@ -1,1 +1,1 @@
-content = 777;
+content = obj_pepbat;

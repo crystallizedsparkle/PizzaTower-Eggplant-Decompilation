@@ -1,1 +1,1 @@
-targetRoom = 490;
+targetRoom = desert_treasure;

@@ -70,7 +70,7 @@ if (sprite_index == spr_grabbiehand_fall && player == noone)
 
 if (sprite_index == spr_grabbiehand_catch)
 {
-    if (player == -4)
+    if (player == noone)
         player = other.id;
     
     other.vsp = 0;

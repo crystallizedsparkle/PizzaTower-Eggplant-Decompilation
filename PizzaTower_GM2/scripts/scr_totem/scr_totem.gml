@@ -35,7 +35,7 @@ function totem_clear(_obj)
     {
         for (var i = 0; i < array_length(cheeseID); i++)
         {
-            if (cheeseID[i] != -4 && (!instance_exists(cheeseID[i]) || cheeseID[i].state != states.totem))
+            if (cheeseID[i] != noone && (!instance_exists(cheeseID[i]) || cheeseID[i].state != states.totem))
             {
                 if (instance_exists(cheeseID[i]))
                     cheeseID[i].totemID = noone;
@@ -54,7 +54,7 @@ function totem_count(_obj)
     {
         for (var i = 0; i < array_length(cheeseID); i++)
         {
-            if (cheeseID[i] != -4)
+            if (cheeseID[i] != noone)
                 c++;
         }
         

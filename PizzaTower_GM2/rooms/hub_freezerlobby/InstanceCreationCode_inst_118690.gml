@@ -9,8 +9,12 @@ if (global.levelcomplete && !global.freezercutscene)
     }
     
     currentroom = room;
-    dragonactor = 118689;
-    scene_info = [[cutscene_medieval_start], [cutscene_waitfor_sprite, 324], [function()
+    dragonactor = inst_118689;
+    scene_info =
+	[
+	[cutscene_medieval_start],
+	[cutscene_waitfor_sprite, obj_player1],
+	[function()
     {
         with (obj_actor)
         {
@@ -22,7 +26,13 @@ if (global.levelcomplete && !global.freezercutscene)
         }
         
         cutscene_end_action();
-    }], [cutscene_set_player_visible, false], [cutscene_player_idleanim], [cutscene_player_float, true], [cutscene_player_pos_lerp, 832, 288, 0.07], [cutscene_wait, 40], [function()
+    }],
+	[cutscene_set_player_visible, false],
+	[cutscene_player_idleanim],
+	[cutscene_player_float, true],
+	[cutscene_player_pos_lerp, 832, 288, 0.07],
+	[cutscene_wait, 40],
+	[function()
     {
         with (dragonactor)
         {
@@ -30,11 +40,12 @@ if (global.levelcomplete && !global.freezercutscene)
             sprite_index = spr_cheesedragon_goingup;
             
             repeat (3)
-                create_debris(x, y, 2516);
+                create_debris(x, y, spr_icedebris);
         }
         
         cutscene_end_action();
-    }], [function()
+    }],
+	[function()
     {
         with (dragonactor)
         {
@@ -46,13 +57,19 @@ if (global.levelcomplete && !global.freezercutscene)
                     cutscene_end_action();
             }
         }
-    }], [cutscene_change_room, 228], [cutscene_set_player_visible, false], [cutscene_set_player_pos, 1407, 415], [cutscene_wait, 20], [function()
+    }],
+	[cutscene_change_room, hub_grandpizzardtower],
+	[cutscene_set_player_visible, false],
+	[cutscene_set_player_pos, 1407, 415],
+	[cutscene_wait, 20],
+	[function()
     {
         dragonactor = instance_create(1407, -125, obj_actor);
         dragonactor.sprite_index = spr_cheesedragon_idle;
         dragonactor.image_speed = 0.35;
         cutscene_end_action();
-    }], [function()
+    }],
+	[function()
     {
         with (dragonactor)
         {
@@ -67,7 +84,8 @@ if (global.levelcomplete && !global.freezercutscene)
                     cutscene_end_action();
             }
         }
-    }], [function()
+    }],
+	[function()
     {
         with (dragonactor)
         {
@@ -82,7 +100,10 @@ if (global.levelcomplete && !global.freezercutscene)
                     cutscene_end_action();
             }
         }
-    }], [cutscene_soundeffect, 27], [cutscene_camera_shake, 5, 3 / room_speed], [function()
+    }],
+	[cutscene_soundeffect, sfx_groundpound],
+	[cutscene_camera_shake, 5, 3 / room_speed],
+	[function()
     {
         with (dragonactor)
         {
@@ -94,19 +115,35 @@ if (global.levelcomplete && !global.freezercutscene)
                     cutscene_end_action();
             }
         }
-    }], [cutscene_wait, 50], [function()
+    }],
+	[cutscene_wait, 50],
+	[function()
     {
         with (obj_freezerblock)
             instance_destroy();
         
         cutscene_end_action();
-    }], [cutscene_wait, 50], [cutscene_change_room, 214], [cutscene_set_player_visible, false], [cutscene_set_player_pos, 190, 600], [cutscene_soundeffect, 27], [cutscene_camera_shake, 5, 3 / room_speed], [cutscene_wait, 50], [function()
+    }],
+	[cutscene_wait, 50],
+	[cutscene_change_room, hub_plains],
+	[cutscene_set_player_visible, false],
+	[cutscene_set_player_pos, 190, 600],
+	[cutscene_soundeffect, sfx_groundpound],
+	[cutscene_camera_shake, 5, 3 / room_speed],
+	[cutscene_wait, 50],
+	[function()
     {
         with (obj_freezerblock)
             instance_destroy();
         
         cutscene_end_action();
-    }], [cutscene_wait, 50], [cutscene_change_room, currentroom], [cutscene_set_player_pos, backx, backy], [cutscene_set_player_visible, true], [cutscene_player_float, false], [function()
+    }],
+	[cutscene_wait, 50],
+	[cutscene_change_room, currentroom],
+	[cutscene_set_player_pos, backx, backy],
+	[cutscene_set_player_visible, true],
+	[cutscene_player_float, false],
+	[function()
     {
         instance_destroy(obj_actor);
         
@@ -124,7 +161,9 @@ if (global.levelcomplete && !global.freezercutscene)
         global.freezercutscene = true;
         quick_ini_write_real(get_savefile_ini(), "cutscene", "freezer", true);
         cutscene_end_action();
-    }], [cutscene_save_game]];
+    }],
+	[cutscene_save_game]
+	];
 }
 else if (global.levelcomplete)
 {
@@ -135,4 +174,3 @@ else
 {
     scene_info = [[cutscene_wait, 20]];
 }
-

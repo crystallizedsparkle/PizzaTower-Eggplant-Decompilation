@@ -104,7 +104,7 @@ else if (ds_list_find_index(global.baddieroom, id) == -1 && important)
     instance_create(x, y, obj_baddiegibs);
     instance_create(x, y, obj_baddiegibs);
     instance_create(x, y, obj_baddiegibs);
-    scr_soundeffect(23);
+    scr_soundeffect(sfx_killenemy);
     
     with (obj_camera)
     {

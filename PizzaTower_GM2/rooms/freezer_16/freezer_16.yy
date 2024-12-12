@@ -207,7 +207,7 @@
 589,-40,0,10,217,218,219,570,571,572,573,574,575,576,-4,0,4,296,297,298,299,-15,0,7,603,604,605,606,607,608,609,-4,0,3,316,317,318,-33,0,10,237,238,239,590,591,592,593,594,595,596,-23,0,7,623,624,625,626,627,628,629,-43,0,7,550,551,552,553,554,555,556,-23,0,7,643,644,645,646,647,648,649,
 -43,0,7,570,571,572,573,574,575,576,-23,0,7,663,664,665,666,667,668,669,-22,0,4,256,257,258,259,-17,0,7,590,591,592,593,594,595,596,-52,0,4,276,277,278,279,-17,0,7,550,551,552,553,554,555,556,-52,0,4,296,297,298,299,-17,0,7,570,571,572,573,574,575,576,-73,0,7,590,591,592,593,594,595,
 596,-68,0,12,11,12,13,14,15,550,551,552,553,554,555,556,-73,0,7,570,571,572,573,574,575,576,-5,0,6,211,212,213,214,215,216,-38,0,3,217,218,219,-21,0,7,590,591,592,593,594,595,596,-5,0,6,231,232,233,234,235,236,-38,0,3,237,238,239,-566,0,],},"visible":true,"depth":200,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_1","spriteId":{"name":"bg_freezerfridgeinside","path":"sprites/bg_freezerfridgeinside/bg_freezerfridgeinside.yy",},"colour":4294967295,"x":0,"y":-200,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":true,"visible":true,"depth":300,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_1","spriteId":{"name":"bg_freezerfridgeinside","path":"sprites/bg_freezerfridgeinside/bg_freezerfridgeinside.yy",},"colour":4294967295,"x":0,"y":-200,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":300,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
   "creationCodeFile": "${project_dir}/rooms/freezer_16/RoomCreationCode.gml",
@@ -353,8 +353,8 @@
   "viewSettings": {
     "inheritViewSettings": false,
     "enableViews": true,
-    "clearViewBackground": false,
-    "clearDisplayBuffer": false,
+    "clearViewBackground": true,
+    "clearDisplayBuffer": true,
   },
   "physicsSettings": {
     "inheritPhysicsSettings": false,

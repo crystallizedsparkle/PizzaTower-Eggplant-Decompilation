@@ -1,1 +1,1 @@
-targetRoom = 634;
+targetRoom = minigolf_10;

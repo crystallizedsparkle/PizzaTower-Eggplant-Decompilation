@@ -1,1 +1,1 @@
-targetRoom = 210;
+targetRoom = war_10;

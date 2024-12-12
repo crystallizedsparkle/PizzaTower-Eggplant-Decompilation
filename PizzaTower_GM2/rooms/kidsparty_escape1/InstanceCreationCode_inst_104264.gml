@@ -1,2 +1,2 @@
-targetRoom = 48;
+targetRoom = kidsparty_floor4_3;
 targetDoor = "D";

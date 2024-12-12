@@ -1,2 +1,1 @@
-attack = states.dynamite;
-
+attack = UnknownEnum.Value_2;

@@ -23,38 +23,34 @@ function scr_editor_state_objects()
     }
 }
 
-function scr_editor_get_object_mouse(argument0, argument1)
+function scr_editor_get_object_mouse(_mouse_x, _mouse_y)
 {
-    var num, o, i, b;
-    
     scr_editor_clear_selectedobjects();
-    num = instance_place_list(argument0, argument1, 232, global.instancelist, true);
-    o = -4;
+    var num = instance_place_list(_mouse_x, _mouse_y, obj_fakeobject, global.instancelist, true);
+    var o = noone;
     
-    for (i = 0; i < num; i++)
+    for (var i = 0; i < num; i++)
     {
-        b = ds_list_find_value(global.instancelist, i);
+        var b = ds_list_find_value(global.instancelist, i);
         
         with (b)
         {
-            if (layerdepth == other.layerdepth && (o == -4 || depth < o.depth))
+            if (layerdepth == other.layerdepth && (o == noone || depth < o.depth))
                 o = b;
         }
     }
     
     ds_list_clear(global.instancelist);
     
-    if (o != -4)
+    if (o != noone)
         ds_list_add(selectedobjects, o);
 }
 
 function scr_editor_clear_selectedobjects()
 {
-    var i, b;
-    
-    for (i = 0; i < ds_list_size(selectedobjects); i++)
+    for (var i = 0; i < ds_list_size(selectedobjects); i++)
     {
-        b = ds_list_find_value(selectedobjects, i);
+        var b = ds_list_find_value(selectedobjects, i);
         
         with (b)
             selected = false;

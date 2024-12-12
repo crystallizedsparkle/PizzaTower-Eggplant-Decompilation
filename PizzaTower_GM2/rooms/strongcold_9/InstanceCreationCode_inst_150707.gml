@@ -1,1 +1,1 @@
-targetRoom = 677;
+targetRoom = strongcold_secret6;

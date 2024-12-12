@@ -1,1 +1,1 @@
-content = 452;
+content = obj_rancher;

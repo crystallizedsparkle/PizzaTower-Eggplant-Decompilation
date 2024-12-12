@@ -1,1 +1,1 @@
-targetRoom = 673;
+targetRoom = strongcold_treasure;

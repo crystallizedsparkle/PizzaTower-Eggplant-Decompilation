@@ -1,2 +1,2 @@
-targetRoom = 159;
+targetRoom = hub_wasteland;
 targetDoor = "C";

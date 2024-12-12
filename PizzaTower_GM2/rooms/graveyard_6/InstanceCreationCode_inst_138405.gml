@@ -1,1 +1,1 @@
-targetRoom = 517;
+targetRoom = graveyard_treasure;

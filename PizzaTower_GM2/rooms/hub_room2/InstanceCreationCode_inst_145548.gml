@@ -1,2 +1,2 @@
 level = "graveyard";
-targetRoom = 503;
+targetRoom = graveyard_1;

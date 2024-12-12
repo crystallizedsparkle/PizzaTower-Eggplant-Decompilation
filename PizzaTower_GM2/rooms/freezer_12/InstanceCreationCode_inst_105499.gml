@@ -1,2 +1,2 @@
-targetRoom = 704;
+targetRoom = freezer_13;
 targetDoor = "A";

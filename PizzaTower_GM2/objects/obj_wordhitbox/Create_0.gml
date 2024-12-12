@@ -1,6 +1,6 @@
 event_inherited();
 dmg = 40;
-var t = 324;
+var t = obj_player1;
 
 if (global.coop)
     t = instance_nearest(x, y, obj_player);

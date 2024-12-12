@@ -1,1 +1,1 @@
-targetRoom = 117;
+targetRoom = street_treasure;

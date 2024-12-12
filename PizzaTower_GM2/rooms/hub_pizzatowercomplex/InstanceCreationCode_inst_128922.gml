@@ -1,1 +1,1 @@
-targetRoom = 45;
+targetRoom = hub_ruinlobby;

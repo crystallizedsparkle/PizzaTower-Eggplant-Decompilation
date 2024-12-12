@@ -1,1 +1,1 @@
-targetRoom = 606;
+targetRoom = kungfu_3;

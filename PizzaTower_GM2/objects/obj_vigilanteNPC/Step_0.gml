@@ -10,7 +10,7 @@ with (obj_player)
             {
                 with (other)
                 {
-                    dialog[0] = dialog_create("Not one step closer!", -4, vigilante_add_battle);
+                    dialog[0] = dialog_create("Not one step closer!", noone, vigilante_add_battle);
                     do_dialog(dialog);
                     dialog = noone;
                     warned = true;

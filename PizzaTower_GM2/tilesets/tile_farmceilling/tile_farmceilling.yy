@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_farmceilling",
   "spriteId": {
     "name": "tile_farmceilling_sprite",
-    "path": "sprites/tile_farmceilling_sprite/tile_farmceilling_sprite.yy"
+    "path": "sprites/tile_farmceilling_sprite/tile_farmceilling_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "farmgroup",
-    "path": "texturegroups/farmgroup"
+    "path": "texturegroups/farmgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -451,22 +454,17 @@
       425,
       426,
       427,
-      428
+      428,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_farmceilling",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

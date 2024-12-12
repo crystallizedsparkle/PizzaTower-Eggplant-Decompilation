@@ -1,1 +1,1 @@
-targetRoom = 229;
+targetRoom = hub_reception;

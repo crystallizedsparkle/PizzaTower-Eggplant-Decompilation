@@ -1,1 +1,1 @@
-content = farm_treasure;
+content = obj_pizzakinshroom;

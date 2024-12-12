@@ -1,1 +1,1 @@
-targetRoom = 216;
+targetRoom = plage_shipmain;

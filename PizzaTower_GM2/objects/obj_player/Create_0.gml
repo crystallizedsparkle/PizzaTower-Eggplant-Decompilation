@@ -6,8 +6,8 @@ if (instance_number(object_index) > 1)
 
 global.throwarc = 1;
 global.hidetiles = false;
-global.leveltosave = -4;
-global.leveltorestart = -4;
+global.leveltosave = noone;
+global.leveltorestart = noone;
 jetpackdash = false;
 flamecloud_buffer = 0;
 rankpos_x = x;
@@ -88,7 +88,7 @@ invhurt_buffer = 0;
 invhurt_max = 30;
 ratmount_movespeed = 8;
 ratmount_fallingspeed = 0;
-ratgrabbedID = -4;
+ratgrabbedID = noone;
 ratpowerup = noone;
 ratshootbuffer = 0;
 rateaten = false;

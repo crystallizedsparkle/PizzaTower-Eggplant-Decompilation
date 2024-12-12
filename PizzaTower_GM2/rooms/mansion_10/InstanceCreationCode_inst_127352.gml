@@ -1,1 +1,1 @@
-content = 463;
+content = obj_peasanto;

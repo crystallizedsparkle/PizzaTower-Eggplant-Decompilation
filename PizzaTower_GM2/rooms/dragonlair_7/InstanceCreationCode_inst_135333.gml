@@ -1,1 +1,1 @@
-content = 382;
+content = obj_junk;

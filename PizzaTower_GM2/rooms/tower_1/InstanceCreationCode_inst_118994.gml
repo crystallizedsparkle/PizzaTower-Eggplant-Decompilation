@@ -1,1 +1,1 @@
-targetRoom = 291;
+targetRoom = tower_entrancehall;

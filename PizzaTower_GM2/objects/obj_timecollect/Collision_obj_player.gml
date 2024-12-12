@@ -8,7 +8,7 @@ if (other.state != states.gotoplayer)
     with (obj_camera)
         healthshaketime = 60;
     
-    scr_soundeffect(44);
+    scr_soundeffect(sfx_collectpizza);
     instance_destroy();
     var _number = 0;
     

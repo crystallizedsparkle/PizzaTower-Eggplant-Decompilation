@@ -1,1 +1,1 @@
-content = 450;
+content = obj_pizzard;

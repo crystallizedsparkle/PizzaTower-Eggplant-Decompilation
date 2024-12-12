@@ -1,1 +1,1 @@
-targetRoom = 539;
+targetRoom = farm_treasure;

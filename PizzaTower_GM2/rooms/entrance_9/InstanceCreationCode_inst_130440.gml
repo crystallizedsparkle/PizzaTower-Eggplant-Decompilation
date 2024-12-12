@@ -1,1 +1,1 @@
-targetRoom = 408;
+targetRoom = entrance_10;

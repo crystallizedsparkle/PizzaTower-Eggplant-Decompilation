@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_city1props",
   "spriteId": {
     "name": "tile_city1props_sprite",
-    "path": "sprites/tile_city1props_sprite/tile_city1props_sprite.yy"
+    "path": "sprites/tile_city1props_sprite/tile_city1props_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "citygroup",
-    "path": "texturegroups/citygroup"
+    "path": "texturegroups/citygroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -610,22 +613,17 @@
       584,
       585,
       586,
-      587
+      587,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_city1props",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

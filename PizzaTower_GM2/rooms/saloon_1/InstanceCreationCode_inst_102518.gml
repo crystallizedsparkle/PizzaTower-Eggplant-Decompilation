@@ -1,1 +1,1 @@
-targetRoom = 41;
+targetRoom = saloon_lap;

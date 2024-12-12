@@ -1,1 +1,1 @@
-content = 474;
+content = obj_grandpa;

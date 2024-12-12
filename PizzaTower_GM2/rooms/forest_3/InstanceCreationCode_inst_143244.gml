@@ -1,1 +1,1 @@
-targetRoom = 701;
+targetRoom = forest_treasure;

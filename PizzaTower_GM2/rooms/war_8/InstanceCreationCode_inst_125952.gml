@@ -1,1 +1,1 @@
-content = 195;
+content = obj_bazookabaddie;

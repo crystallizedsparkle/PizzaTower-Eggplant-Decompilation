@@ -1,1 +1,1 @@
-targetRoom = 703;
+targetRoom = hub_graffitihall;

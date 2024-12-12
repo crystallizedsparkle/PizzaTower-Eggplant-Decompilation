@@ -1,1 +1,1 @@
-targetRoom = 515;
+targetRoom = graveyard_8;

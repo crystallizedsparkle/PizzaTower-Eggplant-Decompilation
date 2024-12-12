@@ -1,1 +1,1 @@
-targetRoom = 456;
+targetRoom = dungeon_7;

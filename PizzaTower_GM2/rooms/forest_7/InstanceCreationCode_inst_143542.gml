@@ -1,1 +1,1 @@
-targetRoom = 592;
+targetRoom = forest_secret2;

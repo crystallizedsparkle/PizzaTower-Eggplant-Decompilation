@@ -1,2 +1,2 @@
-targetRoom = 530;
+targetRoom = farm_8;
 targetDoor = "C";

@@ -1,1 +1,1 @@
-targetRoom = 305;
+targetRoom = tower_escape10;

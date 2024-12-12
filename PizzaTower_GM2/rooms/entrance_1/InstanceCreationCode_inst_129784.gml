@@ -1,1 +1,1 @@
-targetRoom = 27;
+targetRoom = entrance_lap;

@@ -1,2 +1,2 @@
-targetRoom = 339;
+targetRoom = sewer_2;
 targetDoor = "A";

@@ -1,1 +1,1 @@
-targetRoom = 437;
+targetRoom = ruin_treasure;

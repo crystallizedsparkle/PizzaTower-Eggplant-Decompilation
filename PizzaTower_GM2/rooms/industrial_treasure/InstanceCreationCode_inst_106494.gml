@@ -1,1 +1,1 @@
-targetRoom = 640;
+targetRoom = industrial_2;

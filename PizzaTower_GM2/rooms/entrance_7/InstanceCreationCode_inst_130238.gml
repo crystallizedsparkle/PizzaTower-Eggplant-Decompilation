@@ -1,1 +1,1 @@
-targetRoom = 407;
+targetRoom = entrance_treasure;

@@ -77,7 +77,7 @@ function scr_playerreset()
         global.fill = 500;
         global.chunk = 5;
         global.hasfarmer = array_create(3, false);
-        global.checkpoint_room = -4;
+        global.checkpoint_room = noone;
         global.checkpoint_door = "A";
         global.noisejetpack = false;
         global.hp = 0;

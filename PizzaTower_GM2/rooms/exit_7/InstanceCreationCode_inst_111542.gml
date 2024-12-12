@@ -1,2 +1,2 @@
-content = 233;
+content = obj_robotmonster;
 trigger = 1;

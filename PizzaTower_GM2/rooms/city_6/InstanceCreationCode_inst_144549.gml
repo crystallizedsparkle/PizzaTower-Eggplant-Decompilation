@@ -1,1 +1,1 @@
-targetRoom = 345;
+targetRoom = city_secret3;

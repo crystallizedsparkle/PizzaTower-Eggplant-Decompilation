@@ -1,7 +1,7 @@
 scr_initenemy();
 is_controllable = true;
 shot = false;
-totemID = -4;
+totemID = noone;
 totemdir = 1;
 grav = 0.5;
 hsp = 0;

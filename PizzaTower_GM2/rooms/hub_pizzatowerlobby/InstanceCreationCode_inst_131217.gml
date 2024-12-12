@@ -1,1 +1,1 @@
-targetRoom = 215;
+targetRoom = hub_entrancelobby;

@@ -1,1 +1,1 @@
-targetRoom = 3;
+targetRoom = freezer_treasure;

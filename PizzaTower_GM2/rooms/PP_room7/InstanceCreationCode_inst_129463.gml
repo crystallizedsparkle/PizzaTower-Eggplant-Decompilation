@@ -1,1 +1,1 @@
-targetRoom = 386;
+targetRoom = PP_room8;

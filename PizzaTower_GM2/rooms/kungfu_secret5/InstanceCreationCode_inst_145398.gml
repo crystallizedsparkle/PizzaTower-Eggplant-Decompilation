@@ -1,1 +1,1 @@
-content = 319;
+content = obj_pizzagoblinbomb;

@@ -1,1 +1,1 @@
-targetRoom = 352;
+targetRoom = space_treasure;

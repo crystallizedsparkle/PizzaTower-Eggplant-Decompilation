@@ -1,1 +1,1 @@
-targetRoom = 36;
+targetRoom = hub_gate;

@@ -1,1 +1,1 @@
-content = 824;
+content = obj_weeniesquire;

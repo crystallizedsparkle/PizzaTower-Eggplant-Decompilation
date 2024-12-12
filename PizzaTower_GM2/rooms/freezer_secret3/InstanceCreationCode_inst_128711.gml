@@ -1,1 +1,1 @@
-content = 439;
+content = obj_snowman;

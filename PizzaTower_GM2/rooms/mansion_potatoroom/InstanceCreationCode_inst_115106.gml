@@ -1,1 +1,1 @@
-targetRoom = 511;
+targetRoom = mansion_darkroom;

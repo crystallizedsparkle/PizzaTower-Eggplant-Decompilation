@@ -1,2 +1,2 @@
-targetRoom = 10;
+targetRoom = city_8;
 depth = 99;

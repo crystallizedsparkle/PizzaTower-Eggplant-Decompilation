@@ -1,2 +1,2 @@
-targetRoom = 212;
+targetRoom = hub_hole;
 targetDoor = "D";

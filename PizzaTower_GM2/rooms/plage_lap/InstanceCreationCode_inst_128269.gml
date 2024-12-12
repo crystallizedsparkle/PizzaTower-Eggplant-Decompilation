@@ -1,1 +1,1 @@
-targetRoom = 109;
+targetRoom = plage_entrance;

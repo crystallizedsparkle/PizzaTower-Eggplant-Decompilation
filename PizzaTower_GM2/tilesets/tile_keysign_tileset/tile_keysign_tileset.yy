@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_keysign_tileset",
   "spriteId": {
     "name": "tile_keysign_tileset_sprite",
-    "path": "sprites/tile_keysign_tileset_sprite/tile_keysign_tileset_sprite.yy"
+    "path": "sprites/tile_keysign_tileset_sprite/tile_keysign_tileset_sprite.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -58,22 +61,17 @@
       32,
       33,
       34,
-      35
+      35,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_keysign_tileset",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

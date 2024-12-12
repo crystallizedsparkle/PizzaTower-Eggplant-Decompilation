@@ -1,3 +1,3 @@
 trigger = 0;
 secret_close_portalID(id);
-targetRoom = 649;
+targetRoom = rm_testing2;

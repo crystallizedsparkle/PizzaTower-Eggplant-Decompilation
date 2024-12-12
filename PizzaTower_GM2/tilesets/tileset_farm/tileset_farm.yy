@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tileset_farm",
   "spriteId": {
     "name": "tileset_farm_sprite",
-    "path": "sprites/tileset_farm_sprite/tileset_farm_sprite.yy"
+    "path": "sprites/tileset_farm_sprite/tileset_farm_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "farmgroup",
-    "path": "texturegroups/farmgroup"
+    "path": "texturegroups/farmgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -260,22 +263,17 @@
       234,
       235,
       236,
-      237
+      237,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tileset_farm",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

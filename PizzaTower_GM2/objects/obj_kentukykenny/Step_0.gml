@@ -68,7 +68,7 @@ if (state != states.stun)
 if (bombreset > 0)
     bombreset--;
 
-var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : 324;
+var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 
 if (x != targetplayer.x && state != states.enemy_throw && bombreset == 0 && grounded && targetplayer.state != states.firemouth)
 {

@@ -1,2 +1,2 @@
-targetRoom = 286;
+targetRoom = kidsparty_basementsecret;
 targetDoor = "C";

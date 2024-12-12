@@ -1,1 +1,1 @@
-targetRoom = 132;
+targetRoom = street_intro;

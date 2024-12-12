@@ -1,1 +1,1 @@
-targetRoom = 655;
+targetRoom = chateau_8;

@@ -1,1 +1,1 @@
-targetRoom = 91;
+targetRoom = hub_camp;

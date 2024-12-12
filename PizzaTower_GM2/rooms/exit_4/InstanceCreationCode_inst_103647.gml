@@ -1,1 +1,1 @@
-targetRoom = 195;
+targetRoom = exit_3;

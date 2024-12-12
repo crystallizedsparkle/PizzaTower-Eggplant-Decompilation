@@ -1,1 +1,1 @@
-targetRoom = 398;
+targetRoom = entrance_secret3;

@@ -1,1 +1,1 @@
-targetRoom = 603;
+targetRoom = pinball_1;

@@ -1,1 +1,1 @@
-targetRoom = 404;
+targetRoom = entrance_secret5;

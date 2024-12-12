@@ -1,2 +1,2 @@
-targetRoom = 111;
+targetRoom = space_10;
 depth = 99;

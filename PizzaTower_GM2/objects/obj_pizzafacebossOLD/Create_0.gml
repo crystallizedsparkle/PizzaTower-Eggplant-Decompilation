@@ -84,7 +84,7 @@ function boss_hurt(argument0, argument1)
         if (_removehp)
         {
             hp -= argument0;
-            scr_soundeffect(26);
+            scr_soundeffect(sfx_killingblow);
         }
     }
 }

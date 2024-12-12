@@ -1,1 +1,1 @@
-targetRoom = 602;
+targetRoom = freezer_lap;

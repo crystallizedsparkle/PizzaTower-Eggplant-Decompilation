@@ -1,4 +1,4 @@
-targetRoom = 375;
+targetRoom = hub_room1;
 global.collect = 0;
 global.collectN = 0;
 

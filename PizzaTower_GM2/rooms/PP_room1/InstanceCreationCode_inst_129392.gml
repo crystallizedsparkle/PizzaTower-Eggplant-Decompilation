@@ -1,4 +1,4 @@
-targetRoom = 381;
+targetRoom = PP_room2;
 
 with (obj_tv)
 {

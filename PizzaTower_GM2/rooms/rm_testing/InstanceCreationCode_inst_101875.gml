@@ -1,6 +1,6 @@
-func = function(argument0)
+func = function(arg0)
 {
-    if (!active && argument0.state == states.backbreaker)
+    if (!active && arg0.state == UnknownEnum.Value_84)
     {
         active = true;
         obj_secretmanager.totems++;
@@ -17,4 +17,3 @@ stepfunc = function()
 };
 
 visible = false;
-

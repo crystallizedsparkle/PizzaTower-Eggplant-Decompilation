@@ -1,1 +1,1 @@
-targetRoom = 46;
+targetRoom = hub_pizzaland;

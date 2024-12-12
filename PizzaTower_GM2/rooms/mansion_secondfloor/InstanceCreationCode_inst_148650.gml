@@ -1,1 +1,1 @@
-targetRoom = 237;
+targetRoom = mansion_hayroom;

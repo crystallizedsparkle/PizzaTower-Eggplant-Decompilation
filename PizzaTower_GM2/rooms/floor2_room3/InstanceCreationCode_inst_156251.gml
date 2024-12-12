@@ -1,4 +1,4 @@
-targetRoom = 761;
+targetRoom = floor2_roompepperman;
 target_x = 560;
 target_y = 402;
 

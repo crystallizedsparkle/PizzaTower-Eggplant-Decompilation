@@ -1,2 +1,2 @@
-targetRoom = 124;
+targetRoom = city_2;
 targetDoor = "D";

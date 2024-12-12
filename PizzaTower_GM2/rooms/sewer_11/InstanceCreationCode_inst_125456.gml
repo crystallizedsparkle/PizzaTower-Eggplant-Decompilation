@@ -1,1 +1,1 @@
-targetRoom = 360;
+targetRoom = sewer_secret3;

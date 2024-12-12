@@ -1,1 +1,1 @@
-targetRoom = 505;
+targetRoom = graveyard_secret1;

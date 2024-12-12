@@ -1,1 +1,1 @@
-targetRoom = 307;
+targetRoom = saloon_secret3;

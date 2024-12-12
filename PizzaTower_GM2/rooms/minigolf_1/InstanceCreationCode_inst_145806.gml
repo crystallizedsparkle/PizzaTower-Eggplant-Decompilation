@@ -1,1 +1,1 @@
-targetRoom = 275;
+targetRoom = minigolf_lap;

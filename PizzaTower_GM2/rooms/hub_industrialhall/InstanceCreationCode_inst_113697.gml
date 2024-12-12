@@ -1,1 +1,1 @@
-targetRoom = 359;
+targetRoom = hub_industrialcomplex;

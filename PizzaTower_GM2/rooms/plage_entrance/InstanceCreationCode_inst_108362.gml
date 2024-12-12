@@ -1,1 +1,1 @@
-targetRoom = 353;
+targetRoom = plage_lap;

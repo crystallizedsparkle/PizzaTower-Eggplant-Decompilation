@@ -1,1 +1,1 @@
-targetRoom = 54;
+targetRoom = forest_escape1;

@@ -679,7 +679,7 @@ function boss_noise_pogo()
     
     if (grounded && sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach)
     {
-        scr_soundeffect(97);
+        scr_soundeffect(sfx_Npogo3);
         image_index = 0;
         vsp = 0;
         movespeed = 0;

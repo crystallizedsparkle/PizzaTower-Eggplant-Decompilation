@@ -12,7 +12,7 @@ if (global.levelcomplete && !global.pinballcutscene)
         
         global.levelcomplete = false;
         global.pinballcutscene = true;
-        global.levelcompletename = -4;
+        global.levelcompletename = noone;
         quick_ini_write_real(get_savefile_ini(), "cutscene", "pinball", true);
         cutscene_end_action();
     }], [cutscene_save_game]];
@@ -26,4 +26,3 @@ else
 {
     scene_info = [[cutscene_wait, 20]];
 }
-

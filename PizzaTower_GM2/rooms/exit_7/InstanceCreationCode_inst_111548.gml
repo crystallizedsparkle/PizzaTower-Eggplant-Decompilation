@@ -1,2 +1,2 @@
-content = 10;
+content = obj_hillbillymonster;
 trigger = 1;

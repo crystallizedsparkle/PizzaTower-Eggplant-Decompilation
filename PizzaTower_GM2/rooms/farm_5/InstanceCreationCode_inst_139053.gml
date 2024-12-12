@@ -1,1 +1,1 @@
-content = 178;
+content = obj_farmerbaddie3;

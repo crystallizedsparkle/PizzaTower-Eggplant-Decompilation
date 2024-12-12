@@ -17,7 +17,7 @@ switch (state)
     case states.walk:
         scr_enemy_walk();
         
-        if (totemID != -4)
+        if (totemID != noone)
             state = states.totem;
         
         break;

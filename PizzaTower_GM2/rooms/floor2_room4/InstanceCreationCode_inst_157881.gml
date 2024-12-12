@@ -1,1 +1,1 @@
-content = 544;
+content = obj_noisebomb;

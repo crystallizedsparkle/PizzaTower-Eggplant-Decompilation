@@ -1,3 +1,3 @@
 trigger = 2;
 secret_close_portalID(id);
-targetRoom = 500;
+targetRoom = desert_secret5;

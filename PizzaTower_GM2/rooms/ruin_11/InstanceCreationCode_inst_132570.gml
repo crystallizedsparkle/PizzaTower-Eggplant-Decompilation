@@ -1,1 +1,1 @@
-targetRoom = 441;
+targetRoom = ruin_10;

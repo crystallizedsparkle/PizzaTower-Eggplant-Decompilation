@@ -1,1 +1,1 @@
-targetRoom = 662;
+targetRoom = strongcold_miniboss;

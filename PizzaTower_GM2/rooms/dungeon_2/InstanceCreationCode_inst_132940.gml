@@ -1,2 +1,2 @@
-targetRoom = 444;
+targetRoom = dungeon_1;
 targetDoor = "B";

@@ -1,1 +1,1 @@
-targetRoom = 43;
+targetRoom = hub_superpinball;

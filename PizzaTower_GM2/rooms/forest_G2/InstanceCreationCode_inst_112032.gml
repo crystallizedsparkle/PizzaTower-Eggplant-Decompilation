@@ -1,1 +1,1 @@
-targetRoom = 101;
+targetRoom = forest_G3;

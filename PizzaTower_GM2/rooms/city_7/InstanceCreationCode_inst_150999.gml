@@ -1,1 +1,1 @@
-content = 455;
+content = obj_pepgoblin;

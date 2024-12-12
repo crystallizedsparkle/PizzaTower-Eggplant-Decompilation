@@ -52,7 +52,7 @@ function SUPER_player_destroy(argument0)
     with (argument0)
     {
         camera_zoom(1, 0.1);
-        scr_soundeffect(26);
+        scr_soundeffect(sfx_killingblow);
         var lag = room_speed * 3;
         other.hitLag = lag;
         other.hitX = room_width / 2;
@@ -105,7 +105,7 @@ function SUPER_boss_destroy(argument0)
         
         if (state != states.chainsaw)
         {
-            scr_soundeffect(26);
+            scr_soundeffect(sfx_killingblow);
             tauntstoredmovespeed = movespeed;
             tauntstoredsprite = sprite_index;
             tauntstoredstate = state;

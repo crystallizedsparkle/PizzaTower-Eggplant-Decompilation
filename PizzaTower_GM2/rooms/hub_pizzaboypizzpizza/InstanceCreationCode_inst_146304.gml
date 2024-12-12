@@ -1,1 +1,1 @@
-targetRoom = 191;
+targetRoom = hub_laundryroom;

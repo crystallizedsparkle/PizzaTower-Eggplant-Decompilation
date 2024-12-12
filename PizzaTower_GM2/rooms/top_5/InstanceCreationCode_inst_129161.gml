@@ -1,1 +1,1 @@
-content = 559;
+content = obj_cheeseball;

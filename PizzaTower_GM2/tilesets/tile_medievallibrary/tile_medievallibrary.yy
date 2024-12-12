@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tile_medievallibrary",
   "spriteId": {
     "name": "tile_medievallibrary_sprite",
-    "path": "sprites/tile_medievallibrary_sprite/tile_medievallibrary_sprite.yy"
+    "path": "sprites/tile_medievallibrary_sprite/tile_medievallibrary_sprite.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +15,7 @@
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "medievalgroup",
-    "path": "texturegroups/medievalgroup"
+    "path": "texturegroups/medievalgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -232,22 +235,17 @@
       206,
       207,
       208,
-      209
+      209,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
-    "TileDataFormat": 0,
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_medievallibrary",
-  "tags": [],
-  "resourceType": "GMTileSet"
 }

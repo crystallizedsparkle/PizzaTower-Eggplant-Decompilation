@@ -1,2 +1,2 @@
-content = 109;
+content = obj_clownmato;
 trigger = 3;

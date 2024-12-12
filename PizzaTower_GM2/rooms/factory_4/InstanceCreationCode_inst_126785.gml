@@ -1,1 +1,1 @@
-targetRoom = 242;
+targetRoom = factory_5;

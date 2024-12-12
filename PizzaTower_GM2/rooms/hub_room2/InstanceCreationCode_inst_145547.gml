@@ -1,2 +1,2 @@
 level = "farm";
-targetRoom = 518;
+targetRoom = farm_1;

@@ -1,1 +1,1 @@
-targetRoom = 417;
+targetRoom = medieval_secret5;

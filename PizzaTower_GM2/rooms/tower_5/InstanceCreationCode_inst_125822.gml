@@ -1,1 +1,1 @@
-targetRoom = 240;
+targetRoom = tower_finalhallway;

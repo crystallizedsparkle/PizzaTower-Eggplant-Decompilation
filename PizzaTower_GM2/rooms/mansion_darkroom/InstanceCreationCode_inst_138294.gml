@@ -1,1 +1,1 @@
-targetRoom = 2;
+targetRoom = mansion_mirrorroom;

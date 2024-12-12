@@ -1,7 +1,9 @@
 if (global.levelcomplete && !global.golfcutscene)
 {
     currentroom = room;
-    scene_info = [[function()
+    scene_info =
+	[
+	[function()
     {
         with (obj_player)
         {
@@ -12,18 +14,25 @@ if (global.levelcomplete && !global.golfcutscene)
         
         global.levelcomplete = false;
         global.golfcutscene = true;
-        global.levelcompletename = -4;
+        global.levelcompletename = noone;
         quick_ini_write_real(get_savefile_ini(), "cutscene", "golf", true);
         cutscene_end_action();
-    }], [cutscene_save_game]];
+    }],
+	[cutscene_save_game]
+	];
 }
 else if (global.levelcomplete)
 {
     global.levelcomplete = false;
-    scene_info = [[cutscene_save_game]];
+    scene_info =
+	[
+	[cutscene_save_game]
+	];
 }
 else
 {
-    scene_info = [[cutscene_wait, 20]];
+    scene_info =
+	[
+	[cutscene_wait, 20]
+	];
 }
-

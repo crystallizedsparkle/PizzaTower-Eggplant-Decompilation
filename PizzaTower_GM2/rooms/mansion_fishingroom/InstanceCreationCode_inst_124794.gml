@@ -1,2 +1,2 @@
-targetRoom = 399;
+targetRoom = mansion_ceillar2;
 targetDoor = "B";

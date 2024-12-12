@@ -68,14 +68,16 @@ function scr_solid_player(_x, _y)
             return true;
         }
     }
-    
-    if (y > old_y && (bbox_bottom % 16) == 0 && !place_meeting(x, old_y, obj_grindrail) && place_meeting(x, y, obj_grindrail))
+    // this line is slightly modified for compatibility.
+    if (y > old_y && (bbox_bottom % 16) == 0 && !place_meeting(x, old_y, obj_grindrail) && place_meeting(x, y + vsp, obj_grindrail))
     {
         if (state == states.grind)
         {
             x = old_x;
             y = old_y;
+			show_debug_message("RUNNING")
             return true;
+
         }
     }
     

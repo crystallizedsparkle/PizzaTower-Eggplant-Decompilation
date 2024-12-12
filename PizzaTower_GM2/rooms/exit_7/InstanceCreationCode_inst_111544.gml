@@ -1,2 +1,2 @@
-content = 751;
+content = obj_puppetmonster;
 trigger = 1;

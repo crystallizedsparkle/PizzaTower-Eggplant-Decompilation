@@ -1,2 +1,2 @@
-targetRoom = 81;
+targetRoom = hub_topentrance;
 targetDoor = "C";

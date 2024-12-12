@@ -7,4 +7,3 @@ state = states.arena_round;
 round_max = 7;
 startroundfunc = mrstick_start_round;
 endroundfunc = mrstick_end_round;
-

@@ -1,2 +1,2 @@
-content = 543;
+content = obj_pizzakinpineapple;
 depth = 400;

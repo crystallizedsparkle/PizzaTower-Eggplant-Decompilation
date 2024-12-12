@@ -1,1 +1,1 @@
-targetRoom = 480;
+targetRoom = sewer_secret2;

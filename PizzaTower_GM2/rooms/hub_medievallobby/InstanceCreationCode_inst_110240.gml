@@ -1,1 +1,1 @@
-targetRoom = 228;
+targetRoom = hub_grandpizzardtower;

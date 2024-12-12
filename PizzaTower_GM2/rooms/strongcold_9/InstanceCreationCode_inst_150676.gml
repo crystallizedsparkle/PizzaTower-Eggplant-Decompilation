@@ -1,1 +1,1 @@
-targetRoom = 678;
+targetRoom = strongcold_10;

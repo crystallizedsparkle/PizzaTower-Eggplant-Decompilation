@@ -1,2 +1,1 @@
 attack = states.normal;
-

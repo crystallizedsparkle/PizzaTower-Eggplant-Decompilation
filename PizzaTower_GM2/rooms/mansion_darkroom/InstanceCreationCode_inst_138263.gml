@@ -1,1 +1,1 @@
-targetRoom = 102;
+targetRoom = mansion_portraithall;

@@ -1,1 +1,1 @@
-content = 539;
+content = obj_pizzakinshroom;

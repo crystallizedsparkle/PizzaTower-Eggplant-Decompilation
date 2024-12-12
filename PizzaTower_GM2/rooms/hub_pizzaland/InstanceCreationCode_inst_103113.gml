@@ -1,2 +1,2 @@
-targetRoom = 83;
+targetRoom = hub_sewer;
 targetDoor = "A";

@@ -1,1 +1,1 @@
-targetRoom = 205;
+targetRoom = hub_island;

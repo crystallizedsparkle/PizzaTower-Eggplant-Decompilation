@@ -1,12 +1,11 @@
-func = function(argument0)
+func = function(arg0)
 {
-    if (!active && argument0.state == states.handstandjump)
+    if (!active && arg0.state == UnknownEnum.Value_42)
     {
         active = true;
         obj_secretmanager.hittriggers++;
         
-        with (argument0)
+        with (arg0)
             scr_pummel();
     }
 };
-

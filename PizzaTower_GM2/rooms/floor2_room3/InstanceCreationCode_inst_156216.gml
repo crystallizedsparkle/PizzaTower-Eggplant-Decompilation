@@ -1,1 +1,1 @@
-content = 465;
+content = obj_forknight;

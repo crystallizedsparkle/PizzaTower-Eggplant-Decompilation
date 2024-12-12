@@ -1,11 +1,10 @@
 trigger = 1;
 
-func = function(argument0)
+func = function(arg0)
 {
     if (!active)
     {
-        if (argument0.state == states.freefallland)
+        if (arg0.state == states.freefallland)
             active = true;
     }
 };
-

@@ -1,1 +1,1 @@
-targetRoom = 35;
+targetRoom = kidsparty_03;

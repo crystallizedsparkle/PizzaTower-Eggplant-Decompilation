@@ -1,2 +1,2 @@
 level = "ruin";
-targetRoom = 425;
+targetRoom = ruin_1;

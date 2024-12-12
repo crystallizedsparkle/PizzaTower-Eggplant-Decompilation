@@ -1,1 +1,1 @@
-content = 320;
+content = obj_camerapatrol;

@@ -1,1 +1,1 @@
-targetRoom = 59;
+targetRoom = industrial_secret1;

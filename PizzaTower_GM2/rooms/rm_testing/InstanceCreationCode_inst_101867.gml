@@ -1,2 +1,2 @@
 trigger = 4;
-targetRoom = 649;
+targetRoom = rm_testing2;

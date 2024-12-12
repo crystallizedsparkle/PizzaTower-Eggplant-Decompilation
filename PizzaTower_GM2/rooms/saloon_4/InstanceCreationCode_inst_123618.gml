@@ -1,2 +1,2 @@
-targetRoom = 243;
+targetRoom = saloon_4b;
 john = true;

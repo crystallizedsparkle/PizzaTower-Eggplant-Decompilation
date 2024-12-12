@@ -1,1 +1,1 @@
-targetRoom = 85;
+targetRoom = industrial_treasure;

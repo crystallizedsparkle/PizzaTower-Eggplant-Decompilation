@@ -1,1 +1,1 @@
-content = 30;
+content = obj_trash;

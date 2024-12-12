@@ -1,1 +1,1 @@
-targetRoom = 225;
+targetRoom = hub_freezerlobby;

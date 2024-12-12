@@ -443,7 +443,7 @@ switch (state)
                     expressionsprite = noone;
                     
                     if (obj_player1.state == states.hurt)
-                        tv_do_expression(1319);
+                        tv_do_expression(spr_tv_exprhurt);
                 }
                 
                 break;

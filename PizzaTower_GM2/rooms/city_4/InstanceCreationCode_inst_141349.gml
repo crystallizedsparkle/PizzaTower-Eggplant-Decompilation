@@ -1,1 +1,1 @@
-content = 222;
+content = obj_smokingpizzaslice;

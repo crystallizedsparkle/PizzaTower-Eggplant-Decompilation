@@ -1,1 +1,1 @@
-content = 436;
+content = obj_minijohn;
