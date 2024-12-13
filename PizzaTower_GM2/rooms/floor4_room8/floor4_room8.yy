@@ -47803,7 +47803,7 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.1065312,
+          "rotation": 0.1065,
           "scaleX": 30,
           "scaleY": 4,
           "imageSpeed": 1,

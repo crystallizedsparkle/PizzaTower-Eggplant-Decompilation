@@ -1929,7 +1929,7 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.165511,
+          "rotation": 0.1655,
           "scaleX": 2,
           "scaleY": 37,
           "imageSpeed": 1,

@@ -528,7 +528,7 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": -0.01978234,
+          "rotation": -0.0198,
           "scaleX": 33,
           "scaleY": 2,
           "imageSpeed": 1,

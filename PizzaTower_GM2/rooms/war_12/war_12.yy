@@ -2254,7 +2254,7 @@
           "hasCreationCode": false,
           "colour": 4294967295,
           "rotation": 0,
-          "scaleX": 42.000004,
+          "scaleX": 42.0,
           "scaleY": 3,
           "imageSpeed": 1,
           "imageIndex": 0,

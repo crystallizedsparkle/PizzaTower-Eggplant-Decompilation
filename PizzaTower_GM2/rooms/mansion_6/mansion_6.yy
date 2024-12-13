@@ -330,7 +330,7 @@
           "colour": 4294967295,
           "rotation": 0,
           "scaleX": 1,
-          "scaleY": 22.000002,
+          "scaleY": 22.0,
           "imageSpeed": 1,
           "imageIndex": 0,
           "inheritedItemId": null,

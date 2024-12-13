@@ -1617,7 +1617,7 @@
           "inheritCode": false,
           "hasCreationCode": false,
           "colour": 4294967295,
-          "rotation": 0.901572,
+          "rotation": 0.9016,
           "scaleX": 2,
           "scaleY": 2,
           "imageSpeed": 1,

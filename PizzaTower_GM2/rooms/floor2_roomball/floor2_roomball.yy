@@ -709,7 +709,7 @@
       "animationSpeedType": 0,
       "userdefinedAnimFPS": false,
       "visible": true,
-      "depth": 2.1474835E+09,
+      "depth": 2147483500.0,
       "userdefinedDepth": true,
       "inheritLayerDepth": false,
       "inheritLayerSettings": false,

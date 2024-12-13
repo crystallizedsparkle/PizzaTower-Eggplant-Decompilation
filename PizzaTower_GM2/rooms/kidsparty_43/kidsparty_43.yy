@@ -4562,7 +4562,7 @@
           "hasCreationCode": false,
           "colour": 4294967295,
           "rotation": 0,
-          "scaleX": 57.00001,
+          "scaleX": 57.0,
           "scaleY": 5,
           "imageSpeed": 1,
           "imageIndex": 0,

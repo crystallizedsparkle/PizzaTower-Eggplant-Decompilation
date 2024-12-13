@@ -529,7 +529,7 @@
           "hasCreationCode": false,
           "colour": 4294967295,
           "rotation": 0,
-          "scaleX": 56.999996,
+          "scaleX": 57.0,
           "scaleY": 3,
           "imageSpeed": 1,
           "imageIndex": 0,
