@@ -30,36 +30,34 @@ knightbuffer = 0;
 spawnpool = [obj_forknight, obj_cheeseslime];
 hitplayer = false;
 
-function player_hurt(argument0, argument1)
+function player_hurt(_damage, _player)
 {
     var _prevstate = state;
     
     if (phase < 2)
     {
-        SUPER_player_hurt(argument0, argument1);
+        SUPER_player_hurt(_damage, _player);
     }
-    else if ((argument1.state != states.backbreaker || argument1.parry_inst == -4) && argument1.state != states.parry && ds_list_find_index(hitlist, argument1) == -1)
+    else if ((_player.state != states.backbreaker || _player.parry_inst == noone) && _player.state != states.parry && ds_list_find_index(hitlist, _player) == -1)
     {
-        ds_list_add(hitlist, argument1);
-        SUPER_player_hurt(argument0, argument1);
+        ds_list_add(hitlist, _player);
+        SUPER_player_hurt(_damage, _player);
         state = _prevstate;
         hitplayer = true;
     }
 }
 
-function boss_hurt(argument0, argument1)
+function boss_hurt(_damage, _boss)
 {
-    var _removehp;
-    
     if (phase == 0)
     {
-        SUPER_boss_hurt(argument0, argument1);
+        SUPER_boss_hurt(_damage, _boss);
     }
     else
     {
-        _removehp = true;
+        var _removehp = true;
         
-        with (argument1)
+        with (_boss)
         {
             if (state != states.lungeattack && state != states.knightpep)
             {
@@ -83,17 +81,17 @@ function boss_hurt(argument0, argument1)
         
         if (_removehp)
         {
-            hp -= argument0;
+            hp -= _damage;
             scr_soundeffect(sfx_killingblow);
         }
     }
 }
 
-function boss_hurt_noplayer(argument0)
+function boss_hurt_noplayer(_damage)
 {
     if (inv_timer <= 0)
     {
-        hp -= argument0;
+        hp -= _damage;
         inv_timer = 10;
     }
 }

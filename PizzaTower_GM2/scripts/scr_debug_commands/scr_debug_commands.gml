@@ -81,7 +81,7 @@ function DebugCommand(_command, _desc, _format, _func) constructor
             func();
     };
 }
-
+// not built to debug, no debug console :(
 function TextList_Add(argument0, argument1)
 {
     with (obj_debugcontroller)

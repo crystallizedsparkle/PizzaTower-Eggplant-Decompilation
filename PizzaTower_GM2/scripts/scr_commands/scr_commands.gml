@@ -11,7 +11,7 @@ function scr_do_command(_command)
         }
         
         _command.Do();
-        ds_list_add(commandlist, argument0);
+        ds_list_add(commandlist, _command);
     }
 }
 

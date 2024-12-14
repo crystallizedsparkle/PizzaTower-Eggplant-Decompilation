@@ -23,7 +23,7 @@ function scr_string_width(_str)
     }
     
     if (array_length(str_arr) == 0)
-        w = string_width(argument0);
+        w = string_width(_str);
     
     for (var i = 0; i < array_length(str_arr); i++)
     {

@@ -76,15 +76,15 @@ superattack_hpthreshold = 500;
 superattack_buffer = 0;
 superattack_max = 360;
 
-function player_destroy(argument0)
+function player_destroy(_player)
 {
-    SUPER_player_destroy(argument0);
+    SUPER_player_destroy(_player);
 }
 
-function boss_destroy(argument0)
+function boss_destroy(_boss)
 {
     hitstate = states.normal;
-    SUPER_boss_destroy(argument0);
+    SUPER_boss_destroy(_boss);
     
     with (obj_peppermanbrick)
         instance_destroy();
@@ -95,7 +95,7 @@ function boss_destroy(argument0)
     stunned = 1000;
 }
 
-function boss_hurt(argument0, argument1)
+function boss_hurt(_boss, _player)
 {
     if (targetstunned > 0)
     {
@@ -110,11 +110,11 @@ function boss_hurt(argument0, argument1)
         targetstunned = 150;
     }
     
-    SUPER_boss_hurt(argument0, argument1);
-    targetxscale = -argument1.xscale;
+    SUPER_boss_hurt(_boss, _player);
+    targetxscale = -_player.xscale;
 }
 
-function boss_hurt_noplayer(argument0)
+function boss_hurt_noplayer(_damage)
 {
     if (targetstunned > 0)
     {
@@ -129,15 +129,15 @@ function boss_hurt_noplayer(argument0)
         targetstunned = 150;
     }
     
-    SUPER_boss_hurt_noplayer(argument0);
+    SUPER_boss_hurt_noplayer(_damage);
 }
 
-function player_hurt(argument0, argument1)
+function player_hurt(_damage, _player)
 {
-    if (argument1.state != states.backbreaker || argument1.parry_inst == noone)
+    if (_player.state != states.backbreaker || _player.parry_inst == noone)
     {
         var _prevstate = state;
-        SUPER_player_hurt(argument0, argument1);
+        SUPER_player_hurt(_damage, _player);
         
         if (_prevstate == states.shoulderbash || _prevstate == states.supershoulderbash || _prevstate == states.shoulder || _prevstate == states.superslam)
         {
@@ -176,7 +176,7 @@ function player_hurt(argument0, argument1)
     }
     else if (state == states.superslam)
     {
-        with (argument1)
+        with (_player)
         {
             if (state == states.hit || state == states.chainsaw)
             {

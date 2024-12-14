@@ -4,7 +4,7 @@
   "name": "sfx_mach3",
   "conversionMode": 0,
   "compression": 3,
-  "volume": 1.0,
+  "volume": 0.16,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_mach3.wav",
-  "duration": 0.0,
+  "duration": 1.714286,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

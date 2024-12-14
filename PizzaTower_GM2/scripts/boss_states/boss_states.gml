@@ -92,7 +92,7 @@ function state_boss_arenaround()
         sprite_index = fallspr;
     }
 }
-
+// build config related?
 function boss_decide_taunt(argument0)
 {
 }

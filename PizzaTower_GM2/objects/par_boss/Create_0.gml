@@ -44,12 +44,12 @@ destroyed = false;
 playerdestroyed = false;
 colliding = true;
 
-function SUPER_player_destroy(argument0)
+function SUPER_player_destroy(_player)
 {
-    depth = argument0.depth;
+    depth = _player.depth;
     playerdestroyed = true;
     
-    with (argument0)
+    with (_player)
     {
         camera_zoom(1, 0.1);
         scr_soundeffect(sfx_killingblow);
@@ -85,14 +85,14 @@ function SUPER_player_destroy(argument0)
     }
 }
 
-function SUPER_boss_destroy(argument0)
+function SUPER_boss_destroy(_boss)
 {
     destroyed = true;
-    depth = argument0.depth;
+    depth = _boss.depth;
     global.attackstyle = 0;
     global.savedattackstyle = 0;
     
-    with (argument0)
+    with (_boss)
     {
         camera_zoom(1, 0.1);
         
@@ -147,18 +147,18 @@ function SUPER_boss_destroy(argument0)
     }
 }
 
-function SUPER_boss_hurt(argument0, argument1)
+function SUPER_boss_hurt(_damage, _boss)
 {
     if (important)
-        hp -= argument0;
+        hp -= _damage;
     
-    if (argument1.state != states.playersuperattack)
+    if (_boss.state != states.playersuperattack)
     {
         with (obj_bosscontroller)
             super += 30;
     }
     
-    with (argument1)
+    with (_boss)
     {
         var atstate = state;
         
@@ -227,10 +227,10 @@ function SUPER_boss_hurt(argument0, argument1)
     }
 }
 
-function SUPER_boss_hurt_noplayer(argument0)
+function SUPER_boss_hurt_noplayer(_damage)
 {
     if (important)
-        hp -= argument0;
+        hp -= _damage;
     
     if (obj_player.state != states.playersuperattack)
     {
@@ -268,15 +268,15 @@ function SUPER_boss_hurt_noplayer(argument0)
     }
 }
 
-function SUPER_player_hurt(argument0, argument1)
+function SUPER_player_hurt(_damage, _player)
 {
     if (instance_exists(obj_bosscontroller))
-        obj_bosscontroller.player_hp -= argument0;
+        obj_bosscontroller.player_hp -= _damage;
     
     with (obj_bosscontroller)
         super += 80;
     
-    with (argument1)
+    with (_player)
     {
         scr_soundeffect(sfx_killingblow);
         var lag = 8;
@@ -333,28 +333,28 @@ function SUPER_player_hurt(argument0, argument1)
     }
 }
 
-function player_destroy(argument0)
+function player_destroy(_player)
 {
-    SUPER_player_destroy(argument0);
+    SUPER_player_destroy(_player);
 }
 
-function boss_destroy(argument0)
+function boss_destroy(_boss)
 {
-    SUPER_boss_destroy(argument0);
+    SUPER_boss_destroy(_boss);
 }
 
-function player_hurt(argument0, argument1)
+function player_hurt(_damage, _player)
 {
-    SUPER_player_hurt(argument0, argument1);
+    SUPER_player_hurt(_damage, _player);
 }
 
-function boss_hurt(argument0, argument1)
+function boss_hurt(_boss, _player)
 {
-    SUPER_boss_hurt(argument0, argument1);
+    SUPER_boss_hurt(_boss, _player);
 }
 
-function boss_hurt_noplayer(argument0)
+function boss_hurt_noplayer(_damage)
 {
-    SUPER_boss_hurt_noplayer(argument0);
+    SUPER_boss_hurt_noplayer(_damage);
 }
 

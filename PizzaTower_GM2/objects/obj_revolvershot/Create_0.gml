@@ -3,20 +3,20 @@ dmg = 30;
 spd = 25;
 parryable = true;
 
-function player_hurt(argument0, argument1)
+function player_hurt(_damage, _player)
 {
     if (!collisioned)
     {
-        var prevstate = argument1.state;
-        SUPER_player_hurt(argument0, argument1);
-        argument1.xscale = -image_xscale;
-        argument1.hitxscale = -image_xscale;
+        var prevstate = _player.state;
+        SUPER_player_hurt(_damage, _player);
+        _player.xscale = -image_xscale;
+        _player.hitxscale = -image_xscale;
         
         if (prevstate == states.superattack)
         {
-            argument1.hithsp = 0;
-            argument1.hitvsp = 0;
-            argument1.hitstate = states.superattack;
+            _player.hithsp = 0;
+            _player.hitvsp = 0;
+            _player.hitstate = states.superattack;
             
             with (obj_vigilanteboss)
                 duel_buffer = duel_max + irandom(duel_random);

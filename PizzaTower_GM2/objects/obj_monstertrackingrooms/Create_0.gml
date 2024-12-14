@@ -70,7 +70,7 @@ effect_max = 1800;
 player_posX = ds_grid_value_x(room_grid, 0, 0, map_width - 1, map_height - 1, room_get_name(room));
 player_posY = ds_grid_value_y(room_grid, 0, 0, map_width - 1, map_height - 1, room_get_name(room));
 
-function robot_create(argument0, argument1)
+function robot_create(_is_hallway, _is_fake)
 {
     if (!instance_exists(obj_robotmonster))
     {
@@ -79,9 +79,9 @@ function robot_create(argument0, argument1)
         
         with (_inst)
         {
-            fake = argument1;
+            fake = _is_fake;
             
-            if (argument0)
+            if (_is_hallway)
             {
                 var _hinst = noone;
                 
@@ -133,7 +133,7 @@ function robot_create(argument0, argument1)
     }
 }
 
-function blob_create(argument0, argument1)
+function blob_create(_is_hallway, _is_fake)
 {    
     if (!instance_exists(obj_blobmonster))
     {
@@ -142,9 +142,9 @@ function blob_create(argument0, argument1)
         
         with (_inst)
         {
-            fake = argument1;
+            fake = _is_fake;
             
-            if (argument0)
+            if (_is_hallway)
             {
                 var _hinst = noone;
                 
@@ -207,12 +207,12 @@ function blob_create(argument0, argument1)
     }
 }
 
-function puppet_create(argument0, argument1)
+function puppet_create(_is_hallway, _is_fake)
 {
     instance_create_unique(0, 0, obj_puppetmonster);
 }
 
-function hillbilly_create(argument0, argument1)
+function hillbilly_create(_is_hallway, _is_fake)
 {
     if (!instance_exists(obj_hillbillymonster))
     {
@@ -221,9 +221,9 @@ function hillbilly_create(argument0, argument1)
         
         with (_inst)
         {
-            fake = argument1;
+            fake = _is_fake;
             
-            if (argument0)
+            if (_is_hallway)
             {
                 var _hinst = noone;
                 
@@ -275,34 +275,34 @@ function hillbilly_create(argument0, argument1)
     }
 }
 
-function grid_meeting(argument0, argument1)
+function grid_meeting(_x, _y)
 {
-    if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
+    if (_x < 0 || _x > (map_width - 1) || _y < 0 || _y > (map_height - 1))
         return false;
     
-    if (ds_grid_get(room_grid, argument0, argument1) != noone)
+    if (ds_grid_get(room_grid, _x, _y) != noone)
         return true;
     
     return false;
 }
 
-function grid_length_x(argument0, argument1, argument2)
+function grid_length_x(_x, _y, _increment)
 {
     var count = 0;
     
-    while (grid_meeting(argument0 + argument2, argument1))
+    while (grid_meeting(_x + _increment, _y))
     {
         count++;
-        argument0 += argument2;
+        _x += _increment;
     }
     
     return count;
 }
 
-function room_place(argument0, argument1)
+function room_place(_x, _y)
 {
-    if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
+    if (_x < 0 || _x > (map_width - 1) || _y < 0 || _y > (map_height - 1))
         return noone;
     
-    return ds_grid_get(room_grid, argument0, argument1);
+    return ds_grid_get(room_grid, _x, _y);
 }
