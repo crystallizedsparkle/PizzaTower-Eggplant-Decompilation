@@ -1,6 +1,6 @@
-func = function(arg0)
+func = function(_inst)
 {
-    if (active == false)
+    if (!active)
     {
         active = true;
         obj_secretmanager.touchedtriggers += 1;

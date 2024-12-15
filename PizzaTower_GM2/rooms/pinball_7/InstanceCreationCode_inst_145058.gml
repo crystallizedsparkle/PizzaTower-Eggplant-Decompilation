@@ -1,5 +1,5 @@
-func = function(arg0)
+func = function(_inst)
 {
-    if (active == false && arg0.skateboarding)
+    if (!active && _inst.skateboarding)
         active = true;
 };

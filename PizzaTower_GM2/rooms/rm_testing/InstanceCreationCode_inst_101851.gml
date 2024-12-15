@@ -1,4 +1,4 @@
-func = function(arg0)
+func = function(_inst)
 {
     if (!active)
     {

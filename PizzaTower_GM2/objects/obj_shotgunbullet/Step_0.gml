@@ -13,7 +13,7 @@ if (shotgun)
         instance_destroy();
 }
 
-if (brick)
+if (brick && instance_exists(brickid)) // modified this line for LTS compatiblity
 {
     x = brickid.x;
     y = brickid.y;

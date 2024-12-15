@@ -1,6 +1,6 @@
-func = function(arg0)
+func = function(_inst)
 {
-    if (active == false && instance_exists(obj_alienfollow))
+    if (!active && instance_exists(obj_alienfollow))
         active = true;
 };
 

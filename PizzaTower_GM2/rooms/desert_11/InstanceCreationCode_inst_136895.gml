@@ -1,6 +1,6 @@
-func = function(arg0)
+func = function(_inst)
 {
-    if (active == false && arg0.state == UnknownEnum.Value_84)
+    if (!active && _inst.state == states.backbreaker)
     {
         active = true;
         obj_secretmanager.touchedtriggers += 1;
