@@ -1,6 +1,5 @@
 function scr_pizzagoblin_throw()
 {
-    // I have no words.
     if (!variable_global_exists("throw_frame"))
     {
         global.throw_frame = 0;
@@ -29,31 +28,31 @@ function scr_pizzagoblin_throw()
         global.throw_frame[805] = 7;
         global.throw_frame[281] = 11;
 		
-        global.throw_sprite = 0;
-        global.throw_sprite[444] = 104;
-        global.throw_sprite[446] = 125;
-        global.throw_sprite[445] = 396;
-        global.throw_sprite[440] = 216;
-        global.throw_sprite[460] = 375;
-        global.throw_sprite[195] = 414;
-        global.throw_sprite[30] = 245;
-        global.throw_sprite[462] = 281;
-        global.throw_sprite[442] = 217;
-        global.throw_sprite[443] = 303;
-        global.throw_sprite[450] = 320;
-        global.throw_sprite[455] = 227;
-        global.throw_sprite[777] = 1224;
-        global.throw_sprite[453] = 333;
-        global.throw_sprite[452] = 276;
-        global.throw_sprite[451] = 388;
-        global.throw_sprite[219] = 414;
-        global.throw_sprite[432] = 444;
-        global.throw_sprite[433] = 444;
-        global.throw_sprite[408] = 444;
-        global.throw_sprite[222] = 1741;
-        global.throw_sprite[470] = 2765;
-        global.throw_sprite[805] = 19;
-        global.throw_sprite[281] = 2460;
+		global.throw_sprite = 0
+		global.throw_sprite[444] = spr_pizzagoblin_throwbomb;
+		global.throw_sprite[446] = spr_canongoblin_throwbomb;
+		global.throw_sprite[445] = spr_archergoblin_shoot;
+		global.throw_sprite[440] = spr_cheeserobot_attack;
+		global.throw_sprite[460] = spr_spitcheese_spit;
+		global.throw_sprite[195] = spr_tank_shoot;
+		global.throw_sprite[30] = spr_trash_throw;
+		global.throw_sprite[462] = spr_invtrash_throw;
+		global.throw_sprite[442] = spr_robot_attack;
+		global.throw_sprite[443] = spr_kentukykenny_throw;
+		global.throw_sprite[450] = spr_pizzard_shoot;
+		global.throw_sprite[455] = spr_pepgoblin_kick;
+		global.throw_sprite[777] = spr_pepbat_kick;
+		global.throw_sprite[453] = spr_swedishmonkey_eat;
+		global.throw_sprite[452] = spr_ranch_shoot;
+		global.throw_sprite[451] = spr_pickle_attack;
+		global.throw_sprite[219] = spr_tank_shoot;
+		global.throw_sprite[432] = spr_shrimp_knife;
+		global.throw_sprite[433] = spr_shrimp_knife;
+		global.throw_sprite[408] = spr_shrimp_knife;
+		global.throw_sprite[222] = spr_pizzaslug_cough;
+		global.throw_sprite[470] = spr_ufolive_shoot;
+		global.throw_sprite[805] = spr_kentukybomber_attack;
+		global.throw_sprite[281] = spr_ufogrounded_shoot;
 		
         global.reset_timer = 0;
         global.reset_timer[444] = 200;
@@ -328,7 +327,7 @@ function scr_pizzagoblin_throw()
                 instance_create(x, y + 70, obj_kentukybomb);
                 break;
             
-            case obj_bazookabaddie:
+            case obj_bazookabaddie: 
                 var xx = x + (72 * image_xscale);
                 instance_create(xx, y, obj_bazooka);
                 create_particle(xx, y, particles.balloonpop);
